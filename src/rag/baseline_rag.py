@@ -5,16 +5,16 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 
-# Load your API keys from the .env file
+# Load API keys from the .env file
 load_dotenv()
 
 def run_basic_rag():
     print("1. Initializing Embedding Model...")
-    # We use text-embedding-3-large as specified in your project proposal
+    # text-embedding-3-large as specified in project proposal
     embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en-v1.5")
     print("2. Creating sample financial data...")
-    # For week 1, we use a hardcoded string just to test the pipeline. 
-    # Next, we will swap this out for the FinanceBench dataset.
+    # use a hardcoded string just to test the pipeline. 
+    # swap this out for the FinanceBench dataset.
     sample_10k_text = """
     Item 1A. Risk Factors.
     Liquidity Risk: As of December 31, 2024, the Company had $1.2 billion in cash and cash equivalents. 
@@ -32,13 +32,13 @@ def run_basic_rag():
     loader = TextLoader("temp_sample.txt")
     docs = loader.load()
     
-    # This is a crucial part of RAG: How you split the text changes what the AI "sees"
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=20)
+    # How to split the text changes what the AI "sees"
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     splits = text_splitter.split_documents(docs)
     print(f"   -> Split text into {len(splits)} chunks.")
 
     print("4. Storing in ChromaDB...")
-    # This creates a local database folder in your project
+    # create a local database folder in your project
     vectorstore = Chroma.from_documents(documents=splits, embedding=embeddings, persist_directory="./chroma_db")
 
     print("5. Running a Retrieval Query...")
@@ -59,5 +59,4 @@ def run_basic_rag():
         os.remove("temp_sample.txt")
 
 if __name__ == "__main__":
-    # Make sure you have added your OPENAI_API_KEY to the .env file before running!
     run_basic_rag()
