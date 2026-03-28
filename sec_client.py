@@ -41,7 +41,7 @@ class SECClient:
         submissions = client.get_submissions("0000320193")
     """
 
-   # SEC endpoint templates 
+    # SEC endpoint templates 
     _SUBMISSIONS_URL     = "https://data.sec.gov/submissions/CIK{cik}.json"
     _COMPANY_FACTS_URL   = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json"
     _COMPANY_CONCEPT_URL = "https://data.sec.gov/api/xbrl/companyconcept/CIK{cik}/{taxonomy}/{tag}.json"
