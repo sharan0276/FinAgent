@@ -1,5 +1,17 @@
+# Core HTTP stack
 certifi==2026.2.25
 charset-normalizer==3.4.6
 idna==3.11
 requests==2.33.0
 urllib3==2.6.3
+
+# Data models and env config
+pydantic
+python-dotenv
+
+# SEC ingestion and parsing
+sec-downloader
+sec-parser
+
+# PDF reading
+pypdf
