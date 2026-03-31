@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-from sec_downloader import Downloader
 import sec_parser as sp
 from sec_parser.processing_steps import (
     IndividualSemanticElementExtractor,
@@ -58,6 +57,8 @@ def build_non_10q_parser():
 
 
 def fetch_filing_html(ticker: str, form: str) -> str:
+    from sec_downloader import Downloader
+
     load_dotenv()
     downloader = Downloader(require_env("SEC_APP_NAME"), require_env("SEC_EMAIL"))
     return downloader.get_filing_html(ticker=ticker, form=form)

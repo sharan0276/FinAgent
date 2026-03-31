@@ -3,6 +3,14 @@ Simple test script for SECClient.
 Run with: python test_sec_client.py
 """
 
+from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+INGESTION_DIR = PROJECT_ROOT / 'data-ingestion'
+if str(INGESTION_DIR) not in sys.path:
+    sys.path.insert(0, str(INGESTION_DIR))
+
 from sec_client import SECClient
 
 
@@ -133,5 +141,7 @@ print("\n───────────────────────�
 print("All tests complete.")
 print("If any show FAIL, fix before moving to document_fetcher.py")
 print("─────────────────────────────────────\n")
+
+
 
 

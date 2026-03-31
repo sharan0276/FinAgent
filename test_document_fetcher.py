@@ -3,6 +3,14 @@ Simple test script for document fetcher.
 Run with: python test_document_fetcher.py
 """
 
+from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+INGESTION_DIR = PROJECT_ROOT / 'data-ingestion'
+if str(INGESTION_DIR) not in sys.path:
+    sys.path.insert(0, str(INGESTION_DIR))
+
 from sec_client import SECClient
 from document_fetcher import DocumentFetcher
 
@@ -139,3 +147,4 @@ print("\n───────────────────────�
 print("All tests complete.")
 print("If any show FAIL, fix before moving to data_cleaner.py")
 print("─────────────────────────────────────\n")
+
