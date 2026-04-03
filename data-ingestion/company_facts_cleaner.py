@@ -127,40 +127,54 @@ class DataCleaner:
 
         return quarterly
 
-    def _format_annual(self, entries: list[dict], tag: str) -> list[dict]:
-        return [
-            {
-                "year": int(e["end"][:4]) if e.get("end") else None,
-                "end_date": e.get("end"),
-                "value": e.get("val"),
-                "tag": tag,
-                "accession": e.get("accn"),
-            }
-            for e in entries
-        ]
+    @staticmethod
+    def _to_millions(value) -> float | None:
+        if value is None:
+            return None
+        return round(value / 1_000_000, 2)
 
-    def _format_quarterly(self, entries: list[dict], tag: str) -> list[dict]:
-        results = []
+    @staticmethod
+    def _compute_deltas(values: list) -> list:
+        deltas = []
+        for i, v in enumerate(values):
+            if i == 0 or values[i - 1] is None or v is None:
+                deltas.append(None)
+            else:
+                deltas.append(round(v - values[i - 1], 2))
+        return deltas
+
+    def _format_annual(self, entries: list[dict], tag: str) -> dict:
+        years = [int(e["end"][:4]) if e.get("end") else None for e in entries]
+        values = [self._to_millions(e.get("val")) for e in entries]
+        return {
+            "tag": tag,
+            "unit": "USD_millions",
+            "years": years,
+            "values": values,
+            "deltas": self._compute_deltas(values),
+        }
+
+    def _format_quarterly(self, entries: list[dict], tag: str) -> dict:
+        periods = []
+        values = []
         for e in entries:
             end_date = e.get("end", "")
             frame = e.get("frame", "")
+            year = int(end_date[:4]) if end_date else None
             quarter = None
             if frame:
                 match = re.search(r"Q(\d)$", frame)
                 if match:
                     quarter = int(match.group(1))
-
-            results.append(
-                {
-                    "year": int(end_date[:4]) if end_date else None,
-                    "quarter": quarter,
-                    "end_date": end_date,
-                    "value": e.get("val"),
-                    "tag": tag,
-                    "accession": e.get("accn"),
-                }
-            )
-        return results
+            periods.append(f"{year}Q{quarter}" if year and quarter else end_date)
+            values.append(self._to_millions(e.get("val")))
+        return {
+            "tag": tag,
+            "unit": "USD_millions",
+            "periods": periods,
+            "values": values,
+            "deltas": self._compute_deltas(values),
+        }
 
     def get_all_values(
         self,
@@ -168,7 +182,7 @@ class DataCleaner:
         metric_alias: str,
         n_years: int = 5,
         taxonomy: str = "us-gaap",
-    ) -> dict[str, list[dict]]:
+    ) -> dict[str, dict]:
         n_quarters = n_years * 4
 
         tag, raw_entries = self._resolve_tag(facts, metric_alias, taxonomy)
@@ -178,6 +192,14 @@ class DataCleaner:
         quarterly = self._filter_quarterly(consolidated)
 
         annual.sort(key=lambda e: e.get("end", ""))
+        # Deduplicate by fiscal year: keep only the latest filing per year
+        # (handles amendments like 10-K/A which would otherwise double-count a year)
+        seen_years: dict[int, dict] = {}
+        for e in annual:
+            year = int(e["end"][:4]) if e.get("end") else None
+            if year is not None:
+                seen_years[year] = e  # later entries overwrite earlier ones (already sorted)
+        annual = sorted(seen_years.values(), key=lambda e: e.get("end", ""))
         annual = annual[-n_years:]
 
         quarterly.sort(key=lambda e: e.get("end", ""))
