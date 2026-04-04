@@ -41,6 +41,11 @@ What is implemented now:
 - extraction of selected core text sections
 - generation of a combined ingestion artifact in JSON
 
+Current practical status:
+
+- the generated `complete_ingestion.json` artifacts are now the working source of truth for downstream analysis
+- the project currently has refreshed reference artifacts for `AAPL`, `META`, and `GOOG`
+
 What is not yet implemented in the current ingestion package:
 
 - vector database integration
@@ -129,10 +134,14 @@ This file cleans and normalizes the SEC Company Facts XBRL data.
 Its responsibilities are:
 
 - handle tag fallback chains for common financial metrics
-- choose the best available XBRL tag based on recency and coverage
+- prefer the correct SEC unit set before normalizing values
+- merge fallback-tag coverage across years when companies change tags over time
 - remove segment-level rows and keep consolidated values
 - separate annual values from quarterly values
 - deduplicate raw SEC entries
+- keep one canonical annual datapoint per fiscal year
+- derive discrete quarterly values for flow metrics when SEC reports YTD facts
+- infer quarter labels from filing metadata when possible
 - format the cleaned metrics into simple standardized records
 
 It is responsible for the "numbers" side of ingestion.
@@ -145,6 +154,7 @@ Its responsibilities are:
 
 - filter submissions to `10-K` and `10-K/A`
 - apply issuer filtering so the filing belongs to the company itself
+- merge paginated SEC submissions history files when `filings.recent` is not deep enough
 - deduplicate filings by year
 - build the SEC archive document URL
 - download the raw filing HTML
@@ -216,6 +226,8 @@ It combines:
 - parsed filing metadata
 - extracted filing sections
 
+At the current stage of the project, these generated artifacts should be treated as the source of truth for future analysis work unless a newer ingestion run intentionally replaces them.
+
 Example currently open in the IDE:
 
 - `data-ingestion/outputs/AAPL/complete_ingestion.json`
@@ -242,6 +254,8 @@ At the moment, `ingestion_pipeline.py` has active patterns for:
 - `PART I`
 - `Item 1. Business`
 - `Item 1A. Risk Factors`
+- `Item 1C. Cybersecurity`
+- `Item 3. Legal Proceedings`
 - `Item 7. MD&A`
 - `Item 7A. Market Risk`
 
@@ -289,14 +303,38 @@ The path is:
 2. parse HTML to semantic elements and semantic tree
 3. flatten tree into rows
 4. locate heading anchors with regex
-5. slice content between anchor positions
+5. apply explicit stop boundaries for each tracked section
 6. save extracted section text into the final JSON
 
 If `sec-parser` is unavailable, the code falls back to plain-text extraction from the raw HTML.
+If `sec-parser` fails for an individual filing at runtime, the pipeline falls back for that filing and continues processing the remaining filings.
+If `sec-parser` produces weak section coverage for an individual filing, the pipeline can also keep the plain-text result instead of the semantic-parse result.
 
 That fallback is less accurate, but it prevents the entire ingestion pipeline from failing.
 
 The output includes `parser_mode` so downstream code can know how trustworthy the extraction is.
+
+## Recent Ingestion Fixes
+
+The most recent ingestion cleanup addressed three practical data-quality issues:
+
+1. Annual financial metrics are now deduplicated to one canonical datapoint per fiscal year.
+2. Quarter labels are inferred more reliably from SEC metadata such as `fp` and `frame`, with a year-end snapshot fallback for Q4-style balance-sheet values.
+3. Section extraction now uses explicit next-heading boundaries so tracked sections do not overflow into adjacent filing sections.
+
+Additional recent updates:
+
+4. Older 10-K filings are now discovered through SEC paginated submissions history rather than relying only on `filings.recent`.
+5. XBRL fallback tags can now be merged across years so companies like `GOOG` do not lose recent or historical coverage when the active tag changes.
+6. In the plain-text extractor, section headings are matched line-by-line so references to `Item 1A` or `Item 7A` inside paragraph text do not accidentally terminate a section.
+7. Section heading matching is explicitly case-insensitive so all-caps filings are handled more consistently.
+
+Interpretation:
+
+- numeric time series should now look like `2025, 2024, 2023...` rather than mixing repeated or stale annual values
+- text extraction for `Item 1`, `1A`, `1C`, `3`, `7`, and `7A` should stop at the intended next section more consistently
+- running the pipeline with `--years 5` is intended to produce five years of both financial and filing-text coverage when SEC data is available
+- current reference artifacts for `AAPL`, `META`, and `GOOG` are considered stable enough to drive the next analysis phase
 
 ## Important Project Decisions Already Made
 
@@ -373,6 +411,7 @@ If a future LLM is asked to help on this project, it should understand:
 
 - the ingestion system is the most mature part right now
 - `complete_ingestion.json` is the main output artifact
+- the current repo already contains a small reference set of ingested artifacts in `outputs/`
 - `ingestion_pipeline.py` is the current operational entrypoint
 - `SECClient`, `DocumentFetcher`, and `DataCleaner` form the core deterministic retrieval and normalization layer
 - `sec_parser_utils.py` is the current semantic parsing layer
@@ -386,6 +425,7 @@ The future LLM should avoid assuming:
 - that table extraction is production-ready
 - that `Item 8` is already structured for ratio analysis
 - that the current parser is a perfect `10-K` parser
+- that every company will use the same XBRL tag or fiscal-quarter labeling conventions
 
 ## Recommended Next Steps
 
