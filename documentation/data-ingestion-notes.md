@@ -81,27 +81,29 @@ Primary modules:
 
 ### Parser behavior
 
-- Preferred mode: `sec-parser` semantic parse path
-- Fallback mode: plain-text extraction from HTML if parser dependencies are missing
+- Preferred mode: `sec-parser` semantic parse path. It is highly accurate as it uses HTML structure bounds to cleanly extract section text.
+- Fallback mode: plain-text extraction from HTML if parser dependencies are missing, the library crashes, or the filing is too old/unstructured.
+
+### Recent Extraction Improvements (vs Old Code)
+The extraction heuristics were updated to enforce strict boundaries and prevent data contamination:
+1. **Curly Quote Normalization**: Filings often use HTML entity curly quotes (`&#8217;`). The old plain-text fallback failed to match regex strings like `management's` because of this. We introduced `html.unescape()` and text normalization to reliably match punctuation.
+2. **Table of Contents Evasion**: The old plain-text logic searched for the first available instance of "Part I" to start extraction, which actually began extracting inside the Table of Contents. The new logic targets the *second* occurrence of "Part I", reliably jumping the TOC.
+3. **Strict Generic Item Boundaries**: The old parsing logic (in both `sec_parser` and plain-text) only stopped recording when it hit the *next tracked section* (e.g. Item 1C swallowed Item 2 because Item 3 was the next tracked target). The new logic constantly scans ahead and stops recording the moment it hits **ANY** generic "Item X" heading, perfectly partitioning the data.
 
 In output, each filing includes `parser_mode` so it is clear which mode was used.
 
 ---
 
-## Core Section Targets
+## High-Signal Core Section Targets
 
-The section extraction currently targets:
+We specifically target the following sections to maximize the extraction of actionable intelligence:
 
-- `PART I`
-- `Item 1. Business`
-- `Item 1A. Risk Factors`
-- `Item 7. MD&A`
-- `Item 7A. Market Risk`
-- `Item 8. Financial Statements`
-- `PART III`
-- `Item 10`
-
----
+- **Item 1 (Operations):** Intellectual Property (IP) strategy and core business dependencies.
+- **Item 1A (Threats):** AI disruption, competitive shifts, and talent attrition.
+- **Item 1C (Security):** Reliance on third-party cloud/logistics and cyber-vulnerabilities.
+- **Item 3 (Litigation):** Real-world IP disputes and regulatory enforcement actions.
+- **Item 7 (Narrative):** Management's "why" behind revenue or margin changes.
+- **Item 7A (Finance):** Sensitivity to currency, interest rate, and equity market swings.
 
 ## Data Models and Shared State
 
