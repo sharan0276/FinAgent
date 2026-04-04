@@ -1,0 +1,138 @@
+{
+  "ticker": "META",
+  "form": "10-K",
+  "parser_method": "Edgar10QParser Method 2 with 10-Q-specific top-section steps removed",
+  "filing_identity": {
+    "company_name_found_near_top": true,
+    "form_10k_found_near_top": true,
+    "fiscal_year_2025_found_near_top": true,
+    "html_size_ok": true
+  },
+  "core_section_coverage": {
+    "part_i": true,
+    "item_1_business": true,
+    "item_1a_risk_factors": true,
+    "item_7_mda": true,
+    "item_7a_market_risk": true,
+    "item_8_financial_statements": true,
+    "part_iii": true,
+    "item_10": true
+  },
+  "section_positions": {
+    "part_i": 40,
+    "item_1_business": 41,
+    "item_1a_risk_factors": 76,
+    "item_7_mda": 237,
+    "item_7a_market_risk": 393,
+    "item_8_financial_statements": 402,
+    "part_iii": 890,
+    "item_10": 891
+  },
+  "section_ordering": {
+    "part_i_before_item_1_business": true,
+    "item_1_business_before_item_1a_risk_factors": true,
+    "item_1a_risk_factors_before_item_7_mda": true,
+    "item_7_mda_before_item_7a_market_risk": true,
+    "item_7a_market_risk_before_item_8_financial_statements": true,
+    "item_8_financial_statements_before_part_iii": true,
+    "part_iii_before_item_10": true
+  },
+  "section_metrics": {
+    "item_1_business": {
+      "start_index": 41,
+      "end_index": 76,
+      "word_count": 3754,
+      "char_count": 24443,
+      "table_nodes": 0,
+      "xbrl_token_ratio": 0.0,
+      "replacement_char_count": 0,
+      "min_word_count_pass": true,
+      "expected_terms_present": {
+        "business": true,
+        "products": true,
+        "competition": true,
+        "customers": true
+      },
+      "expected_term_hits": 4
+    },
+    "item_1a_risk_factors": {
+      "start_index": 76,
+      "end_index": 237,
+      "word_count": 37436,
+      "char_count": 244184,
+      "table_nodes": 0,
+      "xbrl_token_ratio": 0.0,
+      "replacement_char_count": 0,
+      "min_word_count_pass": true,
+      "expected_terms_present": {
+        "risk": true,
+        "adverse": true,
+        "could": true,
+        "material": true
+      },
+      "expected_term_hits": 4
+    },
+    "item_7_mda": {
+      "start_index": 237,
+      "end_index": 393,
+      "word_count": 8564,
+      "char_count": 59740,
+      "table_nodes": 13,
+      "xbrl_token_ratio": 0.0,
+      "replacement_char_count": 0,
+      "min_word_count_pass": true,
+      "expected_terms_present": {
+        "results of operations": true,
+        "liquidity": true,
+        "capital resources": true,
+        "cash flows": true
+      },
+      "expected_term_hits": 4
+    },
+    "item_7a_market_risk": {
+      "start_index": 393,
+      "end_index": 402,
+      "word_count": 860,
+      "char_count": 5924,
+      "table_nodes": 0,
+      "xbrl_token_ratio": 0.0,
+      "replacement_char_count": 0,
+      "min_word_count_pass": true,
+      "expected_terms_present": {
+        "market risk": true,
+        "interest rate": true,
+        "foreign exchange": true,
+        "equity": true
+      },
+      "expected_term_hits": 4
+    },
+    "item_8_financial_statements": {
+      "start_index": 402,
+      "end_index": 890,
+      "word_count": 20389,
+      "char_count": 145536,
+      "table_nodes": 44,
+      "xbrl_token_ratio": 0.0,
+      "replacement_char_count": 0,
+      "min_word_count_pass": true,
+      "expected_terms_present": {
+        "balance sheets": true,
+        "cash flows": true,
+        "statements": true,
+        "notes": true
+      },
+      "expected_term_hits": 4
+    }
+  },
+  "noise_checks": {
+    "whole_document_xbrl_token_ratio": 0.0,
+    "whole_document_replacement_char_count": 0,
+    "metadata_blob_detected_near_top": true
+  },
+  "document_metrics": {
+    "html_length": 2371750,
+    "semantic_node_count": 919,
+    "rendered_tree_line_count": 710
+  },
+  "overall_status": "usable_with_cleanup"
+}
