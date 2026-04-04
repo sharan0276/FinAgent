@@ -16,11 +16,22 @@ OUTPUT_ROOT = Path("data-ingestion") / "outputs"
 CORE_SECTION_PATTERNS: dict[str, str] = {
     "item_1_business": r"\bitem\s+1\.?\s+business\b",
     "item_1a_risk_factors": r"\bitem\s+1a\.?\s+risk factors\b",
-    "item_1c_cybersecurity": r"\bitem\s+1c\.?\s+cybersecurity\b", 
-    "item_3_legal": r"\bitem\s+3\.?\s+legal proceedings\b", 
+    "item_1c_cybersecurity": r"\bitem\s+1c\.?\s+cybersecurity\b",
+    "item_3_legal": r"\bitem\s+3\.?\s+legal proceedings\b",
     "item_7_mda": r"\bitem\s+7\.?\s+management'?s discussion and analysis.*\b",
-    "item_7a_market_risk": r"\bitem\s+7a\.?\s+.*market risk\b"
+    "item_7a_market_risk": r"\bitem\s+7a\.?\s+.*market risk\b",
 }
+
+SECTION_STOP_PATTERNS: dict[str, list[str]] = {
+    "item_1_business": [r"\bitem\s+1a\.?\b"],
+    "item_1a_risk_factors": [r"\bitem\s+1b\.?\b", r"\bitem\s+1c\.?\b"],
+    "item_1c_cybersecurity": [r"\bitem\s+2\.?\b"],
+    "item_3_legal": [r"\bitem\s+4\.?\b"],
+    "item_7_mda": [r"\bitem\s+7a\.?\b"],
+    "item_7a_market_risk": [r"\bitem\s+8\.?\b"],
+}
+
+GENERIC_ITEM_HEADING_PATTERN = r"^item\s+\d+[a-z]?\.?\b"
 
 DEFAULT_METRICS = [
     "Revenues",
@@ -34,10 +45,19 @@ DEFAULT_METRICS = [
 ]
 
 
-def _normalize(text: str) -> str:
-    text = text.lower().replace("\xa0", " ")
+def _compile_pattern(pattern: str) -> re.Pattern[str]:
+    return re.compile(pattern, re.IGNORECASE)
+
+
+def _compile_line_pattern(pattern: str) -> re.Pattern[str]:
+    return re.compile(rf"^{pattern}$", re.IGNORECASE)
+
+
+def _normalize(text: str, *, lowercase: bool = True) -> str:
+    text = text.replace("\xa0", " ")
     text = text.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
-    return re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", text).strip()
+    return text.lower() if lowercase else text
 
 
 def _flatten_tree_rows(tree: Any) -> list[dict[str, Any]]:
@@ -58,6 +78,24 @@ def _flatten_tree_rows(tree: Any) -> list[dict[str, Any]]:
     return rows
 
 
+def _find_section_end_in_rows(
+    rows: list[dict[str, Any]],
+    section: str,
+    start: int,
+) -> int | None:
+    for pattern in SECTION_STOP_PATTERNS.get(section, []):
+        stop = _find_heading_anchor(rows, pattern, start_from=start + 1, must_be_heading=True)
+        if stop is not None:
+            return stop
+
+    for i in range(start + 1, len(rows)):
+        row = rows[i]
+        if row["is_heading"] and re.match(GENERIC_ITEM_HEADING_PATTERN, row["normalized"]):
+            return i
+
+    return None
+
+
 def _find_toc_anchor(rows: list[dict[str, Any]]) -> int | None:
     """Find the index of the Table of Contents landmark."""
     patterns = [
@@ -66,7 +104,7 @@ def _find_toc_anchor(rows: list[dict[str, Any]]) -> int | None:
         r"\bindex\b",
     ]
     for pattern in patterns:
-        compiled = re.compile(pattern)
+        compiled = _compile_pattern(pattern)
         for row in rows:
             # Table of Contents is often a heading, but can be plain text
             if compiled.search(row["normalized"]):
@@ -82,7 +120,7 @@ def _find_heading_anchor(
     start_from: int = 0,
     must_be_heading: bool = True
 ) -> int | None:
-    compiled = re.compile(pattern)
+    compiled = _compile_pattern(pattern)
     for i in range(start_from, len(rows)):
         row = rows[i]
         if must_be_heading:
@@ -105,35 +143,23 @@ def _extract_core_sections_from_tree(tree: Any) -> dict[str, str]:
 
     # 2. Find Item anchors starting AFTER Part I
     positions = {
-        section: _find_heading_anchor(rows, pattern, start_from=part_i_index)
+        section: (
+            _find_heading_anchor(rows, pattern, start_from=part_i_index)
+            or _find_heading_anchor(rows, pattern, start_from=part_i_index, must_be_heading=False)
+        )
         for section, pattern in CORE_SECTION_PATTERNS.items()
     }
 
     extracted: dict[str, str] = {}
-    sorted_anchors = sorted([p for p in positions.values() if p is not None])
 
     for section, start in positions.items():
         if start is None:
             extracted[section] = ""
             continue
 
-        # Find the end by looking for ANY new "Item" heading
-        end = None
-        for i in range(start + 1, len(rows)):
-            row = rows[i]
-            if row["is_heading"]:
-                # Matches patterns like "item 2", "item 1b", "item 4"
-                if re.match(r"^item\s+\d+[a-z]?\.?\b", row["normalized"]):
-                    end = i
-                    break
-                    
-        # Fallback to the next tracked anchor if no generic heading is found
-        if end is None:
-            later_positions = [p for p in sorted_anchors if p > start]
-            end = later_positions[0] if later_positions else None
-            
+        end = _find_section_end_in_rows(rows, section, start)
         section_rows = rows[start:end] if end is not None else rows[start:]
-        
+
         extracted[section] = "\n".join(
             row["text"] for row in section_rows if row["text"].strip()
         )
@@ -143,18 +169,23 @@ def _extract_core_sections_from_tree(tree: Any) -> dict[str, str]:
 
 def _extract_core_sections_from_plain_text(html_text: str) -> dict[str, str]:
     import html
-    # Simple tag stripping
-    text = re.sub(r"<[^>]+>", " ", html_text)
+
+    text = re.sub(r"(?i)<\s*br\s*/?\s*>", "\n", html_text)
+    text = re.sub(r"(?i)</\s*(div|p|tr|li|table|section|article|h1|h2|h3|h4|h5|h6)\s*>", "\n", text)
+    text = re.sub(r"<[^>]+>", " ", text)
     text = html.unescape(text)
-    normalized = _normalize(text)
-    
+    text = text.replace("\r", "\n")
+    text = re.sub(r"\n{2,}", "\n", text)
+    search_text = "\n".join(_normalize(part, lowercase=False) for part in text.split("\n"))
+    normalized = search_text.lower()
+
     # Locate landmarks in plain text
     toc_match = re.search(r"table of contents|index|contents", normalized)
     toc_pos = toc_match.start() if toc_match else 0
-    
+
     # TOC contains "Part I" at the top, and then the actual body starts with "Part I" again.
     # By picking the second occurrence, we jump entirely past the TOC list.
-    part_i_matches = list(re.finditer(r"\bpart i\b", normalized[toc_pos:]))
+    part_i_matches = list(re.finditer(r"\bpart i\b", normalized[toc_pos:], re.IGNORECASE))
     if len(part_i_matches) >= 2:
         start_pos = toc_pos + part_i_matches[1].start()
     elif part_i_matches:
@@ -163,47 +194,86 @@ def _extract_core_sections_from_plain_text(html_text: str) -> dict[str, str]:
         start_pos = toc_pos
 
     extracted: dict[str, str] = {}
-    
-    # Collect all matches and their positions
-    found_sections = []
-    for section, pattern in CORE_SECTION_PATTERNS.items():
-        # Look for matches only after Part I body
-        match = re.search(pattern, normalized[start_pos:])
-        if match:
-            absolute_start = start_pos + match.start()
-            found_sections.append((section, absolute_start))
 
-    # Sort by position to find ends
-    found_sections.sort(key=lambda x: x[1])
-    
-    for i, (section, start) in enumerate(found_sections):
-        end = found_sections[i+1][1] if i+1 < len(found_sections) else len(normalized)
-        
-        # Limit length to 100k chars for safety in fallback mode
-        end = min(end, start + 100000)
-        
-        # To prevent swallowing untracked sections (like Item 1C swallowing Item 2),
-        # we look for the next generic "Item N" heading. We use standard SEC titles 
-        # in the regex to avoid false positives (e.g., "refer to item 2 below").
-        generic_item_pat = r"\bitem\s+\d+[a-z]?\.?\s+(?:business|risk|unresolved|cybersecurity|properties|legal|mine|market|selected|reserved|management|quantitative|financial|changes|controls|other|disclosure|directors|executive|security|certain|principal|exhibits|form)\b"
-        
-        # Search starting 50 chars ahead so we don't accidentally match our own heading
-        search_start = start + 50
-        next_item_match = re.search(generic_item_pat, normalized[search_start:end])
-        if next_item_match:
-            end = search_start + next_item_match.start()
-            
-        content = normalized[start:end].strip()
-        
-        # Clean up: if the captured text starts with the heading, keep it
+    lines: list[dict[str, Any]] = []
+    cursor = 0
+    for raw_line in search_text.split("\n"):
+        stripped = raw_line.strip()
+        start = cursor
+        end = start + len(raw_line)
+        lines.append(
+            {
+                "text": raw_line,
+                "stripped": stripped,
+                "normalized": _normalize(stripped),
+                "start": start,
+                "end": end,
+            }
+        )
+        cursor = end + 1
+
+    body_lines = [line for line in lines if line["end"] >= start_pos]
+
+    def find_line_anchor(pattern: str, body_start: int) -> int | None:
+        compiled = _compile_line_pattern(pattern)
+        for line in body_lines:
+            if line["end"] < body_start:
+                continue
+            if compiled.match(line["normalized"]):
+                return line["start"]
+        return None
+
+    found_sections: dict[str, int] = {
+        section: find_line_anchor(pattern, start_pos)
+        for section, pattern in CORE_SECTION_PATTERNS.items()
+    }
+
+    generic_item_pat = re.compile(
+        r"^item\s+\d+[a-z]?\.?\s+"
+        r"(?:business|risk|unresolved|cybersecurity|properties|legal|mine|market|selected|reserved|management|quantitative|financial|changes|controls|other|disclosure|directors|executive|security|certain|principal|exhibits|form)\b",
+        re.IGNORECASE,
+    )
+
+    for section in CORE_SECTION_PATTERNS:
+        start = found_sections.get(section)
+        if start is None:
+            extracted[section] = ""
+            continue
+
+        end = None
+        for pattern in SECTION_STOP_PATTERNS.get(section, []):
+            candidate = find_line_anchor(pattern, start + 1)
+            if candidate is not None:
+                end = candidate if end is None else min(end, candidate)
+
+        for line in body_lines:
+            if line["start"] <= start:
+                continue
+            if generic_item_pat.search(line["normalized"]):
+                candidate = line["start"]
+                end = candidate if end is None else min(end, candidate)
+                break
+
+        content = search_text[start:end].strip() if end is not None else search_text[start:].strip()
         extracted[section] = content
 
-    # Fill in missing
     for section in CORE_SECTION_PATTERNS:
         if section not in extracted:
             extracted[section] = ""
 
     return extracted
+
+
+def _section_quality_score(sections: dict[str, str]) -> tuple[int, int, int]:
+    non_empty_count = sum(1 for text in sections.values() if text.strip())
+    total_length = sum(len(text) for text in sections.values())
+    max_length = max((len(text) for text in sections.values()), default=0)
+    return non_empty_count, total_length, max_length
+
+
+def _should_try_plain_text_fallback(tree_sections: dict[str, str]) -> bool:
+    non_empty_count, _, max_length = _section_quality_score(tree_sections)
+    return non_empty_count < 3 or max_length > 80000
 
 
 def run_financial_ingestion(
@@ -254,12 +324,32 @@ def run_text_ingestion(client: SECClient, cik: str, n_years: int) -> dict[str, A
     parsed_filings: list[dict[str, Any]] = []
     for filing in filings:
         if parse_filing_html is not None:
-            print(f"[{filing['form']} {filing['filingDate']}] Extracting sections using sec_parser...")
-            elements, tree, rendered_tree = parse_filing_html(filing["html"])
-            sections = _extract_core_sections_from_tree(tree)
-            semantic_element_count = len(elements)
-            tree_line_count = len(rendered_tree.splitlines())
-            parser_mode = "sec_parser"
+            try:
+                print(f"[{filing['form']} {filing['filingDate']}] Extracting sections using sec_parser...")
+                elements, tree, rendered_tree = parse_filing_html(filing["html"])
+                sections = _extract_core_sections_from_tree(tree)
+                if _should_try_plain_text_fallback(sections):
+                    plain_sections = _extract_core_sections_from_plain_text(filing["html"])
+                    if _section_quality_score(plain_sections) > _section_quality_score(sections):
+                        sections = plain_sections
+                        semantic_element_count = None
+                        tree_line_count = None
+                        parser_mode = "plain_text_fallback"
+                    else:
+                        semantic_element_count = len(elements)
+                        tree_line_count = len(rendered_tree.splitlines())
+                        parser_mode = "sec_parser"
+                else:
+                    semantic_element_count = len(elements)
+                    tree_line_count = len(rendered_tree.splitlines())
+                    parser_mode = "sec_parser"
+            except Exception as exc:
+                print(f"[{filing['form']} {filing['filingDate']}] sec_parser failed, using plain_text_fallback...")
+                sections = _extract_core_sections_from_plain_text(filing["html"])
+                semantic_element_count = None
+                tree_line_count = None
+                parser_mode = "plain_text_fallback"
+                parser_error = str(exc)
         else:
             print(f"[{filing['form']} {filing['filingDate']}] Using plain_text_fallback...")
             sections = _extract_core_sections_from_plain_text(filing["html"])

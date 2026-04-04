@@ -32,6 +32,28 @@ class DocumentFetcher:
         # No new session created — one connection for the entire agent
         self.client = client
 
+    def _combine_submission_recent_blocks(self, submissions: dict) -> dict:
+        """
+        Merge the base `filings.recent` block with paginated SEC submissions
+        history files so older 10-K filings remain discoverable.
+        """
+        combined = {
+            key: list(values)
+            for key, values in submissions.get("filings", {}).get("recent", {}).items()
+        }
+
+        for file_info in submissions.get("filings", {}).get("files", []):
+            name = file_info.get("name")
+            if not name:
+                continue
+
+            extra_recent = self.client._get(f"https://data.sec.gov/submissions/{name}")
+            for key, values in extra_recent.items():
+                combined.setdefault(key, [])
+                combined[key].extend(values)
+
+        return combined
+
     
     # Step 1: Filter and deduplicate filings
     
@@ -47,7 +69,7 @@ class DocumentFetcher:
         Returns list sorted newest first:
             [{ "form", "accession", "primaryDoc", "filingDate" }, ...]
         """
-        recent = submissions["filings"]["recent"]
+        recent = self._combine_submission_recent_blocks(submissions)
         forms      = recent["form"]
         accessions = recent["accessionNumber"]
         docs       = recent["primaryDocument"]
