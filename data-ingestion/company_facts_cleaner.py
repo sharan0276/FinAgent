@@ -51,81 +51,279 @@ class DataCleaner:
         "GrossProfit": ["GrossProfit"],
     }
 
-    def _resolve_tag(
+    _FLOW_METRICS = {
+        "Revenues",
+        "NetIncome",
+        "OperatingCashFlow",
+        "ResearchAndDevelopment",
+        "GrossProfit",
+    }
+
+    _SNAPSHOT_METRICS = {
+        "Cash",
+        "Assets",
+        "LongTermDebt",
+    }
+
+    _QUARTER_FP_MAP = {
+        "Q1": 1,
+        "Q2": 2,
+        "Q3": 3,
+        "Q4": 4,
+    }
+
+    def _filter_consolidated(self, entries: list[dict]) -> list[dict]:
+        return [
+            entry for entry in entries if "segment" not in entry or entry.get("segment") is None
+        ]
+
+    def _has_duration(self, entry: dict) -> bool:
+        return bool(entry.get("start") and entry.get("end"))
+
+    def _duration_days(self, entry: dict) -> int | None:
+        start = entry.get("start")
+        end = entry.get("end")
+        if not (start and end):
+            return None
+
+        try:
+            return (datetime.fromisoformat(end) - datetime.fromisoformat(start)).days
+        except ValueError:
+            return None
+
+    def _infer_year(self, entry: dict) -> int | None:
+        end = entry.get("end")
+        if not end:
+            return None
+
+        try:
+            return int(end[:4])
+        except ValueError:
+            return None
+
+    def _infer_quarter(self, entry: dict) -> int | None:
+        fp = (entry.get("fp") or "").upper()
+        if fp in self._QUARTER_FP_MAP:
+            return self._QUARTER_FP_MAP[fp]
+
+        frame = entry.get("frame", "")
+        match = re.search(r"Q(\d)$", frame)
+        if match:
+            return int(match.group(1))
+
+        form = (entry.get("form") or "").upper()
+        if form in {"10-K", "10-K/A"} and not self._has_duration(entry):
+            return 4
+
+        return None
+
+    def _entry_rank(self, entry: dict) -> tuple[str, int, int, str, str]:
+        filed = entry.get("filed") or ""
+        form = (entry.get("form") or "").upper()
+        amended = 1 if form.endswith("/A") else 0
+        tag_priority = -(entry.get("_tag_rank", 999))
+        end = entry.get("end") or ""
+        accession = entry.get("accn") or ""
+        return (filed, amended, tag_priority, end, accession)
+
+    def _dedupe_latest(self, entries: list[dict], key_builder) -> list[dict]:
+        chosen: dict[object, dict] = {}
+
+        for entry in entries:
+            key = key_builder(entry)
+            if key is None:
+                continue
+
+            current = chosen.get(key)
+            if current is None or self._entry_rank(entry) > self._entry_rank(current):
+                chosen[key] = entry
+
+        return list(chosen.values())
+
+    def _is_annual_entry(self, entry: dict) -> bool:
+        form = (entry.get("form") or "").upper()
+        fp = (entry.get("fp") or "").upper()
+        frame = entry.get("frame", "")
+        duration_days = self._duration_days(entry)
+
+        if form in {"10-K", "10-K/A"} and (fp == "FY" or not self._has_duration(entry)):
+            return True
+
+        if frame and re.match(r"^CY\d{4}$", frame):
+            return True
+
+        return duration_days is not None and 350 <= duration_days <= 380
+
+    def _annual_entries(self, entries: list[dict]) -> list[dict]:
+        annual = [entry for entry in entries if self._is_annual_entry(entry)]
+        annual = self._dedupe_latest(annual, self._infer_year)
+        annual.sort(key=lambda entry: entry.get("end", ""))
+        return annual
+
+    def _quarterly_snapshot_entries(self, entries: list[dict]) -> list[dict]:
+        snapshot_entries = [
+            entry
+            for entry in entries
+            if not self._has_duration(entry)
+        ]
+        snapshot_entries = self._dedupe_latest(snapshot_entries, lambda entry: entry.get("end"))
+        snapshot_entries.sort(key=lambda entry: entry.get("end", ""))
+        return snapshot_entries
+
+    def _quarterly_flow_entries(self, entries: list[dict]) -> list[dict]:
+        annual_by_year = {
+            self._infer_year(entry): entry
+            for entry in self._annual_entries(entries)
+            if self._infer_year(entry) is not None
+        }
+
+        quarter_candidates: dict[tuple[int, int], dict] = {}
+        cumulative_by_year: dict[int, dict[int, dict]] = {}
+
+        for entry in entries:
+            quarter = self._infer_quarter(entry)
+            year = self._infer_year(entry)
+            if quarter is None or year is None:
+                continue
+
+            duration_days = self._duration_days(entry)
+            if quarter == 4 and year in annual_by_year:
+                continue
+
+            if quarter == 1:
+                current = quarter_candidates.get((year, 1))
+                if current is None or self._entry_rank(entry) > self._entry_rank(current):
+                    quarter_candidates[(year, 1)] = entry
+                continue
+
+            if duration_days is not None and duration_days <= 100:
+                current = quarter_candidates.get((year, quarter))
+                if current is None or self._entry_rank(entry) > self._entry_rank(current):
+                    quarter_candidates[(year, quarter)] = entry
+                continue
+
+            cumulative_by_year.setdefault(year, {})
+            current = cumulative_by_year[year].get(quarter)
+            if current is None or self._entry_rank(entry) > self._entry_rank(current):
+                cumulative_by_year[year][quarter] = entry
+
+        discrete_entries: list[dict] = []
+
+        for year, q1_entry in quarter_candidates.items():
+            if year[1] == 1:
+                discrete_entries.append(q1_entry)
+
+        for year, quarter_entries in cumulative_by_year.items():
+            q1_entry = quarter_candidates.get((year, 1))
+            q2_entry = quarter_entries.get(2)
+            q3_entry = quarter_entries.get(3)
+            annual_entry = annual_by_year.get(year)
+
+            if q2_entry is not None:
+                q2_value = q2_entry.get("val")
+                q1_value = q1_entry.get("val") if q1_entry is not None else None
+                if q2_value is not None:
+                    discrete_entries.append(
+                        {
+                            **q2_entry,
+                            "val": q2_value - q1_value if q1_value is not None else q2_value,
+                            "quarter": 2,
+                        }
+                    )
+
+            if q3_entry is not None:
+                q3_value = q3_entry.get("val")
+                q2_value = quarter_entries.get(2, {}).get("val")
+                if q3_value is not None:
+                    discrete_entries.append(
+                        {
+                            **q3_entry,
+                            "val": q3_value - q2_value if q2_value is not None else q3_value,
+                            "quarter": 3,
+                        }
+                    )
+
+            if annual_entry is not None:
+                annual_value = annual_entry.get("val")
+                q3_value = quarter_entries.get(3, {}).get("val")
+                if annual_value is not None:
+                    discrete_entries.append(
+                        {
+                            **annual_entry,
+                            "val": annual_value - q3_value if q3_value is not None else annual_value,
+                            "quarter": 4,
+                        }
+                    )
+
+        discrete_entries = self._dedupe_latest(
+            discrete_entries,
+            lambda entry: (entry.get("end"), entry.get("quarter")),
+        )
+        discrete_entries.sort(key=lambda entry: entry.get("end", ""))
+        return discrete_entries
+
+    def _candidate_tag_entries(
+        self,
+        facts: dict,
+        tag: str,
+        taxonomy: str,
+        tag_rank: int,
+    ) -> list[dict]:
+        taxonomy_data = facts.get("facts", {}).get(taxonomy, {})
+        tag_data = taxonomy_data.get(tag, {})
+        units_dict = tag_data.get("units", {})
+
+        preferred_units = ("USD", "USD/shares", "shares", "pure")
+        for unit in preferred_units:
+            entries = units_dict.get(unit)
+            if entries:
+                return [
+                    {
+                        **entry,
+                        "_tag": tag,
+                        "_tag_rank": tag_rank,
+                    }
+                    for entry in self._filter_consolidated(entries)
+                ]
+
+        for entries in units_dict.values():
+            if entries:
+                return [
+                    {
+                        **entry,
+                        "_tag": tag,
+                        "_tag_rank": tag_rank,
+                    }
+                    for entry in self._filter_consolidated(entries)
+                ]
+
+        return []
+
+    def _resolve_entries(
         self,
         facts: dict,
         metric_alias: str,
         taxonomy: str = "us-gaap",
-    ) -> tuple[str, list[dict]]:
+    ) -> list[dict]:
         chain = self._TAG_FALLBACK_CHAINS.get(metric_alias, [metric_alias])
-        taxonomy_data = facts.get("facts", {}).get(taxonomy, {})
+        combined_entries: list[dict] = []
 
-        for tag in chain:
-            if tag in taxonomy_data:
-                units_dict = taxonomy_data[tag].get("units", {})
-                for _, entries in units_dict.items():
-                    return tag, entries
+        for tag_rank, tag in enumerate(chain):
+            combined_entries.extend(
+                self._candidate_tag_entries(
+                    facts,
+                    tag,
+                    taxonomy,
+                    tag_rank=tag_rank,
+                )
+            )
 
-        raise KeyError(
-            f"No XBRL tag found for metric '{metric_alias}' using chain: {chain}"
-        )
+        if not combined_entries:
+            raise KeyError(
+                f"No XBRL tag found for metric '{metric_alias}' using chain: {chain}"
+            )
 
-    def _filter_consolidated(self, entries: list[dict]) -> list[dict]:
-        return [
-            e for e in entries if "segment" not in e or e.get("segment") is None
-        ]
-
-    def _filter_annual(self, entries: list[dict]) -> list[dict]:
-        annual = []
-        for e in entries:
-            form = e.get("form", "")
-            frame = e.get("frame", "")
-
-            if "10-K" in form:
-                annual.append(e)
-                continue
-
-            if frame and re.match(r"^CY\d{4}$", frame):
-                annual.append(e)
-                continue
-
-            start = e.get("start")
-            end = e.get("end")
-            if start and end:
-                try:
-                    days = (datetime.fromisoformat(end) - datetime.fromisoformat(start)).days
-                    if 350 <= days <= 380:
-                        annual.append(e)
-                except ValueError:
-                    pass
-
-        return annual
-
-    def _filter_quarterly(self, entries: list[dict]) -> list[dict]:
-        quarterly = []
-        for e in entries:
-            form = e.get("form", "")
-            frame = e.get("frame", "")
-
-            if "10-Q" in form:
-                quarterly.append(e)
-                continue
-
-            if frame and re.match(r"^CY\d{4}Q\d$", frame):
-                quarterly.append(e)
-                continue
-
-            start = e.get("start")
-            end = e.get("end")
-            if start and end:
-                try:
-                    days = (datetime.fromisoformat(end) - datetime.fromisoformat(start)).days
-                    if 80 <= days <= 100:
-                        quarterly.append(e)
-                except ValueError:
-                    pass
-
-        return quarterly
+        return combined_entries
 
     @staticmethod
     def _to_millions(value) -> float | None:
@@ -143,8 +341,9 @@ class DataCleaner:
                 deltas.append(round(v - values[i - 1], 2))
         return deltas
 
-    def _format_annual(self, entries: list[dict], tag: str) -> dict:
-        years = [int(e["end"][:4]) if e.get("end") else None for e in entries]
+    def _format_annual(self, entries: list[dict]) -> dict:
+        tag = entries[0].get("_tag", "") if entries else ""
+        years = [self._infer_year(e) for e in entries]
         values = [self._to_millions(e.get("val")) for e in entries]
         return {
             "tag": tag,
@@ -154,19 +353,14 @@ class DataCleaner:
             "deltas": self._compute_deltas(values),
         }
 
-    def _format_quarterly(self, entries: list[dict], tag: str) -> dict:
+    def _format_quarterly(self, entries: list[dict]) -> dict:
+        tag = entries[0].get("_tag", "") if entries else ""
         periods = []
         values = []
         for e in entries:
-            end_date = e.get("end", "")
-            frame = e.get("frame", "")
-            year = int(end_date[:4]) if end_date else None
-            quarter = None
-            if frame:
-                match = re.search(r"Q(\d)$", frame)
-                if match:
-                    quarter = int(match.group(1))
-            periods.append(f"{year}Q{quarter}" if year and quarter else end_date)
+            year = self._infer_year(e)
+            quarter = e.get("quarter", self._infer_quarter(e))
+            periods.append(f"{year}Q{quarter}" if year and quarter else (e.get("end") or ""))
             values.append(self._to_millions(e.get("val")))
         return {
             "tag": tag,
@@ -185,27 +379,15 @@ class DataCleaner:
     ) -> dict[str, dict]:
         n_quarters = n_years * 4
 
-        tag, raw_entries = self._resolve_tag(facts, metric_alias, taxonomy)
-        consolidated = self._filter_consolidated(raw_entries)
+        raw_entries = self._resolve_entries(facts, metric_alias, taxonomy=taxonomy)
 
-        annual = self._filter_annual(consolidated)
-        quarterly = self._filter_quarterly(consolidated)
-
-        annual.sort(key=lambda e: e.get("end", ""))
-        # Deduplicate by fiscal year: keep only the latest filing per year
-        # (handles amendments like 10-K/A which would otherwise double-count a year)
-        seen_years: dict[int, dict] = {}
-        for e in annual:
-            year = int(e["end"][:4]) if e.get("end") else None
-            if year is not None:
-                seen_years[year] = e  # later entries overwrite earlier ones (already sorted)
-        annual = sorted(seen_years.values(), key=lambda e: e.get("end", ""))
-        annual = annual[-n_years:]
-
-        quarterly.sort(key=lambda e: e.get("end", ""))
-        quarterly = quarterly[-n_quarters:]
+        annual = self._annual_entries(raw_entries)[-n_years:]
+        if metric_alias in self._FLOW_METRICS:
+            quarterly = self._quarterly_flow_entries(raw_entries)[-n_quarters:]
+        else:
+            quarterly = self._quarterly_snapshot_entries(raw_entries)[-n_quarters:]
 
         return {
-            "annual": self._format_annual(annual, tag),
-            "quarterly": self._format_quarterly(quarterly, tag),
+            "annual": self._format_annual(annual),
+            "quarterly": self._format_quarterly(quarterly),
         }

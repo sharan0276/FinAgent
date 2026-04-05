@@ -15,9 +15,11 @@ Primary objective:
 ## Current Baseline (Already Implemented)
 
 - Deterministic ingestion pipeline exists in `data-ingestion/ingestion_pipeline.py`.
-- Financial metrics are pulled from SEC Company Facts API and cleaned.
-- Text sections are extracted from filing content for key 10-K sections.
+- Financial metrics are pulled from SEC Company Facts API, cleaned, merged across fallback tags when needed, and deduplicated to one canonical annual datapoint per fiscal year.
+- Quarterly financial output is now consistent enough for downstream comparison even when SEC facts mix discrete-quarter and YTD reporting styles.
+- Text sections are extracted from filing content for key 10-K sections using explicit stop-boundary rules and line-based plain-text heading checks.
 - Current output is written to `data-ingestion/outputs/<TICKER>/complete_ingestion.json`.
+- Current reference artifacts for `AAPL`, `META`, and `GOOG` should be treated as the working source of truth for the next phase unless intentionally regenerated.
 
 ---
 
