@@ -37,3 +37,8 @@ build/
 *.ipynb_checkpoints
 .pytest_cache/
 *.cache/*
+
+# RAG matching generated artifacts (run embedder.py + indexer.py to regenerate)
+rag-matching/curator_db/
+data-ingestion/.cache/
+data-ingestion/data-ingestion/
