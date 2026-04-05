@@ -1,0 +1,1630 @@
+{
+  "schema_version": "data_extraction_v1",
+  "model_name": "fake-finbert",
+  "run_timestamp": "2026-04-04T21:49:31.464619+00:00",
+  "ticker": "AAPL",
+  "company_name": "Apple Inc.",
+  "cik": "0000320193",
+  "filing_year": 2025,
+  "filing_date": "2025-10-31",
+  "accession": "",
+  "parser_mode": "sec_parser",
+  "source_artifact_path": "data-ingestion\\outputs\\AAPL\\complete_ingestion.json",
+  "processed_sections": [
+    "item_1a_risk_factors",
+    "item_1c_cybersecurity",
+    "item_7_mda",
+    "item_7a_market_risk"
+  ],
+  "skipped_sections": [
+    "item_3_legal_proceedings"
+  ],
+  "numeric_deltas": {
+    "Revenues": {
+      "current_value": 416161000000.0,
+      "previous_value": 391035000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "previous_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "delta_percent": 6.425511782832739,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "NetIncome": {
+      "current_value": 112010000000.0,
+      "previous_value": 93736000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "NetIncomeLoss",
+      "previous_tag": "NetIncomeLoss",
+      "delta_percent": 19.495177946573357,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "Cash": {
+      "current_value": 35934000000.0,
+      "previous_value": 29943000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "delta_percent": 20.008015228934976,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "Assets": {
+      "current_value": 359241000000.0,
+      "previous_value": 364980000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "Assets",
+      "previous_tag": "Assets",
+      "delta_percent": -1.5724149268453065,
+      "label": "stable",
+      "reason": null
+    },
+    "LongTermDebt": {
+      "current_value": 90678000000.0,
+      "previous_value": 96662000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "LongTermDebt",
+      "previous_tag": "LongTermDebt",
+      "delta_percent": -6.190643686246922,
+      "label": "moderate_decline",
+      "reason": null
+    },
+    "OperatingCashFlow": {
+      "current_value": 111482000000.0,
+      "previous_value": 118254000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "delta_percent": -5.726656180763441,
+      "label": "moderate_decline",
+      "reason": null
+    },
+    "ResearchAndDevelopment": {
+      "current_value": 34550000000.0,
+      "previous_value": 31370000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "ResearchAndDevelopmentExpense",
+      "previous_tag": "ResearchAndDevelopmentExpense",
+      "delta_percent": 10.137073637233025,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "GrossProfit": {
+      "current_value": 195201000000.0,
+      "previous_value": 180683000000.0,
+      "current_end_date": "2025-09-27",
+      "previous_end_date": "2024-09-28",
+      "current_accession": "0000320193-25-000079",
+      "previous_accession": "0000320193-25-000079",
+      "current_tag": "GrossProfit",
+      "previous_tag": "GrossProfit",
+      "delta_percent": 8.035066940442654,
+      "label": "moderate_growth",
+      "reason": null
+    }
+  },
+  "text_candidates": [
+    {
+      "candidate_id": "item_1a_risk_factors_1",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 11,
+      "sentence_text": "Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency.Adverse economic conditions can also lead to increased credit and collectibility risk on the Company\u2019s trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company\u2019s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company\u2019s financial instruments.",
+      "previous_sentence": "In addition, consumer confidence and spending can be materially adversely affected in response to changes in fiscal and monetary policy, financial market volatility, declines in income or asset values, and other economic factors.Uncertainty about, or a decline in, global or regional economic conditions can also have a significant impact on the Company\u2019s suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners, and developers.",
+      "next_sentence": "These and other impacts can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "risk_score": 0.45,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.54,
+        "negative": 0.45
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_2",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 1,
+      "sentence_text": "Risk Factors The following summarizes factors that could have a material adverse effect on the Company\u2019s business, reputation, results of operations, financial condition and stock price.",
+      "previous_sentence": "Item 1A.",
+      "next_sentence": "The Company may not be able to accurately predict, control or mitigate these risks.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_3",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 6,
+      "sentence_text": "Macroeconomic and Industry Risks The Company\u2019s operations and performance depend significantly on global and regional economic conditions and adverse economic conditions can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "previous_sentence": "This section should be read in conjunction with Part II, Item 7, \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d and the consolidated financial statements and accompanying notes in Part II, Item 8, \u201cFinancial Statements and Supplementary Data\u201d of this Form 10-K.",
+      "next_sentence": "The Company has international operations with sales outside the U.S. representing a majority of the Company\u2019s total net sales.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_4",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 36,
+      "sentence_text": "In addition, the Company\u2019s and its suppliers\u2019 operations, retail stores and facilities are subject to the risk of interruption by fire, power shortages, nuclear power plant accidents and other industrial accidents, terrorist attacks and other hostile acts, ransomware and other cybersecurity attacks, labor disputes, public health issues and other events beyond the Company\u2019s control.Such events can make it difficult or impossible for the Company to manufacture and deliver products to its customers, create delays and inefficiencies in the Company\u2019s supply and manufacturing chain, result in slowdowns and outages to the Company\u2019s service offerings, increase the Company\u2019s costs, and negatively impact consumer spending and demand in affected areas.The Company\u2019s operations are also subject to the risks of industrial accidents at its suppliers and contract manufacturers.",
+      "previous_sentence": "Global climate change is resulting in certain types of natural disasters and extreme weather occurring more frequently or with more intense effects.",
+      "next_sentence": "While the Company\u2019s suppliers are required to maintain safe working environments and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company\u2019s business, and harm to the Company\u2019s reputation.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_5",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 54,
+      "sentence_text": "If the Company is unable to continue to develop and sell innovative new products with attractive margins or if competitors infringe on the Company\u2019s intellectual property, the Company\u2019s ability to maintain a competitive advantage could be materially adversely affected.The Company\u2019s products and services face substantial competition from companies that have significant technical, marketing, distribution and other resources, as well as established hardware, software and service offerings.",
+      "previous_sentence": "Effective intellectual property protection is not consistently available in every country in which the Company operates.",
+      "next_sentence": "In addition, the Company faces significant competition as competitors imitate the Company\u2019s product features and applications within their products to offer more competitive solutions.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_6",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 75,
+      "sentence_text": "While the Company relies on its partners to adhere to its supplier code of conduct, violations of the supplier code of conduct occur from time to time and can materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.Changes or additions to the Company\u2019s supply chain require considerable time and resources and involve significant risks and uncertainties, including exposure to additional regulatory and operational risks.",
+      "previous_sentence": "Although arrangements with these partners may contain provisions for product defect expense reimbursement, the Company generally remains responsible to the consumer for warranty and out-of-warranty service in the event of product defects and experiences unanticipated product defect liabilities from time to time.",
+      "next_sentence": "Future operating results depend upon the Company\u2019s ability to obtain components in sufficient quantities on commercially reasonable terms.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_7",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 84,
+      "sentence_text": "Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business, results of operations, financial condition and stock price.",
+      "previous_sentence": "In addition, component suppliers may fail, be subject to consolidation within a particular industry, or decide to concentrate on the production of common components instead of components customized to meet the Company\u2019s requirements, further limiting the Company\u2019s ability to obtain sufficient quantities of components on commercially reasonable terms, or at all.",
+      "next_sentence": "The Company\u2019s products and services may be affected from time to time by design and manufacturing defects that could materially adversely affect the Company\u2019s business and result in harm to the Company\u2019s reputation.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_8",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 103,
+      "sentence_text": "Because the Company\u2019s markets are volatile, competitive and subject to rapid technology and price changes, there is a risk the Company will forecast incorrectly and order or produce excess or insufficient amounts of components or products, or not fully utilize purchase commitments.",
+      "previous_sentence": "Manufacturing purchase obligations cover the Company\u2019s forecasted component and manufacturing requirements, typically for periods up to 150 days.",
+      "next_sentence": "The Company accrues necessary cancellation fee reserves for orders of excess products and components.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_9",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 157,
+      "sentence_text": "Investment in new business strategies, commercial relationships and acquisitions could disrupt the Company\u2019s ongoing business, present risks not originally contemplated, and materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
+      "previous_sentence": "To help protect customers and the Company, the Company deploys and makes available technologies like multifactor authentication, monitors its services and systems for unusual activity and may freeze accounts under suspicious circumstances, which, among other things, can result in the delay or loss of customer orders or impede customer access to the Company\u2019s products and services.While the Company maintains insurance coverage that is intended to address certain aspects of data security risks, such insurance coverage may be insufficient to cover all losses or all types of claims that may arise.",
+      "next_sentence": "The Company has invested, and in the future may invest, in new business strategies, commercial relationships and acquisitions.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_10",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 163,
+      "sentence_text": "Legal and Regulatory Compliance Risks The Company\u2019s business, results of operations and financial condition could be adversely impacted by unfavorable results of legal proceedings or government investigations.",
+      "previous_sentence": "The Company\u2019s business strategies and investments may not be successful, which could materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.",
+      "next_sentence": "The Company is subject to various claims, legal proceedings and government investigations that have arisen in the ordinary course of business and have not yet been fully resolved, and new matters may arise in the future.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_11",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 183,
+      "sentence_text": "If the Company is found to have violated such laws and regulations, it could materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.Risks and costs related to new and changing laws, regulations, executive orders, directives, and enforcement priorities increase as the Company\u2019s products and services are introduced into specialized applications, including health and financial services, or as the Company expands the use of technologies, such as machine learning and artificial intelligence features, and must navigate new legal, regulatory and ethical considerations relating to such technologies.Regulatory changes and other actions that materially adversely affect the Company\u2019s business may be announced with little or no advance notice and the Company may not be able to effectively mitigate all adverse impacts from such measures.",
+      "previous_sentence": "New and changing laws, regulations, executive orders, directives, and enforcement priorities can also create uncertainty about how such laws and regulations will be interpreted and applied.",
+      "next_sentence": "For example, the Company is subject to changing regulations relating to the export and import of its products.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_12",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 193,
+      "sentence_text": "From time to time, the Company has made changes to its business, including actions taken in response to litigation, competition, market conditions and legal and regulatory requirements.",
+      "previous_sentence": "The technology industry, including, in some instances, the Company, is subject to intense media, political and regulatory scrutiny, which exposes the Company to increasing regulation, government investigations, legal actions and penalties.",
+      "next_sentence": "The Company expects to make further business changes in the future.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_13",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 201,
+      "sentence_text": "Changes to the Company\u2019s business in response to the DMA or other laws and regulations could materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.The Company is also currently subject to antitrust investigations and litigation in various jurisdictions around the world, which can result in legal proceedings and claims against the Company that could, individually or in the aggregate, have a material adverse impact on the Company\u2019s business, results of operations, financial condition and stock price.",
+      "previous_sentence": "While the changes introduced by the Company in the EU are intended to reduce new privacy and security risks that the DMA poses to EU users, many risks will remain.",
+      "next_sentence": "For example, the Company is subject to civil antitrust lawsuits in the U.S. alleging monopolization or attempted monopolization in the markets for \u201cperformance smartphones\u201d and \u201csmartphones\u201d generally in violation of U.S. antitrust laws.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_14",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 204,
+      "sentence_text": "If such investigations or litigation are resolved against the Company, the Company can be exposed to significant fines and may be required to make further changes to its business practices, all of which could materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.Further, the Company has commercial relationships with other companies in the technology industry that are or may become subject to investigations and litigation that, if resolved against those other companies, could materially adversely affect the Company\u2019s commercial relationships with those business partners and materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "previous_sentence": "In addition, the Company is the subject of investigations in Europe and other jurisdictions relating to App Store terms and conditions.",
+      "next_sentence": "For example, the Company earns revenue from licensing arrangements with Google LLC (\u201cGoogle\u201d) and other companies to offer their search services on the Company\u2019s platforms and applications, and certain of these arrangements are currently subject to government investigations and legal proceedings.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_15",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 215,
+      "sentence_text": "If implemented, these remedies could materially adversely affect the Company\u2019s ability to earn revenue from such licensing arrangements.The Company\u2019s business, results of operations, financial condition and stock price can be materially adversely affected, individually or in the aggregate, by the outcomes of such investigations, litigation or changes to laws and regulations in the future.",
+      "previous_sentence": "A reversal of the order on appeal could result in imposition of certain remedies initially proposed by the DOJ, such as those prohibiting Google from offering the Company commercial terms for search distribution.",
+      "next_sentence": "Changes to the Company\u2019s business practices to comply with new laws and regulations or in connection with legal proceedings can negatively impact the reputation of the Company\u2019s products for privacy and security.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_16",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 230,
+      "sentence_text": "These laws and regulations can increase regulatory risks by requiring complex compliance measures and significant modifications to the Company\u2019s products, services and operations, and may lead to operational disruptions, heightened privacy and data security risks, increased costs and potential liability and fines, all of which can have a material adverse impact on the Company\u2019s business, financial condition, results of operations and stock price.",
+      "previous_sentence": "If the Company fails to adequately comply with these rules and requirements, the Company can be subject to litigation or government investigations, can be liable for associated investigatory expenses, and can incur significant fees or fines.The Company is also subject to new and changing laws and regulations regarding online safety, including enhanced protections for minors and mandatory age verification requirements.",
+      "next_sentence": "Financial Risks The Company\u2019s net sales and gross margins are subject to volatility and downward pressure due to a variety of factors.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_17",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 254,
+      "sentence_text": "If the Company is unable to monitor and limit exposure to credit risk on its trade and vendor non-trade receivables, as well as long-term prepayments, the Company\u2019s results of operations, financial condition and stock price could be materially adversely affected.",
+      "previous_sentence": "As of September 27, 2025, the Company\u2019s vendor non-trade receivables were concentrated among a few individual vendors located primarily in Asia.",
+      "next_sentence": "The Company is subject to changes in tax rates, the adoption of new U.S. or international tax legislation and exposure to additional tax liabilities.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_18",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 1,
+      "sentence_text": "Cybersecurity The Company\u2019s management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats.",
+      "previous_sentence": "Item 1C.",
+      "next_sentence": "The Company\u2019s Head of Corporate Information Security leads a dedicated Information Security team of highly skilled individuals with experience across industries that, among other things, develops and distributes information security policies, standards and procedures; engages in employee cybersecurity training; implements security controls; assesses security risk and compliance posture; monitors and responds to security events; and executes security testing and assessments.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_19",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 2,
+      "sentence_text": "The Company\u2019s Head of Corporate Information Security leads a dedicated Information Security team of highly skilled individuals with experience across industries that, among other things, develops and distributes information security policies, standards and procedures; engages in employee cybersecurity training; implements security controls; assesses security risk and compliance posture; monitors and responds to security events; and executes security testing and assessments.",
+      "previous_sentence": "Cybersecurity The Company\u2019s management, led by its Head of Corporate Information Security, has overall responsibility for identifying, assessing and managing any material risks from cybersecurity threats.",
+      "next_sentence": "The Company\u2019s Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company\u2019s Information Security team since 2016.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_20",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 7,
+      "sentence_text": "The Company\u2019s enterprise risk management program is designed to identify, assess, and monitor the Company\u2019s business risks, including financial, operational, compliance and reputational risks, and reflects management\u2019s assessment of cybersecurity risks.",
+      "previous_sentence": "The Company has processes to log, track, address, and escalate for further assessment and report, as appropriate, cybersecurity incidents across the Company and its suppliers to senior management and the Audit and Finance Committee (\u201cAudit Committee\u201d) of the Board.",
+      "next_sentence": "The Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_21",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 9,
+      "sentence_text": "The Audit Committee regularly reviews and discusses the Company\u2019s cybersecurity risks with management, including the Company\u2019s Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents.",
+      "previous_sentence": "The Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters.",
+      "next_sentence": "The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_22",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 11,
+      "sentence_text": "For a discussion of the Company\u2019s cybersecurity-related risks, see Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d",
+      "previous_sentence": "The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.",
+      "next_sentence": null,
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_23",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 3,
+      "sentence_text": "Interest Rate Risk The Company is primarily exposed to fluctuations in U.S. interest rates and their impact on the Company\u2019s investment portfolio and term debt.",
+      "previous_sentence": "The Company uses various strategies to manage these risks; however, they may still impact the Company\u2019s consolidated financial statements.",
+      "next_sentence": "Increases in interest rates will negatively affect the fair value of the Company\u2019s investment portfolio and increase the interest expense on the Company\u2019s term debt.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_24",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 5,
+      "sentence_text": "To protect against interest rate risk, the Company may use derivative instruments, offset interest rate\u2013sensitive assets and liabilities, or control duration of the investment and term debt portfolios.The following table sets forth potential impacts on the Company\u2019s investment portfolio and term debt, including the effects of any associated derivatives, that would result from a hypothetical increase in relevant interest rates as of September 27, 2025 and September 28, 2024 (dollars in millions): Interest RateSensitive InstrumentHypothetical InterestRate IncreasePotential Impact20252024Investment portfolio100 basis points, all tenorsDecline in fair value$2,416 $2,755 Term debt100 basis points, all tenorsIncrease in annual interest expense$129 $139 Foreign Exchange Rate Risk The Company\u2019s exposure to foreign exchange rate risk relates primarily to the Company being a net receiver of currencies other than the U.S. dollar.",
+      "previous_sentence": "Increases in interest rates will negatively affect the fair value of the Company\u2019s investment portfolio and increase the interest expense on the Company\u2019s term debt.",
+      "next_sentence": "Changes in exchange rates, and in particular a strengthening of the U.S. dollar, will negatively affect the Company\u2019s net sales and gross margins as expressed in U.S. dollars.",
+      "risk_score": 0.35,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.64,
+        "negative": 0.35
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_25",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 2,
+      "sentence_text": "The Company may not be able to accurately predict, control or mitigate these risks.",
+      "previous_sentence": "Risk Factors The following summarizes factors that could have a material adverse effect on the Company\u2019s business, reputation, results of operations, financial condition and stock price.",
+      "next_sentence": "Statements in this section are based on the Company\u2019s beliefs and opinions regarding matters that could materially adversely affect the Company in the future and are not representations as to whether such matters have or have not occurred previously.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_26",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 3,
+      "sentence_text": "Statements in this section are based on the Company\u2019s beliefs and opinions regarding matters that could materially adversely affect the Company in the future and are not representations as to whether such matters have or have not occurred previously.",
+      "previous_sentence": "The Company may not be able to accurately predict, control or mitigate these risks.",
+      "next_sentence": "The risks and uncertainties described below are not exhaustive and should not be considered a complete statement of all potential risks or uncertainties that the Company faces or may face in the future.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_27",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 4,
+      "sentence_text": "The risks and uncertainties described below are not exhaustive and should not be considered a complete statement of all potential risks or uncertainties that the Company faces or may face in the future.",
+      "previous_sentence": "Statements in this section are based on the Company\u2019s beliefs and opinions regarding matters that could materially adversely affect the Company in the future and are not representations as to whether such matters have or have not occurred previously.",
+      "next_sentence": "This section should be read in conjunction with Part II, Item 7, \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d and the consolidated financial statements and accompanying notes in Part II, Item 8, \u201cFinancial Statements and Supplementary Data\u201d of this Form 10-K.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_28",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 3,
+      "sentence_text": "The Company\u2019s Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company\u2019s Information Security team since 2016.",
+      "previous_sentence": "The Company\u2019s Head of Corporate Information Security leads a dedicated Information Security team of highly skilled individuals with experience across industries that, among other things, develops and distributes information security policies, standards and procedures; engages in employee cybersecurity training; implements security controls; assesses security risk and compliance posture; monitors and responds to security events; and executes security testing and assessments.",
+      "next_sentence": "The Company\u2019s Information Security team coordinates with teams across the Company to prevent, respond to and manage security incidents, and engages third parties, as appropriate, to assess, test or otherwise assist with aspects of its security processes and incident response.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_29",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 5,
+      "sentence_text": "A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships.",
+      "previous_sentence": "The Company\u2019s Information Security team coordinates with teams across the Company to prevent, respond to and manage security incidents, and engages third parties, as appropriate, to assess, test or otherwise assist with aspects of its security processes and incident response.",
+      "next_sentence": "The Company has processes to log, track, address, and escalate for further assessment and report, as appropriate, cybersecurity incidents across the Company and its suppliers to senior management and the Audit and Finance Committee (\u201cAudit Committee\u201d) of the Board.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_30",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 6,
+      "sentence_text": "The Company has processes to log, track, address, and escalate for further assessment and report, as appropriate, cybersecurity incidents across the Company and its suppliers to senior management and the Audit and Finance Committee (\u201cAudit Committee\u201d) of the Board.",
+      "previous_sentence": "A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships.",
+      "next_sentence": "The Company\u2019s enterprise risk management program is designed to identify, assess, and monitor the Company\u2019s business risks, including financial, operational, compliance and reputational risks, and reflects management\u2019s assessment of cybersecurity risks.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_31",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 8,
+      "sentence_text": "The Audit Committee assists the Board in the oversight and monitoring of cybersecurity matters.",
+      "previous_sentence": "The Company\u2019s enterprise risk management program is designed to identify, assess, and monitor the Company\u2019s business risks, including financial, operational, compliance and reputational risks, and reflects management\u2019s assessment of cybersecurity risks.",
+      "next_sentence": "The Audit Committee regularly reviews and discusses the Company\u2019s cybersecurity risks with management, including the Company\u2019s Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_32",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 16,
+      "sentence_text": "Tariffs and other measures that are applied to the Company\u2019s products or their components can have a material adverse impact on the Company\u2019s business, results of operations and financial condition, including impacting the Company\u2019s supply chain, the availability of rare earths and other raw materials and components, pricing and gross margin.",
+      "previous_sentence": "Department of Commerce has initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into, among other things, imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors.",
+      "next_sentence": "The ultimate impact remains uncertain and will depend on several factors, including whether additional or incremental U.S.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_33",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 19,
+      "sentence_text": "Trade and other international disputes can have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company\u2019s products and services, all of which can further adversely affect the Company\u2019s business and results of operations.",
+      "previous_sentence": "Tariffs or other measures are announced or imposed, to what extent other countries implement tariffs or other retaliatory measures in response, and the overall magnitude and duration of these measures.",
+      "next_sentence": "Segment Operating Performance The following table shows net sales by reportable segment for 2025, 2024 and 2023 (dollars in millions): 2025Change2024Change2023Americas$178,353 7 %$167,045 3 %$162,560 Europe111,032 10 %101,328 7 %94,294 Greater China64,377 (4)%66,952 (8)%72,559 Japan28,703 15 %25,052 3 %24,257 Rest of Asia Pacific33,696 10 %30,658 4 %29,615 Total net sales$416,161 6 %$391,035 2 %$383,285 Americas Americas net sales increased during 2025 compared to 2024 primarily due to higher net sales of iPhone and Services.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_34",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 31,
+      "sentence_text": "Services Gross Margin Services gross margin increased during 2025 compared to 2024 primarily due to higher Services net sales and a different mix of services.Services gross margin percentage increased during 2025 compared to 2024 primarily due to a different mix of services, partially offset by higher costs.The Company\u2019s future gross margins can be impacted by a variety of factors, as discussed in Part I, Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d As a result, the Company believes, in general, gross margins will be subject to volatility and downward pressure.",
+      "previous_sentence": "Gross Margin Products and Services gross margin and gross margin percentage for 2025, 2024 and 2023 were as follows (dollars in millions): 202520242023Gross margin:Products$112,887 $109,633 $108,803 Services82,314 71,050 60,345 Total gross margin$195,201 $180,683 $169,148 Gross margin percentage:Products36.8%37.2%36.5%Services75.4%73.9%70.8%Total gross margin percentage46.9%46.2%44.1% Products Gross Margin Products gross margin increased during 2025 compared to 2024 primarily due to favorable costs and a different mix of products, partially offset by tariff costs.Products gross margin percentage decreased during 2025 compared to 2024 primarily due to a different mix of products and tariff costs, partially offset by other favorable costs.",
+      "next_sentence": "Operating Expenses Operating expenses for 2025, 2024 and 2023 were as follows (dollars in millions): 2025Change2024Change2023Research and development$34,550 10 %$31,370 5 %$29,915 Percentage of total net sales8%8%8%Selling, general and administrative$27,601 6 %$26,097 5 %$24,932 Percentage of total net sales7%7%7%Total operating expenses$62,151 8 %$57,467 5 %$54,847 Percentage of total net sales15%15%14% Research and Development The growth in R&D expense during 2025 compared to 2024 was primarily driven by increases in headcount-related expenses and infrastructure-related costs.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_35",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 35,
+      "sentence_text": "Liquidity and Capital Resources The Company believes its balances of cash, cash equivalents and marketable securities, which totaled $132.4 billion as of September 27, 2025, along with cash generated by ongoing operations and continued access to debt markets, will be sufficient to satisfy its cash requirements and capital return program over the next 12 months and beyond.The Company\u2019s material cash requirements include the following contractual obligations: Debt As of September 27, 2025, the Company had outstanding fixed-rate notes with varying maturities for an aggregate principal amount of $91.3 billion (collectively the \u201cNotes\u201d), with $12.4 billion payable within 12 months.",
+      "previous_sentence": "Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for 2025, 2024 and 2023 were as follows (dollars in millions): 202520242023Provision for income taxes$20,719 $29,749 $16,741 Effective tax rate15.6%24.1%14.7%Statutory federal income tax rate21%21%21% The Company\u2019s effective tax rate for 2025 was lower than the statutory federal income tax rate primarily due to a lower effective tax rate on foreign earnings, including the impact of changes in unrecognized tax benefits, the impact of the U.S. federal R&D credit, and tax benefits from share-based compensation, partially offset by a change in valuation allowance and state income taxes.The Company\u2019s effective tax rate for 2025 was lower compared to 2024 due to a $10.7 billion year-over-year decrease in the provision for income taxes related to the State Aid Decision (refer to Note 7, \u201cIncome Taxes\u201d in the Notes to Consolidated Financial Statements in Part II, Item 8 of this Form 10-K) and the impact of changes in unrecognized tax benefits, partially offset by a change in valuation allowance and a higher effective tax rate on foreign earnings.",
+      "next_sentence": "Future interest payments associated with the Notes total $37.0 billion, with $2.6 billion payable within 12 months.The Company also issues unsecured short-term promissory notes pursuant to a commercial paper program.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_36",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 1,
+      "sentence_text": "Quantitative and Qualitative Disclosures About Market Risk The Company is exposed to economic risk from interest rates and foreign exchange rates.",
+      "previous_sentence": "Item 7A.",
+      "next_sentence": "The Company uses various strategies to manage these risks; however, they may still impact the Company\u2019s consolidated financial statements.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_37",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 2,
+      "sentence_text": "The Company uses various strategies to manage these risks; however, they may still impact the Company\u2019s consolidated financial statements.",
+      "previous_sentence": "Quantitative and Qualitative Disclosures About Market Risk The Company is exposed to economic risk from interest rates and foreign exchange rates.",
+      "next_sentence": "Interest Rate Risk The Company is primarily exposed to fluctuations in U.S. interest rates and their impact on the Company\u2019s investment portfolio and term debt.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_38",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 4,
+      "sentence_text": "Increases in interest rates will negatively affect the fair value of the Company\u2019s investment portfolio and increase the interest expense on the Company\u2019s term debt.",
+      "previous_sentence": "Interest Rate Risk The Company is primarily exposed to fluctuations in U.S. interest rates and their impact on the Company\u2019s investment portfolio and term debt.",
+      "next_sentence": "To protect against interest rate risk, the Company may use derivative instruments, offset interest rate\u2013sensitive assets and liabilities, or control duration of the investment and term debt portfolios.The following table sets forth potential impacts on the Company\u2019s investment portfolio and term debt, including the effects of any associated derivatives, that would result from a hypothetical increase in relevant interest rates as of September 27, 2025 and September 28, 2024 (dollars in millions): Interest RateSensitive InstrumentHypothetical InterestRate IncreasePotential Impact20252024Investment portfolio100 basis points, all tenorsDecline in fair value$2,416 $2,755 Term debt100 basis points, all tenorsIncrease in annual interest expense$129 $139 Foreign Exchange Rate Risk The Company\u2019s exposure to foreign exchange rate risk relates primarily to the Company being a net receiver of currencies other than the U.S. dollar.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_39",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 8,
+      "sentence_text": "To protect against foreign exchange rate risk, the Company may use derivative instruments, offset exposures, or adjust local currency pricing of its products and services.",
+      "previous_sentence": "Fluctuations in exchange rates may also affect the fair values of certain of the Company\u2019s assets and liabilities.",
+      "next_sentence": "However, the Company may choose to not hedge certain foreign currency exposures for a variety of reasons, including accounting considerations or prohibitive cost.The Company applied a value-at-risk (\u201cVAR\u201d) model to its foreign currency derivative positions to assess the potential impact of fluctuations in exchange rates.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_40",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 9,
+      "sentence_text": "However, the Company may choose to not hedge certain foreign currency exposures for a variety of reasons, including accounting considerations or prohibitive cost.The Company applied a value-at-risk (\u201cVAR\u201d) model to its foreign currency derivative positions to assess the potential impact of fluctuations in exchange rates.",
+      "previous_sentence": "To protect against foreign exchange rate risk, the Company may use derivative instruments, offset exposures, or adjust local currency pricing of its products and services.",
+      "next_sentence": "The VAR model used a Monte Carlo simulation.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_41",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 11,
+      "sentence_text": "The VAR is the maximum expected loss in fair value, for a given confidence interval, to the Company\u2019s foreign currency derivative positions due to adverse movements in rates.",
+      "previous_sentence": "The VAR model used a Monte Carlo simulation.",
+      "next_sentence": "Based on the results of the model, the Company estimates, with 95% confidence, a maximum one-day loss in fair value of $590 million and $538 million as of September 27, 2025 and September 28, 2024, respectively.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_42",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 9,
+      "sentence_text": "As a result, the Company\u2019s operations and performance depend significantly on global and regional economic conditions.Adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company\u2019s products and services.",
+      "previous_sentence": "In addition, the Company\u2019s global supply chain is large and complex and a majority of the Company\u2019s supplier facilities, including manufacturing and assembly sites, are located outside the U.S.",
+      "next_sentence": "In addition, consumer confidence and spending can be materially adversely affected in response to changes in fiscal and monetary policy, financial market volatility, declines in income or asset values, and other economic factors.Uncertainty about, or a decline in, global or regional economic conditions can also have a significant impact on the Company\u2019s suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners, and developers.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_43",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 10,
+      "sentence_text": "In addition, consumer confidence and spending can be materially adversely affected in response to changes in fiscal and monetary policy, financial market volatility, declines in income or asset values, and other economic factors.Uncertainty about, or a decline in, global or regional economic conditions can also have a significant impact on the Company\u2019s suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners, and developers.",
+      "previous_sentence": "As a result, the Company\u2019s operations and performance depend significantly on global and regional economic conditions.Adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company\u2019s products and services.",
+      "next_sentence": "Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency.Adverse economic conditions can also lead to increased credit and collectibility risk on the Company\u2019s trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company\u2019s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company\u2019s financial instruments.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_44",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 12,
+      "sentence_text": "These and other impacts can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "previous_sentence": "Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency.Adverse economic conditions can also lead to increased credit and collectibility risk on the Company\u2019s trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company\u2019s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company\u2019s financial instruments.",
+      "next_sentence": "The Company\u2019s business can be impacted by political events, trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, public health issues, industrial accidents and other business interruptions.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_45",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 14,
+      "sentence_text": "Political events, trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, public health issues, industrial accidents and other business interruptions can have a material adverse effect on the Company and its customers, employees, suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners.The Company has a large, global business with sales outside the U.S. representing a majority of the Company\u2019s total net sales, and the Company believes that it generally benefits from growth in international trade.",
+      "previous_sentence": "The Company\u2019s business can be impacted by political events, trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, public health issues, industrial accidents and other business interruptions.",
+      "next_sentence": "A significant majority of the Company\u2019s manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to sourcing from partners and facilities located in the U.S.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_46",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 16,
+      "sentence_text": "Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain.",
+      "previous_sentence": "A significant majority of the Company\u2019s manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam, in addition to sourcing from partners and facilities located in the U.S.",
+      "next_sentence": "The impact can be particularly significant if these restrictive measures apply to countries and regions where the Company derives a significant portion of its revenues and/or has significant supply chain operations.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_47",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 21,
+      "sentence_text": "Trade and other international disputes can also have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company\u2019s products and services, all of which can further adversely affect the Company\u2019s business and results of operations.",
+      "previous_sentence": "Changing the Company\u2019s business and supply chain in accordance with new or changed restrictions on international trade can be expensive, time-consuming and disruptive to the Company\u2019s business and results of operations.",
+      "next_sentence": "Such restrictions can be announced with little or no advance notice, which can create uncertainty, and the Company may not be able to effectively mitigate any or all adverse impacts from such measures.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_48",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 22,
+      "sentence_text": "Such restrictions can be announced with little or no advance notice, which can create uncertainty, and the Company may not be able to effectively mitigate any or all adverse impacts from such measures.",
+      "previous_sentence": "Trade and other international disputes can also have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company\u2019s products and services, all of which can further adversely affect the Company\u2019s business and results of operations.",
+      "next_sentence": "Global supply chains can be highly concentrated, and an escalation of geopolitical tensions or conflict could result in significant disruptions.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_49",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 38,
+      "sentence_text": "Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.Following any interruption to its business, the Company can require substantial recovery time, incur significant expenditures to resume operations, and lose significant sales.",
+      "previous_sentence": "While the Company\u2019s suppliers are required to maintain safe working environments and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company\u2019s business, and harm to the Company\u2019s reputation.",
+      "next_sentence": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_50",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 41,
+      "sentence_text": "Any of the foregoing can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "previous_sentence": "While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
+      "next_sentence": "Global markets for the Company\u2019s products and services are highly competitive and subject to rapid technological change, and the Company may be unable to compete effectively in these markets.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_51",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 44,
+      "sentence_text": "These markets are characterized by aggressive price competition, downward pressure on gross margins, continual improvement in product performance, and price sensitivity on the part of consumers and businesses.",
+      "previous_sentence": "The Company\u2019s products and services are offered in highly competitive global markets.",
+      "next_sentence": "These markets are further defined by frequent introduction of new products and services, short product life cycles, evolving industry standards, and rapid adoption of technological advancements.The Company\u2019s ability to compete successfully depends heavily on ensuring the continuing and timely introduction of innovative new products, services and technologies to the marketplace.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_52",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 49,
+      "sentence_text": "Regulatory requirements, government investigations and litigation can force the Company to withdraw from, or modify its products and services for, certain countries and limit its ability to derive value from, or to enjoin others from using, its intellectual property rights.",
+      "previous_sentence": "These investments may not achieve expected returns, and the Company may not be able to develop and market new products and services successfully.The Company\u2019s ability to compete successfully also depends on the effective protection and enforcement of its intellectual property rights.",
+      "next_sentence": "Additionally, they may require the Company to share its innovations with competitors.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_53",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 51,
+      "sentence_text": "Any of these outcomes can have a negative impact on the Company\u2019s competitive advantage and materially adversely affect its business, results of operations, financial condition and stock price.The Company currently holds a significant number of patents, trademarks and copyrights and has registered, and applied to register, additional patents, trademarks and copyrights.",
+      "previous_sentence": "Additionally, they may require the Company to share its innovations with competitors.",
+      "next_sentence": "In contrast, many of the Company\u2019s competitors seek to compete primarily through aggressive pricing and very low cost structures, and by imitating the Company\u2019s products and infringing on its intellectual property.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_54",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 55,
+      "sentence_text": "In addition, the Company faces significant competition as competitors imitate the Company\u2019s product features and applications within their products to offer more competitive solutions.",
+      "previous_sentence": "If the Company is unable to continue to develop and sell innovative new products with attractive margins or if competitors infringe on the Company\u2019s intellectual property, the Company\u2019s ability to maintain a competitive advantage could be materially adversely affected.The Company\u2019s products and services face substantial competition from companies that have significant technical, marketing, distribution and other resources, as well as established hardware, software and service offerings.",
+      "next_sentence": "The Company also expects competition to intensify as competitors imitate the Company\u2019s approach to providing components seamlessly within their offerings or work collaboratively to offer integrated solutions.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_55",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 56,
+      "sentence_text": "The Company also expects competition to intensify as competitors imitate the Company\u2019s approach to providing components seamlessly within their offerings or work collaboratively to offer integrated solutions.",
+      "previous_sentence": "In addition, the Company faces significant competition as competitors imitate the Company\u2019s product features and applications within their products to offer more competitive solutions.",
+      "next_sentence": "Some of the Company\u2019s competitors have broad product lines, low-priced products, large installed bases of active devices, and large customer bases.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_56",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 58,
+      "sentence_text": "Competition has been particularly intense as competitors have aggressively cut prices and lowered product margins.",
+      "previous_sentence": "Some of the Company\u2019s competitors have broad product lines, low-priced products, large installed bases of active devices, and large customer bases.",
+      "next_sentence": "Certain competitors have the resources, experience or cost structures to provide products and services at little or no profit or even at a loss.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_57",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 60,
+      "sentence_text": "The Company has a minority market share in the global smartphone, personal computer, tablet and wearables markets, and some of the markets in which the Company competes have from time to time experienced little to no growth or contracted overall.If the Company is unable to compete successfully, its business, reputation, results of operations, financial condition and stock price can be materially adversely affected.",
+      "previous_sentence": "Certain competitors have the resources, experience or cost structures to provide products and services at little or no profit or even at a loss.",
+      "next_sentence": "Business Risks To remain competitive and stimulate customer demand, the Company must successfully manage frequent introductions and transitions of products and services.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_58",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 61,
+      "sentence_text": "Business Risks To remain competitive and stimulate customer demand, the Company must successfully manage frequent introductions and transitions of products and services.",
+      "previous_sentence": "The Company has a minority market share in the global smartphone, personal computer, tablet and wearables markets, and some of the markets in which the Company competes have from time to time experienced little to no growth or contracted overall.If the Company is unable to compete successfully, its business, reputation, results of operations, financial condition and stock price can be materially adversely affected.",
+      "next_sentence": "Due to the highly volatile and competitive nature of the markets and industries in which the Company competes, the Company must continually introduce new products, services and technologies, enhance existing products and services, effectively stimulate customer demand for new and upgraded products and services, navigate global regulatory requirements and barriers to market access, and successfully manage the transition to these new and upgraded products and services.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_59",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 62,
+      "sentence_text": "Due to the highly volatile and competitive nature of the markets and industries in which the Company competes, the Company must continually introduce new products, services and technologies, enhance existing products and services, effectively stimulate customer demand for new and upgraded products and services, navigate global regulatory requirements and barriers to market access, and successfully manage the transition to these new and upgraded products and services.",
+      "previous_sentence": "Business Risks To remain competitive and stimulate customer demand, the Company must successfully manage frequent introductions and transitions of products and services.",
+      "next_sentence": "The success of new product and service introductions depends on a number of factors, including the Company\u2019s ability to recruit and retain highly skilled personnel to execute on its strategic initiatives, and the timely and successful development and market acceptance of new products, services and technologies.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_60",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 64,
+      "sentence_text": "Success also relies on the Company\u2019s ability to manage the risks associated with new technologies and production ramp-up issues, the effective integration of third-party services and technologies into the Company\u2019s products and services, the availability, delivery and performance of application software or other third-party support for the Company\u2019s products and services, the effective management of manufacturing and other purchase commitments and the management of inventory levels in line with anticipated product demand, and the availability of products in appropriate quantities and at expected costs to meet anticipated demand.",
+      "previous_sentence": "The success of new product and service introductions depends on a number of factors, including the Company\u2019s ability to recruit and retain highly skilled personnel to execute on its strategic initiatives, and the timely and successful development and market acceptance of new products, services and technologies.",
+      "next_sentence": "Additionally, quality issues or other defects or deficiencies can adversely affect the success of new product and service introductions and market acceptance.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_61",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 65,
+      "sentence_text": "Additionally, quality issues or other defects or deficiencies can adversely affect the success of new product and service introductions and market acceptance.",
+      "previous_sentence": "Success also relies on the Company\u2019s ability to manage the risks associated with new technologies and production ramp-up issues, the effective integration of third-party services and technologies into the Company\u2019s products and services, the availability, delivery and performance of application software or other third-party support for the Company\u2019s products and services, the effective management of manufacturing and other purchase commitments and the management of inventory levels in line with anticipated product demand, and the availability of products in appropriate quantities and at expected costs to meet anticipated demand.",
+      "next_sentence": "New products, services and technologies may replace or supersede existing offerings and may produce lower revenues and lower profit margins.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_62",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 67,
+      "sentence_text": "The Company may not be able to successfully manage future introductions and transitions of products and services, which can materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.",
+      "previous_sentence": "New products, services and technologies may replace or supersede existing offerings and may produce lower revenues and lower profit margins.",
+      "next_sentence": "The Company depends on component and product manufacturing and logistical services provided by outsourcing partners, many of which are located outside of the U.S.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_63",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 73,
+      "sentence_text": "Such diminished control has from time to time had, and may in the future have, an adverse effect on the cost, quality or quantity of products manufactured or services provided, or adversely affect the Company\u2019s flexibility to respond to changing conditions.",
+      "previous_sentence": "While these arrangements can lower operating costs, they also reduce the Company\u2019s direct control over production and distribution.",
+      "next_sentence": "Although arrangements with these partners may contain provisions for product defect expense reimbursement, the Company generally remains responsible to the consumer for warranty and out-of-warranty service in the event of product defects and experiences unanticipated product defect liabilities from time to time.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_64",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 77,
+      "sentence_text": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+      "previous_sentence": "Future operating results depend upon the Company\u2019s ability to obtain components in sufficient quantities on commercially reasonable terms.",
+      "next_sentence": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_65",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 78,
+      "sentence_text": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "previous_sentence": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+      "next_sentence": "For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company\u2019s ability to obtain sufficient quantities of components and products on commercially reasonable terms, or at all.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_66",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 79,
+      "sentence_text": "For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company\u2019s ability to obtain sufficient quantities of components and products on commercially reasonable terms, or at all.",
+      "previous_sentence": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
+      "next_sentence": "Such disruptions could occur in the future.Additionally, the Company\u2019s new products often utilize custom components available from only one source.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_67",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 85,
+      "sentence_text": "The Company\u2019s products and services may be affected from time to time by design and manufacturing defects that could materially adversely affect the Company\u2019s business and result in harm to the Company\u2019s reputation.",
+      "previous_sentence": "Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business, results of operations, financial condition and stock price.",
+      "next_sentence": "The Company offers complex hardware and software products and services that can be affected by design and manufacturing defects.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_68",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 89,
+      "sentence_text": "Component defects could make the Company\u2019s products unsafe and create a risk of environmental or property damage and personal injury.",
+      "previous_sentence": "Defects can also exist in components and products the Company purchases from third parties.",
+      "next_sentence": "These risks may increase as the Company\u2019s products are introduced into specialized applications, including health.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_69",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 90,
+      "sentence_text": "These risks may increase as the Company\u2019s products are introduced into specialized applications, including health.",
+      "previous_sentence": "Component defects could make the Company\u2019s products unsafe and create a risk of environmental or property damage and personal injury.",
+      "next_sentence": "In addition, the Company\u2019s service offerings can have quality issues and from time to time experience outages, service slowdowns or errors.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_70",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 93,
+      "sentence_text": "The introduction of new and complex technologies, such as artificial intelligence features, can increase these and other safety risks, including exposing users to harmful, inaccurate or other negative content and experiences.",
+      "previous_sentence": "As a result, from time to time the Company\u2019s services have not performed as anticipated and may not meet customer expectations.",
+      "next_sentence": "The Company may not be able to detect and fix all issues and defects in the hardware, software and services it offers, which can result in widespread technical and performance issues affecting the Company\u2019s products and services.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_71",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 96,
+      "sentence_text": "In addition, the Company can be exposed to product liability claims, recalls, product replacements or modifications, write-offs of inventory, property, plant and equipment or intangible assets, and significant warranty and other expenses, including litigation costs and regulatory fines.",
+      "previous_sentence": "Errors, bugs and vulnerabilities can be exploited by third parties, compromising the safety and security of a user\u2019s device.",
+      "next_sentence": "Quality problems can adversely affect the experience for users of the Company\u2019s products and services, and result in harm to the Company\u2019s reputation, loss of competitive advantage, poor market acceptance, reduced demand for products and services, delay in new product and service introductions and lost sales.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_72",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 97,
+      "sentence_text": "Quality problems can adversely affect the experience for users of the Company\u2019s products and services, and result in harm to the Company\u2019s reputation, loss of competitive advantage, poor market acceptance, reduced demand for products and services, delay in new product and service introductions and lost sales.",
+      "previous_sentence": "In addition, the Company can be exposed to product liability claims, recalls, product replacements or modifications, write-offs of inventory, property, plant and equipment or intangible assets, and significant warranty and other expenses, including litigation costs and regulatory fines.",
+      "next_sentence": "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in addition to purchase commitment cancellation risk.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_73",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 98,
+      "sentence_text": "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in addition to purchase commitment cancellation risk.",
+      "previous_sentence": "Quality problems can adversely affect the experience for users of the Company\u2019s products and services, and result in harm to the Company\u2019s reputation, loss of competitive advantage, poor market acceptance, reduced demand for products and services, delay in new product and service introductions and lost sales.",
+      "next_sentence": "The Company records a write-down for product and component inventories if cost exceeds net realizable value.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_74",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 108,
+      "sentence_text": "This risk may be exacerbated by the use of new and emerging technologies, including machine learning and artificial intelligence, which can involve, among other things, the acquisition and use of copyrighted materials for training as well as the potential reproduction of copyrighted materials in their outputs.",
+      "previous_sentence": "In addition, because of technological changes in the industries in which the Company currently competes or in the future may compete, current extensive intellectual property coverage and the rapid rate of new intellectual property rights generation, the Company\u2019s products and services may be alleged to infringe existing intellectual property rights of others.",
+      "next_sentence": "From time to time, the Company has been notified that it may be infringing certain intellectual property rights of third parties.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_75",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 111,
+      "sentence_text": "Failure to obtain the right to use third-party intellectual property, or to use such intellectual property on commercially reasonable terms, can require the Company to modify certain products, services or features or preclude the Company from selling certain products or services and expose the Company to significant licensing costs, all of which can materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.",
+      "previous_sentence": "The Company is not always able to obtain all necessary licenses to third-party intellectual property rights on commercially reasonable terms or at all.",
+      "next_sentence": "The Company\u2019s future performance depends in part on support from third-party software developers.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_76",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 115,
+      "sentence_text": "If third-party software applications and services cease to be developed and maintained for the Company\u2019s products, customers may choose not to buy the Company\u2019s products, adversely impacting the Company\u2019s business, results of operations, financial condition and stock price.The Company believes that third-party developer support depends on the perceived benefits of creating software and services for the Company\u2019s products compared to competitors\u2019 platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.",
+      "previous_sentence": "Third-party developers may discontinue the development and maintenance of software applications and services for the Company\u2019s products.",
+      "next_sentence": "This analysis may be based on factors such as the market position of the Company and its products, the anticipated revenue that may be generated, expected future growth of product sales, and the costs of developing such applications and services.The Company\u2019s minority market share in the global smartphone, personal computer, tablet and wearables markets can make developers less inclined to develop or upgrade software for the Company\u2019s products and more inclined to devote their resources to developing and upgrading software for competitors\u2019 products with larger market share.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_77",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 119,
+      "sentence_text": "Failure to obtain or create digital content that appeals to the Company\u2019s customers, or to make such content available on commercially reasonable terms, could have a material adverse impact on the Company\u2019s business, results of operations and financial condition.",
+      "previous_sentence": "The Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products.",
+      "next_sentence": "The Company contracts with numerous third parties to offer their digital content to customers.",
+      "risk_score": 0.25,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.74,
+        "negative": 0.25
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_78",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 4,
+      "sentence_text": "The Company\u2019s Information Security team coordinates with teams across the Company to prevent, respond to and manage security incidents, and engages third parties, as appropriate, to assess, test or otherwise assist with aspects of its security processes and incident response.",
+      "previous_sentence": "The Company\u2019s Head of Corporate Information Security has extensive knowledge and skills gained from over 25 years of experience in the cybersecurity industry, including serving in leadership positions at other large technology companies and leading the Company\u2019s Information Security team since 2016.",
+      "next_sentence": "A dedicated Supplier Trust team manages information security risks the Company is exposed to through its supplier relationships.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_79",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 10,
+      "sentence_text": "The Chair of the Audit Committee regularly reports the substance of such reviews and discussions to the Board, as necessary, and recommends to the Board such actions as the Audit Committee deems appropriate.",
+      "previous_sentence": "The Audit Committee regularly reviews and discusses the Company\u2019s cybersecurity risks with management, including the Company\u2019s Head of Corporate Information Security, its General Counsel and the Heads of Compliance and Business Conduct, Business Assurance, and Internal Audit, and receives updates, as necessary, regarding cybersecurity incidents.",
+      "next_sentence": "For a discussion of the Company\u2019s cybersecurity-related risks, see Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_80",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 1,
+      "sentence_text": "Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations The following discussion should be read in conjunction with the consolidated financial statements and accompanying notes included in Part II, Item 8 of this Form 10-K.",
+      "previous_sentence": "Item 7.",
+      "next_sentence": "This Item generally discusses 2025 and 2024 items and year-to-year comparisons between 2025 and 2024.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_81",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 2,
+      "sentence_text": "This Item generally discusses 2025 and 2024 items and year-to-year comparisons between 2025 and 2024.",
+      "previous_sentence": "Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations The following discussion should be read in conjunction with the consolidated financial statements and accompanying notes included in Part II, Item 8 of this Form 10-K.",
+      "next_sentence": "Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 are not included, and can be found in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of the Company\u2019s Annual Report on Form 10-K for the fiscal year ended September 28, 2024.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_82",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 3,
+      "sentence_text": "Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 are not included, and can be found in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of the Company\u2019s Annual Report on Form 10-K for the fiscal year ended September 28, 2024.",
+      "previous_sentence": "This Item generally discusses 2025 and 2024 items and year-to-year comparisons between 2025 and 2024.",
+      "next_sentence": "Product, Service and Software Announcements The Company announces new product, service and software offerings at various times during the year.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_83",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 4,
+      "sentence_text": "Product, Service and Software Announcements The Company announces new product, service and software offerings at various times during the year.",
+      "previous_sentence": "Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 are not included, and can be found in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of the Company\u2019s Annual Report on Form 10-K for the fiscal year ended September 28, 2024.",
+      "next_sentence": "Significant announcements during fiscal year 2025 included the following:First Quarter 2025:\u2022MacBook Pro\u2022Mac mini\u2022iMac\u2022iPad miniSecond Quarter 2025:\u2022iPhone 16e\u2022iPad Air\u2022iPad\u2022MacBook Air\u2022Mac StudioThird Quarter 2025:\u2022iOS 26, macOS Tahoe 26, iPadOS 26, watchOS 26, visionOS 26 and tvOS 26Fourth Quarter 2025:\u2022iPhone 17, iPhone Air, iPhone 17 Pro and iPhone 17 Pro Max\u2022Apple Watch Series 11, Apple Watch SE 3 and Apple Watch Ultra 3\u2022AirPods Pro 3 Fiscal Period The Company\u2019s fiscal year is the 52- or 53-week period that ends on the last Saturday of September.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_84",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 5,
+      "sentence_text": "Significant announcements during fiscal year 2025 included the following:First Quarter 2025:\u2022MacBook Pro\u2022Mac mini\u2022iMac\u2022iPad miniSecond Quarter 2025:\u2022iPhone 16e\u2022iPad Air\u2022iPad\u2022MacBook Air\u2022Mac StudioThird Quarter 2025:\u2022iOS 26, macOS Tahoe 26, iPadOS 26, watchOS 26, visionOS 26 and tvOS 26Fourth Quarter 2025:\u2022iPhone 17, iPhone Air, iPhone 17 Pro and iPhone 17 Pro Max\u2022Apple Watch Series 11, Apple Watch SE 3 and Apple Watch Ultra 3\u2022AirPods Pro 3 Fiscal Period The Company\u2019s fiscal year is the 52- or 53-week period that ends on the last Saturday of September.",
+      "previous_sentence": "Product, Service and Software Announcements The Company announces new product, service and software offerings at various times during the year.",
+      "next_sentence": "An additional week is included in the first fiscal quarter every five or six years to realign the Company\u2019s fiscal quarters with calendar quarters, which occurred in the first quarter of 2023.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_85",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 6,
+      "sentence_text": "An additional week is included in the first fiscal quarter every five or six years to realign the Company\u2019s fiscal quarters with calendar quarters, which occurred in the first quarter of 2023.",
+      "previous_sentence": "Significant announcements during fiscal year 2025 included the following:First Quarter 2025:\u2022MacBook Pro\u2022Mac mini\u2022iMac\u2022iPad miniSecond Quarter 2025:\u2022iPhone 16e\u2022iPad Air\u2022iPad\u2022MacBook Air\u2022Mac StudioThird Quarter 2025:\u2022iOS 26, macOS Tahoe 26, iPadOS 26, watchOS 26, visionOS 26 and tvOS 26Fourth Quarter 2025:\u2022iPhone 17, iPhone Air, iPhone 17 Pro and iPhone 17 Pro Max\u2022Apple Watch Series 11, Apple Watch SE 3 and Apple Watch Ultra 3\u2022AirPods Pro 3 Fiscal Period The Company\u2019s fiscal year is the 52- or 53-week period that ends on the last Saturday of September.",
+      "next_sentence": "The Company\u2019s fiscal years 2025 and 2024 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_86",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 7,
+      "sentence_text": "The Company\u2019s fiscal years 2025 and 2024 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks.",
+      "previous_sentence": "An additional week is included in the first fiscal quarter every five or six years to realign the Company\u2019s fiscal quarters with calendar quarters, which occurred in the first quarter of 2023.",
+      "next_sentence": "Macroeconomic Conditions Macroeconomic conditions, including inflation, interest rates and currency fluctuations, have directly and indirectly impacted, and could in the future materially impact, the Company\u2019s results of operations and financial condition.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_87",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 8,
+      "sentence_text": "Macroeconomic Conditions Macroeconomic conditions, including inflation, interest rates and currency fluctuations, have directly and indirectly impacted, and could in the future materially impact, the Company\u2019s results of operations and financial condition.",
+      "previous_sentence": "The Company\u2019s fiscal years 2025 and 2024 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks.",
+      "next_sentence": "Tariffs and Other Measures Beginning in the second quarter of 2025, new U.S.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_88",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 9,
+      "sentence_text": "Tariffs and Other Measures Beginning in the second quarter of 2025, new U.S.",
+      "previous_sentence": "Macroeconomic Conditions Macroeconomic conditions, including inflation, interest rates and currency fluctuations, have directly and indirectly impacted, and could in the future materially impact, the Company\u2019s results of operations and financial condition.",
+      "next_sentence": "Tariffs were announced, including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the EU, among others.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_89",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 10,
+      "sentence_text": "Tariffs were announced, including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the EU, among others.",
+      "previous_sentence": "Tariffs and Other Measures Beginning in the second quarter of 2025, new U.S.",
+      "next_sentence": "In response, several countries have imposed, or threatened to impose, reciprocal tariffs on imports from the U.S. and other retaliatory measures.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_90",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 11,
+      "sentence_text": "In response, several countries have imposed, or threatened to impose, reciprocal tariffs on imports from the U.S. and other retaliatory measures.",
+      "previous_sentence": "Tariffs were announced, including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the EU, among others.",
+      "next_sentence": "Various modifications to the U.S.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_91",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 12,
+      "sentence_text": "Various modifications to the U.S.",
+      "previous_sentence": "In response, several countries have imposed, or threatened to impose, reciprocal tariffs on imports from the U.S. and other retaliatory measures.",
+      "next_sentence": "Tariffs have been announced and further changes could be made in the future, which may include additional sector-based tariffs or other measures.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_92",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 13,
+      "sentence_text": "Tariffs have been announced and further changes could be made in the future, which may include additional sector-based tariffs or other measures.",
+      "previous_sentence": "Various modifications to the U.S.",
+      "next_sentence": "For example, the U.S.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_93",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 14,
+      "sentence_text": "For example, the U.S.",
+      "previous_sentence": "Tariffs have been announced and further changes could be made in the future, which may include additional sector-based tariffs or other measures.",
+      "next_sentence": "Department of Commerce has initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into, among other things, imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_94",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 15,
+      "sentence_text": "Department of Commerce has initiated an investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into, among other things, imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors.",
+      "previous_sentence": "For example, the U.S.",
+      "next_sentence": "Tariffs and other measures that are applied to the Company\u2019s products or their components can have a material adverse impact on the Company\u2019s business, results of operations and financial condition, including impacting the Company\u2019s supply chain, the availability of rare earths and other raw materials and components, pricing and gross margin.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_95",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 17,
+      "sentence_text": "The ultimate impact remains uncertain and will depend on several factors, including whether additional or incremental U.S.",
+      "previous_sentence": "Tariffs and other measures that are applied to the Company\u2019s products or their components can have a material adverse impact on the Company\u2019s business, results of operations and financial condition, including impacting the Company\u2019s supply chain, the availability of rare earths and other raw materials and components, pricing and gross margin.",
+      "next_sentence": "Tariffs or other measures are announced or imposed, to what extent other countries implement tariffs or other retaliatory measures in response, and the overall magnitude and duration of these measures.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_96",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 6,
+      "sentence_text": "Changes in exchange rates, and in particular a strengthening of the U.S. dollar, will negatively affect the Company\u2019s net sales and gross margins as expressed in U.S. dollars.",
+      "previous_sentence": "To protect against interest rate risk, the Company may use derivative instruments, offset interest rate\u2013sensitive assets and liabilities, or control duration of the investment and term debt portfolios.The following table sets forth potential impacts on the Company\u2019s investment portfolio and term debt, including the effects of any associated derivatives, that would result from a hypothetical increase in relevant interest rates as of September 27, 2025 and September 28, 2024 (dollars in millions): Interest RateSensitive InstrumentHypothetical InterestRate IncreasePotential Impact20252024Investment portfolio100 basis points, all tenorsDecline in fair value$2,416 $2,755 Term debt100 basis points, all tenorsIncrease in annual interest expense$129 $139 Foreign Exchange Rate Risk The Company\u2019s exposure to foreign exchange rate risk relates primarily to the Company being a net receiver of currencies other than the U.S. dollar.",
+      "next_sentence": "Fluctuations in exchange rates may also affect the fair values of certain of the Company\u2019s assets and liabilities.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_97",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 7,
+      "sentence_text": "Fluctuations in exchange rates may also affect the fair values of certain of the Company\u2019s assets and liabilities.",
+      "previous_sentence": "Changes in exchange rates, and in particular a strengthening of the U.S. dollar, will negatively affect the Company\u2019s net sales and gross margins as expressed in U.S. dollars.",
+      "next_sentence": "To protect against foreign exchange rate risk, the Company may use derivative instruments, offset exposures, or adjust local currency pricing of its products and services.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_98",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 10,
+      "sentence_text": "The VAR model used a Monte Carlo simulation.",
+      "previous_sentence": "However, the Company may choose to not hedge certain foreign currency exposures for a variety of reasons, including accounting considerations or prohibitive cost.The Company applied a value-at-risk (\u201cVAR\u201d) model to its foreign currency derivative positions to assess the potential impact of fluctuations in exchange rates.",
+      "next_sentence": "The VAR is the maximum expected loss in fair value, for a given confidence interval, to the Company\u2019s foreign currency derivative positions due to adverse movements in rates.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_99",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 12,
+      "sentence_text": "Based on the results of the model, the Company estimates, with 95% confidence, a maximum one-day loss in fair value of $590 million and $538 million as of September 27, 2025 and September 28, 2024, respectively.",
+      "previous_sentence": "The VAR is the maximum expected loss in fair value, for a given confidence interval, to the Company\u2019s foreign currency derivative positions due to adverse movements in rates.",
+      "next_sentence": "Changes in the Company\u2019s underlying foreign currency exposures, which were excluded from the assessment, generally offset changes in the fair values of the Company\u2019s foreign currency derivatives.",
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_100",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 13,
+      "sentence_text": "Changes in the Company\u2019s underlying foreign currency exposures, which were excluded from the assessment, generally offset changes in the fair values of the Company\u2019s foreign currency derivatives.",
+      "previous_sentence": "Based on the results of the model, the Company estimates, with 95% confidence, a maximum one-day loss in fair value of $590 million and $538 million as of September 27, 2025 and September 28, 2024, respectively.",
+      "next_sentence": null,
+      "risk_score": 0.15,
+      "finbert_probs": {
+        "positive": 0.01,
+        "neutral": 0.84,
+        "negative": 0.15
+      }
+    }
+  ]
+}
