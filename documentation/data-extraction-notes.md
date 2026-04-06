@@ -387,3 +387,34 @@ Interpretation:
 - `data-ingestion/` remains the source-of-truth ingestion layer
 - `data-extraction/` is now the active intermediate curation layer
 - later phases should build on the extraction outputs rather than re-parsing raw filing text
+
+---
+
+## Phase 2: Curator Agent (NEW)
+
+Building on top of the original structure above, we have introduced the "Curator Agent". This agent acts as a strict processor that transforms the FinBERT text candidates into highly structured, validated risk signals.
+
+**What was added:**
+- **`curator_agent.py`**: The agent orchestrator. It applies deterministic constraints (stratified section allocation, fallback fillers) to create highly structured extraction arrays, fetching LLM analysis via Claude.
+- **`curator_models.py`**: Strict Pydantic models mapping the project's precise risk taxonomy and delta labels.
+- **`company_filing_embedding.py`**: Automatically parses a chronological folder of yearly extractions for a given ticker without interactive prompting.
+- **`test_curator_agent.py`**: Dedicated deterministic unit tests safeguarding candidate logic, financial bucketing logic, prompt structures, and embedding metadata formats. 
+
+**Workflow:**
+The Curator Agent automatically generates `1024-dimension` local vector embeddings using `BGE-M3` and merges them with the financial deltas into `outputs/curator/<TICKER>/<ticker>_<year>.json`.
+
+**Running Phase 2:**
+First, ensure your key is valid and without trailing newlines:
+```bash
+export OPENROUTER_API_KEY='sk-or-v1-...'
+```
+
+Run the batch embedding processor:
+```bash
+python3 data-extraction/company_filing_embedding.py AAPL
+```
+
+To run Phase 2 tests isolated from API calls:
+```bash
+python -m unittest test_curator_agent.py
+```
