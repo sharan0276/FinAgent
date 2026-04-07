@@ -12,7 +12,7 @@ DEFAULT_BATCH_SIZE = 16
 TARGET_SECTIONS: List[Tuple[str, str]] = [
     ("item_1a_risk_factors", "Item 1A"),
     ("item_1c_cybersecurity", "Item 1C"),
-    ("item_3_legal_proceedings", "Item 3"),
+    ("item_3_legal", "Item 3"),
     ("item_7_mda", "Item 7"),
     ("item_7a_market_risk", "Item 7A"),
 ]
