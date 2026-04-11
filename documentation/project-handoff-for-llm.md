@@ -40,19 +40,21 @@ What is implemented now:
 - parsing of filing HTML with `sec-parser`
 - extraction of selected core text sections
 - generation of a combined ingestion artifact in JSON
+- yearly extraction artifacts with FinBERT-ranked candidates and numeric deltas
+- curator artifacts with company-year embeddings
+- a standalone FAISS-based company matcher over curator artifacts
 
 Current practical status:
 
 - the generated `complete_ingestion.json` artifacts are now the working source of truth for downstream analysis
 - the project currently has refreshed reference artifacts for `AAPL`, `META`, and `GOOG`
 
-What is not yet implemented in the current ingestion package:
+What is not yet implemented in the current broader system:
 
-- vector database integration
-- nearest-neighbor company retrieval
-- LLM-based financial-health reasoning on top of the ingested artifacts
+- final analyst-style financial-health reasoning on top of matches
 - reliable structured table export from `Item 8`
 - robust production-grade section extraction for every edge case filing
+- a fully integrated end-to-end path from ingestion through retrieval to final report generation
 
 ## Design Principle So Far
 
@@ -73,7 +75,11 @@ This decision was made to ensure that:
 
 ## Current System Structure
 
-The current work is concentrated in the `data-ingestion/` package.
+The current codebase is split across three main implemented layers:
+
+1. `data-ingestion/`
+2. `data-extraction/`
+3. `rag-matching/`
 
 The major logical parts are:
 
@@ -83,6 +89,9 @@ The major logical parts are:
 4. 10-K semantic parsing
 5. section extraction
 6. unified ingestion output generation
+7. yearly extraction artifacts
+8. curator company-year artifacts with embeddings
+9. nearest-neighbor company retrieval over curator artifacts
 
 ## File Responsibilities
 
@@ -232,6 +241,50 @@ Example currently open in the IDE:
 
 - `data-ingestion/outputs/AAPL/complete_ingestion.json`
 
+### `data-extraction/outputs/<TICKER>/<ticker>_<year>_extraction.json`
+
+This is the yearly extraction artifact produced from `complete_ingestion.json`.
+
+It combines:
+
+- ranked text candidates from selected sections
+- annual numeric deltas
+- filing metadata
+
+This is the current intermediate artifact between deterministic ingestion and curator generation.
+
+### `data-extraction/outputs/curator/<TICKER>/<ticker>_<year>.json`
+
+This is the current retrieval-ready company-year artifact.
+
+It combines:
+
+- financial delta labels
+- curated risk signals
+- `embedding_text`
+- `embedding_vector`
+
+These files are the canonical input to the active `rag-matching/` retrieval layer.
+
+### `rag-matching/indexer.py` and `rag-matching/matcher.py`
+
+These files implement the current standalone matching flow.
+
+Responsibilities:
+
+- recursively scan `data-extraction/outputs/curator/`
+- build a persistent FAISS index under `rag-matching/index_artifacts/`
+- accept a single curator JSON file as query input
+- retrieve nearest neighbors by cosine similarity
+- exclude the query company itself
+- deduplicate repeated years using `best year wins`
+- return the top distinct matching companies
+
+Important detail:
+
+- this matching layer uses curator embeddings and FAISS
+- it does **not** use the older Chroma demo directories
+
 ## Historical / Experimental Context
 
 Earlier in the project, there was a more focused `Meta`-only experiment around `sec-parser` parsing quality and deterministic validation.
@@ -380,9 +433,9 @@ This is especially relevant for `Item 8`, where financial statements matter the 
 The current parser configuration is a workaround built on top of `Edgar10QParser`.
 It works, but it is not a perfect native `10-K` parser.
 
-### 4. No vector storage yet
+### 4. Retrieval is implemented, but still narrow
 
-The project vision involves comparison against previously ingested companies, but that storage and retrieval layer is not yet built in the current code.
+The project now has a working nearest-neighbor company matcher over curator artifacts, but it is still a standalone tool and not yet connected to a final report-generation layer.
 
 ### 5. No financial-health synthesis layer yet
 
@@ -395,8 +448,8 @@ Based on the implemented code and earlier project direction, the likely roadmap 
 1. stabilize ingestion for multiple companies
 2. improve section extraction quality
 3. improve table extraction, especially for `Item 8`
-4. store ingested artifacts in a retrievable format
-5. compare new companies against a reference set
+4. continue refining curator artifact quality
+5. compare new companies against a reference set using the matcher
 6. add an LLM for explanation, synthesis, and similarity-based reasoning
 
 In other words:
@@ -421,7 +474,7 @@ If a future LLM is asked to help on this project, it should understand:
 
 The future LLM should avoid assuming:
 
-- that vector storage is already implemented
+- that the older Chroma demos are the active retrieval layer
 - that table extraction is production-ready
 - that `Item 8` is already structured for ratio analysis
 - that the current parser is a perfect `10-K` parser
