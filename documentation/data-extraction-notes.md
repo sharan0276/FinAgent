@@ -379,7 +379,6 @@ What is intentionally not included yet:
 
 - final risk taxonomy assignment
 - LLM-based risk-signal structuring
-- embeddings or comparison logic
 - final analyst report generation
 
 Interpretation:
@@ -403,6 +402,8 @@ Building on top of the original structure above, we have introduced the "Curator
 **Workflow:**
 The Curator Agent automatically generates `1024-dimension` local vector embeddings using `BGE-M3` and merges them with the financial deltas into `outputs/curator/<TICKER>/<ticker>_<year>.json`.
 
+These curator files are now the canonical input to the active company-matching retrieval layer in `rag-matching/`.
+
 **Running Phase 2:**
 First, ensure your key is valid and without trailing newlines:
 ```bash
@@ -417,4 +418,50 @@ python3 data-extraction/company_filing_embedding.py AAPL
 To run Phase 2 tests isolated from API calls:
 ```bash
 python -m unittest test_curator_agent.py
+```
+
+---
+
+## Phase 3: Standalone RAG Matching
+
+There is now a standalone retrieval layer in:
+
+- `rag-matching/`
+
+This layer treats the curator output directory as the retrieval database:
+
+- `data-extraction/outputs/curator/<TICKER>/<ticker>_<year>.json`
+
+Current behavior:
+
+1. recursively load all curator JSON files
+2. use stored `embedding_vector` values as the reference vectors
+3. build one persistent FAISS index under `rag-matching/index_artifacts/`
+4. accept a single curator JSON file as query input
+5. retrieve nearest neighbors by cosine similarity
+6. exclude the query company itself
+7. deduplicate repeated years using `best year wins`
+8. return the top distinct matching companies
+
+Important detail:
+
+- this retrieval layer uses FAISS and curator embeddings
+- it does **not** use `chroma_db/` or `chroma_db_pipeline/`
+
+Example:
+
+```bash
+python rag-matching/matcher.py --input-file data-extraction/outputs/curator/AAPL/aapl_2022.json --top 2 --json
+```
+
+Build or rebuild the persistent index:
+
+```bash
+python rag-matching/indexer.py
+```
+
+Matcher tests:
+
+```bash
+python -m unittest test_rag_matching.py
 ```

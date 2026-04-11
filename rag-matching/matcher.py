@@ -32,210 +32,136 @@ from typing import Any
 
 import numpy as np
 
-from embedder import load_vectors
-from indexer import load_index
-
-CURATOR_DB = Path(__file__).parent / "curator_db"
+from curator_store import (
+    CURATOR_EMBEDDING_MODEL,
+    CURATOR_SOURCE_ROOT,
+    get_stored_embedding,
+    load_curator_file,
+)
+from indexer import build_index, load_index, search_index
+from runtime_compat import prepare_openmp_runtime
 
 
 # ---------------------------------------------------------------------------
 # Core matching
 # ---------------------------------------------------------------------------
 
-def _load_curator(ticker: str, year: int) -> dict | None:
-    """Load a curator JSON by ticker + year."""
-    path = CURATOR_DB / f"{ticker.lower()}_{year}.json"
-    if not path.exists():
-        return None
-    return json.loads(path.read_text(encoding="utf-8"))
+def _embed_query_text(text: str) -> np.ndarray:
+    try:
+        prepare_openmp_runtime()
+        from sentence_transformers import SentenceTransformer
+    except ModuleNotFoundError as exc:
+        raise RuntimeError(
+            "Query file is missing embedding_vector and sentence_transformers is not installed."
+        ) from exc
+
+    model = SentenceTransformer(CURATOR_EMBEDDING_MODEL)
+    vector = model.encode(
+        [text],
+        batch_size=1,
+        show_progress_bar=False,
+        normalize_embeddings=True,
+    )
+    return np.array(vector, dtype="float32")
 
 
-def _get_embedding(curator: dict) -> np.ndarray | None:
-    vec = curator.get("embedding_vector")
-    if not vec:
-        return None
-    return np.array(vec, dtype="float32").reshape(1, -1)
+def _load_query(input_file: Path) -> tuple[dict[str, Any], np.ndarray]:
+    curator = load_curator_file(input_file)
+    vector = get_stored_embedding(curator)
+    if vector is None:
+        embedding_text = curator.get("embedding_text")
+        if not embedding_text:
+            raise ValueError(
+                f"{input_file} is missing both embedding_vector and embedding_text."
+            )
+        vector = _embed_query_text(str(embedding_text))
+    return curator, vector
 
 
-def _load_lookahead(ticker: str, match_year: int, years_ahead: int = 2) -> list[dict]:
-    """Load 1-2 lookahead years for a matched company. Flags if missing."""
-    lookaheads = []
-    for offset in range(1, years_ahead + 1):
-        yr = match_year + offset
-        data = _load_curator(ticker, yr)
-        lookaheads.append({
-            "year": yr,
-            "available": data is not None,
-            "data": data,
-        })
-    return lookaheads
+def _search_headroom(total_entries: int, top_k: int) -> int:
+    return min(total_entries, max(top_k * 10, top_k + 5))
 
 
 def find_matches(
-    query_ticker: str,
-    query_year: int | None = None,
-    top_k: int = 5,
+    input_file: str | Path,
+    *,
+    top_k: int = 2,
+    artifact_dir: Path | None = None,
 ) -> dict[str, Any]:
-    """
-    Find top-k matches for a query company.
+    query_path = Path(input_file).resolve()
+    query_curator, query_vector = _load_query(query_path)
+    bundle = load_index() if artifact_dir is None else load_index(artifact_dir=artifact_dir)
+    entries = bundle["entries"]
 
-    Args:
-        query_ticker: e.g. "SNAP"
-        query_year:   e.g. 2022. If None, uses the most recent year available.
-        top_k:        number of matches to return
+    if not entries:
+        raise ValueError("The saved index contains no entries.")
 
-    Returns dict with:
-        query:   curator data for the query company
-        matches: list of match dicts (ranked by similarity)
-    """
-    # Resolve year
-    if query_year is None:
-        # Find the most recent curator file for this ticker
-        available = sorted(CURATOR_DB.glob(f"{query_ticker.lower()}_*.json"))
-        if not available:
-            raise FileNotFoundError(f"No curator files found for ticker '{query_ticker}'")
-        query_year = int(available[-1].stem.split("_")[1])
-        print(f"Using most recent year: {query_year}")
-
-    query_curator = _load_curator(query_ticker, query_year)
-    if query_curator is None:
-        raise FileNotFoundError(
-            f"No curator file for {query_ticker} {query_year}. "
-            f"Run synthetic_curator.py first."
-        )
-
-    query_vec = _get_embedding(query_curator)
-    if query_vec is None:
+    index_dim = int(bundle["index"].d) if bundle["backend"] == "faiss" else int(bundle["index"].shape[1])
+    query_dim = int(query_vector.shape[1])
+    if query_dim != index_dim:
         raise ValueError(
-            f"No embedding vector for {query_ticker} {query_year}. "
-            f"Run embedder.py first."
+            f"Query embedding dimension {query_dim} does not match index dimension {index_dim}. "
+            f"Expected the query embedding model to match curator generation ({CURATOR_EMBEDDING_MODEL})."
         )
 
-    # Load index
-    index, metadata = load_index()
+    search_k = _search_headroom(len(entries), top_k)
+    scores, indices = search_index(bundle, query_vector, search_k)
 
-    # Search — request top_k + some extra to allow self-exclusion
-    search_k = min(top_k + 5, index.ntotal)
-    scores, indices = index.search(query_vec, search_k)
-    scores = scores[0].tolist()
-    indices = indices[0].tolist()
+    best_by_ticker: dict[str, dict[str, Any]] = {}
+    query_ticker = str(query_curator["ticker"]).upper()
 
-    matches = []
     for score, idx in zip(scores, indices):
         if idx < 0:
             continue
-        meta = metadata[idx]
-        # Exclude exact same company-year
-        if (meta["ticker"].upper() == query_ticker.upper()
-                and meta["filing_year"] == query_year):
+        entry = entries[idx]
+        entry_path = Path(entry["source_path"]).resolve()
+        entry_ticker = str(entry["ticker"]).upper()
+
+        if entry_path == query_path:
             continue
-        if len(matches) >= top_k:
-            break
+        if entry_ticker == query_ticker:
+            continue
 
-        match_curator = _load_curator(meta["ticker"], meta["filing_year"])
-        lookahead = _load_lookahead(meta["ticker"], meta["filing_year"])
+        candidate = {
+            "ticker": entry["ticker"],
+            "company": entry["company"],
+            "filing_year": entry["filing_year"],
+            "source_path": entry["source_path"],
+            "similarity": round(float(score), 4),
+        }
+        current = best_by_ticker.get(entry_ticker)
+        if current is None or candidate["similarity"] > current["similarity"]:
+            best_by_ticker[entry_ticker] = candidate
 
-        # Compute shared risk signal types
-        query_signal_types = {s["signal_type"] for s in query_curator.get("risk_signals", [])}
-        match_signal_types = {s["signal_type"] for s in (match_curator or {}).get("risk_signals", [])}
-        shared_signals = sorted(query_signal_types & match_signal_types)
+    matches = sorted(
+        best_by_ticker.values(),
+        key=lambda item: item["similarity"],
+        reverse=True,
+    )[:top_k]
 
-        matches.append({
-            "rank":           len(matches) + 1,
-            "ticker":         meta["ticker"],
-            "company":        meta["company"],
-            "filing_year":    meta["filing_year"],
-            "similarity":     round(score, 4),
-            "shared_signals": shared_signals,
-            "lookahead":      lookahead,
-            "curator":        match_curator,
-        })
-
-    return {"query": query_curator, "matches": matches}
+    return {
+        "query": {
+            "ticker": query_curator["ticker"],
+            "company": query_curator["company"],
+            "filing_year": query_curator["filing_year"],
+            "source_path": str(query_path),
+        },
+        "matches": [{"ticker": m["ticker"], "similarity": m["similarity"]} for m in matches],
+        "match_details": matches,
+    }
 
 
 # ---------------------------------------------------------------------------
 # Pretty-print report
 # ---------------------------------------------------------------------------
 
-def _delta_bar(label: str) -> str:
-    bars = {
-        "strong_growth":    "+++",
-        "moderate_growth":  "++ ",
-        "stable":           "-- ",
-        "moderate_decline": "vv ",
-        "severe_decline":   "vvv",
-    }
-    return bars.get(label or "", "???")
-
-
-def print_match_report(result: dict) -> None:
+def print_match_report(result: dict[str, Any]) -> None:
     query = result["query"]
     matches = result["matches"]
-
-    q_ticker = query["ticker"]
-    q_year   = query["filing_year"]
-    q_company = query["company"]
-
-    print("\n" + "=" * 70)
-    print(f"MATCH REPORT — {q_company} ({q_ticker}) {q_year}")
-    print("=" * 70)
-
-    # Query financial profile
-    print(f"\nQUERY FINANCIAL PROFILE:")
-    for metric, data in query.get("financial_deltas", {}).items():
-        label = data.get("label", "n/a")
-        bar   = _delta_bar(label)
-        print(f"  {metric:<26} {bar}  {label}")
-
-    # Query risk signals
-    sigs = query.get("risk_signals", [])
-    if sigs:
-        print(f"\nQUERY RISK SIGNALS ({len(sigs)}):")
-        for s in sigs:
-            sev_icon = {"high": "[H]", "medium": "[M]", "low": "[L]"}.get(s["severity"], "[ ]")
-            print(f"  {sev_icon} [{s['topic']}] {s['signal_type']}")
-            print(f"     {s['summary'][:100]}...")
-
-    # Matches
-    print(f"\nTOP {len(matches)} MATCHES:")
-    print("-" * 70)
-    for m in matches:
-        print(f"\n  #{m['rank']}  {m['company']} ({m['ticker']}) {m['filing_year']}  "
-              f"similarity={m['similarity']:.4f}")
-
-        # Financial profile of match
-        match_deltas = (m["curator"] or {}).get("financial_deltas", {})
-        if match_deltas:
-            metrics_line = "  ".join(
-                f"{k[:3]}:{_delta_bar(v.get('label'))}"
-                for k, v in match_deltas.items()
-            )
-            print(f"     Financials: {metrics_line}")
-
-        # Shared signal types
-        if m["shared_signals"]:
-            print(f"     Shared risk signals: {', '.join(m['shared_signals'])}")
-        else:
-            print(f"     Shared risk signals: (none)")
-
-        # Lookahead
-        print(f"     Lookahead:")
-        for la in m["lookahead"]:
-            if la["available"]:
-                la_data = la["data"]
-                la_deltas = la_data.get("financial_deltas", {})
-                # Show net income and cash as quick health indicators
-                ni    = la_deltas.get("NetIncome", {}).get("label", "?")
-                cash  = la_deltas.get("Cash", {}).get("label", "?")
-                rev   = la_deltas.get("Revenues", {}).get("label", "?")
-                la_sigs = la_data.get("risk_signals", [])
-                high_count = sum(1 for s in la_sigs if s.get("severity") == "high")
-                print(f"       {la['year']}: Rev={_delta_bar(rev)} NI={_delta_bar(ni)} Cash={_delta_bar(cash)}  high-risk-signals={high_count}")
-            else:
-                print(f"       {la['year']}: [MISSING] data not available")
-
-    print("\n" + "=" * 70 + "\n")
+    print(f"Query: {query['ticker']} {query['filing_year']} ({query['company']})")
+    print("Matches:")
+    for match in matches:
+        print(f"  {match['ticker']}: {match['similarity']:.4f}")
 
 
 # ---------------------------------------------------------------------------
@@ -244,23 +170,30 @@ def print_match_report(result: dict) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Find matching companies for a query ticker"
+        description="Find top distinct company matches for a curator JSON input file."
     )
-    parser.add_argument("ticker", help="Ticker to query, e.g. SNAP")
-    parser.add_argument("year", nargs="?", type=int, help="Filing year (default: most recent)")
-    parser.add_argument("--top", type=int, default=5, help="Number of matches (default: 5)")
+    parser.add_argument(
+        "--input-file",
+        type=Path,
+        default=CURATOR_SOURCE_ROOT / "AAPL" / "aapl_2022.json",
+        help="Path to a curator JSON query file.",
+    )
+    parser.add_argument("--top", type=int, default=2, help="Number of distinct company matches")
     parser.add_argument("--json", action="store_true", help="Output raw JSON instead of report")
+    parser.add_argument(
+        "--build-index",
+        action="store_true",
+        help="Build the persistent index before matching",
+    )
     args = parser.parse_args()
 
-    result = find_matches(args.ticker, args.year, top_k=args.top)
+    if args.build_index:
+        build_index()
+
+    result = find_matches(args.input_file, top_k=args.top)
 
     if args.json:
-        # Remove full curator data to keep output manageable
-        for m in result["matches"]:
-            m.pop("curator", None)
-            for la in m["lookahead"]:
-                la.pop("data", None)
-        print(json.dumps(result, indent=2))
+        print(json.dumps({"query": result["query"], "matches": result["matches"]}, indent=2))
     else:
         print_match_report(result)
 
