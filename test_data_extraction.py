@@ -113,7 +113,7 @@ class DataExtractionTests(unittest.TestCase):
                 [
                     "item_1a_risk_factors",
                     "item_1c_cybersecurity",
-                    "item_3_legal_proceedings",
+                    "item_3_legal",
                     "item_7_mda",
                     "item_7a_market_risk",
                 ]
