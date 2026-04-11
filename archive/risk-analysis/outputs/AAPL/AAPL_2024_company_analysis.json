@@ -1,0 +1,2378 @@
+{
+  "schema_version": "company_analysis_v1",
+  "taxonomy_version": "risk_taxonomy_v1",
+  "prompt_version": "prompt_v1",
+  "model_name": "openai/gpt-4.1-nano",
+  "run_timestamp": "2026-04-04T18:32:05.844232+00:00",
+  "run_id": "4f5a36d2-8a7c-47ea-b866-b5579b8d93c4",
+  "ticker": "AAPL",
+  "cik": "0000320193",
+  "company_name": "Apple Inc.",
+  "source_artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\AAPL\\complete_ingestion.json",
+  "source_accessions": [
+    "0000320193-25-000079",
+    "0000320193-24-000123",
+    "0000320193-23-000106",
+    "0000320193-22-000108",
+    "0000320193-21-000105"
+  ],
+  "numeric_trends": {
+    "Assets": {
+      "metric_name": "Assets",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 351002000000,
+          "accession": "0000320193-22-000108",
+          "tag": "Assets"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 352755000000,
+          "accession": "0000320193-23-000106",
+          "tag": "Assets"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 352583000000,
+          "accession": "0000320193-24-000123",
+          "tag": "Assets"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 364980000000,
+          "accession": "0000320193-25-000079",
+          "tag": "Assets"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 359241000000,
+          "accession": "0000320193-25-000079",
+          "tag": "Assets"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 381191000000,
+          "accession": "0000320193-22-000007",
+          "tag": "Assets"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 337158000000,
+          "accession": "0000320193-21-000056",
+          "tag": "Assets"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 329840000000,
+          "accession": "0000320193-21-000065",
+          "tag": "Assets"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 351002000000,
+          "accession": "0000320193-22-000108",
+          "tag": "Assets"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 346747000000,
+          "accession": "0000320193-23-000006",
+          "tag": "Assets"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 350662000000,
+          "accession": "0000320193-22-000059",
+          "tag": "Assets"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 336309000000,
+          "accession": "0000320193-22-000070",
+          "tag": "Assets"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 352755000000,
+          "accession": "0000320193-23-000106",
+          "tag": "Assets"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 353514000000,
+          "accession": "0000320193-24-000006",
+          "tag": "Assets"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 332160000000,
+          "accession": "0000320193-23-000064",
+          "tag": "Assets"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 335038000000,
+          "accession": "0000320193-23-000077",
+          "tag": "Assets"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 352583000000,
+          "accession": "0000320193-24-000123",
+          "tag": "Assets"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 344085000000,
+          "accession": "0000320193-25-000008",
+          "tag": "Assets"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 337411000000,
+          "accession": "0000320193-24-000069",
+          "tag": "Assets"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 331612000000,
+          "accession": "0000320193-24-000081",
+          "tag": "Assets"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 364980000000,
+          "accession": "0000320193-25-000079",
+          "tag": "Assets"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-09-27",
+          "value": 359241000000,
+          "accession": "0000320193-26-000006",
+          "tag": "Assets"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 379297000000,
+          "accession": "0000320193-26-000006",
+          "tag": "Assets"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": 331233000000,
+          "accession": "0000320193-25-000057",
+          "tag": "Assets"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 331495000000,
+          "accession": "0000320193-25-000073",
+          "tag": "Assets"
+        }
+      ],
+      "latest_annual_value": 359241000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 331495000000,
+      "latest_quarterly_period_end": "2025-06-28",
+      "annual_direction_5y": "mixed",
+      "annual_direction_3y": "mixed",
+      "annual_cagr_5y": 0.005817242570912207,
+      "annual_yoy_latest": -0.015724149268453065,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": false,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.Assets",
+        "quarterly": "financial_data.quarterly.Assets"
+      }
+    },
+    "Cash": {
+      "metric_name": "Cash",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 34940000000,
+          "accession": "0000320193-22-000108",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 23646000000,
+          "accession": "0000320193-23-000106",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 29965000000,
+          "accession": "0000320193-24-000123",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 29943000000,
+          "accession": "0000320193-25-000079",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 35934000000,
+          "accession": "0000320193-25-000079",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 37119000000,
+          "accession": "0000320193-22-000007",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 38466000000,
+          "accession": "0000320193-21-000056",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 34050000000,
+          "accession": "0000320193-21-000065",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 34940000000,
+          "accession": "0000320193-22-000108",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 20535000000,
+          "accession": "0000320193-23-000006",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 28098000000,
+          "accession": "0000320193-22-000059",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 27502000000,
+          "accession": "0000320193-22-000070",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 23646000000,
+          "accession": "0000320193-23-000106",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 40760000000,
+          "accession": "0000320193-24-000006",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 24687000000,
+          "accession": "0000320193-23-000064",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 28408000000,
+          "accession": "0000320193-23-000077",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 29965000000,
+          "accession": "0000320193-24-000123",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 30299000000,
+          "accession": "0000320193-25-000008",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 32695000000,
+          "accession": "0000320193-24-000069",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 25565000000,
+          "accession": "0000320193-24-000081",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 29943000000,
+          "accession": "0000320193-25-000079",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-09-27",
+          "value": 35934000000,
+          "accession": "0000320193-26-000006",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 45317000000,
+          "accession": "0000320193-26-000006",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": 28162000000,
+          "accession": "0000320193-25-000057",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 36269000000,
+          "accession": "0000320193-25-000073",
+          "tag": "CashAndCashEquivalentsAtCarryingValue"
+        }
+      ],
+      "latest_annual_value": 35934000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 36269000000,
+      "latest_quarterly_period_end": "2025-06-28",
+      "annual_direction_5y": "mixed",
+      "annual_direction_3y": "mixed",
+      "annual_cagr_5y": 0.0070375524498695885,
+      "annual_yoy_latest": 0.20008015228934978,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": false,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.Cash",
+        "quarterly": "financial_data.quarterly.Cash"
+      }
+    },
+    "GrossProfit": {
+      "metric_name": "GrossProfit",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 152836000000,
+          "accession": "0000320193-23-000106",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 170782000000,
+          "accession": "0000320193-24-000123",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 169148000000,
+          "accession": "0000320193-25-000079",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 180683000000,
+          "accession": "0000320193-25-000079",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 195201000000,
+          "accession": "0000320193-25-000079",
+          "tag": "GrossProfit"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 54243000000,
+          "accession": "0000320193-23-000006",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 28164000000,
+          "accession": "0000320193-22-000059",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 35255000000,
+          "accession": "0000320193-22-000070",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 35174000000,
+          "accession": "0000320193-23-000106",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 50332000000,
+          "accession": "0000320193-24-000006",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 46470000000,
+          "accession": "0000320193-23-000064",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 35885000000,
+          "accession": "0000320193-23-000077",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 38095000000,
+          "accession": "0000320193-24-000123",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 54855000000,
+          "accession": "0000320193-25-000008",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 37453000000,
+          "accession": "0000320193-24-000069",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 36413000000,
+          "accession": "0000320193-24-000081",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 40427000000,
+          "accession": "0000320193-25-000079",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 58275000000,
+          "accession": "0000320193-26-000006",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 38851000000,
+          "accession": "0000320193-25-000057",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 39678000000,
+          "accession": "0000320193-25-000073",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 43879000000,
+          "accession": "0000320193-25-000079",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 69231000000,
+          "accession": "0000320193-26-000006",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": 33911000000,
+          "accession": "0000320193-25-000057",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 43718000000,
+          "accession": "0000320193-25-000073",
+          "tag": "GrossProfit"
+        },
+        {
+          "year": 2025,
+          "quarter": 4,
+          "end_date": "2025-09-27",
+          "value": 48341000000,
+          "accession": "0000320193-25-000079",
+          "tag": "GrossProfit"
+        }
+      ],
+      "latest_annual_value": 195201000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 48341000000,
+      "latest_quarterly_period_end": "2025-09-27",
+      "annual_direction_5y": "mixed",
+      "annual_direction_3y": "increasing",
+      "annual_cagr_5y": 0.0630754619658409,
+      "annual_yoy_latest": 0.08035066940442653,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": true,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.GrossProfit",
+        "quarterly": "financial_data.quarterly.GrossProfit"
+      }
+    },
+    "LongTermDebt": {
+      "metric_name": "LongTermDebt",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 109106000000,
+          "accession": "0000320193-22-000108",
+          "tag": "LongTermDebtNoncurrent"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 110087000000,
+          "accession": "0000320193-23-000106",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 105103000000,
+          "accession": "0000320193-24-000123",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 96662000000,
+          "accession": "0000320193-25-000079",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 90678000000,
+          "accession": "0000320193-25-000079",
+          "tag": "LongTermDebt"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 117800000000,
+          "accession": "0000320193-22-000007",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 108642000000,
+          "accession": "0000320193-21-000056",
+          "tag": "LongTermDebtNoncurrent"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 105752000000,
+          "accession": "0000320193-21-000065",
+          "tag": "LongTermDebtNoncurrent"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 109106000000,
+          "accession": "0000320193-22-000108",
+          "tag": "LongTermDebtNoncurrent"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 109400000000,
+          "accession": "0000320193-23-000006",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 113000000000,
+          "accession": "0000320193-22-000059",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 108700000000,
+          "accession": "0000320193-22-000070",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 110087000000,
+          "accession": "0000320193-23-000106",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 106000000000,
+          "accession": "0000320193-24-000006",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 107600000000,
+          "accession": "0000320193-23-000064",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 105300000000,
+          "accession": "0000320193-23-000077",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 105103000000,
+          "accession": "0000320193-24-000123",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 94800000000,
+          "accession": "0000320193-25-000008",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 102600000000,
+          "accession": "0000320193-24-000069",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 98300000000,
+          "accession": "0000320193-24-000081",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 96662000000,
+          "accession": "0000320193-25-000079",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-09-27",
+          "value": 90700000000,
+          "accession": "0000320193-26-000006",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 88500000000,
+          "accession": "0000320193-26-000006",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": 92200000000,
+          "accession": "0000320193-25-000057",
+          "tag": "LongTermDebt"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 91800000000,
+          "accession": "0000320193-25-000073",
+          "tag": "LongTermDebt"
+        }
+      ],
+      "latest_annual_value": 90678000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 91800000000,
+      "latest_quarterly_period_end": "2025-06-28",
+      "annual_direction_5y": "mixed",
+      "annual_direction_3y": "decreasing",
+      "annual_cagr_5y": -0.045197989871287314,
+      "annual_yoy_latest": -0.06190643686246922,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": false,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.LongTermDebt",
+        "quarterly": "financial_data.quarterly.LongTermDebt"
+      }
+    },
+    "NetIncome": {
+      "metric_name": "NetIncome",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 94680000000,
+          "accession": "0000320193-23-000106",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 99803000000,
+          "accession": "0000320193-24-000123",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 96995000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 93736000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 112010000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetIncomeLoss"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 34630000000,
+          "accession": "0000320193-23-000006",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 17755000000,
+          "accession": "0000320193-22-000059",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 21744000000,
+          "accession": "0000320193-22-000070",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 20551000000,
+          "accession": "0000320193-23-000106",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 29998000000,
+          "accession": "0000320193-24-000006",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 29642000000,
+          "accession": "0000320193-23-000064",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 19442000000,
+          "accession": "0000320193-23-000077",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 20721000000,
+          "accession": "0000320193-24-000123",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 33916000000,
+          "accession": "0000320193-25-000008",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 20242000000,
+          "accession": "0000320193-24-000069",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 19881000000,
+          "accession": "0000320193-24-000081",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 22956000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 36330000000,
+          "accession": "0000320193-26-000006",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 21222000000,
+          "accession": "0000320193-25-000057",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 21448000000,
+          "accession": "0000320193-25-000073",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 14736000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 42097000000,
+          "accession": "0000320193-26-000006",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": 19013000000,
+          "accession": "0000320193-25-000057",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 23434000000,
+          "accession": "0000320193-25-000073",
+          "tag": "NetIncomeLoss"
+        },
+        {
+          "year": 2025,
+          "quarter": 4,
+          "end_date": "2025-09-27",
+          "value": 27466000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetIncomeLoss"
+        }
+      ],
+      "latest_annual_value": 112010000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 27466000000,
+      "latest_quarterly_period_end": "2025-09-27",
+      "annual_direction_5y": "mixed",
+      "annual_direction_3y": "mixed",
+      "annual_cagr_5y": 0.042916736540760114,
+      "annual_yoy_latest": 0.19495177946573355,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": true,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.NetIncome",
+        "quarterly": "financial_data.quarterly.NetIncome"
+      }
+    },
+    "OperatingCashFlow": {
+      "metric_name": "OperatingCashFlow",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 104038000000,
+          "accession": "0000320193-23-000106",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 122151000000,
+          "accession": "0000320193-24-000123",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 110543000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 118254000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 111482000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 46966000000,
+          "accession": "0000320193-23-000006",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 15778000000,
+          "accession": "0000320193-22-000059",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 21094000000,
+          "accession": "0000320193-22-000070",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 20200000000,
+          "accession": "0000320193-23-000106",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 34005000000,
+          "accession": "0000320193-24-000006",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 41127000000,
+          "accession": "0000320193-23-000064",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 22892000000,
+          "accession": "0000320193-23-000077",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 24127000000,
+          "accession": "0000320193-24-000123",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 39895000000,
+          "accession": "0000320193-25-000008",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 22670000000,
+          "accession": "0000320193-24-000069",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 26380000000,
+          "accession": "0000320193-24-000081",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 21598000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 29935000000,
+          "accession": "0000320193-26-000006",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 32650000000,
+          "accession": "0000320193-25-000057",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 28858000000,
+          "accession": "0000320193-25-000073",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 26811000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 53925000000,
+          "accession": "0000320193-26-000006",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": -38000000,
+          "accession": "0000320193-25-000057",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 27867000000,
+          "accession": "0000320193-25-000073",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        },
+        {
+          "year": 2025,
+          "quarter": 4,
+          "end_date": "2025-09-27",
+          "value": 29728000000,
+          "accession": "0000320193-25-000079",
+          "tag": "NetCashProvidedByUsedInOperatingActivities"
+        }
+      ],
+      "latest_annual_value": 111482000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 29728000000,
+      "latest_quarterly_period_end": "2025-09-27",
+      "annual_direction_5y": "mixed",
+      "annual_direction_3y": "mixed",
+      "annual_cagr_5y": 0.01742683739332107,
+      "annual_yoy_latest": -0.05726656180763441,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": true,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.OperatingCashFlow",
+        "quarterly": "financial_data.quarterly.OperatingCashFlow"
+      }
+    },
+    "ResearchAndDevelopment": {
+      "metric_name": "ResearchAndDevelopment",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 21914000000,
+          "accession": "0000320193-23-000106",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 26251000000,
+          "accession": "0000320193-24-000123",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 29915000000,
+          "accession": "0000320193-25-000079",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 31370000000,
+          "accession": "0000320193-25-000079",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 34550000000,
+          "accession": "0000320193-25-000079",
+          "tag": "ResearchAndDevelopmentExpense"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 6306000000,
+          "accession": "0000320193-23-000006",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 4119000000,
+          "accession": "0000320193-22-000059",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 5717000000,
+          "accession": "0000320193-22-000070",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 5772000000,
+          "accession": "0000320193-23-000106",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 7709000000,
+          "accession": "0000320193-24-000006",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 4984000000,
+          "accession": "0000320193-23-000064",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 6797000000,
+          "accession": "0000320193-23-000077",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 6761000000,
+          "accession": "0000320193-24-000123",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 7696000000,
+          "accession": "0000320193-25-000008",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 7470000000,
+          "accession": "0000320193-24-000069",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 7442000000,
+          "accession": "0000320193-24-000081",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 7307000000,
+          "accession": "0000320193-25-000079",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 8268000000,
+          "accession": "0000320193-26-000006",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 7331000000,
+          "accession": "0000320193-25-000057",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 8006000000,
+          "accession": "0000320193-25-000073",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 7765000000,
+          "accession": "0000320193-25-000079",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 10887000000,
+          "accession": "0000320193-26-000006",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": 5931000000,
+          "accession": "0000320193-25-000057",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 8866000000,
+          "accession": "0000320193-25-000073",
+          "tag": "ResearchAndDevelopmentExpense"
+        },
+        {
+          "year": 2025,
+          "quarter": 4,
+          "end_date": "2025-09-27",
+          "value": 8866000000,
+          "accession": "0000320193-25-000079",
+          "tag": "ResearchAndDevelopmentExpense"
+        }
+      ],
+      "latest_annual_value": 34550000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 8866000000,
+      "latest_quarterly_period_end": "2025-09-27",
+      "annual_direction_5y": "increasing",
+      "annual_direction_3y": "increasing",
+      "annual_cagr_5y": 0.1205509254157422,
+      "annual_yoy_latest": 0.10137073637233025,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": true,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.ResearchAndDevelopment",
+        "quarterly": "financial_data.quarterly.ResearchAndDevelopment"
+      }
+    },
+    "Revenues": {
+      "metric_name": "Revenues",
+      "frequency_covered": "both",
+      "annual_series": [
+        {
+          "year": 2021,
+          "end_date": "2021-09-25",
+          "value": 365817000000,
+          "accession": "0000320193-23-000106",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2022,
+          "end_date": "2022-09-24",
+          "value": 394328000000,
+          "accession": "0000320193-24-000123",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2023,
+          "end_date": "2023-09-30",
+          "value": 383285000000,
+          "accession": "0000320193-25-000079",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2024,
+          "end_date": "2024-09-28",
+          "value": 391035000000,
+          "accession": "0000320193-25-000079",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2025,
+          "end_date": "2025-09-27",
+          "value": 416161000000,
+          "accession": "0000320193-25-000079",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        }
+      ],
+      "quarterly_series": [
+        {
+          "year": 2021,
+          "quarter": 1,
+          "end_date": "2021-12-25",
+          "value": 123945000000,
+          "accession": "0000320193-23-000006",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2021,
+          "quarter": 2,
+          "end_date": "2021-03-27",
+          "value": 77078000000,
+          "accession": "0000320193-22-000059",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2021,
+          "quarter": 3,
+          "end_date": "2021-06-26",
+          "value": 81434000000,
+          "accession": "0000320193-22-000070",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2021,
+          "quarter": 4,
+          "end_date": "2021-09-25",
+          "value": 83360000000,
+          "accession": "0000320193-23-000106",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2022,
+          "quarter": 1,
+          "end_date": "2022-12-31",
+          "value": 117154000000,
+          "accession": "0000320193-24-000006",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2022,
+          "quarter": 2,
+          "end_date": "2022-03-26",
+          "value": 104069000000,
+          "accession": "0000320193-23-000064",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2022,
+          "quarter": 3,
+          "end_date": "2022-06-25",
+          "value": 82959000000,
+          "accession": "0000320193-23-000077",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2022,
+          "quarter": 4,
+          "end_date": "2022-09-24",
+          "value": 90146000000,
+          "accession": "0000320193-24-000123",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2023,
+          "quarter": 1,
+          "end_date": "2023-12-30",
+          "value": 119575000000,
+          "accession": "0000320193-25-000008",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2023,
+          "quarter": 2,
+          "end_date": "2023-04-01",
+          "value": 92415000000,
+          "accession": "0000320193-24-000069",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2023,
+          "quarter": 3,
+          "end_date": "2023-07-01",
+          "value": 81797000000,
+          "accession": "0000320193-24-000081",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2023,
+          "quarter": 4,
+          "end_date": "2023-09-30",
+          "value": 89498000000,
+          "accession": "0000320193-25-000079",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2024,
+          "quarter": 1,
+          "end_date": "2024-12-28",
+          "value": 124300000000,
+          "accession": "0000320193-26-000006",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2024,
+          "quarter": 2,
+          "end_date": "2024-03-30",
+          "value": 86028000000,
+          "accession": "0000320193-25-000057",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2024,
+          "quarter": 3,
+          "end_date": "2024-06-29",
+          "value": 85777000000,
+          "accession": "0000320193-25-000073",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2024,
+          "quarter": 4,
+          "end_date": "2024-09-28",
+          "value": 94930000000,
+          "accession": "0000320193-25-000079",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2025,
+          "quarter": 1,
+          "end_date": "2025-12-27",
+          "value": 143756000000,
+          "accession": "0000320193-26-000006",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2025,
+          "quarter": 2,
+          "end_date": "2025-03-29",
+          "value": 75903000000,
+          "accession": "0000320193-25-000057",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2025,
+          "quarter": 3,
+          "end_date": "2025-06-28",
+          "value": 94036000000,
+          "accession": "0000320193-25-000073",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        {
+          "year": 2025,
+          "quarter": 4,
+          "end_date": "2025-09-27",
+          "value": 102466000000,
+          "accession": "0000320193-25-000079",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+        }
+      ],
+      "latest_annual_value": 416161000000,
+      "latest_annual_period_end": "2025-09-27",
+      "latest_quarterly_value": 102466000000,
+      "latest_quarterly_period_end": "2025-09-27",
+      "annual_direction_5y": "mixed",
+      "annual_direction_3y": "mixed",
+      "annual_cagr_5y": 0.03275991627577457,
+      "annual_yoy_latest": 0.0642551178283274,
+      "quarterly_direction_recent": "mixed",
+      "quarterly_volatility_flag": true,
+      "missing_data_notes": [],
+      "source_metric_refs": {
+        "annual": "financial_data.annual.Revenues",
+        "quarterly": "financial_data.quarterly.Revenues"
+      }
+    }
+  },
+  "filing_analysis": [
+    {
+      "filing_year": 2024,
+      "filing_date": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "parser_mode": "sec_parser",
+      "filing_errors": [
+        {
+          "section_id": "item_7_mda",
+          "error": "Expecting value: line 7 column 1 (char 33)"
+        }
+      ],
+      "section_results": {
+        "item_1a_risk_factors": {
+          "section_id": "item_1a_risk_factors",
+          "section_name": "Item 1A. Risk Factors",
+          "filing_year": 2024,
+          "filing_date": "2024-11-01",
+          "accession": "0000320193-24-000123",
+          "parser_mode": "sec_parser",
+          "llm_provider": "openrouter",
+          "llm_model": "openai/gpt-4.1-nano",
+          "processing_error": null,
+          "subheading_count": 6,
+          "chunk_count": 6,
+          "candidate_count": 16,
+          "kept_signal_count": 14,
+          "notes": [],
+          "signals": [
+            {
+              "signal_id": "76a3d277acd41922",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Business Risks",
+              "risk_types": [
+                "cybersecurity_privacy"
+              ],
+              "severity": 5,
+              "direction": "unclear",
+              "confidence": 0.95,
+              "evidence_text": "The Company experiences malicious attacks and other attempts to gain unauthorized access to its systems on a regular basis. These attacks seek to compromise the confidentiality, integrity or availability of confidential information or disrupt normal business operations, and can, among other things, impair the Company\u2019s ability to attract and retain customers for its products and services, impact the Company\u2019s stock price, materially damage commercial relationships, and expose the Company to litigation or government investigations, which can result in penalties, fines or judgments against the Company.",
+              "evidence_start": 37368,
+              "evidence_end": 37975,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 50,
+              "keep_score": 0.98
+            },
+            {
+              "signal_id": "19499381f43e6160",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Legal and Regulatory Compliance Risks",
+              "risk_types": [
+                "litigation_contingency"
+              ],
+              "severity": 5,
+              "direction": "decreasing",
+              "confidence": 0.95,
+              "evidence_text": "The outcome of litigation or government investigations is inherently uncertain. If one or more legal matters were resolved against the Company or an indemnified third party in a reporting period for amounts above management\u2019s expectations, the Company\u2019s results of operations and financial condition for that reporting period could be materially adversely affected.",
+              "evidence_start": 44569,
+              "evidence_end": 44934,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 164,
+              "keep_score": 0.98
+            },
+            {
+              "signal_id": "e5144207324f4b79",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Section Overview",
+              "risk_types": [
+                "reputation_brand_trust"
+              ],
+              "severity": 4,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "The Company\u2019s business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known or unknown, including those described below.",
+              "evidence_start": 25,
+              "evidence_end": 228,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 0,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "4f66f52d2c2bb13f",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Section Overview",
+              "risk_types": [
+                "financial_liquidity_balance_sheet"
+              ],
+              "severity": 4,
+              "direction": "decreasing",
+              "confidence": 0.9,
+              "evidence_text": "When any one or more of these risks materialize from time to time, the Company\u2019s business, reputation, results of operations, financial condition and stock price can be materially and adversely affected.",
+              "evidence_start": 229,
+              "evidence_end": 432,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 1,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "02dc4a264eabaaf6",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Macroeconomic and Industry Risks",
+              "risk_types": [
+                "macroeconomic_demand"
+              ],
+              "severity": 4,
+              "direction": "decreasing",
+              "confidence": 0.9,
+              "evidence_text": "Adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company\u2019s products and services.",
+              "evidence_start": 1846,
+              "evidence_end": 2145,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 6,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "f959f519ba36f637",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Macroeconomic and Industry Risks",
+              "risk_types": [
+                "international_fx"
+              ],
+              "severity": 4,
+              "direction": "decreasing",
+              "confidence": 0.9,
+              "evidence_text": "Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain.",
+              "evidence_start": 4374,
+              "evidence_end": 4570,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 7,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "29a45cf7940f305a",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Macroeconomic and Industry Risks",
+              "risk_types": [
+                "competition_market_share"
+              ],
+              "severity": 4,
+              "direction": "decreasing",
+              "confidence": 0.9,
+              "evidence_text": "Global markets for the Company\u2019s products and services are highly competitive and subject to rapid technological change, and the Company may be unable to compete effectively in these markets.",
+              "evidence_start": 8804,
+              "evidence_end": 8995,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 9,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "8e1f24fa6240e5df",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Business Risks",
+              "risk_types": [
+                "product_execution"
+              ],
+              "severity": 4,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "The success of new product and service introductions depends on a number of factors, including timely and successful development, market acceptance, the Company\u2019s ability to manage the risks associated with new technologies and production ramp-up issues, the availability of application software or other third-party support for the Company\u2019s products and services, the effective management of purchase commitments and inventory levels in line with anticipated product demand, the availability of products in appropriate quantities and at expected costs to meet anticipated demand, and the risk that new products and services may have quality or other defects or deficiencies.",
+              "evidence_start": 13462,
+              "evidence_end": 14138,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 46,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "6cda0a8408614b9b",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Business Risks",
+              "risk_types": [
+                "dependency_third_party_platform"
+              ],
+              "severity": 4,
+              "direction": "decreasing",
+              "confidence": 0.9,
+              "evidence_text": "The Company depends on component and product manufacturing and logistical services provided by outsourcing partners, many of which are located outside of the U.S.",
+              "evidence_start": 14515,
+              "evidence_end": 14677,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 47,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "6233407f4a0faa3c",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Legal and Regulatory Compliance Risks",
+              "risk_types": [
+                "litigation_contingency"
+              ],
+              "severity": 4,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "The Company is subject to various claims, legal proceedings and government investigations that have arisen in the ordinary course of business and have not yet been fully resolved, and new matters may arise in the future.",
+              "evidence_start": 42505,
+              "evidence_end": 42725,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 163,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "0a77843e9394a581",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Legal and Regulatory Compliance Risks",
+              "risk_types": [
+                "cybersecurity_privacy"
+              ],
+              "severity": 4,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "The Company is subject to an increasing number of federal, state and international laws relating to the collection, use, retention, security and transfer of various types of personal information.",
+              "evidence_start": 55083,
+              "evidence_end": 55278,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 166,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "be7ea986183d5b64",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Business Risks",
+              "risk_types": [
+                "product_execution"
+              ],
+              "severity": 4,
+              "direction": "decreasing",
+              "confidence": 0.85,
+              "evidence_text": "The Company\u2019s products and services may be affected from time to time by design and manufacturing defects that could materially adversely affect the Company\u2019s business and result in harm to the Company\u2019s reputation.",
+              "evidence_start": 20432,
+              "evidence_end": 20647,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 49,
+              "keep_score": 0.82
+            },
+            {
+              "signal_id": "76d44a20d3aa33cc",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Business Risks",
+              "risk_types": [
+                "supply_chain_operations"
+              ],
+              "severity": 4,
+              "direction": "unclear",
+              "confidence": 0.8,
+              "evidence_text": "Future operating results depend upon the Company\u2019s ability to obtain components in sufficient quantities on commercially reasonable terms.",
+              "evidence_start": 17628,
+              "evidence_end": 17766,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 48,
+              "keep_score": 0.8
+            },
+            {
+              "signal_id": "d99ac4568c545a5b",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_1a_risk_factors",
+              "subheading": "Macroeconomic and Industry Risks",
+              "risk_types": [
+                "supply_chain_operations"
+              ],
+              "severity": 3,
+              "direction": "decreasing",
+              "confidence": 0.85,
+              "evidence_text": "Many of the Company\u2019s operations and facilities, as well as critical business operations of the Company\u2019s suppliers and contract manufacturers, are in locations that are prone to earthquakes and other natural disasters.",
+              "evidence_start": 5917,
+              "evidence_end": 6136,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 8,
+              "keep_score": 0.7
+            }
+          ]
+        },
+        "item_1c_cybersecurity": {
+          "section_id": "item_1c_cybersecurity",
+          "section_name": "Item 1C. Cybersecurity",
+          "filing_year": 2024,
+          "filing_date": "2024-11-01",
+          "accession": "0000320193-24-000123",
+          "parser_mode": "sec_parser",
+          "llm_provider": "openrouter",
+          "llm_model": "openai/gpt-4.1-nano",
+          "processing_error": null,
+          "subheading_count": 1,
+          "chunk_count": 1,
+          "candidate_count": 0,
+          "kept_signal_count": 0,
+          "notes": [
+            "Fell back to paragraph chunking because no stable subheadings were found.",
+            "Extraction returned zero accepted candidates for this section."
+          ],
+          "signals": []
+        },
+        "item_3_legal": {
+          "section_id": "item_3_legal",
+          "section_name": "Item 3. Legal Proceedings",
+          "filing_year": 2024,
+          "filing_date": "2024-11-01",
+          "accession": "0000320193-24-000123",
+          "parser_mode": "sec_parser",
+          "llm_provider": "openrouter",
+          "llm_model": "openai/gpt-4.1-nano",
+          "processing_error": null,
+          "subheading_count": 3,
+          "chunk_count": 3,
+          "candidate_count": 12,
+          "kept_signal_count": 9,
+          "notes": [],
+          "signals": [
+            {
+              "signal_id": "f8b7959cf71b4eea",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Section Overview + 1 more",
+              "risk_types": [
+                "regulatory_legal"
+              ],
+              "severity": 5,
+              "direction": "increasing",
+              "confidence": 0.95,
+              "evidence_text": "If the Commission makes a final determination that there has been a violation, it can issue a cease and desist order and may impose fines up to 10% of the Company\u2019s annual worldwide net sales",
+              "evidence_start": 984,
+              "evidence_end": 1175,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 1,
+              "keep_score": 0.98
+            },
+            {
+              "signal_id": "6ee757afdf67f07b",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Section Overview + 1 more",
+              "risk_types": [
+                "regulatory_legal"
+              ],
+              "severity": 4,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "the Commission announced that it had opened two formal noncompliance investigations against the Company under the DMA",
+              "evidence_start": 83,
+              "evidence_end": 200,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 0,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "0d5d78c48910306e",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Department of Justice Lawsuit + 1 more",
+              "risk_types": [
+                "litigation_contingency"
+              ],
+              "severity": 4,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "On March 21, 2024, the U.S. Department of Justice (the \u201cDOJ\u201d) and a number of state and district attorneys general filed a civil antitrust lawsuit in the U.S. District Court for the District of New Jersey against the Company alleging monopolization or attempted monopolization in the markets for \u201cperformance smartphones\u201d and \u201csmartphones\u201d in violation of U.S. antitrust laws.",
+              "evidence_start": 1599,
+              "evidence_end": 1975,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 7,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "a20f8b4ef1226357",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Other Legal Proceedings",
+              "risk_types": [
+                "financial_liquidity_balance_sheet"
+              ],
+              "severity": 4,
+              "direction": "decreasing",
+              "confidence": 0.9,
+              "evidence_text": "If one or more legal matters were resolved against the Company in a reporting period for amounts above management\u2019s expectations, the Company\u2019s financial condition and operating results for that reporting period could be materially adversely affected.",
+              "evidence_start": 4090,
+              "evidence_end": 4341,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 25,
+              "keep_score": 0.84
+            },
+            {
+              "signal_id": "bc69ea69fcd272bc",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Other Legal Proceedings",
+              "risk_types": [
+                "litigation_contingency"
+              ],
+              "severity": 3,
+              "direction": "unclear",
+              "confidence": 1.0,
+              "evidence_text": "The outcome of litigation is inherently uncertain.",
+              "evidence_start": 4039,
+              "evidence_end": 4089,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 24,
+              "keep_score": 0.76
+            },
+            {
+              "signal_id": "582c6de4b9df0617",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Other Legal Proceedings",
+              "risk_types": [
+                "litigation_contingency"
+              ],
+              "severity": 3,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "The Company is subject to other legal proceedings and claims that have not been fully resolved and that have arisen in the ordinary course of business.",
+              "evidence_start": 3689,
+              "evidence_end": 3840,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 22,
+              "keep_score": 0.72
+            },
+            {
+              "signal_id": "4526fe00993ec818",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Department of Justice Lawsuit + 1 more",
+              "risk_types": [
+                "regulatory_legal"
+              ],
+              "severity": 3,
+              "direction": "unclear",
+              "confidence": 0.85,
+              "evidence_text": "The DOJ is seeking equitable relief to redress the alleged anticompetitive behavior.",
+              "evidence_start": 1976,
+              "evidence_end": 2060,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 8,
+              "keep_score": 0.7
+            },
+            {
+              "signal_id": "b3ca09b73451617a",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Department of Justice Lawsuit + 1 more",
+              "risk_types": [
+                "litigation_contingency"
+              ],
+              "severity": 3,
+              "direction": "unclear",
+              "confidence": 0.8,
+              "evidence_text": "The Company believes it has substantial defenses and intends to vigorously defend itself.",
+              "evidence_start": 2273,
+              "evidence_end": 2362,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 11,
+              "keep_score": 0.68
+            },
+            {
+              "signal_id": "76a65980809c1be7",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_3_legal",
+              "subheading": "Other Legal Proceedings",
+              "risk_types": [
+                "litigation_contingency"
+              ],
+              "severity": 2,
+              "direction": "unclear",
+              "confidence": 0.95,
+              "evidence_text": "The Company settled certain matters during the fourth quarter of 2024 that did not individually or in the aggregate have a material impact on the Company\u2019s financial condition or operating results.",
+              "evidence_start": 3841,
+              "evidence_end": 4038,
+              "judge_rationale": "OpenRouter verification pass.",
+              "source_rank": 23,
+              "keep_score": 0.62
+            }
+          ]
+        },
+        "item_7_mda": {
+          "section_id": "item_7_mda",
+          "section_name": "Item 7. Management's Discussion and Analysis",
+          "filing_year": 2024,
+          "filing_date": "2024-11-01",
+          "accession": "0000320193-24-000123",
+          "parser_mode": "sec_parser",
+          "llm_provider": "openrouter",
+          "llm_model": "openai/gpt-4.1-nano",
+          "processing_error": "Expecting value: line 7 column 1 (char 33)",
+          "subheading_count": 10,
+          "chunk_count": 10,
+          "candidate_count": 11,
+          "kept_signal_count": 0,
+          "notes": [
+            "Model-backed section processing failed; no signals were kept for this section."
+          ],
+          "signals": []
+        },
+        "item_7a_market_risk": {
+          "section_id": "item_7a_market_risk",
+          "section_name": "Item 7A. Quantitative and Qualitative Disclosures About Market Risk",
+          "filing_year": 2024,
+          "filing_date": "2024-11-01",
+          "accession": "0000320193-24-000123",
+          "parser_mode": "sec_parser",
+          "llm_provider": "openrouter",
+          "llm_model": "openai/gpt-4.1-nano",
+          "processing_error": null,
+          "subheading_count": 2,
+          "chunk_count": 2,
+          "candidate_count": 3,
+          "kept_signal_count": 1,
+          "notes": [],
+          "signals": [
+            {
+              "signal_id": "7837dc39d40a5827",
+              "taxonomy_version": "risk_taxonomy_v1",
+              "filing_year": 2024,
+              "filing_date": "2024-11-01",
+              "accession": "0000320193-24-000123",
+              "section_id": "item_7a_market_risk",
+              "subheading": "Section Overview + 1 more",
+              "risk_types": [
+                "macroeconomic_demand"
+              ],
+              "severity": 3,
+              "direction": "unclear",
+              "confidence": 0.9,
+              "evidence_text": "The Company is primarily exposed to fluctuations in U.S. interest rates and their impact on the Company\u2019s investment portfolio and term debt.",
+              "evidence_start": 317,
+              "evidence_end": 458,
+              "judge_rationale": "The source explicitly states that the Company is exposed to fluctuations in U.S. interest rates and their impact, supporting the risk statement related to interest rate fluctuations.",
+              "source_rank": 0,
+              "keep_score": 0.72
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

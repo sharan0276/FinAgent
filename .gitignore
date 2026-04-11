@@ -1,9 +1,44 @@
-# Environments and Secrets
+# Dependencies
+node_modules/
 venv/
-.env
+env/
+.venv/
 
-# Python Cache
-__pycache__/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# Data files (Don't push heavy SEC filings to GitHub)
-data/
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Environment
+*.env*
+.env.local
+
+# Python
+*__pycache__/
+*.py[cod]
+*.so
+
+# Your project-specific files
+*.ipynb_checkpoints
+.pytest_cache/
+*.cache/*
+
+# RAG matching generated artifacts (run embedder.py + indexer.py to regenerate)
+rag-matching/curator_db/
+data-ingestion/.cache/
+data-ingestion/data-ingestion/
