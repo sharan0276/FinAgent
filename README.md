@@ -13,3 +13,4 @@ Important note:
 
 - the current standalone matcher uses curator embeddings plus FAISS
 - it does **not** use the older Chroma demo directories in `chroma_db/` or `chroma_db_pipeline/`
+- it assumes curator files already include `embedding_vector`

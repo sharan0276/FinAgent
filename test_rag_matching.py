@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import importlib.util
-import json
 import os
 import shutil
 import sys
+import uuid
 import unittest
 from pathlib import Path
 
@@ -24,14 +24,15 @@ from matcher import find_matches  # noqa: E402
 class RagMatchingTests(unittest.TestCase):
     def _make_artifact_dir(self, name: str) -> Path:
         base_dir = Path(__file__).resolve().parent / ".tmp_rag_tests"
-        artifact_dir = base_dir / name
-        if artifact_dir.exists():
-            shutil.rmtree(artifact_dir)
+        base_dir.mkdir(parents=True, exist_ok=True)
+        artifact_dir = base_dir / f"{name}_{uuid.uuid4().hex}"
         artifact_dir.mkdir(parents=True, exist_ok=True)
         self.addCleanup(lambda: shutil.rmtree(artifact_dir, ignore_errors=True))
         return artifact_dir
 
     def setUp(self) -> None:
+        if importlib.util.find_spec("faiss") is None:
+            self.skipTest("faiss is not installed in this environment")
         self.query_file = CURATOR_SOURCE_ROOT / "AAPL" / "aapl_2022.json"
         self.assertTrue(self.query_file.exists(), "Expected AAPL query curator file to exist")
 
@@ -41,10 +42,7 @@ class RagMatchingTests(unittest.TestCase):
 
         self.assertEqual(len(payload["entries"]), 15)
         self.assertTrue((artifact_dir / "metadata.json").exists())
-        if payload["backend"] == "faiss":
-            self.assertTrue((artifact_dir / "faiss.index").exists())
-        else:
-            self.assertTrue((artifact_dir / "matrix.npy").exists())
+        self.assertTrue((artifact_dir / "faiss.index").exists())
 
     def test_matcher_returns_two_distinct_non_query_companies(self) -> None:
         artifact_dir = self._make_artifact_dir("match_distinct")
@@ -52,12 +50,14 @@ class RagMatchingTests(unittest.TestCase):
 
         result = find_matches(self.query_file, top_k=2, artifact_dir=artifact_dir)
         tickers = [match["ticker"] for match in result["matches"]]
+        years = [match["filing_year"] for match in result["matches"]]
 
         self.assertEqual(result["query"]["ticker"], "AAPL")
         self.assertLessEqual(len(tickers), 2)
         self.assertEqual(len(tickers), len(set(tickers)))
         self.assertNotIn("AAPL", tickers)
         self.assertEqual(set(tickers), {"GOOG", "META"})
+        self.assertTrue(all(isinstance(year, int) for year in years))
 
     def test_matcher_reuses_saved_index(self) -> None:
         artifact_dir = self._make_artifact_dir("reuse_index")
@@ -69,24 +69,6 @@ class RagMatchingTests(unittest.TestCase):
         self.assertEqual(first["matches"], second["matches"])
         bundle = load_index(artifact_dir=artifact_dir)
         self.assertEqual(len(bundle["entries"]), 15)
-
-    def test_query_without_embedding_vector_uses_fallback_when_available(self) -> None:
-        if importlib.util.find_spec("sentence_transformers") is None:
-            self.skipTest("sentence_transformers is not installed in this environment")
-
-        artifact_dir = self._make_artifact_dir("fallback_query")
-        build_index(artifact_dir=artifact_dir)
-
-        query_copy = artifact_dir / "aapl_2022_no_vector.json"
-        data = json.loads(self.query_file.read_text(encoding="utf-8"))
-        data["embedding_vector"] = []
-        query_copy.write_text(json.dumps(data), encoding="utf-8")
-
-        result = find_matches(query_copy, top_k=2, artifact_dir=artifact_dir)
-        tickers = [match["ticker"] for match in result["matches"]]
-
-        self.assertNotIn("AAPL", tickers)
-        self.assertLessEqual(len(tickers), 2)
 
 
 if __name__ == "__main__":

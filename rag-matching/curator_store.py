@@ -8,7 +8,6 @@ import numpy as np
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CURATOR_SOURCE_ROOT = REPO_ROOT / "data-extraction" / "outputs" / "curator"
-CURATOR_EMBEDDING_MODEL = "BAAI/bge-m3"
 
 
 def iter_curator_files(curator_root: Path = CURATOR_SOURCE_ROOT) -> list[Path]:
@@ -19,10 +18,14 @@ def load_curator_file(path: Path) -> dict[str, Any]:
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
-def get_stored_embedding(curator: dict[str, Any]) -> np.ndarray | None:
+def get_stored_embedding(curator: dict[str, Any]) -> np.ndarray:
     vector = curator.get("embedding_vector")
     if not vector:
-        return None
+        ticker = curator.get("ticker", "UNKNOWN")
+        filing_year = curator.get("filing_year", "UNKNOWN")
+        raise ValueError(
+            f"Curator file for {ticker} {filing_year} is missing embedding_vector."
+        )
     return np.array(vector, dtype="float32").reshape(1, -1)
 
 
@@ -45,8 +48,7 @@ def load_vector_matrix(
         curator = load_curator_file(path)
         vector = curator.get("embedding_vector")
         if not vector:
-            print(f"  [warning] {path.name} has no embedding_vector - skipping")
-            continue
+            raise ValueError(f"{path} is missing embedding_vector.")
         vectors.append(vector)
         metadata.append(build_metadata_row(path, curator))
 
