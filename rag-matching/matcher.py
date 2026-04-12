@@ -1,27 +1,4 @@
-"""
-matcher.py
-
-Core of Agent 3's matching logic.
-
-Given a query company (ticker + optional year), finds the top-k most
-similar companies from the curator database using cosine similarity
-on embedding vectors.
-
-Also loads 1-2 lookahead years per match so Agent 3 can answer:
-"What happened next?"
-
-Usage:
-    python matcher.py SNAP              # match SNAP's most recent year
-    python matcher.py META 2022 --top 5 # match META 2022 with top 5 results
-    python matcher.py WE 2020 --top 3   # match WeWork 2020
-
-Output:
-    Prints a formatted match report showing:
-    - Query company financial profile
-    - Top-k matches with similarity scores
-    - Shared risk themes
-    - Lookahead data (what happened 1-2 years after the match year)
-"""
+"""Standalone FAISS matcher for curator company-year files."""
 
 from __future__ import annotations
 
@@ -30,52 +7,17 @@ import json
 from pathlib import Path
 from typing import Any
 
-import numpy as np
-
-from curator_store import (
-    CURATOR_EMBEDDING_MODEL,
-    CURATOR_SOURCE_ROOT,
-    get_stored_embedding,
-    load_curator_file,
-)
+from curator_store import CURATOR_SOURCE_ROOT, get_stored_embedding, load_curator_file
 from indexer import build_index, load_index, search_index
-from runtime_compat import prepare_openmp_runtime
 
 
 # ---------------------------------------------------------------------------
 # Core matching
 # ---------------------------------------------------------------------------
 
-def _embed_query_text(text: str) -> np.ndarray:
-    try:
-        prepare_openmp_runtime()
-        from sentence_transformers import SentenceTransformer
-    except ModuleNotFoundError as exc:
-        raise RuntimeError(
-            "Query file is missing embedding_vector and sentence_transformers is not installed."
-        ) from exc
-
-    model = SentenceTransformer(CURATOR_EMBEDDING_MODEL)
-    vector = model.encode(
-        [text],
-        batch_size=1,
-        show_progress_bar=False,
-        normalize_embeddings=True,
-    )
-    return np.array(vector, dtype="float32")
-
-
-def _load_query(input_file: Path) -> tuple[dict[str, Any], np.ndarray]:
+def _load_query(input_file: Path) -> tuple[dict[str, Any], Any]:
     curator = load_curator_file(input_file)
-    vector = get_stored_embedding(curator)
-    if vector is None:
-        embedding_text = curator.get("embedding_text")
-        if not embedding_text:
-            raise ValueError(
-                f"{input_file} is missing both embedding_vector and embedding_text."
-            )
-        vector = _embed_query_text(str(embedding_text))
-    return curator, vector
+    return curator, get_stored_embedding(curator)
 
 
 def _search_headroom(total_entries: int, top_k: int) -> int:
@@ -96,12 +38,11 @@ def find_matches(
     if not entries:
         raise ValueError("The saved index contains no entries.")
 
-    index_dim = int(bundle["index"].d) if bundle["backend"] == "faiss" else int(bundle["index"].shape[1])
+    index_dim = int(bundle["index"].d)
     query_dim = int(query_vector.shape[1])
     if query_dim != index_dim:
         raise ValueError(
-            f"Query embedding dimension {query_dim} does not match index dimension {index_dim}. "
-            f"Expected the query embedding model to match curator generation ({CURATOR_EMBEDDING_MODEL})."
+            f"Query embedding dimension {query_dim} does not match index dimension {index_dim}."
         )
 
     search_k = _search_headroom(len(entries), top_k)
@@ -146,8 +87,14 @@ def find_matches(
             "filing_year": query_curator["filing_year"],
             "source_path": str(query_path),
         },
-        "matches": [{"ticker": m["ticker"], "similarity": m["similarity"]} for m in matches],
-        "match_details": matches,
+        "matches": [
+            {
+                "ticker": m["ticker"],
+                "filing_year": m["filing_year"],
+                "similarity": m["similarity"],
+            }
+            for m in matches
+        ],
     }
 
 
@@ -161,7 +108,7 @@ def print_match_report(result: dict[str, Any]) -> None:
     print(f"Query: {query['ticker']} {query['filing_year']} ({query['company']})")
     print("Matches:")
     for match in matches:
-        print(f"  {match['ticker']}: {match['similarity']:.4f}")
+        print(f"  {match['ticker']} {match['filing_year']}: {match['similarity']:.4f}")
 
 
 # ---------------------------------------------------------------------------

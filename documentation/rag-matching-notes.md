@@ -25,7 +25,6 @@ Important fields used by the matcher:
 - `ticker`
 - `company`
 - `filing_year`
-- `embedding_text`
 - `embedding_vector`
 
 ---
@@ -74,13 +73,6 @@ The metadata file maps index rows back to:
 - `filing_year`
 - `source_path`
 
-Practical note:
-
-- if `faiss` is unavailable, the code currently falls back to a numpy matrix search
-- the intended primary runtime is still FAISS
-
----
-
 ## Query Behavior
 
 The matcher now accepts a single input file path, for example:
@@ -104,9 +96,10 @@ Output in JSON mode:
 - `query`
 - `matches`
 
-Current `matches` payload is intentionally minimal:
+Current `matches` payload is:
 
 - `ticker`
+- `filing_year`
 - `similarity`
 
 Internally, the matcher also tracks:
@@ -119,23 +112,16 @@ for debugging and traceability.
 
 ---
 
-## Embedding Model
+## Embedding Assumption
 
-The curator files were generated using:
+The curator files were generated with `1024`-dimension `BGE-M3` vectors.
 
-- `SentenceTransformer("BAAI/bge-m3")`
+The matcher assumes:
 
-That means the stored vectors are:
+- every database curator file has `embedding_vector`
+- every query curator file has `embedding_vector`
 
-- `1024` dimensions
-
-Query-time fallback behavior:
-
-- if a query file already has `embedding_vector`, use it directly
-- if not, embed `embedding_text` in memory using the same `BAAI/bge-m3` model
-- do not rewrite the query file in v1
-
-This model alignment is required so query vectors match the FAISS index dimension.
+If a file is missing `embedding_vector`, the matcher raises an error.
 
 ---
 
@@ -179,7 +165,6 @@ Current checks cover:
 - distinct-company retrieval
 - self-company exclusion
 - repeated-query index reuse
-- fallback query embedding when `embedding_vector` is missing
 
 Run:
 

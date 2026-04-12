@@ -36,7 +36,8 @@ build/
 # Your project-specific files
 *.ipynb_checkpoints
 .pytest_cache/
-*.cache/*
+.cache/*
+.tmp*
 
 # RAG matching generated artifacts (run embedder.py + indexer.py to regenerate)
 rag-matching/curator_db/

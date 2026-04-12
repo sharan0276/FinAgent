@@ -284,6 +284,7 @@ Important detail:
 
 - this matching layer uses curator embeddings and FAISS
 - it does **not** use the older Chroma demo directories
+- it assumes curator files already contain valid stored embedding vectors
 
 ## Historical / Experimental Context
 

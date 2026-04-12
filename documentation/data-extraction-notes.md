@@ -447,6 +447,7 @@ Important detail:
 
 - this retrieval layer uses FAISS and curator embeddings
 - it does **not** use `chroma_db/` or `chroma_db_pipeline/`
+- it assumes curator files already contain `embedding_vector`
 
 Example:
 
