@@ -302,26 +302,24 @@ def call_claude_with_retry(
 # delta_percent is null for earliest year (no prior year) → insufficient_data.
 
 def compute_financial_deltas(data: dict) -> dict[str, FinancialDelta]:
+    """
+    Standardizes numeric deltas for the Curator output.
+    Uses the exact values and labels computed in the extraction phase
+    to ensure 100% consistency.
+    """
     result = {}
     for metric, info in data.get("numeric_deltas", {}).items():
+        # Use the whole percentage number from the extraction stage
         delta_pct = info.get("delta_percent")
+        label_str = info.get("label") or "insufficient_data"
+        
+        # Safe mapping to the DeltaLabel enum
+        try:
+            label = DeltaLabel(label_str)
+        except ValueError:
+            label = DeltaLabel.insufficient_data
 
-        if delta_pct is None:
-            label, value = DeltaLabel.insufficient_data, None
-        else:
-            value = round(delta_pct / 100, 4)
-            if delta_pct > 20:
-                label = DeltaLabel.strong_growth
-            elif delta_pct > 5:
-                label = DeltaLabel.moderate_growth
-            elif delta_pct >= -5:
-                label = DeltaLabel.stable
-            elif delta_pct >= -20:
-                label = DeltaLabel.moderate_decline
-            else:
-                label = DeltaLabel.severe_decline
-
-        result[metric] = FinancialDelta(value=value, label=label)
+        result[metric] = FinancialDelta(value=delta_pct, label=label)
     return result
 
 

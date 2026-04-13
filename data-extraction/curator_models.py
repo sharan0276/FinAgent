@@ -90,6 +90,21 @@ class RiskSignal(BaseModel):
     severity:    Severity    # high / medium / low
     citation:    str         # e.g. "AAPL 10-K 2021, Item 1A"
 
+    @field_validator("topic", mode="before")
+    @classmethod
+    def map_signal_to_topic(cls, v: str) -> str:
+        """
+        Sometimes the AI puts a specific signal_type into the broad topic field.
+        This maps common mixups back to their correct parent topic automatically.
+        """
+        mapping = {
+            "capital_allocation_risk": "strategic_risk",
+            "cash_runway_concern": "liquidity_risk",
+            "antitrust_exposure": "legal_risk",
+            # Add more aliases here as discovered
+        }
+        return mapping.get(v, v)
+
     @field_validator("signal_type")
     @classmethod
     def validate_signal_type(cls, v: str) -> str:

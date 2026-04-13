@@ -5,11 +5,11 @@ import sys
 import unittest
 from pathlib import Path
 
-
+# Correctly add the data-extraction folder to the path, handling the hyphenated folder name
 DATA_EXTRACTION_DIR = Path(__file__).resolve().parent / "data-extraction"
 if str(DATA_EXTRACTION_DIR) not in sys.path:
     sys.path.insert(0, str(DATA_EXTRACTION_DIR))
-
+    
 from numeric_delta import build_numeric_deltas
 from pipeline import run_extraction
 from text_candidates import is_candidate_sentence, split_into_sentences
@@ -52,30 +52,40 @@ class DataExtractionTests(unittest.TestCase):
         )
 
     def test_numeric_delta_bucketing_and_missing_prior(self):
+        # Using the standard Dictionary format
         financial_data = {
             "annual": {
-                "Revenues": [
-                    {"year": 2023, "value": 100.0, "end_date": "2023-01-01", "accession": "a", "tag": "Revenue"},
-                    {"year": 2024, "value": 130.0, "end_date": "2024-01-01", "accession": "b", "tag": "Revenue"},
-                ],
-                "NetIncome": [
-                    {"year": 2024, "value": 50.0, "end_date": "2024-01-01", "accession": "b", "tag": "NetIncome"},
-                ],
-                "Cash": [],
-                "Assets": [],
-                "LongTermDebt": [],
-                "OperatingCashFlow": [],
-                "ResearchAndDevelopment": [],
-                "GrossProfit": [],
+                "Revenues": {
+                    "tag": "Revenues",
+                    "years": [2023, 2024],
+                    "values": [100.0, 130.0],
+                },
+                "NetIncome": {
+                    "tag": "NetIncome",
+                    "years": [2024],
+                    "values": [50.0],
+                },
+                "Cash": {},
+                "Assets": {},
+                "LongTermDebt": {},
+                "OperatingCashFlow": {},
+                "ResearchAndDevelopment": {},
+                "GrossProfit": {},
             }
         }
+        # Standardized logic finds max year (2024) automatically
         deltas = build_numeric_deltas(financial_data, 2024)
+        
+        # Scaling by 1,000,000 is now enforced
+        self.assertEqual(deltas["Revenues"].current_value, 130_000_000.0)
         self.assertEqual(deltas["Revenues"].delta_percent, 30.0)
         self.assertEqual(deltas["Revenues"].label, "strong_growth")
         self.assertIsNone(deltas["NetIncome"].delta_percent)
-        self.assertEqual(deltas["NetIncome"].reason, "missing_prior_year")
+        self.assertEqual(deltas["NetIncome"].reason, "missing_previous_year")
 
     def test_run_extraction_writes_expected_artifact(self):
+        # NOTE: This test depends on a dictionary-style ingestion file.
+        # Ensure data-ingestion/outputs/AAPL/complete_ingestion.json is re-ingested.
         source_path = Path("data-ingestion/outputs/AAPL/complete_ingestion.json")
         temp_output_dir = Path("data-extraction") / "test-output-unittest"
         temp_output_dir.mkdir(parents=True, exist_ok=True)

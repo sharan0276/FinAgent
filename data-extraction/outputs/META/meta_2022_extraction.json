@@ -1,128 +1,115 @@
 {
   "schema_version": "data_extraction_v1",
   "model_name": "ProsusAI/finbert",
-  "run_timestamp": "2026-04-04T22:40:52.981728+00:00",
+  "run_timestamp": "2026-04-13T16:33:49.239625+00:00",
   "ticker": "META",
   "company_name": "Meta Platforms, Inc.",
   "cik": "0001326801",
   "filing_year": 2022,
   "filing_date": "2022-02-03",
-  "accession": "",
+  "accession": "0001326801-22-000018",
   "parser_mode": "plain_text_fallback",
-  "source_artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\META\\complete_ingestion.json",
+  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/META/complete_ingestion.json",
   "processed_sections": [
     "item_1a_risk_factors",
+    "item_3_legal",
     "item_7_mda",
     "item_7a_market_risk"
   ],
   "skipped_sections": [
-    "item_1c_cybersecurity",
-    "item_3_legal_proceedings"
+    "item_1c_cybersecurity"
   ],
   "numeric_deltas": {
     "Revenues": {
-      "current_value": 116609000000.0,
-      "previous_value": 117929000000.0,
-      "current_end_date": "2022-12-31",
-      "previous_end_date": "2021-12-31",
-      "current_accession": "0001326801-25-000017",
-      "previous_accession": "0001326801-24-000012",
-      "current_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-      "previous_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-      "delta_percent": -1.1193175554782961,
-      "label": "stable",
-      "reason": null
-    },
-    "NetIncome": {
-      "current_value": 23200000000.0,
-      "previous_value": 39370000000.0,
-      "current_end_date": "2022-12-31",
-      "previous_end_date": "2021-12-31",
-      "current_accession": "0001326801-25-000017",
-      "previous_accession": "0001326801-24-000012",
-      "current_tag": "NetIncomeLoss",
-      "previous_tag": "NetIncomeLoss",
-      "delta_percent": -41.071882143764284,
-      "label": "severe_decline",
-      "reason": null
-    },
-    "Cash": {
-      "current_value": 14681000000.0,
-      "previous_value": 16601000000.0,
-      "current_end_date": "2022-12-31",
-      "previous_end_date": "2021-12-31",
-      "current_accession": "0001326801-25-000017",
-      "previous_accession": "0001326801-24-000012",
-      "current_tag": "CashAndCashEquivalentsAtCarryingValue",
-      "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
-      "delta_percent": -11.565568339256671,
-      "label": "moderate_decline",
-      "reason": null
-    },
-    "Assets": {
-      "current_value": 185727000000.0,
-      "previous_value": 165987000000.0,
-      "current_end_date": "2022-12-31",
-      "previous_end_date": "2021-12-31",
-      "current_accession": "0001326801-24-000012",
-      "previous_accession": "0001326801-23-000013",
-      "current_tag": "Assets",
-      "previous_tag": "Assets",
-      "delta_percent": 11.892497605234146,
-      "label": "moderate_growth",
-      "reason": null
-    },
-    "LongTermDebt": {
-      "current_value": 9923000000.0,
-      "previous_value": 0.0,
-      "current_end_date": "2022-12-31",
-      "previous_end_date": "2021-12-31",
-      "current_accession": "0001326801-24-000012",
-      "previous_accession": "0001326801-23-000013",
-      "current_tag": "LongTermDebt",
-      "previous_tag": "LongTermDebtNoncurrent",
-      "delta_percent": null,
-      "label": null,
-      "reason": "invalid_prior_value"
-    },
-    "OperatingCashFlow": {
-      "current_value": 50475000000.0,
-      "previous_value": 57683000000.0,
-      "current_end_date": "2022-12-31",
-      "previous_end_date": "2021-12-31",
-      "current_accession": "0001326801-25-000017",
-      "previous_accession": "0001326801-24-000012",
-      "current_tag": "NetCashProvidedByUsedInOperatingActivities",
-      "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
-      "delta_percent": -12.49588266907061,
-      "label": "moderate_decline",
-      "reason": null
-    },
-    "ResearchAndDevelopment": {
-      "current_value": 35338000000.0,
-      "previous_value": 24655000000.0,
-      "current_end_date": "2022-12-31",
-      "previous_end_date": "2021-12-31",
-      "current_accession": "0001326801-25-000017",
-      "previous_accession": "0001326801-24-000012",
-      "current_tag": "ResearchAndDevelopmentExpense",
-      "previous_tag": "ResearchAndDevelopmentExpense",
-      "delta_percent": 43.329953356317176,
-      "label": "strong_growth",
-      "reason": null
-    },
-    "GrossProfit": {
-      "current_value": null,
+      "current_value": 117929000000.0,
       "previous_value": null,
       "current_end_date": null,
       "previous_end_date": null,
       "current_accession": null,
       "previous_accession": null,
-      "current_tag": null,
-      "previous_tag": null,
+      "current_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "previous_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
       "delta_percent": null,
       "label": null,
-      "reason": "missing_current_year"
+      "reason": "missing_previous_year"
+    },
+    "NetIncome": {
+      "current_value": 39370000000.0,
+      "previous_value": null,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetIncomeLoss",
+      "previous_tag": "NetIncomeLoss",
+      "delta_percent": null,
+      "label": null,
+      "reason": "missing_previous_year"
+    },
+    "Cash": {
+      "current_value": 16601000000.0,
+      "previous_value": null,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "delta_percent": null,
+      "label": null,
+      "reason": "missing_previous_year"
+    },
+    "Assets": {
+      "current_value": 165987000000.0,
+      "previous_value": null,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "Assets",
+      "previous_tag": "Assets",
+      "delta_percent": null,
+      "label": null,
+      "reason": "missing_previous_year"
+    },
+    "LongTermDebt": {
+      "current_value": 0.0,
+      "previous_value": null,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "LongTermDebtNoncurrent",
+      "previous_tag": "LongTermDebtNoncurrent",
+      "delta_percent": null,
+      "label": null,
+      "reason": "missing_previous_year"
+    },
+    "OperatingCashFlow": {
+      "current_value": 57683000000.0,
+      "previous_value": null,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "delta_percent": null,
+      "label": null,
+      "reason": "missing_previous_year"
+    },
+    "ResearchAndDevelopment": {
+      "current_value": 24655000000.0,
+      "previous_value": null,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "ResearchAndDevelopmentExpense",
+      "previous_tag": "ResearchAndDevelopmentExpense",
+      "delta_percent": null,
+      "label": null,
+      "reason": "missing_previous_year"
     }
   },
   "text_candidates": [
@@ -136,7 +123,7 @@
       "next_sentence": "No customer represented 10% or more of total revenue during the years ended December 31, 2021, 2020, and 2019.",
       "risk_score": 0.9710909724235535,
       "finbert_probs": {
-        "positive": 0.012753141112625599,
+        "positive": 0.012753128074109554,
         "neutral": 0.016155926510691643,
         "negative": 0.9710909724235535
       }
@@ -151,7 +138,7 @@
       "next_sentence": "For example, our investments in Reality Labs reduced our 2021 overall operating profit by approximately $10 billion, and we expect our investments to increase in future periods.",
       "risk_score": 0.9707315564155579,
       "finbert_probs": {
-        "positive": 0.00843076128512621,
+        "positive": 0.008430752903223038,
         "neutral": 0.020837629213929176,
         "negative": 0.9707315564155579
       }
@@ -166,8 +153,8 @@
       "next_sentence": "As a result, we have had to make certain changes to our procurement practices, and in the future we may not be able to procure sufficient components, equipment, or services from third parties to satisfy our needs, or we may be required to procure such components, equipment, or services on unfavorable terms.",
       "risk_score": 0.9696821570396423,
       "finbert_probs": {
-        "positive": 0.010087686590850353,
-        "neutral": 0.020230229943990707,
+        "positive": 0.010087676346302032,
+        "neutral": 0.020230241119861603,
         "negative": 0.9696821570396423
       }
     },
@@ -181,8 +168,8 @@
       "next_sentence": "The decrease was primarily due to $44.54 billion for repurchases of our Class A common stock, $19.24 billion for capital expenditures, including principal payments on finance leases, and $5.51 billion of taxes paid related to net share settlement of employee restricted stock units (RSU) awards, offset by $57.68 billion of cash generated from operations for the year ended December 31, 2021.",
       "risk_score": 0.9678903818130493,
       "finbert_probs": {
-        "positive": 0.021472495049238205,
-        "neutral": 0.010637137107551098,
+        "positive": 0.021472474560141563,
+        "neutral": 0.010637132450938225,
         "negative": 0.9678903818130493
       }
     },
@@ -194,11 +181,11 @@
       "sentence_text": "Additionally, the vast majority of our personnel are currently working remotely as a result of the COVID-19 pandemic, which limits their ability to perform certain job functions and may negatively impact productivity.",
       "previous_sentence": "In addition, some members of our management do not have significant experience managing a large global business operation, so our management may not 29 Table of Contents be able to manage such growth effectively.",
       "next_sentence": "In the long term, we may experience such challenges to productivity and collaboration as some personnel transition to working remotely on a regular basis, and we may experience difficulties integrating recently hired personnel when our offices re-open.",
-      "risk_score": 0.9666791558265686,
+      "risk_score": 0.9666790962219238,
       "finbert_probs": {
-        "positive": 0.00782701000571251,
-        "neutral": 0.02549385093152523,
-        "negative": 0.9666791558265686
+        "positive": 0.007827009074389935,
+        "neutral": 0.02549387887120247,
+        "negative": 0.9666790962219238
       }
     },
     {
@@ -211,8 +198,8 @@
       "next_sentence": "If we 19 Table of Contents fail to successfully promote and maintain our brands or if we incur excessive expenses in this effort, our business and financial results may be adversely affected.",
       "risk_score": 0.9661230444908142,
       "finbert_probs": {
-        "positive": 0.010434147901833057,
-        "neutral": 0.023442793637514114,
+        "positive": 0.010434143245220184,
+        "neutral": 0.023442788049578667,
         "negative": 0.9661230444908142
       }
     },
@@ -226,8 +213,8 @@
       "next_sentence": "Cash paid for income taxes was $8.52 billion for the year ended December 31, 2021.",
       "risk_score": 0.9644395112991333,
       "finbert_probs": {
-        "positive": 0.013337217271327972,
-        "neutral": 0.02222331613302231,
+        "positive": 0.013337223790585995,
+        "neutral": 0.022223323583602905,
         "negative": 0.9644395112991333
       }
     },
@@ -242,7 +229,7 @@
       "risk_score": 0.9642943739891052,
       "finbert_probs": {
         "positive": 0.008244260214269161,
-        "neutral": 0.027461322024464607,
+        "neutral": 0.027461295947432518,
         "negative": 0.9642943739891052
       }
     },
@@ -256,8 +243,8 @@
       "next_sentence": "For example, our advertising revenue in the second half of 2021 was negatively impacted by marketer reaction to targeting and measurement challenges associated with iOS changes.",
       "risk_score": 0.963557243347168,
       "finbert_probs": {
-        "positive": 0.009681765921413898,
-        "neutral": 0.026760954409837723,
+        "positive": 0.00968178454786539,
+        "neutral": 0.026760997250676155,
         "negative": 0.963557243347168
       }
     },
@@ -269,11 +256,11 @@
       "sentence_text": "In addition, this program will diminish our cash reserves.",
       "previous_sentence": "The program could affect the trading price of our stock and increase volatility, and any announcement of a termination of this program may result in a decrease in the trading price of our stock.",
       "next_sentence": "34 Table of Contents Risks Related to Government Regulation and Enforcement Actions by governments that restrict access to Facebook or our other products in their countries, censor or moderate content on our products in their countries, or otherwise impair our ability to sell advertising in their countries, could substantially harm our business and financial results.",
-      "risk_score": 0.9619996547698975,
+      "risk_score": 0.961999773979187,
       "finbert_probs": {
-        "positive": 0.01785001903772354,
-        "neutral": 0.02015024796128273,
-        "negative": 0.9619996547698975
+        "positive": 0.017850039526820183,
+        "neutral": 0.020150231197476387,
+        "negative": 0.961999773979187
       }
     },
     {
@@ -286,8 +273,8 @@
       "next_sentence": "For instance, our total revenue increased 16%, 31%, and 19% between the third and fourth quarters of 2021, 2020, and 2019, respectively, while total revenue for the first quarters of 2021, 2020, and 2019 declined 7%, 16%, and 11% compared to the fourth quarters of 2020, 2019, and 2018, respectively.",
       "risk_score": 0.9616329669952393,
       "finbert_probs": {
-        "positive": 0.024014871567487717,
-        "neutral": 0.014352159574627876,
+        "positive": 0.024014901369810104,
+        "neutral": 0.014352132566273212,
         "negative": 0.9616329669952393
       }
     },
@@ -301,8 +288,8 @@
       "next_sentence": "In addition, we are subject to a variety of risks inherent in doing business internationally, including: \u2022 political, social, or economic instability; \u2022 risks related to legal, regulatory, and other government scrutiny applicable to U.S. companies with sales and operations in foreign jurisdictions, including with respect to privacy, tax, law enforcement, content, trade compliance, supply chain, competition, consumer protection, intellectual property, environmental, health and safety, licensing, and infrastructure matters; \u2022 potential damage to our brand and reputation due to compliance with local laws, including potential censorship or requirements to provide user information to local authorities; \u2022 enhanced difficulty in reviewing content on our platform and enforcing our community standards across different languages and countries; \u2022 fluctuations in currency exchange rates and compliance with currency controls; \u2022 foreign exchange controls and tax and other regulations and orders that might prevent us from repatriating cash earned in countries outside the United States or otherwise limit our ability to move cash freely, and impede our ability to invest such cash efficiently; \u2022 higher levels of credit risk and payment fraud; \u2022 enhanced difficulties of integrating any foreign acquisitions; \u2022 burdens of complying with a variety of foreign laws, including laws related to taxation, content removal, content moderation, data localization, data protection, e-commerce and payments, and regulatory oversight; \u2022 reduced protection for intellectual property rights in some countries; \u2022 difficulties in staffing, managing, and overseeing global operations and the increased travel, infrastructure, and legal compliance costs associated with multiple international locations, including difficulties arising from personnel working remotely during the COVID-19 pandemic; \u2022 compliance with statutory equity requirements and management of tax consequences; and 30 Table of Contents \u2022 geopolitical events affecting us, our marketers or our industry, including trade disputes and pandemics.",
       "risk_score": 0.9610661268234253,
       "finbert_probs": {
-        "positive": 0.010965988971292973,
-        "neutral": 0.027967849746346474,
+        "positive": 0.010965983383357525,
+        "neutral": 0.027967890724539757,
         "negative": 0.9610661268234253
       }
     },
@@ -314,11 +301,11 @@
       "sentence_text": "Risks Related to Our Product Offerings If we fail to retain existing users or add new users, or if our users decrease their level of engagement with our products, our revenue, financial results, and business may be significantly harmed.",
       "previous_sentence": "These risks are discussed more fully below and include, but are not limited to, risks related to: Risks Related to Our Product Offerings \u2022 our ability to add and retain users and maintain levels of user engagement with our products; \u2022 the loss of, or reduction in spending by, our marketers; \u2022 reduced availability of data signals used by our ad targeting and measurement tools; \u2022 ineffective operation with mobile operating systems or changes in our relationships with mobile operating system partners; \u2022 failure of our new products, or changes to our existing products, to attract or retain users or generate revenue; Risks Related to Our Business Operations and Financial Results \u2022 the COVID-19 pandemic, including its impact on our advertising business; \u2022 our ability to compete effectively; \u2022 unfavorable media coverage and other risks affecting our ability to maintain and enhance our brands; \u2022 volatile or slower user and revenue growth rates in the future; \u2022 acquisitions and our ability to successfully integrate our acquisitions; \u2022 our ability to build, maintain, and scale our technical infrastructure, and risks associated with disruptions in our service; \u2022 operating our business in multiple countries around the world; \u2022 litigation, including class action lawsuits; Risks Related to Government Regulation and Enforcement \u2022 government restrictions on access to Facebook or our other products, or other actions that impair our ability to sell advertising, in their countries; \u2022 complex and evolving U.S. and foreign privacy, data use and data protection, content, competition, consumer protection, and other laws and regulations; 12 Table of Contents \u2022 the impact of government investigations, enforcement actions, and settlements, including litigation and investigations by privacy and competition authorities; \u2022 our ability to comply with regulatory and legislative privacy requirements, including our consent order with the Federal Trade Commission (FTC); Risks Related to Data, Security, and Intellectual Property \u2022 the occurrence of security breaches, improper access to or disclosure of our data or user data, and other cyber incidents or undesirable activity on our platform; \u2022 our ability to obtain, maintain, protect, and enforce our intellectual property rights; and Risks Related to Ownership of Our Class A Common Stock \u2022 limitations on the ability of holders of our Class A Common Stock to influence corporate matters due to the dual class structure of our common stock and the control of a majority of the voting power of our outstanding capital stock by our founder, Chairman, and CEO.",
       "next_sentence": "The size of our user base and our users' level of engagement across our products are critical to our success.",
-      "risk_score": 0.961063027381897,
+      "risk_score": 0.9610629081726074,
       "finbert_probs": {
-        "positive": 0.012101864442229271,
-        "neutral": 0.02683507278561592,
-        "negative": 0.961063027381897
+        "positive": 0.012101896107196808,
+        "neutral": 0.026835134252905846,
+        "negative": 0.9610629081726074
       }
     },
     {
@@ -329,11 +316,11 @@
       "sentence_text": "In addition, we may have to seek a license to continue practices found to be in violation of a third party's rights, which may not be available on reasonable terms, or at all, and may significantly increase our operating costs and expenses.",
       "previous_sentence": "The terms of such a settlement or judgment may require us to cease some or all of our operations or pay substantial amounts to the other party.",
       "next_sentence": "As a result, we may also be required to develop alternative non-infringing technology or 42 Table of Contents practices or discontinue the practices.",
-      "risk_score": 0.9604032039642334,
+      "risk_score": 0.9604030847549438,
       "finbert_probs": {
-        "positive": 0.01178955938667059,
-        "neutral": 0.02780730649828911,
-        "negative": 0.9604032039642334
+        "positive": 0.011789563111960888,
+        "neutral": 0.027807310223579407,
+        "negative": 0.9604030847549438
       }
     },
     {
@@ -346,8 +333,8 @@
       "next_sentence": "For example, beginning in the first quarter of 2020, we experienced significant increases in the size and engagement of our active user base across a number of regions as a result of the COVID-19 pandemic.",
       "risk_score": 0.9602996110916138,
       "finbert_probs": {
-        "positive": 0.01136481948196888,
-        "neutral": 0.028335552662611008,
+        "positive": 0.011364830657839775,
+        "neutral": 0.028335580602288246,
         "negative": 0.9602996110916138
       }
     },
@@ -361,8 +348,8 @@
       "next_sentence": "We currently depend on the continued services and performance of our key personnel, including Mark Zuckerberg and Sheryl K.",
       "risk_score": 0.9602987170219421,
       "finbert_probs": {
-        "positive": 0.008542392402887344,
-        "neutral": 0.031158894300460815,
+        "positive": 0.008542404510080814,
+        "neutral": 0.03115892969071865,
         "negative": 0.9602987170219421
       }
     },
@@ -374,11 +361,11 @@
       "sentence_text": "Errors, bugs, vulnerabilities, design defects, or technical limitations within the software and hardware on which we rely, or human error in using such systems, have in the past led to, and may in the future lead to, outcomes including a negative experience for users and marketers who use our products, compromised ability of our products to perform in a manner consistent with our terms, contracts, or policies, delayed product introductions or enhancements, targeting, measurement, or billing errors, compromised ability to protect the data of our users and/or our intellectual property or other data, or reductions in our ability to provide some or all of our services.",
       "previous_sentence": "For example, in September 2018, we announced our discovery of a third-party cyber-attack that exploited a vulnerability in Facebook's code to steal user access tokens and access certain profile information from user accounts on Facebook.",
       "next_sentence": "For example, we make 41 Table of Contents commitments to our users as to how their data will be used within and across our products, and our systems are subject to errors, bugs and technical limitations that may prevent us from fulfilling these commitments reliably.",
-      "risk_score": 0.9602908492088318,
+      "risk_score": 0.9602907299995422,
       "finbert_probs": {
-        "positive": 0.008654670789837837,
-        "neutral": 0.031054506078362465,
-        "negative": 0.9602908492088318
+        "positive": 0.008654669858515263,
+        "neutral": 0.03105454333126545,
+        "negative": 0.9602907299995422
       }
     },
     {
@@ -391,8 +378,8 @@
       "next_sentence": "If our investments are not successful longer-term, our business and financial performance will be harmed.",
       "risk_score": 0.9602892994880676,
       "finbert_probs": {
-        "positive": 0.01602383516728878,
-        "neutral": 0.023686882108449936,
+        "positive": 0.016023796051740646,
+        "neutral": 0.023686865344643593,
         "negative": 0.9602892994880676
       }
     },
@@ -407,7 +394,7 @@
       "risk_score": 0.9602436423301697,
       "finbert_probs": {
         "positive": 0.010602646507322788,
-        "neutral": 0.029153620824217796,
+        "neutral": 0.02915366180241108,
         "negative": 0.9602436423301697
       }
     },
@@ -419,11 +406,11 @@
       "sentence_text": "In the event that users increasingly engage with other products and services, we may experience a decline in use and engagement in key user demographics or more broadly, in which case our business would likely be harmed.",
       "previous_sentence": "We believe that some users, particularly younger users, are aware of and actively engaging with other products and services similar to, or as a substitute for, our products and services, and we believe that some users have reduced their use of and engagement with our products and services in favor of these other products and services.",
       "next_sentence": "Our competitors may develop products, features, or services that are similar to ours or that achieve greater acceptance, may undertake more far-reaching and successful product development efforts or marketing campaigns, or may adopt more aggressive pricing policies.",
-      "risk_score": 0.9601640701293945,
+      "risk_score": 0.960163950920105,
       "finbert_probs": {
-        "positive": 0.013624965213239193,
-        "neutral": 0.026211025193333626,
-        "negative": 0.9601640701293945
+        "positive": 0.013624989427626133,
+        "neutral": 0.02621104195713997,
+        "negative": 0.960163950920105
       }
     },
     {
@@ -434,11 +421,11 @@
       "sentence_text": "For example, while user-provided data indicates a decline in usage among younger users, this age data may be unreliable because a disproportionate number of our younger users register with an inaccurate age.",
       "previous_sentence": "Other data limitations also may affect our understanding of certain details of our business.",
       "next_sentence": "Accordingly, our understanding of usage by age group may not be complete.",
-      "risk_score": 0.9600450992584229,
+      "risk_score": 0.9600452184677124,
       "finbert_probs": {
-        "positive": 0.012544870376586914,
-        "neutral": 0.02740996517241001,
-        "negative": 0.9600450992584229
+        "positive": 0.012544889934360981,
+        "neutral": 0.027409948408603668,
+        "negative": 0.9600452184677124
       }
     },
     {
@@ -464,11 +451,11 @@
       "sentence_text": "For example, macroeconomic conditions have affected, and may in the future affect, marketers' ability or willingness to spend with us, as we experienced in 2020 with the regional and worldwide economic 16 Table of Contents disruption related to the COVID-19 pandemic and associated declines in advertising activity on our products.",
       "previous_sentence": "The occurrence of any of these or other factors in the future could result in a reduction in demand for our ads, which may reduce the prices we receive for our ads, or cause marketers to stop advertising with us altogether, either of which would negatively affect our revenue and financial results.",
       "next_sentence": "The effects of the pandemic previously resulted in reduced demand for our ads, a related decline in pricing of our ads, and additional demands on our technical infrastructure as a result of increased usage of our services, and any similar occurrences in the future may impair our ability to maintain or increase the quantity or quality of ads shown to users and adversely affect our revenue and financial results.",
-      "risk_score": 0.9595897793769836,
+      "risk_score": 0.9595898985862732,
       "finbert_probs": {
-        "positive": 0.009590325877070427,
-        "neutral": 0.030819961801171303,
-        "negative": 0.9595897793769836
+        "positive": 0.009590322151780128,
+        "neutral": 0.030819900333881378,
+        "negative": 0.9595898985862732
       }
     },
     {
@@ -481,7 +468,7 @@
       "next_sentence": "These trends adversely affected advertising revenue growth in the second half of 2021 and we expect will continue to affect our advertising revenue growth in the foreseeable future.",
       "risk_score": 0.9595197439193726,
       "finbert_probs": {
-        "positive": 0.018458455801010132,
+        "positive": 0.018458442762494087,
         "neutral": 0.022021837532520294,
         "negative": 0.9595197439193726
       }
@@ -496,8 +483,8 @@
       "next_sentence": "There is no guarantee that we will not experience a similar erosion of our active user base or engagement levels.",
       "risk_score": 0.9594306349754333,
       "finbert_probs": {
-        "positive": 0.008318576030433178,
-        "neutral": 0.032250743359327316,
+        "positive": 0.008318595588207245,
+        "neutral": 0.03225080668926239,
         "negative": 0.9594306349754333
       }
     },
@@ -511,8 +498,8 @@
       "next_sentence": "As we continue to grow, we cannot guarantee we will continue to attract and retain the personnel we need to maintain our competitive position.",
       "risk_score": 0.9594139456748962,
       "finbert_probs": {
-        "positive": 0.008018523454666138,
-        "neutral": 0.032567448914051056,
+        "positive": 0.00801853183656931,
+        "neutral": 0.03256746008992195,
         "negative": 0.9594139456748962
       }
     },
@@ -526,8 +513,8 @@
       "next_sentence": "If our investments are not successful longer-term, our business and financial performance will be harmed.",
       "risk_score": 0.9593694806098938,
       "finbert_probs": {
-        "positive": 0.01981496252119541,
-        "neutral": 0.020815426483750343,
+        "positive": 0.019814996048808098,
+        "neutral": 0.02081545628607273,
         "negative": 0.9593694806098938
       }
     },
@@ -541,8 +528,8 @@
       "next_sentence": "In the event that content shown on Facebook or our other products is subject to censorship, access to our products is restricted, in whole or in part, in one or more countries, we are required to or elect to make changes to our operations, or other restrictions are imposed on our products, or our competitors are able to successfully penetrate new geographic markets or capture a greater share of existing geographic markets that we cannot access or where we face other restrictions, our ability to retain or increase our user base, user engagement, or the level of advertising by marketers may be adversely affected, we may not be able to maintain or grow our revenue as anticipated, and our financial results could be adversely affected.",
       "risk_score": 0.9586558938026428,
       "finbert_probs": {
-        "positive": 0.008711072616279125,
-        "neutral": 0.03263309597969055,
+        "positive": 0.008711064234375954,
+        "neutral": 0.03263305127620697,
         "negative": 0.9586558938026428
       }
     },
@@ -556,8 +543,8 @@
       "next_sentence": "Although our board of directors has authorized a share repurchase program that does not have an expiration date, the program does not obligate us to repurchase any specific dollar amount or to acquire any specific number of shares of our Class A common stock.",
       "risk_score": 0.9585621953010559,
       "finbert_probs": {
-        "positive": 0.014195666648447514,
-        "neutral": 0.027242062613368034,
+        "positive": 0.014195659197866917,
+        "neutral": 0.02724204957485199,
         "negative": 0.9585621953010559
       }
     },
@@ -569,11 +556,11 @@
       "sentence_text": "Such incidents or our efforts to remediate such incidents may also result in a decline in our active user base or engagement levels.",
       "previous_sentence": "As a result, affected users or government authorities could initiate legal or regulatory actions against us in connection with any actual or perceived security breaches or improper access to or disclosure of data, which has occurred in the past and which could cause us to incur significant expense and liability or result in orders or consent decrees forcing us to modify our business practices.",
       "next_sentence": "Any of these events could have a material and adverse effect on our business, reputation, or financial results.",
-      "risk_score": 0.958021879196167,
+      "risk_score": 0.9580219388008118,
       "finbert_probs": {
-        "positive": 0.010028987191617489,
-        "neutral": 0.03194911777973175,
-        "negative": 0.958021879196167
+        "positive": 0.010028968565165997,
+        "neutral": 0.03194908797740936,
+        "negative": 0.9580219388008118
       }
     },
     {
@@ -587,27 +574,12 @@
       "risk_score": 0.9568811655044556,
       "finbert_probs": {
         "positive": 0.009263810701668262,
-        "neutral": 0.03385501354932785,
+        "neutral": 0.03385503962635994,
         "negative": 0.9568811655044556
       }
     },
     {
       "candidate_id": "item_1a_risk_factors_32",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 176,
-      "sentence_text": "If our investments are not successful longer-term, our business and financial performance will be harmed.",
-      "previous_sentence": "Our costs are continuing to grow, and some of our investments, particularly our investments in virtual and augmented reality, have the effect of reducing our operating margin and profitability.",
-      "next_sentence": "Operating our business is costly, and we expect our expenses to continue to increase in the future as we broaden our user base, as users increase the amount and types of content they consume and the data they share with us, for example with respect to video, as we develop and implement new products, as we market new and existing products and promote our brands, as we continue to expand our technical infrastructure, as we continue to invest in new and unproven technologies, and as we continue to hire additional employees and contractors to support our expanding operations, including our efforts to focus on privacy, safety, security, and content review.",
-      "risk_score": 0.956617534160614,
-      "finbert_probs": {
-        "positive": 0.01537241693586111,
-        "neutral": 0.0280100479722023,
-        "negative": 0.956617534160614
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_33",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 182,
@@ -616,9 +588,24 @@
       "next_sentence": "We plan to continue to make acquisitions and pursue other strategic transactions, which could impact our financial condition or results of operations and may adversely affect the price of our common stock.",
       "risk_score": 0.956617534160614,
       "finbert_probs": {
-        "positive": 0.01537241693586111,
-        "neutral": 0.0280100479722023,
+        "positive": 0.015372447669506073,
+        "neutral": 0.028010033071041107,
         "negative": 0.956617534160614
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_33",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 176,
+      "sentence_text": "If our investments are not successful longer-term, our business and financial performance will be harmed.",
+      "previous_sentence": "Our costs are continuing to grow, and some of our investments, particularly our investments in virtual and augmented reality, have the effect of reducing our operating margin and profitability.",
+      "next_sentence": "Operating our business is costly, and we expect our expenses to continue to increase in the future as we broaden our user base, as users increase the amount and types of content they consume and the data they share with us, for example with respect to video, as we develop and implement new products, as we market new and existing products and promote our brands, as we continue to expand our technical infrastructure, as we continue to invest in new and unproven technologies, and as we continue to hire additional employees and contractors to support our expanding operations, including our efforts to focus on privacy, safety, security, and content review.",
+      "risk_score": 0.9566174149513245,
+      "finbert_probs": {
+        "positive": 0.015372466295957565,
+        "neutral": 0.028010070323944092,
+        "negative": 0.9566174149513245
       }
     },
     {
@@ -632,7 +619,7 @@
       "risk_score": 0.9558612704277039,
       "finbert_probs": {
         "positive": 0.010551489889621735,
-        "neutral": 0.033587124198675156,
+        "neutral": 0.03358718007802963,
         "negative": 0.9558612704277039
       }
     },
@@ -644,11 +631,11 @@
       "sentence_text": "The effects of the pandemic previously resulted in reduced demand for our ads, a related decline in pricing of our ads, and additional demands on our technical infrastructure as a result of increased usage of our services, and any similar occurrences in the future may impair our ability to maintain or increase the quantity or quality of ads shown to users and adversely affect our revenue and financial results.",
       "previous_sentence": "For example, macroeconomic conditions have affected, and may in the future affect, marketers' ability or willingness to spend with us, as we experienced in 2020 with the regional and worldwide economic 16 Table of Contents disruption related to the COVID-19 pandemic and associated declines in advertising activity on our products.",
       "next_sentence": "Our advertising revenue is dependent on targeting and measurement tools that incorporate data signals from user activity on websites and services that we do not control, and changes to the regulatory environment, third-party mobile operating systems and browsers, and our own products have impacted, and we expect will continue to impact, the availability of such signals, which will adversely affect our advertising revenue.",
-      "risk_score": 0.9554207921028137,
+      "risk_score": 0.9554205536842346,
       "finbert_probs": {
-        "positive": 0.010538754984736443,
-        "neutral": 0.03404052183032036,
-        "negative": 0.9554207921028137
+        "positive": 0.010538781993091106,
+        "neutral": 0.03404058516025543,
+        "negative": 0.9554205536842346
       }
     },
     {
@@ -662,7 +649,7 @@
       "risk_score": 0.9552245140075684,
       "finbert_probs": {
         "positive": 0.01769014447927475,
-        "neutral": 0.02708531729876995,
+        "neutral": 0.027085335925221443,
         "negative": 0.9552245140075684
       }
     },
@@ -674,11 +661,11 @@
       "sentence_text": "These tax effects are dependent on our stock price, which we do not control, and a decline in our stock price could significantly increase our effective tax rate and adversely affect our financial results.",
       "previous_sentence": "The amount and value of share-based compensation issued relative to our earnings in a particular period will also affect the magnitude of the impact of share-based compensation on our effective tax rate.",
       "next_sentence": "If our goodwill or intangible assets become impaired, we may be required to record a significant charge to earnings.",
-      "risk_score": 0.9551805853843689,
+      "risk_score": 0.9551804661750793,
       "finbert_probs": {
-        "positive": 0.010429147630929947,
-        "neutral": 0.03439028561115265,
-        "negative": 0.9551805853843689
+        "positive": 0.010429161600768566,
+        "neutral": 0.03439034894108772,
+        "negative": 0.9551804661750793
       }
     },
     {
@@ -691,8 +678,8 @@
       "next_sentence": "We have in the past experienced, and may in the future experience, volatility in our user and revenue growth rates as a result of the COVID-19 pandemic, although we are unable to predict the duration or degree of such volatility with any certainty.",
       "risk_score": 0.9549428820610046,
       "finbert_probs": {
-        "positive": 0.018328437581658363,
-        "neutral": 0.026728730648756027,
+        "positive": 0.018328433856368065,
+        "neutral": 0.02672877535223961,
         "negative": 0.9549428820610046
       }
     },
@@ -706,8 +693,8 @@
       "next_sentence": "For example, in 2021, excess tax benefits recognized from share-based compensation decreased our provision for income taxes by $1.13 billion and our effective tax rate by two percentage points as compared to the tax rate without such benefits.",
       "risk_score": 0.9545730948448181,
       "finbert_probs": {
-        "positive": 0.01860485039651394,
-        "neutral": 0.026822026818990707,
+        "positive": 0.018604837357997894,
+        "neutral": 0.02682201936841011,
         "negative": 0.9545730948448181
       }
     },
@@ -719,11 +706,11 @@
       "sentence_text": "Real or perceived inaccuracies in our community and other metrics may harm our reputation and negatively affect our business.",
       "previous_sentence": "Any of these events could adversely affect our business, reputation, or financial results.",
       "next_sentence": "The numbers for our key metrics, which include our Family metrics (DAP, MAP, and average revenue per person (ARPP)) and Facebook metrics (DAUs, MAUs, and average revenue per user (ARPU)), are calculated using internal company data based on the activity of user accounts.",
-      "risk_score": 0.9545072913169861,
+      "risk_score": 0.9545074105262756,
       "finbert_probs": {
-        "positive": 0.009189009666442871,
-        "neutral": 0.03630369156599045,
-        "negative": 0.9545072913169861
+        "positive": 0.00918901152908802,
+        "neutral": 0.03630364313721657,
+        "negative": 0.9545074105262756
       }
     },
     {
@@ -737,7 +724,7 @@
       "risk_score": 0.9543866515159607,
       "finbert_probs": {
         "positive": 0.012383675202727318,
-        "neutral": 0.033229660242795944,
+        "neutral": 0.03322964534163475,
         "negative": 0.9543866515159607
       }
     },
@@ -751,8 +738,8 @@
       "next_sentence": "Any future declines in the size of our active user base may adversely impact our ability to deliver ad impressions and, in turn, our financial performance.",
       "risk_score": 0.9539092183113098,
       "finbert_probs": {
-        "positive": 0.02847936376929283,
-        "neutral": 0.017611434683203697,
+        "positive": 0.028479335829615593,
+        "neutral": 0.017611417919397354,
         "negative": 0.9539092183113098
       }
     },
@@ -767,7 +754,7 @@
       "risk_score": 0.9538661241531372,
       "finbert_probs": {
         "positive": 0.01577751152217388,
-        "neutral": 0.030356325209140778,
+        "neutral": 0.0303562693297863,
         "negative": 0.9538661241531372
       }
     },
@@ -779,11 +766,11 @@
       "sentence_text": "Our business is dependent on our ability to maintain and scale our technical infrastructure, and any significant disruption in our service, including as a result of the COVID-19 pandemic, could damage our reputation, result in a potential loss of users and engagement, and adversely affect our financial results.",
       "previous_sentence": "If we fail to successfully integrate the companies we acquire, we may not realize the benefits expected from the transaction and our business may be harmed.",
       "next_sentence": "Our reputation and ability to attract, retain, and serve our users is dependent upon the reliable performance of our products and our underlying technical infrastructure.",
-      "risk_score": 0.9538207054138184,
+      "risk_score": 0.9538208246231079,
       "finbert_probs": {
-        "positive": 0.009902382269501686,
+        "positive": 0.009902369230985641,
         "neutral": 0.03627684712409973,
-        "negative": 0.9538207054138184
+        "negative": 0.9538208246231079
       }
     },
     {
@@ -794,11 +781,11 @@
       "sentence_text": "We may also incur significant discrete charges such as legal-related accruals and settlement costs in general and administrative expenses.",
       "previous_sentence": "67 Table of Contents In 2022, we plan to continue to increase general and administrative expenses to support overall company growth.",
       "next_sentence": "Segment profitability The following table sets forth income (loss) from operations by segment.",
-      "risk_score": 0.9538189768791199,
+      "risk_score": 0.9538188576698303,
       "finbert_probs": {
-        "positive": 0.010379251092672348,
-        "neutral": 0.03580177202820778,
-        "negative": 0.9538189768791199
+        "positive": 0.010379289276897907,
+        "neutral": 0.03580187261104584,
+        "negative": 0.9538188576698303
       }
     },
     {
@@ -809,11 +796,11 @@
       "sentence_text": "Further, much of our technical infrastructure is located outside the United States, and it is possible that action by a foreign government, or our response to such government action, could result in the impairment of a portion of our technical infrastructure, which may interrupt the delivery or degrade the quality or reliability of our products and lead to a negative user experience or increase our costs.",
       "previous_sentence": "In addition, there may be issues related to this infrastructure that are not identified during the testing phases of design and implementation, which may only become evident after we have started to fully utilize the underlying equipment, that could further degrade the user experience or increase our costs.",
       "next_sentence": "Any of these events could adversely affect our business, reputation, or financial results.",
-      "risk_score": 0.9537842869758606,
+      "risk_score": 0.953784167766571,
       "finbert_probs": {
-        "positive": 0.009948293678462505,
-        "neutral": 0.03626744821667671,
-        "negative": 0.9537842869758606
+        "positive": 0.009948298335075378,
+        "neutral": 0.03626750409603119,
+        "negative": 0.953784167766571
       }
     },
     {
@@ -824,11 +811,11 @@
       "sentence_text": "The mandatory capitalization requirement increases our cash tax liabilities but also decreases our effective tax rate due to increasing the foreign-derived intangible income deduction.",
       "previous_sentence": "This includes the effects of the mandatory capitalization and amortization of research and development expenses starting in 2022, as required by the 2017 Tax Cuts and Jobs Act (Tax Act).",
       "next_sentence": "If the mandatory capitalization requirement is deferred, our effective tax rate in 2022 could be a few percentage points higher when compared to current law and our cash tax liabilities could be several billion dollars lower.",
-      "risk_score": 0.9533487558364868,
+      "risk_score": 0.9533488154411316,
       "finbert_probs": {
-        "positive": 0.02687220275402069,
-        "neutral": 0.01977912336587906,
-        "negative": 0.9533487558364868
+        "positive": 0.02687210775911808,
+        "neutral": 0.01977909542620182,
+        "negative": 0.9533488154411316
       }
     },
     {
@@ -841,118 +828,13 @@
       "next_sentence": "52 Table of Contents Trends in Our Family Metrics The numbers for our key Family metrics, our DAP, MAP, and average revenue per person (ARPP), do not include users on our other products unless they would otherwise qualify as DAP or MAP, respectively, based on their other activities on our Family products.",
       "risk_score": 0.9532327055931091,
       "finbert_probs": {
-        "positive": 0.018847916275262833,
-        "neutral": 0.027919404208660126,
+        "positive": 0.01884792558848858,
+        "neutral": 0.027919409796595573,
         "negative": 0.9532327055931091
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_49",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 641,
-      "sentence_text": "Delaware law and provisions in our certificate of incorporation and bylaws could make a merger, tender offer, or proxy contest difficult, thereby depressing the trading price of our Class A common stock.",
-      "previous_sentence": "Our status as a controlled company could make our Class A common stock less attractive to some investors or otherwise harm our stock price.",
-      "next_sentence": "Our status as a Delaware corporation and the anti-takeover provisions of the Delaware General Corporation Law may discourage, delay, or prevent a change in control by prohibiting us from engaging in a business combination with an interested stockholder for a period of three years after the person becomes an interested stockholder, even if a change of control would be beneficial to our existing stockholders.",
-      "risk_score": 0.9532288312911987,
-      "finbert_probs": {
-        "positive": 0.009341134689748287,
-        "neutral": 0.03743009269237518,
-        "negative": 0.9532288312911987
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_50",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 227,
-      "sentence_text": "Additional unanticipated delays or disruptions in the completion of these projects, including due to any shortage of labor necessary in building portions of such projects, or availability of components, challenges in obtaining required government or regulatory approvals, or other geopolitical challenges or actions by governments, whether as a result of the pandemic, trade disputes, or otherwise, may lead to increased project costs, operational inefficiencies, interruptions in the delivery or degradation of the quality or reliability of our products, or impairment of assets on our balance sheet.",
-      "previous_sentence": "We have in the past suspended, and may in the future suspend, certain of these projects as a result of the COVID-19 pandemic.",
-      "next_sentence": "In addition, there may be issues related to this infrastructure that are not identified during the testing phases of design and implementation, which may only become evident after we have started to fully utilize the underlying equipment, that could further degrade the user experience or increase our costs.",
-      "risk_score": 0.953193187713623,
-      "finbert_probs": {
-        "positive": 0.009081975556910038,
-        "neutral": 0.03772485628724098,
-        "negative": 0.953193187713623
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_51",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 164,
-      "sentence_text": "Our financial results will fluctuate from quarter to quarter and are difficult to predict.",
-      "previous_sentence": "Any such negative publicity could have an adverse effect on the size, engagement, and loyalty of our user base and marketer demand for advertising on our products, which could result in decreased revenue and adversely affect our business and financial results, and we have experienced such adverse effects to varying degrees from time to time.",
-      "next_sentence": "Our quarterly financial results have fluctuated in the past and will fluctuate in the future.",
-      "risk_score": 0.9524390697479248,
-      "finbert_probs": {
-        "positive": 0.00972728617489338,
-        "neutral": 0.037833668291568756,
-        "negative": 0.9524390697479248
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_52",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 468,
-      "sentence_text": "These laws and regulations, as well as any associated claims, inquiries, or investigations or any other government actions, have in the past led to, and may in the future lead to, unfavorable outcomes including increased compliance costs, delays or impediments in the development of new products, negative publicity and reputational harm, increased operating costs, diversion of management time and attention, and remedies that harm our business, including fines or demands or orders that we modify or cease existing business practices.",
-      "previous_sentence": "New legislation or regulatory decisions that restrict our ability to collect and use information about minors may also result in limitations on our advertising services or our ability to offer products and services to minors in certain jurisdictions.",
-      "next_sentence": "We have been subject to regulatory and other government investigations, enforcement actions, and settlements, and we expect to continue to be subject to such proceedings and other inquiries in the future, which could cause us to incur substantial costs or require us to change our business practices in a manner materially adverse to our business.",
-      "risk_score": 0.9522796869277954,
-      "finbert_probs": {
-        "positive": 0.00968190934509039,
-        "neutral": 0.03803836926817894,
-        "negative": 0.9522796869277954
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_53",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 53,
-      "sentence_text": "For example, our advertising revenue in the second half of 2021 was negatively impacted by marketer reaction to targeting and measurement challenges associated with iOS changes.",
-      "previous_sentence": "These developments have limited our ability to target and measure the effectiveness of ads on our platform and negatively impacted our advertising revenue.",
-      "next_sentence": "If we are unable to mitigate these developments as they take further effect in the future, our targeting and measurement capabilities will be materially and adversely affected, which would in turn significantly impact our future advertising revenue growth.",
-      "risk_score": 0.9516777992248535,
-      "finbert_probs": {
-        "positive": 0.012185424566268921,
-        "neutral": 0.036136724054813385,
-        "negative": 0.9516777992248535
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_54",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 223,
-      "sentence_text": "We could experience unforeseen difficulties in building and operating key portions of our technical infrastructure.",
-      "previous_sentence": "Any of these developments may result in interruptions in the availability or performance of our products, require unfavorable changes to existing products, delay the introduction of future products, or otherwise adversely affect our business and financial results.",
-      "next_sentence": "We have designed and built our own data centers and key portions of our technical infrastructure through which we serve our products, and we plan to continue to significantly expand the size of our infrastructure primarily through data centers, subsea and terrestrial fiber optic cable systems, and other projects.",
-      "risk_score": 0.9513886570930481,
-      "finbert_probs": {
-        "positive": 0.015991413965821266,
-        "neutral": 0.03261984512209892,
-        "negative": 0.9513886570930481
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_55",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 12,
-      "sentence_text": "We anticipate that our active user growth rate will continue to generally decline over time as the size of our active user base increases.",
-      "previous_sentence": "Our financial performance has been and will continue to be significantly determined by our success in adding, retaining, and engaging active users of our products that deliver ad impressions, particularly for Facebook and Instagram.",
-      "next_sentence": "In addition, we have experienced, and expect to continue to experience, fluctuations and declines in the size of our active user base in one or more markets from time to time, particularly in markets where we have achieved higher penetration rates.",
-      "risk_score": 0.9508633613586426,
-      "finbert_probs": {
-        "positive": 0.02168702334165573,
-        "neutral": 0.027449656277894974,
-        "negative": 0.9508633613586426
-      }
-    },
-    {
-      "candidate_id": "item_7_mda_56",
+      "candidate_id": "item_7_mda_49",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 29,
@@ -961,13 +843,13 @@
       "next_sentence": "However, the impact of the 51 Table of Contents pandemic on user growth and engagement, the demand for and pricing of our advertising services, as well as on our overall results of operations, remains highly uncertain for the foreseeable future.",
       "risk_score": 0.9504541158676147,
       "finbert_probs": {
-        "positive": 0.01326687727123499,
-        "neutral": 0.03627903386950493,
+        "positive": 0.01326686516404152,
+        "neutral": 0.03627908602356911,
         "negative": 0.9504541158676147
       }
     },
     {
-      "candidate_id": "item_7_mda_57",
+      "candidate_id": "item_7_mda_50",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 22,
@@ -976,238 +858,58 @@
       "next_sentence": "Beginning in the first quarter of 2020, we experienced significant increases in the size and engagement of our active user base across a number of regions as a result of the COVID-19 pandemic.",
       "risk_score": 0.9503346681594849,
       "finbert_probs": {
-        "positive": 0.011266092769801617,
-        "neutral": 0.038399163633584976,
+        "positive": 0.011266125366091728,
+        "neutral": 0.038399260491132736,
         "negative": 0.9503346681594849
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_58",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 335,
-      "sentence_text": "If any of them violates laws, fails to implement changes in accordance with newly enacted laws, or implements practices or standards regarded as unethical, corrupt, or non-compliant, we could experience supply chain disruptions, government action or fines, canceled orders, or damage to our reputation.",
-      "previous_sentence": "We also require the suppliers and business partners of our consumer hardware products to comply with laws and certain company policies regarding sourcing practices and standards on labor, health and safety, the environment, and business ethics, but we do not control them or their practices and standards.",
-      "next_sentence": "We face inventory risk with respect to our consumer hardware products.",
-      "risk_score": 0.9502443671226501,
-      "finbert_probs": {
-        "positive": 0.009359573945403099,
-        "neutral": 0.040396060794591904,
-        "negative": 0.9502443671226501
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_59",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 160,
-      "sentence_text": "For example, we have been the subject of significant media coverage involving concerns around our handling of political speech and advertising, hate speech, and other content, as well as user well-being issues, and we continue to receive negative publicity related to these topics.",
-      "previous_sentence": "Unfavorable publicity regarding, for example, our privacy practices, advertising policies, product changes, product quality, litigation or regulatory activity, government surveillance, the actions of our advertisers, the actions of our developers whose products are integrated with our products, the use of our products or services for illicit or objectionable ends, the substance or enforcement of our community standards, terms of service, or other policies, the actions of our users, the quality and integrity of content shared on our platform, the perceived or actual impacts of our products or services on user well-being, or the actions of other companies that provide similar services to ours, has in the past, and could in the future, adversely affect our reputation.",
-      "next_sentence": "Beginning in September 2021, we became the subject of significant media coverage as a result of allegations and the release of internal company documents by a former employee.",
-      "risk_score": 0.9496561288833618,
-      "finbert_probs": {
-        "positive": 0.011331894434988499,
-        "neutral": 0.03901200741529465,
-        "negative": 0.9496561288833618
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_60",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 228,
-      "sentence_text": "In addition, there may be issues related to this infrastructure that are not identified during the testing phases of design and implementation, which may only become evident after we have started to fully utilize the underlying equipment, that could further degrade the user experience or increase our costs.",
-      "previous_sentence": "Additional unanticipated delays or disruptions in the completion of these projects, including due to any shortage of labor necessary in building portions of such projects, or availability of components, challenges in obtaining required government or regulatory approvals, or other geopolitical challenges or actions by governments, whether as a result of the pandemic, trade disputes, or otherwise, may lead to increased project costs, operational inefficiencies, interruptions in the delivery or degradation of the quality or reliability of our products, or impairment of assets on our balance sheet.",
-      "next_sentence": "Further, much of our technical infrastructure is located outside the United States, and it is possible that action by a foreign government, or our response to such government action, could result in the impairment of a portion of our technical infrastructure, which may interrupt the delivery or degrade the quality or reliability of our products and lead to a negative user experience or increase our costs.",
-      "risk_score": 0.9495736956596375,
-      "finbert_probs": {
-        "positive": 0.012618610635399818,
-        "neutral": 0.03780766576528549,
-        "negative": 0.9495736956596375
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_61",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 555,
-      "sentence_text": "Such breaches and attacks may cause interruptions to the services we provide, degrade the user experience, cause users or marketers to lose confidence and trust in our products, impair our internal systems, or result in financial harm to us.",
-      "previous_sentence": "Our efforts to address undesirable activity on our platform also increase the risk of retaliatory attacks.",
-      "next_sentence": "Our efforts to protect our company data or the information we receive, and to disable undesirable activities on our platform, may also be unsuccessful due to software bugs or other technical malfunctions; employee, contractor, or vendor error or malfeasance, including defects or vulnerabilities in our vendors' information technology systems or offerings; government surveillance; breaches of physical security of our facilities or technical infrastructure; or other threats that evolve.",
-      "risk_score": 0.9492604732513428,
-      "finbert_probs": {
-        "positive": 0.0089673837646842,
-        "neutral": 0.041772160679101944,
-        "negative": 0.9492604732513428
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_62",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 255,
-      "sentence_text": "In addition, our data limitations may affect our understanding of certain details of our business and increase the risk of error for our Family metrics estimates.",
-      "previous_sentence": "The timing and results of such user surveys have in the past contributed, and may in the future contribute, to changes in our reported Family metrics from period to period.",
-      "next_sentence": "Our techniques and models rely on a variety of data signals from different products, and we rely on more limited data signals for some products compared to others.",
-      "risk_score": 0.9489531517028809,
-      "finbert_probs": {
-        "positive": 0.009847992099821568,
-        "neutral": 0.04119881987571716,
-        "negative": 0.9489531517028809
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_63",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 349,
-      "sentence_text": "There can be no assurances that a favorable final outcome will be obtained in all our cases, and defending any lawsuit is costly and can impose a significant burden on management and employees.",
-      "previous_sentence": "The results of any such lawsuits and claims cannot be predicted with certainty, and any negative outcome from any such lawsuits could result in payments of substantial monetary damages or fines, or undesirable changes to our products or business practices, and accordingly our business, financial condition, or results of operations could be materially and adversely affected.",
-      "next_sentence": "Any litigation to which we are a party may result in an onerous or unfavorable judgment that may not be reversed upon appeal or in payments of substantial monetary damages or fines, or we may decide to settle lawsuits on similarly unfavorable terms, which has occurred in the past and which could adversely affect our business, financial conditions, or results of operations.",
-      "risk_score": 0.9488285183906555,
-      "finbert_probs": {
-        "positive": 0.008726674132049084,
-        "neutral": 0.042444758117198944,
-        "negative": 0.9488285183906555
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_64",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 329,
-      "sentence_text": "Our brand and financial results could be adversely affected by any such quality issues, other failures to meet our customers' expectations, or findings of our consumer hardware products to be defective.",
-      "previous_sentence": "Sometimes, these issues may be caused by components we purchase from other manufacturers or suppliers.",
-      "next_sentence": "We rely on third parties to manufacture and manage the logistics of transporting and distributing our consumer hardware products, which subjects us to a number of risks that have been exacerbated as a result of the COVID-19 pandemic.",
-      "risk_score": 0.9479237794876099,
-      "finbert_probs": {
-        "positive": 0.009997871704399586,
-        "neutral": 0.04207834228873253,
-        "negative": 0.9479237794876099
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_65",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 132,
-      "sentence_text": "More recently, we believe this growth has moderated in many regions, and we may experience reduced advertising demand and related declines in pricing in future periods to the extent this trend continues, which could adversely affect our advertising revenue growth.",
-      "previous_sentence": "In addition, we believe that the pandemic previously contributed to an acceleration in the growth of online commerce, which in turn increased demand for our advertising services.",
-      "next_sentence": "The demand for and pricing of our advertising services may be materially and adversely impacted by the pandemic for the foreseeable future, and we are unable to predict the duration or degree of such impact with any certainty.",
-      "risk_score": 0.947733998298645,
-      "finbert_probs": {
-        "positive": 0.019521472975611687,
-        "neutral": 0.03274446353316307,
-        "negative": 0.947733998298645
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_66",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 204,
-      "sentence_text": "We have in the past experienced, and may in the future experience, interruptions in the availability or performance of our products from time to time.",
-      "previous_sentence": "Our reputation and ability to attract, retain, and serve our users is dependent upon the reliable performance of our products and our underlying technical infrastructure.",
-      "next_sentence": "Our systems may not be adequately designed or may not operate with the reliability and redundancy necessary to avoid performance delays or outages that could be harmful to our business.",
-      "risk_score": 0.9475932121276855,
-      "finbert_probs": {
-        "positive": 0.01092167105525732,
-        "neutral": 0.041485048830509186,
-        "negative": 0.9475932121276855
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_67",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 218,
-      "sentence_text": "Any disruption or failure in the services 26 Table of Contents we receive from these providers could harm our ability to handle existing or increased traffic and could significantly harm our business.",
-      "previous_sentence": "A substantial portion of our network infrastructure is provided by third parties.",
-      "next_sentence": "Any financial or other difficulties these providers face may adversely affect our business, and we exercise little control over these providers, which increases our vulnerability to problems with the services they provide.",
-      "risk_score": 0.9474095106124878,
-      "finbert_probs": {
-        "positive": 0.008853591047227383,
-        "neutral": 0.043736979365348816,
-        "negative": 0.9474095106124878
-      }
-    },
-    {
-      "candidate_id": "item_7a_market_risk_68",
+      "candidate_id": "item_7a_market_risk_51",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 21,
       "sentence_text": "Volatility in the global economic climate and financial markets, including recent and ongoing effects related to the impact of the COVID-19 pandemic, which requires significant judgments, could result in a material impairment charge on our equity investments.",
       "previous_sentence": "Valuations of our equity investments are complex due to the lack of readily available market data and observable transactions.",
       "next_sentence": "Equity investments accounted for under the equity method were immaterial as of December 31, 2021 and December 31, 2020.",
-      "risk_score": 0.9465005397796631,
+      "risk_score": 0.9465006589889526,
       "finbert_probs": {
-        "positive": 0.012385913170874119,
-        "neutral": 0.04111361503601074,
-        "negative": 0.9465005397796631
+        "positive": 0.012385891750454903,
+        "neutral": 0.04111352190375328,
+        "negative": 0.9465006589889526
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_69",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 156,
-      "sentence_text": "If we are not able to compete effectively, our user base, level of user engagement, and ability to deliver ad impressions may decrease, we may become less attractive to developers and marketers, and our revenue and results of operations may be materially and adversely affected.",
-      "previous_sentence": "We believe that our ability to compete effectively depends upon many factors both within and beyond our control, including: \u2022 the popularity, usefulness, ease of use, performance, and reliability of our products compared to our competitors' products; \u2022 the size and composition of our user base; \u2022 the engagement of users with our products and competing products; \u2022 our ability to attract and retain businesses who use our free or paid business and advertising services; \u2022 the timing and market acceptance of products, including developments and enhancements to our or our competitors' products; \u2022 our safety and security efforts and our ability to protect user data and to provide users with control over their data; \u2022 our ability to distribute our products to new and existing users; \u2022 our ability to monetize our products; \u2022 the frequency, size, format, quality, and relative prominence of the ads displayed by us or our competitors; \u2022 customer service and support efforts; \u2022 marketing and selling efforts, including our ability to measure the effectiveness of our ads and to provide marketers with a compelling return on their investments; \u2022 our ability to establish and maintain developers' interest in building mobile and web applications that integrate with Facebook and our other products; \u2022 our ability to establish and maintain publisher interest in integrating their content with Facebook and our other products; \u2022 changes mandated by legislation, regulatory authorities, or litigation, some of which may have a disproportionate effect on us; \u2022 acquisitions or consolidation within our industry, which may result in more formidable competitors; \u2022 our ability to attract, retain, and motivate talented employees, particularly software engineers, designers, and product managers; \u2022 our ability to cost-effectively manage and grow our operations; and \u2022 our reputation and brand strength relative to those of our competitors.",
-      "next_sentence": "22 Table of Contents Unfavorable media coverage negatively affects our business from time to time.",
-      "risk_score": 0.9452921748161316,
-      "finbert_probs": {
-        "positive": 0.011458954773843288,
-        "neutral": 0.04324882850050926,
-        "negative": 0.9452921748161316
-      }
-    },
-    {
-      "candidate_id": "item_7_mda_70",
+      "candidate_id": "item_7_mda_52",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 20,
       "sentence_text": "Our advertising revenue growth in the second half of 2021 was adversely affected by reduced marketer spending as a result of limitations on our ad targeting and measurement tools arising from changes to the iOS operating system.",
       "previous_sentence": "We also continued to invest based on the following company priorities: (i) continue making progress on the major social issues facing the internet and our company, including privacy, safety, and security; (ii) build new experiences that meaningfully improve people's lives today and set the stage for even bigger improvements in the future; (iii) keep building our business by supporting the millions of businesses that rely on our services to grow and create jobs; and (iv) communicate more transparently about what we're doing and the role our services play in the world.",
       "next_sentence": "We expect that future advertising revenue growth will continue to be adversely affected by these and other limitations on our ad targeting and measurement tools arising from changes to the regulatory environment and third-party mobile operating systems and browsers.",
-      "risk_score": 0.945221483707428,
+      "risk_score": 0.9452213644981384,
       "finbert_probs": {
-        "positive": 0.02028558775782585,
-        "neutral": 0.03449290245771408,
-        "negative": 0.945221483707428
+        "positive": 0.020285589620471,
+        "neutral": 0.034492965787649155,
+        "negative": 0.9452213644981384
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_71",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 40,
-      "sentence_text": "The occurrence of any of these or other factors in the future could result in a reduction in demand for our ads, which may reduce the prices we receive for our ads, or cause marketers to stop advertising with us altogether, either of which would negatively affect our revenue and financial results.",
-      "previous_sentence": "From time to time, certain of these factors have adversely affected our advertising revenue to varying degrees.",
-      "next_sentence": "For example, macroeconomic conditions have affected, and may in the future affect, marketers' ability or willingness to spend with us, as we experienced in 2020 with the regional and worldwide economic 16 Table of Contents disruption related to the COVID-19 pandemic and associated declines in advertising activity on our products.",
-      "risk_score": 0.9430550932884216,
+      "candidate_id": "item_3_legal_53",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 14,
+      "sentence_text": "The state attorneys general inquiry and certain government inquiries in other jurisdictions remain ongoing and could subject us to additional substantial fines and costs, require us to change our business practices, divert resources and the attention of management from our business, or adversely affect our business.",
+      "previous_sentence": "We entered into a settlement and modified consent order to resolve the FTC inquiry, which took effect in April 2020 and required us to pay a penalty of $5.0 billion and to significantly enhance our practices and processes for privacy compliance and oversight.",
+      "next_sentence": "On July 16, 2021, a stockholder derivative action was filed in Delaware Chancery Court against certain of our directors and officers asserting breach of fiduciary duty and related claims relating to our historical platform and user data practices, as well as our settlement with the FTC.",
+      "risk_score": 0.9393857717514038,
       "finbert_probs": {
-        "positive": 0.0100156981498003,
-        "neutral": 0.0469292514026165,
-        "negative": 0.9430550932884216
+        "positive": 0.009844818152487278,
+        "neutral": 0.050769444555044174,
+        "negative": 0.9393857717514038
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_72",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 588,
-      "sentence_text": "In addition, any errors, bugs, vulnerabilities, or defects in our systems or the software and hardware on which we rely, failures to properly address or mitigate the technical limitations in our systems, or associated degradations or interruptions of service or failures to fulfill our commitments to our users, have in the past led to, and may in the future lead to, outcomes including damage to our reputation, loss of users, loss of marketers, loss of revenue, regulatory inquiries, litigation, or liability for fines, damages, or other remedies, any of which could adversely affect our business and financial results.",
-      "previous_sentence": "For example, we make 41 Table of Contents commitments to our users as to how their data will be used within and across our products, and our systems are subject to errors, bugs and technical limitations that may prevent us from fulfilling these commitments reliably.",
-      "next_sentence": "If we are unable to protect our intellectual property, the value of our brands and other intangible assets may be diminished, and our business may be adversely affected.",
-      "risk_score": 0.9429555535316467,
-      "finbert_probs": {
-        "positive": 0.009207114577293396,
-        "neutral": 0.04783739894628525,
-        "negative": 0.9429555535316467
-      }
-    },
-    {
-      "candidate_id": "item_7_mda_73",
+      "candidate_id": "item_7_mda_54",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 244,
@@ -1216,133 +918,223 @@
       "next_sentence": "Interest and other income, net Year Ended December 31, 2021 2020 2019 2021 vs 2020 % Change 2020 vs 2019 % Change (dollars in millions) Interest income, net $ 461 $ 672 $ 904 (31) % (26) % Foreign currency exchange losses, net (140) (129) (105) (9) % (23) % Other income (expense), net 210 (34) 27 NM NM Interest and other income, net $ 531 $ 509 $ 826 4 % (38) % Interest and other income, net in 2021 increased $22 million, or 4%, compared to 2020.",
       "risk_score": 0.9367331266403198,
       "finbert_probs": {
-        "positive": 0.045728083699941635,
-        "neutral": 0.01753877103328705,
+        "positive": 0.04572804272174835,
+        "neutral": 0.0175387654453516,
         "negative": 0.9367331266403198
       }
     },
     {
-      "candidate_id": "item_7_mda_74",
+      "candidate_id": "item_7_mda_55",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 217,
       "sentence_text": "Using these constant rates, total revenue and advertising revenue would have been $1.64 billion and $1.62 billion lower than actual total revenue and advertising revenue, respectively, for the full year 2021.",
       "previous_sentence": "If we had translated revenue for the full year 2021 using the prior year's monthly exchange rates for our settlement or billing currencies other than the U.S. dollar, our total revenue and advertising revenue would have been $116.29 billion and $113.31 billion, respectively.",
       "next_sentence": "Using the same constant rates, full year 2021 total revenue and advertising revenue would have been $30.32 billion and $29.15 billion, respectively, higher than actual total revenue and advertising revenue for the full year 2020.",
-      "risk_score": 0.9333673119544983,
+      "risk_score": 0.9333671927452087,
       "finbert_probs": {
-        "positive": 0.013474446721374989,
-        "neutral": 0.053158290684223175,
-        "negative": 0.9333673119544983
+        "positive": 0.013474457897245884,
+        "neutral": 0.05315836891531944,
+        "negative": 0.9333671927452087
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_75",
+      "candidate_id": "item_7a_market_risk_56",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 3,
       "sentence_text": "Accordingly, changes in exchange rates, and in particular a strengthening of the U.S. dollar, have in the past, and may in the future, negatively affect our revenue and other operating results as expressed in U.S. dollars.",
       "previous_sentence": "Foreign Currency Exchange Risk We have foreign currency risks related to our revenue and operating expenses denominated in currencies other than the U.S. dollar, primarily the Euro.",
       "next_sentence": "We have experienced and will continue to experience fluctuations in our net income as a result of transaction gains or losses related to revaluing monetary asset and liability balances that are denominated in currencies other than the functional currency of the entities in which they are recorded.",
-      "risk_score": 0.9303467273712158,
+      "risk_score": 0.9303468465805054,
       "finbert_probs": {
-        "positive": 0.014481616206467152,
-        "neutral": 0.05517161265015602,
-        "negative": 0.9303467273712158
+        "positive": 0.014481591992080212,
+        "neutral": 0.055171672254800797,
+        "negative": 0.9303468465805054
       }
     },
     {
-      "candidate_id": "item_7_mda_76",
+      "candidate_id": "item_3_legal_57",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 2,
+      "sentence_text": "Beginning on July 27, 2018, two putative class actions were filed in federal court in the United States against us and certain of our directors and officers alleging violations of securities laws in connection with the disclosure of our earnings results for the second quarter of 2018 and seeking unspecified damages.",
+      "previous_sentence": "Legal Proceedings Beginning on March 20, 2018, multiple putative class actions and derivative actions were filed in state and federal courts in the United States and elsewhere against us and certain of our directors and officers alleging violations of securities laws, breach of fiduciary duties, and other causes of action in connection with our platform and user data practices as well as the misuse of certain data by a developer that shared such data with third parties in violation of our terms and policies, and seeking unspecified damages and injunctive relief.",
+      "next_sentence": "These two actions subsequently were transferred and consolidated in the U.S.",
+      "risk_score": 0.9277399778366089,
+      "finbert_probs": {
+        "positive": 0.01533940713852644,
+        "neutral": 0.05692056566476822,
+        "negative": 0.9277399778366089
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_58",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 25,
+      "sentence_text": "Any such inquiries or investigations could subject us to substantial fines and costs, require us to change our business practices, divert resources and the attention of management from our business, or adversely affect our business.",
+      "previous_sentence": "For additional information, see Part I, Item 1A, \"Risk Factors\u2014Our business is subject to complex and evolving U.S. and foreign laws and regulations regarding privacy, data use and data protection, content, competition, safety and consumer protection, e-commerce, and other matters\" in this Annual Report on Form 10-K.",
+      "next_sentence": "In addition, we are subject to various litigation and government inquiries and investigations, formal or informal, by competition authorities in the United States, Europe, and other jurisdictions.",
+      "risk_score": 0.9199138283729553,
+      "finbert_probs": {
+        "positive": 0.011430325917899609,
+        "neutral": 0.0686558336019516,
+        "negative": 0.9199138283729553
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_59",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 31,
       "sentence_text": "User growth and engagement were also impacted by a number of other factors in the second half of 2021.",
       "previous_sentence": "However, the impact of the 51 Table of Contents pandemic on user growth and engagement, the demand for and pricing of our advertising services, as well as on our overall results of operations, remains highly uncertain for the foreseeable future.",
       "next_sentence": "For example, competitive products and services have reduced some users' engagement with our products and services, and in response to competitive pressures, we have introduced new features such as Reels, which is growing in usage but is not currently monetized at the same rate as our feed or Stories products.",
-      "risk_score": 0.916952908039093,
+      "risk_score": 0.9169530272483826,
       "finbert_probs": {
-        "positive": 0.01510180626064539,
-        "neutral": 0.06794518977403641,
-        "negative": 0.916952908039093
+        "positive": 0.01510181650519371,
+        "neutral": 0.06794515252113342,
+        "negative": 0.9169530272483826
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_77",
+      "candidate_id": "item_7a_market_risk_60",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 20,
       "sentence_text": "Valuations of our equity investments are complex due to the lack of readily available market data and observable transactions.",
       "previous_sentence": "The qualitative assessment considers factors such as, but not limited to, the investee's financial condition and business outlook; industry and sector performance; economic or technological environment; and other relevant events and factors affecting the investee.",
       "next_sentence": "Volatility in the global economic climate and financial markets, including recent and ongoing effects related to the impact of the COVID-19 pandemic, which requires significant judgments, could result in a material impairment charge on our equity investments.",
-      "risk_score": 0.9106001853942871,
+      "risk_score": 0.9105998873710632,
       "finbert_probs": {
-        "positive": 0.010865557938814163,
-        "neutral": 0.07853435724973679,
-        "negative": 0.9106001853942871
+        "positive": 0.01086556538939476,
+        "neutral": 0.07853449881076813,
+        "negative": 0.9105998873710632
       }
     },
     {
-      "candidate_id": "item_7_mda_78",
+      "candidate_id": "item_3_legal_61",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 1,
+      "sentence_text": "Legal Proceedings Beginning on March 20, 2018, multiple putative class actions and derivative actions were filed in state and federal courts in the United States and elsewhere against us and certain of our directors and officers alleging violations of securities laws, breach of fiduciary duties, and other causes of action in connection with our platform and user data practices as well as the misuse of certain data by a developer that shared such data with third parties in violation of our terms and policies, and seeking unspecified damages and injunctive relief.",
+      "previous_sentence": "Item 3.",
+      "next_sentence": "Beginning on July 27, 2018, two putative class actions were filed in federal court in the United States against us and certain of our directors and officers alleging violations of securities laws in connection with the disclosure of our earnings results for the second quarter of 2018 and seeking unspecified damages.",
+      "risk_score": 0.9097013473510742,
+      "finbert_probs": {
+        "positive": 0.012722711078822613,
+        "neutral": 0.07757589221000671,
+        "negative": 0.9097013473510742
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_62",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 155,
       "sentence_text": "Goodwill is tested for impairment at the reporting unit level annually or more frequently if events or changes in circumstances would more likely than not reduce the fair value of a reporting unit below its carrying value.",
       "previous_sentence": "Upon the conclusion of the measurement period, any subsequent adjustments are recorded to earnings.",
       "next_sentence": "We have two reporting units subject to goodwill impairment testing.",
-      "risk_score": 0.9040817022323608,
+      "risk_score": 0.904081404209137,
       "finbert_probs": {
-        "positive": 0.014913265593349934,
-        "neutral": 0.0810050442814827,
-        "negative": 0.9040817022323608
+        "positive": 0.014913325197994709,
+        "neutral": 0.0810052901506424,
+        "negative": 0.904081404209137
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_79",
+      "candidate_id": "item_3_legal_63",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 46,
+      "sentence_text": "The result of such litigation, investigations or inquiries could subject us to substantial monetary remedies and costs, interrupt or require us to change our business practices, divert resources and the attention of management from our business, or subject us to other structural or behavioral remedies that adversely affect our business.",
+      "previous_sentence": "We believe these lawsuits are without merit, and we are vigorously defending them.",
+      "next_sentence": "We are also subject to other government inquiries and investigations relating to our business activities and disclosure practices.",
+      "risk_score": 0.903943657875061,
+      "finbert_probs": {
+        "positive": 0.01144114788621664,
+        "neutral": 0.08461522310972214,
+        "negative": 0.903943657875061
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_64",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 34,
+      "sentence_text": "District Court for the District of Columbia alleging that we engaged in anticompetitive conduct in violation of Section 2 of the Sherman Act, including by acquiring Instagram in 2012 and WhatsApp in 2014 and by maintaining conditions on access to our platform.",
+      "previous_sentence": "On December 9, 2020, the attorneys general from 46 states, the territory of Guam, and the District of Columbia filed a complaint against us in the U.S.",
+      "next_sentence": "The complaint also alleged that we violated Section 7 of the Clayton Act by acquiring Instagram and WhatsApp.",
+      "risk_score": 0.9037903547286987,
+      "finbert_probs": {
+        "positive": 0.014104570262134075,
+        "neutral": 0.08210498839616776,
+        "negative": 0.9037903547286987
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_65",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 49,
+      "sentence_text": "Beginning on October 27, 2021, multiple putative class actions were filed in federal court in the United States against us and certain of our directors and officers alleging violations of securities laws in connection with the same matters.",
+      "previous_sentence": "For example, beginning in September 2021, we became subject to government investigations and requests relating to a former employee's allegations and release of internal company documents concerning, among other things, our algorithms, advertising and user metrics, and content enforcement practices, as well as misinformation and other undesirable activity on our platform, and user well-being .",
+      "next_sentence": "We believe these lawsuits are without merit, and we are vigorously defending them.",
+      "risk_score": 0.9034655690193176,
+      "finbert_probs": {
+        "positive": 0.017220482230186462,
+        "neutral": 0.07931399345397949,
+        "negative": 0.9034655690193176
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_66",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 4,
       "sentence_text": "We have experienced and will continue to experience fluctuations in our net income as a result of transaction gains or losses related to revaluing monetary asset and liability balances that are denominated in currencies other than the functional currency of the entities in which they are recorded.",
       "previous_sentence": "Accordingly, changes in exchange rates, and in particular a strengthening of the U.S. dollar, have in the past, and may in the future, negatively affect our revenue and other operating results as expressed in U.S. dollars.",
       "next_sentence": "At this time, we have not entered into, but in the future we may enter into, derivatives or other financial instruments in an attempt to hedge our foreign currency exchange risk.",
-      "risk_score": 0.8970591425895691,
+      "risk_score": 0.8970590233802795,
       "finbert_probs": {
-        "positive": 0.035271599888801575,
-        "neutral": 0.06766928732395172,
-        "negative": 0.8970591425895691
+        "positive": 0.03527158498764038,
+        "neutral": 0.06766937673091888,
+        "negative": 0.8970590233802795
       }
     },
     {
-      "candidate_id": "item_7_mda_80",
+      "candidate_id": "item_7_mda_67",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 35,
       "sentence_text": "These trends adversely affected advertising revenue growth in the second half of 2021 and we expect will continue to affect our advertising revenue growth in the foreseeable future.",
       "previous_sentence": "In addition, we experienced year-over-year declines in ad impressions delivered in the United States & Canada region.",
       "next_sentence": "Other global and regional business and macroeconomic conditions also have had, and we believe will continue to have, an impact on our user growth and engagement and advertising revenue growth.",
-      "risk_score": 0.8907693028450012,
+      "risk_score": 0.8907691240310669,
       "finbert_probs": {
-        "positive": 0.01725766435265541,
-        "neutral": 0.0919729620218277,
-        "negative": 0.8907693028450012
+        "positive": 0.017257677391171455,
+        "neutral": 0.09197317063808441,
+        "negative": 0.8907691240310669
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_81",
+      "candidate_id": "item_7a_market_risk_68",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 7,
       "sentence_text": "Foreign currency losses of $140 million, $129 million, and $105 million were recognized in 2021, 2020, and 2019, respectively, as interest and other income, net in our consolidated statements of income.",
       "previous_sentence": "It is difficult to predict the effect hedging activities would have on our results of operations.",
       "next_sentence": "Interest Rate Sensitivity Our exposure to changes in interest rates relates primarily to interest earned and market value on our cash and cash equivalents and marketable securities.",
-      "risk_score": 0.8854389786720276,
+      "risk_score": 0.8854391574859619,
       "finbert_probs": {
-        "positive": 0.018953941762447357,
-        "neutral": 0.09560704976320267,
-        "negative": 0.8854389786720276
+        "positive": 0.018953906372189522,
+        "neutral": 0.0956069752573967,
+        "negative": 0.8854391574859619
       }
     },
     {
-      "candidate_id": "item_7_mda_82",
+      "candidate_id": "item_7_mda_69",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 279,
@@ -1351,69 +1143,264 @@
       "next_sentence": "We anticipate making capital expenditures of approximately $29 billion to $34 billion in 2022.",
       "risk_score": 0.884818434715271,
       "finbert_probs": {
-        "positive": 0.08333607763051987,
+        "positive": 0.08333613723516464,
         "neutral": 0.03184542432427406,
         "negative": 0.884818434715271
       }
     },
     {
-      "candidate_id": "item_7_mda_83",
+      "candidate_id": "item_3_legal_70",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 30,
+      "sentence_text": "District Court for the District of Columbia alleging that we engaged in anticompetitive conduct and unfair methods of competition in violation of Section 5 of the Federal Trade Commission Act and Section 2 of the Sherman Act, including by acquiring Instagram in 2012 and WhatsApp in 2014 and by maintaining conditions on access to our platform.",
+      "previous_sentence": "On December 9, 2020, the FTC filed a complaint against us in the U.S.",
+      "next_sentence": "In addition, beginning in the third quarter of 2019, we became the subject of antitrust investigations by the U.S.",
+      "risk_score": 0.8833444118499756,
+      "finbert_probs": {
+        "positive": 0.0136164091527462,
+        "neutral": 0.10303916037082672,
+        "negative": 0.8833444118499756
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_71",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 41,
+      "sentence_text": "Multiple putative class actions have also been filed in state and federal courts in the United States against us alleging violations of antitrust laws and other causes of action in connection with these acquisitions and other alleged anticompetitive conduct, and seeking damages and unspecified injunctive relief.",
+      "previous_sentence": "On January 11, 2022, the court denied our motion to dismiss the FTC's amended complaint.",
+      "next_sentence": "Several of the cases brought on behalf of certain advertisers and users were consolidated in the U.S.",
+      "risk_score": 0.8761496543884277,
+      "finbert_probs": {
+        "positive": 0.02038312703371048,
+        "neutral": 0.10346730053424835,
+        "negative": 0.8761496543884277
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_72",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 52,
+      "sentence_text": "A number of such instances have resulted in the assessment of fines and penalties against us.",
+      "previous_sentence": "In addition, we are subject to litigation and other proceedings involving law enforcement and other regulatory agencies, including in particular in Brazil, Russia, and other countries in Europe, in order to ascertain the precise scope of our legal obligations to comply with the requests of those agencies, including our obligation to disclose user information in particular circumstances.",
+      "next_sentence": "We believe we have multiple legal grounds to satisfy these requests or prevail against associated fines and penalties, and we intend to vigorously defend such fines and penalties.",
+      "risk_score": 0.8753765821456909,
+      "finbert_probs": {
+        "positive": 0.030737707391381264,
+        "neutral": 0.09388569742441177,
+        "negative": 0.8753765821456909
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_73",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 48,
+      "sentence_text": "For example, beginning in September 2021, we became subject to government investigations and requests relating to a former employee's allegations and release of internal company documents concerning, among other things, our algorithms, advertising and user metrics, and content enforcement practices, as well as misinformation and other undesirable activity on our platform, and user well-being .",
+      "previous_sentence": "We are also subject to other government inquiries and investigations relating to our business activities and disclosure practices.",
+      "next_sentence": "Beginning on October 27, 2021, multiple putative class actions were filed in federal court in the United States against us and certain of our directors and officers alleging violations of securities laws in connection with the same matters.",
+      "risk_score": 0.8577364683151245,
+      "finbert_probs": {
+        "positive": 0.014705205336213112,
+        "neutral": 0.12755827605724335,
+        "negative": 0.8577364683151245
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_74",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 28,
       "sentence_text": "More recently, we believe this growth has moderated in many regions, which to some extent adversely affected our advertising revenue growth in the second half of 2021.",
       "previous_sentence": "While we experienced a reduction in demand and a related decline in pricing during the onset of the pandemic, we believe the pandemic subsequently contributed to an acceleration in the growth of online commerce, particularly during the second half of 2020, and we experienced increasing demand for advertising as a result of this trend.",
       "next_sentence": "We may experience reduced advertising demand and related declines in pricing in future periods to the extent this trend continues, which could adversely affect our advertising revenue growth.",
-      "risk_score": 0.8560216426849365,
+      "risk_score": 0.8560218811035156,
       "finbert_probs": {
-        "positive": 0.10074363648891449,
-        "neutral": 0.043234772980213165,
-        "negative": 0.8560216426849365
+        "positive": 0.10074327886104584,
+        "neutral": 0.04323482885956764,
+        "negative": 0.8560218811035156
       }
     },
     {
-      "candidate_id": "item_7_mda_84",
+      "candidate_id": "item_3_legal_75",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 15,
+      "sentence_text": "On July 16, 2021, a stockholder derivative action was filed in Delaware Chancery Court against certain of our directors and officers asserting breach of fiduciary duty and related claims relating to our historical platform and user data practices, as well as our settlement with the FTC.",
+      "previous_sentence": "The state attorneys general inquiry and certain government inquiries in other jurisdictions remain ongoing and could subject us to additional substantial fines and costs, require us to change our business practices, divert resources and the attention of management from our business, or adversely affect our business.",
+      "next_sentence": "On July 20, 2021, other stockholders filed an amended derivative complaint in a related Delaware Chancery Court action, asserting breach of fiduciary duty and related claims against certain of our current and former directors and officers in connection with our historical platform and user data practices.",
+      "risk_score": 0.8550034165382385,
+      "finbert_probs": {
+        "positive": 0.017967555671930313,
+        "neutral": 0.12702904641628265,
+        "negative": 0.8550034165382385
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_76",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 267,
       "sentence_text": "As of December 31, 2021, our federal net operating loss carryforward was $10.61 billion and our federal tax credit carryforward was $527 million.",
       "previous_sentence": "Cash paid for income taxes was $8.52 billion for the year ended December 31, 2021.",
       "next_sentence": "We anticipate the utilization of a significant portion of these net operating losses and credits within the next two years.",
-      "risk_score": 0.8505704998970032,
+      "risk_score": 0.850570797920227,
       "finbert_probs": {
-        "positive": 0.018629521131515503,
-        "neutral": 0.1308000236749649,
-        "negative": 0.8505704998970032
+        "positive": 0.018629491329193115,
+        "neutral": 0.13079971075057983,
+        "negative": 0.850570797920227
       }
     },
     {
-      "candidate_id": "item_7_mda_85",
+      "candidate_id": "item_7_mda_77",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 303,
       "sentence_text": "Due to uncertainties in the timing of the completion of tax audits, the timing of the resolution of these positions is uncertain and we are unable to make a reasonably reliable estimate of the timing of payments in individual years beyond 12 months.",
       "previous_sentence": "Our other liabilities also include $4.40 billion related to the uncertain tax positions as of December 31, 2021.",
       "next_sentence": "As a result, this amount is not included in the above contractual obligations table.",
-      "risk_score": 0.827764630317688,
+      "risk_score": 0.8277644515037537,
       "finbert_probs": {
-        "positive": 0.013647224754095078,
-        "neutral": 0.15858812630176544,
-        "negative": 0.827764630317688
+        "positive": 0.013647248037159443,
+        "neutral": 0.15858829021453857,
+        "negative": 0.8277644515037537
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_86",
+      "candidate_id": "item_3_legal_78",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 16,
+      "sentence_text": "On July 20, 2021, other stockholders filed an amended derivative complaint in a related Delaware Chancery Court action, asserting breach of fiduciary duty and related claims against certain of our current and former directors and officers in connection with our historical platform and user data practices.",
+      "previous_sentence": "On July 16, 2021, a stockholder derivative action was filed in Delaware Chancery Court against certain of our directors and officers asserting breach of fiduciary duty and related claims relating to our historical platform and user data practices, as well as our settlement with the FTC.",
+      "next_sentence": "On November 4, 2021, the lead plaintiffs filed a second amended and consolidated complaint in the stockholder derivative action.",
+      "risk_score": 0.8136230111122131,
+      "finbert_probs": {
+        "positive": 0.0177543293684721,
+        "neutral": 0.16862264275550842,
+        "negative": 0.8136230111122131
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_79",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 29,
+      "sentence_text": "On December 9, 2020, the FTC filed a complaint against us in the U.S.",
+      "previous_sentence": "For example, in June 2019 we were informed by the FTC that it had opened an antitrust investigation of our company.",
+      "next_sentence": "District Court for the District of Columbia alleging that we engaged in anticompetitive conduct and unfair methods of competition in violation of Section 5 of the Federal Trade Commission Act and Section 2 of the Sherman Act, including by acquiring Instagram in 2012 and WhatsApp in 2014 and by maintaining conditions on access to our platform.",
+      "risk_score": 0.789882242679596,
+      "finbert_probs": {
+        "positive": 0.02863023802638054,
+        "neutral": 0.181487575173378,
+        "negative": 0.789882242679596
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_80",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 12,
       "sentence_text": "A hypothetical 100 basis point increase in interest rates would have resulted in a decrease of $714 million and $794 million in the market value of our available-for-sale debt securities as of December 31, 2021 and December 31, 2020, respectively.",
       "previous_sentence": "Changes in U.S. interest rates affect the interest earned on our cash and cash equivalents and marketable securities, and the market value of those securities.",
       "next_sentence": "Any realized gains or losses resulting from such interest rate changes would only occur if we sold the investments prior to maturity.",
-      "risk_score": 0.7534173727035522,
+      "risk_score": 0.7534188032150269,
       "finbert_probs": {
-        "positive": 0.19361403584480286,
-        "neutral": 0.052968546748161316,
-        "negative": 0.7534173727035522
+        "positive": 0.19361284375190735,
+        "neutral": 0.05296842381358147,
+        "negative": 0.7534188032150269
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_81",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 20,
+      "sentence_text": "For example, in August 2020, we received a preliminary draft decision from the IDPC that preliminarily concluded that Meta Platforms Ireland's reliance on Standard Contractual Clauses in respect of European user data does not achieve compliance with the GDPR and preliminarily proposed that such transfers of user data from the European Union to the United States should therefore be suspended.",
+      "previous_sentence": "We also notify the Irish Data Protection Commission (IDPC), our lead European Union privacy regulator under the General Data Protection Regulation (GDPR), of certain other personal data breaches and privacy issues, and are subject to inquiries and investigations by the IDPC and other European regulators regarding various aspects of our regulatory compliance.",
+      "next_sentence": "Meta Platforms Ireland challenged procedural aspects of this IDPC inquiry in a judicial review commenced in the Irish High Court in September 2020.",
+      "risk_score": 0.7271137237548828,
+      "finbert_probs": {
+        "positive": 0.018921520560979843,
+        "neutral": 0.25396469235420227,
+        "negative": 0.7271137237548828
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_82",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 21,
+      "sentence_text": "Meta Platforms Ireland challenged procedural aspects of this IDPC inquiry in a judicial review commenced in the Irish High Court in September 2020.",
+      "previous_sentence": "For example, in August 2020, we received a preliminary draft decision from the IDPC that preliminarily concluded that Meta Platforms Ireland's reliance on Standard Contractual Clauses in respect of European user data does not achieve compliance with the GDPR and preliminarily proposed that such transfers of user data from the European Union to the United States should therefore be suspended.",
+      "next_sentence": "On May 14, 2021, the court rejected Meta Platforms Ireland's procedural challenges, and the inquiry subsequently recommenced.",
+      "risk_score": 0.7146119475364685,
+      "finbert_probs": {
+        "positive": 0.03829721361398697,
+        "neutral": 0.2470909059047699,
+        "negative": 0.7146119475364685
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_83",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 33,
+      "sentence_text": "On December 9, 2020, the attorneys general from 46 states, the territory of Guam, and the District of Columbia filed a complaint against us in the U.S.",
+      "previous_sentence": "Department of Justice and state attorneys general.",
+      "next_sentence": "District Court for the District of Columbia alleging that we engaged in anticompetitive conduct in violation of Section 2 of the Sherman Act, including by acquiring Instagram in 2012 and WhatsApp in 2014 and by maintaining conditions on access to our platform.",
+      "risk_score": 0.6382020711898804,
+      "finbert_probs": {
+        "positive": 0.04291072487831116,
+        "neutral": 0.31888720393180847,
+        "negative": 0.6382020711898804
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_84",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 40,
+      "sentence_text": "On January 11, 2022, the court denied our motion to dismiss the FTC's amended complaint.",
+      "previous_sentence": "On August 19, 2021, the FTC filed an amended complaint, and on October 4, 2021, we filed a motion to dismiss this amended complaint.",
+      "next_sentence": "Multiple putative class actions have also been filed in state and federal courts in the United States against us alleging violations of antitrust laws and other causes of action in connection with these acquisitions and other alleged anticompetitive conduct, and seeking damages and unspecified injunctive relief.",
+      "risk_score": 0.6206709742546082,
+      "finbert_probs": {
+        "positive": 0.07279438525438309,
+        "neutral": 0.30653464794158936,
+        "negative": 0.6206709742546082
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_85",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 37,
+      "sentence_text": "On June 28, 2021, the court granted our motions to dismiss the complaints filed by the FTC and attorneys general, dismissing the FTC's complaint with leave to amend and dismissing the attorneys general's case without prejudice.",
+      "previous_sentence": "The complaints of the FTC and attorneys general both sought a permanent injunction against our company's alleged violations of the antitrust laws, and other equitable relief, including divestiture or reconstruction of Instagram and WhatsApp.",
+      "next_sentence": "On July 28, 2021, the attorneys general filed a notice of appeal of the order dismissing their case.",
+      "risk_score": 0.6185236573219299,
+      "finbert_probs": {
+        "positive": 0.0958896279335022,
+        "neutral": 0.28558674454689026,
+        "negative": 0.6185236573219299
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_86",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 35,
+      "sentence_text": "The complaint also alleged that we violated Section 7 of the Clayton Act by acquiring Instagram and WhatsApp.",
+      "previous_sentence": "District Court for the District of Columbia alleging that we engaged in anticompetitive conduct in violation of Section 2 of the Sherman Act, including by acquiring Instagram in 2012 and WhatsApp in 2014 and by maintaining conditions on access to our platform.",
+      "next_sentence": "The complaints of the FTC and attorneys general both sought a permanent injunction against our company's alleged violations of the antitrust laws, and other equitable relief, including divestiture or reconstruction of Instagram and WhatsApp.",
+      "risk_score": 0.5703590512275696,
+      "finbert_probs": {
+        "positive": 0.03245655819773674,
+        "neutral": 0.3971844017505646,
+        "negative": 0.5703590512275696
       }
     },
     {
@@ -1424,11 +1411,11 @@
       "sentence_text": "Foreign Currency Exchange Risk We have foreign currency risks related to our revenue and operating expenses denominated in currencies other than the U.S. dollar, primarily the Euro.",
       "previous_sentence": "Quantitative and Qualitative Disclosures About Market Risk We are exposed to market risks, including changes to foreign currency exchange rates, interest rates, and equity investment risk.",
       "next_sentence": "Accordingly, changes in exchange rates, and in particular a strengthening of the U.S. dollar, have in the past, and may in the future, negatively affect our revenue and other operating results as expressed in U.S. dollars.",
-      "risk_score": 0.4418647885322571,
+      "risk_score": 0.44186505675315857,
       "finbert_probs": {
-        "positive": 0.051602594554424286,
-        "neutral": 0.5065325498580933,
-        "negative": 0.4418647885322571
+        "positive": 0.05160251632332802,
+        "neutral": 0.5065323710441589,
+        "negative": 0.44186505675315857
       }
     },
     {
@@ -1439,11 +1426,11 @@
       "sentence_text": "Equity Investment Risk Our equity investments are subject to a wide variety of market-related risks that could have a material impact on the carrying value of our holdings.",
       "previous_sentence": "Any realized gains or losses resulting from such interest rate changes would only occur if we sold the investments prior to maturity.",
       "next_sentence": "We continually evaluate our equity investments in privately-held companies.",
-      "risk_score": 0.22971050441265106,
+      "risk_score": 0.22971108555793762,
       "finbert_probs": {
-        "positive": 0.025958461686968803,
-        "neutral": 0.7443310618400574,
-        "negative": 0.22971050441265106
+        "positive": 0.02595844864845276,
+        "neutral": 0.7443304657936096,
+        "negative": 0.22971108555793762
       }
     },
     {
@@ -1454,11 +1441,11 @@
       "sentence_text": "Changes in U.S. interest rates affect the interest earned on our cash and cash equivalents and marketable securities, and the market value of those securities.",
       "previous_sentence": "Our investment policy and strategy are focused on preservation of capital and supporting our liquidity requirements.",
       "next_sentence": "A hypothetical 100 basis point increase in interest rates would have resulted in a decrease of $714 million and $794 million in the market value of our available-for-sale debt securities as of December 31, 2021 and December 31, 2020, respectively.",
-      "risk_score": 0.19718106091022491,
+      "risk_score": 0.1971811205148697,
       "finbert_probs": {
-        "positive": 0.022144785150885582,
-        "neutral": 0.780674159526825,
-        "negative": 0.19718106091022491
+        "positive": 0.022144798189401627,
+        "neutral": 0.7806740403175354,
+        "negative": 0.1971811205148697
       }
     },
     {
@@ -1469,11 +1456,11 @@
       "sentence_text": "73 Table of Contents",
       "previous_sentence": "For additional information about our equity investments, see Note 1 \u2014 Summary of Significant Accounting Policies, Note 5 \u2014 Equity Investments, and Note 6 \u2014 Fair Value Measurements in the notes to the consolidated financial statements included in Part II, Item 8, \"Financial Statements and Supplementary Data\" and Part II, Item 7, \"Management's Discussion and Analysis of Financial Conditions and Results of Operations \u2014 Critical Accounting Policies and Estimates\" contained in this Annual Report on Form 10-K.",
       "next_sentence": null,
-      "risk_score": 0.08576791733503342,
+      "risk_score": 0.08576798439025879,
       "finbert_probs": {
-        "positive": 0.022388583049178123,
-        "neutral": 0.8918435573577881,
-        "negative": 0.08576791733503342
+        "positive": 0.022388579323887825,
+        "neutral": 0.8918434381484985,
+        "negative": 0.08576798439025879
       }
     },
     {
@@ -1484,11 +1471,11 @@
       "sentence_text": "It is difficult to predict the effect hedging activities would have on our results of operations.",
       "previous_sentence": "At this time, we have not entered into, but in the future we may enter into, derivatives or other financial instruments in an attempt to hedge our foreign currency exchange risk.",
       "next_sentence": "Foreign currency losses of $140 million, $129 million, and $105 million were recognized in 2021, 2020, and 2019, respectively, as interest and other income, net in our consolidated statements of income.",
-      "risk_score": 0.08489254117012024,
+      "risk_score": 0.08489266782999039,
       "finbert_probs": {
-        "positive": 0.02718457579612732,
-        "neutral": 0.8879228830337524,
-        "negative": 0.08489254117012024
+        "positive": 0.02718459628522396,
+        "neutral": 0.8879227042198181,
+        "negative": 0.08489266782999039
       }
     },
     {
@@ -1499,11 +1486,11 @@
       "sentence_text": "Quantitative and Qualitative Disclosures About Market Risk We are exposed to market risks, including changes to foreign currency exchange rates, interest rates, and equity investment risk.",
       "previous_sentence": "Item 7A.",
       "next_sentence": "Foreign Currency Exchange Risk We have foreign currency risks related to our revenue and operating expenses denominated in currencies other than the U.S. dollar, primarily the Euro.",
-      "risk_score": 0.0527263768017292,
+      "risk_score": 0.052726417779922485,
       "finbert_probs": {
-        "positive": 0.03630320727825165,
-        "neutral": 0.9109703898429871,
-        "negative": 0.0527263768017292
+        "positive": 0.03630326688289642,
+        "neutral": 0.9109702706336975,
+        "negative": 0.052726417779922485
       }
     },
     {
@@ -1514,11 +1501,11 @@
       "sentence_text": "Any realized gains or losses resulting from such interest rate changes would only occur if we sold the investments prior to maturity.",
       "previous_sentence": "A hypothetical 100 basis point increase in interest rates would have resulted in a decrease of $714 million and $794 million in the market value of our available-for-sale debt securities as of December 31, 2021 and December 31, 2020, respectively.",
       "next_sentence": "Equity Investment Risk Our equity investments are subject to a wide variety of market-related risks that could have a material impact on the carrying value of our holdings.",
-      "risk_score": 0.03996650129556656,
+      "risk_score": 0.039966557174921036,
       "finbert_probs": {
-        "positive": 0.028777627274394035,
-        "neutral": 0.9312559366226196,
-        "negative": 0.03996650129556656
+        "positive": 0.028777603060007095,
+        "neutral": 0.9312558174133301,
+        "negative": 0.039966557174921036
       }
     },
     {
@@ -1529,11 +1516,11 @@
       "sentence_text": "We perform a qualitative assessment at each reporting date to determine whether there are triggering events for impairment.",
       "previous_sentence": "We elected to account for most of our equity investments using the measurement alternative, which is cost, less any impairment, adjusted for changes in fair value resulting from observable transactions for identical or similar investments of the same issuer.",
       "next_sentence": "The qualitative assessment considers factors such as, but not limited to, the investee's financial condition and business outlook; industry and sector performance; economic or technological environment; and other relevant events and factors affecting the investee.",
-      "risk_score": 0.03863728791475296,
+      "risk_score": 0.03863728418946266,
       "finbert_probs": {
-        "positive": 0.029839100316166878,
-        "neutral": 0.9315236210823059,
-        "negative": 0.03863728791475296
+        "positive": 0.029839113354682922,
+        "neutral": 0.9315235614776611,
+        "negative": 0.03863728418946266
       }
     },
     {
@@ -1544,11 +1531,11 @@
       "sentence_text": "The qualitative assessment considers factors such as, but not limited to, the investee's financial condition and business outlook; industry and sector performance; economic or technological environment; and other relevant events and factors affecting the investee.",
       "previous_sentence": "We perform a qualitative assessment at each reporting date to determine whether there are triggering events for impairment.",
       "next_sentence": "Valuations of our equity investments are complex due to the lack of readily available market data and observable transactions.",
-      "risk_score": 0.031861744821071625,
+      "risk_score": 0.03186171501874924,
       "finbert_probs": {
-        "positive": 0.026436178013682365,
+        "positive": 0.026436151936650276,
         "neutral": 0.941702127456665,
-        "negative": 0.031861744821071625
+        "negative": 0.03186171501874924
       }
     },
     {
@@ -1559,11 +1546,11 @@
       "sentence_text": "Interest Rate Sensitivity Our exposure to changes in interest rates relates primarily to interest earned and market value on our cash and cash equivalents and marketable securities.",
       "previous_sentence": "Foreign currency losses of $140 million, $129 million, and $105 million were recognized in 2021, 2020, and 2019, respectively, as interest and other income, net in our consolidated statements of income.",
       "next_sentence": "Our cash and cash equivalents and marketable securities consist of cash, certificates of deposit, time deposits, money market funds, U.S. government securities, U.S. government agency securities, and investment grade corporate debt securities.",
-      "risk_score": 0.031170036643743515,
+      "risk_score": 0.031170029193162918,
       "finbert_probs": {
-        "positive": 0.025778397917747498,
+        "positive": 0.025778386741876602,
         "neutral": 0.9430515766143799,
-        "negative": 0.031170036643743515
+        "negative": 0.031170029193162918
       }
     },
     {
@@ -1574,11 +1561,11 @@
       "sentence_text": "Our equity investments are investments in equity securities of privately-held companies without readily determinable fair values.",
       "previous_sentence": "We continually evaluate our equity investments in privately-held companies.",
       "next_sentence": "We elected to account for most of our equity investments using the measurement alternative, which is cost, less any impairment, adjusted for changes in fair value resulting from observable transactions for identical or similar investments of the same issuer.",
-      "risk_score": 0.030714556574821472,
+      "risk_score": 0.030714532360434532,
       "finbert_probs": {
-        "positive": 0.022728046402335167,
-        "neutral": 0.946557343006134,
-        "negative": 0.030714556574821472
+        "positive": 0.02272801287472248,
+        "neutral": 0.9465574622154236,
+        "negative": 0.030714532360434532
       }
     },
     {
@@ -1589,11 +1576,11 @@
       "sentence_text": "Our cash and cash equivalents and marketable securities consist of cash, certificates of deposit, time deposits, money market funds, U.S. government securities, U.S. government agency securities, and investment grade corporate debt securities.",
       "previous_sentence": "Interest Rate Sensitivity Our exposure to changes in interest rates relates primarily to interest earned and market value on our cash and cash equivalents and marketable securities.",
       "next_sentence": "Our investment policy and strategy are focused on preservation of capital and supporting our liquidity requirements.",
-      "risk_score": 0.025734281167387962,
+      "risk_score": 0.025734245777130127,
       "finbert_probs": {
-        "positive": 0.02248257026076317,
-        "neutral": 0.9517831206321716,
-        "negative": 0.025734281167387962
+        "positive": 0.022482529282569885,
+        "neutral": 0.9517832398414612,
+        "negative": 0.025734245777130127
       }
     },
     {
@@ -1604,11 +1591,11 @@
       "sentence_text": "Equity investments accounted for under the equity method were immaterial as of December 31, 2021 and December 31, 2020.",
       "previous_sentence": "Volatility in the global economic climate and financial markets, including recent and ongoing effects related to the impact of the COVID-19 pandemic, which requires significant judgments, could result in a material impairment charge on our equity investments.",
       "next_sentence": "Our total equity investments had a carrying value of $6.78 billion and $6.23 billion as of December 31, 2021 and December 31, 2020, respectively.",
-      "risk_score": 0.024142485111951828,
+      "risk_score": 0.024142468348145485,
       "finbert_probs": {
-        "positive": 0.02235841378569603,
+        "positive": 0.022358423098921776,
         "neutral": 0.9534991383552551,
-        "negative": 0.024142485111951828
+        "negative": 0.024142468348145485
       }
     },
     {
@@ -1619,11 +1606,11 @@
       "sentence_text": "Our total equity investments had a carrying value of $6.78 billion and $6.23 billion as of December 31, 2021 and December 31, 2020, respectively.",
       "previous_sentence": "Equity investments accounted for under the equity method were immaterial as of December 31, 2021 and December 31, 2020.",
       "next_sentence": "For additional information about our equity investments, see Note 1 \u2014 Summary of Significant Accounting Policies, Note 5 \u2014 Equity Investments, and Note 6 \u2014 Fair Value Measurements in the notes to the consolidated financial statements included in Part II, Item 8, \"Financial Statements and Supplementary Data\" and Part II, Item 7, \"Management's Discussion and Analysis of Financial Conditions and Results of Operations \u2014 Critical Accounting Policies and Estimates\" contained in this Annual Report on Form 10-K.",
-      "risk_score": 0.020260822027921677,
+      "risk_score": 0.020260844379663467,
       "finbert_probs": {
-        "positive": 0.026960793882608414,
-        "neutral": 0.9527783989906311,
-        "negative": 0.020260822027921677
+        "positive": 0.02696085534989834,
+        "neutral": 0.9527782797813416,
+        "negative": 0.020260844379663467
       }
     }
   ]

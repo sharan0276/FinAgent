@@ -48,7 +48,7 @@ class DataCleaner:
             "ResearchAndDevelopmentExpense",
             "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost",
         ],
-        "GrossProfit": ["GrossProfit"],
+        "GrossProfit": ["GrossProfit", "GrossMargin"],
     }
 
     _FLOW_METRICS = {
