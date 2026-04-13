@@ -1,0 +1,580 @@
+{
+  "schema_version": "data_extraction_v1",
+  "model_name": "ProsusAI/finbert",
+  "run_timestamp": "2026-04-13T17:54:01.955044+00:00",
+  "ticker": "BYND",
+  "company_name": "BEYOND MEAT, INC.",
+  "cik": "0001655210",
+  "filing_year": 2024,
+  "filing_date": "2024-03-01",
+  "accession": "0001655210-24-000025",
+  "parser_mode": "plain_text_fallback",
+  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/BYND/complete_ingestion.json",
+  "processed_sections": [
+    "item_7a_market_risk"
+  ],
+  "skipped_sections": [
+    "item_1a_risk_factors",
+    "item_1c_cybersecurity",
+    "item_3_legal",
+    "item_7_mda"
+  ],
+  "numeric_deltas": {
+    "Revenues": {
+      "current_value": 343380000.0,
+      "previous_value": 418930000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "previous_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "delta_percent": -18.03403909961091,
+      "label": "moderate_decline",
+      "reason": null
+    },
+    "NetIncome": {
+      "current_value": -338100000.0,
+      "previous_value": -366100000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetIncomeLoss",
+      "previous_tag": "NetIncomeLoss",
+      "delta_percent": -7.648183556405354,
+      "label": "moderate_decline",
+      "reason": null
+    },
+    "Cash": {
+      "current_value": 190500000.0,
+      "previous_value": 309920000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "delta_percent": -38.53252452245741,
+      "label": "severe_decline",
+      "reason": null
+    },
+    "Assets": {
+      "current_value": 774450000.0,
+      "previous_value": 1062220000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "Assets",
+      "previous_tag": "Assets",
+      "delta_percent": -27.091374668147843,
+      "label": "severe_decline",
+      "reason": null
+    },
+    "LongTermDebt": {
+      "current_value": 1137540000.0,
+      "previous_value": 1133610000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "LongTermDebt",
+      "previous_tag": "LongTermDebt",
+      "delta_percent": 0.34668007515812316,
+      "label": "stable",
+      "reason": null
+    },
+    "OperatingCashFlow": {
+      "current_value": -107830000.0,
+      "previous_value": -320240000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "delta_percent": -66.32837871596303,
+      "label": "severe_decline",
+      "reason": null
+    },
+    "ResearchAndDevelopment": {
+      "current_value": 39530000.0,
+      "previous_value": 62260000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "ResearchAndDevelopmentExpense",
+      "previous_tag": "ResearchAndDevelopmentExpense",
+      "delta_percent": -36.50819145518792,
+      "label": "severe_decline",
+      "reason": null
+    },
+    "GrossProfit": {
+      "current_value": -82660000.0,
+      "previous_value": -23740000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "GrossProfit",
+      "previous_tag": "GrossProfit",
+      "delta_percent": 248.18871103622578,
+      "label": "strong_growth",
+      "reason": null
+    }
+  },
+  "text_candidates": [
+    {
+      "candidate_id": "item_7a_market_risk_1",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 26,
+      "sentence_text": "Although difficult to quantify, we believe inflation is likely having an adverse effect on our end customers' ability to purchase our products, resulting in decreased sales.",
+      "previous_sentence": "Based on the intercompany balances as of December 31, 2023, an assumed 5% or 10% adverse change to foreign exchange rates would result in a loss of approximately $5.2 million or $10.4 million, respectively, recorded in \"Other, net.\" Inflation Risk Although we have seen inflation in certain raw materials, and in the cost of logistics and labor, we do not believe that inflation has had a material effect on the costs of our inputs to date.",
+      "next_sentence": "If our costs were to become subject to significant inflationary pressures, we may not be able to fully offset such higher costs through price increases.",
+      "risk_score": 0.968913733959198,
+      "finbert_probs": {
+        "positive": 0.010681750252842903,
+        "neutral": 0.02040453813970089,
+        "negative": 0.968913733959198
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_2",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 23,
+      "sentence_text": "83 Foreign currency translation losses, net of tax, reported as cumulative translation adjustments through \"Other comprehensive loss\" were $0.4 million and $4.2 million in 2023 and 2022, respectively.",
+      "previous_sentence": "We have exposure to the European Euro and the Chinese Yuan.",
+      "next_sentence": "Net realized and unrealized foreign currency transaction gains (losses) included in \"Other, net\" were $1.1 million and $(4.9) million, respectively, in 2023 and 2022.",
+      "risk_score": 0.9488096237182617,
+      "finbert_probs": {
+        "positive": 0.014680812135338783,
+        "neutral": 0.03650958836078644,
+        "negative": 0.9488096237182617
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_3",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 25,
+      "sentence_text": "Based on the intercompany balances as of December 31, 2023, an assumed 5% or 10% adverse change to foreign exchange rates would result in a loss of approximately $5.2 million or $10.4 million, respectively, recorded in \"Other, net.\" Inflation Risk Although we have seen inflation in certain raw materials, and in the cost of logistics and labor, we do not believe that inflation has had a material effect on the costs of our inputs to date.",
+      "previous_sentence": "Net realized and unrealized foreign currency transaction gains (losses) included in \"Other, net\" were $1.1 million and $(4.9) million, respectively, in 2023 and 2022.",
+      "next_sentence": "Although difficult to quantify, we believe inflation is likely having an adverse effect on our end customers' ability to purchase our products, resulting in decreased sales.",
+      "risk_score": 0.9289989471435547,
+      "finbert_probs": {
+        "positive": 0.020778972655534744,
+        "neutral": 0.05022205412387848,
+        "negative": 0.9289989471435547
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_4",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 17,
+      "sentence_text": "These risks include the translation of local currency balances of foreign subsidiaries, transaction gains and losses associated with intercompany loans with foreign subsidiaries and transactions denominated in currencies other than a location's functional currency.",
+      "previous_sentence": "Foreign Currency Risk We are exposed to foreign currency risks that arise from normal business operations.",
+      "next_sentence": "Our foreign entities use their local currency as the functional currency.",
+      "risk_score": 0.926319420337677,
+      "finbert_probs": {
+        "positive": 0.012494160793721676,
+        "neutral": 0.06118642911314964,
+        "negative": 0.926319420337677
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_5",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 28,
+      "sentence_text": "Our inability or failure to do so could harm our business, results of operations and financial condition.",
+      "previous_sentence": "If our costs were to become subject to significant inflationary pressures, we may not be able to fully offset such higher costs through price increases.",
+      "next_sentence": "For additional information, see Part 1, Item 1A .",
+      "risk_score": 0.8581666350364685,
+      "finbert_probs": {
+        "positive": 0.012646597810089588,
+        "neutral": 0.12918676435947418,
+        "negative": 0.8581666350364685
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_6",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 24,
+      "sentence_text": "Net realized and unrealized foreign currency transaction gains (losses) included in \"Other, net\" were $1.1 million and $(4.9) million, respectively, in 2023 and 2022.",
+      "previous_sentence": "83 Foreign currency translation losses, net of tax, reported as cumulative translation adjustments through \"Other comprehensive loss\" were $0.4 million and $4.2 million in 2023 and 2022, respectively.",
+      "next_sentence": "Based on the intercompany balances as of December 31, 2023, an assumed 5% or 10% adverse change to foreign exchange rates would result in a loss of approximately $5.2 million or $10.4 million, respectively, recorded in \"Other, net.\" Inflation Risk Although we have seen inflation in certain raw materials, and in the cost of logistics and labor, we do not believe that inflation has had a material effect on the costs of our inputs to date.",
+      "risk_score": 0.850895345211029,
+      "finbert_probs": {
+        "positive": 0.044675253331661224,
+        "neutral": 0.10442940145730972,
+        "negative": 0.850895345211029
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_7",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 30,
+      "sentence_text": "Risk Factors\u2014Risks Related to Our Business\u2014Inflationary price pressures of raw materials, labor, transportation, fuel or other inputs used by us and our suppliers, including the effects of higher interest rates, has negatively impacted, and could continue to negatively impact our business and results of operations .",
+      "previous_sentence": "For additional information, see Part 1, Item 1A .",
+      "next_sentence": "84",
+      "risk_score": 0.8438098430633545,
+      "finbert_probs": {
+        "positive": 0.016026604920625687,
+        "neutral": 0.14016355574131012,
+        "negative": 0.8438098430633545
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_8",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 20,
+      "sentence_text": "Resulting currency translation adjustments are included in \"Accumulated other comprehensive income\" and foreign currency transaction gains and losses are included in \"Other, net.\" Transaction gains and losses on long-term intra-entity transactions are recorded as a component of \"Other comprehensive loss.\" Transactions denominated in a currency other than the reporting entity's functional currency may give rise to transaction gains and losses that impact our results of operations.",
+      "previous_sentence": "For these entities, we translate net assets into U.S. dollars at period end exchange rates, while revenue and expense accounts are translated at average exchange rates prevailing during the periods being reported.",
+      "next_sentence": "Our foreign exchange risk is primarily related to our intercompany balances denominated in various foreign currencies.",
+      "risk_score": 0.3987831473350525,
+      "finbert_probs": {
+        "positive": 0.03033539280295372,
+        "neutral": 0.5708814263343811,
+        "negative": 0.3987831473350525
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_9",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 10,
+      "sentence_text": "The prices of pea protein and other ingredients we use are subject to many factors beyond our control, such as the number and size of farms that grow yellow peas, the vagaries of the farming businesses, including poor harvests due to adverse weather conditions, natural disasters and pestilence, and changes in national and world economic conditions.",
+      "previous_sentence": "Currently, the main ingredient in our products is pea protein, which is sourced from peas grown in the United States, France and Canada.",
+      "next_sentence": "In addition, we purchase some ingredients and other materials offshore, and the price and availability of such ingredients and materials may be affected by political events or other conditions in these countries or tariffs or trade wars.",
+      "risk_score": 0.345392107963562,
+      "finbert_probs": {
+        "positive": 0.025145219638943672,
+        "neutral": 0.629462718963623,
+        "negative": 0.345392107963562
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_10",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 11,
+      "sentence_text": "In addition, we purchase some ingredients and other materials offshore, and the price and availability of such ingredients and materials may be affected by political events or other conditions in these countries or tariffs or trade wars.",
+      "previous_sentence": "The prices of pea protein and other ingredients we use are subject to many factors beyond our control, such as the number and size of farms that grow yellow peas, the vagaries of the farming businesses, including poor harvests due to adverse weather conditions, natural disasters and pestilence, and changes in national and world economic conditions.",
+      "next_sentence": "During the year ended December 31, 2023, a hypothetical 10% increase or 10% decrease in the weighted-average cost of pea protein, our primary ingredient, would have resulted in an increase of approximately $2.9 million, or a decrease of approximately $2.9 million, respectively, to cost of goods sold.",
+      "risk_score": 0.23754365742206573,
+      "finbert_probs": {
+        "positive": 0.025587068870663643,
+        "neutral": 0.7368692755699158,
+        "negative": 0.23754365742206573
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_11",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 16,
+      "sentence_text": "Foreign Currency Risk We are exposed to foreign currency risks that arise from normal business operations.",
+      "previous_sentence": "See Note 10 , Commitments and Contingencies , to the Notes to Consolidated Financial Statements included elsewhere in this report.",
+      "next_sentence": "These risks include the translation of local currency balances of foreign subsidiaries, transaction gains and losses associated with intercompany loans with foreign subsidiaries and transactions denominated in currencies other than a location's functional currency.",
+      "risk_score": 0.23213522136211395,
+      "finbert_probs": {
+        "positive": 0.04545365646481514,
+        "neutral": 0.7224110960960388,
+        "negative": 0.23213522136211395
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_12",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 1,
+      "sentence_text": "QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK We are exposed to certain market risks in the ordinary course of our business, including fluctuations in interest rates, raw material prices, foreign currency exchange fluctuations and inflation as follows: Interest Rate Risk Our cash consists of amounts held by third party financial institutions.",
+      "previous_sentence": "ITEM 7A.",
+      "next_sentence": "Our investment policy has as its primary objective investment activities which preserve principal without significantly increasing risk.",
+      "risk_score": 0.055132485926151276,
+      "finbert_probs": {
+        "positive": 0.02114250138401985,
+        "neutral": 0.9237250089645386,
+        "negative": 0.055132485926151276
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_13",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 8,
+      "sentence_text": "Ingredient Risk We are exposed to risk related to the price and availability of our ingredients because our profitability is dependent on, among other things, our ability to anticipate and react to raw material and food costs.",
+      "previous_sentence": "However, special interest and additional interest may accrue on the Notes at a rate per annum not exceeding 0.50% (subject to certain exceptions) upon the occurrence of certain events relating to the failure to file certain SEC reports or to remove certain restrictive legends from the Notes.",
+      "next_sentence": "Currently, the main ingredient in our products is pea protein, which is sourced from peas grown in the United States, France and Canada.",
+      "risk_score": 0.05190963298082352,
+      "finbert_probs": {
+        "positive": 0.07526906579732895,
+        "neutral": 0.8728213310241699,
+        "negative": 0.05190963298082352
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_14",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 7,
+      "sentence_text": "However, special interest and additional interest may accrue on the Notes at a rate per annum not exceeding 0.50% (subject to certain exceptions) upon the occurrence of certain events relating to the failure to file certain SEC reports or to remove certain restrictive legends from the Notes.",
+      "previous_sentence": "The Notes do not bear regular interest, and the principal amount of the Notes do not accrete.",
+      "next_sentence": "Ingredient Risk We are exposed to risk related to the price and availability of our ingredients because our profitability is dependent on, among other things, our ability to anticipate and react to raw material and food costs.",
+      "risk_score": 0.04975719749927521,
+      "finbert_probs": {
+        "positive": 0.025856774300336838,
+        "neutral": 0.9243860244750977,
+        "negative": 0.04975719749927521
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_15",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 15,
+      "sentence_text": "See Note 10 , Commitments and Contingencies , to the Notes to Consolidated Financial Statements included elsewhere in this report.",
+      "previous_sentence": "As of December 31, 2023, we had a multi-year sales agreement with Roquette which expires in December 2025.",
+      "next_sentence": "Foreign Currency Risk We are exposed to foreign currency risks that arise from normal business operations.",
+      "risk_score": 0.04944286867976189,
+      "finbert_probs": {
+        "positive": 0.019170556217432022,
+        "neutral": 0.9313865900039673,
+        "negative": 0.04944286867976189
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_16",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 5,
+      "sentence_text": "See Note 7 , Debt , to the Notes to Consolidated Financial Statements included elsewhere in this report.",
+      "previous_sentence": "The proceeds from the issuance of the Notes were approximately $1.0 billion, net of capped call transaction costs of $84.0 million and debt issuance costs totaling $23.6 million.",
+      "next_sentence": "The Notes do not bear regular interest, and the principal amount of the Notes do not accrete.",
+      "risk_score": 0.046932704746723175,
+      "finbert_probs": {
+        "positive": 0.019670037552714348,
+        "neutral": 0.9333972334861755,
+        "negative": 0.046932704746723175
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_17",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 6,
+      "sentence_text": "The Notes do not bear regular interest, and the principal amount of the Notes do not accrete.",
+      "previous_sentence": "See Note 7 , Debt , to the Notes to Consolidated Financial Statements included elsewhere in this report.",
+      "next_sentence": "However, special interest and additional interest may accrue on the Notes at a rate per annum not exceeding 0.50% (subject to certain exceptions) upon the occurrence of certain events relating to the failure to file certain SEC reports or to remove certain restrictive legends from the Notes.",
+      "risk_score": 0.03937959671020508,
+      "finbert_probs": {
+        "positive": 0.018733223900198936,
+        "neutral": 0.9418871402740479,
+        "negative": 0.03937959671020508
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_18",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 12,
+      "sentence_text": "During the year ended December 31, 2023, a hypothetical 10% increase or 10% decrease in the weighted-average cost of pea protein, our primary ingredient, would have resulted in an increase of approximately $2.9 million, or a decrease of approximately $2.9 million, respectively, to cost of goods sold.",
+      "previous_sentence": "In addition, we purchase some ingredients and other materials offshore, and the price and availability of such ingredients and materials may be affected by political events or other conditions in these countries or tariffs or trade wars.",
+      "next_sentence": "We are working to diversify our sources of supply and intend to enter into long-term contracts to better ensure stability of prices of our raw materials.",
+      "risk_score": 0.033353134989738464,
+      "finbert_probs": {
+        "positive": 0.9421164989471436,
+        "neutral": 0.024530382826924324,
+        "negative": 0.033353134989738464
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_19",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 27,
+      "sentence_text": "If our costs were to become subject to significant inflationary pressures, we may not be able to fully offset such higher costs through price increases.",
+      "previous_sentence": "Although difficult to quantify, we believe inflation is likely having an adverse effect on our end customers' ability to purchase our products, resulting in decreased sales.",
+      "next_sentence": "Our inability or failure to do so could harm our business, results of operations and financial condition.",
+      "risk_score": 0.0326274149119854,
+      "finbert_probs": {
+        "positive": 0.9056829214096069,
+        "neutral": 0.061689745634794235,
+        "negative": 0.0326274149119854
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_20",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 29,
+      "sentence_text": "For additional information, see Part 1, Item 1A .",
+      "previous_sentence": "Our inability or failure to do so could harm our business, results of operations and financial condition.",
+      "next_sentence": "Risk Factors\u2014Risks Related to Our Business\u2014Inflationary price pressures of raw materials, labor, transportation, fuel or other inputs used by us and our suppliers, including the effects of higher interest rates, has negatively impacted, and could continue to negatively impact our business and results of operations .",
+      "risk_score": 0.03116982989013195,
+      "finbert_probs": {
+        "positive": 0.024005167186260223,
+        "neutral": 0.9448249936103821,
+        "negative": 0.03116982989013195
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_21",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 4,
+      "sentence_text": "The proceeds from the issuance of the Notes were approximately $1.0 billion, net of capped call transaction costs of $84.0 million and debt issuance costs totaling $23.6 million.",
+      "previous_sentence": "In March 2021, we issued a total of $1.15 billion aggregate principal amount of our 0% Convertible Senior Notes due 2027.",
+      "next_sentence": "See Note 7 , Debt , to the Notes to Consolidated Financial Statements included elsewhere in this report.",
+      "risk_score": 0.028924183920025826,
+      "finbert_probs": {
+        "positive": 0.038567014038562775,
+        "neutral": 0.9325088262557983,
+        "negative": 0.028924183920025826
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_22",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 18,
+      "sentence_text": "Our foreign entities use their local currency as the functional currency.",
+      "previous_sentence": "These risks include the translation of local currency balances of foreign subsidiaries, transaction gains and losses associated with intercompany loans with foreign subsidiaries and transactions denominated in currencies other than a location's functional currency.",
+      "next_sentence": "For these entities, we translate net assets into U.S. dollars at period end exchange rates, while revenue and expense accounts are translated at average exchange rates prevailing during the periods being reported.",
+      "risk_score": 0.023460254073143005,
+      "finbert_probs": {
+        "positive": 0.02441306971013546,
+        "neutral": 0.9521266222000122,
+        "negative": 0.023460254073143005
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_23",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 19,
+      "sentence_text": "For these entities, we translate net assets into U.S. dollars at period end exchange rates, while revenue and expense accounts are translated at average exchange rates prevailing during the periods being reported.",
+      "previous_sentence": "Our foreign entities use their local currency as the functional currency.",
+      "next_sentence": "Resulting currency translation adjustments are included in \"Accumulated other comprehensive income\" and foreign currency transaction gains and losses are included in \"Other, net.\" Transaction gains and losses on long-term intra-entity transactions are recorded as a component of \"Other comprehensive loss.\" Transactions denominated in a currency other than the reporting entity's functional currency may give rise to transaction gains and losses that impact our results of operations.",
+      "risk_score": 0.01954067312180996,
+      "finbert_probs": {
+        "positive": 0.03130454942584038,
+        "neutral": 0.949154794216156,
+        "negative": 0.01954067312180996
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_24",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 21,
+      "sentence_text": "Our foreign exchange risk is primarily related to our intercompany balances denominated in various foreign currencies.",
+      "previous_sentence": "Resulting currency translation adjustments are included in \"Accumulated other comprehensive income\" and foreign currency transaction gains and losses are included in \"Other, net.\" Transaction gains and losses on long-term intra-entity transactions are recorded as a component of \"Other comprehensive loss.\" Transactions denominated in a currency other than the reporting entity's functional currency may give rise to transaction gains and losses that impact our results of operations.",
+      "next_sentence": "We have exposure to the European Euro and the Chinese Yuan.",
+      "risk_score": 0.0175018347799778,
+      "finbert_probs": {
+        "positive": 0.04532194882631302,
+        "neutral": 0.9371762275695801,
+        "negative": 0.0175018347799778
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_25",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 22,
+      "sentence_text": "We have exposure to the European Euro and the Chinese Yuan.",
+      "previous_sentence": "Our foreign exchange risk is primarily related to our intercompany balances denominated in various foreign currencies.",
+      "next_sentence": "83 Foreign currency translation losses, net of tax, reported as cumulative translation adjustments through \"Other comprehensive loss\" were $0.4 million and $4.2 million in 2023 and 2022, respectively.",
+      "risk_score": 0.014102637767791748,
+      "finbert_probs": {
+        "positive": 0.05174487084150314,
+        "neutral": 0.9341524839401245,
+        "negative": 0.014102637767791748
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_26",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 3,
+      "sentence_text": "In March 2021, we issued a total of $1.15 billion aggregate principal amount of our 0% Convertible Senior Notes due 2027.",
+      "previous_sentence": "Our investment policy has as its primary objective investment activities which preserve principal without significantly increasing risk.",
+      "next_sentence": "The proceeds from the issuance of the Notes were approximately $1.0 billion, net of capped call transaction costs of $84.0 million and debt issuance costs totaling $23.6 million.",
+      "risk_score": 0.014012541621923447,
+      "finbert_probs": {
+        "positive": 0.06306491792201996,
+        "neutral": 0.9229224920272827,
+        "negative": 0.014012541621923447
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_27",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 14,
+      "sentence_text": "As of December 31, 2023, we had a multi-year sales agreement with Roquette which expires in December 2025.",
+      "previous_sentence": "We are working to diversify our sources of supply and intend to enter into long-term contracts to better ensure stability of prices of our raw materials.",
+      "next_sentence": "See Note 10 , Commitments and Contingencies , to the Notes to Consolidated Financial Statements included elsewhere in this report.",
+      "risk_score": 0.012847408652305603,
+      "finbert_probs": {
+        "positive": 0.1893608272075653,
+        "neutral": 0.7977917790412903,
+        "negative": 0.012847408652305603
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_28",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 9,
+      "sentence_text": "Currently, the main ingredient in our products is pea protein, which is sourced from peas grown in the United States, France and Canada.",
+      "previous_sentence": "Ingredient Risk We are exposed to risk related to the price and availability of our ingredients because our profitability is dependent on, among other things, our ability to anticipate and react to raw material and food costs.",
+      "next_sentence": "The prices of pea protein and other ingredients we use are subject to many factors beyond our control, such as the number and size of farms that grow yellow peas, the vagaries of the farming businesses, including poor harvests due to adverse weather conditions, natural disasters and pestilence, and changes in national and world economic conditions.",
+      "risk_score": 0.01120355911552906,
+      "finbert_probs": {
+        "positive": 0.06223713234066963,
+        "neutral": 0.9265592694282532,
+        "negative": 0.01120355911552906
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_29",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 2,
+      "sentence_text": "Our investment policy has as its primary objective investment activities which preserve principal without significantly increasing risk.",
+      "previous_sentence": "QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK We are exposed to certain market risks in the ordinary course of our business, including fluctuations in interest rates, raw material prices, foreign currency exchange fluctuations and inflation as follows: Interest Rate Risk Our cash consists of amounts held by third party financial institutions.",
+      "next_sentence": "In March 2021, we issued a total of $1.15 billion aggregate principal amount of our 0% Convertible Senior Notes due 2027.",
+      "risk_score": 0.011037449352443218,
+      "finbert_probs": {
+        "positive": 0.06704973429441452,
+        "neutral": 0.9219127893447876,
+        "negative": 0.011037449352443218
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_30",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 13,
+      "sentence_text": "We are working to diversify our sources of supply and intend to enter into long-term contracts to better ensure stability of prices of our raw materials.",
+      "previous_sentence": "During the year ended December 31, 2023, a hypothetical 10% increase or 10% decrease in the weighted-average cost of pea protein, our primary ingredient, would have resulted in an increase of approximately $2.9 million, or a decrease of approximately $2.9 million, respectively, to cost of goods sold.",
+      "next_sentence": "As of December 31, 2023, we had a multi-year sales agreement with Roquette which expires in December 2025.",
+      "risk_score": 0.00859018974006176,
+      "finbert_probs": {
+        "positive": 0.8608109354972839,
+        "neutral": 0.13059884309768677,
+        "negative": 0.00859018974006176
+      }
+    }
+  ]
+}

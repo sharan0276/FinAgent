@@ -296,8 +296,8 @@ def run_financial_ingestion(
             quarterly[metric] = result["quarterly"]
         except Exception as exc:
             metric_errors[metric] = str(exc)
-            annual[metric] = []
-            quarterly[metric] = []
+            annual[metric] = {}
+            quarterly[metric] = {}
 
     return {
         "annual": annual,

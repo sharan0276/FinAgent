@@ -88,6 +88,11 @@ class DocumentFetcher:
             if acc_prefix != cik_no_zeros:
                 continue
 
+            # Hardcode filter to ignore filings older than 2021 due to format changes
+            filing_year = int(date[:4])
+            if filing_year < 2021:
+                continue
+
             filings.append({
                 "form": form,
                 "accession": acc,

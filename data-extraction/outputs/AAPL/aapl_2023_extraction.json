@@ -1,32 +1,31 @@
 {
   "schema_version": "data_extraction_v1",
   "model_name": "ProsusAI/finbert",
-  "run_timestamp": "2026-04-04T22:24:11.283087+00:00",
+  "run_timestamp": "2026-04-13T07:01:58.437214+00:00",
   "ticker": "AAPL",
   "company_name": "Apple Inc.",
   "cik": "0000320193",
   "filing_year": 2023,
   "filing_date": "2023-11-03",
-  "accession": "",
+  "accession": "0000320193-23-000106",
   "parser_mode": "sec_parser",
-  "source_artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\AAPL\\complete_ingestion.json",
+  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/AAPL/complete_ingestion.json",
   "processed_sections": [
     "item_1a_risk_factors",
     "item_1c_cybersecurity",
+    "item_3_legal",
     "item_7_mda",
     "item_7a_market_risk"
   ],
-  "skipped_sections": [
-    "item_3_legal_proceedings"
-  ],
+  "skipped_sections": [],
   "numeric_deltas": {
     "Revenues": {
       "current_value": 383285000000.0,
       "previous_value": 394328000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-25-000079",
-      "previous_accession": "0000320193-24-000123",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
       "current_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
       "previous_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
       "delta_percent": -2.8004605303199366,
@@ -36,10 +35,10 @@
     "NetIncome": {
       "current_value": 96995000000.0,
       "previous_value": 99803000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-25-000079",
-      "previous_accession": "0000320193-24-000123",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
       "current_tag": "NetIncomeLoss",
       "previous_tag": "NetIncomeLoss",
       "delta_percent": -2.8135426790777833,
@@ -49,10 +48,10 @@
     "Cash": {
       "current_value": 29965000000.0,
       "previous_value": 23646000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-24-000123",
-      "previous_accession": "0000320193-23-000106",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
       "current_tag": "CashAndCashEquivalentsAtCarryingValue",
       "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
       "delta_percent": 26.723335870760383,
@@ -62,10 +61,10 @@
     "Assets": {
       "current_value": 352583000000.0,
       "previous_value": 352755000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-24-000123",
-      "previous_accession": "0000320193-23-000106",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
       "current_tag": "Assets",
       "previous_tag": "Assets",
       "delta_percent": -0.04875905373417811,
@@ -75,12 +74,12 @@
     "LongTermDebt": {
       "current_value": 105103000000.0,
       "previous_value": 110087000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-24-000123",
-      "previous_accession": "0000320193-23-000106",
-      "current_tag": "LongTermDebt",
-      "previous_tag": "LongTermDebt",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "LongTermDebtNoncurrent",
+      "previous_tag": "LongTermDebtNoncurrent",
       "delta_percent": -4.527328385731285,
       "label": "stable",
       "reason": null
@@ -88,10 +87,10 @@
     "OperatingCashFlow": {
       "current_value": 110543000000.0,
       "previous_value": 122151000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-25-000079",
-      "previous_accession": "0000320193-24-000123",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
       "current_tag": "NetCashProvidedByUsedInOperatingActivities",
       "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
       "delta_percent": -9.50299219818094,
@@ -101,10 +100,10 @@
     "ResearchAndDevelopment": {
       "current_value": 29915000000.0,
       "previous_value": 26251000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-25-000079",
-      "previous_accession": "0000320193-24-000123",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
       "current_tag": "ResearchAndDevelopmentExpense",
       "previous_tag": "ResearchAndDevelopmentExpense",
       "delta_percent": 13.957563521389662,
@@ -114,10 +113,10 @@
     "GrossProfit": {
       "current_value": 169148000000.0,
       "previous_value": 170782000000.0,
-      "current_end_date": "2023-09-30",
-      "previous_end_date": "2022-09-24",
-      "current_accession": "0000320193-25-000079",
-      "previous_accession": "0000320193-24-000123",
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
       "current_tag": "GrossProfit",
       "previous_tag": "GrossProfit",
       "delta_percent": -0.9567753041889661,
@@ -134,11 +133,11 @@
       "sentence_text": "Greater China Greater China net sales decreased 2% or $1.6 billion during 2023 compared to 2022.",
       "previous_sentence": "The weakness in foreign currencies relative to the U.S. dollar accounted for more than the entire year-over-year decrease in Europe net sales, which consisted primarily of lower net sales of Mac and Wearables, Home and Accessories, partially offset by higher net sales of iPhone and Services.",
       "next_sentence": "The weakness in the renminbi relative to the U.S. dollar accounted for more than the entire year-over-year decrease in Greater China net sales, which consisted primarily of lower net sales of Mac and iPhone.",
-      "risk_score": 0.9757461547851562,
+      "risk_score": 0.9757460951805115,
       "finbert_probs": {
-        "positive": 0.007801615167409182,
-        "neutral": 0.016452224925160408,
-        "negative": 0.9757461547851562
+        "positive": 0.0078016407787799835,
+        "neutral": 0.016452239826321602,
+        "negative": 0.9757460951805115
       }
     },
     {
@@ -152,7 +151,7 @@
       "risk_score": 0.9757068157196045,
       "finbert_probs": {
         "positive": 0.007946159690618515,
-        "neutral": 0.016346994787454605,
+        "neutral": 0.016346972435712814,
         "negative": 0.9757068157196045
       }
     },
@@ -164,11 +163,11 @@
       "sentence_text": "Fiscal Year Highlights The Company\u2019s total net sales were $383.3 billion and net income was $97.0 billion during 2023.The Company\u2019s total net sales decreased 3% or $11.0 billion during 2023 compared to 2022.",
       "previous_sentence": "The Company\u2019s fiscal year 2023 spanned 53 weeks, whereas fiscal years 2022 and 2021 spanned 52 weeks each.",
       "next_sentence": "The weakness in foreign currencies relative to the U.S. dollar accounted for more than the entire year-over-year decrease in total net sales, which consisted primarily of lower net sales of Mac and iPhone, partially offset by higher net sales of Services.The Company announces new product, service and software offerings at various times during the year.",
-      "risk_score": 0.9756525754928589,
+      "risk_score": 0.9756526947021484,
       "finbert_probs": {
-        "positive": 0.007643960416316986,
-        "neutral": 0.016703493893146515,
-        "negative": 0.9756525754928589
+        "positive": 0.007643932476639748,
+        "neutral": 0.016703423112630844,
+        "negative": 0.9756526947021484
       }
     },
     {
@@ -181,7 +180,7 @@
       "next_sentence": "Services Services net sales increased 9% or $7.1 billion during 2023 compared to 2022 due to higher net sales across all lines of business.",
       "risk_score": 0.975278913974762,
       "finbert_probs": {
-        "positive": 0.00888780876994133,
+        "positive": 0.008887805975973606,
         "neutral": 0.01583329774439335,
         "negative": 0.975278913974762
       }
@@ -194,11 +193,11 @@
       "sentence_text": "Europe Europe net sales decreased 1% or $824 million during 2023 compared to 2022.",
       "previous_sentence": "Segment Operating Performance The following table shows net sales by reportable segment for 2023, 2022 and 2021 (dollars in millions): 2023Change2022Change2021Net sales by reportable segment:Americas$162,560 (4)%$169,658 11 %$153,306 Europe94,294 (1)%95,118 7 %89,307 Greater China72,559 (2)%74,200 9 %68,366 Japan24,257 (7)%25,977 (9)%28,482 Rest of Asia Pacific29,615 1 %29,375 11 %26,356 Total net sales$383,285 (3)%$394,328 8 %$365,817 Americas Americas net sales decreased 4% or $7.1 billion during 2023 compared to 2022 due to lower net sales of iPhone and Mac, partially offset by higher net sales of Services.",
       "next_sentence": "The weakness in foreign currencies relative to the U.S. dollar accounted for more than the entire year-over-year decrease in Europe net sales, which consisted primarily of lower net sales of Mac and Wearables, Home and Accessories, partially offset by higher net sales of iPhone and Services.",
-      "risk_score": 0.9751524925231934,
+      "risk_score": 0.9751526117324829,
       "finbert_probs": {
-        "positive": 0.007874215953052044,
-        "neutral": 0.016973232850432396,
-        "negative": 0.9751524925231934
+        "positive": 0.007874194532632828,
+        "neutral": 0.016973203048110008,
+        "negative": 0.9751526117324829
       }
     },
     {
@@ -211,8 +210,8 @@
       "next_sentence": "Wearables, Home and Accessories Wearables, Home and Accessories net sales decreased 3% or $1.4 billion during 2023 compared to 2022 due primarily to lower net sales of Wearables and Accessories.",
       "risk_score": 0.9745270609855652,
       "finbert_probs": {
-        "positive": 0.007449111435562372,
-        "neutral": 0.018023839220404625,
+        "positive": 0.007449125871062279,
+        "neutral": 0.018023842945694923,
         "negative": 0.9745270609855652
       }
     },
@@ -226,8 +225,8 @@
       "next_sentence": "The Company also accrues necessary cancellation fee reserves for orders of excess products and components.",
       "risk_score": 0.9720348119735718,
       "finbert_probs": {
-        "positive": 0.00818011723458767,
-        "neutral": 0.019785040989518166,
+        "positive": 0.008180136792361736,
+        "neutral": 0.0197850801050663,
         "negative": 0.9720348119735718
       }
     },
@@ -241,8 +240,8 @@
       "next_sentence": "Mac Mac net sales decreased 27% or $10.8 billion during 2023 compared to 2022 due primarily to lower net sales of laptops. iPad iPad net sales decreased 3% or $1.0 billion during 2023 compared to 2022 due primarily to lower net sales of iPad mini and iPad Air, partially offset by the combined net sales of iPad 9th and 10th generation.",
       "risk_score": 0.9711391925811768,
       "finbert_probs": {
-        "positive": 0.00750336516648531,
-        "neutral": 0.021357519552111626,
+        "positive": 0.00750335119664669,
+        "neutral": 0.021357499063014984,
         "negative": 0.9711391925811768
       }
     },
@@ -254,11 +253,11 @@
       "sentence_text": "Segment Operating Performance The following table shows net sales by reportable segment for 2023, 2022 and 2021 (dollars in millions): 2023Change2022Change2021Net sales by reportable segment:Americas$162,560 (4)%$169,658 11 %$153,306 Europe94,294 (1)%95,118 7 %89,307 Greater China72,559 (2)%74,200 9 %68,366 Japan24,257 (7)%25,977 (9)%28,482 Rest of Asia Pacific29,615 1 %29,375 11 %26,356 Total net sales$383,285 (3)%$394,328 8 %$365,817 Americas Americas net sales decreased 4% or $7.1 billion during 2023 compared to 2022 due to lower net sales of iPhone and Mac, partially offset by higher net sales of Services.",
       "previous_sentence": "Macroeconomic Conditions Macroeconomic conditions, including inflation, changes in interest rates, and currency fluctuations, have directly and indirectly impacted, and could in the future materially impact, the Company\u2019s results of operations and financial condition.",
       "next_sentence": "Europe Europe net sales decreased 1% or $824 million during 2023 compared to 2022.",
-      "risk_score": 0.9708089828491211,
+      "risk_score": 0.9708088636398315,
       "finbert_probs": {
-        "positive": 0.010133045725524426,
-        "neutral": 0.019057966768741608,
-        "negative": 0.9708089828491211
+        "positive": 0.010133097879588604,
+        "neutral": 0.019058018922805786,
+        "negative": 0.9708088636398315
       }
     },
     {
@@ -269,11 +268,11 @@
       "sentence_text": "The weakness in the yen relative to the U.S. dollar accounted for more than the entire year-over-year decrease in Japan net sales, which consisted primarily of lower net sales of iPhone, Wearables, Home and Accessories and Mac.",
       "previous_sentence": "Japan Japan net sales decreased 7% or $1.7 billion during 2023 compared to 2022.",
       "next_sentence": "Rest of Asia Pacific Rest of Asia Pacific net sales increased 1% or $240 million during 2023 compared to 2022.",
-      "risk_score": 0.9707435965538025,
+      "risk_score": 0.9707434773445129,
       "finbert_probs": {
-        "positive": 0.01307136844843626,
-        "neutral": 0.016185037791728973,
-        "negative": 0.9707435965538025
+        "positive": 0.013071403838694096,
+        "neutral": 0.01618509739637375,
+        "negative": 0.9707434773445129
       }
     },
     {
@@ -286,8 +285,8 @@
       "next_sentence": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.The Company\u2019s operations are also subject to the risks of industrial accidents at its suppliers and contract manufacturers.",
       "risk_score": 0.9704428315162659,
       "finbert_probs": {
-        "positive": 0.008629790507256985,
-        "neutral": 0.02092732861638069,
+        "positive": 0.008629770018160343,
+        "neutral": 0.02092730812728405,
         "negative": 0.9704428315162659
       }
     },
@@ -301,8 +300,8 @@
       "next_sentence": "Japan Japan net sales decreased 7% or $1.7 billion during 2023 compared to 2022.",
       "risk_score": 0.9694936871528625,
       "finbert_probs": {
-        "positive": 0.014958004467189312,
-        "neutral": 0.015548361465334892,
+        "positive": 0.014958011917769909,
+        "neutral": 0.015548384748399258,
         "negative": 0.9694936871528625
       }
     },
@@ -316,7 +315,7 @@
       "next_sentence": "The net sales increase consisted of higher net sales of iPhone and Services, partially offset by lower net sales of Mac and iPad.",
       "risk_score": 0.9676464200019836,
       "finbert_probs": {
-        "positive": 0.015876619145274162,
+        "positive": 0.015876634046435356,
         "neutral": 0.016476914286613464,
         "negative": 0.9676464200019836
       }
@@ -329,11 +328,11 @@
       "sentence_text": "Competition has been particularly intense as competitors have aggressively cut prices and lowered product margins.",
       "previous_sentence": "In addition, some of the Company\u2019s competitors have broader product lines, lower-priced products and a larger installed base of active devices.",
       "next_sentence": "Certain competitors have the resources, experience or cost structures to provide products at little or no profit or even at a loss.",
-      "risk_score": 0.9672679305076599,
+      "risk_score": 0.9672676920890808,
       "finbert_probs": {
-        "positive": 0.012545370496809483,
-        "neutral": 0.020186759531497955,
-        "negative": 0.9672679305076599
+        "positive": 0.012545397505164146,
+        "neutral": 0.020186811685562134,
+        "negative": 0.9672676920890808
       }
     },
     {
@@ -346,8 +345,8 @@
       "next_sentence": "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in addition to purchase commitment cancellation risk.",
       "risk_score": 0.9659684300422668,
       "finbert_probs": {
-        "positive": 0.0075134471990168095,
-        "neutral": 0.026518095284700394,
+        "positive": 0.007513450924307108,
+        "neutral": 0.026518089696764946,
         "negative": 0.9659684300422668
       }
     },
@@ -361,8 +360,8 @@
       "next_sentence": "Greater China Greater China net sales decreased 2% or $1.6 billion during 2023 compared to 2022.",
       "risk_score": 0.9643152356147766,
       "finbert_probs": {
-        "positive": 0.02248588763177395,
-        "neutral": 0.013198953121900558,
+        "positive": 0.022485891357064247,
+        "neutral": 0.013198978267610073,
         "negative": 0.9643152356147766
       }
     },
@@ -376,8 +375,8 @@
       "next_sentence": null,
       "risk_score": 0.9625762104988098,
       "finbert_probs": {
-        "positive": 0.009744588285684586,
-        "neutral": 0.0276792049407959,
+        "positive": 0.009744583629071712,
+        "neutral": 0.0276791974902153,
         "negative": 0.9625762104988098
       }
     },
@@ -392,7 +391,7 @@
       "risk_score": 0.9615749716758728,
       "finbert_probs": {
         "positive": 0.010553916916251183,
-        "neutral": 0.02787117287516594,
+        "neutral": 0.02787119336426258,
         "negative": 0.9615749716758728
       }
     },
@@ -404,11 +403,11 @@
       "sentence_text": "Financial Risks The Company expects its quarterly net sales and results of operations to fluctuate.",
       "previous_sentence": "The Company could also experience a significant increase in payment card transaction costs or lose the ability to process payment cards if it fails to follow payment card industry data security standards, which could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
       "next_sentence": "The Company\u2019s profit margins vary across its products, services, geographic segments and distribution channels.",
-      "risk_score": 0.9603926539421082,
+      "risk_score": 0.9603925347328186,
       "finbert_probs": {
-        "positive": 0.01575184240937233,
-        "neutral": 0.02385559491813183,
-        "negative": 0.9603926539421082
+        "positive": 0.015751853585243225,
+        "neutral": 0.02385561540722847,
+        "negative": 0.9603925347328186
       }
     },
     {
@@ -419,11 +418,11 @@
       "sentence_text": "Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency.Adverse economic conditions can also lead to increased credit and collectibility risk on the Company\u2019s trade receivables; the failure of derivative counterparties and other financial institutions; limitations on the Company\u2019s ability to issue new debt; reduced liquidity; and declines in the fair values of the Company\u2019s financial instruments.",
       "previous_sentence": "In addition, consumer confidence and spending can be materially adversely affected in response to changes in fiscal and monetary policy, financial market volatility, declines in income or asset values, and other economic factors.In addition to an adverse impact on demand for the Company\u2019s products and services, uncertainty about, or a decline in, global or regional economic conditions can have a significant impact on the Company\u2019s suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners, and developers.",
       "next_sentence": "These and other impacts can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price.",
-      "risk_score": 0.9600922465324402,
+      "risk_score": 0.9600921273231506,
       "finbert_probs": {
-        "positive": 0.00846305675804615,
-        "neutral": 0.03144478425383568,
-        "negative": 0.9600922465324402
+        "positive": 0.008463055826723576,
+        "neutral": 0.03144483640789986,
+        "negative": 0.9600921273231506
       }
     },
     {
@@ -436,8 +435,8 @@
       "next_sentence": "The Company\u2019s business is subject to a variety of U.S. and international laws, rules, policies and other obligations regarding data protection.",
       "risk_score": 0.9599959850311279,
       "finbert_probs": {
-        "positive": 0.007913349196314812,
-        "neutral": 0.032090652734041214,
+        "positive": 0.007913356646895409,
+        "neutral": 0.0320906825363636,
         "negative": 0.9599959850311279
       }
     },
@@ -451,8 +450,8 @@
       "next_sentence": "As a result, from time to time the Company\u2019s services have not performed as anticipated and may not meet customer expectations.",
       "risk_score": 0.9575892090797424,
       "finbert_probs": {
-        "positive": 0.008571196347475052,
-        "neutral": 0.033839501440525055,
+        "positive": 0.008571208454668522,
+        "neutral": 0.03383951634168625,
         "negative": 0.9575892090797424
       }
     },
@@ -466,7 +465,7 @@
       "next_sentence": "Following an interruption to its business, the Company can require substantial recovery time, experience significant expenditures to resume operations, and lose significant sales.",
       "risk_score": 0.9573941230773926,
       "finbert_probs": {
-        "positive": 0.008295963518321514,
+        "positive": 0.008295968174934387,
         "neutral": 0.03430980443954468,
         "negative": 0.9573941230773926
       }
@@ -482,7 +481,7 @@
       "risk_score": 0.9571293592453003,
       "finbert_probs": {
         "positive": 0.009924893267452717,
-        "neutral": 0.03294572979211807,
+        "neutral": 0.03294576704502106,
         "negative": 0.9571293592453003
       }
     },
@@ -496,8 +495,8 @@
       "next_sentence": "Future operating results depend upon the Company\u2019s ability to obtain components in sufficient quantities on commercially reasonable terms.",
       "risk_score": 0.9563968181610107,
       "finbert_probs": {
-        "positive": 0.009110236540436745,
-        "neutral": 0.03449305519461632,
+        "positive": 0.009110231883823872,
+        "neutral": 0.034493014216423035,
         "negative": 0.9563968181610107
       }
     },
@@ -511,8 +510,8 @@
       "next_sentence": "The Company\u2019s financial performance is subject to risks associated with changes in the value of the U.S. dollar relative to local currencies.",
       "risk_score": 0.9557142853736877,
       "finbert_probs": {
-        "positive": 0.008540740236639977,
-        "neutral": 0.03574494644999504,
+        "positive": 0.008540736511349678,
+        "neutral": 0.03574496507644653,
         "negative": 0.9557142853736877
       }
     },
@@ -527,7 +526,7 @@
       "risk_score": 0.9529151320457458,
       "finbert_probs": {
         "positive": 0.01767187938094139,
-        "neutral": 0.029413040727376938,
+        "neutral": 0.02941306307911873,
         "negative": 0.9529151320457458
       }
     },
@@ -541,8 +540,8 @@
       "next_sentence": "The Company is exposed to credit risk on its trade accounts receivable, vendor non-trade receivables and prepayments related to long-term supply agreements, and this risk is heightened during periods when economic conditions worsen.",
       "risk_score": 0.9479741454124451,
       "finbert_probs": {
-        "positive": 0.009895937517285347,
-        "neutral": 0.042129963636398315,
+        "positive": 0.009895932860672474,
+        "neutral": 0.04212992265820503,
         "negative": 0.9479741454124451
       }
     },
@@ -556,8 +555,8 @@
       "next_sentence": "Changes in the Company\u2019s underlying foreign currency exposures, which were excluded from the assessment, generally offset changes in the fair values of the Company\u2019s foreign currency derivatives.",
       "risk_score": 0.947273313999176,
       "finbert_probs": {
-        "positive": 0.015734227374196053,
-        "neutral": 0.036992475390434265,
+        "positive": 0.01573423482477665,
+        "neutral": 0.03699244558811188,
         "negative": 0.947273313999176
       }
     },
@@ -571,8 +570,8 @@
       "next_sentence": "Financial Risks The Company expects its quarterly net sales and results of operations to fluctuate.",
       "risk_score": 0.9472527503967285,
       "finbert_probs": {
-        "positive": 0.009995331056416035,
-        "neutral": 0.042751915752887726,
+        "positive": 0.009995326399803162,
+        "neutral": 0.04275185614824295,
         "negative": 0.9472527503967285
       }
     },
@@ -584,11 +583,11 @@
       "sentence_text": "The financial condition of these resellers could weaken, these resellers could stop distributing the Company\u2019s products, or uncertainty regarding demand for some or all of the Company\u2019s products could cause resellers to reduce their ordering and marketing of the Company\u2019s products.",
       "previous_sentence": "These programs can require a substantial investment while not assuring return or incremental sales.",
       "next_sentence": "The Company\u2019s business and reputation are impacted by information technology system failures and network disruptions.",
-      "risk_score": 0.945823609828949,
+      "risk_score": 0.9458233714103699,
       "finbert_probs": {
-        "positive": 0.008538336493074894,
-        "neutral": 0.045638080686330795,
-        "negative": 0.945823609828949
+        "positive": 0.008538349531590939,
+        "neutral": 0.045638177543878555,
+        "negative": 0.9458233714103699
       }
     },
     {
@@ -599,11 +598,11 @@
       "sentence_text": "Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for 2023, 2022 and 2021 were as follows (dollars in millions): 202320222021Provision for income taxes$16,741 $19,300 $14,527 Effective tax rate14.7 %16.2 %13.3 %Statutory federal income tax rate21 %21 %21 % The Company\u2019s effective tax rate for 2023 and 2022 was lower than the statutory federal income tax rate due primarily to a lower effective tax rate on foreign earnings, the impact of the U.S. federal R&D credit, and tax benefits from share-based compensation, partially offset by state income taxes.The Company\u2019s effective tax rate for 2023 was lower compared to 2022 due primarily to a lower effective tax rate on foreign earnings and the impact of U.S. foreign tax credit regulations issued by the U.S.",
       "previous_sentence": "Selling, General and Administrative Selling, general and administrative expense was relatively flat in 2023 compared to 2022.",
       "next_sentence": "Department of the Treasury in 2022, partially offset by lower tax benefits from share-based compensation.",
-      "risk_score": 0.9447407126426697,
+      "risk_score": 0.9447408318519592,
       "finbert_probs": {
-        "positive": 0.024312887340784073,
-        "neutral": 0.03094632923603058,
-        "negative": 0.9447407126426697
+        "positive": 0.024312907829880714,
+        "neutral": 0.030946265906095505,
+        "negative": 0.9447408318519592
       }
     },
     {
@@ -614,11 +613,11 @@
       "sentence_text": "Component defects could make the Company\u2019s products unsafe and create a risk of environmental or property damage and personal injury.",
       "previous_sentence": "Defects can also exist in components and products the Company purchases from third parties.",
       "next_sentence": "These risks may increase as the Company\u2019s products are introduced into specialized applications, including health.",
-      "risk_score": 0.9426196813583374,
+      "risk_score": 0.9426197409629822,
       "finbert_probs": {
-        "positive": 0.008911892771720886,
-        "neutral": 0.04846849665045738,
-        "negative": 0.9426196813583374
+        "positive": 0.008911875076591969,
+        "neutral": 0.04846838116645813,
+        "negative": 0.9426197409629822
       }
     },
     {
@@ -629,11 +628,11 @@
       "sentence_text": "Such endeavors may involve significant risks and uncertainties, including distraction of management from current operations, greater-than-expected liabilities and expenses, economic, political, legal and regulatory challenges associated with operating in new businesses, regions or countries, inadequate return on capital, potential impairment of tangible and intangible assets, and significant write-offs.",
       "previous_sentence": "The Company has invested, and in the future may invest, in new business strategies or acquisitions.",
       "next_sentence": "Investment and acquisition transactions are exposed to additional risks, including failing to obtain required regulatory approvals on a timely basis or at all, or the imposition of onerous conditions that could delay or prevent the Company from completing a transaction or otherwise limit the Company\u2019s ability to fully realize the anticipated benefits of a transaction.",
-      "risk_score": 0.94119793176651,
+      "risk_score": 0.9411978125572205,
       "finbert_probs": {
-        "positive": 0.01097638439387083,
-        "neutral": 0.04782577604055405,
-        "negative": 0.94119793176651
+        "positive": 0.010976403951644897,
+        "neutral": 0.04782586917281151,
+        "negative": 0.9411978125572205
       }
     },
     {
@@ -647,7 +646,7 @@
       "risk_score": 0.9409162402153015,
       "finbert_probs": {
         "positive": 0.012617222033441067,
-        "neutral": 0.046466581523418427,
+        "neutral": 0.04646652564406395,
         "negative": 0.9409162402153015
       }
     },
@@ -659,11 +658,11 @@
       "sentence_text": "As a result, from time to time the Company\u2019s services have not performed as anticipated and may not meet customer expectations.",
       "previous_sentence": "In addition, the Company\u2019s service offerings can have quality issues and from time to time experience outages, service slowdowns or errors.",
       "next_sentence": "There can be no assurance the Company will be able to detect and fix all issues and defects in the hardware, software and services it offers.",
-      "risk_score": 0.9404836297035217,
+      "risk_score": 0.9404838681221008,
       "finbert_probs": {
-        "positive": 0.022108133882284164,
-        "neutral": 0.037408247590065,
-        "negative": 0.9404836297035217
+        "positive": 0.02210806868970394,
+        "neutral": 0.03740813955664635,
+        "negative": 0.9404838681221008
       }
     },
     {
@@ -677,7 +676,7 @@
       "risk_score": 0.9404661059379578,
       "finbert_probs": {
         "positive": 0.010396784171462059,
-        "neutral": 0.049137182533741,
+        "neutral": 0.049137089401483536,
         "negative": 0.9404661059379578
       }
     },
@@ -691,7 +690,7 @@
       "next_sentence": "The Company offers complex hardware and software products and services that can be affected by design and manufacturing defects.",
       "risk_score": 0.9391241073608398,
       "finbert_probs": {
-        "positive": 0.00930280052125454,
+        "positive": 0.009302782826125622,
         "neutral": 0.05157308280467987,
         "negative": 0.9391241073608398
       }
@@ -706,8 +705,8 @@
       "next_sentence": "In some circumstances, for competitive or other reasons, the Company may decide not to raise international pricing to offset the U.S. dollar\u2019s strengthening, which would adversely affect the U.S. dollar value of the gross margins the Company earns on foreign currency\u2013denominated sales.Conversely, a strengthening of foreign currencies relative to the U.S. dollar, while generally beneficial to the Company\u2019s foreign currency\u2013denominated sales and earnings, could cause the Company to reduce international pricing or incur losses on its foreign currency derivative instruments, thereby limiting the benefit.",
       "risk_score": 0.9357934594154358,
       "finbert_probs": {
-        "positive": 0.027667930349707603,
-        "neutral": 0.036538589745759964,
+        "positive": 0.027667922899127007,
+        "neutral": 0.036538608372211456,
         "negative": 0.9357934594154358
       }
     },
@@ -721,8 +720,8 @@
       "next_sentence": "Further, the Company generates a significant portion of its net sales from a single product and a decline in demand for that product could significantly impact quarterly net sales.",
       "risk_score": 0.9349055886268616,
       "finbert_probs": {
-        "positive": 0.011935441754758358,
-        "neutral": 0.05315888673067093,
+        "positive": 0.011935429647564888,
+        "neutral": 0.05315893515944481,
         "negative": 0.9349055886268616
       }
     },
@@ -734,11 +733,11 @@
       "sentence_text": "The Company\u2019s business and reputation are impacted by information technology system failures and network disruptions.",
       "previous_sentence": "The financial condition of these resellers could weaken, these resellers could stop distributing the Company\u2019s products, or uncertainty regarding demand for some or all of the Company\u2019s products could cause resellers to reduce their ordering and marketing of the Company\u2019s products.",
       "next_sentence": "The Company and its global supply chain are dependent on complex information technology systems and are exposed to information technology system failures or network disruptions caused by natural disasters, accidents, power disruptions, telecommunications failures, acts of terrorism or war, computer viruses, physical or electronic break-ins, ransomware or other cybersecurity incidents, or other events or disruptions.",
-      "risk_score": 0.9346352219581604,
+      "risk_score": 0.9346352815628052,
       "finbert_probs": {
-        "positive": 0.009392673149704933,
-        "neutral": 0.05597209185361862,
-        "negative": 0.9346352219581604
+        "positive": 0.009392664767801762,
+        "neutral": 0.05597195029258728,
+        "negative": 0.9346352815628052
       }
     },
     {
@@ -752,7 +751,7 @@
       "risk_score": 0.93393874168396,
       "finbert_probs": {
         "positive": 0.009012213908135891,
-        "neutral": 0.057049110531806946,
+        "neutral": 0.057049043476581573,
         "negative": 0.93393874168396
       }
     },
@@ -764,11 +763,11 @@
       "sentence_text": "While the Company\u2019s suppliers are required to maintain safe working environments and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company\u2019s business, and harm to the Company\u2019s reputation.",
       "previous_sentence": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.The Company\u2019s operations are also subject to the risks of industrial accidents at its suppliers and contract manufacturers.",
       "next_sentence": "Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
-      "risk_score": 0.9328546524047852,
+      "risk_score": 0.9328545928001404,
       "finbert_probs": {
-        "positive": 0.010076295584440231,
-        "neutral": 0.0570690743625164,
-        "negative": 0.9328546524047852
+        "positive": 0.010076308622956276,
+        "neutral": 0.057069167494773865,
+        "negative": 0.9328545928001404
       }
     },
     {
@@ -779,11 +778,11 @@
       "sentence_text": "Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
       "previous_sentence": "While the Company\u2019s suppliers are required to maintain safe working environments and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company\u2019s business, and harm to the Company\u2019s reputation.",
       "next_sentence": "Global markets for the Company\u2019s products and services are highly competitive and subject to rapid technological change, and the Company may be unable to compete effectively in these markets.",
-      "risk_score": 0.9316858649253845,
+      "risk_score": 0.9316859841346741,
       "finbert_probs": {
-        "positive": 0.010038469918072224,
-        "neutral": 0.058275721967220306,
-        "negative": 0.9316858649253845
+        "positive": 0.010038452222943306,
+        "neutral": 0.058275576680898666,
+        "negative": 0.9316859841346741
       }
     },
     {
@@ -794,11 +793,11 @@
       "sentence_text": "In addition, the Company can be exposed to product liability claims, recalls, product replacements or modifications, write-offs of inventory, property, plant and equipment or intangible assets, and significant warranty and other expenses, including litigation costs and regulatory fines.",
       "previous_sentence": "Failure to do so can result in widespread technical and performance issues affecting the Company\u2019s products and services.",
       "next_sentence": "Quality problems can also adversely affect the experience for users of the Company\u2019s products and services, and result in harm to the Company\u2019s reputation, loss of competitive advantage, poor market acceptance, reduced demand for products and services, delay in new product and service introductions and lost sales.",
-      "risk_score": 0.93167644739151,
+      "risk_score": 0.9316765666007996,
       "finbert_probs": {
-        "positive": 0.010704769752919674,
-        "neutral": 0.05761879310011864,
-        "negative": 0.93167644739151
+        "positive": 0.010704761371016502,
+        "neutral": 0.05761871486902237,
+        "negative": 0.9316765666007996
       }
     },
     {
@@ -826,8 +825,8 @@
       "next_sentence": "Political uncertainty surrounding trade and other international disputes could also have a negative effect on consumer confidence and spending, which could adversely affect the Company\u2019s business.Many of the Company\u2019s operations and facilities, as well as critical business operations of the Company\u2019s suppliers and contract manufacturers, are in locations that are prone to earthquakes and other natural disasters.",
       "risk_score": 0.9264425039291382,
       "finbert_probs": {
-        "positive": 0.010196330957114697,
-        "neutral": 0.06336113065481186,
+        "positive": 0.010196325369179249,
+        "neutral": 0.06336120516061783,
         "negative": 0.9264425039291382
       }
     },
@@ -839,11 +838,11 @@
       "sentence_text": "Increases in interest rates will negatively affect the fair value of the Company\u2019s investment portfolio and increase the interest expense on the Company\u2019s term debt.",
       "previous_sentence": "Interest Rate Risk The Company is primarily exposed to fluctuations in U.S. interest rates and their impact on the Company\u2019s investment portfolio and term debt.",
       "next_sentence": "To protect against interest rate risk, the Company may use derivative instruments, offset interest rate\u2013sensitive assets and liabilities, or control duration of the investment and term debt portfolios.The following table sets forth potential impacts on the Company\u2019s investment portfolio and term debt, including the effects of any associated derivatives, that would result from a hypothetical increase in relevant interest rates as of September 30, 2023 and September 24, 2022 (dollars in millions): Interest RateSensitive InstrumentHypothetical InterestRate IncreasePotential Impact20232022Investment portfolio100 basis points, all tenorsDecline in fair value$3,089 $4,022 Term debt100 basis points, all tenorsIncrease in annual interest expense$194 $201 Foreign Exchange Rate Risk The Company\u2019s exposure to foreign exchange rate risk relates primarily to the Company being a net receiver of currencies other than the U.S. dollar.",
-      "risk_score": 0.9214386343955994,
+      "risk_score": 0.9214387536048889,
       "finbert_probs": {
-        "positive": 0.01384787354618311,
-        "neutral": 0.06471353769302368,
-        "negative": 0.9214386343955994
+        "positive": 0.01384784933179617,
+        "neutral": 0.06471343338489532,
+        "negative": 0.9214387536048889
       }
     },
     {
@@ -856,8 +855,8 @@
       "next_sentence": "Price volatility may cause the average price at which the Company repurchases its stock in a given period to exceed the stock\u2019s price at a given point in time.",
       "risk_score": 0.920684814453125,
       "finbert_probs": {
-        "positive": 0.013968219049274921,
-        "neutral": 0.06534701585769653,
+        "positive": 0.01396823301911354,
+        "neutral": 0.06534703075885773,
         "negative": 0.920684814453125
       }
     },
@@ -869,11 +868,11 @@
       "sentence_text": "When the Company\u2019s supply of components for a new or existing product has been delayed or constrained, or when an outsourcing partner has delayed shipments of completed products to the Company, the Company\u2019s business, results of operations and financial condition have been adversely affected and future delays or constraints could materially adversely affect the Company\u2019s business, results of operations and financial condition.",
       "previous_sentence": "The continued availability of these components at acceptable prices, or at all, can be affected for any number of reasons, including if suppliers decide to concentrate on the production of common components instead of components customized to meet the Company\u2019s requirements.",
       "next_sentence": "The Company\u2019s business and financial performance could also be materially adversely affected depending on the time required to obtain sufficient quantities from the source, or to identify and obtain sufficient quantities from an alternative source.",
-      "risk_score": 0.920393705368042,
+      "risk_score": 0.9203938841819763,
       "finbert_probs": {
-        "positive": 0.009739087894558907,
-        "neutral": 0.06986714154481888,
-        "negative": 0.920393705368042
+        "positive": 0.00973906647413969,
+        "neutral": 0.06986703723669052,
+        "negative": 0.9203938841819763
       }
     },
     {
@@ -884,11 +883,11 @@
       "sentence_text": "Because the Company\u2019s markets are volatile, competitive and subject to rapid technology and price changes, there is a risk the Company will forecast incorrectly and order or produce excess or insufficient amounts of components or products, or not fully utilize firm purchase commitments.",
       "previous_sentence": "Manufacturing purchase obligations cover the Company\u2019s forecasted component and manufacturing requirements, typically for periods up to 150 days.",
       "next_sentence": "The Company relies on access to third-party intellectual property, which may not be available to the Company on commercially reasonable terms or at all.",
-      "risk_score": 0.9198553562164307,
+      "risk_score": 0.919855535030365,
       "finbert_probs": {
-        "positive": 0.012286565266549587,
-        "neutral": 0.06785804778337479,
-        "negative": 0.9198553562164307
+        "positive": 0.012286561541259289,
+        "neutral": 0.06785793602466583,
+        "negative": 0.919855535030365
       }
     },
     {
@@ -899,11 +898,11 @@
       "sentence_text": "In addition, some stakeholders may disagree with the Company\u2019s goals and initiatives.",
       "previous_sentence": "The Company cannot guarantee that it will achieve its announced environmental, social and governance goals and initiatives.",
       "next_sentence": "Any failure, or perceived failure, by the Company to achieve its goals, further its initiatives, adhere to its public statements, comply with federal, state or international environmental, social and governance laws and regulations, or meet evolving and varied stakeholder expectations and standards could result in legal and regulatory proceedings against the Company and materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.",
-      "risk_score": 0.9197276830673218,
+      "risk_score": 0.9197275638580322,
       "finbert_probs": {
-        "positive": 0.013970449566841125,
-        "neutral": 0.06630190461874008,
-        "negative": 0.9197276830673218
+        "positive": 0.013970460742712021,
+        "neutral": 0.06630197167396545,
+        "negative": 0.9197275638580322
       }
     },
     {
@@ -914,30 +913,45 @@
       "sentence_text": "The VAR is the maximum expected loss in fair value, for a given confidence interval, to the Company\u2019s foreign currency derivative positions due to adverse movements in rates.",
       "previous_sentence": "The VAR model used a Monte Carlo simulation.",
       "next_sentence": "Based on the results of the model, the Company estimates, with 95% confidence, a maximum one-day loss in fair value of $669 million and $1.0 billion as of September 30, 2023 and September 24, 2022, respectively.",
-      "risk_score": 0.919725239276886,
+      "risk_score": 0.9197254776954651,
       "finbert_probs": {
-        "positive": 0.011965691111981869,
-        "neutral": 0.06830907613039017,
-        "negative": 0.919725239276886
+        "positive": 0.01196567714214325,
+        "neutral": 0.06830891221761703,
+        "negative": 0.9197254776954651
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_54",
+      "candidate_id": "item_3_legal_54",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 25,
+      "sentence_text": "If one or more legal matters were resolved against the Company in a reporting period for amounts above management\u2019s expectations, the Company\u2019s financial condition and operating results for that reporting period could be materially adversely affected.",
+      "previous_sentence": "The outcome of litigation is inherently uncertain.",
+      "next_sentence": null,
+      "risk_score": 0.9175165295600891,
+      "finbert_probs": {
+        "positive": 0.011811125092208385,
+        "neutral": 0.07067225873470306,
+        "negative": 0.9175165295600891
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_55",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 27,
       "sentence_text": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.The Company\u2019s operations are also subject to the risks of industrial accidents at its suppliers and contract manufacturers.",
       "previous_sentence": "Following an interruption to its business, the Company can require substantial recovery time, experience significant expenditures to resume operations, and lose significant sales.",
       "next_sentence": "While the Company\u2019s suppliers are required to maintain safe working environments and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company\u2019s business, and harm to the Company\u2019s reputation.",
-      "risk_score": 0.9142947793006897,
+      "risk_score": 0.9142946004867554,
       "finbert_probs": {
-        "positive": 0.010444462299346924,
-        "neutral": 0.07526077330112457,
-        "negative": 0.9142947793006897
+        "positive": 0.010444484651088715,
+        "neutral": 0.07526086270809174,
+        "negative": 0.9142946004867554
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_55",
+      "candidate_id": "item_1a_risk_factors_56",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 157,
@@ -946,13 +960,13 @@
       "next_sentence": "The Company has invested, and in the future may invest, in new business strategies or acquisitions.",
       "risk_score": 0.9136283993721008,
       "finbert_probs": {
-        "positive": 0.010106354020535946,
-        "neutral": 0.07626526802778244,
+        "positive": 0.010106358677148819,
+        "neutral": 0.07626523077487946,
         "negative": 0.9136283993721008
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_56",
+      "candidate_id": "item_1a_risk_factors_57",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 22,
@@ -961,13 +975,13 @@
       "next_sentence": "In addition, such operations and facilities are subject to the risk of interruption by fire, power shortages, nuclear power plant accidents and other industrial accidents, terrorist attacks and other hostile acts, ransomware and other cybersecurity attacks, labor disputes, public health issues, including pandemics such as the COVID-19 pandemic, and other events beyond the Company\u2019s control.",
       "risk_score": 0.9135909676551819,
       "finbert_probs": {
-        "positive": 0.010709254071116447,
-        "neutral": 0.07569970190525055,
+        "positive": 0.01070925872772932,
+        "neutral": 0.07569972425699234,
         "negative": 0.9135909676551819
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_57",
+      "candidate_id": "item_1a_risk_factors_58",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 237,
@@ -976,13 +990,13 @@
       "next_sentence": "Therefore, although the Company has not realized any significant losses on its cash, cash equivalents and marketable securities, future fluctuations in their value could result in significant losses and could have a material adverse impact on the Company\u2019s results of operations and financial condition.",
       "risk_score": 0.9125704169273376,
       "finbert_probs": {
-        "positive": 0.021693754941225052,
-        "neutral": 0.06573593616485596,
+        "positive": 0.021693779155611992,
+        "neutral": 0.06573589146137238,
         "negative": 0.9125704169273376
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_58",
+      "candidate_id": "item_1a_risk_factors_59",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 108,
@@ -992,42 +1006,42 @@
       "risk_score": 0.9124335050582886,
       "finbert_probs": {
         "positive": 0.01340947300195694,
-        "neutral": 0.07415701448917389,
+        "neutral": 0.0741569921374321,
         "negative": 0.9124335050582886
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_59",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 59,
-      "sentence_text": "Any failure of these partners to perform can have a negative impact on the Company\u2019s cost or supply of components or finished goods.",
-      "previous_sentence": "While the Company relies on its partners to adhere to its supplier code of conduct, violations of the supplier code of conduct occur from time to time and can materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.The Company relies on single-source outsourcing partners in the U.S., Asia and Europe to supply and manufacture many components, and on outsourcing partners primarily located in Asia, for final assembly of substantially all of the Company\u2019s hardware products.",
-      "next_sentence": "In addition, manufacturing or logistics in these locations or transit to final destinations can be disrupted for a variety of reasons, including natural and man-made disasters, information technology system failures, commercial disputes, armed conflict, economic, business, labor, environmental, public health or political issues, or international trade disputes.The Company has invested in manufacturing process equipment, much of which is held at certain of its outsourcing partners, and has made prepayments to certain of its suppliers associated with long-term supply agreements.",
-      "risk_score": 0.910602331161499,
-      "finbert_probs": {
-        "positive": 0.010013598017394543,
-        "neutral": 0.07938402891159058,
-        "negative": 0.910602331161499
       }
     },
     {
       "candidate_id": "item_1a_risk_factors_60",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
-      "sentence_index": 191,
-      "sentence_text": "Expectations relating to environmental, social and governance considerations and related reporting obligations expose the Company to potential liabilities, increased costs, reputational harm, and other adverse effects on the Company\u2019s business.",
-      "previous_sentence": "As a result, the Company\u2019s products could be banned, delayed or prohibited from importation, which could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
-      "next_sentence": "Many governments, regulators, investors, employees, customers and other stakeholders are increasingly focused on environmental, social and governance considerations relating to businesses, including climate change and greenhouse gas emissions, human and civil rights, and diversity, equity and inclusion.",
-      "risk_score": 0.9084989428520203,
+      "sentence_index": 59,
+      "sentence_text": "Any failure of these partners to perform can have a negative impact on the Company\u2019s cost or supply of components or finished goods.",
+      "previous_sentence": "While the Company relies on its partners to adhere to its supplier code of conduct, violations of the supplier code of conduct occur from time to time and can materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.The Company relies on single-source outsourcing partners in the U.S., Asia and Europe to supply and manufacture many components, and on outsourcing partners primarily located in Asia, for final assembly of substantially all of the Company\u2019s hardware products.",
+      "next_sentence": "In addition, manufacturing or logistics in these locations or transit to final destinations can be disrupted for a variety of reasons, including natural and man-made disasters, information technology system failures, commercial disputes, armed conflict, economic, business, labor, environmental, public health or political issues, or international trade disputes.The Company has invested in manufacturing process equipment, much of which is held at certain of its outsourcing partners, and has made prepayments to certain of its suppliers associated with long-term supply agreements.",
+      "risk_score": 0.9106024503707886,
       "finbert_probs": {
-        "positive": 0.012912815436720848,
-        "neutral": 0.07858821749687195,
-        "negative": 0.9084989428520203
+        "positive": 0.010013594292104244,
+        "neutral": 0.07938392460346222,
+        "negative": 0.9106024503707886
       }
     },
     {
       "candidate_id": "item_1a_risk_factors_61",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 191,
+      "sentence_text": "Expectations relating to environmental, social and governance considerations and related reporting obligations expose the Company to potential liabilities, increased costs, reputational harm, and other adverse effects on the Company\u2019s business.",
+      "previous_sentence": "As a result, the Company\u2019s products could be banned, delayed or prohibited from importation, which could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
+      "next_sentence": "Many governments, regulators, investors, employees, customers and other stakeholders are increasingly focused on environmental, social and governance considerations relating to businesses, including climate change and greenhouse gas emissions, human and civil rights, and diversity, equity and inclusion.",
+      "risk_score": 0.9084990620613098,
+      "finbert_probs": {
+        "positive": 0.012912830337882042,
+        "neutral": 0.07858818769454956,
+        "negative": 0.9084990620613098
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_62",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 18,
@@ -1036,28 +1050,43 @@
       "next_sentence": "Such restrictions can be announced with little or no advance notice and the Company may not be able to effectively mitigate all adverse impacts from such measures.",
       "risk_score": 0.9058032631874084,
       "finbert_probs": {
-        "positive": 0.011078950017690659,
-        "neutral": 0.08311770856380463,
+        "positive": 0.011078955605626106,
+        "neutral": 0.0831177681684494,
         "negative": 0.9058032631874084
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_62",
+      "candidate_id": "item_1a_risk_factors_63",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 182,
       "sentence_text": "New and changing laws and regulations can adversely affect the Company\u2019s business by increasing the Company\u2019s costs, limiting the Company\u2019s ability to offer a product, service or feature to customers, imposing changes to the design of the Company\u2019s products and services, impacting customer demand for the Company\u2019s products and services, and requiring changes to the Company\u2019s supply chain and its business.",
       "previous_sentence": "The Company\u2019s global operations are subject to complex and changing laws and regulations on subjects, including antitrust; privacy, data security and data localization; consumer protection; advertising, sales, billing and e-commerce; financial services and technology; product liability; intellectual property ownership and infringement; digital platforms; machine learning and artificial intelligence; internet, telecommunications and mobile communications; media, television, film and digital content; availability of third-party software applications and services; labor and employment; anticorruption; import, export and trade; foreign exchange controls and cash repatriation restrictions; anti\u2013money laundering; foreign ownership and investment; tax; and environmental, health and safety, including electronic waste, recycling, product design and climate change.Compliance with these laws and regulations is onerous and expensive.",
       "next_sentence": "New and changing laws and regulations can also create uncertainty about how such laws and regulations will be interpreted and applied.",
-      "risk_score": 0.9047483801841736,
+      "risk_score": 0.904748260974884,
       "finbert_probs": {
-        "positive": 0.010347578674554825,
-        "neutral": 0.08490412682294846,
-        "negative": 0.9047483801841736
+        "positive": 0.010347587056457996,
+        "neutral": 0.08490415662527084,
+        "negative": 0.904748260974884
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_63",
+      "candidate_id": "item_3_legal_64",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 3,
+      "sentence_text": "District Court for the Northern District of California (the \u201cDistrict Court\u201d) against the Company alleging violations of federal and state antitrust laws and California\u2019s unfair competition law based upon the Company\u2019s operation of its App Store.",
+      "previous_sentence": "(\u201cEpic\u201d) filed a lawsuit in the U.S.",
+      "next_sentence": "On September 10, 2021, the District Court ruled in favor of the Company with respect to nine out of the ten counts included in Epic\u2019s claim.",
+      "risk_score": 0.9039815664291382,
+      "finbert_probs": {
+        "positive": 0.01799626275897026,
+        "neutral": 0.07802215218544006,
+        "negative": 0.9039815664291382
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_65",
       "section_id": "item_1a_risk_factors",
       "section_label": "Item 1A",
       "sentence_index": 78,
@@ -1066,504 +1095,474 @@
       "next_sentence": "Component defects could make the Company\u2019s products unsafe and create a risk of environmental or property damage and personal injury.",
       "risk_score": 0.903457760810852,
       "finbert_probs": {
-        "positive": 0.011101401410996914,
-        "neutral": 0.08544080704450607,
+        "positive": 0.01110139675438404,
+        "neutral": 0.08544086664915085,
         "negative": 0.903457760810852
       }
     },
     {
-      "candidate_id": "item_7_mda_64",
+      "candidate_id": "item_7_mda_66",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 56,
       "sentence_text": "Resolution of these uncertainties in a manner inconsistent with management\u2019s expectations could have a material impact on the Company\u2019s financial condition and operating results.",
       "previous_sentence": "Reserves are adjusted considering changing facts and circumstances, such as the closing of a tax examination.",
       "next_sentence": "Legal and Other Contingencies The Company is subject to various legal proceedings and claims that arise in the ordinary course of business, the outcomes of which are inherently uncertain.",
-      "risk_score": 0.9033874273300171,
+      "risk_score": 0.9033871293067932,
       "finbert_probs": {
-        "positive": 0.014418188482522964,
-        "neutral": 0.08219444751739502,
-        "negative": 0.9033874273300171
+        "positive": 0.01441821176558733,
+        "neutral": 0.08219465613365173,
+        "negative": 0.9033871293067932
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_65",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 151,
-      "sentence_text": "These attacks seek to compromise the confidentiality, integrity or availability of confidential information or disrupt normal business operations, and can, among other things, impair the Company\u2019s ability to attract and retain customers for its products and services, impact the Company\u2019s stock price, materially damage commercial relationships, and expose the Company to litigation or government investigations, which could result in penalties, fines or judgments against the Company.",
-      "previous_sentence": "Such incidents and other malicious attacks could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.The Company experiences malicious attacks and other attempts to gain unauthorized access to its systems on a regular basis.",
-      "next_sentence": "Globally, attacks are expected to continue accelerating in both frequency and sophistication with increasing use by actors of tools and techniques that are designed to circumvent controls, avoid detection, and remove or obfuscate forensic evidence, all of which hinders the Company\u2019s ability to identify, investigate and recover from incidents.",
-      "risk_score": 0.9033380150794983,
-      "finbert_probs": {
-        "positive": 0.010511182248592377,
-        "neutral": 0.08615080267190933,
-        "negative": 0.9033380150794983
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_66",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 30,
-      "sentence_text": "Global markets for the Company\u2019s products and services are highly competitive and subject to rapid technological change, and the Company may be unable to compete effectively in these markets.",
-      "previous_sentence": "Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
-      "next_sentence": "The Company\u2019s products and services are offered in highly competitive global markets characterized by aggressive price competition and resulting downward pressure on gross margins, frequent introduction of new products and services, short product life cycles, evolving industry standards, continual improvement in product price and performance characteristics, rapid adoption of technological advancements by competitors, and price sensitivity on the part of consumers and businesses.The Company\u2019s ability to compete successfully depends heavily on ensuring the continuing and timely introduction of innovative new products, services and technologies to the marketplace.",
-      "risk_score": 0.9031363129615784,
-      "finbert_probs": {
-        "positive": 0.020136049017310143,
-        "neutral": 0.07672765851020813,
-        "negative": 0.9031363129615784
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_67",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 141,
-      "sentence_text": "System upgrades, redundancy and other continuity measures may be ineffective or inadequate, and the Company\u2019s or its vendors\u2019 business continuity and disaster recovery planning may not be sufficient for all eventualities.",
-      "previous_sentence": "The Company and its global supply chain are dependent on complex information technology systems and are exposed to information technology system failures or network disruptions caused by natural disasters, accidents, power disruptions, telecommunications failures, acts of terrorism or war, computer viruses, physical or electronic break-ins, ransomware or other cybersecurity incidents, or other events or disruptions.",
-      "next_sentence": "Such failures or disruptions can adversely impact the Company\u2019s business by, among other things, preventing access to the Company\u2019s online services, interfering with customer transactions or impeding the manufacturing and shipping of the Company\u2019s products.",
-      "risk_score": 0.8989136219024658,
-      "finbert_probs": {
-        "positive": 0.013400294817984104,
-        "neutral": 0.08768609911203384,
-        "negative": 0.8989136219024658
-      }
-    },
-    {
-      "candidate_id": "item_7_mda_68",
+      "candidate_id": "item_7_mda_67",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 59,
       "sentence_text": "Resolution of legal matters in a manner inconsistent with management\u2019s expectations could have a material impact on the Company\u2019s financial condition and operating results.",
       "previous_sentence": "The Company records a liability when it is probable that a loss has been incurred and the amount is reasonably estimable, the determination of which requires significant judgment.",
       "next_sentence": null,
-      "risk_score": 0.8976673483848572,
+      "risk_score": 0.8976671695709229,
       "finbert_probs": {
-        "positive": 0.01094586867839098,
-        "neutral": 0.09138673543930054,
-        "negative": 0.8976673483848572
+        "positive": 0.010945877060294151,
+        "neutral": 0.09138694405555725,
+        "negative": 0.8976671695709229
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_69",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 213,
-      "sentence_text": "Complying with emerging and changing requirements causes the Company to incur substantial costs and has required and may in the future require the Company to change its business practices.",
-      "previous_sentence": "These laws continue to develop and may be inconsistent from jurisdiction to jurisdiction.",
-      "next_sentence": "Noncompliance could result in significant penalties or legal liability.The Company makes statements about its use and disclosure of personal information through its privacy policy, information provided on its website, press statements and other privacy notices provided to customers.",
-      "risk_score": 0.8971754908561707,
-      "finbert_probs": {
-        "positive": 0.015861865133047104,
-        "neutral": 0.08696255832910538,
-        "negative": 0.8971754908561707
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_70",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 225,
-      "sentence_text": "These and other factors could have a materially adverse impact on the Company\u2019s results of operations and financial condition.The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand.",
-      "previous_sentence": "The Company\u2019s gross margins are subject to volatility and downward pressure due to a variety of factors, including: continued industry-wide global product pricing pressures and product pricing actions that the Company may take in response to such pressures; increased competition; the Company\u2019s ability to effectively stimulate demand for certain of its products and services; compressed product life cycles; supply shortages; potential increases in the cost of components, outside manufacturing services, and developing, acquiring and delivering content for the Company\u2019s services; the Company\u2019s ability to manage product quality and warranty costs effectively; shifts in the mix of products and services, or in the geographic, currency or channel mix, including to the extent that regulatory changes require the Company to modify its product and service offerings; fluctuations in foreign exchange rates; inflation and other macroeconomic pressures; and the introduction of new products or services, including new products or services with higher cost structures.",
-      "next_sentence": "Additionally, new product and service introductions can significantly impact net sales, cost of sales and operating expenses.",
-      "risk_score": 0.8928839564323425,
-      "finbert_probs": {
-        "positive": 0.08994748443365097,
-        "neutral": 0.017168570309877396,
-        "negative": 0.8928839564323425
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_71",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 180,
-      "sentence_text": "The Company is subject to complex and changing laws and regulations worldwide, which exposes the Company to potential liabilities, increased costs and other adverse effects on the Company\u2019s business.",
-      "previous_sentence": "Further, such an outcome can result in significant compensatory, punitive or trebled monetary damages, disgorgement of revenue or profits, remedial corporate measures or injunctive relief against the Company, and has from time to time required, and can in the future require, the Company to change its business practices and limit the Company\u2019s ability to offer certain products and services, all of which could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.While the Company maintains insurance coverage for certain types of claims, such insurance coverage may be insufficient to cover all losses or all types of claims that may arise.",
-      "next_sentence": "The Company\u2019s global operations are subject to complex and changing laws and regulations on subjects, including antitrust; privacy, data security and data localization; consumer protection; advertising, sales, billing and e-commerce; financial services and technology; product liability; intellectual property ownership and infringement; digital platforms; machine learning and artificial intelligence; internet, telecommunications and mobile communications; media, television, film and digital content; availability of third-party software applications and services; labor and employment; anticorruption; import, export and trade; foreign exchange controls and cash repatriation restrictions; anti\u2013money laundering; foreign ownership and investment; tax; and environmental, health and safety, including electronic waste, recycling, product design and climate change.Compliance with these laws and regulations is onerous and expensive.",
-      "risk_score": 0.8911798000335693,
-      "finbert_probs": {
-        "positive": 0.013279419392347336,
-        "neutral": 0.09554079174995422,
-        "negative": 0.8911798000335693
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_72",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 166,
-      "sentence_text": "Legal and Regulatory Compliance Risks The Company\u2019s business, results of operations and financial condition could be adversely impacted by unfavorable results of legal proceedings or government investigations.",
-      "previous_sentence": "Other factors include the Company\u2019s ability to: manage costs associated with retail store construction and operation; manage relationships with existing retail partners; manage costs associated with fluctuations in the value of retail inventory; and obtain and renew leases in quality retail locations at a reasonable cost.",
-      "next_sentence": "The Company is subject to various claims, legal proceedings and government investigations that have arisen in the ordinary course of business and have not yet been fully resolved, and new matters may arise in the future.",
-      "risk_score": 0.8879266381263733,
-      "finbert_probs": {
-        "positive": 0.013531931675970554,
-        "neutral": 0.09854141622781754,
-        "negative": 0.8879266381263733
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_73",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 15,
-      "sentence_text": "Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s operations and supply chain and limit the Company\u2019s ability to offer and distribute its products and services to customers.",
-      "previous_sentence": "Substantially all of the Company\u2019s manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam.",
-      "next_sentence": "The impact can be particularly significant if these restrictive measures apply to countries and regions where the Company derives a significant portion of its revenues and/or has significant supply chain operations.",
-      "risk_score": 0.8832066059112549,
-      "finbert_probs": {
-        "positive": 0.012040079571306705,
-        "neutral": 0.10475339740514755,
-        "negative": 0.8832066059112549
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_74",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 152,
-      "sentence_text": "Globally, attacks are expected to continue accelerating in both frequency and sophistication with increasing use by actors of tools and techniques that are designed to circumvent controls, avoid detection, and remove or obfuscate forensic evidence, all of which hinders the Company\u2019s ability to identify, investigate and recover from incidents.",
-      "previous_sentence": "These attacks seek to compromise the confidentiality, integrity or availability of confidential information or disrupt normal business operations, and can, among other things, impair the Company\u2019s ability to attract and retain customers for its products and services, impact the Company\u2019s stock price, materially damage commercial relationships, and expose the Company to litigation or government investigations, which could result in penalties, fines or judgments against the Company.",
-      "next_sentence": "In addition, attacks against the Company and its customers can escalate during periods of severe diplomatic or armed conflict.Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.The Company has implemented systems and processes intended to secure its information technology systems and prevent unauthorized access to or loss of sensitive data, and mitigate the impact of unauthorized access, including through the use of encryption and authentication technologies.",
-      "risk_score": 0.8780205845832825,
-      "finbert_probs": {
-        "positive": 0.030732961371541023,
-        "neutral": 0.09124637395143509,
-        "negative": 0.8780205845832825
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_75",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 56,
-      "sentence_text": "Such diminished control has from time to time and may in the future have an adverse effect on the quality or quantity of products manufactured or services provided, or adversely affect the Company\u2019s flexibility to respond to changing conditions.",
-      "previous_sentence": "While these arrangements can lower operating costs, they also reduce the Company\u2019s direct control over production and distribution.",
-      "next_sentence": "Although arrangements with these partners may contain provisions for product defect expense reimbursement, the Company generally remains responsible to the consumer for warranty and out-of-warranty service in the event of product defects and experiences unanticipated product defect liabilities from time to time.",
-      "risk_score": 0.8627512454986572,
-      "finbert_probs": {
-        "positive": 0.01430822629481554,
-        "neutral": 0.12294051796197891,
-        "negative": 0.8627512454986572
-      }
-    },
-    {
-      "candidate_id": "item_7_mda_76",
+      "candidate_id": "item_7_mda_68",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 26,
       "sentence_text": "Gross Margin Products and Services gross margin and gross margin percentage for 2023, 2022 and 2021 were as follows (dollars in millions): 202320222021Gross margin:Products$108,803 $114,728 $105,126 Services60,345 56,054 47,710 Total gross margin$169,148 $170,782 $152,836 Gross margin percentage:Products36.5 %36.3 %35.3 %Services70.8 %71.7 %69.7 %Total gross margin percentage44.1 %43.3 %41.8 % Products Gross Margin Products gross margin decreased during 2023 compared to 2022 due to the weakness in foreign currencies relative to the U.S. dollar and lower Products volume, partially offset by cost savings and a different Products mix.Products gross margin percentage increased during 2023 compared to 2022 due to cost savings and a different Products mix, partially offset by the weakness in foreign currencies relative to the U.S. dollar and decreased leverage.",
       "previous_sentence": "Services Services net sales increased 9% or $7.1 billion during 2023 compared to 2022 due to higher net sales across all lines of business.",
       "next_sentence": "Services Gross Margin Services gross margin increased during 2023 compared to 2022 due primarily to higher Services net sales, partially offset by the weakness in foreign currencies relative to the U.S. dollar and higher Services costs.Services gross margin percentage decreased during 2023 compared to 2022 due to higher Services costs and the weakness in foreign currencies relative to the U.S. dollar, partially offset by a different Services mix.The Company\u2019s future gross margins can be impacted by a variety of factors, as discussed in Part I, Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d As a result, the Company believes, in general, gross margins will be subject to volatility and downward pressure.",
-      "risk_score": 0.8512974977493286,
+      "risk_score": 0.8512976765632629,
       "finbert_probs": {
-        "positive": 0.11649125814437866,
-        "neutral": 0.032211292535066605,
-        "negative": 0.8512974977493286
+        "positive": 0.11649111658334732,
+        "neutral": 0.03221120685338974,
+        "negative": 0.8512976765632629
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_77",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 144,
-      "sentence_text": "Losses or unauthorized access to or releases of confidential information, including personal information, could subject the Company to significant reputational, financial, legal and operational consequences.",
-      "previous_sentence": "These events could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
-      "next_sentence": "The Company\u2019s business requires it to use and store confidential information, including personal information, with respect to the Company\u2019s customers and employees.",
-      "risk_score": 0.8503872752189636,
+      "candidate_id": "item_3_legal_69",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 17,
+      "sentence_text": "International Trade Commission (the \u201cITC\u201d) alleging infringement by the Company of five patents relating to the functionality of the blood oxygen feature in Apple Watch Series 6 and 7.",
+      "previous_sentence": "(together, \u201cMasimo\u201d) filed a complaint before the U.S.",
+      "next_sentence": "In its complaint, Masimo sought a permanent exclusion order prohibiting importation to the United States of certain Apple Watch models that include blood oxygen sensing functionality.",
+      "risk_score": 0.84840989112854,
       "finbert_probs": {
-        "positive": 0.01177108846604824,
-        "neutral": 0.13784171640872955,
-        "negative": 0.8503872752189636
+        "positive": 0.016667351126670837,
+        "neutral": 0.13492269814014435,
+        "negative": 0.84840989112854
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_78",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 132,
-      "sentence_text": "If the Company is unable to nurture its culture, it could materially adversely affect the Company\u2019s ability to recruit and retain the highly skilled employees who are critical to its success, and could otherwise materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
-      "previous_sentence": "If the Company does not manage changing workforce dynamics effectively, it could materially adversely affect the Company\u2019s culture, reputation and operational flexibility.The Company believes that its distinctive and inclusive culture is a significant driver of its success.",
-      "next_sentence": "The Company depends on the performance of carriers, wholesalers, retailers and other resellers.",
-      "risk_score": 0.8494077920913696,
+      "candidate_id": "item_3_legal_70",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 21,
+      "sentence_text": "The Company intends to appeal the Order and seek a stay pending the appeal.",
+      "previous_sentence": "The Order will not go into effect until the end of the administrative review period, which is currently expected to end on December 25, 2023.",
+      "next_sentence": "Other Legal Proceedings The Company is subject to other legal proceedings and claims that have not been fully resolved and that have arisen in the ordinary course of business.",
+      "risk_score": 0.83332759141922,
       "finbert_probs": {
-        "positive": 0.015748048201203346,
-        "neutral": 0.13484418392181396,
-        "negative": 0.8494077920913696
+        "positive": 0.027254747226834297,
+        "neutral": 0.13941769301891327,
+        "negative": 0.83332759141922
       }
     },
     {
-      "candidate_id": "item_1a_risk_factors_79",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 87,
-      "sentence_text": "The Company is exposed to the risk of write-downs on the value of its inventory and other assets, in addition to purchase commitment cancellation risk.",
-      "previous_sentence": "Quality problems can also adversely affect the experience for users of the Company\u2019s products and services, and result in harm to the Company\u2019s reputation, loss of competitive advantage, poor market acceptance, reduced demand for products and services, delay in new product and service introductions and lost sales.",
-      "next_sentence": "The Company records a write-down for product and component inventories that have become obsolete or exceed anticipated demand, or for which cost exceeds net realizable value.",
-      "risk_score": 0.8489562273025513,
-      "finbert_probs": {
-        "positive": 0.014061723835766315,
-        "neutral": 0.13698208332061768,
-        "negative": 0.8489562273025513
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_80",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 154,
-      "sentence_text": "As with all companies, these security measures may not be sufficient for all eventualities and may be vulnerable to hacking, ransomware attacks, employee error, malfeasance, system error, faulty password management or other irregularities.",
-      "previous_sentence": "In addition, attacks against the Company and its customers can escalate during periods of severe diplomatic or armed conflict.Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.The Company has implemented systems and processes intended to secure its information technology systems and prevent unauthorized access to or loss of sensitive data, and mitigate the impact of unauthorized access, including through the use of encryption and authentication technologies.",
-      "next_sentence": "For example, third parties can fraudulently induce the Company\u2019s or its vendors\u2019 employees or customers into disclosing usernames, passwords or other sensitive information, which can, in turn, be used for unauthorized access to the Company\u2019s or its vendors\u2019 systems and services.",
-      "risk_score": 0.8480361104011536,
-      "finbert_probs": {
-        "positive": 0.015824252739548683,
-        "neutral": 0.1361396610736847,
-        "negative": 0.8480361104011536
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_81",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 8,
-      "sentence_text": "As a result, the Company\u2019s operations and performance depend significantly on global and regional economic conditions.Adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company\u2019s products and services.",
-      "previous_sentence": "In addition, the Company\u2019s global supply chain is large and complex and a majority of the Company\u2019s supplier facilities, including manufacturing and assembly sites, are located outside the U.S.",
-      "next_sentence": "In addition, consumer confidence and spending can be materially adversely affected in response to changes in fiscal and monetary policy, financial market volatility, declines in income or asset values, and other economic factors.In addition to an adverse impact on demand for the Company\u2019s products and services, uncertainty about, or a decline in, global or regional economic conditions can have a significant impact on the Company\u2019s suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners, and developers.",
-      "risk_score": 0.8470812439918518,
-      "finbert_probs": {
-        "positive": 0.01760077476501465,
-        "neutral": 0.13531796634197235,
-        "negative": 0.8470812439918518
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_82",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 77,
-      "sentence_text": "Sophisticated operating system software and applications, such as those offered by the Company, often have issues that can unexpectedly interfere with the intended operation of hardware or software products and services.",
-      "previous_sentence": "The Company offers complex hardware and software products and services that can be affected by design and manufacturing defects.",
-      "next_sentence": "Defects can also exist in components and products the Company purchases from third parties.",
-      "risk_score": 0.8371663689613342,
-      "finbert_probs": {
-        "positive": 0.013234197162091732,
-        "neutral": 0.1495993584394455,
-        "negative": 0.8371663689613342
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_83",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 178,
-      "sentence_text": "If one or more legal matters were resolved against the Company or an indemnified third party in a reporting period for amounts above management\u2019s expectations, the Company\u2019s results of operations and financial condition for that reporting period could be materially adversely affected.",
-      "previous_sentence": "The outcome of litigation or government investigations is inherently uncertain.",
-      "next_sentence": "Further, such an outcome can result in significant compensatory, punitive or trebled monetary damages, disgorgement of revenue or profits, remedial corporate measures or injunctive relief against the Company, and has from time to time required, and can in the future require, the Company to change its business practices and limit the Company\u2019s ability to offer certain products and services, all of which could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.While the Company maintains insurance coverage for certain types of claims, such insurance coverage may be insufficient to cover all losses or all types of claims that may arise.",
-      "risk_score": 0.8351107239723206,
-      "finbert_probs": {
-        "positive": 0.014075602404773235,
-        "neutral": 0.15081369876861572,
-        "negative": 0.8351107239723206
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_84",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 64,
-      "sentence_text": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations and financial condition.",
-      "previous_sentence": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
-      "next_sentence": "For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company\u2019s ability to obtain sufficient quantities of components and products on commercially reasonable terms or at all.",
-      "risk_score": 0.8309645652770996,
-      "finbert_probs": {
-        "positive": 0.014514049515128136,
-        "neutral": 0.15452136099338531,
-        "negative": 0.8309645652770996
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_85",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 197,
-      "sentence_text": "Any failure, or perceived failure, by the Company to achieve its goals, further its initiatives, adhere to its public statements, comply with federal, state or international environmental, social and governance laws and regulations, or meet evolving and varied stakeholder expectations and standards could result in legal and regulatory proceedings against the Company and materially adversely affect the Company\u2019s business, reputation, results of operations, financial condition and stock price.",
-      "previous_sentence": "In addition, some stakeholders may disagree with the Company\u2019s goals and initiatives.",
-      "next_sentence": "The technology industry, including, in some instances, the Company, is subject to intense media, political and regulatory scrutiny, which exposes the Company to increasing regulation, government investigations, legal actions and penalties.",
-      "risk_score": 0.8302895426750183,
-      "finbert_probs": {
-        "positive": 0.012863043695688248,
-        "neutral": 0.15684741735458374,
-        "negative": 0.8302895426750183
-      }
-    },
-    {
-      "candidate_id": "item_1a_risk_factors_86",
-      "section_id": "item_1a_risk_factors",
-      "section_label": "Item 1A",
-      "sentence_index": 219,
-      "sentence_text": "Under payment card rules and obligations, if cardholder information is potentially compromised, the Company can be liable for associated investigatory expenses and can also incur significant fees or fines if the Company fails to follow payment card industry data security standards.",
-      "previous_sentence": "If the Company fails to adequately comply with these rules and requirements, or if health data or financial data is handled in a manner not permitted by law or under the Company\u2019s agreements with healthcare or financial institutions, the Company can be subject to litigation or government investigations, and can be liable for associated investigatory expenses, and can also incur significant fees or fines.Payment card data is also subject to additional requirements.",
-      "next_sentence": "The Company could also experience a significant increase in payment card transaction costs or lose the ability to process payment cards if it fails to follow payment card industry data security standards, which could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
-      "risk_score": 0.8273082375526428,
-      "finbert_probs": {
-        "positive": 0.013587418012320995,
-        "neutral": 0.15910428762435913,
-        "negative": 0.8273082375526428
-      }
-    },
-    {
-      "candidate_id": "item_7_mda_87",
+      "candidate_id": "item_7_mda_71",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 29,
       "sentence_text": "Selling, General and Administrative Selling, general and administrative expense was relatively flat in 2023 compared to 2022.",
       "previous_sentence": "Operating Expenses Operating expenses for 2023, 2022 and 2021 were as follows (dollars in millions): 2023Change2022Change2021Research and development$29,915 14 %$26,251 20 %$21,914 Percentage of total net sales8 %7 %6 %Selling, general and administrative$24,932 (1)%$25,094 14 %$21,973 Percentage of total net sales7 %6 %6 %Total operating expenses$54,847 7 %$51,345 17 %$43,887 Percentage of total net sales14 %13 %12 % Research and Development The year-over-year growth in R&D expense in 2023 was driven primarily by increases in headcount-related expenses.",
       "next_sentence": "Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for 2023, 2022 and 2021 were as follows (dollars in millions): 202320222021Provision for income taxes$16,741 $19,300 $14,527 Effective tax rate14.7 %16.2 %13.3 %Statutory federal income tax rate21 %21 %21 % The Company\u2019s effective tax rate for 2023 and 2022 was lower than the statutory federal income tax rate due primarily to a lower effective tax rate on foreign earnings, the impact of the U.S. federal R&D credit, and tax benefits from share-based compensation, partially offset by state income taxes.The Company\u2019s effective tax rate for 2023 was lower compared to 2022 due primarily to a lower effective tax rate on foreign earnings and the impact of U.S. foreign tax credit regulations issued by the U.S.",
-      "risk_score": 0.7865351438522339,
+      "risk_score": 0.7865352034568787,
       "finbert_probs": {
-        "positive": 0.1467803567647934,
-        "neutral": 0.06668446213006973,
-        "negative": 0.7865351438522339
+        "positive": 0.14678031206130981,
+        "neutral": 0.06668451428413391,
+        "negative": 0.7865352034568787
       }
     },
     {
-      "candidate_id": "item_7_mda_88",
+      "candidate_id": "item_3_legal_72",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 18,
+      "sentence_text": "In its complaint, Masimo sought a permanent exclusion order prohibiting importation to the United States of certain Apple Watch models that include blood oxygen sensing functionality.",
+      "previous_sentence": "International Trade Commission (the \u201cITC\u201d) alleging infringement by the Company of five patents relating to the functionality of the blood oxygen feature in Apple Watch Series 6 and 7.",
+      "next_sentence": "On October 26, 2023, the ITC entered a limited exclusion order (the \u201cOrder\u201d) prohibiting importation and sales in the United States of Apple Watch models with blood oxygen sensing functionality, which includes Apple Watch Series 9 and Ultra 2.",
+      "risk_score": 0.7853558659553528,
+      "finbert_probs": {
+        "positive": 0.0459209606051445,
+        "neutral": 0.1687232106924057,
+        "negative": 0.7853558659553528
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_73",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 27,
       "sentence_text": "Services Gross Margin Services gross margin increased during 2023 compared to 2022 due primarily to higher Services net sales, partially offset by the weakness in foreign currencies relative to the U.S. dollar and higher Services costs.Services gross margin percentage decreased during 2023 compared to 2022 due to higher Services costs and the weakness in foreign currencies relative to the U.S. dollar, partially offset by a different Services mix.The Company\u2019s future gross margins can be impacted by a variety of factors, as discussed in Part I, Item 1A of this Form 10-K under the heading \u201cRisk Factors.\u201d As a result, the Company believes, in general, gross margins will be subject to volatility and downward pressure.",
       "previous_sentence": "Gross Margin Products and Services gross margin and gross margin percentage for 2023, 2022 and 2021 were as follows (dollars in millions): 202320222021Gross margin:Products$108,803 $114,728 $105,126 Services60,345 56,054 47,710 Total gross margin$169,148 $170,782 $152,836 Gross margin percentage:Products36.5 %36.3 %35.3 %Services70.8 %71.7 %69.7 %Total gross margin percentage44.1 %43.3 %41.8 % Products Gross Margin Products gross margin decreased during 2023 compared to 2022 due to the weakness in foreign currencies relative to the U.S. dollar and lower Products volume, partially offset by cost savings and a different Products mix.Products gross margin percentage increased during 2023 compared to 2022 due to cost savings and a different Products mix, partially offset by the weakness in foreign currencies relative to the U.S. dollar and decreased leverage.",
       "next_sentence": "Operating Expenses Operating expenses for 2023, 2022 and 2021 were as follows (dollars in millions): 2023Change2022Change2021Research and development$29,915 14 %$26,251 20 %$21,914 Percentage of total net sales8 %7 %6 %Selling, general and administrative$24,932 (1)%$25,094 14 %$21,973 Percentage of total net sales7 %6 %6 %Total operating expenses$54,847 7 %$51,345 17 %$43,887 Percentage of total net sales14 %13 %12 % Research and Development The year-over-year growth in R&D expense in 2023 was driven primarily by increases in headcount-related expenses.",
-      "risk_score": 0.7259064316749573,
+      "risk_score": 0.7259066700935364,
       "finbert_probs": {
-        "positive": 0.0823822095990181,
-        "neutral": 0.19171138107776642,
-        "negative": 0.7259064316749573
+        "positive": 0.08238206058740616,
+        "neutral": 0.19171124696731567,
+        "negative": 0.7259066700935364
       }
     },
     {
-      "candidate_id": "item_7_mda_89",
+      "candidate_id": "item_7_mda_74",
       "section_id": "item_7_mda",
       "section_label": "Item 7",
       "sentence_index": 11,
       "sentence_text": "Macroeconomic Conditions Macroeconomic conditions, including inflation, changes in interest rates, and currency fluctuations, have directly and indirectly impacted, and could in the future materially impact, the Company\u2019s results of operations and financial condition.",
       "previous_sentence": "During 2023, the Company repurchased $76.6 billion of its common stock and paid dividends and dividend equivalents of $15.0 billion.",
       "next_sentence": "Segment Operating Performance The following table shows net sales by reportable segment for 2023, 2022 and 2021 (dollars in millions): 2023Change2022Change2021Net sales by reportable segment:Americas$162,560 (4)%$169,658 11 %$153,306 Europe94,294 (1)%95,118 7 %89,307 Greater China72,559 (2)%74,200 9 %68,366 Japan24,257 (7)%25,977 (9)%28,482 Rest of Asia Pacific29,615 1 %29,375 11 %26,356 Total net sales$383,285 (3)%$394,328 8 %$365,817 Americas Americas net sales decreased 4% or $7.1 billion during 2023 compared to 2022 due to lower net sales of iPhone and Mac, partially offset by higher net sales of Services.",
-      "risk_score": 0.7195499539375305,
+      "risk_score": 0.7195496559143066,
       "finbert_probs": {
-        "positive": 0.019248267635703087,
-        "neutral": 0.26120179891586304,
-        "negative": 0.7195499539375305
+        "positive": 0.019248297438025475,
+        "neutral": 0.26120203733444214,
+        "negative": 0.7195496559143066
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_90",
+      "candidate_id": "item_3_legal_75",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 2,
+      "sentence_text": "(\u201cEpic\u201d) filed a lawsuit in the U.S.",
+      "previous_sentence": "Legal Proceedings Epic Games Epic Games, Inc.",
+      "next_sentence": "District Court for the Northern District of California (the \u201cDistrict Court\u201d) against the Company alleging violations of federal and state antitrust laws and California\u2019s unfair competition law based upon the Company\u2019s operation of its App Store.",
+      "risk_score": 0.6942119598388672,
+      "finbert_probs": {
+        "positive": 0.03881724178791046,
+        "neutral": 0.26697075366973877,
+        "negative": 0.6942119598388672
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_76",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 6,
       "sentence_text": "Changes in exchange rates, and in particular a strengthening of the U.S. dollar, will negatively affect the Company\u2019s net sales and gross margins as expressed in U.S. dollars.",
       "previous_sentence": "To protect against interest rate risk, the Company may use derivative instruments, offset interest rate\u2013sensitive assets and liabilities, or control duration of the investment and term debt portfolios.The following table sets forth potential impacts on the Company\u2019s investment portfolio and term debt, including the effects of any associated derivatives, that would result from a hypothetical increase in relevant interest rates as of September 30, 2023 and September 24, 2022 (dollars in millions): Interest RateSensitive InstrumentHypothetical InterestRate IncreasePotential Impact20232022Investment portfolio100 basis points, all tenorsDecline in fair value$3,089 $4,022 Term debt100 basis points, all tenorsIncrease in annual interest expense$194 $201 Foreign Exchange Rate Risk The Company\u2019s exposure to foreign exchange rate risk relates primarily to the Company being a net receiver of currencies other than the U.S. dollar.",
       "next_sentence": "Fluctuations in exchange rates may also affect the fair values of certain of the Company\u2019s assets and liabilities.",
-      "risk_score": 0.6811357140541077,
+      "risk_score": 0.681135356426239,
       "finbert_probs": {
-        "positive": 0.03170837089419365,
-        "neutral": 0.28715595602989197,
-        "negative": 0.6811357140541077
+        "positive": 0.03170842304825783,
+        "neutral": 0.28715622425079346,
+        "negative": 0.681135356426239
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_91",
+      "candidate_id": "item_3_legal_77",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 24,
+      "sentence_text": "The outcome of litigation is inherently uncertain.",
+      "previous_sentence": "The Company settled certain matters during the fourth quarter of 2023 that did not individually or in the aggregate have a material impact on the Company\u2019s financial condition or operating results.",
+      "next_sentence": "If one or more legal matters were resolved against the Company in a reporting period for amounts above management\u2019s expectations, the Company\u2019s financial condition and operating results for that reporting period could be materially adversely affected.",
+      "risk_score": 0.6578203439712524,
+      "finbert_probs": {
+        "positive": 0.021558372303843498,
+        "neutral": 0.3206212520599365,
+        "negative": 0.6578203439712524
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_78",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 5,
+      "sentence_text": "The District Court found that certain provisions of the Company\u2019s App Store Review Guidelines violate California\u2019s unfair competition law and issued an injunction enjoining the Company from prohibiting developers from including in their apps external links that direct customers to purchasing mechanisms other than Apple in-app purchasing.",
+      "previous_sentence": "On September 10, 2021, the District Court ruled in favor of the Company with respect to nine out of the ten counts included in Epic\u2019s claim.",
+      "next_sentence": "The injunction applies to apps on the U.S. storefront of the iOS and iPadOS App Store.",
+      "risk_score": 0.6337941884994507,
+      "finbert_probs": {
+        "positive": 0.042557694017887115,
+        "neutral": 0.3236481547355652,
+        "negative": 0.6337941884994507
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_79",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 6,
+      "sentence_text": "The injunction applies to apps on the U.S. storefront of the iOS and iPadOS App Store.",
+      "previous_sentence": "The District Court found that certain provisions of the Company\u2019s App Store Review Guidelines violate California\u2019s unfair competition law and issued an injunction enjoining the Company from prohibiting developers from including in their apps external links that direct customers to purchasing mechanisms other than Apple in-app purchasing.",
+      "next_sentence": "On April 24, 2023, the U.S.",
+      "risk_score": 0.5960437059402466,
+      "finbert_probs": {
+        "positive": 0.019607268273830414,
+        "neutral": 0.38434910774230957,
+        "negative": 0.5960437059402466
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_80",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 9,
+      "sentence_text": "On June 7, 2023, the Company and Epic filed petitions with the Circuit Court requesting further review of the decision.",
+      "previous_sentence": "Court of Appeals for the Ninth Circuit (the \u201cCircuit Court\u201d) affirmed the District Court\u2019s ruling.",
+      "next_sentence": "On June 30, 2023, the Circuit Court denied both petitions.",
+      "risk_score": 0.5716575980186462,
+      "finbert_probs": {
+        "positive": 0.0457480251789093,
+        "neutral": 0.38259434700012207,
+        "negative": 0.5716575980186462
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_81",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 16,
+      "sentence_text": "(together, \u201cMasimo\u201d) filed a complaint before the U.S.",
+      "previous_sentence": "Masimo Masimo Corporation and Cercacor Laboratories, Inc.",
+      "next_sentence": "International Trade Commission (the \u201cITC\u201d) alleging infringement by the Company of five patents relating to the functionality of the blood oxygen feature in Apple Watch Series 6 and 7.",
+      "risk_score": 0.5326980352401733,
+      "finbert_probs": {
+        "positive": 0.054199784994125366,
+        "neutral": 0.4131021499633789,
+        "negative": 0.5326980352401733
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_82",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 22,
+      "sentence_text": "Other Legal Proceedings The Company is subject to other legal proceedings and claims that have not been fully resolved and that have arisen in the ordinary course of business.",
+      "previous_sentence": "The Company intends to appeal the Order and seek a stay pending the appeal.",
+      "next_sentence": "The Company settled certain matters during the fourth quarter of 2023 that did not individually or in the aggregate have a material impact on the Company\u2019s financial condition or operating results.",
+      "risk_score": 0.4880596399307251,
+      "finbert_probs": {
+        "positive": 0.017518075183033943,
+        "neutral": 0.49442216753959656,
+        "negative": 0.4880596399307251
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_83",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 14,
+      "sentence_text": "Supreme Court denies Apple\u2019s petition, the stay of the injunction will expire.",
+      "previous_sentence": "If the U.S.",
+      "next_sentence": "Masimo Masimo Corporation and Cercacor Laboratories, Inc.",
+      "risk_score": 0.4491429030895233,
+      "finbert_probs": {
+        "positive": 0.023750711232423782,
+        "neutral": 0.5271064639091492,
+        "negative": 0.4491429030895233
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_84",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 11,
+      "sentence_text": "On July 17, 2023, the Circuit Court granted Apple\u2019s motion to stay enforcement of the injunction pending appeal to the U.S.",
+      "previous_sentence": "On June 30, 2023, the Circuit Court denied both petitions.",
+      "next_sentence": "Supreme Court.",
+      "risk_score": 0.43940845131874084,
+      "finbert_probs": {
+        "positive": 0.12035784125328064,
+        "neutral": 0.44023367762565613,
+        "negative": 0.43940845131874084
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_85",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 7,
       "sentence_text": "Fluctuations in exchange rates may also affect the fair values of certain of the Company\u2019s assets and liabilities.",
       "previous_sentence": "Changes in exchange rates, and in particular a strengthening of the U.S. dollar, will negatively affect the Company\u2019s net sales and gross margins as expressed in U.S. dollars.",
       "next_sentence": "To protect against foreign exchange rate risk, the Company may use derivative instruments, offset exposures, or adjust local currency pricing of its products and services.",
-      "risk_score": 0.41384485363960266,
+      "risk_score": 0.4138440489768982,
       "finbert_probs": {
-        "positive": 0.02314249612390995,
-        "neutral": 0.5630126595497131,
-        "negative": 0.41384485363960266
+        "positive": 0.023142509162425995,
+        "neutral": 0.5630133748054504,
+        "negative": 0.4138440489768982
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_92",
+      "candidate_id": "item_3_legal_86",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 10,
+      "sentence_text": "On June 30, 2023, the Circuit Court denied both petitions.",
+      "previous_sentence": "On June 7, 2023, the Company and Epic filed petitions with the Circuit Court requesting further review of the decision.",
+      "next_sentence": "On July 17, 2023, the Circuit Court granted Apple\u2019s motion to stay enforcement of the injunction pending appeal to the U.S.",
+      "risk_score": 0.34094005823135376,
+      "finbert_probs": {
+        "positive": 0.09585007280111313,
+        "neutral": 0.5632098317146301,
+        "negative": 0.34094005823135376
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_87",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 8,
+      "sentence_text": "Court of Appeals for the Ninth Circuit (the \u201cCircuit Court\u201d) affirmed the District Court\u2019s ruling.",
+      "previous_sentence": "On April 24, 2023, the U.S.",
+      "next_sentence": "On June 7, 2023, the Company and Epic filed petitions with the Circuit Court requesting further review of the decision.",
+      "risk_score": 0.21373187005519867,
+      "finbert_probs": {
+        "positive": 0.3157358467578888,
+        "neutral": 0.4705323278903961,
+        "negative": 0.21373187005519867
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_88",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 4,
+      "sentence_text": "On September 10, 2021, the District Court ruled in favor of the Company with respect to nine out of the ten counts included in Epic\u2019s claim.",
+      "previous_sentence": "District Court for the Northern District of California (the \u201cDistrict Court\u201d) against the Company alleging violations of federal and state antitrust laws and California\u2019s unfair competition law based upon the Company\u2019s operation of its App Store.",
+      "next_sentence": "The District Court found that certain provisions of the Company\u2019s App Store Review Guidelines violate California\u2019s unfair competition law and issued an injunction enjoining the Company from prohibiting developers from including in their apps external links that direct customers to purchasing mechanisms other than Apple in-app purchasing.",
+      "risk_score": 0.20898938179016113,
+      "finbert_probs": {
+        "positive": 0.10037548094987869,
+        "neutral": 0.690635085105896,
+        "negative": 0.20898938179016113
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_89",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 23,
+      "sentence_text": "The Company settled certain matters during the fourth quarter of 2023 that did not individually or in the aggregate have a material impact on the Company\u2019s financial condition or operating results.",
+      "previous_sentence": "Other Legal Proceedings The Company is subject to other legal proceedings and claims that have not been fully resolved and that have arisen in the ordinary course of business.",
+      "next_sentence": "The outcome of litigation is inherently uncertain.",
+      "risk_score": 0.19951432943344116,
+      "finbert_probs": {
+        "positive": 0.027865257114171982,
+        "neutral": 0.772620439529419,
+        "negative": 0.19951432943344116
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_90",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 20,
+      "sentence_text": "The Order will not go into effect until the end of the administrative review period, which is currently expected to end on December 25, 2023.",
+      "previous_sentence": "On October 26, 2023, the ITC entered a limited exclusion order (the \u201cOrder\u201d) prohibiting importation and sales in the United States of Apple Watch models with blood oxygen sensing functionality, which includes Apple Watch Series 9 and Ultra 2.",
+      "next_sentence": "The Company intends to appeal the Order and seek a stay pending the appeal.",
+      "risk_score": 0.12746122479438782,
+      "finbert_probs": {
+        "positive": 0.016228744760155678,
+        "neutral": 0.8563100099563599,
+        "negative": 0.12746122479438782
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_91",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 2,
       "sentence_text": "The Company uses various strategies to manage these risks; however, they may still impact the Company\u2019s consolidated financial statements.",
       "previous_sentence": "Quantitative and Qualitative Disclosures About Market Risk The Company is exposed to economic risk from interest rates and foreign exchange rates.",
       "next_sentence": "Interest Rate Risk The Company is primarily exposed to fluctuations in U.S. interest rates and their impact on the Company\u2019s investment portfolio and term debt.",
-      "risk_score": 0.09788083285093307,
+      "risk_score": 0.09788085520267487,
       "finbert_probs": {
-        "positive": 0.05289508029818535,
+        "positive": 0.05289509519934654,
         "neutral": 0.8492240309715271,
-        "negative": 0.09788083285093307
+        "negative": 0.09788085520267487
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_93",
+      "candidate_id": "item_7a_market_risk_92",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 3,
       "sentence_text": "Interest Rate Risk The Company is primarily exposed to fluctuations in U.S. interest rates and their impact on the Company\u2019s investment portfolio and term debt.",
       "previous_sentence": "The Company uses various strategies to manage these risks; however, they may still impact the Company\u2019s consolidated financial statements.",
       "next_sentence": "Increases in interest rates will negatively affect the fair value of the Company\u2019s investment portfolio and increase the interest expense on the Company\u2019s term debt.",
-      "risk_score": 0.09622355550527573,
+      "risk_score": 0.09622353315353394,
       "finbert_probs": {
-        "positive": 0.02452741377055645,
+        "positive": 0.024527454748749733,
         "neutral": 0.8792490363121033,
-        "negative": 0.09622355550527573
+        "negative": 0.09622353315353394
       }
     },
     {
-      "candidate_id": "item_1c_cybersecurity_94",
+      "candidate_id": "item_1c_cybersecurity_93",
       "section_id": "item_1c_cybersecurity",
       "section_label": "Item 1C",
       "sentence_index": 1,
       "sentence_text": "Cybersecurity Not applicable.",
       "previous_sentence": "Item 1C.",
       "next_sentence": null,
-      "risk_score": 0.07521819323301315,
+      "risk_score": 0.0752180814743042,
       "finbert_probs": {
-        "positive": 0.02128136157989502,
-        "neutral": 0.903500497341156,
-        "negative": 0.07521819323301315
+        "positive": 0.021281342953443527,
+        "neutral": 0.9035005569458008,
+        "negative": 0.0752180814743042
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_95",
+      "candidate_id": "item_7a_market_risk_94",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 10,
       "sentence_text": "The VAR model used a Monte Carlo simulation.",
       "previous_sentence": "However, the Company may choose to not hedge certain foreign currency exposures for a variety of reasons, including accounting considerations or prohibitive cost.The Company applied a value-at-risk (\u201cVAR\u201d) model to its foreign currency derivative positions to assess the potential impact of fluctuations in exchange rates.",
       "next_sentence": "The VAR is the maximum expected loss in fair value, for a given confidence interval, to the Company\u2019s foreign currency derivative positions due to adverse movements in rates.",
-      "risk_score": 0.038960523903369904,
+      "risk_score": 0.03896048665046692,
       "finbert_probs": {
         "positive": 0.03145723044872284,
         "neutral": 0.9295822381973267,
-        "negative": 0.038960523903369904
+        "negative": 0.03896048665046692
       }
     },
     {
-      "candidate_id": "item_7a_market_risk_96",
+      "candidate_id": "item_7a_market_risk_95",
       "section_id": "item_7a_market_risk",
       "section_label": "Item 7A",
       "sentence_index": 13,
       "sentence_text": "Changes in the Company\u2019s underlying foreign currency exposures, which were excluded from the assessment, generally offset changes in the fair values of the Company\u2019s foreign currency derivatives.",
       "previous_sentence": "Based on the results of the model, the Company estimates, with 95% confidence, a maximum one-day loss in fair value of $669 million and $1.0 billion as of September 30, 2023 and September 24, 2022, respectively.",
       "next_sentence": null,
-      "risk_score": 0.03743977099657059,
+      "risk_score": 0.03743976727128029,
       "finbert_probs": {
-        "positive": 0.647210419178009,
-        "neutral": 0.31534987688064575,
-        "negative": 0.03743977099657059
+        "positive": 0.6472111344337463,
+        "neutral": 0.31534910202026367,
+        "negative": 0.03743976727128029
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_96",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 19,
+      "sentence_text": "On October 26, 2023, the ITC entered a limited exclusion order (the \u201cOrder\u201d) prohibiting importation and sales in the United States of Apple Watch models with blood oxygen sensing functionality, which includes Apple Watch Series 9 and Ultra 2.",
+      "previous_sentence": "In its complaint, Masimo sought a permanent exclusion order prohibiting importation to the United States of certain Apple Watch models that include blood oxygen sensing functionality.",
+      "next_sentence": "The Order will not go into effect until the end of the administrative review period, which is currently expected to end on December 25, 2023.",
+      "risk_score": 0.030956953763961792,
+      "finbert_probs": {
+        "positive": 0.2576625943183899,
+        "neutral": 0.7113804221153259,
+        "negative": 0.030956953763961792
       }
     },
     {
@@ -1574,11 +1573,11 @@
       "sentence_text": "Quantitative and Qualitative Disclosures About Market Risk The Company is exposed to economic risk from interest rates and foreign exchange rates.",
       "previous_sentence": "Item 7A.",
       "next_sentence": "The Company uses various strategies to manage these risks; however, they may still impact the Company\u2019s consolidated financial statements.",
-      "risk_score": 0.027972480282187462,
+      "risk_score": 0.027972493320703506,
       "finbert_probs": {
-        "positive": 0.03468160331249237,
+        "positive": 0.034681536257267,
         "neutral": 0.9373459815979004,
-        "negative": 0.027972480282187462
+        "negative": 0.027972493320703506
       }
     },
     {
@@ -1589,11 +1588,11 @@
       "sentence_text": "To protect against interest rate risk, the Company may use derivative instruments, offset interest rate\u2013sensitive assets and liabilities, or control duration of the investment and term debt portfolios.The following table sets forth potential impacts on the Company\u2019s investment portfolio and term debt, including the effects of any associated derivatives, that would result from a hypothetical increase in relevant interest rates as of September 30, 2023 and September 24, 2022 (dollars in millions): Interest RateSensitive InstrumentHypothetical InterestRate IncreasePotential Impact20232022Investment portfolio100 basis points, all tenorsDecline in fair value$3,089 $4,022 Term debt100 basis points, all tenorsIncrease in annual interest expense$194 $201 Foreign Exchange Rate Risk The Company\u2019s exposure to foreign exchange rate risk relates primarily to the Company being a net receiver of currencies other than the U.S. dollar.",
       "previous_sentence": "Increases in interest rates will negatively affect the fair value of the Company\u2019s investment portfolio and increase the interest expense on the Company\u2019s term debt.",
       "next_sentence": "Changes in exchange rates, and in particular a strengthening of the U.S. dollar, will negatively affect the Company\u2019s net sales and gross margins as expressed in U.S. dollars.",
-      "risk_score": 0.024562660604715347,
+      "risk_score": 0.024562668055295944,
       "finbert_probs": {
-        "positive": 0.05337734892964363,
-        "neutral": 0.9220600128173828,
-        "negative": 0.024562660604715347
+        "positive": 0.05337750166654587,
+        "neutral": 0.9220598340034485,
+        "negative": 0.024562668055295944
       }
     },
     {
@@ -1604,11 +1603,11 @@
       "sentence_text": "To protect against foreign exchange rate risk, the Company may use derivative instruments, offset exposures, or adjust local currency pricing of its products and services.",
       "previous_sentence": "Fluctuations in exchange rates may also affect the fair values of certain of the Company\u2019s assets and liabilities.",
       "next_sentence": "However, the Company may choose to not hedge certain foreign currency exposures for a variety of reasons, including accounting considerations or prohibitive cost.The Company applied a value-at-risk (\u201cVAR\u201d) model to its foreign currency derivative positions to assess the potential impact of fluctuations in exchange rates.",
-      "risk_score": 0.01609914004802704,
+      "risk_score": 0.016099147498607635,
       "finbert_probs": {
         "positive": 0.05694273114204407,
         "neutral": 0.9269581437110901,
-        "negative": 0.01609914004802704
+        "negative": 0.016099147498607635
       }
     },
     {
@@ -1619,11 +1618,11 @@
       "sentence_text": "However, the Company may choose to not hedge certain foreign currency exposures for a variety of reasons, including accounting considerations or prohibitive cost.The Company applied a value-at-risk (\u201cVAR\u201d) model to its foreign currency derivative positions to assess the potential impact of fluctuations in exchange rates.",
       "previous_sentence": "To protect against foreign exchange rate risk, the Company may use derivative instruments, offset exposures, or adjust local currency pricing of its products and services.",
       "next_sentence": "The VAR model used a Monte Carlo simulation.",
-      "risk_score": 0.01309338491410017,
+      "risk_score": 0.013093380257487297,
       "finbert_probs": {
-        "positive": 0.17762160301208496,
-        "neutral": 0.8092849850654602,
-        "negative": 0.01309338491410017
+        "positive": 0.17762154340744019,
+        "neutral": 0.809285044670105,
+        "negative": 0.013093380257487297
       }
     }
   ]
