@@ -43,6 +43,7 @@ What is implemented now:
 - yearly extraction artifacts with FinBERT-ranked candidates and numeric deltas
 - curator artifacts with company-year embeddings
 - a standalone FAISS-based company matcher over curator artifacts
+- a new `orchestration/` layer that resumes missing target-company artifacts, runs company matching, assembles peer context, and calls a comparison agent through OpenRouter
 
 Current practical status:
 
@@ -51,10 +52,10 @@ Current practical status:
 
 What is not yet implemented in the current broader system:
 
-- final analyst-style financial-health reasoning on top of matches
+- a mature analyst-style financial-health reasoning layer on top of matches
 - reliable structured table export from `Item 8`
 - robust production-grade section extraction for every edge case filing
-- a fully integrated end-to-end path from ingestion through retrieval to final report generation
+- a fully polished end-to-end path from ingestion through retrieval to final report generation
 
 ## Design Principle So Far
 
@@ -75,11 +76,12 @@ This decision was made to ensure that:
 
 ## Current System Structure
 
-The current codebase is split across three main implemented layers:
+The current codebase is split across four main implemented layers:
 
 1. `data-ingestion/`
 2. `data-extraction/`
 3. `rag-matching/`
+4. `orchestration/`
 
 The major logical parts are:
 
@@ -92,6 +94,7 @@ The major logical parts are:
 7. yearly extraction artifacts
 8. curator company-year artifacts with embeddings
 9. nearest-neighbor company retrieval over curator artifacts
+10. orchestration and comparison-bundle generation
 
 ## File Responsibilities
 
@@ -154,6 +157,12 @@ Its responsibilities are:
 - format the cleaned metrics into simple standardized records
 
 It is responsible for the "numbers" side of ingestion.
+
+Important detail:
+
+- the current saved output shape is point-list based again
+- annual and quarterly metric outputs are expected to be lists of datapoint dicts rather than compact parallel arrays
+- this rollback was done to keep the active extraction pipeline compatible with fresh ingestion runs
 
 ### `data-ingestion/document_fetcher.py`
 
@@ -286,6 +295,35 @@ Important detail:
 - it does **not** use the older Chroma demo directories
 - it assumes curator files already contain valid stored embedding vectors
 
+### `orchestration/orchestration_pipeline.py`, `orchestration/runner.py`, `orchestration/comparison_agent.py`, and `orchestration/report_models.py`
+
+These files implement the current top-level comparison flow.
+
+Responsibilities:
+
+- accept a user ticker through `orchestration/runner.py`
+- check whether ingestion, extraction, and curator artifacts for the target company already exist
+- run only the missing target-company steps
+- call the FAISS matcher to retrieve the top distinct peer companies
+- expand each matched company into `matched year + up to 2 future curator years`
+- assemble one structured comparison bundle under `orchestration/outputs/<TICKER>/`
+- call a final comparison agent through OpenRouter
+- save the returned report content together with the bundle
+
+Important detail:
+
+- this is intentionally a hybrid layer, not a planner-style agent runtime
+- orchestration is deterministic for data preparation and uses OpenRouter only for the final comparison/report step
+- `orchestration/openrouter_client.py` now loads OpenRouter config from the repo `.env`
+- the current comparison report is no longer just freeform text sections
+- it now returns structured fields including:
+  - posture
+  - target profile
+  - peer snapshot
+  - risk overlap rows
+  - forward watchlist
+  - short narrative sections
+
 ## Historical / Experimental Context
 
 Earlier in the project, there was a more focused `Meta`-only experiment around `sec-parser` parsing quality and deterministic validation.
@@ -345,6 +383,20 @@ That JSON contains:
 - parser mode
 - extracted filing sections
 
+For financial metrics, the expected current schema is:
+
+- `financial_data.annual[metric] -> list[dict]`
+- `financial_data.quarterly[metric] -> list[dict]`
+
+Each datapoint typically includes:
+
+- `year`
+- `quarter` for quarterly points
+- `end_date`
+- `value`
+- `tag`
+- `accession`
+
 This output is the main machine-readable artifact that future stages will build on.
 
 ## Current Parser Behavior
@@ -382,6 +434,7 @@ Additional recent updates:
 5. XBRL fallback tags can now be merged across years so companies like `GOOG` do not lose recent or historical coverage when the active tag changes.
 6. In the plain-text extractor, section headings are matched line-by-line so references to `Item 1A` or `Item 7A` inside paragraph text do not accidentally terminate a section.
 7. Section heading matching is explicitly case-insensitive so all-caps filings are handled more consistently.
+8. The financial output format was rolled back from compact parallel arrays to point-list records so fresh ingestion artifacts remain compatible with the active extraction pipeline.
 
 Interpretation:
 
@@ -434,13 +487,13 @@ This is especially relevant for `Item 8`, where financial statements matter the 
 The current parser configuration is a workaround built on top of `Edgar10QParser`.
 It works, but it is not a perfect native `10-K` parser.
 
-### 4. Retrieval is implemented, but still narrow
+### 4. Retrieval and orchestration are implemented, but still narrow
 
-The project now has a working nearest-neighbor company matcher over curator artifacts, but it is still a standalone tool and not yet connected to a final report-generation layer.
+The project now has a working nearest-neighbor company matcher over curator artifacts plus a new orchestration layer, and the comparison report now includes a stronger structured layout. However, it is still a v1 analyst layer rather than a mature decision-support engine.
 
-### 5. No financial-health synthesis layer yet
+### 5. No mature financial-health synthesis layer yet
 
-The system does not yet take the ingested artifact and produce a final financial-risk or health conclusion.
+The system can now assemble target and peer context and call a comparison agent, but it does not yet produce a deeply designed financial-risk or health conclusion.
 
 ## Where the Project Appears To Be Headed
 
@@ -456,8 +509,8 @@ Based on the implemented code and earlier project direction, the likely roadmap 
 In other words:
 
 - today: deterministic ingestion
-- next: better extraction and storage
-- later: similarity search and LLM-based interpretation
+- next: better extraction, orchestration, and storage
+- later: stronger similarity-aware LLM interpretation
 
 ## How A Future LLM Should Interpret The Current Codebase
 
@@ -472,6 +525,7 @@ If a future LLM is asked to help on this project, it should understand:
 - section extraction is functional but still evolving
 - table extraction is a known weak area
 - the long-term goal is company comparison and financial-health analysis, not just filing download
+- `orchestration/` is now the current top-level way to wire ingestion, retrieval, and comparison together
 
 The future LLM should avoid assuming:
 
@@ -489,7 +543,7 @@ The most sensible next development steps are:
 2. create structured export for `Item 8` tables
 3. define the schema for storing ingested company artifacts for retrieval/comparison
 4. decide what features will drive similarity between companies
-5. add an LLM layer only after the deterministic ingestion artifact is considered trustworthy
+5. improve the comparison-agent prompt/output design now that the orchestration layer is in place
 
 ## Bottom Line
 
@@ -502,5 +556,5 @@ It now has a working deterministic ingestion pipeline that combines:
 
 into one saved artifact per company.
 
-The main unfinished gap is not ingestion itself.
-The main unfinished gap is turning those ingested artifacts into a retrieval-and-analysis system for company comparison and financial-health reasoning.
+The main unfinished gap is no longer basic wiring.
+The main unfinished gap is improving the quality and usefulness of the final comparison-and-reasoning layer on top of the now-wired ingestion, retrieval, and orchestration stack.

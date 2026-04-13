@@ -6,6 +6,8 @@ Provide a standalone retrieval tool that accepts one curator JSON file and retur
 
 This is the current retrieval layer for company comparison experiments.
 
+This matcher is also the retrieval backend used by the new top-level `orchestration/` package.
+
 ---
 
 ## Canonical Inputs
@@ -102,6 +104,8 @@ Current `matches` payload is:
 - `filing_year`
 - `similarity`
 
+The standalone matcher may also have `company` available internally, but orchestration should treat `ticker`, `filing_year`, and `similarity` as the stable minimum contract.
+
 Internally, the matcher also tracks:
 
 - `company`
@@ -149,6 +153,25 @@ The current matcher does **not** use:
 - `src/pipeline.py`
 
 Those belong to older Chroma-based RAG demos and are separate from the active curator matching flow.
+
+---
+
+## Relationship To Orchestration
+
+The new `orchestration/` layer uses this matcher as a deterministic substep:
+
+1. prepare the target company curator artifact
+2. call the matcher for top distinct peers
+3. use each matched `ticker + filing_year` as the anchor for collecting up to 2 future curator years
+4. pass that assembled context to the OpenRouter-backed comparison agent
+
+The matcher itself remains standalone and unchanged; orchestration is the layer that adds report assembly on top of it.
+
+The current comparison layer built on top of matcher output is structured rather than text-only. It uses the matched `ticker + filing_year` anchors to populate:
+
+- peer neighborhood snapshot
+- current risk overlap rows
+- forward watchlist items based on later peer years
 
 ---
 
