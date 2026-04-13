@@ -23,7 +23,7 @@ from curator_models import (
 
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 OPENROUTER_URL     = "https://openrouter.ai/api/v1/chat/completions"
-CLAUDE_MODEL       = "anthropic/claude-haiku-4.5"
+MODEL              = "anthropic/claude-sonnet-4"
 MAX_RETRIES        = 3
 
 # BGE-M3 loaded once at module level — downloads ~2GB on first run,
@@ -240,7 +240,7 @@ def call_claude_with_retry(
                 "Content-Type": "application/json",
             },
             data=json.dumps({
-                "model":      CLAUDE_MODEL,
+                "model":      MODEL,
                 "max_tokens": 16000,
                 "messages":   [{"role": "user", "content": current_prompt}],
             })
