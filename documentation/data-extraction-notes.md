@@ -223,6 +223,12 @@ There is no thresholded boolean label and no final structured risk classificatio
 
 The pipeline uses the annual financial series already present in the ingestion artifact.
 
+Important assumption:
+
+- the active extraction code expects `financial_data.annual[metric]` to be a list of yearly datapoint dicts
+- fresh ingestion runs are expected to match that schema
+- if an ingestion artifact uses compact `years/values/deltas` arrays, it was produced during an incompatible schema window and should be regenerated
+
 Current metrics:
 
 - `Revenues`
@@ -394,7 +400,7 @@ Interpretation:
 Building on top of the original structure above, we have introduced the "Curator Agent". This agent acts as a strict processor that transforms the FinBERT text candidates into highly structured, validated risk signals.
 
 **What was added:**
-- **`curator_agent.py`**: The agent orchestrator. It applies deterministic constraints (stratified section allocation, fallback fillers) to create highly structured extraction arrays, fetching LLM analysis via Claude.
+- **`curator_agent.py`**: The agent orchestrator. It applies deterministic constraints (stratified section allocation, fallback fillers) to create highly structured extraction arrays, fetching LLM analysis through OpenRouter.
 - **`curator_models.py`**: Strict Pydantic models mapping the project's precise risk taxonomy and delta labels.
 - **`company_filing_embedding.py`**: Automatically parses a chronological folder of yearly extractions for a given ticker without interactive prompting.
 - **`test_curator_agent.py`**: Dedicated deterministic unit tests safeguarding candidate logic, financial bucketing logic, prompt structures, and embedding metadata formats. 
@@ -406,13 +412,11 @@ These curator files are now the canonical input to the active company-matching r
 
 **Running Phase 2:**
 First, ensure your key is valid and without trailing newlines:
-```bash
-export OPENROUTER_API_KEY='sk-or-v1-...'
-```
+Set `OPENROUTER_API_KEY` in your shell or repo `.env`.
 
 Run the batch embedding processor:
 ```bash
-python3 data-extraction/company_filing_embedding.py AAPL
+python data-extraction/company_filing_embedding.py AAPL
 ```
 
 To run Phase 2 tests isolated from API calls:
@@ -466,3 +470,49 @@ Matcher tests:
 ```bash
 python -m unittest test_rag_matching.py
 ```
+
+---
+
+## Phase 4: Orchestration Layer
+
+There is now a top-level orchestration package in:
+
+- `orchestration/`
+
+This layer is the current end-to-end controller for user-company comparison.
+
+Current behavior:
+
+1. accept a target ticker
+2. reuse existing ingestion, extraction, and curator artifacts when present
+3. build only the missing target-company artifacts when needed
+4. run RAG matching against the target curator file
+5. take the top 2 matched companies
+6. expand each match into `matched year + up to 2 future curator years`
+7. assemble a structured comparison bundle
+8. call a final comparison agent through OpenRouter
+9. save the final bundle under `orchestration/outputs/<TICKER>/`
+
+Run:
+
+```bash
+python orchestration/runner.py AAPL --json
+```
+
+Important details:
+
+- `orchestration/openrouter_client.py` loads OpenRouter config from the repo `.env`
+- orchestration does not rebuild the FAISS index
+- if FAISS is unavailable, the run stops at the matching step and writes a structured failure artifact
+- the current orchestration controller lives in `orchestration/orchestration_pipeline.py`
+- the comparison report now returns structured fields rather than just generic prose sections
+
+Current report shape includes:
+
+- `summary`
+- `posture`
+- `target_profile`
+- `peer_snapshot`
+- `risk_overlap_rows`
+- `forward_watchlist`
+- `narrative_sections`
