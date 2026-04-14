@@ -325,50 +325,32 @@ class DataCleaner:
 
         return combined_entries
 
-    @staticmethod
-    def _to_millions(value) -> float | None:
-        if value is None:
-            return None
-        return round(value / 1_000_000, 2)
+    def _format_annual(self, entries: list[dict]) -> list[dict]:
+        return [
+            {
+                "year": self._infer_year(entry),
+                "end_date": entry.get("end"),
+                "value": entry.get("val"),
+                "tag": entry.get("_tag", ""),
+                "accession": entry.get("accn"),
+            }
+            for entry in entries
+        ]
 
-    @staticmethod
-    def _compute_deltas(values: list) -> list:
-        deltas = []
-        for i, v in enumerate(values):
-            if i == 0 or values[i - 1] is None or v is None:
-                deltas.append(None)
-            else:
-                deltas.append(round(v - values[i - 1], 2))
-        return deltas
-
-    def _format_annual(self, entries: list[dict]) -> dict:
-        tag = entries[0].get("_tag", "") if entries else ""
-        years = [self._infer_year(e) for e in entries]
-        values = [self._to_millions(e.get("val")) for e in entries]
-        return {
-            "tag": tag,
-            "unit": "USD_millions",
-            "years": years,
-            "values": values,
-            "deltas": self._compute_deltas(values),
-        }
-
-    def _format_quarterly(self, entries: list[dict]) -> dict:
-        tag = entries[0].get("_tag", "") if entries else ""
-        periods = []
-        values = []
-        for e in entries:
-            year = self._infer_year(e)
-            quarter = e.get("quarter", self._infer_quarter(e))
-            periods.append(f"{year}Q{quarter}" if year and quarter else (e.get("end") or ""))
-            values.append(self._to_millions(e.get("val")))
-        return {
-            "tag": tag,
-            "unit": "USD_millions",
-            "periods": periods,
-            "values": values,
-            "deltas": self._compute_deltas(values),
-        }
+    def _format_quarterly(self, entries: list[dict]) -> list[dict]:
+        results: list[dict] = []
+        for entry in entries:
+            results.append(
+                {
+                    "year": self._infer_year(entry),
+                    "quarter": entry.get("quarter", self._infer_quarter(entry)),
+                    "end_date": entry.get("end"),
+                    "value": entry.get("val"),
+                    "tag": entry.get("_tag", ""),
+                    "accession": entry.get("accn"),
+                }
+            )
+        return results
 
     def get_all_values(
         self,
@@ -376,7 +358,7 @@ class DataCleaner:
         metric_alias: str,
         n_years: int = 5,
         taxonomy: str = "us-gaap",
-    ) -> dict[str, dict]:
+    ) -> dict[str, list[dict]]:
         n_quarters = n_years * 4
 
         raw_entries = self._resolve_entries(facts, metric_alias, taxonomy=taxonomy)
