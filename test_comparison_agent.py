@@ -79,9 +79,9 @@ class ComparisonAgentTests(unittest.TestCase):
                 "OperatingCashFlow": {"value": -0.21, "label": "severe_decline"},
             },
             risk_signals=[
-                {"signal_type": "foreign_currency_exposure", "severity": "high", "summary": "FX pressure remained material.", "section": "Item 7"},
-                {"signal_type": "supply_chain_concentration", "severity": "high", "summary": "Supplier concentration remains high.", "section": "Item 1A"},
-                {"signal_type": "trade_tariff_risk", "severity": "medium", "summary": "Tariff changes could hurt margins.", "section": "Item 7"},
+                {"signal_type": "foreign_currency_exposure", "severity": "high", "summary": "FX pressure remained material.", "section": "Item 7", "citation": "AAPL 10-K 2025, Item 7"},
+                {"signal_type": "supply_chain_concentration", "severity": "high", "summary": "Supplier concentration remains high.", "section": "Item 1A", "citation": "AAPL 10-K 2025, Item 1A"},
+                {"signal_type": "trade_tariff_risk", "severity": "medium", "summary": "Tariff changes could hurt margins.", "section": "Item 7", "citation": "AAPL 10-K 2025, Item 7"},
             ],
         )
         goog_2024 = self._write_curator(
@@ -95,8 +95,8 @@ class ComparisonAgentTests(unittest.TestCase):
                 "LongTermDebt": {"value": -0.16, "label": "moderate_decline"},
             },
             risk_signals=[
-                {"signal_type": "foreign_currency_exposure", "severity": "medium", "summary": "FX affected international revenue.", "section": "Item 7"},
-                {"signal_type": "pricing_power_erosion", "severity": "medium", "summary": "Fee changes pressured platform revenue.", "section": "Item 7"},
+                {"signal_type": "foreign_currency_exposure", "severity": "medium", "summary": "FX affected international revenue.", "section": "Item 7", "citation": "GOOG 10-K 2024, Item 7"},
+                {"signal_type": "pricing_power_erosion", "severity": "medium", "summary": "Fee changes pressured platform revenue.", "section": "Item 7", "citation": "GOOG 10-K 2024, Item 7"},
             ],
         )
         goog_2025 = self._write_curator(
@@ -109,8 +109,8 @@ class ComparisonAgentTests(unittest.TestCase):
                 "OperatingCashFlow": {"value": -0.07, "label": "moderate_decline"},
             },
             risk_signals=[
-                {"signal_type": "pricing_power_erosion", "severity": "high", "summary": "Monetization pressure deepened.", "section": "Item 7"},
-                {"signal_type": "regulatory_investigation", "severity": "high", "summary": "New regulatory probe expanded.", "section": "Item 3"},
+                {"signal_type": "pricing_power_erosion", "severity": "high", "summary": "Monetization pressure deepened.", "section": "Item 7", "citation": "GOOG 10-K 2025, Item 7"},
+                {"signal_type": "regulatory_investigation", "severity": "high", "summary": "New regulatory probe expanded.", "section": "Item 3", "citation": "GOOG 10-K 2025, Item 3"},
             ],
         )
         meta_2023 = self._write_curator(
@@ -124,8 +124,8 @@ class ComparisonAgentTests(unittest.TestCase):
                 "OperatingCashFlow": {"value": 0.41, "label": "strong_growth"},
             },
             risk_signals=[
-                {"signal_type": "foreign_currency_exposure", "severity": "high", "summary": "FX hurt advertising revenue.", "section": "Item 7"},
-                {"signal_type": "pricing_power_erosion", "severity": "high", "summary": "Ad pricing weakened.", "section": "Item 7"},
+                {"signal_type": "foreign_currency_exposure", "severity": "high", "summary": "FX hurt advertising revenue.", "section": "Item 7", "citation": "META 10-K 2023, Item 7"},
+                {"signal_type": "pricing_power_erosion", "severity": "high", "summary": "Ad pricing weakened.", "section": "Item 7", "citation": "META 10-K 2023, Item 7"},
             ],
         )
         meta_2024 = self._write_curator(
@@ -138,7 +138,7 @@ class ComparisonAgentTests(unittest.TestCase):
                 "Cash": {"value": -0.11, "label": "moderate_decline"},
             },
             risk_signals=[
-                {"signal_type": "cybersecurity_incident", "severity": "high", "summary": "Security event response costs increased.", "section": "Item 1C"},
+                {"signal_type": "cybersecurity_incident", "severity": "high", "summary": "Security event response costs increased.", "section": "Item 1C", "citation": "META 10-K 2024, Item 1C"},
             ],
         )
 
@@ -181,6 +181,7 @@ class ComparisonAgentTests(unittest.TestCase):
         self.assertEqual(profile.positive_deltas[0].metric, "Revenues")
         self.assertEqual(profile.negative_deltas[0].metric, "OperatingCashFlow")
         self.assertEqual(profile.top_risks[0].signal_type, "foreign_currency_exposure")
+        self.assertEqual(profile.top_risks[0].citation, "AAPL 10-K 2025, Item 7")
 
     def test_risk_overlap_classification(self) -> None:
         root = self._make_temp_dir("risk_overlap")
@@ -261,7 +262,8 @@ class ComparisonAgentTests(unittest.TestCase):
                     "Growth metrics still offset part of the downside picture.",
                 ],
                 "narrative_sections": [
-                    {"title": "What Looks Similar", "content": "FX pressure and pricing pressure show up across the peer neighborhood."},
+                    {"title": "Current Posture", "content": "Apple remains under real but manageable pressure based on the target filing's cited risks and current deltas."},
+                    {"title": "Peer Comparison", "content": "FX pressure and pricing pressure show up across the peer neighborhood."},
                     {"title": "What To Watch Next", "content": "Regulatory and cybersecurity issues appear in later peer years and are worth monitoring."},
                 ],
             }
@@ -272,8 +274,20 @@ class ComparisonAgentTests(unittest.TestCase):
         self.assertEqual(report.status, "completed")
         self.assertEqual(report.model_name, "fake-openrouter-model")
         self.assertEqual(report.posture.label, "Elevated")
-        self.assertEqual(len(report.narrative_sections), 2)
+        self.assertEqual(len(report.narrative_sections), 3)
+        self.assertTrue(report.narrative_sections[0].citations)
         self.assertIn("mixed but manageable", report.summary.lower())
+
+    def test_deterministic_report_builds_three_grounded_sections(self) -> None:
+        root = self._make_temp_dir("deterministic_sections")
+        bundle = self._make_bundle(root)
+
+        report = build_deterministic_report(bundle)
+
+        self.assertEqual(len(report.narrative_sections), 3)
+        self.assertEqual([section.title for section in report.narrative_sections], ["Current Posture", "Peer Comparison", "What To Watch Next"])
+        self.assertTrue(all(section.content.strip() for section in report.narrative_sections))
+        self.assertTrue(report.narrative_sections[0].citations)
 
     def test_failure_fallback_keeps_deterministic_structure(self) -> None:
         root = self._make_temp_dir("llm_failure")

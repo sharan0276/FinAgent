@@ -52,6 +52,7 @@ def _unique_risk_items(curator: dict[str, Any], *, limit: int = 5) -> list[RiskI
                 severity=str(top.get("severity", "unknown")),
                 section=top.get("section"),
                 summary=top.get("summary"),
+                citation=top.get("citation"),
                 occurrences=len(signals),
             )
         )
@@ -82,6 +83,24 @@ def build_target_profile(curator: dict[str, Any]) -> TargetProfile:
         negative_deltas=negatives[:4],
         top_risks=_unique_risk_items(curator),
     )
+
+
+def _format_metric_list(items: list[MetricDeltaItem]) -> str:
+    if not items:
+        return "no standout metric deltas"
+    return ", ".join(f"{item.metric} ({item.label})" for item in items)
+
+
+def _dedupe_preserve_order(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for value in values:
+        cleaned = str(value).strip()
+        if not cleaned or cleaned in seen:
+            continue
+        seen.add(cleaned)
+        ordered.append(cleaned)
+    return ordered
 
 
 def _risk_type_set(curator: dict[str, Any]) -> set[str]:
@@ -227,6 +246,65 @@ def build_forward_watchlist(bundle: ComparisonBundle, target_curator: dict[str, 
     return watchlist
 
 
+def build_narrative_sections(
+    *,
+    target_profile: TargetProfile,
+    posture: PostureCard,
+    peer_snapshot: PeerSnapshot,
+    risk_overlap_rows: list[RiskOverlapRow],
+    forward_watchlist: list[ForwardWatchItem],
+) -> list[ReportSection]:
+    shared_now = next((row.risk_types for row in risk_overlap_rows if row.group == "shared_now"), [])
+    target_only_now = next((row.risk_types for row in risk_overlap_rows if row.group == "target_only_now"), [])
+
+    current_citations = _dedupe_preserve_order(
+        [item.citation or "" for item in target_profile.top_risks[:4]]
+    )
+    current_top_risks = ", ".join(risk.signal_type for risk in target_profile.top_risks[:3]) or "no dominant current risk cluster"
+    current_content = (
+        f"{target_profile.company or target_profile.ticker} currently screens as {posture.label.lower()} relative to the matched peer set. "
+        f"The current filing is led by {current_top_risks}, while positive deltas are concentrated in {_format_metric_list(target_profile.positive_deltas[:3])} "
+        f"and negative deltas are concentrated in {_format_metric_list(target_profile.negative_deltas[:3])}. "
+        f"This section is grounded in the target filing's highest-priority cited risks rather than peer inference."
+    )
+
+    peer_citations = _dedupe_preserve_order(
+        [item.citation or "" for item in target_profile.top_risks[:2]]
+    )
+    peer_shared = ", ".join(shared_now[:6]) if shared_now else "no large shared current risk block"
+    peer_differences = ", ".join(target_only_now[:4] or peer_snapshot.target_differences[:4]) or "no standout target-only current differences"
+    peer_content = (
+        f"The peer neighborhood shares current exposures around {peer_shared}. "
+        f"Across the neighborhood, common strengths center on {', '.join(peer_snapshot.common_strengths[:4]) or 'limited repeated financial strengths'}, "
+        f"while common pressures center on {', '.join(peer_snapshot.common_pressures[:4]) or 'limited repeated financial pressure signals'}. "
+        f"Relative to peers, the target stands apart most clearly on {peer_differences}."
+    )
+
+    watch_citations = _dedupe_preserve_order(
+        [evidence for item in forward_watchlist[:3] for evidence in item.peer_evidence[:2]]
+    )
+    if forward_watchlist:
+        watch_summary = ", ".join(
+            f"{item.watch_risk_type} ({item.confidence})" for item in forward_watchlist[:4]
+        )
+        watch_content = (
+            f"Later peer filings point to {watch_summary} as the most relevant watch areas after the matched year. "
+            f"These items are presented as pattern-based watch signals from peers, not as forecasts for the target company. "
+            f"The supporting evidence below preserves the underlying peer-year statements used to assemble the watchlist."
+        )
+    else:
+        watch_content = (
+            "No forward peer-emergent patterns were strong enough to populate the watchlist. "
+            "That should be read as limited comparable evidence, not as a clean bill of health."
+        )
+
+    return [
+        ReportSection(title="Current Posture", content=current_content, citations=current_citations),
+        ReportSection(title="Peer Comparison", content=peer_content, citations=peer_citations),
+        ReportSection(title="What To Watch Next", content=watch_content, citations=watch_citations),
+    ]
+
+
 def build_deterministic_report(bundle: ComparisonBundle) -> ComparisonReportResult:
     if not bundle.target.curator_path:
         return ComparisonReportResult(
@@ -242,6 +320,13 @@ def build_deterministic_report(bundle: ComparisonBundle) -> ComparisonReportResu
     peer_snapshot = build_peer_snapshot(target_curator, peer_curators)
     posture = determine_posture(target_curator, risk_overlap_rows)
     forward_watchlist = build_forward_watchlist(bundle, target_curator)
+    narrative_sections = build_narrative_sections(
+        target_profile=target_profile,
+        posture=posture,
+        peer_snapshot=peer_snapshot,
+        risk_overlap_rows=risk_overlap_rows,
+        forward_watchlist=forward_watchlist,
+    )
 
     return ComparisonReportResult(
         status="completed",
@@ -254,10 +339,7 @@ def build_deterministic_report(bundle: ComparisonBundle) -> ComparisonReportResu
         peer_snapshot=peer_snapshot,
         risk_overlap_rows=risk_overlap_rows,
         forward_watchlist=forward_watchlist,
-        narrative_sections=[
-            ReportSection(title="What Looks Similar", content="Peer similarity summary unavailable."),
-            ReportSection(title="What To Watch Next", content="Forward watchlist summary unavailable."),
-        ],
+        narrative_sections=narrative_sections,
     )
 
 
@@ -276,8 +358,9 @@ def _llm_payload(report: ComparisonReportResult) -> dict[str, Any]:
             "summary": "2-4 sentence executive summary",
             "posture_rationale_bullets": ["bullet 1", "bullet 2", "bullet 3"],
             "narrative_sections": [
-                {"title": "What Looks Similar", "content": "short paragraph"},
-                {"title": "What To Watch Next", "content": "short paragraph"},
+                {"title": "Current Posture", "content": "one substantial paragraph grounded in the supplied facts"},
+                {"title": "Peer Comparison", "content": "one substantial paragraph grounded in the supplied facts"},
+                {"title": "What To Watch Next", "content": "one substantial paragraph grounded in the supplied facts"},
             ],
         },
     }
@@ -288,12 +371,19 @@ def _apply_llm_response(report: ComparisonReportResult, payload: dict[str, Any],
     if report.posture and rationale:
         report.posture.rationale_bullets = rationale[:3]
 
+    existing_citations = {section.title: list(section.citations) for section in report.narrative_sections}
     sections = []
     for section in payload.get("narrative_sections", []):
         title = str(section.get("title", "")).strip()
         content = str(section.get("content", "")).strip()
         if title and content:
-            sections.append(ReportSection(title=title, content=content))
+            sections.append(
+                ReportSection(
+                    title=title,
+                    content=content,
+                    citations=existing_citations.get(title, []),
+                )
+            )
 
     report.summary = str(payload.get("summary", "")).strip() or report.summary
     report.model_name = model_name
@@ -336,7 +426,7 @@ def generate_comparison_report(
             system_prompt=(
                 "You are a financial analysis assistant. "
                 "Polish the supplied deterministic comparison data into concise summary and narrative text. "
-                "Return only valid JSON."
+                "Keep citations grounded in the provided structure and return only valid JSON."
             ),
             user_prompt=_build_prompt(report),
         )
