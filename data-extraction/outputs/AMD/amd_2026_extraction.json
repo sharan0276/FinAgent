@@ -1,0 +1,1630 @@
+{
+  "schema_version": "data_extraction_v1",
+  "model_name": "ProsusAI/finbert",
+  "run_timestamp": "2026-04-14T03:29:27.457656+00:00",
+  "ticker": "AMD",
+  "company_name": "ADVANCED MICRO DEVICES INC",
+  "cik": "0000002488",
+  "filing_year": 2026,
+  "filing_date": "2026-02-04",
+  "accession": "0000002488-26-000021",
+  "parser_mode": "sec_parser",
+  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/AMD/complete_ingestion.json",
+  "processed_sections": [
+    "item_7_mda"
+  ],
+  "skipped_sections": [
+    "item_1a_risk_factors",
+    "item_1c_cybersecurity",
+    "item_3_legal",
+    "item_7a_market_risk"
+  ],
+  "numeric_deltas": {
+    "Revenues": {
+      "current_value": 34639000000.0,
+      "previous_value": 25785000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "previous_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "delta_percent": 34.33779329067288,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "NetIncome": {
+      "current_value": 4335000000.0,
+      "previous_value": 1641000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetIncomeLoss",
+      "previous_tag": "NetIncomeLoss",
+      "delta_percent": 164.16819012797075,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "Cash": {
+      "current_value": 5539000000.0,
+      "previous_value": 3787000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "delta_percent": 46.263533139688406,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "Assets": {
+      "current_value": 76926000000.0,
+      "previous_value": 69226000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "Assets",
+      "previous_tag": "Assets",
+      "delta_percent": 11.12298847253922,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "LongTermDebt": {
+      "current_value": 2348000000.0,
+      "previous_value": 1721000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "LongTermDebtNoncurrent",
+      "previous_tag": "LongTermDebtNoncurrent",
+      "delta_percent": 36.432306798373034,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "OperatingCashFlow": {
+      "current_value": 7709000000.0,
+      "previous_value": 3041000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "delta_percent": 153.50213745478462,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "ResearchAndDevelopment": {
+      "current_value": 8091000000.0,
+      "previous_value": 6456000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "ResearchAndDevelopmentExpense",
+      "previous_tag": "ResearchAndDevelopmentExpense",
+      "delta_percent": 25.325278810408925,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "GrossProfit": {
+      "current_value": 17152000000.0,
+      "previous_value": 12725000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "GrossProfit",
+      "previous_tag": "GrossProfit",
+      "delta_percent": 34.789783889980356,
+      "label": "strong_growth",
+      "reason": null
+    }
+  },
+  "text_candidates": [
+    {
+      "candidate_id": "item_7_mda_1",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 92,
+      "sentence_text": "Embedded Embedded net revenue of $3.5 billion in 2025 decreased by 3%, compared to net revenue of $3.6 billion in 2024.",
+      "previous_sentence": "The increase in operating income was primarily driven by higher revenue, partially offset by higher cost of sales and operating expenses.",
+      "next_sentence": "Net revenue decreased as certain end market demand remained mixed.",
+      "risk_score": 0.975648045539856,
+      "finbert_probs": {
+        "positive": 0.008139872923493385,
+        "neutral": 0.016212062910199165,
+        "negative": 0.975648045539856
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_2",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 106,
+      "sentence_text": "Amortization of Acquisition-Related Intangibles Amortization of acquisition-related intangibles of $2.3 billion for 2025 decreased by $140 million, or 6%, compared to $2.4 billion in 2024, primarily due to a lower balance of amortizable acquisition-related intangibles compared to the prior year.",
+      "previous_sentence": "The increase was primarily due to an increase in go-to-market activities to support our revenue growth.",
+      "next_sentence": "Interest Expense Interest expense of $131 million in 2025 increased by $39 million compared to $92 million in 2024, primarily due to the issuance of $1.5 billion in aggregate principal amount of 4.212% Notes and 4.319% Notes in March 2025.",
+      "risk_score": 0.9738008975982666,
+      "finbert_probs": {
+        "positive": 0.011398247443139553,
+        "neutral": 0.014800860546529293,
+        "negative": 0.9738008975982666
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_3",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 93,
+      "sentence_text": "Net revenue decreased as certain end market demand remained mixed.",
+      "previous_sentence": "Embedded Embedded net revenue of $3.5 billion in 2025 decreased by 3%, compared to net revenue of $3.6 billion in 2024.",
+      "next_sentence": "Embedded operating income was $1.2 billion in 2025, compared to operating income of $1.4 billion in 2024.",
+      "risk_score": 0.9726495146751404,
+      "finbert_probs": {
+        "positive": 0.010294178500771523,
+        "neutral": 0.017056362703442574,
+        "negative": 0.9726495146751404
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_4",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 95,
+      "sentence_text": "The decrease in operating income was primarily driven by lower revenue.",
+      "previous_sentence": "Embedded operating income was $1.2 billion in 2025, compared to operating income of $1.4 billion in 2024.",
+      "next_sentence": "All Other All Other operating loss of $4.0 billion in 2025 primarily consisted of $2.3 billion of amortization of acquisition-related intangibles and $1.6 billion of stock-based compensation expense.",
+      "risk_score": 0.9726002216339111,
+      "finbert_probs": {
+        "positive": 0.009798909537494183,
+        "neutral": 0.017600834369659424,
+        "negative": 0.9726002216339111
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_5",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 33,
+      "sentence_text": "During the second quarter of fiscal year 2025, the Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China.",
+      "previous_sentence": "None of the warrant shares met the vesting or exercise conditions and the warrant had no impact to our financial statements for the year ended December 27, 2025.",
+      "next_sentence": "We applied for and were granted some licenses by the U.S. government that allow us to ship MI308 products to certain China-based customers.",
+      "risk_score": 0.9691024422645569,
+      "finbert_probs": {
+        "positive": 0.011637249030172825,
+        "neutral": 0.019260317087173462,
+        "negative": 0.9691024422645569
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_6",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 68,
+      "sentence_text": "Changes in operating plans or adverse changes in the business or in the macroeconomic environment in the future could reduce the underlying cash flows used to estimate fair values and could result in a decline in fair value that would trigger future impairment charges of our reporting units\u2019 goodwill.",
+      "previous_sentence": "We may obtain the assistance of third-party valuation specialists to help in determining the fair value of our reporting units.",
+      "next_sentence": "Based on our annual qualitative impairment test, we concluded that it is not more likely than not that the carrying value of each reporting unit exceeded its fair value.Long-Lived and Intangible Assets.",
+      "risk_score": 0.9651631116867065,
+      "finbert_probs": {
+        "positive": 0.00807272270321846,
+        "neutral": 0.02676422894001007,
+        "negative": 0.9651631116867065
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_7",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 9,
+      "sentence_text": "Embedded net revenue of $3.5 billion decreased by 3% compared to net revenue of $3.6 billion in 2024, as certain end market demand remained mixed.Gross margin of 50% increased by 1% compared to 49% in 2024, primarily due to product mix partially offset by approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products.",
+      "previous_sentence": "The increase in annual net revenue was partially offset by a decrease in net revenue in our Embedded segment.",
+      "next_sentence": "Cash, cash equivalents and short-term investments as of December 27, 2025 were $10.6 billion, compared to $5.1 billion at the end of 2024.",
+      "risk_score": 0.9642184376716614,
+      "finbert_probs": {
+        "positive": 0.024623723700642586,
+        "neutral": 0.01115783303976059,
+        "negative": 0.9642184376716614
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_8",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 53,
+      "sentence_text": "If in any period we anticipate a change in assumptions such as future demand or market conditions to be less favorable than our previous estimates, additional inventory write-downs may be required and would be reflected in cost of sales, resulting in a negative impact to our gross margin in that period.",
+      "previous_sentence": "In determining the lower of cost or net realizable value reserves, we consider assumptions such as recent historical sales activity and selling prices, as well as estimates of future selling prices.",
+      "next_sentence": "If in any period we are able to sell inventories that had been written down to a level below the ultimate realized selling price in a previous period, related revenue would be recorded with a lower or no offsetting charge to cost of sales resulting in a net benefit to our gross margin in that period.",
+      "risk_score": 0.9638115167617798,
+      "finbert_probs": {
+        "positive": 0.007878946140408516,
+        "neutral": 0.028309481218457222,
+        "negative": 0.9638115167617798
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_9",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 96,
+      "sentence_text": "All Other All Other operating loss of $4.0 billion in 2025 primarily consisted of $2.3 billion of amortization of acquisition-related intangibles and $1.6 billion of stock-based compensation expense.",
+      "previous_sentence": "The decrease in operating income was primarily driven by lower revenue.",
+      "next_sentence": "All Other operating loss of $4.2 billion in 2024 primarily consisted of $2.4 billion of amortization of acquisition-related intangibles and $1.4 billion of stock-based compensation expense.",
+      "risk_score": 0.951338529586792,
+      "finbert_probs": {
+        "positive": 0.008241141214966774,
+        "neutral": 0.0404202826321125,
+        "negative": 0.951338529586792
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_10",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 97,
+      "sentence_text": "All Other operating loss of $4.2 billion in 2024 primarily consisted of $2.4 billion of amortization of acquisition-related intangibles and $1.4 billion of stock-based compensation expense.",
+      "previous_sentence": "All Other All Other operating loss of $4.0 billion in 2025 primarily consisted of $2.3 billion of amortization of acquisition-related intangibles and $1.6 billion of stock-based compensation expense.",
+      "next_sentence": "International Sales International sales as a percentage of net revenue were 67% in 2025 and 66% in 2024.",
+      "risk_score": 0.9417926073074341,
+      "finbert_probs": {
+        "positive": 0.008770559914410114,
+        "neutral": 0.04943687468767166,
+        "negative": 0.9417926073074341
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_11",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 51,
+      "sentence_text": "In determining excess or obsolescence reserves for products, we consider assumptions such as changes in business and economic conditions, other-than-temporary decreases in demand for our products, and changes in technology or customer requirements.",
+      "previous_sentence": "Material assumptions we use to estimate necessary inventory carrying value adjustments can be unique to each product and are based on specific facts and circumstances.",
+      "next_sentence": "In determining the lower of cost or net realizable value reserves, we consider assumptions such as recent historical sales activity and selling prices, as well as estimates of future selling prices.",
+      "risk_score": 0.9239636659622192,
+      "finbert_probs": {
+        "positive": 0.01354784145951271,
+        "neutral": 0.06248852238059044,
+        "negative": 0.9239636659622192
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_12",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 122,
+      "sentence_text": "FINANCIAL CONDITION Liquidity and Capital Resources As of December 27, 2025, our cash, cash equivalents and short-term investments were $10.6 billion compared to $5.1 billion as of December 28, 2024.",
+      "previous_sentence": "This includes the results of operations of the ZT Manufacturing Business and the change in fair value of contingent consideration liability of $121 million.",
+      "next_sentence": "Our operating, investing and financing cash flow activities for 2025 and 2024 were as follows: December 27, 2025December 28, 2024 (In millions)Net cash provided by (used in):Net cash provided by operating activities of continuing operations$6,493 $3,041 Net cash provided by operating activities of discontinued operations1,216 \u2014 Operating activities7,709 3,041 Net cash (used in) provided by investing activities of continuing operations(6,851)(1,101)Net cash provided by investing activities of discontinued operations1,318 \u2014 Investing activities(5,533)(1,101)Financing activities (431)(2,062)Net increase (decrease) in cash, cash equivalents and restricted cash$1,745 $(122) In March and October 2025, we paid a total of $2.0 billion in cash, net of cash acquired, and issued 9.1 million shares of our common stock in the acquisition of ZT Systems.",
+      "risk_score": 0.9142621755599976,
+      "finbert_probs": {
+        "positive": 0.06722836941480637,
+        "neutral": 0.018509380519390106,
+        "negative": 0.9142621755599976
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_13",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 90,
+      "sentence_text": "Client and Gaming operating income was $2.9 billion in 2025, compared to operating income of $1.2 billion in 2024.",
+      "previous_sentence": "The increase was primarily driven by higher semi-custom revenue and strong demand of our Radeon\u2122 gaming GPUs.",
+      "next_sentence": "The increase in operating income was primarily driven by higher revenue, partially offset by higher cost of sales and operating expenses.",
+      "risk_score": 0.9105759263038635,
+      "finbert_probs": {
+        "positive": 0.0677395835518837,
+        "neutral": 0.021684424951672554,
+        "negative": 0.9105759263038635
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_14",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 94,
+      "sentence_text": "Embedded operating income was $1.2 billion in 2025, compared to operating income of $1.4 billion in 2024.",
+      "previous_sentence": "Net revenue decreased as certain end market demand remained mixed.",
+      "next_sentence": "The decrease in operating income was primarily driven by lower revenue.",
+      "risk_score": 0.8773640990257263,
+      "finbert_probs": {
+        "positive": 0.09457681328058243,
+        "neutral": 0.028059057891368866,
+        "negative": 0.8773640990257263
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_15",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 10,
+      "sentence_text": "Cash, cash equivalents and short-term investments as of December 27, 2025 were $10.6 billion, compared to $5.1 billion at the end of 2024.",
+      "previous_sentence": "Embedded net revenue of $3.5 billion decreased by 3% compared to net revenue of $3.6 billion in 2024, as certain end market demand remained mixed.Gross margin of 50% increased by 1% compared to 49% in 2024, primarily due to product mix partially offset by approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products.",
+      "next_sentence": "Our aggregate principal amount of total debt as of December 27, 2025 was $3.3 billion, compared to $1.8 billion as of December 28, 2024.In 2025, we returned a total of $1.3 billion to shareholders through the repurchase of 12.4 million shares of common stock under our stock repurchase program.",
+      "risk_score": 0.8475337624549866,
+      "finbert_probs": {
+        "positive": 0.12974266707897186,
+        "neutral": 0.02272348292171955,
+        "negative": 0.8475337624549866
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_16",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 45,
+      "sentence_text": "Where funds provided for such programs can be estimated, we recognize a reduction to revenue at the time the related revenue is recognized; otherwise, we recognize such reduction to revenue at the later of when: i) the related revenue transaction occurs; or ii) the program is offered.",
+      "previous_sentence": "We determine the net amount of consideration to which we are entitled by estimating the most likely amount of consideration we expect to receive from the customer after adjustments to the contract price for rights of return and rebates to our original equipment manufacturer (OEM) and original design manufacturer (ODM) customers and rights of return, rebates and price protection on unsold merchandise to our distributor customers.We base our determination of necessary adjustments to the contract price by reference to actual historical activity and experience, including actual historical returns, rebates and credits issued to OEM and distributor customers adjusted, as applicable, to include adjustments, if any, for known events or current economic conditions, or both.Our estimates of necessary adjustments for distributor price incentives and price protection on unsold products held by distributors are based on actual historical incentives provided to distributor customers and known future price movements based on our internal and external market data analysis.Our estimates of necessary adjustments for OEM price incentives utilize, in addition to known pricing agreements, actual historical rebate attainment rates and estimates of future OEM rebate program attainment based on internal and external market data analysis.We offer incentive programs through cooperative advertising and marketing promotions.",
+      "next_sentence": "For transactions where we reimburse a customer for a portion of the customer\u2019s cost to perform specific product advertising or marketing and promotional activities, such amounts are recognized as a reduction to revenue unless they qualify for expense recognition.We also provide limited product return rights to certain OEMs and to most distribution customers.",
+      "risk_score": 0.8143745064735413,
+      "finbert_probs": {
+        "positive": 0.025023212656378746,
+        "neutral": 0.16060230135917664,
+        "negative": 0.8143745064735413
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_17",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 82,
+      "sentence_text": "Our operating results tend to vary seasonally.",
+      "previous_sentence": "Results of Operations Additional information on our reportable segments is contained in Note 4 \u2013 Segment Reporting of the Notes to Financial Statements (Part II, Item 8 of this Form 10-K).",
+      "next_sentence": "Historically, our net revenue has been generally higher in the second half of the year than in the first half of the year, although market conditions and product transitions could impact these trends.The following table provides a summary of net revenue, cost of sales and operating expenses, and operating income (loss) by segment for 2025 and 2024: Year EndedDecember 27,2025December 28,2024(In millions)Net revenue:Data Center$16,635 $12,579 Client and GamingClient10,640 7,054 Gaming3,910 2,595 Total Client and Gaming14,550 9,649 Embedded3,454 3,557 Total net revenue$34,639 $25,785 Cost of sales and operating expenses:Data Center$13,032 $9,097 Client and Gaming11,695 8,462 Embedded2,211 2,136 All other4,007 4,190 Total cost of sales and operating expenses$30,945 $23,885 Operating income (loss):Data Center$3,603 $3,482 Client and Gaming2,855 1,187 Embedded1,243 1,421 All other(4,007)(4,190)Total operating income$3,694 $1,900 Data Center Data Center net revenue of $16.6 billion in 2025 increased by 32%, compared to net revenue of $12.6 billion in 2024.",
+      "risk_score": 0.7597571611404419,
+      "finbert_probs": {
+        "positive": 0.01949155144393444,
+        "neutral": 0.22075128555297852,
+        "negative": 0.7597571611404419
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_18",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 110,
+      "sentence_text": "The decrease in income tax provision in 2025 was primarily driven by an $853 million benefit related to the release of uncertain tax positions pertaining to the reasonable cause relief for dual consolidated losses approved by the Internal Revenue Service (IRS) in April 2025, whereas the income tax provision in 2024 included $373 million tax effect from an intercompany integration transaction.In July 2025, the One Big Beautiful Bill Act (OBBBA) was enacted into law.",
+      "previous_sentence": "Income Tax Provision (Benefit) We recorded an income tax benefit of $103 million and an income tax provision of $381 million in 2025 and 2024, respectively, representing effective tax rates of (2.5%) and 19%, respectively.",
+      "next_sentence": "For fiscal year 2025, the primary impact of the OBBBA to our tax provision was the accelerated expensing of domestic R&D activities which decreased our income eligible for FDII, reduced our deferred tax assets, and reduced our current income tax liability.",
+      "risk_score": 0.6690554022789001,
+      "finbert_probs": {
+        "positive": 0.23524226248264313,
+        "neutral": 0.09570236504077911,
+        "negative": 0.6690554022789001
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_19",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 46,
+      "sentence_text": "For transactions where we reimburse a customer for a portion of the customer\u2019s cost to perform specific product advertising or marketing and promotional activities, such amounts are recognized as a reduction to revenue unless they qualify for expense recognition.We also provide limited product return rights to certain OEMs and to most distribution customers.",
+      "previous_sentence": "Where funds provided for such programs can be estimated, we recognize a reduction to revenue at the time the related revenue is recognized; otherwise, we recognize such reduction to revenue at the later of when: i) the related revenue transaction occurs; or ii) the program is offered.",
+      "next_sentence": "These return rights are generally limited to a contractual percentage of the customer\u2019s prior quarter shipments, although, from time to time we may approve additional product returns beyond the contractual arrangements based on the applicable facts and circumstances.",
+      "risk_score": 0.6468052864074707,
+      "finbert_probs": {
+        "positive": 0.020178059116005898,
+        "neutral": 0.33301669359207153,
+        "negative": 0.6468052864074707
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_20",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 120,
+      "sentence_text": "Discontinued Operations Net income from discontinued operations for 2025 was $66 million, net of tax expense of $54 million.",
+      "previous_sentence": "We continue to evaluate the impact of proposed and enacted legislative changes to our effective tax rate and cash flows as new guidance becomes available in each country.",
+      "next_sentence": "This includes the results of operations of the ZT Manufacturing Business and the change in fair value of contingent consideration liability of $121 million.",
+      "risk_score": 0.606499969959259,
+      "finbert_probs": {
+        "positive": 0.019832909107208252,
+        "neutral": 0.3736671805381775,
+        "negative": 0.606499969959259
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_21",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 83,
+      "sentence_text": "Historically, our net revenue has been generally higher in the second half of the year than in the first half of the year, although market conditions and product transitions could impact these trends.The following table provides a summary of net revenue, cost of sales and operating expenses, and operating income (loss) by segment for 2025 and 2024: Year EndedDecember 27,2025December 28,2024(In millions)Net revenue:Data Center$16,635 $12,579 Client and GamingClient10,640 7,054 Gaming3,910 2,595 Total Client and Gaming14,550 9,649 Embedded3,454 3,557 Total net revenue$34,639 $25,785 Cost of sales and operating expenses:Data Center$13,032 $9,097 Client and Gaming11,695 8,462 Embedded2,211 2,136 All other4,007 4,190 Total cost of sales and operating expenses$30,945 $23,885 Operating income (loss):Data Center$3,603 $3,482 Client and Gaming2,855 1,187 Embedded1,243 1,421 All other(4,007)(4,190)Total operating income$3,694 $1,900 Data Center Data Center net revenue of $16.6 billion in 2025 increased by 32%, compared to net revenue of $12.6 billion in 2024.",
+      "previous_sentence": "Our operating results tend to vary seasonally.",
+      "next_sentence": "The increase was primarily driven by strong demand for our AMD EPYC\u2122 processors and AMD Instinct\u2122 GPU accelerators.Data Center operating income was $3.6 billion in 2025, compared to operating income of $3.5 billion in 2024.",
+      "risk_score": 0.5895249843597412,
+      "finbert_probs": {
+        "positive": 0.020020702853798866,
+        "neutral": 0.39045435190200806,
+        "negative": 0.5895249843597412
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_22",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 59,
+      "sentence_text": "Management's estimates of fair value are based upon assumptions believed to be reasonable, but which are inherently uncertain and unpredictable and, as a result, actual results may differ from estimates.",
+      "previous_sentence": "Significant estimates and inputs used in valuing acquired assets and liabilities held for sale, developed technology, and other identifiable intangible assets include, but are not limited to, expected future revenue, future changes in technology, useful lives, risk-adjusted discount rates and time and costs to recreate certain assets.",
+      "next_sentence": "Allocation of purchase consideration to identifiable assets and liabilities affects our amortization expense, as acquired finite-lived intangible assets are amortized over their useful life, whereas any indefinite-lived intangible assets, including goodwill, are not amortized.Goodwill.",
+      "risk_score": 0.5815714597702026,
+      "finbert_probs": {
+        "positive": 0.09916173666715622,
+        "neutral": 0.31926682591438293,
+        "negative": 0.5815714597702026
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_23",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 80,
+      "sentence_text": "Certain state and foreign valuation allowances are maintained due to a lack of sufficient sources of future taxable income.In addition, the calculation of our tax liabilities involves addressing uncertainties in the application of complex, multi-jurisdictional tax rules and the potential for future adjustment of our uncertain tax positions by the Internal Revenue Service or other taxing authorities.",
+      "previous_sentence": "When considering all available evidence, if we determine it is more-likely-than-not we will realize our deferred tax assets, we will reverse some or all of the existing valuation allowance, which would result in a credit to income tax expense and the establishment of an asset in the period of reversal.In determining the need to establish or maintain a valuation allowance, we consider the four sources of jurisdictional taxable income: (i) carryback of net operating losses to prior years; (ii) future reversals of existing taxable temporary differences; (iii) viable and prudent tax planning strategies; and (iv) future taxable income exclusive of reversing temporary differences and carryforwards.",
+      "next_sentence": "Results of Operations Additional information on our reportable segments is contained in Note 4 \u2013 Segment Reporting of the Notes to Financial Statements (Part II, Item 8 of this Form 10-K).",
+      "risk_score": 0.4688183069229126,
+      "finbert_probs": {
+        "positive": 0.050594065338373184,
+        "neutral": 0.48058757185935974,
+        "negative": 0.4688183069229126
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_24",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 65,
+      "sentence_text": "The analysis may include both qualitative and quantitative factors to assess the likelihood of an impairment, which occurs when the carrying value of a reporting unit exceeds its fair value.",
+      "previous_sentence": "We perform our goodwill impairment analysis as of the first day of the fourth quarter of each year and, if certain events or circumstances indicate that an impairment loss may have been incurred, on a more frequent basis.",
+      "next_sentence": "Significant judgment is required in estimating the fair value of our reporting units to determine if the fair values of those units exceed their carrying values.",
+      "risk_score": 0.43137842416763306,
+      "finbert_probs": {
+        "positive": 0.05311327055096626,
+        "neutral": 0.5155082941055298,
+        "negative": 0.43137842416763306
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_25",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 111,
+      "sentence_text": "For fiscal year 2025, the primary impact of the OBBBA to our tax provision was the accelerated expensing of domestic R&D activities which decreased our income eligible for FDII, reduced our deferred tax assets, and reduced our current income tax liability.",
+      "previous_sentence": "The decrease in income tax provision in 2025 was primarily driven by an $853 million benefit related to the release of uncertain tax positions pertaining to the reasonable cause relief for dual consolidated losses approved by the Internal Revenue Service (IRS) in April 2025, whereas the income tax provision in 2024 included $373 million tax effect from an intercompany integration transaction.In July 2025, the One Big Beautiful Bill Act (OBBBA) was enacted into law.",
+      "next_sentence": "Other OBBBA changes did not have a material impact on the financial statements.",
+      "risk_score": 0.37781232595443726,
+      "finbert_probs": {
+        "positive": 0.5833520293235779,
+        "neutral": 0.03883565217256546,
+        "negative": 0.37781232595443726
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_26",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 8,
+      "sentence_text": "The increase in annual net revenue was partially offset by a decrease in net revenue in our Embedded segment.",
+      "previous_sentence": "Client and Gaming segment net revenue of $14.6 billion in 2025 increased by 51% compared to $9.6 billion in 2024, primarily driven by strong demand for our AMD Ryzen\u2122 processors, semi-custom game consoles SoCs and Radeon\u2122 gaming GPUs.",
+      "next_sentence": "Embedded net revenue of $3.5 billion decreased by 3% compared to net revenue of $3.6 billion in 2024, as certain end market demand remained mixed.Gross margin of 50% increased by 1% compared to 49% in 2024, primarily due to product mix partially offset by approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products.",
+      "risk_score": 0.3592875897884369,
+      "finbert_probs": {
+        "positive": 0.60222989320755,
+        "neutral": 0.03848259523510933,
+        "negative": 0.3592875897884369
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_27",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 137,
+      "sentence_text": "Net cash provided by operating activities of the ZT Manufacturing Business, classified as discontinued operations, was $1.2 billion.Net cash provided by operating activities was $3.0 billion in 2024, primarily due to our net income of $1.6 billion in 2024, adjusted for non-cash adjustments of $3.5 billion and net cash outflows of $2.1 billion from changes in our operating assets and liabilities.",
+      "previous_sentence": "The primary drivers of the changes in operating assets and liabilities included a $2.2 billion increase in inventory primarily to support the continued ramp of Data Center products in advanced process technology nodes.",
+      "next_sentence": "The primary drivers of the changes in operating assets and liabilities included a $1.9 billion increase in accounts receivable driven primarily by higher revenue in the last month of 2024 compared to the last month of 2023, and a $1.5 billion increase in inventories driven primarily by a build of inventory to support the ramp of new products in advanced process nodes.",
+      "risk_score": 0.2797611355781555,
+      "finbert_probs": {
+        "positive": 0.04998026043176651,
+        "neutral": 0.6702585816383362,
+        "negative": 0.2797611355781555
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_28",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 74,
+      "sentence_text": "In the event such cash flows are not expected to be sufficient to recover the recorded value of the assets, the assets are written down to their estimated fair values based on the expected discounted future cash flows attributable to the asset group or based on appraisals.Income Taxes.",
+      "previous_sentence": "When indicators of impairment exist and assets are held for use, we estimate future undiscounted cash flows attributable to the related asset groups.",
+      "next_sentence": "In determining taxable income for financial statement reporting purposes, we must make certain estimates and judgments.",
+      "risk_score": 0.24515347182750702,
+      "finbert_probs": {
+        "positive": 0.0167565755546093,
+        "neutral": 0.7380899786949158,
+        "negative": 0.24515347182750702
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_29",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 69,
+      "sentence_text": "Based on our annual qualitative impairment test, we concluded that it is not more likely than not that the carrying value of each reporting unit exceeded its fair value.Long-Lived and Intangible Assets.",
+      "previous_sentence": "Changes in operating plans or adverse changes in the business or in the macroeconomic environment in the future could reduce the underlying cash flows used to estimate fair values and could result in a decline in fair value that would trigger future impairment charges of our reporting units\u2019 goodwill.",
+      "next_sentence": "Long-lived and intangible assets to be held and used are reviewed for impairment if indicators of potential impairment exist and at least annually for indefinite-lived intangible assets.",
+      "risk_score": 0.19328981637954712,
+      "finbert_probs": {
+        "positive": 0.03487279266119003,
+        "neutral": 0.7718373537063599,
+        "negative": 0.19328981637954712
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_30",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 117,
+      "sentence_text": "For 2024 and 2025, the impact to us associated with Pillar Two was immaterial.",
+      "previous_sentence": "Although many countries have already introduced Pillar Two legislation applicable to us effective in 2024, certain jurisdictions in which we operate have not adopted corresponding legislation to date.",
+      "next_sentence": "In January 2026, the OECD released a \"side-by-side\" package introducing new safe harbors and providing an exemption for U.S.-based multinational companies from parts of the global minimum tax framework.",
+      "risk_score": 0.179713636636734,
+      "finbert_probs": {
+        "positive": 0.07815015316009521,
+        "neutral": 0.7421361804008484,
+        "negative": 0.179713636636734
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_31",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 78,
+      "sentence_text": "Unless recovery is considered more-likely-than-not (a probability level of more than 50%), we will record a charge to income tax expense in the form of a valuation allowance for the deferred tax assets that we estimate will not ultimately be recoverable or maintain the valuation allowance recorded in prior periods.",
+      "previous_sentence": "We regularly assess the likelihood that we will be able to recover our deferred tax assets.",
+      "next_sentence": "When considering all available evidence, if we determine it is more-likely-than-not we will realize our deferred tax assets, we will reverse some or all of the existing valuation allowance, which would result in a credit to income tax expense and the establishment of an asset in the period of reversal.In determining the need to establish or maintain a valuation allowance, we consider the four sources of jurisdictional taxable income: (i) carryback of net operating losses to prior years; (ii) future reversals of existing taxable temporary differences; (iii) viable and prudent tax planning strategies; and (iv) future taxable income exclusive of reversing temporary differences and carryforwards.",
+      "risk_score": 0.1727675348520279,
+      "finbert_probs": {
+        "positive": 0.06203339993953705,
+        "neutral": 0.7651990652084351,
+        "negative": 0.1727675348520279
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_32",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 35,
+      "sentence_text": "During the fourth quarter of fiscal year 2025, we began shipping products and reversed approximately $360 million of the inventory and related charges recorded earlier in the year.",
+      "previous_sentence": "We applied for and were granted some licenses by the U.S. government that allow us to ship MI308 products to certain China-based customers.",
+      "next_sentence": "U.S. government officials have expressed an expectation that the U.S. government will receive 15% of the revenue generated from licensed MI308 sales to China; however, to date, the U.S. government has not published a regulation establishing such requirement.We intend the discussion of our financial condition and results of operations that follows to provide information that will assist in understanding our financial statements, the changes in certain key items in those financial statements from period to period, the primary factors that resulted in those changes, and how certain accounting principles, policies and estimates affect our financial statements.",
+      "risk_score": 0.1422608494758606,
+      "finbert_probs": {
+        "positive": 0.6297265887260437,
+        "neutral": 0.2280125916004181,
+        "negative": 0.1422608494758606
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_33",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 64,
+      "sentence_text": "We perform our goodwill impairment analysis as of the first day of the fourth quarter of each year and, if certain events or circumstances indicate that an impairment loss may have been incurred, on a more frequent basis.",
+      "previous_sentence": "Our goodwill is contained within three reporting units: Data Center, Client and Gaming, and Embedded.",
+      "next_sentence": "The analysis may include both qualitative and quantitative factors to assess the likelihood of an impairment, which occurs when the carrying value of a reporting unit exceeds its fair value.",
+      "risk_score": 0.14170224964618683,
+      "finbert_probs": {
+        "positive": 0.02557779848575592,
+        "neutral": 0.8327199220657349,
+        "negative": 0.14170224964618683
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_34",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 76,
+      "sentence_text": "These estimates and judgments are applied in the calculation of certain tax liabilities and in the determination of the recoverability of deferred tax assets which arise from temporary differences between the recognition of assets and liabilities for tax and financial statement reporting purposes.",
+      "previous_sentence": "In determining taxable income for financial statement reporting purposes, we must make certain estimates and judgments.",
+      "next_sentence": "We regularly assess the likelihood that we will be able to recover our deferred tax assets.",
+      "risk_score": 0.13586053252220154,
+      "finbert_probs": {
+        "positive": 0.026133503764867783,
+        "neutral": 0.8380059599876404,
+        "negative": 0.13586053252220154
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_35",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 42,
+      "sentence_text": "Although actual results have historically been reasonably consistent with management\u2019s expectations, the actual results may differ from these estimates or our estimates may be affected by different assumptions or conditions.Management believes the following critical accounting estimates are the most significant to the presentation of our financial statements and require the most difficult, subjective and complex judgments.Revenue Allowances.",
+      "previous_sentence": "We base our estimates on historical experience and on various other assumptions that we believe to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities.",
+      "next_sentence": "Revenue contracts with our customers include variable amounts which we evaluate under ASC 606-10-32-8 through 14 in order to determine the net amount of consideration to which we are entitled and which we recognize as revenue.",
+      "risk_score": 0.1309146285057068,
+      "finbert_probs": {
+        "positive": 0.029952406883239746,
+        "neutral": 0.8391329050064087,
+        "negative": 0.1309146285057068
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_36",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 84,
+      "sentence_text": "The increase was primarily driven by strong demand for our AMD EPYC\u2122 processors and AMD Instinct\u2122 GPU accelerators.Data Center operating income was $3.6 billion in 2025, compared to operating income of $3.5 billion in 2024.",
+      "previous_sentence": "Historically, our net revenue has been generally higher in the second half of the year than in the first half of the year, although market conditions and product transitions could impact these trends.The following table provides a summary of net revenue, cost of sales and operating expenses, and operating income (loss) by segment for 2025 and 2024: Year EndedDecember 27,2025December 28,2024(In millions)Net revenue:Data Center$16,635 $12,579 Client and GamingClient10,640 7,054 Gaming3,910 2,595 Total Client and Gaming14,550 9,649 Embedded3,454 3,557 Total net revenue$34,639 $25,785 Cost of sales and operating expenses:Data Center$13,032 $9,097 Client and Gaming11,695 8,462 Embedded2,211 2,136 All other4,007 4,190 Total cost of sales and operating expenses$30,945 $23,885 Operating income (loss):Data Center$3,603 $3,482 Client and Gaming2,855 1,187 Embedded1,243 1,421 All other(4,007)(4,190)Total operating income$3,694 $1,900 Data Center Data Center net revenue of $16.6 billion in 2025 increased by 32%, compared to net revenue of $12.6 billion in 2024.",
+      "next_sentence": "The increase in operating income was primarily due to higher revenue, partially offset by higher cost of sales, approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products and higher operating expenses.",
+      "risk_score": 0.12828372418880463,
+      "finbert_probs": {
+        "positive": 0.8356558680534363,
+        "neutral": 0.03606041893362999,
+        "negative": 0.12828372418880463
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_37",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 72,
+      "sentence_text": "Assets are grouped and evaluated for impairment at the lowest level of identifiable cash flows.",
+      "previous_sentence": "Impairment indicators are reviewed on a quarterly basis.",
+      "next_sentence": "When indicators of impairment exist and assets are held for use, we estimate future undiscounted cash flows attributable to the related asset groups.",
+      "risk_score": 0.12632021307945251,
+      "finbert_probs": {
+        "positive": 0.02172326296567917,
+        "neutral": 0.8519565463066101,
+        "negative": 0.12632021307945251
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_38",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 101,
+      "sentence_text": "Comparison of Gross Margin, Expenses, Interest Expense, Other Income (expense) and Income Taxes The following is a summary of certain Consolidated Statement of Operations data for 2025 and 2024: December 27, 2025December 28, 2024 (In millions, except for percentages)Net revenue$34,639 $25,785 Cost of sales16,456 12,114 Amortization of acquisition-related intangibles1,031 946 Gross profit17,152 12,725 Gross margin50%49%Research and development8,091 6,456 Marketing, general and administrative4,144 2,735 Amortization of acquisition-related intangibles1,223 1,448 Interest expense(131)(92)Other income (expense), net577 181 Income tax provision (benefit)(103)381 Income from discontinued operations, net of tax66 \u2014 Gross Margin Gross margin of 50% increased by 1% compared to 49% in 2024, primarily due to product mix, partially offset by approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products.",
+      "previous_sentence": "Substantially all of our sales transactions are denominated in U.S. dollars.",
+      "next_sentence": "Expenses Research and Development Expenses Research and development expenses of $8.1 billion in 2025 increased by $1.6 billion, or 25%, compared to $6.5 billion in 2024.",
+      "risk_score": 0.1168198212981224,
+      "finbert_probs": {
+        "positive": 0.6816109418869019,
+        "neutral": 0.20156928896903992,
+        "negative": 0.1168198212981224
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_39",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 11,
+      "sentence_text": "Our aggregate principal amount of total debt as of December 27, 2025 was $3.3 billion, compared to $1.8 billion as of December 28, 2024.In 2025, we returned a total of $1.3 billion to shareholders through the repurchase of 12.4 million shares of common stock under our stock repurchase program.",
+      "previous_sentence": "Cash, cash equivalents and short-term investments as of December 27, 2025 were $10.6 billion, compared to $5.1 billion at the end of 2024.",
+      "next_sentence": "As of December 27, 2025, $9.4 billion remained available for future stock repurchases under this program.",
+      "risk_score": 0.11238233000040054,
+      "finbert_probs": {
+        "positive": 0.31135353446006775,
+        "neutral": 0.5762641429901123,
+        "negative": 0.11238233000040054
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_40",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 143,
+      "sentence_text": "Off-Balance Sheet Arrangements As of December 27, 2025, we did not have any off-balance sheet arrangements that have had, or are reasonably likely to have a material current or future effect on our financial condition, results of operations, liquidity, capital expenditures, or capital resources.",
+      "previous_sentence": "There was no net cash provided by financing activities of discontinued operations for the year ended December 27, 2025.Net cash used in financing activities was $2.1 billion in 2024, which primarily consisted of common stock repurchases of $862 million under the Repurchase Program, repurchases to cover tax withholding on employee equity plans of $728 million, and repayment of the 2.95% Notes of $750 million, partially offset by proceeds from the issuance of common stock under our employee equity plans of $279 million.",
+      "next_sentence": null,
+      "risk_score": 0.09742145985364914,
+      "finbert_probs": {
+        "positive": 0.024470342323184013,
+        "neutral": 0.8781082034111023,
+        "negative": 0.09742145985364914
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_41",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 70,
+      "sentence_text": "Long-lived and intangible assets to be held and used are reviewed for impairment if indicators of potential impairment exist and at least annually for indefinite-lived intangible assets.",
+      "previous_sentence": "Based on our annual qualitative impairment test, we concluded that it is not more likely than not that the carrying value of each reporting unit exceeded its fair value.Long-Lived and Intangible Assets.",
+      "next_sentence": "Impairment indicators are reviewed on a quarterly basis.",
+      "risk_score": 0.09718574583530426,
+      "finbert_probs": {
+        "positive": 0.021111058071255684,
+        "neutral": 0.8817031979560852,
+        "negative": 0.09718574583530426
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_42",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 48,
+      "sentence_text": "In order to estimate adjustments to revenue to account for these returns, including product restocking rights provided to distributor and OEM customers, we utilize relevant, trended actual historical product return rate information gathered, adjusted for actual known information or events, as applicable.Overall, our estimates of adjustments to contract price due to variable consideration under our contracts with OEM and distributor customers, based on our assumptions and include adjustments, if any, for known events, have been materially consistent with actual results; however, these estimates are subject to management\u2019s judgment and actual provisions could be different from our estimates and current provisions, resulting in future adjustments to our revenue and operating results.Inventory Valuation.",
+      "previous_sentence": "These return rights are generally limited to a contractual percentage of the customer\u2019s prior quarter shipments, although, from time to time we may approve additional product returns beyond the contractual arrangements based on the applicable facts and circumstances.",
+      "next_sentence": "We value inventory at standard cost, adjusted to approximate the lower of actual cost or estimated net realizable value using assumptions about future demand and market conditions.",
+      "risk_score": 0.09393038600683212,
+      "finbert_probs": {
+        "positive": 0.07889155298471451,
+        "neutral": 0.8271780610084534,
+        "negative": 0.09393038600683212
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_43",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 123,
+      "sentence_text": "Our operating, investing and financing cash flow activities for 2025 and 2024 were as follows: December 27, 2025December 28, 2024 (In millions)Net cash provided by (used in):Net cash provided by operating activities of continuing operations$6,493 $3,041 Net cash provided by operating activities of discontinued operations1,216 \u2014 Operating activities7,709 3,041 Net cash (used in) provided by investing activities of continuing operations(6,851)(1,101)Net cash provided by investing activities of discontinued operations1,318 \u2014 Investing activities(5,533)(1,101)Financing activities (431)(2,062)Net increase (decrease) in cash, cash equivalents and restricted cash$1,745 $(122) In March and October 2025, we paid a total of $2.0 billion in cash, net of cash acquired, and issued 9.1 million shares of our common stock in the acquisition of ZT Systems.",
+      "previous_sentence": "FINANCIAL CONDITION Liquidity and Capital Resources As of December 27, 2025, our cash, cash equivalents and short-term investments were $10.6 billion compared to $5.1 billion as of December 28, 2024.",
+      "next_sentence": "In October 2025, upon completion of the sale of the ZT Manufacturing Business to Sanmina Corporation (Sanmina), we received a total of $1.4 billion in cash, net of cash divested, and 1.2 million shares of Sanmina common stock valued at $154 million.",
+      "risk_score": 0.09188727289438248,
+      "finbert_probs": {
+        "positive": 0.07248900085687637,
+        "neutral": 0.8356237411499023,
+        "negative": 0.09188727289438248
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_44",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 54,
+      "sentence_text": "If in any period we are able to sell inventories that had been written down to a level below the ultimate realized selling price in a previous period, related revenue would be recorded with a lower or no offsetting charge to cost of sales resulting in a net benefit to our gross margin in that period.",
+      "previous_sentence": "If in any period we anticipate a change in assumptions such as future demand or market conditions to be less favorable than our previous estimates, additional inventory write-downs may be required and would be reflected in cost of sales, resulting in a negative impact to our gross margin in that period.",
+      "next_sentence": "Business Combinations.",
+      "risk_score": 0.09037192910909653,
+      "finbert_probs": {
+        "positive": 0.6486139297485352,
+        "neutral": 0.26101407408714294,
+        "negative": 0.09037192910909653
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_45",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 32,
+      "sentence_text": "None of the warrant shares met the vesting or exercise conditions and the warrant had no impact to our financial statements for the year ended December 27, 2025.",
+      "previous_sentence": "Subject to certain conditions, the warrant is exercisable through October 5, 2030.",
+      "next_sentence": "During the second quarter of fiscal year 2025, the Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China.",
+      "risk_score": 0.08574248850345612,
+      "finbert_probs": {
+        "positive": 0.016734953969717026,
+        "neutral": 0.897522509098053,
+        "negative": 0.08574248850345612
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_46",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 135,
+      "sentence_text": "Operating Activities Our working capital cash inflows and outflows from operations consist primarily of cash collections from our customers, payments for inventory purchases and payments for employee-related expenditures.Net cash provided by operating activities of continuing operations was $6.5 billion in 2025, primarily due to our net income of $4.3 billion in 2025, adjusted for non-cash adjustments of $4.6 billion and net cash outflows of $2.4 billion from changes in our operating assets and liabilities.",
+      "previous_sentence": "However, we cannot assure that such funds will be available on favorable terms, or at all.",
+      "next_sentence": "The primary drivers of the changes in operating assets and liabilities included a $2.2 billion increase in inventory primarily to support the continued ramp of Data Center products in advanced process technology nodes.",
+      "risk_score": 0.08558652549982071,
+      "finbert_probs": {
+        "positive": 0.06619218736886978,
+        "neutral": 0.8482212424278259,
+        "negative": 0.08558652549982071
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_47",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 108,
+      "sentence_text": "Other Income (expense), net Other income (expense), net is primarily comprised of interest income from short-term investments, changes in valuation of long-term investments and foreign currency transaction gains and losses.Other income (expense), net of $577 million in 2025 increased by $396 million compared to $181 million in 2024, primarily due to higher unrealized gains from long-term investments compared to the prior year.",
+      "previous_sentence": "Interest Expense Interest expense of $131 million in 2025 increased by $39 million compared to $92 million in 2024, primarily due to the issuance of $1.5 billion in aggregate principal amount of 4.212% Notes and 4.319% Notes in March 2025.",
+      "next_sentence": "Income Tax Provision (Benefit) We recorded an income tax benefit of $103 million and an income tax provision of $381 million in 2025 and 2024, respectively, representing effective tax rates of (2.5%) and 19%, respectively.",
+      "risk_score": 0.08408592641353607,
+      "finbert_probs": {
+        "positive": 0.8956207633018494,
+        "neutral": 0.02029327303171158,
+        "negative": 0.08408592641353607
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_48",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 61,
+      "sentence_text": "Goodwill is the excess of the aggregate of the consideration transferred over the identifiable assets acquired and liabilities assumed in connection with business combinations.",
+      "previous_sentence": "Allocation of purchase consideration to identifiable assets and liabilities affects our amortization expense, as acquired finite-lived intangible assets are amortized over their useful life, whereas any indefinite-lived intangible assets, including goodwill, are not amortized.Goodwill.",
+      "next_sentence": "Our reporting units are at the operating segment level.",
+      "risk_score": 0.0814395546913147,
+      "finbert_probs": {
+        "positive": 0.01826651580631733,
+        "neutral": 0.9002938866615295,
+        "negative": 0.0814395546913147
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_49",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 112,
+      "sentence_text": "Other OBBBA changes did not have a material impact on the financial statements.",
+      "previous_sentence": "For fiscal year 2025, the primary impact of the OBBBA to our tax provision was the accelerated expensing of domestic R&D activities which decreased our income eligible for FDII, reduced our deferred tax assets, and reduced our current income tax liability.",
+      "next_sentence": "Global Minimum Tax The OECD is continuing discussions surrounding fundamental changes in allocation of profits among tax jurisdictions in which companies do business, as well as the implementation of a global minimum tax (namely the \u201cPillar One\u201d and \u201cPillar Two\u201d proposals).",
+      "risk_score": 0.08028369396924973,
+      "finbert_probs": {
+        "positive": 0.02280459925532341,
+        "neutral": 0.8969116806983948,
+        "negative": 0.08028369396924973
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_50",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 3,
+      "sentence_text": "All prior period segment data were retrospectively adjusted.",
+      "previous_sentence": "Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 that are not included in this Form 10-K can be found in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of our Annual Report on Form 10-K for the fiscal year ended December 28, 2024.Beginning in the first quarter of fiscal year 2025, we combined the Client and Gaming segments into one reportable segment to align with how we manage our business.",
+      "next_sentence": "Overview In 2025, we delivered strong annual revenue growth with net revenue increasing 34% to $34.6 billion, compared to $25.8 billion in 2024.",
+      "risk_score": 0.07350367307662964,
+      "finbert_probs": {
+        "positive": 0.02180413156747818,
+        "neutral": 0.9046921730041504,
+        "negative": 0.07350367307662964
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_51",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 73,
+      "sentence_text": "When indicators of impairment exist and assets are held for use, we estimate future undiscounted cash flows attributable to the related asset groups.",
+      "previous_sentence": "Assets are grouped and evaluated for impairment at the lowest level of identifiable cash flows.",
+      "next_sentence": "In the event such cash flows are not expected to be sufficient to recover the recorded value of the assets, the assets are written down to their estimated fair values based on the expected discounted future cash flows attributable to the asset group or based on appraisals.Income Taxes.",
+      "risk_score": 0.06464613974094391,
+      "finbert_probs": {
+        "positive": 0.0556030347943306,
+        "neutral": 0.8797508478164673,
+        "negative": 0.06464613974094391
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_52",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 71,
+      "sentence_text": "Impairment indicators are reviewed on a quarterly basis.",
+      "previous_sentence": "Long-lived and intangible assets to be held and used are reviewed for impairment if indicators of potential impairment exist and at least annually for indefinite-lived intangible assets.",
+      "next_sentence": "Assets are grouped and evaluated for impairment at the lowest level of identifiable cash flows.",
+      "risk_score": 0.0625627413392067,
+      "finbert_probs": {
+        "positive": 0.021356020122766495,
+        "neutral": 0.9160812497138977,
+        "negative": 0.0625627413392067
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_53",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 85,
+      "sentence_text": "The increase in operating income was primarily due to higher revenue, partially offset by higher cost of sales, approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products and higher operating expenses.",
+      "previous_sentence": "The increase was primarily driven by strong demand for our AMD EPYC\u2122 processors and AMD Instinct\u2122 GPU accelerators.Data Center operating income was $3.6 billion in 2025, compared to operating income of $3.5 billion in 2024.",
+      "next_sentence": "Client and Gaming Client and Gaming net revenue of $14.6 billion in 2025 increased by 51%, compared to net revenue of $9.6 billion in 2024.",
+      "risk_score": 0.059029072523117065,
+      "finbert_probs": {
+        "positive": 0.9201096892356873,
+        "neutral": 0.020861176773905754,
+        "negative": 0.059029072523117065
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_54",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 139,
+      "sentence_text": "Investing Activities Net cash used in investing activities of continuing operations was $6.9 billion in 2025, which primarily consisted of $5.5 billion of cash used for purchases of short-term investments, $1.8 billion of cash used in acquisitions, net of cash acquired and $1.0 billion for purchases of property and equipment, partially offset by $1.8 billion proceeds from maturities of short-term investments.",
+      "previous_sentence": "The primary drivers of the changes in operating assets and liabilities included a $1.9 billion increase in accounts receivable driven primarily by higher revenue in the last month of 2024 compared to the last month of 2023, and a $1.5 billion increase in inventories driven primarily by a build of inventory to support the ramp of new products in advanced process nodes.",
+      "next_sentence": "Net cash provided by investing activities of discontinued operations in 2025 was $1.3 billion, primarily from the sale of the ZT Manufacturing Business.Net cash used in investing activities was $1.1 billion in 2024, which primarily consisted of cash used for purchases of short-term investments of $1.5 billion, purchases of property and equipment of $636 million, and cash used in acquisitions, net of cash acquired of $548 million, partially offset by proceeds from maturities of short-term investments of $1.4 billion and sale of short-term investments of $616 million.",
+      "risk_score": 0.054666753858327866,
+      "finbert_probs": {
+        "positive": 0.040322672575712204,
+        "neutral": 0.9050105810165405,
+        "negative": 0.054666753858327866
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_55",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 142,
+      "sentence_text": "There was no net cash provided by financing activities of discontinued operations for the year ended December 27, 2025.Net cash used in financing activities was $2.1 billion in 2024, which primarily consisted of common stock repurchases of $862 million under the Repurchase Program, repurchases to cover tax withholding on employee equity plans of $728 million, and repayment of the 2.95% Notes of $750 million, partially offset by proceeds from the issuance of common stock under our employee equity plans of $279 million.",
+      "previous_sentence": "Financing Activities Net cash used in financing activities of continuing operations was $431 million in 2025, which primarily consisted of $1.3 billion of common stock repurchases under the Repurchase Program and $607 million of stock repurchases for tax withholding on employee equity plans, partially offset by $1.5 billion of net cash received from issuance of debt, net of repayments, and $285 million of proceeds from the issuance of common stock under our employee equity plans.",
+      "next_sentence": "Off-Balance Sheet Arrangements As of December 27, 2025, we did not have any off-balance sheet arrangements that have had, or are reasonably likely to have a material current or future effect on our financial condition, results of operations, liquidity, capital expenditures, or capital resources.",
+      "risk_score": 0.054354071617126465,
+      "finbert_probs": {
+        "positive": 0.025923602283000946,
+        "neutral": 0.919722318649292,
+        "negative": 0.054354071617126465
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_56",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 60,
+      "sentence_text": "Allocation of purchase consideration to identifiable assets and liabilities affects our amortization expense, as acquired finite-lived intangible assets are amortized over their useful life, whereas any indefinite-lived intangible assets, including goodwill, are not amortized.Goodwill.",
+      "previous_sentence": "Management's estimates of fair value are based upon assumptions believed to be reasonable, but which are inherently uncertain and unpredictable and, as a result, actual results may differ from estimates.",
+      "next_sentence": "Goodwill is the excess of the aggregate of the consideration transferred over the identifiable assets acquired and liabilities assumed in connection with business combinations.",
+      "risk_score": 0.050104863941669464,
+      "finbert_probs": {
+        "positive": 0.0214469525963068,
+        "neutral": 0.9284481406211853,
+        "negative": 0.050104863941669464
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_57",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 79,
+      "sentence_text": "When considering all available evidence, if we determine it is more-likely-than-not we will realize our deferred tax assets, we will reverse some or all of the existing valuation allowance, which would result in a credit to income tax expense and the establishment of an asset in the period of reversal.In determining the need to establish or maintain a valuation allowance, we consider the four sources of jurisdictional taxable income: (i) carryback of net operating losses to prior years; (ii) future reversals of existing taxable temporary differences; (iii) viable and prudent tax planning strategies; and (iv) future taxable income exclusive of reversing temporary differences and carryforwards.",
+      "previous_sentence": "Unless recovery is considered more-likely-than-not (a probability level of more than 50%), we will record a charge to income tax expense in the form of a valuation allowance for the deferred tax assets that we estimate will not ultimately be recoverable or maintain the valuation allowance recorded in prior periods.",
+      "next_sentence": "Certain state and foreign valuation allowances are maintained due to a lack of sufficient sources of future taxable income.In addition, the calculation of our tax liabilities involves addressing uncertainties in the application of complex, multi-jurisdictional tax rules and the potential for future adjustment of our uncertain tax positions by the Internal Revenue Service or other taxing authorities.",
+      "risk_score": 0.04552419111132622,
+      "finbert_probs": {
+        "positive": 0.06589927524328232,
+        "neutral": 0.8885765671730042,
+        "negative": 0.04552419111132622
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_58",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 98,
+      "sentence_text": "International Sales International sales as a percentage of net revenue were 67% in 2025 and 66% in 2024.",
+      "previous_sentence": "All Other operating loss of $4.2 billion in 2024 primarily consisted of $2.4 billion of amortization of acquisition-related intangibles and $1.4 billion of stock-based compensation expense.",
+      "next_sentence": "We expect that international sales will continue to be a significant portion of total sales in the foreseeable future.",
+      "risk_score": 0.04358658939599991,
+      "finbert_probs": {
+        "positive": 0.03969436138868332,
+        "neutral": 0.9167190194129944,
+        "negative": 0.04358658939599991
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_59",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 104,
+      "sentence_text": "Marketing, General and Administrative Expenses Marketing, general and administrative expenses of $4.1 billion in 2025 increased by $1.4 billion, or 52%, compared to $2.7 billion in 2024.",
+      "previous_sentence": "The increase was primarily due to higher employee-related costs from an increase in headcount in support of our continued focus on our AI strategy.",
+      "next_sentence": "The increase was primarily due to an increase in go-to-market activities to support our revenue growth.",
+      "risk_score": 0.04353407397866249,
+      "finbert_probs": {
+        "positive": 0.9386784434318542,
+        "neutral": 0.01778751239180565,
+        "negative": 0.04353407397866249
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_60",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 141,
+      "sentence_text": "Financing Activities Net cash used in financing activities of continuing operations was $431 million in 2025, which primarily consisted of $1.3 billion of common stock repurchases under the Repurchase Program and $607 million of stock repurchases for tax withholding on employee equity plans, partially offset by $1.5 billion of net cash received from issuance of debt, net of repayments, and $285 million of proceeds from the issuance of common stock under our employee equity plans.",
+      "previous_sentence": "Net cash provided by investing activities of discontinued operations in 2025 was $1.3 billion, primarily from the sale of the ZT Manufacturing Business.Net cash used in investing activities was $1.1 billion in 2024, which primarily consisted of cash used for purchases of short-term investments of $1.5 billion, purchases of property and equipment of $636 million, and cash used in acquisitions, net of cash acquired of $548 million, partially offset by proceeds from maturities of short-term investments of $1.4 billion and sale of short-term investments of $616 million.",
+      "next_sentence": "There was no net cash provided by financing activities of discontinued operations for the year ended December 27, 2025.Net cash used in financing activities was $2.1 billion in 2024, which primarily consisted of common stock repurchases of $862 million under the Repurchase Program, repurchases to cover tax withholding on employee equity plans of $728 million, and repayment of the 2.95% Notes of $750 million, partially offset by proceeds from the issuance of common stock under our employee equity plans of $279 million.",
+      "risk_score": 0.04291775822639465,
+      "finbert_probs": {
+        "positive": 0.04666794091463089,
+        "neutral": 0.9104142785072327,
+        "negative": 0.04291775822639465
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_61",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 50,
+      "sentence_text": "Material assumptions we use to estimate necessary inventory carrying value adjustments can be unique to each product and are based on specific facts and circumstances.",
+      "previous_sentence": "We value inventory at standard cost, adjusted to approximate the lower of actual cost or estimated net realizable value using assumptions about future demand and market conditions.",
+      "next_sentence": "In determining excess or obsolescence reserves for products, we consider assumptions such as changes in business and economic conditions, other-than-temporary decreases in demand for our products, and changes in technology or customer requirements.",
+      "risk_score": 0.040777575224637985,
+      "finbert_probs": {
+        "positive": 0.023247743025422096,
+        "neutral": 0.9359747171401978,
+        "negative": 0.040777575224637985
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_62",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 102,
+      "sentence_text": "Expenses Research and Development Expenses Research and development expenses of $8.1 billion in 2025 increased by $1.6 billion, or 25%, compared to $6.5 billion in 2024.",
+      "previous_sentence": "Comparison of Gross Margin, Expenses, Interest Expense, Other Income (expense) and Income Taxes The following is a summary of certain Consolidated Statement of Operations data for 2025 and 2024: December 27, 2025December 28, 2024 (In millions, except for percentages)Net revenue$34,639 $25,785 Cost of sales16,456 12,114 Amortization of acquisition-related intangibles1,031 946 Gross profit17,152 12,725 Gross margin50%49%Research and development8,091 6,456 Marketing, general and administrative4,144 2,735 Amortization of acquisition-related intangibles1,223 1,448 Interest expense(131)(92)Other income (expense), net577 181 Income tax provision (benefit)(103)381 Income from discontinued operations, net of tax66 \u2014 Gross Margin Gross margin of 50% increased by 1% compared to 49% in 2024, primarily due to product mix, partially offset by approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products.",
+      "next_sentence": "The increase was primarily due to higher employee-related costs from an increase in headcount in support of our continued focus on our AI strategy.",
+      "risk_score": 0.040014319121837616,
+      "finbert_probs": {
+        "positive": 0.942303478717804,
+        "neutral": 0.017682205885648727,
+        "negative": 0.040014319121837616
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_63",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 109,
+      "sentence_text": "Income Tax Provision (Benefit) We recorded an income tax benefit of $103 million and an income tax provision of $381 million in 2025 and 2024, respectively, representing effective tax rates of (2.5%) and 19%, respectively.",
+      "previous_sentence": "Other Income (expense), net Other income (expense), net is primarily comprised of interest income from short-term investments, changes in valuation of long-term investments and foreign currency transaction gains and losses.Other income (expense), net of $577 million in 2025 increased by $396 million compared to $181 million in 2024, primarily due to higher unrealized gains from long-term investments compared to the prior year.",
+      "next_sentence": "The decrease in income tax provision in 2025 was primarily driven by an $853 million benefit related to the release of uncertain tax positions pertaining to the reasonable cause relief for dual consolidated losses approved by the Internal Revenue Service (IRS) in April 2025, whereas the income tax provision in 2024 included $373 million tax effect from an intercompany integration transaction.In July 2025, the One Big Beautiful Bill Act (OBBBA) was enacted into law.",
+      "risk_score": 0.038476765155792236,
+      "finbert_probs": {
+        "positive": 0.16518789529800415,
+        "neutral": 0.7963353991508484,
+        "negative": 0.038476765155792236
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_64",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 39,
+      "sentence_text": "The preparation of our financial statements requires us to make estimates and judgments that affect the reported amounts in our Consolidated Financial Statements.",
+      "previous_sentence": "GAAP).",
+      "next_sentence": "We evaluate our estimates on an on-going basis, including those related to our revenue, inventories, business combinations, goodwill, long-lived and intangible assets, and income taxes.",
+      "risk_score": 0.03795131668448448,
+      "finbert_probs": {
+        "positive": 0.021993383765220642,
+        "neutral": 0.9400553107261658,
+        "negative": 0.03795131668448448
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_65",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 107,
+      "sentence_text": "Interest Expense Interest expense of $131 million in 2025 increased by $39 million compared to $92 million in 2024, primarily due to the issuance of $1.5 billion in aggregate principal amount of 4.212% Notes and 4.319% Notes in March 2025.",
+      "previous_sentence": "Amortization of Acquisition-Related Intangibles Amortization of acquisition-related intangibles of $2.3 billion for 2025 decreased by $140 million, or 6%, compared to $2.4 billion in 2024, primarily due to a lower balance of amortizable acquisition-related intangibles compared to the prior year.",
+      "next_sentence": "Other Income (expense), net Other income (expense), net is primarily comprised of interest income from short-term investments, changes in valuation of long-term investments and foreign currency transaction gains and losses.Other income (expense), net of $577 million in 2025 increased by $396 million compared to $181 million in 2024, primarily due to higher unrealized gains from long-term investments compared to the prior year.",
+      "risk_score": 0.036362625658512115,
+      "finbert_probs": {
+        "positive": 0.9461075663566589,
+        "neutral": 0.017529785633087158,
+        "negative": 0.036362625658512115
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_66",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 140,
+      "sentence_text": "Net cash provided by investing activities of discontinued operations in 2025 was $1.3 billion, primarily from the sale of the ZT Manufacturing Business.Net cash used in investing activities was $1.1 billion in 2024, which primarily consisted of cash used for purchases of short-term investments of $1.5 billion, purchases of property and equipment of $636 million, and cash used in acquisitions, net of cash acquired of $548 million, partially offset by proceeds from maturities of short-term investments of $1.4 billion and sale of short-term investments of $616 million.",
+      "previous_sentence": "Investing Activities Net cash used in investing activities of continuing operations was $6.9 billion in 2025, which primarily consisted of $5.5 billion of cash used for purchases of short-term investments, $1.8 billion of cash used in acquisitions, net of cash acquired and $1.0 billion for purchases of property and equipment, partially offset by $1.8 billion proceeds from maturities of short-term investments.",
+      "next_sentence": "Financing Activities Net cash used in financing activities of continuing operations was $431 million in 2025, which primarily consisted of $1.3 billion of common stock repurchases under the Repurchase Program and $607 million of stock repurchases for tax withholding on employee equity plans, partially offset by $1.5 billion of net cash received from issuance of debt, net of repayments, and $285 million of proceeds from the issuance of common stock under our employee equity plans.",
+      "risk_score": 0.03427286818623543,
+      "finbert_probs": {
+        "positive": 0.03226828947663307,
+        "neutral": 0.9334588050842285,
+        "negative": 0.03427286818623543
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_67",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 1,
+      "sentence_text": "MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS The following discussion should be read in conjunction with the Consolidated Financial Statements as of December 27, 2025 and December 28, 2024 and for each of the three years in the period ended December 27, 2025 and related notes, which are included in this Annual Report on Form 10-K as well as with the other sections of this Annual Report on Form 10-K, \u201cPart II, Item 8: Financial Statements and Supplementary Data.\u201d Introduction In this section, we will describe the general financial condition and the results of operations of Advanced Micro Devices, Inc. and its wholly-owned subsidiaries (collectively, \u201cus,\u201d \u201cour\u201d or \u201cAMD\u201d), including a discussion of our results of operations for 2025 compared to 2024, an analysis of changes in our financial condition and a discussion of our off-balance sheet arrangements.",
+      "previous_sentence": "ITEM 7.",
+      "next_sentence": "Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 that are not included in this Form 10-K can be found in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of our Annual Report on Form 10-K for the fiscal year ended December 28, 2024.Beginning in the first quarter of fiscal year 2025, we combined the Client and Gaming segments into one reportable segment to align with how we manage our business.",
+      "risk_score": 0.033968739211559296,
+      "finbert_probs": {
+        "positive": 0.02280448190867901,
+        "neutral": 0.9432267546653748,
+        "negative": 0.033968739211559296
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_68",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 81,
+      "sentence_text": "Results of Operations Additional information on our reportable segments is contained in Note 4 \u2013 Segment Reporting of the Notes to Financial Statements (Part II, Item 8 of this Form 10-K).",
+      "previous_sentence": "Certain state and foreign valuation allowances are maintained due to a lack of sufficient sources of future taxable income.In addition, the calculation of our tax liabilities involves addressing uncertainties in the application of complex, multi-jurisdictional tax rules and the potential for future adjustment of our uncertain tax positions by the Internal Revenue Service or other taxing authorities.",
+      "next_sentence": "Our operating results tend to vary seasonally.",
+      "risk_score": 0.03341502323746681,
+      "finbert_probs": {
+        "positive": 0.02157488651573658,
+        "neutral": 0.9450101256370544,
+        "negative": 0.03341502323746681
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_69",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 30,
+      "sentence_text": "Each vested tranche is further subject to the fulfillment of certain other technical and commercial conditions prior to exercise.",
+      "previous_sentence": "The warrant shares will vest in tranches based on certain AMD Instinct GPU purchase milestones by OpenAI, or its affiliates, or indirectly through third parties, and achievement of specified AMD stock price targets and stock performance.",
+      "next_sentence": "Subject to certain conditions, the warrant is exercisable through October 5, 2030.",
+      "risk_score": 0.03249109536409378,
+      "finbert_probs": {
+        "positive": 0.02351999841630459,
+        "neutral": 0.9439888596534729,
+        "negative": 0.03249109536409378
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_70",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 136,
+      "sentence_text": "The primary drivers of the changes in operating assets and liabilities included a $2.2 billion increase in inventory primarily to support the continued ramp of Data Center products in advanced process technology nodes.",
+      "previous_sentence": "Operating Activities Our working capital cash inflows and outflows from operations consist primarily of cash collections from our customers, payments for inventory purchases and payments for employee-related expenditures.Net cash provided by operating activities of continuing operations was $6.5 billion in 2025, primarily due to our net income of $4.3 billion in 2025, adjusted for non-cash adjustments of $4.6 billion and net cash outflows of $2.4 billion from changes in our operating assets and liabilities.",
+      "next_sentence": "Net cash provided by operating activities of the ZT Manufacturing Business, classified as discontinued operations, was $1.2 billion.Net cash provided by operating activities was $3.0 billion in 2024, primarily due to our net income of $1.6 billion in 2024, adjusted for non-cash adjustments of $3.5 billion and net cash outflows of $2.1 billion from changes in our operating assets and liabilities.",
+      "risk_score": 0.032051701098680496,
+      "finbert_probs": {
+        "positive": 0.9202876687049866,
+        "neutral": 0.04766058549284935,
+        "negative": 0.032051701098680496
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_71",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 52,
+      "sentence_text": "In determining the lower of cost or net realizable value reserves, we consider assumptions such as recent historical sales activity and selling prices, as well as estimates of future selling prices.",
+      "previous_sentence": "In determining excess or obsolescence reserves for products, we consider assumptions such as changes in business and economic conditions, other-than-temporary decreases in demand for our products, and changes in technology or customer requirements.",
+      "next_sentence": "If in any period we anticipate a change in assumptions such as future demand or market conditions to be less favorable than our previous estimates, additional inventory write-downs may be required and would be reflected in cost of sales, resulting in a negative impact to our gross margin in that period.",
+      "risk_score": 0.030638957396149635,
+      "finbert_probs": {
+        "positive": 0.035133518278598785,
+        "neutral": 0.934227466583252,
+        "negative": 0.030638957396149635
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_72",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 75,
+      "sentence_text": "In determining taxable income for financial statement reporting purposes, we must make certain estimates and judgments.",
+      "previous_sentence": "In the event such cash flows are not expected to be sufficient to recover the recorded value of the assets, the assets are written down to their estimated fair values based on the expected discounted future cash flows attributable to the asset group or based on appraisals.Income Taxes.",
+      "next_sentence": "These estimates and judgments are applied in the calculation of certain tax liabilities and in the determination of the recoverability of deferred tax assets which arise from temporary differences between the recognition of assets and liabilities for tax and financial statement reporting purposes.",
+      "risk_score": 0.029108310118317604,
+      "finbert_probs": {
+        "positive": 0.027608385309576988,
+        "neutral": 0.9432833194732666,
+        "negative": 0.029108310118317604
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_73",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 138,
+      "sentence_text": "The primary drivers of the changes in operating assets and liabilities included a $1.9 billion increase in accounts receivable driven primarily by higher revenue in the last month of 2024 compared to the last month of 2023, and a $1.5 billion increase in inventories driven primarily by a build of inventory to support the ramp of new products in advanced process nodes.",
+      "previous_sentence": "Net cash provided by operating activities of the ZT Manufacturing Business, classified as discontinued operations, was $1.2 billion.Net cash provided by operating activities was $3.0 billion in 2024, primarily due to our net income of $1.6 billion in 2024, adjusted for non-cash adjustments of $3.5 billion and net cash outflows of $2.1 billion from changes in our operating assets and liabilities.",
+      "next_sentence": "Investing Activities Net cash used in investing activities of continuing operations was $6.9 billion in 2025, which primarily consisted of $5.5 billion of cash used for purchases of short-term investments, $1.8 billion of cash used in acquisitions, net of cash acquired and $1.0 billion for purchases of property and equipment, partially offset by $1.8 billion proceeds from maturities of short-term investments.",
+      "risk_score": 0.02848644182085991,
+      "finbert_probs": {
+        "positive": 0.943958044052124,
+        "neutral": 0.027555402368307114,
+        "negative": 0.02848644182085991
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_74",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 126,
+      "sentence_text": "As of December 27, 2025, our aggregate principal debt was $3.3 billion, with short-term and long-term debt obligations of $874 million and $2.3 billion, respectively.We have $3.0 billion available under an unsecured revolving credit facility that expires on April 29, 2027.",
+      "previous_sentence": "We are eligible to receive additional cash consideration of up to $450 million to the extent certain conditions are met following the close of the sale through 2028 (Sanmina Earn-out).",
+      "next_sentence": "No funds were drawn from this credit facility during the year ended December 27, 2025.We also have a commercial paper program to issue unsecured commercial paper notes up to a maximum principal amount outstanding, at any time, of $3.0 billion, with a maturity of up to 397 days from the date of issue.",
+      "risk_score": 0.02832106687128544,
+      "finbert_probs": {
+        "positive": 0.02455063909292221,
+        "neutral": 0.9471282362937927,
+        "negative": 0.02832106687128544
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_75",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 47,
+      "sentence_text": "These return rights are generally limited to a contractual percentage of the customer\u2019s prior quarter shipments, although, from time to time we may approve additional product returns beyond the contractual arrangements based on the applicable facts and circumstances.",
+      "previous_sentence": "For transactions where we reimburse a customer for a portion of the customer\u2019s cost to perform specific product advertising or marketing and promotional activities, such amounts are recognized as a reduction to revenue unless they qualify for expense recognition.We also provide limited product return rights to certain OEMs and to most distribution customers.",
+      "next_sentence": "In order to estimate adjustments to revenue to account for these returns, including product restocking rights provided to distributor and OEM customers, we utilize relevant, trended actual historical product return rate information gathered, adjusted for actual known information or events, as applicable.Overall, our estimates of adjustments to contract price due to variable consideration under our contracts with OEM and distributor customers, based on our assumptions and include adjustments, if any, for known events, have been materially consistent with actual results; however, these estimates are subject to management\u2019s judgment and actual provisions could be different from our estimates and current provisions, resulting in future adjustments to our revenue and operating results.Inventory Valuation.",
+      "risk_score": 0.02824428118765354,
+      "finbert_probs": {
+        "positive": 0.023136034607887268,
+        "neutral": 0.9486197233200073,
+        "negative": 0.02824428118765354
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_76",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 44,
+      "sentence_text": "We determine the net amount of consideration to which we are entitled by estimating the most likely amount of consideration we expect to receive from the customer after adjustments to the contract price for rights of return and rebates to our original equipment manufacturer (OEM) and original design manufacturer (ODM) customers and rights of return, rebates and price protection on unsold merchandise to our distributor customers.We base our determination of necessary adjustments to the contract price by reference to actual historical activity and experience, including actual historical returns, rebates and credits issued to OEM and distributor customers adjusted, as applicable, to include adjustments, if any, for known events or current economic conditions, or both.Our estimates of necessary adjustments for distributor price incentives and price protection on unsold products held by distributors are based on actual historical incentives provided to distributor customers and known future price movements based on our internal and external market data analysis.Our estimates of necessary adjustments for OEM price incentives utilize, in addition to known pricing agreements, actual historical rebate attainment rates and estimates of future OEM rebate program attainment based on internal and external market data analysis.We offer incentive programs through cooperative advertising and marketing promotions.",
+      "previous_sentence": "Revenue contracts with our customers include variable amounts which we evaluate under ASC 606-10-32-8 through 14 in order to determine the net amount of consideration to which we are entitled and which we recognize as revenue.",
+      "next_sentence": "Where funds provided for such programs can be estimated, we recognize a reduction to revenue at the time the related revenue is recognized; otherwise, we recognize such reduction to revenue at the later of when: i) the related revenue transaction occurs; or ii) the program is offered.",
+      "risk_score": 0.027273697778582573,
+      "finbert_probs": {
+        "positive": 0.03575549274682999,
+        "neutral": 0.9369708299636841,
+        "negative": 0.027273697778582573
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_77",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 103,
+      "sentence_text": "The increase was primarily due to higher employee-related costs from an increase in headcount in support of our continued focus on our AI strategy.",
+      "previous_sentence": "Expenses Research and Development Expenses Research and development expenses of $8.1 billion in 2025 increased by $1.6 billion, or 25%, compared to $6.5 billion in 2024.",
+      "next_sentence": "Marketing, General and Administrative Expenses Marketing, general and administrative expenses of $4.1 billion in 2025 increased by $1.4 billion, or 52%, compared to $2.7 billion in 2024.",
+      "risk_score": 0.027110205963253975,
+      "finbert_probs": {
+        "positive": 0.9488824009895325,
+        "neutral": 0.02400747872889042,
+        "negative": 0.027110205963253975
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_78",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 66,
+      "sentence_text": "Significant judgment is required in estimating the fair value of our reporting units to determine if the fair values of those units exceed their carrying values.",
+      "previous_sentence": "The analysis may include both qualitative and quantitative factors to assess the likelihood of an impairment, which occurs when the carrying value of a reporting unit exceeds its fair value.",
+      "next_sentence": "We may obtain the assistance of third-party valuation specialists to help in determining the fair value of our reporting units.",
+      "risk_score": 0.02681385725736618,
+      "finbert_probs": {
+        "positive": 0.06189657375216484,
+        "neutral": 0.9112895727157593,
+        "negative": 0.02681385725736618
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_79",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 62,
+      "sentence_text": "Our reporting units are at the operating segment level.",
+      "previous_sentence": "Goodwill is the excess of the aggregate of the consideration transferred over the identifiable assets acquired and liabilities assumed in connection with business combinations.",
+      "next_sentence": "Our goodwill is contained within three reporting units: Data Center, Client and Gaming, and Embedded.",
+      "risk_score": 0.026807190850377083,
+      "finbert_probs": {
+        "positive": 0.02382536418735981,
+        "neutral": 0.9493674635887146,
+        "negative": 0.026807190850377083
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_80",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 36,
+      "sentence_text": "U.S. government officials have expressed an expectation that the U.S. government will receive 15% of the revenue generated from licensed MI308 sales to China; however, to date, the U.S. government has not published a regulation establishing such requirement.We intend the discussion of our financial condition and results of operations that follows to provide information that will assist in understanding our financial statements, the changes in certain key items in those financial statements from period to period, the primary factors that resulted in those changes, and how certain accounting principles, policies and estimates affect our financial statements.",
+      "previous_sentence": "During the fourth quarter of fiscal year 2025, we began shipping products and reversed approximately $360 million of the inventory and related charges recorded earlier in the year.",
+      "next_sentence": "Critical Accounting Estimates Our discussion and analysis of our financial condition and results of operations are based upon our Consolidated Financial Statements, which have been prepared in accordance with U.S. generally accepted accounting principles (U.S.",
+      "risk_score": 0.02407407946884632,
+      "finbert_probs": {
+        "positive": 0.03498353064060211,
+        "neutral": 0.9409424066543579,
+        "negative": 0.02407407946884632
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_81",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 43,
+      "sentence_text": "Revenue contracts with our customers include variable amounts which we evaluate under ASC 606-10-32-8 through 14 in order to determine the net amount of consideration to which we are entitled and which we recognize as revenue.",
+      "previous_sentence": "Although actual results have historically been reasonably consistent with management\u2019s expectations, the actual results may differ from these estimates or our estimates may be affected by different assumptions or conditions.Management believes the following critical accounting estimates are the most significant to the presentation of our financial statements and require the most difficult, subjective and complex judgments.Revenue Allowances.",
+      "next_sentence": "We determine the net amount of consideration to which we are entitled by estimating the most likely amount of consideration we expect to receive from the customer after adjustments to the contract price for rights of return and rebates to our original equipment manufacturer (OEM) and original design manufacturer (ODM) customers and rights of return, rebates and price protection on unsold merchandise to our distributor customers.We base our determination of necessary adjustments to the contract price by reference to actual historical activity and experience, including actual historical returns, rebates and credits issued to OEM and distributor customers adjusted, as applicable, to include adjustments, if any, for known events or current economic conditions, or both.Our estimates of necessary adjustments for distributor price incentives and price protection on unsold products held by distributors are based on actual historical incentives provided to distributor customers and known future price movements based on our internal and external market data analysis.Our estimates of necessary adjustments for OEM price incentives utilize, in addition to known pricing agreements, actual historical rebate attainment rates and estimates of future OEM rebate program attainment based on internal and external market data analysis.We offer incentive programs through cooperative advertising and marketing promotions.",
+      "risk_score": 0.02405749075114727,
+      "finbert_probs": {
+        "positive": 0.02461632713675499,
+        "neutral": 0.9513261914253235,
+        "negative": 0.02405749075114727
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_82",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 4,
+      "sentence_text": "Overview In 2025, we delivered strong annual revenue growth with net revenue increasing 34% to $34.6 billion, compared to $25.8 billion in 2024.",
+      "previous_sentence": "All prior period segment data were retrospectively adjusted.",
+      "next_sentence": "This growth was driven by the performance of our Data Center and Client and Gaming segments.",
+      "risk_score": 0.023923464119434357,
+      "finbert_probs": {
+        "positive": 0.954572856426239,
+        "neutral": 0.021503601223230362,
+        "negative": 0.023923464119434357
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_83",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 91,
+      "sentence_text": "The increase in operating income was primarily driven by higher revenue, partially offset by higher cost of sales and operating expenses.",
+      "previous_sentence": "Client and Gaming operating income was $2.9 billion in 2025, compared to operating income of $1.2 billion in 2024.",
+      "next_sentence": "Embedded Embedded net revenue of $3.5 billion in 2025 decreased by 3%, compared to net revenue of $3.6 billion in 2024.",
+      "risk_score": 0.023119201883673668,
+      "finbert_probs": {
+        "positive": 0.956902265548706,
+        "neutral": 0.019978541880846024,
+        "negative": 0.023119201883673668
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_84",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 86,
+      "sentence_text": "Client and Gaming Client and Gaming net revenue of $14.6 billion in 2025 increased by 51%, compared to net revenue of $9.6 billion in 2024.",
+      "previous_sentence": "The increase in operating income was primarily due to higher revenue, partially offset by higher cost of sales, approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products and higher operating expenses.",
+      "next_sentence": "Client net revenue of $10.6 billion in 2025 increased by 51%, compared to net revenue of $7.1 billion in 2024, primarily driven by a 15% increase in unit shipments of processors and a 31% increase in average selling price of processors, reflecting strong demand for AMD desktop and mobile Ryzen processors.",
+      "risk_score": 0.022376231849193573,
+      "finbert_probs": {
+        "positive": 0.9598478078842163,
+        "neutral": 0.017775924876332283,
+        "negative": 0.022376231849193573
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_85",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 57,
+      "sentence_text": "Such valuations require management to make significant estimates and assumptions, especially with respect to assets and liabilities held for sale, intangible assets and contingent consideration.",
+      "previous_sentence": "We allocate the fair value of purchase consideration for acquisitions meeting the requirement of business combinations to the tangible and intangible assets acquired and liabilities assumed based on their estimated fair values.",
+      "next_sentence": "Significant estimates and inputs used in valuing acquired assets and liabilities held for sale, developed technology, and other identifiable intangible assets include, but are not limited to, expected future revenue, future changes in technology, useful lives, risk-adjusted discount rates and time and costs to recreate certain assets.",
+      "risk_score": 0.02183384634554386,
+      "finbert_probs": {
+        "positive": 0.039124179631471634,
+        "neutral": 0.9390419125556946,
+        "negative": 0.02183384634554386
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_86",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 88,
+      "sentence_text": "Gaming net revenue of $3.9 billion in 2025 increased by 51%, compared to net revenue of $2.6 billion in 2024.",
+      "previous_sentence": "Client net revenue of $10.6 billion in 2025 increased by 51%, compared to net revenue of $7.1 billion in 2024, primarily driven by a 15% increase in unit shipments of processors and a 31% increase in average selling price of processors, reflecting strong demand for AMD desktop and mobile Ryzen processors.",
+      "next_sentence": "The increase was primarily driven by higher semi-custom revenue and strong demand of our Radeon\u2122 gaming GPUs.",
+      "risk_score": 0.021800845861434937,
+      "finbert_probs": {
+        "positive": 0.9594874978065491,
+        "neutral": 0.018711712211370468,
+        "negative": 0.021800845861434937
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_87",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 31,
+      "sentence_text": "Subject to certain conditions, the warrant is exercisable through October 5, 2030.",
+      "previous_sentence": "Each vested tranche is further subject to the fulfillment of certain other technical and commercial conditions prior to exercise.",
+      "next_sentence": "None of the warrant shares met the vesting or exercise conditions and the warrant had no impact to our financial statements for the year ended December 27, 2025.",
+      "risk_score": 0.02045026421546936,
+      "finbert_probs": {
+        "positive": 0.032852742820978165,
+        "neutral": 0.9466969966888428,
+        "negative": 0.02045026421546936
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_88",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 40,
+      "sentence_text": "We evaluate our estimates on an on-going basis, including those related to our revenue, inventories, business combinations, goodwill, long-lived and intangible assets, and income taxes.",
+      "previous_sentence": "The preparation of our financial statements requires us to make estimates and judgments that affect the reported amounts in our Consolidated Financial Statements.",
+      "next_sentence": "We base our estimates on historical experience and on various other assumptions that we believe to be reasonable under the circumstances, the results of which form the basis for making judgments about the carrying values of assets and liabilities.",
+      "risk_score": 0.020377734676003456,
+      "finbert_probs": {
+        "positive": 0.0363648384809494,
+        "neutral": 0.9432573914527893,
+        "negative": 0.020377734676003456
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_89",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 87,
+      "sentence_text": "Client net revenue of $10.6 billion in 2025 increased by 51%, compared to net revenue of $7.1 billion in 2024, primarily driven by a 15% increase in unit shipments of processors and a 31% increase in average selling price of processors, reflecting strong demand for AMD desktop and mobile Ryzen processors.",
+      "previous_sentence": "Client and Gaming Client and Gaming net revenue of $14.6 billion in 2025 increased by 51%, compared to net revenue of $9.6 billion in 2024.",
+      "next_sentence": "Gaming net revenue of $3.9 billion in 2025 increased by 51%, compared to net revenue of $2.6 billion in 2024.",
+      "risk_score": 0.020330136641860008,
+      "finbert_probs": {
+        "positive": 0.9596474766731262,
+        "neutral": 0.020022297278046608,
+        "negative": 0.020330136641860008
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_90",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 7,
+      "sentence_text": "Client and Gaming segment net revenue of $14.6 billion in 2025 increased by 51% compared to $9.6 billion in 2024, primarily driven by strong demand for our AMD Ryzen\u2122 processors, semi-custom game consoles SoCs and Radeon\u2122 gaming GPUs.",
+      "previous_sentence": "Data Center net revenue of $16.6 billion increased by 32% compared to $12.6 billion in 2024, primarily driven by strong demand for our 5th generation AMD EPYC\u2122 processors and AMD Instinct\u2122 MI350 Series GPUs.",
+      "next_sentence": "The increase in annual net revenue was partially offset by a decrease in net revenue in our Embedded segment.",
+      "risk_score": 0.020328350365161896,
+      "finbert_probs": {
+        "positive": 0.9620720148086548,
+        "neutral": 0.017599651589989662,
+        "negative": 0.020328350365161896
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_91",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 115,
+      "sentence_text": "Many countries, including non-EU member states, have implemented laws based on Pillar Two proposals, with effective dates that started in 2024.",
+      "previous_sentence": "The Council of the European Union has adopted the global corporate 15% minimum tax as provided for in Pillar Two and has directed EU member states to implement legislation enacting Pillar Two.",
+      "next_sentence": "Although many countries have already introduced Pillar Two legislation applicable to us effective in 2024, certain jurisdictions in which we operate have not adopted corresponding legislation to date.",
+      "risk_score": 0.020035531371831894,
+      "finbert_probs": {
+        "positive": 0.08162441104650497,
+        "neutral": 0.8983400464057922,
+        "negative": 0.020035531371831894
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_92",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 77,
+      "sentence_text": "We regularly assess the likelihood that we will be able to recover our deferred tax assets.",
+      "previous_sentence": "These estimates and judgments are applied in the calculation of certain tax liabilities and in the determination of the recoverability of deferred tax assets which arise from temporary differences between the recognition of assets and liabilities for tax and financial statement reporting purposes.",
+      "next_sentence": "Unless recovery is considered more-likely-than-not (a probability level of more than 50%), we will record a charge to income tax expense in the form of a valuation allowance for the deferred tax assets that we estimate will not ultimately be recoverable or maintain the valuation allowance recorded in prior periods.",
+      "risk_score": 0.0196316447108984,
+      "finbert_probs": {
+        "positive": 0.9141585826873779,
+        "neutral": 0.06620977818965912,
+        "negative": 0.0196316447108984
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_93",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 6,
+      "sentence_text": "Data Center net revenue of $16.6 billion increased by 32% compared to $12.6 billion in 2024, primarily driven by strong demand for our 5th generation AMD EPYC\u2122 processors and AMD Instinct\u2122 MI350 Series GPUs.",
+      "previous_sentence": "This growth was driven by the performance of our Data Center and Client and Gaming segments.",
+      "next_sentence": "Client and Gaming segment net revenue of $14.6 billion in 2025 increased by 51% compared to $9.6 billion in 2024, primarily driven by strong demand for our AMD Ryzen\u2122 processors, semi-custom game consoles SoCs and Radeon\u2122 gaming GPUs.",
+      "risk_score": 0.01925429329276085,
+      "finbert_probs": {
+        "positive": 0.9591271877288818,
+        "neutral": 0.021618474274873734,
+        "negative": 0.01925429329276085
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_94",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 100,
+      "sentence_text": "Substantially all of our sales transactions are denominated in U.S. dollars.",
+      "previous_sentence": "We expect that international sales will continue to be a significant portion of total sales in the foreseeable future.",
+      "next_sentence": "Comparison of Gross Margin, Expenses, Interest Expense, Other Income (expense) and Income Taxes The following is a summary of certain Consolidated Statement of Operations data for 2025 and 2024: December 27, 2025December 28, 2024 (In millions, except for percentages)Net revenue$34,639 $25,785 Cost of sales16,456 12,114 Amortization of acquisition-related intangibles1,031 946 Gross profit17,152 12,725 Gross margin50%49%Research and development8,091 6,456 Marketing, general and administrative4,144 2,735 Amortization of acquisition-related intangibles1,223 1,448 Interest expense(131)(92)Other income (expense), net577 181 Income tax provision (benefit)(103)381 Income from discontinued operations, net of tax66 \u2014 Gross Margin Gross margin of 50% increased by 1% compared to 49% in 2024, primarily due to product mix, partially offset by approximately $440 million of net inventory and related charges associated with the U.S. government export control on AMD Instinct\u2122 MI308 Data Center GPU products.",
+      "risk_score": 0.01899866573512554,
+      "finbert_probs": {
+        "positive": 0.04125040024518967,
+        "neutral": 0.9397509694099426,
+        "negative": 0.01899866573512554
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_95",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 58,
+      "sentence_text": "Significant estimates and inputs used in valuing acquired assets and liabilities held for sale, developed technology, and other identifiable intangible assets include, but are not limited to, expected future revenue, future changes in technology, useful lives, risk-adjusted discount rates and time and costs to recreate certain assets.",
+      "previous_sentence": "Such valuations require management to make significant estimates and assumptions, especially with respect to assets and liabilities held for sale, intangible assets and contingent consideration.",
+      "next_sentence": "Management's estimates of fair value are based upon assumptions believed to be reasonable, but which are inherently uncertain and unpredictable and, as a result, actual results may differ from estimates.",
+      "risk_score": 0.018491413444280624,
+      "finbert_probs": {
+        "positive": 0.0411851592361927,
+        "neutral": 0.9403234124183655,
+        "negative": 0.018491413444280624
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_96",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 121,
+      "sentence_text": "This includes the results of operations of the ZT Manufacturing Business and the change in fair value of contingent consideration liability of $121 million.",
+      "previous_sentence": "Discontinued Operations Net income from discontinued operations for 2025 was $66 million, net of tax expense of $54 million.",
+      "next_sentence": "FINANCIAL CONDITION Liquidity and Capital Resources As of December 27, 2025, our cash, cash equivalents and short-term investments were $10.6 billion compared to $5.1 billion as of December 28, 2024.",
+      "risk_score": 0.017967624589800835,
+      "finbert_probs": {
+        "positive": 0.059426356106996536,
+        "neutral": 0.9226060509681702,
+        "negative": 0.017967624589800835
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_97",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 128,
+      "sentence_text": "We had no commercial paper outstanding as of December 27, 2025.As of December 27, 2025, we had unconditional commitments of approximately $12.2 billion, of which $8.5 billion are in fiscal year 2026.",
+      "previous_sentence": "No funds were drawn from this credit facility during the year ended December 27, 2025.We also have a commercial paper program to issue unsecured commercial paper notes up to a maximum principal amount outstanding, at any time, of $3.0 billion, with a maturity of up to 397 days from the date of issue.",
+      "next_sentence": "Our contractual obligations and purchase commitments relate primarily to our obligations to purchase wafers and substrates from third parties and future payments related to multi-year cloud service provider arrangements, and certain software and technology licenses.",
+      "risk_score": 0.01795284077525139,
+      "finbert_probs": {
+        "positive": 0.050153810530900955,
+        "neutral": 0.9318934082984924,
+        "negative": 0.01795284077525139
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_98",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 131,
+      "sentence_text": "We also have commitments for leases that have commenced for approximately $940 million and leases that have not yet commenced for $1.3 billion.",
+      "previous_sentence": "We work continually with our suppliers on the timing of payments and deliveries of purchase commitments, taking into account business conditions.",
+      "next_sentence": "See Note 12 \u2013 Commitments and Contingencies for contractual obligations and purchase commitments and Note 10 - Leases for lease obligations.We believe our cash, cash equivalents, short-term investments and cash flows from operations along with our revolving credit facility and commercial paper program will be sufficient to fund operations, including capital expenditures, purchase and lease commitments, and strategic activities over the next 12 months and beyond.",
+      "risk_score": 0.017516322433948517,
+      "finbert_probs": {
+        "positive": 0.06522482633590698,
+        "neutral": 0.9172587990760803,
+        "negative": 0.017516322433948517
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_99",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 63,
+      "sentence_text": "Our goodwill is contained within three reporting units: Data Center, Client and Gaming, and Embedded.",
+      "previous_sentence": "Our reporting units are at the operating segment level.",
+      "next_sentence": "We perform our goodwill impairment analysis as of the first day of the fourth quarter of each year and, if certain events or circumstances indicate that an impairment loss may have been incurred, on a more frequent basis.",
+      "risk_score": 0.01709344983100891,
+      "finbert_probs": {
+        "positive": 0.040937215089797974,
+        "neutral": 0.9419693350791931,
+        "negative": 0.01709344983100891
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_100",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 116,
+      "sentence_text": "Although many countries have already introduced Pillar Two legislation applicable to us effective in 2024, certain jurisdictions in which we operate have not adopted corresponding legislation to date.",
+      "previous_sentence": "Many countries, including non-EU member states, have implemented laws based on Pillar Two proposals, with effective dates that started in 2024.",
+      "next_sentence": "For 2024 and 2025, the impact to us associated with Pillar Two was immaterial.",
+      "risk_score": 0.01696469448506832,
+      "finbert_probs": {
+        "positive": 0.07692014425992966,
+        "neutral": 0.9061152338981628,
+        "negative": 0.01696469448506832
+      }
+    }
+  ]
+}

@@ -1,0 +1,1629 @@
+{
+  "schema_version": "data_extraction_v1",
+  "model_name": "ProsusAI/finbert",
+  "run_timestamp": "2026-04-14T03:25:25.360127+00:00",
+  "ticker": "CRM",
+  "company_name": "Salesforce, Inc.",
+  "cik": "0001108524",
+  "filing_year": 2026,
+  "filing_date": "2026-03-02",
+  "accession": "0001108524-26-000060",
+  "parser_mode": "plain_text_fallback",
+  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/CRM/complete_ingestion.json",
+  "processed_sections": [
+    "item_1a_risk_factors",
+    "item_1c_cybersecurity",
+    "item_3_legal",
+    "item_7_mda",
+    "item_7a_market_risk"
+  ],
+  "skipped_sections": [],
+  "numeric_deltas": {
+    "Revenues": {
+      "current_value": 41525000000.0,
+      "previous_value": 37895000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "previous_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "delta_percent": 9.57910014513788,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "NetIncome": {
+      "current_value": 7457000000.0,
+      "previous_value": 6197000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetIncomeLoss",
+      "previous_tag": "NetIncomeLoss",
+      "delta_percent": 20.332418912376955,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "Cash": {
+      "current_value": 7327000000.0,
+      "previous_value": 8848000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "delta_percent": -17.190325497287525,
+      "label": "moderate_decline",
+      "reason": null
+    },
+    "Assets": {
+      "current_value": 112305000000.0,
+      "previous_value": 102928000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "Assets",
+      "previous_tag": "Assets",
+      "delta_percent": 9.110251826519509,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "LongTermDebt": {
+      "current_value": 14439000000.0,
+      "previous_value": 8433000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "LongTermDebt",
+      "previous_tag": "LongTermDebt",
+      "delta_percent": 71.2202063322661,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "OperatingCashFlow": {
+      "current_value": 14996000000.0,
+      "previous_value": 13092000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "delta_percent": 14.543232508402076,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "ResearchAndDevelopment": {
+      "current_value": 5993000000.0,
+      "previous_value": 5493000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "ResearchAndDevelopmentExpense",
+      "previous_tag": "ResearchAndDevelopmentExpense",
+      "delta_percent": 9.102494083378845,
+      "label": "moderate_growth",
+      "reason": null
+    },
+    "GrossProfit": {
+      "current_value": 32255000000.0,
+      "previous_value": 29252000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "GrossProfit",
+      "previous_tag": "GrossProfit",
+      "delta_percent": 10.265964720361001,
+      "label": "moderate_growth",
+      "reason": null
+    }
+  },
+  "text_candidates": [
+    {
+      "candidate_id": "item_7_mda_1",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 191,
+      "sentence_text": "Other income decreased in fiscal 2026 primarily due to a decrease in investment income from lower interest rates.",
+      "previous_sentence": "Other income primarily consists of interest income on our marketable securities portfolio, which is partially offset by interest expense on our debt as well as our finance leases.",
+      "next_sentence": "We expect that interest expense may increase due to the outstanding balance related to the Informatica Credit Agreements.",
+      "risk_score": 0.9722464084625244,
+      "finbert_probs": {
+        "positive": 0.010259551927447319,
+        "neutral": 0.017494026571512222,
+        "negative": 0.9722464084625244
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_2",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 34,
+      "sentence_text": "Total revenues in the fiscal year ended January 31, 2026 was positively impacted by approximately one percent in foreign currency fluctuations compared to the fiscal year ended January 31, 2025.",
+      "previous_sentence": "In addition, the expanding global scope of our business and the heightened volatility of global markets expose us to the risk of fluctuations in foreign currency markets.",
+      "next_sentence": "Our current remaining performance obligation growth as of January 31, 2026 compared to January 31, 2025 was positively impacted by three percent compared to what would have been reported using constant currency rates.",
+      "risk_score": 0.9714341759681702,
+      "finbert_probs": {
+        "positive": 0.00993657112121582,
+        "neutral": 0.01862931437790394,
+        "negative": 0.9714341759681702
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_3",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 18,
+      "sentence_text": "Total revenue during fiscal 2026 was positively impacted by approximately one percent due to fluctuations in foreign currencies compared to fiscal 2025.",
+      "previous_sentence": "49 Table of Contents Foreign Currency Translation Risk Fluctuations in foreign currencies impact the amount of total assets, liabilities, revenues, operating expenses and cash flows that we repor t for our foreign subsidiaries upon the translation of these amounts into USD .",
+      "next_sentence": "In addition, fluctuations in foreign currencies positively impacted our current remaining performance obligation growth rate as of January 31, 2026 by approximately three percent compared to what we would have reported as of January 31, 2025 using constant currency rates.",
+      "risk_score": 0.9699562191963196,
+      "finbert_probs": {
+        "positive": 0.011732945218682289,
+        "neutral": 0.01831076852977276,
+        "negative": 0.9699562191963196
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_4",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 91,
+      "sentence_text": "If our customers do not renew their subscriptions or if they reduce subscriptions at renewal, our revenue and current remaining performance obligation could decline and our business may suffer.",
+      "previous_sentence": "If we fail to successfully scale our operations and increase productivity, we may be unable to execute our business plan and the value of our common stock could decline.",
+      "next_sentence": "If customer usage of consumption-based offerings is below expected levels, our revenue could decline.",
+      "risk_score": 0.9698560833930969,
+      "finbert_probs": {
+        "positive": 0.008410374633967876,
+        "neutral": 0.021733593195676804,
+        "negative": 0.9698560833930969
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_5",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 159,
+      "sentence_text": "The decrease in professional services and other revenues for fiscal 2026 was primarily due to less demand for larger, multi-year transformation engagements, which may continue in the near term.",
+      "previous_sentence": "Subscription and support revenues accounted for approximately 95 percent and 94 percent of our total revenues for fiscal 2026 and 2025, respectively.",
+      "next_sentence": "The acquisition of Informatica in November 2025 contributed approximately $399 million of revenue in fiscal 2026.",
+      "risk_score": 0.9693325757980347,
+      "finbert_probs": {
+        "positive": 0.012269717641174793,
+        "neutral": 0.018397700041532516,
+        "negative": 0.9693325757980347
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_6",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 353,
+      "sentence_text": "If we experience significant fluctuations in our rate of anticipated growth and fail to balance our expenses with our revenue forecasts, our business could be harmed and our stock price could decline.",
+      "previous_sentence": "Our subscription model also makes it difficult for us to rapidly increase our revenue through additional sales in any period, as revenue from new customers must be recognized over the applicable subscription and support term.",
+      "next_sentence": "Due to the unpredictability of future general economic and financial market conditions, we may not be able to realize our projected revenue growth plans.",
+      "risk_score": 0.9693267345428467,
+      "finbert_probs": {
+        "positive": 0.008011437021195889,
+        "neutral": 0.022661829367280006,
+        "negative": 0.9693267345428467
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_7",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 439,
+      "sentence_text": "The United States and other key international economies have experienced significant economic and market downturns in the past, and are likely to experience additional cyclical downturns from time to time in which economic activity is impacted by falling demand for a variety of goods and services, restricted credit, poor liquidity, reduced corporate profitability, volatility in credit, equity and foreign exchange markets, inflation, bankruptcies and overall uncertainty with respect to the economy.",
+      "previous_sentence": "Our overall performance depends in part on worldwide economic and geopolitical conditions.",
+      "next_sentence": "These economic conditions can arise suddenly and the full impact of such conditions can be difficult to predict.",
+      "risk_score": 0.9689077138900757,
+      "finbert_probs": {
+        "positive": 0.008921603672206402,
+        "neutral": 0.022170787677168846,
+        "negative": 0.9689077138900757
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_8",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 92,
+      "sentence_text": "If customer usage of consumption-based offerings is below expected levels, our revenue could decline.",
+      "previous_sentence": "If our customers do not renew their subscriptions or if they reduce subscriptions at renewal, our revenue and current remaining performance obligation could decline and our business may suffer.",
+      "next_sentence": "If we cannot accurately predict subscription renewals or upgrade rates or optimal pricing for consumption-based contracts, we may not meet our revenue targets, which may adversely affect our stock price.",
+      "risk_score": 0.9674651622772217,
+      "finbert_probs": {
+        "positive": 0.010467803105711937,
+        "neutral": 0.022067107260227203,
+        "negative": 0.9674651622772217
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_9",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 157,
+      "sentence_text": "Our efforts to expand our service offerings and to develop and integrate our existing services in order to keep pace with technological developments may not succeed and may reduce our revenue growth rate and harm our business.",
+      "previous_sentence": "For all of these reasons, we may not be able to compete successfully against our competitors, which could negatively impact our future sales and harm our business.",
+      "next_sentence": "Our efforts to expand our current service offerings may not succeed and may reduce our revenue growth rate.",
+      "risk_score": 0.9662508368492126,
+      "finbert_probs": {
+        "positive": 0.010720772668719292,
+        "neutral": 0.023028366267681122,
+        "negative": 0.9662508368492126
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_10",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 170,
+      "sentence_text": "Any failure of our services to operate effectively with future network platforms and technologies could reduce the demand for our services, result in customer dissatisfaction and harm our business.",
+      "previous_sentence": "Uncertainties about the timing and nature of new network platforms or technologies, modifications to existing platforms or technologies, including text messaging capabilities within these platforms, or changes in customer usage patterns thereof could increase our research and development or service delivery expenses or lead to our increased reliance on certain vendors.",
+      "next_sentence": "Our continued success depends on our ability to maintain and enhance our brands.",
+      "risk_score": 0.9657368063926697,
+      "finbert_probs": {
+        "positive": 0.008458172902464867,
+        "neutral": 0.02580501325428486,
+        "negative": 0.9657368063926697
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_11",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 62,
+      "sentence_text": "If we experience significant strains on our data center capacity, whether due to insufficient infrastructure capacity or for other reasons outside of our control, our customers could experience performance degradation or service outages that may subject us to financial liabilities, result in customer losses, subject us to litigation and harm our reputation and business.",
+      "previous_sentence": "Additionally, increased energy consumption, including as a result of AI adoption, climate-related events, energy market volatility, and power grid disruptions may increase the operational costs related to inputs across our value chain, including for data centers.",
+      "next_sentence": "As we add data centers and capacity and continue to move to cloud computing platform providers, we move or transfer our data and our customers' data from time to time.",
+      "risk_score": 0.9654408097267151,
+      "finbert_probs": {
+        "positive": 0.009325007908046246,
+        "neutral": 0.025234181433916092,
+        "negative": 0.9654408097267151
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_12",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 51,
+      "sentence_text": "Service interruptions or other performance or quality issues may cause us to issue credits or pay penalties, cause customers to assert warranty or other claims or terminate their subscriptions, and adversely affect attrition rates and our ability to attract new customers, which could reduce revenue.",
+      "previous_sentence": "As our reliance on these third-party systems increases, and particularly on third-party cloud computing platforms, our exposure to service interruptions and performance or quality issues may also increase.",
+      "next_sentence": "Our business and reputation would also be harmed if our customers and potential customers perceive our services as unreliable.",
+      "risk_score": 0.96504807472229,
+      "finbert_probs": {
+        "positive": 0.008183322846889496,
+        "neutral": 0.026768581941723824,
+        "negative": 0.96504807472229
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_13",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 360,
+      "sentence_text": "If we are not able to provide continued operating margin expansion, our business could be harmed and our stock price could decline.",
+      "previous_sentence": "As a result, our revenues, operating results and cash flows may 26 Table of Contents fluctuate significantly on a quarterly basis and revenue growth rates may not be sustainable and may decline in the future.",
+      "next_sentence": "Unanticipated changes in our effective tax rate and additional tax liabilities and global tax developments may impact our financial results.",
+      "risk_score": 0.9649472832679749,
+      "finbert_probs": {
+        "positive": 0.0099233603104949,
+        "neutral": 0.025129344314336777,
+        "negative": 0.9649472832679749
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_14",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 34,
+      "sentence_text": "Defects or disruptions in our services could diminish demand for our services and subject us to substantial liability.",
+      "previous_sentence": "In addition, prevention, detection, investigation and remediation of actual or suspected vulnerabilities or incidents, including determining whether notification or disclosure is required, may not be straightforward, may result in significant direct and indirect costs, including increased infrastructure and security spending and the diversion of resources from development activities.",
+      "next_sentence": "We have in the past and may in the future identify defects in or experience disruptions to our services.",
+      "risk_score": 0.9644742012023926,
+      "finbert_probs": {
+        "positive": 0.009436927735805511,
+        "neutral": 0.02608882077038288,
+        "negative": 0.9644742012023926
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_15",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 111,
+      "sentence_text": "Sales to larger enterprise customers may involve more time-consuming and expensive sales cycles, pricing pressure and implementation and configuration challenges, and, for some complex transactions, delayed revenue recognition, all of which could harm our business and operating results.",
+      "previous_sentence": "The above factors may also negatively impact our ability to successfully expand into emerging market countries, where we have little or no operating experience, where it can be costly and challenging to establish and maintain operations, including hiring and managing required personnel, and difficult to promote our brand, and where we may not benefit from any first-to-market advantage or otherwise succeed.",
+      "next_sentence": "17 Table of Contents We may face greater costs, longer sales cycles, greater competition and less predictability in completing some of our sales to large enterprise customers, including governmental entities and customers in regulated industries.",
+      "risk_score": 0.9644695520401001,
+      "finbert_probs": {
+        "positive": 0.007873940281569958,
+        "neutral": 0.027656452730298042,
+        "negative": 0.9644695520401001
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_16",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 359,
+      "sentence_text": "As a result, our revenues, operating results and cash flows may 26 Table of Contents fluctuate significantly on a quarterly basis and revenue growth rates may not be sustainable and may decline in the future.",
+      "previous_sentence": "Additionally, if sales through indirect channels or for consumption-based product offerings increase, this may lead to greater difficulty in forecasting revenue and anticipated rate of growth.",
+      "next_sentence": "If we are not able to provide continued operating margin expansion, our business could be harmed and our stock price could decline.",
+      "risk_score": 0.9634528756141663,
+      "finbert_probs": {
+        "positive": 0.01414960902184248,
+        "neutral": 0.02239747904241085,
+        "negative": 0.9634528756141663
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_17",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 104,
+      "sentence_text": "Such changes have in some periods resulted in, and may in the future result in, a reduction of productivity, which could negatively impact our operating results.",
+      "previous_sentence": "We periodically change and make adjustments to our sales organization in response to market opportunities, competitive threats, management changes, product introductions or enhancements, acquisitions, sales performance, increases in sales headcount, cost levels and other internal and external considerations.",
+      "next_sentence": "Further, any significant change to our sales organization's compensation structure may be disruptive and negatively affect our operating results.",
+      "risk_score": 0.9631951451301575,
+      "finbert_probs": {
+        "positive": 0.01164617296308279,
+        "neutral": 0.025158768519759178,
+        "negative": 0.9631951451301575
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_18",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 455,
+      "sentence_text": "Changing market dynamics, global policy developments and the increasing frequency and impact of extreme weather events on critical infrastructure in the United States and elsewhere have the potential to disrupt our business, as well as the business of the companies we invest in, third-party providers or suppliers that we rely on, and our customers, and may cause us to experience higher attrition, losses and additional costs to maintain or resume operations.",
+      "previous_sentence": "These events in turn have impacts on inflation risks, the cost and availability of insurance, food security, water security (including for water availability for data center cooling), energy security and on our employees' health, productivity and well-being.",
+      "next_sentence": "30 Table of Contents",
+      "risk_score": 0.9626904129981995,
+      "finbert_probs": {
+        "positive": 0.00940889772027731,
+        "neutral": 0.027900729328393936,
+        "negative": 0.9626904129981995
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_19",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 128,
+      "sentence_text": "If we fail to attract new personnel or fail to retain current personnel, our business and future growth prospects could be severely harmed.",
+      "previous_sentence": "Additionally, our compensation arrangements and benefits may not always be successful in attracting new employees or retaining and motivating our existing personnel.",
+      "next_sentence": "We have undertaken various restructuring initiatives intended to improve operating margins and continue advancing our ongoing commitment to profitable growth, which have included a workforce reduction, select data center exits, and office space reductions within certain markets.",
+      "risk_score": 0.9613267183303833,
+      "finbert_probs": {
+        "positive": 0.012733839452266693,
+        "neutral": 0.025939470157027245,
+        "negative": 0.9613267183303833
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_20",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 143,
+      "sentence_text": "Strategic and Industry Risks The markets in which we participate are intensely competitive, and if we do not compete effectively, our operating results could be harmed.",
+      "previous_sentence": "Any failure or perceived 18 Table of Contents failure to maintain high-quality professional and technical support services could adversely affect our reputation, our ability to sell our service offerings to existing and prospective customers, and our business, operating results and financial position.",
+      "next_sentence": "The market for enterprise applications and platform services is highly competitive, rapidly evolving, fragmented and subject to changing technology, low barriers to entry, shifting customer needs and frequent introductions of new products and services.",
+      "risk_score": 0.9610515832901001,
+      "finbert_probs": {
+        "positive": 0.013737398199737072,
+        "neutral": 0.025210943073034286,
+        "negative": 0.9610515832901001
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_21",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 417,
+      "sentence_text": "Risks Related to Owning Our Common Stock Our quarterly results are likely to fluctuate, which may cause the value of our common stock to decline substantially.",
+      "previous_sentence": "The potential impact of these options to extend could be material to our financial position and financial results.",
+      "next_sentence": "Our quarterly results have fluctuated, and are likely to fluctuate in the future, as a result of a number of known and unknown factors, including: the factors described in this Item 1, Part 1A of this Annual Report; the cyclical nature and seasonality of our sales cycle and our customers' businesses, especially our Commerce service offering customers; the global economic impact of geopolitical events, including ongoing conflicts and uncertainty about the interest rate environment; the timing of contract execution and term software license sales; the amount and timing of operating costs and capital expenditures related to the operations and expansion of our business; the timing of commission, bonus and other compensation payments to 28 Table of Contents employees; expenses related to our real estate or changes in the nature or extent of our use of existing real estate, including our office leases and data centers; expenses related to significant, unusual or discrete events, which are recorded in the period in which the events occur, including litigation or other dispute-related settlement payments; and equity or debt issuances, including as consideration in or in conjunction with acquisitions.",
+      "risk_score": 0.9610455632209778,
+      "finbert_probs": {
+        "positive": 0.01654377020895481,
+        "neutral": 0.022410709410905838,
+        "negative": 0.9610455632209778
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_22",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 8,
+      "sentence_text": "11 Table of Contents \u2022 Any interruptions or delays in services from third parties, including data center hosting facilities, cloud computing platform providers and other hardware and software vendors, as well as Internet infrastructure, or from our inability to adequately plan for and manage service interruptions or infrastructure capacity requirements. \u2022 An inability to realize the expected business or financial benefits of company and technology acquisitions. \u2022 Strain on our personnel resources and infrastructure from supporting our existing and growing customer base or an inability to scale our operations and increase productivity. \u2022 Customer attrition, or our inability to accurately predict subscription renewals and upgrade rates. \u2022 Disruptions caused by periodic changes to our sales organization. \u2022 Exposure to risks inherent in international operations from sales to customers outside the United States. \u2022 A more time-consuming and expensive sales cycle, pricing pressure and implementation and configuration challenges for sales efforts to larger enterprise customers. \u2022 Any loss of key members of our management team or development and operations personnel, or inability to attract and retain employees necessary to support our operations and growth. \u2022 Any failure in the delivery of high-quality professional and technical support services related to our online applications.",
+      "previous_sentence": "Risk Factor Summary Operational and Execution Risks \u2022 Any breaches in our security measures or those of our third-party data center providers, cloud computing platform providers, customers, partners, or other third-party vendors, or the underlying Internet infrastructure that cause unauthorized access to, disclosure, alteration, corruption, destruction or loss of customer data, our data or our IT systems, or disruption of authorized access thereto. \u2022 Any defects or disruptions in our services that diminish demand for our services.",
+      "next_sentence": "Strategic and Industry Risks \u2022 An inability to compete effectively in the intensely competitive markets in which we participate. \u2022 Any failure to expand our services and to develop and integrate our existing services in order to keep pace with technological developments. \u2022 An inability to maintain and enhance our brands. \u2022 Partial or complete loss of invested capital, or significant changes in the fair value, of our strategic investment portfolio. \u2022 Any discontinuance by third-party developers and vendors in embracing our technology delivery model and enterprise cloud computing services, or customers asking us for warranties for third-party applications, integrations, data and content. \u2022 Social, ethical, and regulatory issues, including the development, deployment, use or capabilities of AI in our offerings. \u2022 The evolving landscape related to environmental, social and governance matters.",
+      "risk_score": 0.9609711170196533,
+      "finbert_probs": {
+        "positive": 0.0097122173756361,
+        "neutral": 0.029316691681742668,
+        "negative": 0.9609711170196533
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_23",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 52,
+      "sentence_text": "Our business and reputation would also be harmed if our customers and potential customers perceive our services as unreliable.",
+      "previous_sentence": "Service interruptions or other performance or quality issues may cause us to issue credits or pay penalties, cause customers to assert warranty or other claims or terminate their subscriptions, and adversely affect attrition rates and our ability to attract new customers, which could reduce revenue.",
+      "next_sentence": "For many of our offerings, our production environment and customer data are replicated at geographically separate facilities.",
+      "risk_score": 0.9601593613624573,
+      "finbert_probs": {
+        "positive": 0.009730211459100246,
+        "neutral": 0.030110355466604233,
+        "negative": 0.9601593613624573
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_24",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 118,
+      "sentence_text": "We may lose key members of our management team or development and operations personnel, and may be unable to attract and retain employees we need to support our operations and growth.",
+      "previous_sentence": "Our adoption of or failure to adopt, as well as the manner and time of, changes to our pricing and packaging models and strategies may harm our business.",
+      "next_sentence": "Our success depends substantially upon the continued services of our executive officers and other key members of management, particularly our chief executive officer.",
+      "risk_score": 0.9601297974586487,
+      "finbert_probs": {
+        "positive": 0.009315868839621544,
+        "neutral": 0.030554361641407013,
+        "negative": 0.9601297974586487
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_25",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 122,
+      "sentence_text": "Effective succession planning is important to our long-term success, and changes in our management team or the loss of one or more of our key employees or groups of employees could seriously harm our business.",
+      "previous_sentence": "Our executive officers, key management, and development and operations personnel could terminate their employment with us at any time.",
+      "next_sentence": "The technology industry is subject to substantial and continuous competition for engineers with high levels of experience in designing, developing and managing software and technology services, as well as competition for sales executives, data scientists and development and operations personnel.",
+      "risk_score": 0.9600619077682495,
+      "finbert_probs": {
+        "positive": 0.008341539651155472,
+        "neutral": 0.031596582382917404,
+        "negative": 0.9600619077682495
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_26",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 27,
+      "sentence_text": "Due in part to these factors, our future investment income may fall short of expectations due to changes in interest rates or we may suffer losses in principal if we are forced to sell securities that decline in market value due to changes in interest rates.",
+      "previous_sentence": "Fixed-rate securities may have their market value adversely impacted due to a rise in interest rates, while floating rate securities may produce less income than expected if interest rates fall.",
+      "next_sentence": "However, because we classify our debt securities as \"available for sale,\" no gains or losses are recognized in our consolidated statements of operations due to changes in interest rates.",
+      "risk_score": 0.9600157737731934,
+      "finbert_probs": {
+        "positive": 0.011813903227448463,
+        "neutral": 0.0281702671200037,
+        "negative": 0.9600157737731934
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_27",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 264,
+      "sentence_text": "Even the perception that personal data is not adequately protected or that our products or services do not comply with applicable regulatory requirements could inhibit sales, reduce adoption of our offerings or otherwise adversely affect our business.",
+      "previous_sentence": "Furthermore, the uncertain and evolving regulatory environment and broader trust climate may heighten concerns regarding data privacy, cybersecurity, and artificial intelligence, particularly where advanced analytics or automated functionality is involved, which could cause our customers or their end users to limit the data they provide or their use of our products and services.",
+      "next_sentence": "Industry-specific regulations and other requirements and standards are evolving and industry-specific laws, regulations, interpretive positions or standards could harm our business.",
+      "risk_score": 0.9598298668861389,
+      "finbert_probs": {
+        "positive": 0.008954689837992191,
+        "neutral": 0.031215379014611244,
+        "negative": 0.9598298668861389
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_28",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 308,
+      "sentence_text": "If we fail to protect our intellectual property rights adequately, our competitors may gain access to our technology, affecting our brand, causing us to incur significant expenses and harming our business.",
+      "previous_sentence": "Any failure to obtain registration or protection of our intellectual property rights could impair our ability to protect our proprietary technology and our brand, causing us to incur significant expenses and harm our business.",
+      "next_sentence": "Any of our patents, trademarks or other intellectual property rights may be challenged by others or invalidated through administrative process or litigation.",
+      "risk_score": 0.9591778516769409,
+      "finbert_probs": {
+        "positive": 0.008293197490274906,
+        "neutral": 0.03252897784113884,
+        "negative": 0.9591778516769409
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_29",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 35,
+      "sentence_text": "We have in the past and may in the future identify defects in or experience disruptions to our services.",
+      "previous_sentence": "Defects or disruptions in our services could diminish demand for our services and subject us to substantial liability.",
+      "next_sentence": "Such issues may arise in a variety of circumstances, including from customers using our services in unanticipated ways that disrupt access for other customers; from employee, contractor or other third-party action or inaction; or from the complexity of our services, which incorporate a variety of hardware, proprietary software and third-party and open-source software.",
+      "risk_score": 0.9591649174690247,
+      "finbert_probs": {
+        "positive": 0.009951518848538399,
+        "neutral": 0.030883613973855972,
+        "negative": 0.9591649174690247
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_30",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 254,
+      "sentence_text": "Additionally, recent governmental actions and geopolitical developments have increased the perceived risk that our services, particularly in the EU, could be disrupted, suspended or terminated.",
+      "previous_sentence": "Certain countries outside of the EEA have enacted or are considering enacting laws that require varying degrees of local data residency or localization.",
+      "next_sentence": "The costs of compliance with, and other burdens imposed by, privacy laws, regulations and standards may limit the use and adoption of our services, reduce overall demand for our services, make it more difficult to meet expectations from our commitments to customers and our customers' customers, lead to significant fines, penalties or liabilities for noncompliance, impact our reputation or slow the pace at which we close sales transactions particularly where customers request specific warranties or broad indemnities for noncompliance with privacy laws, any of which could harm our business.",
+      "risk_score": 0.959161102771759,
+      "finbert_probs": {
+        "positive": 0.009867958724498749,
+        "neutral": 0.030970986932516098,
+        "negative": 0.959161102771759
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_31",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 138,
+      "sentence_text": "If customers are not satisfied with the quality and timing of work or with the type of services or solutions delivered, we could incur additional costs to address the situation, the profitability of that work might be impaired, our revenue recognition could be impacted and the customer's dissatisfaction with the services received could negatively impact our ability to sell our other offerings to that customer or retain existing customers.",
+      "previous_sentence": "Our strategy is to work with third parties to increase the breadth of capability and depth of capacity for delivery of these services to our customers.",
+      "next_sentence": "In addition, negative publicity related to our customer relationships, regardless of its accuracy, may further damage our business by affecting our ability to compete for new business with current or prospective customers.",
+      "risk_score": 0.9589000344276428,
+      "finbert_probs": {
+        "positive": 0.008701018057763577,
+        "neutral": 0.032398972660303116,
+        "negative": 0.9589000344276428
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_32",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 30,
+      "sentence_text": "A security incident or related disclosure could result in loss of confidence in the security of our services, harm our reputation, negatively impact future sales, disrupt our business operations, increase insurance premiums and result in legal, regulatory and financial liability.",
+      "previous_sentence": "Assessing whether an incident is material or reportable may require complex judgment and investigation, and disclosure of an incident may itself adversely affect our reputation, customer relationships and exposure to legal or regulatory proceedings.",
+      "next_sentence": "Additionally, it may take considerable time for us to investigate and evaluate the full impact of cybersecurity attacks, particularly for sophisticated attacks, which may inhibit our ability to provide prompt, full and reliable information about the incident to our customers, regulators and the public.",
+      "risk_score": 0.9585135579109192,
+      "finbert_probs": {
+        "positive": 0.008241268806159496,
+        "neutral": 0.033245183527469635,
+        "negative": 0.9585135579109192
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_33",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 55,
+      "sentence_text": "If the enterprise value of the companies in which we hold those securities decreased by ten percent, the carrying value of our investment portfolio would decline by approximately $292 million.",
+      "previous_sentence": "For example, our five largest privately held equity securities represent $3.5 billion in total strategic investments as of January 31, 2026.",
+      "next_sentence": "We anticipate future volatility in our consolidated statements of operations due to changes in market prices, observable price changes and impairments of our strategic investments.",
+      "risk_score": 0.9580686688423157,
+      "finbert_probs": {
+        "positive": 0.009731392376124859,
+        "neutral": 0.03219986334443092,
+        "negative": 0.9580686688423157
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_34",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 42,
+      "sentence_text": "Since our customers rely on our products and services for important aspects of their operations, errors, defects, service disruptions or other performance issues have in the past adversely impacted our customers and could do so in the future.",
+      "previous_sentence": "In some cases, vulnerabilities may not be immediately detected, which may make it difficult to recover critical services and lead to damaged assets.",
+      "next_sentence": "As a result, customers could elect to not renew their services, delay or withhold payment or make warranty or other claims against us.",
+      "risk_score": 0.9579973220825195,
+      "finbert_probs": {
+        "positive": 0.009579232893884182,
+        "neutral": 0.03242335841059685,
+        "negative": 0.9579973220825195
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_35",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 77,
+      "sentence_text": "We continue to experience significant growth in our customer base, including through acquisitions, which has placed a strain on our management, administrative, operational and financial infrastructure.",
+      "previous_sentence": "Supporting our existing and growing customer base could strain our personnel resources and infrastructure, and if we are unable to scale our operations and increase productivity, we may not be able to successfully implement our business plan.",
+      "next_sentence": "We anticipate that significant additional investments, including in human capital software, agentic AI and other technologies, will be required to scale our operations and increase productivity, address the needs of our customers, develop and enhance our services, expand into new geographic areas and support continued growth.",
+      "risk_score": 0.9572359323501587,
+      "finbert_probs": {
+        "positive": 0.01604766957461834,
+        "neutral": 0.026716334745287895,
+        "negative": 0.9572359323501587
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_36",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 64,
+      "sentence_text": "Despite precautions taken during this process, any unsuccessful data transfers may impair the delivery of our services, which may damage our business.",
+      "previous_sentence": "As we add data centers and capacity and continue to move to cloud computing platform providers, we move or transfer our data and our customers' data from time to time.",
+      "next_sentence": "As we acquire companies or technologies, we may not realize the expected business or financial benefits and the acquisitions could prove difficult to integrate, disrupt our business, dilute stockholder value and adversely affect our operating results and the market value of our common stock.",
+      "risk_score": 0.9570242762565613,
+      "finbert_probs": {
+        "positive": 0.009499859996140003,
+        "neutral": 0.033475860953330994,
+        "negative": 0.9570242762565613
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_37",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 268,
+      "sentence_text": "The costs of compliance with, and other burdens imposed by, industry-specific laws, regulations and interpretive positions may limit our customers' use and adoption of our services and reduce overall demand for our services.",
+      "previous_sentence": "Regulators in certain industries have adopted and may in the future adopt regulations or interpretive positions regarding the use of cloud computing, AI services and other outsourced services.",
+      "next_sentence": "Compliance with these regulations may also require us to devote greater resources to support certain customers, which may increase costs and lengthen sales cycles.",
+      "risk_score": 0.9568480253219604,
+      "finbert_probs": {
+        "positive": 0.009917794726788998,
+        "neutral": 0.033234234899282455,
+        "negative": 0.9568480253219604
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_38",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 307,
+      "sentence_text": "Any failure to obtain registration or protection of our intellectual property rights could impair our ability to protect our proprietary technology and our brand, causing us to incur significant expenses and harm our business.",
+      "previous_sentence": "Any adverse determination or settlement could prevent us from offering our services to others, could be material to our financial condition or cash flows, or both, or could otherwise adversely affect our current or future operating results, including our results of operations or cash flows in a particular period.",
+      "next_sentence": "If we fail to protect our intellectual property rights adequately, our competitors may gain access to our technology, affecting our brand, causing us to incur significant expenses and harming our business.",
+      "risk_score": 0.9568015933036804,
+      "finbert_probs": {
+        "positive": 0.008838871493935585,
+        "neutral": 0.03435952216386795,
+        "negative": 0.9568015933036804
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_39",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 90,
+      "sentence_text": "If we fail to successfully scale our operations and increase productivity, we may be unable to execute our business plan and the value of our common stock could decline.",
+      "previous_sentence": "To manage the expected growth of our operations and personnel, we will need to continue to improve our operational, financial and management controls, our reporting systems and procedures and our utilization of real estate.",
+      "next_sentence": "If our customers do not renew their subscriptions or if they reduce subscriptions at renewal, our revenue and current remaining performance obligation could decline and our business may suffer.",
+      "risk_score": 0.9558952450752258,
+      "finbert_probs": {
+        "positive": 0.010178882628679276,
+        "neutral": 0.033925861120224,
+        "negative": 0.9558952450752258
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_40",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 44,
+      "sentence_text": "Such outcomes could reduce future sales, increase in our allowance for doubtful accounts, increase collection cycles and expose us to litigation and related expenses.",
+      "previous_sentence": "As a result, customers could elect to not renew their services, delay or withhold payment or make warranty or other claims against us.",
+      "next_sentence": "Any interruptions or delays in services from third parties, including data center hosting facilities, cloud computing platform providers and other hardware and software vendors, as well as Internet infrastructure, or from our inability to adequately plan for and manage service interruptions or infrastructure capacity requirements, could impair the delivery of our services and harm our business.",
+      "risk_score": 0.9552599787712097,
+      "finbert_probs": {
+        "positive": 0.017254948616027832,
+        "neutral": 0.027485070750117302,
+        "negative": 0.9552599787712097
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_41",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 71,
+      "sentence_text": "There is a disproportionate weighting toward annual billings in the fourth quarter, primarily as a result of large enterprise account buying patterns.",
+      "previous_sentence": "We typically issue renewal invoices in advance of the renewal service period, and depending on timing, the initial invoice for the subscription and services contract and the subsequent renewal invoice may occur in different quarters.",
+      "next_sentence": "Our fourth quarter has historically been our strongest quarter for new business and renewals.",
+      "risk_score": 0.9544171690940857,
+      "finbert_probs": {
+        "positive": 0.0178332831710577,
+        "neutral": 0.027749579399824142,
+        "negative": 0.9544171690940857
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_42",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 58,
+      "sentence_text": "Our growth in revenues is also impacted by attrition.",
+      "previous_sentence": "We record revenue based on the individual products ordered by a customer, not according to the customer's business requirements and usage.",
+      "next_sentence": "Attrition represents the reduction or loss of the annualized value of our contracts with customers.",
+      "risk_score": 0.9538090229034424,
+      "finbert_probs": {
+        "positive": 0.012574655935168266,
+        "neutral": 0.033616408705711365,
+        "negative": 0.9538090229034424
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_43",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 7,
+      "sentence_text": "However, we face ongoing and increasing cybersecurity risks, including from bad actors that are becoming more sophisticated and effective over time, as well as a result of potential defects or disruptions in our or our customers' services.",
+      "previous_sentence": "During the last fiscal year, we did not identify any risks from cybersecurity threats, including as a result of any previous cybersecurity incidents, that materially affected the Company, including its business strategy, results of operations, or financial condition.",
+      "next_sentence": "If realized, these risks are reasonably likely to materially affect the Company.",
+      "risk_score": 0.953169584274292,
+      "finbert_probs": {
+        "positive": 0.012709138914942741,
+        "neutral": 0.03412126004695892,
+        "negative": 0.953169584274292
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_44",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 59,
+      "sentence_text": "Attrition represents the reduction or loss of the annualized value of our contracts with customers.",
+      "previous_sentence": "Our growth in revenues is also impacted by attrition.",
+      "next_sentence": "We calculate our attrition rate at a point in time on a trailing twelve-month basis as of the end of each month.",
+      "risk_score": 0.9517601132392883,
+      "finbert_probs": {
+        "positive": 0.00996888242661953,
+        "neutral": 0.0382709875702858,
+        "negative": 0.9517601132392883
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_45",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 26,
+      "sentence_text": "Fixed-rate securities may have their market value adversely impacted due to a rise in interest rates, while floating rate securities may produce less income than expected if interest rates fall.",
+      "previous_sentence": "Our cash equivalents and our portfolio of marketable securities are subject to market risk due to changes in interest rates.",
+      "next_sentence": "Due in part to these factors, our future investment income may fall short of expectations due to changes in interest rates or we may suffer losses in principal if we are forced to sell securities that decline in market value due to changes in interest rates.",
+      "risk_score": 0.9515573382377625,
+      "finbert_probs": {
+        "positive": 0.01135051529854536,
+        "neutral": 0.03709220886230469,
+        "negative": 0.9515573382377625
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_46",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 210,
+      "sentence_text": "Our cash tax profile was impacted by OBBBA primarily due to the immediate deduction of the domestic research and development expenditures.",
+      "previous_sentence": "See discussion in \"Debt\" below.",
+      "next_sentence": "Moreover, the OBBBA brought into scope other provisions of the U.S. tax code.",
+      "risk_score": 0.9467505216598511,
+      "finbert_probs": {
+        "positive": 0.01754339598119259,
+        "neutral": 0.03570612892508507,
+        "negative": 0.9467505216598511
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_47",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 75,
+      "sentence_text": "Generally, our second or third quarter has historically been our smallest operating cash flow quarter .",
+      "previous_sentence": "Accordingly, because of this billing activity, our first quarter is typically our largest collections and operating cash flow quarter.",
+      "next_sentence": "Unearned revenues, accounts receivable and operating cash flow may also be impacted by acquisitions.",
+      "risk_score": 0.9445618987083435,
+      "finbert_probs": {
+        "positive": 0.013893823139369488,
+        "neutral": 0.041544359177351,
+        "negative": 0.9445618987083435
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_48",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 170,
+      "sentence_text": "Foreign currency positively impacted the year over year fluctuations in revenue by approximately one percent.",
+      "previous_sentence": "The increase in revenues across all regions was primarily due to the continued execution of our business and growth strategy, including increasing our geographic reach primarily through extending our go-to-market capabilities globally.",
+      "next_sentence": "Cost of Revenues Fiscal Year Ended January 31, Variance Dollars (in millions) 2026 As a % of Total Revenues 2025 As a % of Total Revenues Subscription and support $ 6,796 16 % $ 6,198 16 % $ 598 Professional services and other 2,474 6 2,445 7 29 Total cost of revenues $ 9,270 22 % $ 8,643 23 % $ 627 For fiscal 2026, the increase in cost of revenues in absolute dollars was primarily due to an increase in employee-related costs, including stock-based compensation expense, and an increase to service delivery expenses partially offset by a decrease in amortization of purchased intangibles.",
+      "risk_score": 0.9441907405853271,
+      "finbert_probs": {
+        "positive": 0.03453533351421356,
+        "neutral": 0.02127392590045929,
+        "negative": 0.9441907405853271
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_49",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 172,
+      "sentence_text": "Cost of revenues as a percentage of total revenues during fiscal 2026 decreased by one percent from the same period a year ago due to our total revenues growth outpacing our cost of revenues growth, which was partially offset by the scaling of our service delivery expenses.",
+      "previous_sentence": "Cost of Revenues Fiscal Year Ended January 31, Variance Dollars (in millions) 2026 As a % of Total Revenues 2025 As a % of Total Revenues Subscription and support $ 6,796 16 % $ 6,198 16 % $ 598 Professional services and other 2,474 6 2,445 7 29 Total cost of revenues $ 9,270 22 % $ 8,643 23 % $ 627 For fiscal 2026, the increase in cost of revenues in absolute dollars was primarily due to an increase in employee-related costs, including stock-based compensation expense, and an increase to service delivery expenses partially offset by a decrease in amortization of purchased intangibles.",
+      "next_sentence": "44 Table of Contents We intend to continue to invest additional resources in our AI, agentic and cloud services to allow us to scale with our customers and continue to evolve our security measures.",
+      "risk_score": 0.938835859298706,
+      "finbert_probs": {
+        "positive": 0.045962635427713394,
+        "neutral": 0.015201534144580364,
+        "negative": 0.938835859298706
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_50",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 77,
+      "sentence_text": "For example, operating cash flows may be adversely impacted by acquisitions due to transaction costs, financing costs such as interest expense and lower operating cash flows from the acquired entity.",
+      "previous_sentence": "Unearned revenues, accounts receivable and operating cash flow may also be impacted by acquisitions.",
+      "next_sentence": "Remaining Performance Obligation Our remaining performance obligation represents all future revenue under contract that has not yet been recognized as revenue and includes unearned revenue and unbilled amounts.",
+      "risk_score": 0.9379753470420837,
+      "finbert_probs": {
+        "positive": 0.013197029009461403,
+        "neutral": 0.0488276369869709,
+        "negative": 0.9379753470420837
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_51",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 56,
+      "sentence_text": "We anticipate future volatility in our consolidated statements of operations due to changes in market prices, observable price changes and impairments of our strategic investments.",
+      "previous_sentence": "If the enterprise value of the companies in which we hold those securities decreased by ten percent, the carrying value of our investment portfolio would decline by approximately $292 million.",
+      "next_sentence": "The resulting gains or losses could be material depending on market conditions and events, particularly in periods with economic uncertainty, inflation, volatile public equity markets or unsettled global market conditions.",
+      "risk_score": 0.9297869205474854,
+      "finbert_probs": {
+        "positive": 0.015629371628165245,
+        "neutral": 0.05458376556634903,
+        "negative": 0.9297869205474854
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_52",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 8,
+      "sentence_text": "Changes in foreign currency exchange rates could have an adverse impact on our financial results and cash flows.",
+      "previous_sentence": "These exposures may change over time as business practices evolve and economic conditions change.",
+      "next_sentence": "Foreign Currency Transaction Risk Our foreign currency exposures typically arise from selling annual and multi-year subscriptions in multiple currencies, customer accounts receivable, intercompany transfer pricing arrangements and other intercompany transactions.",
+      "risk_score": 0.926285982131958,
+      "finbert_probs": {
+        "positive": 0.012549822218716145,
+        "neutral": 0.0611642524600029,
+        "negative": 0.926285982131958
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_53",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 101,
+      "sentence_text": "Restructuring Restructuring consists of charges related to employee transition, severance payments, employee benefits and stock-based compensation, as well as data center exits, office space reductions and impairment charges associated with long-lived assets.",
+      "previous_sentence": "As such, these types of expenses are reflected in each cost of revenue and operating expense category.",
+      "next_sentence": "Restructuring excludes allocated overhead.",
+      "risk_score": 0.9254128932952881,
+      "finbert_probs": {
+        "positive": 0.009544973261654377,
+        "neutral": 0.0650421604514122,
+        "negative": 0.9254128932952881
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_54",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 184,
+      "sentence_text": "In fiscal 2026, approximately $586 million of costs were incurred related to our restructuring initiatives, which was primarily related to employee transitions, severance payments and employee benefits, as well as select data center exits.",
+      "previous_sentence": "We expect that general and administrative expenses may decrease as a percentage of revenues over time as we continue to invest in process efficiency initiatives, which includes the use of AI and agents.",
+      "next_sentence": "We do not expect to incur significant additional charges in connection with our restructuring initiatives in the near term.",
+      "risk_score": 0.9184170961380005,
+      "finbert_probs": {
+        "positive": 0.017586078494787216,
+        "neutral": 0.0639967992901802,
+        "negative": 0.9184170961380005
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_55",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 44,
+      "sentence_text": "The bank counterparties to our derivative contracts potentially expose us to credit-related losses in the event of their nonperformance.",
+      "previous_sentence": "As of January 31, 2026, there was no outstanding borrowing amount under the Credit Facility.",
+      "next_sentence": "To mitigate that risk, we only contract with counterparties who meet the minimum requirements under our counterparty risk assessment process.",
+      "risk_score": 0.9145102500915527,
+      "finbert_probs": {
+        "positive": 0.019536038860678673,
+        "neutral": 0.06595370918512344,
+        "negative": 0.9145102500915527
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_56",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 183,
+      "sentence_text": "We expect that general and administrative expenses may decrease as a percentage of revenues over time as we continue to invest in process efficiency initiatives, which includes the use of AI and agents.",
+      "previous_sentence": "General and administrative expenses as a percentage of total revenues during fiscal 2026 was consistent with the same period a year ago.",
+      "next_sentence": "In fiscal 2026, approximately $586 million of costs were incurred related to our restructuring initiatives, which was primarily related to employee transitions, severance payments and employee benefits, as well as select data center exits.",
+      "risk_score": 0.9077579975128174,
+      "finbert_probs": {
+        "positive": 0.044336363673210144,
+        "neutral": 0.04790562763810158,
+        "negative": 0.9077579975128174
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_57",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 37,
+      "sentence_text": "The impact of these fluctuations can also be compounded by the seasonality of our business in which our fourth quarter has historically been our strongest quarter for new business and renewals.",
+      "previous_sentence": "The impact of foreign currency fluctuations could impact our near-term results and ability to accurately predict our future results and earnings.",
+      "next_sentence": "Fiscal Year Our fiscal year ends on January 31.",
+      "risk_score": 0.9068129062652588,
+      "finbert_probs": {
+        "positive": 0.035671163350343704,
+        "neutral": 0.05751601234078407,
+        "negative": 0.9068129062652588
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_58",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 57,
+      "sentence_text": "The resulting gains or losses could be material depending on market conditions and events, particularly in periods with economic uncertainty, inflation, volatile public equity markets or unsettled global market conditions.",
+      "previous_sentence": "We anticipate future volatility in our consolidated statements of operations due to changes in market prices, observable price changes and impairments of our strategic investments.",
+      "next_sentence": "We continually evaluate our investments in privately held and publicly traded companies.",
+      "risk_score": 0.9019160270690918,
+      "finbert_probs": {
+        "positive": 0.026976067572832108,
+        "neutral": 0.07110798358917236,
+        "negative": 0.9019160270690918
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_59",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 174,
+      "sentence_text": "The timing of these expenses may cause our cost of revenues as a percentage of revenues to fluctuate over time due to changes in demand for our service offerings.",
+      "previous_sentence": "44 Table of Contents We intend to continue to invest additional resources in our AI, agentic and cloud services to allow us to scale with our customers and continue to evolve our security measures.",
+      "next_sentence": "Operating Expenses Fiscal Year Ended January 31, Variance Dollars (in millions) 2026 As a % of Total Revenues 2025 As a % of Total Revenues Research and development $ 5,993 15 % $ 5,493 15 % $ 500 Sales and marketing 14,345 35 13,257 35 1,088 General and administrative 3,000 7 2,836 7 164 Restructuring 586 1 461 1 125 Total operating expenses $ 23,924 58 % $ 22,047 58 % $ 1,877 For fiscal 2026, the increase in research and development expenses in absolute dollars was primarily due to an increase in employee-related costs, including stock-based compensation expense.",
+      "risk_score": 0.9009148478507996,
+      "finbert_probs": {
+        "positive": 0.024493712931871414,
+        "neutral": 0.07459152489900589,
+        "negative": 0.9009148478507996
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_60",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 187,
+      "sentence_text": "Our strategic investment portfolio continues to be affected by market conditions for companies in which we hold private securities, including the pace of technological change driven by artificial intelligence and volatility in public equity markets.",
+      "previous_sentence": "Other Income and Expenses Fiscal Year Ended January 31, Variance Dollars (in millions) 2026 2025 Gains (losses) on strategic investments, net $ 1,017 $ (121) $ 1,138 Other income 172 354 (182) Gains (losses) on strategic investments, net consists primarily of mark-to-market adjustments related to observable price adjustments related to our privately held equity securities, our publicly held equity securities and other adjustments including impairments.",
+      "next_sentence": "For fiscal 2026, the gain on our strategic investment portfolio was primarily driven by unrealized gains on privately held equity investments of $1.5 billion partially offset by impairments on privately held investments of $496 million.",
+      "risk_score": 0.8935149908065796,
+      "finbert_probs": {
+        "positive": 0.01603056862950325,
+        "neutral": 0.09045450389385223,
+        "negative": 0.8935149908065796
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_61",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 50,
+      "sentence_text": "Changes in contract duration for multi-year term software licenses can impact the amount of revenues recognized upfront.",
+      "previous_sentence": "Revenue from support and updates is recognized as such support and updates are provided, which is generally ratably over the contract term.",
+      "next_sentence": "Revenues from term software licenses represent less than ten percent of total subscription and support revenue for fiscal 2026.",
+      "risk_score": 0.8834049105644226,
+      "finbert_probs": {
+        "positive": 0.013845205307006836,
+        "neutral": 0.10274991393089294,
+        "negative": 0.8834049105644226
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_62",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 36,
+      "sentence_text": "The impact of foreign currency fluctuations could impact our near-term results and ability to accurately predict our future results and earnings.",
+      "previous_sentence": "Our current remaining performance obligation growth as of January 31, 2026 compared to January 31, 2025 was positively impacted by three percent compared to what would have been reported using constant currency rates.",
+      "next_sentence": "The impact of these fluctuations can also be compounded by the seasonality of our business in which our fourth quarter has historically been our strongest quarter for new business and renewals.",
+      "risk_score": 0.8816666603088379,
+      "finbert_probs": {
+        "positive": 0.015105655416846275,
+        "neutral": 0.10322756320238113,
+        "negative": 0.8816666603088379
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_63",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 3,
+      "sentence_text": "In addition, many of our subscription agreements require us to indemnify our customers for third-party intellectual property infringement claims, which could increase the cost to us of an adverse ruling on such a claim.",
+      "previous_sentence": "Our technologies may be subject to an injunction if they are found to infringe the rights of a third party.",
+      "next_sentence": "The outcome of any claims or litigation, regardless of the merits, is inherently uncertain.",
+      "risk_score": 0.8761773705482483,
+      "finbert_probs": {
+        "positive": 0.03672892227768898,
+        "neutral": 0.08709374070167542,
+        "negative": 0.8761773705482483
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_64",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 5,
+      "sentence_text": "Any claims and other lawsuits, and the disposition of such claims and lawsuits, whether through settlement or litigation, could be time-consuming and expensive to resolve, divert our attention from executing our business plan, result in efforts to enjoin our activities, lead to attempts by third parties to seek similar claims and, in the case of intellectual property claims, require us to change our technology, change our business practices, pay monetary damages or enter into short- or long-term royalty or licensing agreements.",
+      "previous_sentence": "The outcome of any claims or litigation, regardless of the merits, is inherently uncertain.",
+      "next_sentence": "For more information regarding legal proceedings see Note 14 \"Legal Proceedings and Claims\" to the consolidated financial statements in Item 8 of Part II.",
+      "risk_score": 0.866605818271637,
+      "finbert_probs": {
+        "positive": 0.012035519815981388,
+        "neutral": 0.12135864794254303,
+        "negative": 0.866605818271637
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_65",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 35,
+      "sentence_text": "Our current remaining performance obligation growth as of January 31, 2026 compared to January 31, 2025 was positively impacted by three percent compared to what would have been reported using constant currency rates.",
+      "previous_sentence": "Total revenues in the fiscal year ended January 31, 2026 was positively impacted by approximately one percent in foreign currency fluctuations compared to the fiscal year ended January 31, 2025.",
+      "next_sentence": "The impact of foreign currency fluctuations could impact our near-term results and ability to accurately predict our future results and earnings.",
+      "risk_score": 0.8629893660545349,
+      "finbert_probs": {
+        "positive": 0.09477697312831879,
+        "neutral": 0.04223359376192093,
+        "negative": 0.8629893660545349
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_66",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 19,
+      "sentence_text": "In addition, fluctuations in foreign currencies positively impacted our current remaining performance obligation growth rate as of January 31, 2026 by approximately three percent compared to what we would have reported as of January 31, 2025 using constant currency rates.",
+      "previous_sentence": "Total revenue during fiscal 2026 was positively impacted by approximately one percent due to fluctuations in foreign currencies compared to fiscal 2025.",
+      "next_sentence": "Interest Rate Sensitivity As of January 31, 2026, we had cash, cash equivalents and marketable securities totaling $9.6 billion.",
+      "risk_score": 0.8181259036064148,
+      "finbert_probs": {
+        "positive": 0.152311310172081,
+        "neutral": 0.029562756419181824,
+        "negative": 0.8181259036064148
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_67",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 2,
+      "sentence_text": "As such, we have in the past been, and likely will in the future be, the target of cybersecurity threats and other efforts to breach or compromise our services and underlying infrastructure.",
+      "previous_sentence": "CYBERSECURITY As a global leader in CRM technology, our services involve the storage and transmission of our customers' and our customers' customers' data.",
+      "next_sentence": "With trust as our foremost value and the foundation of everything we do, we recognize the importance of maintaining the safety and security of our systems and data.",
+      "risk_score": 0.7707422375679016,
+      "finbert_probs": {
+        "positive": 0.024219276383519173,
+        "neutral": 0.20503850281238556,
+        "negative": 0.7707422375679016
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_68",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 61,
+      "sentence_text": "All of our investments, particularly those in privately held companies, are therefore subject to a risk of partial or total loss of invested capital.",
+      "previous_sentence": "In addition, the financial success of our investment in any company is typically dependent on a liquidity event, such as a public offering, acquisition or other favorable market event reflecting appreciation to the cost of our initial investment.",
+      "next_sentence": "52 Table of Contents",
+      "risk_score": 0.7051663398742676,
+      "finbert_probs": {
+        "positive": 0.01844262331724167,
+        "neutral": 0.27639099955558777,
+        "negative": 0.7051663398742676
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_69",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 2,
+      "sentence_text": "Our technologies may be subject to an injunction if they are found to infringe the rights of a third party.",
+      "previous_sentence": "LEGAL PROCEEDINGS We evaluate all claims and lawsuits with respect to their potential merits, our potential defenses and counterclaims, settlement or litigation potential and the expected effect on us.",
+      "next_sentence": "In addition, many of our subscription agreements require us to indemnify our customers for third-party intellectual property infringement claims, which could increase the cost to us of an adverse ruling on such a claim.",
+      "risk_score": 0.6867663860321045,
+      "finbert_probs": {
+        "positive": 0.01878085918724537,
+        "neutral": 0.2944527864456177,
+        "negative": 0.6867663860321045
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_70",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 4,
+      "sentence_text": "The outcome of any claims or litigation, regardless of the merits, is inherently uncertain.",
+      "previous_sentence": "In addition, many of our subscription agreements require us to indemnify our customers for third-party intellectual property infringement claims, which could increase the cost to us of an adverse ruling on such a claim.",
+      "next_sentence": "Any claims and other lawsuits, and the disposition of such claims and lawsuits, whether through settlement or litigation, could be time-consuming and expensive to resolve, divert our attention from executing our business plan, result in efforts to enjoin our activities, lead to attempts by third parties to seek similar claims and, in the case of intellectual property claims, require us to change our technology, change our business practices, pay monetary damages or enter into short- or long-term royalty or licensing agreements.",
+      "risk_score": 0.4964579939842224,
+      "finbert_probs": {
+        "positive": 0.024242322891950607,
+        "neutral": 0.4792996942996979,
+        "negative": 0.4964579939842224
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_71",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 31,
+      "sentence_text": "An immediate increase or decrease in interest rates of 100 basis points at January 31, 2026 could result in a $31 million market value reduction or increase of the same amount.",
+      "previous_sentence": "Our fixed-income portfolio is also subject to interest rate risk.",
+      "next_sentence": "This estimate is based on a sensitivity model that measures market value changes when changes in interest rates occur.",
+      "risk_score": 0.42788830399513245,
+      "finbert_probs": {
+        "positive": 0.2716980278491974,
+        "neutral": 0.30041366815567017,
+        "negative": 0.42788830399513245
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_72",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 12,
+      "sentence_text": "Our foreign currency forward contracts are generally short-term in duration.",
+      "previous_sentence": "We pursue our objective by utilizing foreign currency forward contracts to offset foreign exchange risk.",
+      "next_sentence": "We neither use these foreign currency forward contracts for trading purposes nor do we currently designate these forward contracts as hedging instruments under the relevant accounting and financial reporting guidelines.",
+      "risk_score": 0.4186759889125824,
+      "finbert_probs": {
+        "positive": 0.02614794299006462,
+        "neutral": 0.5551760792732239,
+        "negative": 0.4186759889125824
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_73",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 6,
+      "sentence_text": "During the last fiscal year, we did not identify any risks from cybersecurity threats, including as a result of any previous cybersecurity incidents, that materially affected the Company, including its business strategy, results of operations, or financial condition.",
+      "previous_sentence": "The Board, including through its dedicated Cybersecurity and Privacy committee (the \"Committee\"), oversees the various cybersecurity risks facing the Company and the Company's efforts to mitigate those risks.",
+      "next_sentence": "However, we face ongoing and increasing cybersecurity risks, including from bad actors that are becoming more sophisticated and effective over time, as well as a result of potential defects or disruptions in our or our customers' services.",
+      "risk_score": 0.37559205293655396,
+      "finbert_probs": {
+        "positive": 0.029387546703219414,
+        "neutral": 0.5950204133987427,
+        "negative": 0.37559205293655396
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_74",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 59,
+      "sentence_text": "In certain cases, our ability to 51 Table of Contents sell these investments may be impacted by contractual obligations to hold the securities for a set period of time after a public offering.",
+      "previous_sentence": "We continually evaluate our investments in privately held and publicly traded companies.",
+      "next_sentence": "In addition, the financial success of our investment in any company is typically dependent on a liquidity event, such as a public offering, acquisition or other favorable market event reflecting appreciation to the cost of our initial investment.",
+      "risk_score": 0.3044373095035553,
+      "finbert_probs": {
+        "positive": 0.02351701818406582,
+        "neutral": 0.6720457077026367,
+        "negative": 0.3044373095035553
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_75",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 53,
+      "sentence_text": "The particular securities we hold, and their rights and preferences relative to other securities within the capital structure of a company, may impact the magnitude by which our investment value moves in relation to changes in the total fair value of that company.",
+      "previous_sentence": "These investments are in various classes of equity with varying rights and preferences.",
+      "next_sentence": "For example, our five largest privately held equity securities represent $3.5 billion in total strategic investments as of January 31, 2026.",
+      "risk_score": 0.24034899473190308,
+      "finbert_probs": {
+        "positive": 0.022340426221489906,
+        "neutral": 0.7373105883598328,
+        "negative": 0.24034899473190308
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_76",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 8,
+      "sentence_text": "If realized, these risks are reasonably likely to materially affect the Company.",
+      "previous_sentence": "However, we face ongoing and increasing cybersecurity risks, including from bad actors that are becoming more sophisticated and effective over time, as well as a result of potential defects or disruptions in our or our customers' services.",
+      "next_sentence": "Additional information on the cybersecurity risks we face is discussed in Part I, Item 1A, \"Risk Factors.\" Cybersecurity Risk Management and Strategy When a company purchases our service offerings, they gain a trusted digital advisor who will work together with them in their efforts to protect their data.",
+      "risk_score": 0.1929016262292862,
+      "finbert_probs": {
+        "positive": 0.043359629809856415,
+        "neutral": 0.7637386918067932,
+        "negative": 0.1929016262292862
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_77",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 17,
+      "sentence_text": "49 Table of Contents Foreign Currency Translation Risk Fluctuations in foreign currencies impact the amount of total assets, liabilities, revenues, operating expenses and cash flows that we repor t for our foreign subsidiaries upon the translation of these amounts into USD .",
+      "previous_sentence": "Our ultimate realized gain or loss with respect to foreign currency exposures will generally depend on the size and type of cross-currency transactions that we enter into, the currency exchange rates associated with these exposures and changes in those rates, the net realized gain or loss on our foreign currency forward contracts and other factors.",
+      "next_sentence": "Total revenue during fiscal 2026 was positively impacted by approximately one percent due to fluctuations in foreign currencies compared to fiscal 2025.",
+      "risk_score": 0.19197851419448853,
+      "finbert_probs": {
+        "positive": 0.0217405017465353,
+        "neutral": 0.7862809300422668,
+        "negative": 0.19197851419448853
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_78",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 2,
+      "sentence_text": "This exposure has increased due to recent financial market movements and changes to our expectations of near-term possible movements caused by the impact of the macroeconomic environment as discussed in more detail below.",
+      "previous_sentence": "QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK We are exposed to financial market risks, including changes in foreign currency exchange rates, interest rates and equity investment risks.",
+      "next_sentence": "Foreign Currency Exchange Risk We primarily conduct our business in the following locations: the United States, Europe, Canada, Latin America, Asia Pacific and Japan.",
+      "risk_score": 0.17750784754753113,
+      "finbert_probs": {
+        "positive": 0.13386651873588562,
+        "neutral": 0.688625693321228,
+        "negative": 0.17750784754753113
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_79",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 29,
+      "sentence_text": "Gains or losses recognized in our consolidated statements of operations are limited to those related to either the sale of securities prior to maturity or expected credit losses.",
+      "previous_sentence": "However, because we classify our debt securities as \"available for sale,\" no gains or losses are recognized in our consolidated statements of operations due to changes in interest rates.",
+      "next_sentence": "Our fixed-income portfolio is also subject to interest rate risk.",
+      "risk_score": 0.16160772740840912,
+      "finbert_probs": {
+        "positive": 0.026891982182860374,
+        "neutral": 0.8115002512931824,
+        "negative": 0.16160772740840912
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_80",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 33,
+      "sentence_text": "Fluctuations in the value of our investment securities caused by a change in interest rates (gains or losses on the carrying value) are recorded in comprehensive income, net, and are realized only if we sell the underlying securities.",
+      "previous_sentence": "This estimate is based on a sensitivity model that measures market value changes when changes in interest rates occur.",
+      "next_sentence": "At January 31, 2025, we had cash, cash equivalents and marketable securities totaling $14.0 billion.",
+      "risk_score": 0.1202622801065445,
+      "finbert_probs": {
+        "positive": 0.02018819749355316,
+        "neutral": 0.8595495820045471,
+        "negative": 0.1202622801065445
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_81",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 28,
+      "sentence_text": "However, because we classify our debt securities as \"available for sale,\" no gains or losses are recognized in our consolidated statements of operations due to changes in interest rates.",
+      "previous_sentence": "Due in part to these factors, our future investment income may fall short of expectations due to changes in interest rates or we may suffer losses in principal if we are forced to sell securities that decline in market value due to changes in interest rates.",
+      "next_sentence": "Gains or losses recognized in our consolidated statements of operations are limited to those related to either the sale of securities prior to maturity or expected credit losses.",
+      "risk_score": 0.10656340420246124,
+      "finbert_probs": {
+        "positive": 0.07609488815069199,
+        "neutral": 0.817341685295105,
+        "negative": 0.10656340420246124
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_82",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 30,
+      "sentence_text": "Our fixed-income portfolio is also subject to interest rate risk.",
+      "previous_sentence": "Gains or losses recognized in our consolidated statements of operations are limited to those related to either the sale of securities prior to maturity or expected credit losses.",
+      "next_sentence": "An immediate increase or decrease in interest rates of 100 basis points at January 31, 2026 could result in a $31 million market value reduction or increase of the same amount.",
+      "risk_score": 0.10227322578430176,
+      "finbert_probs": {
+        "positive": 0.03677068278193474,
+        "neutral": 0.8609561324119568,
+        "negative": 0.10227322578430176
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_83",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 1,
+      "sentence_text": "LEGAL PROCEEDINGS We evaluate all claims and lawsuits with respect to their potential merits, our potential defenses and counterclaims, settlement or litigation potential and the expected effect on us.",
+      "previous_sentence": "ITEM 3.",
+      "next_sentence": "Our technologies may be subject to an injunction if they are found to infringe the rights of a third party.",
+      "risk_score": 0.05944405496120453,
+      "finbert_probs": {
+        "positive": 0.026395704597234726,
+        "neutral": 0.9141602516174316,
+        "negative": 0.05944405496120453
+      }
+    },
+    {
+      "candidate_id": "item_3_legal_84",
+      "section_id": "item_3_legal",
+      "section_label": "Item 3",
+      "sentence_index": 6,
+      "sentence_text": "For more information regarding legal proceedings see Note 14 \"Legal Proceedings and Claims\" to the consolidated financial statements in Item 8 of Part II.",
+      "previous_sentence": "Any claims and other lawsuits, and the disposition of such claims and lawsuits, whether through settlement or litigation, could be time-consuming and expensive to resolve, divert our attention from executing our business plan, result in efforts to enjoin our activities, lead to attempts by third parties to seek similar claims and, in the case of intellectual property claims, require us to change our technology, change our business practices, pay monetary damages or enter into short- or long-term royalty or licensing agreements.",
+      "next_sentence": null,
+      "risk_score": 0.04315200820565224,
+      "finbert_probs": {
+        "positive": 0.02073187567293644,
+        "neutral": 0.9361161589622498,
+        "negative": 0.04315200820565224
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_85",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 46,
+      "sentence_text": "The Company regularly provides employee training on security-related duties and responsibilities, including knowledge about how to recognize cybersecurity incidents and how to proceed if an actual or suspected incident should occur.",
+      "previous_sentence": "The Company maintains a risk-based approach to identifying and overseeing cybersecurity threats presented by certain third parties , including vendors, service providers and other external users of the Company's systems, as well as the systems of third parties that could adversely impact our business in the event of a significant cybersecurity incident affecting those third-party systems. \u2022 Education and Awareness .",
+      "next_sentence": "This training is mandatory for employees across the Company, and is intended to provide the Company's employees with effective tools to address cybersecurity threats, and to communicate the Company's evolving information security policies, standards, processes and practices.",
+      "risk_score": 0.041592661291360855,
+      "finbert_probs": {
+        "positive": 0.03569099307060242,
+        "neutral": 0.9227163195610046,
+        "negative": 0.041592661291360855
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_86",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 25,
+      "sentence_text": "While regular meetings of the Committee are scheduled on a quarterly cadence, the Committee is authorized to meet with management or individual directors at any time it deems appropriate to discuss matters relevant to the Committee.",
+      "previous_sentence": "The Company's processes also allow for the Board and the Committee to be informed of key cybersecurity risks outside the regular reporting schedule.",
+      "next_sentence": "In between meetings, the Board and the Committee receive information regarding relevant cybersecurity risks 31 Table of Contents (including cybersecurity incidents) that meet pre-established reporting thresholds, as well as ongoing updates regarding any such risks.",
+      "risk_score": 0.03641989454627037,
+      "finbert_probs": {
+        "positive": 0.01882481947541237,
+        "neutral": 0.9447553157806396,
+        "negative": 0.03641989454627037
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_87",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 17,
+      "sentence_text": "The results of such tests and assessments are evaluated by management and periodically reported to the Committee.",
+      "previous_sentence": "The Company also undergoes routine internal and external penetration testing.",
+      "next_sentence": "The Company further adjusts its cybersecurity policies, standards, processes and practices based on these results and evolving industry practices.",
+      "risk_score": 0.027888888493180275,
+      "finbert_probs": {
+        "positive": 0.02767355740070343,
+        "neutral": 0.944437563419342,
+        "negative": 0.027888888493180275
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_88",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 22,
+      "sentence_text": "After each quarterly meeting of the Committee, the Board receives a report from the Chair of the Committee with an update on the Company's oversight of cybersecurity risks and mitigation efforts.",
+      "previous_sentence": "The Committee receives regular presentations, reports and updates from the Company's Chief Infrastructure and Trust Officer (\"CITO\"), Chief Information Security Officer (\"CISO\"), and other members of management on developments regarding the Company's cybersecurity program, broader cybersecurity trends, evolving industry standards, the threat environment and other topics.",
+      "next_sentence": "The Committee also receives periodic reports from an experienced outside consultant with information security expertise providing insights on key focus areas to aid in the Committee's oversight of the Company's cybersecurity program.",
+      "risk_score": 0.026331709697842598,
+      "finbert_probs": {
+        "positive": 0.028740502893924713,
+        "neutral": 0.9449278116226196,
+        "negative": 0.026331709697842598
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_89",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 34,
+      "sentence_text": "These teams are expected to operate pursuant to documented plans and playbooks that include processes for escalation of incidents to leadership and to the Committee and Board, as appropriate, based on the severity level of a cybersecurity incident.",
+      "previous_sentence": "Through ongoing communications with these teams, the CITO, CISO, and senior management are able to be informed promptly about, and monitor the prevention, detection, investigation, mitigation and remediation of, cybersecurity threats.",
+      "next_sentence": "In addition, the Company periodically consults with outside advisors and experts to assist with assessing, identifying and managing cybersecurity risks, including to anticipate future threats and trends, and their impact on the Company's risk management environment.",
+      "risk_score": 0.021067071706056595,
+      "finbert_probs": {
+        "positive": 0.03295033425092697,
+        "neutral": 0.9459826350212097,
+        "negative": 0.021067071706056595
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_90",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 26,
+      "sentence_text": "In between meetings, the Board and the Committee receive information regarding relevant cybersecurity risks 31 Table of Contents (including cybersecurity incidents) that meet pre-established reporting thresholds, as well as ongoing updates regarding any such risks.",
+      "previous_sentence": "While regular meetings of the Committee are scheduled on a quarterly cadence, the Committee is authorized to meet with management or individual directors at any time it deems appropriate to discuss matters relevant to the Committee.",
+      "next_sentence": "Management Oversight and Governance The CITO, reporting to the Company's Chief Engineering & Customer Success Officer (\"C/E\"), together with the CISO, reporting to the CITO, are responsible for designing and implementing a security program and strategy based on the mandate provided by the Board and senior management.",
+      "risk_score": 0.020093385130167007,
+      "finbert_probs": {
+        "positive": 0.03455597907304764,
+        "neutral": 0.945350706577301,
+        "negative": 0.020093385130167007
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_91",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 4,
+      "sentence_text": "Management is responsible for the day-to-day administration of the Company's cybersecurity policies, processes, practices and risk management.",
+      "previous_sentence": "With trust as our foremost value and the foundation of everything we do, we recognize the importance of maintaining the safety and security of our systems and data.",
+      "next_sentence": "The Board, including through its dedicated Cybersecurity and Privacy committee (the \"Committee\"), oversees the various cybersecurity risks facing the Company and the Company's efforts to mitigate those risks.",
+      "risk_score": 0.0196260716766119,
+      "finbert_probs": {
+        "positive": 0.0334031879901886,
+        "neutral": 0.9469707608222961,
+        "negative": 0.0196260716766119
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_92",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 38,
+      "sentence_text": "The Company's program includes controls and procedures designed to properly identify, classify, and escalate cybersecurity risks and incidents to provide management with visibility and prioritization of risk mitigation efforts and to publicly report material cybersecurity incidents when appropriate. \u2022 Threat Intelligence .",
+      "previous_sentence": "The Company has implemented a robust, cross-functional approach to identifying, assessing and managing cybersecurity threats and risks.",
+      "next_sentence": "The Company maintains a Threat Intelligence team focused on profiling, intelligence collection, and threat analysis supporting the Company's ongoing efforts to identify, assess and manage cybersecurity threats.",
+      "risk_score": 0.018959494307637215,
+      "finbert_probs": {
+        "positive": 0.04365939646959305,
+        "neutral": 0.9373810291290283,
+        "negative": 0.018959494307637215
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_93",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 21,
+      "sentence_text": "The Committee receives regular presentations, reports and updates from the Company's Chief Infrastructure and Trust Officer (\"CITO\"), Chief Information Security Officer (\"CISO\"), and other members of management on developments regarding the Company's cybersecurity program, broader cybersecurity trends, evolving industry standards, the threat environment and other topics.",
+      "previous_sentence": "Board Oversight and Governance As mentioned above, the Board established the Committee to provide dedicated oversight of cybersecurity-related management, strategy, initiatives, risks, threats and remediation activities.",
+      "next_sentence": "After each quarterly meeting of the Committee, the Board receives a report from the Chair of the Committee with an update on the Company's oversight of cybersecurity risks and mitigation efforts.",
+      "risk_score": 0.01842939481139183,
+      "finbert_probs": {
+        "positive": 0.04070605710148811,
+        "neutral": 0.9408645629882812,
+        "negative": 0.01842939481139183
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_94",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 42,
+      "sentence_text": "The Company has established and maintains incident response, business continuity and disaster recovery plans designed to address the Company's response to a cybersecurity incident, including the public disclosure and reporting of material incidents in a timely manner.",
+      "previous_sentence": "The Company implements technical safeguards that are designed to protect both the Company's service offerings and other information systems we control from cybersecurity threats, including firewalls, intrusion prevention and detection systems, anti-malware functionality, vulnerability management, encryption processes and access controls, all of which are periodically evaluated and improved through risk and control assessments and in response to cybersecurity threat intelligence as well as outside audits and certifications. \u2022 Incident Response and Recovery Planning .",
+      "next_sentence": "These plans and procedures serve to guide and document a rigorous incident response program that reflects the roles of an array of stakeholders, including personnel providing technical, operational, engineering, legal and other perspectives across the Company.",
+      "risk_score": 0.01769179478287697,
+      "finbert_probs": {
+        "positive": 0.06356267631053925,
+        "neutral": 0.9187455177307129,
+        "negative": 0.01769179478287697
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_95",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 5,
+      "sentence_text": "The Board, including through its dedicated Cybersecurity and Privacy committee (the \"Committee\"), oversees the various cybersecurity risks facing the Company and the Company's efforts to mitigate those risks.",
+      "previous_sentence": "Management is responsible for the day-to-day administration of the Company's cybersecurity policies, processes, practices and risk management.",
+      "next_sentence": "During the last fiscal year, we did not identify any risks from cybersecurity threats, including as a result of any previous cybersecurity incidents, that materially affected the Company, including its business strategy, results of operations, or financial condition.",
+      "risk_score": 0.017271000891923904,
+      "finbert_probs": {
+        "positive": 0.044640153646469116,
+        "neutral": 0.9380888342857361,
+        "negative": 0.017271000891923904
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_96",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 24,
+      "sentence_text": "The Company's processes also allow for the Board and the Committee to be informed of key cybersecurity risks outside the regular reporting schedule.",
+      "previous_sentence": "The Committee also receives periodic reports from an experienced outside consultant with information security expertise providing insights on key focus areas to aid in the Committee's oversight of the Company's cybersecurity program.",
+      "next_sentence": "While regular meetings of the Committee are scheduled on a quarterly cadence, the Committee is authorized to meet with management or individual directors at any time it deems appropriate to discuss matters relevant to the Committee.",
+      "risk_score": 0.016283035278320312,
+      "finbert_probs": {
+        "positive": 0.0485917367041111,
+        "neutral": 0.9351252317428589,
+        "negative": 0.016283035278320312
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_97",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 15,
+      "sentence_text": "Leveraging threat intelligence and other signals, the Company undergoes periodic testing, audits and reviews of its policies, standards, processes and practices to identify, assess and address cybersecurity risks and events.",
+      "previous_sentence": "We also hold various security-related industry certifications and attestations that have been validated by external auditors, including SOC 1, SOC 2, SOC 3, ISO 27001, 27017 and 27018, CSA STAR and others.",
+      "next_sentence": "The Company also undergoes routine internal and external penetration testing.",
+      "risk_score": 0.015236923471093178,
+      "finbert_probs": {
+        "positive": 0.07391948997974396,
+        "neutral": 0.9108436107635498,
+        "negative": 0.015236923471093178
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_98",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 33,
+      "sentence_text": "Through ongoing communications with these teams, the CITO, CISO, and senior management are able to be informed promptly about, and monitor the prevention, detection, investigation, mitigation and remediation of, cybersecurity threats.",
+      "previous_sentence": "To facilitate the success of the Company's cybersecurity program, cross-functional teams throughout the Company are tasked with addressing cybersecurity threats and responding to cybersecurity incidents.",
+      "next_sentence": "These teams are expected to operate pursuant to documented plans and playbooks that include processes for escalation of incidents to leadership and to the Committee and Board, as appropriate, based on the severity level of a cybersecurity incident.",
+      "risk_score": 0.015173452906310558,
+      "finbert_probs": {
+        "positive": 0.11384638398885727,
+        "neutral": 0.8709800839424133,
+        "negative": 0.015173452906310558
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_99",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 3,
+      "sentence_text": "With trust as our foremost value and the foundation of everything we do, we recognize the importance of maintaining the safety and security of our systems and data.",
+      "previous_sentence": "As such, we have in the past been, and likely will in the future be, the target of cybersecurity threats and other efforts to breach or compromise our services and underlying infrastructure.",
+      "next_sentence": "Management is responsible for the day-to-day administration of the Company's cybersecurity policies, processes, practices and risk management.",
+      "risk_score": 0.014715097844600677,
+      "finbert_probs": {
+        "positive": 0.11301329731941223,
+        "neutral": 0.8722715973854065,
+        "negative": 0.014715097844600677
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_100",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 45,
+      "sentence_text": "The Company maintains a risk-based approach to identifying and overseeing cybersecurity threats presented by certain third parties , including vendors, service providers and other external users of the Company's systems, as well as the systems of third parties that could adversely impact our business in the event of a significant cybersecurity incident affecting those third-party systems. \u2022 Education and Awareness .",
+      "previous_sentence": "The Company conducts regular tabletop exercises involving multiple operational teams, including senior management, to test these plans and to familiarize personnel with their roles in a response scenario. \u2022 Third-Party Risk Management .",
+      "next_sentence": "The Company regularly provides employee training on security-related duties and responsibilities, including knowledge about how to recognize cybersecurity incidents and how to proceed if an actual or suspected incident should occur.",
+      "risk_score": 0.014538136310875416,
+      "finbert_probs": {
+        "positive": 0.08610759675502777,
+        "neutral": 0.8993542194366455,
+        "negative": 0.014538136310875416
+      }
+    }
+  ]
+}
