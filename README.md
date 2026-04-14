@@ -25,6 +25,33 @@ The repo is organized around a few main layers:
 - `evaluation/`: offline scoring for saved agentic vs baseline report artifacts
 - `ui/`: a local Streamlit app for running and comparing pipelines
 
+## UI
+
+The quickest way to use the project is through the local Streamlit UI.
+
+Run it with:
+
+```bash
+streamlit run ui/app.py
+```
+
+The UI is intended as a local operator console. It lets you:
+
+- run the full agentic comparison pipeline
+- run the baseline RAG pipeline
+- compare both reports side by side
+- load saved report artifacts
+- build missing dataset artifacts for a ticker
+- rebuild and inspect the FAISS index
+
+What it shows:
+
+- the structured comparison report for the selected pipeline
+- target posture, target profile, and peer comparison summaries
+- risk overlap and forward watch sections
+- evidence-aware narrative sections and citations
+- dataset and retrieval/index management panels
+
 ## Agentic Flow
 
 The agentic flow is the main end-to-end path in this repo. It is hybrid by design: data preparation is deterministic, and OpenRouter is used only at the final report-generation stage.
@@ -144,101 +171,7 @@ Current note:
 - it is designed for side-by-side comparison with the agentic flow
 - it is compatible with the current ingestion artifact shape
 
-## Commands By Stage
-
-### Run One Stage At A Time
-
-Ingestion:
-
-```bash
-python data-ingestion/ingestion_pipeline.py AAPL --years 5
-```
-
-Extraction:
-
-```bash
-python data-extraction/main.py AAPL
-```
-
-Curator artifact generation:
-
-```bash
-python data-extraction/company_filing_embedding.py AAPL
-```
-
-Build the FAISS index:
-
-```bash
-python rag-matching/indexer.py
-```
-
-Retrieve similar companies:
-
-```bash
-python rag-matching/matcher.py --input-file data-extraction/outputs/curator/AAPL/aapl_2025.json --top 2 --json
-```
-
-Run the full agentic pipeline:
-
-```bash
-python orchestration/runner.py AAPL --json
-```
-
-Run the local UI:
-
-```bash
-streamlit run ui/app.py
-```
-
-Run offline evaluation on saved artifacts:
-
-```bash
-python -m evaluation.runner --agentic-dir orchestration/outputs --baseline-dir baseline_rag/outputs --json
-```
-
-## Using The Project
-
-There are two common ways to use the repo.
-
-### Option 1. Use The Full Agentic Pipeline
-
-Use this when you want the main report-generation path.
-
-Recommended order:
-
-1. ingest a company
-2. generate extraction artifacts
-3. generate curator artifacts
-4. build or refresh the FAISS index
-5. run orchestration to generate the final report
-
-### Option 2. Use The UI
-
-Use this when you want a local operator workflow for:
-
-- running the agentic pipeline
-- running the baseline RAG pipeline
-- comparing both outputs side by side
-- loading saved report artifacts
-- rebuilding or inspecting the FAISS index
-
-Run:
-
-```bash
-streamlit run ui/app.py
-```
-
-## Key Output Artifacts
-
-Main outputs you will work with:
-
-- ingestion artifact: `data-ingestion/outputs/<TICKER>/complete_ingestion.json`
-- yearly extraction artifacts: `data-extraction/outputs/<TICKER>/`
-- curator artifacts: `data-extraction/outputs/curator/<TICKER>/`
-- agentic comparison bundles: `orchestration/outputs/<TICKER>/`
-- evaluation outputs: `evaluation/outputs/`
-
-## Environment Notes
+## Environment
 
 The report-generation layers use OpenRouter through:
 
@@ -250,11 +183,3 @@ Expected environment variables:
 - optional `OPENROUTER_MODEL`
 
 The project also depends on local FAISS / embedding tooling for the retrieval path.
-
-## Documentation
-
-Additional project context:
-
-- [documentation/overview.md](documentation/overview.md)
-- [documentation/project-handoff-for-llm.md](documentation/project-handoff-for-llm.md)
-- [documentation/roadmap.md](documentation/roadmap.md)
