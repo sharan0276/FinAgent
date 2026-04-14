@@ -57,6 +57,36 @@ Primary modules:
 - quarter inference from `fp`, `frame`, and year-end snapshot fallback
 - standardized output records
 
+### Current financial output schema
+
+The active ingestion pipeline currently writes financial metrics in a point-list schema that is directly compatible with `data-extraction/`:
+
+- `financial_data.annual[metric] -> list[dict]`
+- `financial_data.quarterly[metric] -> list[dict]`
+
+Annual point shape:
+
+- `year`
+- `end_date`
+- `value`
+- `tag`
+- `accession`
+
+Quarterly point shape:
+
+- `year`
+- `quarter`
+- `end_date`
+- `value`
+- `tag`
+- `accession`
+
+Important note:
+
+- there was a brief compact-format branch using `years/values/deltas` arrays
+- the current code has been rolled back to point lists to remain compatible with the active extraction pipeline
+- if a company artifact was generated during the compact-format window, rerun ingestion before using it downstream
+
 ### Current metric aliases used
 
 - `Revenues`
@@ -112,6 +142,7 @@ The current ingestion code is designed to guarantee the following:
 - quarterly output should be internally consistent enough to compare across filings, even when SEC provides a mix of discrete-quarter and YTD values
 - text ingestion requests the last `N` years of filings when run with `--years N`
 - extracted section text should stop at the intended next section boundary rather than swallowing downstream content
+- fresh ingestion artifacts should have a financial schema that can be read directly by `data-extraction/numeric_delta.py`
 
 ### Current Working Reference Artifacts
 
