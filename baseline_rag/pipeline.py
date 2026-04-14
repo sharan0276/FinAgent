@@ -1,7 +1,7 @@
 """Baseline RAG pipeline: single-shot LLM call over ingested financial data.
 
 This is a deliberate contrast to the multi-step agentic orchestration pipeline.
-Same model, same output schema — only the retrieval strategy and reasoning depth differ.
+Same model, same output schema - only the retrieval strategy and reasoning depth differ.
 This design choice isolates pipeline architecture as the variable, keeping the model constant.
 """
 
@@ -13,9 +13,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, List, Optional
 
-from .artifact_resolver import REPO_ROOT, ingestion_artifact_path
-from .openrouter_client import OpenRouterClient
-from .report_models import (
+from orchestration.artifact_resolver import REPO_ROOT, ingestion_artifact_path, latest_filing_year
+from orchestration.openrouter_client import OpenRouterClient
+from orchestration.report_models import (
     ComparisonBundle,
     ComparisonReportResult,
     ForwardWatchItem,
@@ -33,10 +33,6 @@ from .report_models import (
 )
 
 
-# ---------------------------------------------------------------------------
-# Ingestion data helpers
-# ---------------------------------------------------------------------------
-
 def _load_ingestion(ticker: str, *, repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     path = ingestion_artifact_path(ticker, repo_root=repo_root)
     if not path.exists():
@@ -44,63 +40,137 @@ def _load_ingestion(ticker: str, *, repo_root: Path = REPO_ROOT) -> dict[str, An
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _format_usd(value: Optional[float]) -> str:
+def _coerce_float(value: Any) -> Optional[float]:
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _coerce_int(value: Any) -> Optional[int]:
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _infer_row_year(row: dict[str, Any]) -> Optional[int]:
+    for key in ("year", "fiscal_year", "fy"):
+        year = _coerce_int(row.get(key))
+        if year is not None:
+            return year
+
+    for key in ("end", "period_end", "date"):
+        raw = str(row.get(key, ""))
+        if len(raw) >= 4 and raw[:4].isdigit():
+            return int(raw[:4])
+    return None
+
+
+def _annual_metric_rows(metric_payload: Any) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+
+    if isinstance(metric_payload, dict) and "years" in metric_payload:
+        years = metric_payload.get("years") or []
+        values = metric_payload.get("values") or []
+        deltas = metric_payload.get("deltas") or []
+        unit = metric_payload.get("unit", "USD_millions")
+        for index, year in enumerate(years):
+            rows.append(
+                {
+                    "year": _coerce_int(year),
+                    "value": _coerce_float(values[index]) if index < len(values) else None,
+                    "delta": _coerce_float(deltas[index]) if index < len(deltas) else None,
+                    "unit": unit,
+                }
+            )
+        return [row for row in rows if row["year"] is not None]
+
+    source_rows: list[dict[str, Any]] = []
+    if isinstance(metric_payload, dict) and isinstance(metric_payload.get("annual"), list):
+        source_rows = [row for row in metric_payload.get("annual", []) if isinstance(row, dict)]
+    elif isinstance(metric_payload, list):
+        source_rows = [row for row in metric_payload if isinstance(row, dict)]
+
+    for row in source_rows:
+        rows.append(
+            {
+                "year": _infer_row_year(row),
+                "value": _coerce_float(row.get("value", row.get("val"))),
+                "delta": _coerce_float(row.get("delta", row.get("delta_percent"))),
+                "unit": row.get("unit", "USD_millions"),
+            }
+        )
+
+    rows = [row for row in rows if row["year"] is not None]
+    rows.sort(key=lambda row: row["year"] or 0)
+    return rows
+
+
+def _format_value(value: Optional[float], unit: str) -> str:
     if value is None:
         return "N/A"
-    return f"${value:,.0f}M"
+    if "usd" in unit.lower():
+        return f"${value:,.0f}M"
+    return f"{value:,.2f}"
 
 
-def _format_delta(delta: Optional[float]) -> str:
+def _format_delta(delta: Optional[float], unit: str) -> str:
     if delta is None:
         return ""
     sign = "+" if delta >= 0 else ""
-    return f" ({sign}{delta:.1f}% YoY)"
+    if "usd" in unit.lower():
+        return f" ({sign}${delta:,.1f}M YoY change)"
+    return f" ({sign}{delta:,.2f} YoY change)"
 
 
 def flatten_ingestion_to_text(ingestion: dict[str, Any]) -> str:
     """Convert ingestion JSON to a compact, LLM-readable text block.
 
     Preserves the structure of financial metrics across years while being
-    token-efficient. Intentionally does not include NLP/sentiment signals —
+    token-efficient. Intentionally does not include NLP/sentiment signals -
     that is what the agentic pipeline's extraction and curator steps add.
     """
     ticker = ingestion.get("ticker", "UNKNOWN")
     company = ingestion.get("company_name", ticker)
     annual = ingestion.get("financial_data", {}).get("annual", {})
 
-    lines: list[str] = [f"=== {ticker} ({company}) — Ingested Financial Data ==="]
+    lines: list[str] = [f"=== {ticker} ({company}) - Ingested Financial Data ==="]
 
-    for metric, data in annual.items():
-        years: list = data.get("years", [])
-        values: list = data.get("values", [])
-        deltas: list = data.get("deltas", [])
-        unit: str = data.get("unit", "USD_millions")
-
-        if not years:
+    for metric, metric_payload in annual.items():
+        rows = _annual_metric_rows(metric_payload)
+        if not rows:
             continue
 
+        unit = str(rows[0].get("unit") or "USD_millions")
         lines.append(f"\n{metric}:")
-        for i, year in enumerate(years):
-            val = values[i] if i < len(values) else None
-            delta = deltas[i] if i < len(deltas) else None
-            val_str = _format_usd(val) if "USD" in unit else (str(val) if val is not None else "N/A")
-            delta_str = _format_delta(delta)
+        for row in rows:
+            year = row["year"]
+            val_str = _format_value(row["value"], unit)
+            delta_str = _format_delta(row["delta"], unit)
             lines.append(f"  FY{year}: {val_str}{delta_str}")
 
     return "\n".join(lines)
 
 
 def _latest_year_from_ingestion(ingestion: dict[str, Any]) -> Optional[int]:
-    annual = ingestion.get("financial_data", {}).get("annual", {})
-    all_years: list[int] = []
-    for data in annual.values():
-        all_years.extend(data.get("years", []))
-    return max(all_years) if all_years else None
+    try:
+        return latest_filing_year(ingestion)
+    except Exception:
+        annual = ingestion.get("financial_data", {}).get("annual", {})
+        all_years: list[int] = []
+        for metric_payload in annual.values():
+            all_years.extend(
+                row["year"]
+                for row in _annual_metric_rows(metric_payload)
+                if row.get("year") is not None
+            )
+        return max(all_years) if all_years else None
 
-
-# ---------------------------------------------------------------------------
-# Peer retrieval
-# ---------------------------------------------------------------------------
 
 def _ensure_rag_path(repo_root: Path) -> None:
     rag_dir = str(repo_root / "rag-matching")
@@ -114,11 +184,6 @@ def _find_peers_via_faiss(
     *,
     repo_root: Path,
 ) -> list[dict[str, Any]]:
-    """Use existing FAISS index to find semantically similar peers.
-
-    Requires a curator file for the target ticker. Uses the most recent
-    curator as the query embedding, consistent with the agentic pipeline.
-    """
     _ensure_rag_path(repo_root)
     from matcher import find_matches  # type: ignore[import]
 
@@ -139,11 +204,6 @@ def _find_peers_fallback(
     *,
     repo_root: Path,
 ) -> list[dict[str, Any]]:
-    """Fallback peer discovery when no FAISS curator exists for the target.
-
-    Returns available tickers from ingestion outputs, sorted alphabetically.
-    Noted as zero-similarity since no embedding comparison was performed.
-    """
     ingestion_root = repo_root / "data-ingestion" / "outputs"
     available = [
         d.name
@@ -152,10 +212,7 @@ def _find_peers_fallback(
         and d.name.upper() != ticker.upper()
         and (d / "complete_ingestion.json").exists()
     ]
-    return [
-        {"ticker": t, "filing_year": None, "similarity": 0.0}
-        for t in available[:top_k]
-    ]
+    return [{"ticker": t, "filing_year": None, "similarity": 0.0} for t in available[:top_k]]
 
 
 def find_peers(
@@ -164,16 +221,11 @@ def find_peers(
     *,
     repo_root: Path = REPO_ROOT,
 ) -> list[dict[str, Any]]:
-    """Find top-k peer companies. Tries FAISS first, falls back to ingestion scan."""
     peers = _find_peers_via_faiss(ticker, top_k, repo_root=repo_root)
     if not peers:
         peers = _find_peers_fallback(ticker, top_k, repo_root=repo_root)
     return peers[:top_k]
 
-
-# ---------------------------------------------------------------------------
-# Prompt construction
-# ---------------------------------------------------------------------------
 
 _SYSTEM_PROMPT = """\
 You are a senior financial analyst. You will receive structured financial data \
@@ -248,23 +300,23 @@ def _build_user_prompt(
     peer_texts: list[str],
     focus_query: Optional[str],
 ) -> str:
-    focus_block = f"\n**Analyst Focus Area:** {focus_query}\nPrioritize this theme in your analysis.\n" if focus_query else ""
+    focus_block = (
+        f"\n**Analyst Focus Area:** {focus_query}\nPrioritize this theme in your analysis.\n"
+        if focus_query
+        else ""
+    )
     peer_block = "\n\n".join(peer_texts) if peer_texts else "No peer data available for comparison."
 
     return f"""{focus_block}
-## Target Company — Financial Data
+## Target Company - Financial Data
 {target_text}
 
-## Peer Companies — Financial Data
+## Peer Companies - Financial Data
 {peer_block}
 
 Produce the JSON comparison report now.
 """
 
-
-# ---------------------------------------------------------------------------
-# Response parsing
-# ---------------------------------------------------------------------------
 
 def _safe_str(val: Any, default: str = "") -> str:
     return str(val) if val is not None else default
@@ -283,11 +335,13 @@ def _parse_metric_items(items: Optional[list]) -> List[MetricDeltaItem]:
     result: list[MetricDeltaItem] = []
     for item in (items or []):
         try:
-            result.append(MetricDeltaItem(
-                metric=_safe_str(item.get("metric")),
-                label=_safe_str(item.get("label")),
-                value=float(item["value"]) if item.get("value") is not None else None,
-            ))
+            result.append(
+                MetricDeltaItem(
+                    metric=_safe_str(item.get("metric")),
+                    label=_safe_str(item.get("label")),
+                    value=float(item["value"]) if item.get("value") is not None else None,
+                )
+            )
         except (TypeError, ValueError, KeyError):
             continue
     return result
@@ -300,13 +354,16 @@ def _parse_risks(items: Optional[list]) -> List[RiskItem]:
         if severity not in ("high", "medium", "low"):
             severity = "medium"
         try:
-            result.append(RiskItem(
-                signal_type=_safe_str(item.get("signal_type")),
-                severity=severity,
-                section=item.get("section"),
-                summary=item.get("summary"),
-                occurrences=int(item.get("occurrences", 1)),
-            ))
+            result.append(
+                RiskItem(
+                    signal_type=_safe_str(item.get("signal_type")),
+                    severity=severity,
+                    section=item.get("section"),
+                    summary=item.get("summary"),
+                    citation=item.get("citation"),
+                    occurrences=int(item.get("occurrences", 1)),
+                )
+            )
         except (TypeError, ValueError):
             continue
     return result
@@ -363,12 +420,14 @@ def _parse_watchlist(items: Optional[list]) -> List[ForwardWatchItem]:
         if confidence not in ("high", "medium", "low"):
             confidence = "medium"
         try:
-            result.append(ForwardWatchItem(
-                watch_risk_type=_safe_str(item.get("watch_risk_type")),
-                why_relevant=_safe_str(item.get("why_relevant")),
-                peer_evidence=item.get("peer_evidence") or [],
-                confidence=confidence,
-            ))
+            result.append(
+                ForwardWatchItem(
+                    watch_risk_type=_safe_str(item.get("watch_risk_type")),
+                    why_relevant=_safe_str(item.get("why_relevant")),
+                    peer_evidence=item.get("peer_evidence") or [],
+                    confidence=confidence,
+                )
+            )
         except (TypeError, ValueError):
             continue
     return result
@@ -378,10 +437,13 @@ def _parse_narrative(sections: Optional[list]) -> List[ReportSection]:
     result: list[ReportSection] = []
     for section in (sections or []):
         try:
-            result.append(ReportSection(
-                title=_safe_str(section.get("title")),
-                content=_safe_str(section.get("content")),
-            ))
+            result.append(
+                ReportSection(
+                    title=_safe_str(section.get("title")),
+                    content=_safe_str(section.get("content")),
+                    citations=section.get("citations") or [],
+                )
+            )
         except (TypeError, ValueError):
             continue
     return result
@@ -411,10 +473,6 @@ def _parse_report(
     )
 
 
-# ---------------------------------------------------------------------------
-# Failed artifact helper
-# ---------------------------------------------------------------------------
-
 def _make_failed_artifact(
     ticker: str,
     top_k: int,
@@ -443,10 +501,6 @@ def _make_failed_artifact(
     )
 
 
-# ---------------------------------------------------------------------------
-# Main entry point
-# ---------------------------------------------------------------------------
-
 def run_baseline_rag(
     ticker: str,
     *,
@@ -455,23 +509,11 @@ def run_baseline_rag(
     repo_root: Path = REPO_ROOT,
     client: Optional[OpenRouterClient] = None,
 ) -> OrchestrationArtifact:
-    """Run the baseline RAG pipeline for a ticker.
-
-    Strategy:
-    1. Load ingested financial data for target (structured JSON, no NLP signals)
-    2. Find top-k peers via FAISS (if curator available) or ingestion scan
-    3. Flatten all data to structured text
-    4. Single LLM call → parse into OrchestrationArtifact
-
-    The schema_version "baseline_rag_v1" distinguishes this from the agentic
-    pipeline ("orchestration_v1") so results can be compared in the UI.
-    """
     ticker = ticker.strip().upper()
     run_ts = datetime.now(timezone.utc).isoformat()
     warnings: list[str] = []
     status_by_step: dict[str, str] = {}
 
-    # --- Step 1: Load target ingestion ---
     try:
         target_ingestion = _load_ingestion(ticker, repo_root=repo_root)
         status_by_step["load_target"] = "completed"
@@ -484,19 +526,19 @@ def run_baseline_rag(
     target_text = flatten_ingestion_to_text(target_ingestion)
     status_by_step["flatten_target"] = "completed"
 
-    # --- Step 2: Find peers ---
     try:
         peers = find_peers(ticker, top_k, repo_root=repo_root)
         retrieval_method = "faiss" if any(p.get("similarity", 0.0) > 0 for p in peers) else "fallback"
         status_by_step["find_peers"] = "completed"
         if retrieval_method == "fallback":
-            warnings.append("No curator file for target — used ingestion scan for peer discovery (no embedding similarity).")
+            warnings.append(
+                "No curator file for target - used ingestion scan for peer discovery (no embedding similarity)."
+            )
     except Exception as exc:
         warnings.append(f"Peer retrieval failed: {exc}")
         peers = []
         status_by_step["find_peers"] = "partial"
 
-    # --- Step 3: Load and flatten peer data ---
     peer_texts: list[str] = []
     match_contexts: list[MatchContext] = []
 
@@ -508,18 +550,19 @@ def run_baseline_rag(
             peer_ingestion = _load_ingestion(peer_ticker, repo_root=repo_root)
             peer_texts.append(flatten_ingestion_to_text(peer_ingestion))
             peer_year = _latest_year_from_ingestion(peer_ingestion) or int(peer.get("filing_year") or 0)
-            match_contexts.append(MatchContext(
-                ticker=peer_ticker,
-                company=peer_ingestion.get("company_name"),
-                matched_filing_year=peer_year,
-                similarity=float(peer.get("similarity", 0.0)),
-            ))
+            match_contexts.append(
+                MatchContext(
+                    ticker=peer_ticker,
+                    company=peer_ingestion.get("company_name"),
+                    matched_filing_year=peer_year,
+                    similarity=float(peer.get("similarity", 0.0)),
+                )
+            )
         except Exception as exc:
             warnings.append(f"Could not load peer {peer_ticker}: {exc}")
 
     status_by_step["load_peers"] = "completed" if peer_texts else "partial"
 
-    # --- Step 4: Single LLM call ---
     llm_client = client or OpenRouterClient()
     user_prompt = _build_user_prompt(target_text, peer_texts, focus_query)
 
@@ -535,7 +578,6 @@ def run_baseline_rag(
             ticker, top_k, run_ts, str(exc), status_by_step, warnings=warnings
         )
 
-    # --- Step 5: Parse into typed report model ---
     try:
         report = _parse_report(raw_report, ticker, target_ingestion, model_name)
         status_by_step["parse_report"] = "completed"

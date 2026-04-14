@@ -6,8 +6,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from baseline_rag import run_baseline_rag
 from orchestration.artifact_resolver import REPO_ROOT
-from orchestration.baseline_rag import run_baseline_rag
 from orchestration.orchestration_pipeline import PipelineDependencies, build_company_dataset, run_orchestration
 from orchestration.report_models import OrchestrationArtifact
 

@@ -88,7 +88,7 @@ def _render_target_profile(profile: Any) -> None:
             for item in profile.positive_deltas
         ] or [{"Metric": "-", "Label": "-", "Value": None}]
         st.table(positive_rows)
-    with negatives:
+    with col_neg:
         st.markdown("**Negative Deltas**")
         negative_rows = [
             {"Metric": item.metric, "Label": format_display_label(item.label), "Value": item.value}
