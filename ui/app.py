@@ -13,6 +13,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from orchestration.report_models import OrchestrationArtifact
+from ui.display import build_compact_match_rows, build_peer_snapshot_rows, format_display_label
 from ui.services import (
     build_company_dataset_for_ui,
     get_faiss_index_status,
@@ -49,13 +50,33 @@ def _render_target_profile(profile: Any) -> None:
     positives, negatives = st.columns(2)
     with positives:
         st.markdown("**Positive Deltas**")
-        st.table([item.model_dump(mode="json") for item in profile.positive_deltas] or [{"metric": "-", "label": "-", "value": None}])
+        positive_rows = [
+            {"Metric": item.metric, "Label": format_display_label(item.label), "Value": item.value}
+            for item in profile.positive_deltas
+        ] or [{"Metric": "-", "Label": "-", "Value": None}]
+        st.table(positive_rows)
     with negatives:
         st.markdown("**Negative Deltas**")
-        st.table([item.model_dump(mode="json") for item in profile.negative_deltas] or [{"metric": "-", "label": "-", "value": None}])
+        negative_rows = [
+            {"Metric": item.metric, "Label": format_display_label(item.label), "Value": item.value}
+            for item in profile.negative_deltas
+        ] or [{"Metric": "-", "Label": "-", "Value": None}]
+        st.table(negative_rows)
 
     st.markdown("**Top Risks**")
-    st.table([item.model_dump(mode="json") for item in profile.top_risks] or [{"signal_type": "-", "severity": "-", "section": None, "summary": None, "occurrences": 0}])
+    if profile.top_risks:
+        for item in profile.top_risks:
+            st.markdown(
+                f"**{format_display_label(item.signal_type)}** | {format_display_label(item.severity)} | {item.section or '-'}"
+            )
+            if item.summary:
+                st.write(item.summary)
+            st.caption(f"Occurrences: {item.occurrences}")
+            if item.citation:
+                with st.expander("View evidence"):
+                    st.write(item.citation)
+    else:
+        st.caption("No top risks available.")
 
 
 def _render_report(artifact: OrchestrationArtifact, artifact_path: str | None = None) -> None:
@@ -97,25 +118,47 @@ def _render_report(artifact: OrchestrationArtifact, artifact_path: str | None = 
     st.subheader("Peer Comparison")
     if bundle.matches:
         st.markdown("**Matches**")
-        st.table([match.model_dump(mode="json") for match in bundle.matches])
+        st.table(build_compact_match_rows(bundle.matches))
     else:
         st.info("No peer matches available.")
 
     if report.peer_snapshot:
         st.markdown("**Peer Snapshot**")
-        st.json(report.peer_snapshot.model_dump(mode="json"), expanded=False)
+        st.table(build_peer_snapshot_rows(report.peer_snapshot))
 
     st.subheader("Risk Tables")
     st.markdown("**Risk Overlap**")
-    st.table([row.model_dump(mode="json") for row in report.risk_overlap_rows] or [{"group": "-", "risk_types": []}])
+    overlap_rows = [
+        {
+            "Group": format_display_label(row.group),
+            "Risk Types": ", ".join(format_display_label(item) for item in row.risk_types) or "-",
+        }
+        for row in report.risk_overlap_rows
+    ] or [{"Group": "-", "Risk Types": "-"}]
+    st.table(overlap_rows)
     st.markdown("**Forward Watchlist**")
-    st.table([item.model_dump(mode="json") for item in report.forward_watchlist] or [{"watch_risk_type": "-", "why_relevant": "-", "peer_evidence": [], "confidence": "low"}])
+    if report.forward_watchlist:
+        for item in report.forward_watchlist:
+            st.markdown(f"**{format_display_label(item.watch_risk_type)}** | {format_display_label(item.confidence)} confidence")
+            st.write(item.why_relevant)
+            with st.expander("View evidence"):
+                if item.peer_evidence:
+                    for evidence in item.peer_evidence:
+                        st.write(f"- {evidence}")
+                else:
+                    st.caption("No peer evidence available.")
+    else:
+        st.caption("No forward watchlist items available.")
 
     st.subheader("Narrative")
     if report.narrative_sections:
         for section in report.narrative_sections:
             st.markdown(f"**{section.title}**")
             st.write(section.content)
+            if section.citations:
+                with st.expander("View evidence"):
+                    for citation in section.citations:
+                        st.write(f"- {citation}")
     else:
         st.info("No narrative sections available.")
 

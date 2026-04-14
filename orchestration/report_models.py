@@ -14,6 +14,7 @@ WatchConfidence = Literal["high", "medium", "low"]
 class ReportSection(BaseModel):
     title: str
     content: str
+    citations: list[str] = Field(default_factory=list)
 
 
 class MetricDeltaItem(BaseModel):
@@ -27,6 +28,7 @@ class RiskItem(BaseModel):
     severity: str
     section: str | None = None
     summary: str | None = None
+    citation: str | None = None
     occurrences: int = 1
 
 
