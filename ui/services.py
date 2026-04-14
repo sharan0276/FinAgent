@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from orchestration.artifact_resolver import REPO_ROOT
+from orchestration.baseline_rag import run_baseline_rag
 from orchestration.orchestration_pipeline import PipelineDependencies, build_company_dataset, run_orchestration
 from orchestration.report_models import OrchestrationArtifact
 
@@ -100,6 +101,26 @@ def run_analysis_for_ui(
     deps: PipelineDependencies | None = None,
 ) -> tuple[OrchestrationArtifact, Path]:
     return run_orchestration(normalize_ticker(ticker), top_k=top_k, repo_root=repo_root, deps=deps)
+
+
+def run_baseline_rag_for_ui(
+    ticker: str,
+    *,
+    top_k: int = 2,
+    focus_query: str | None = None,
+    repo_root: Path = REPO_ROOT,
+) -> OrchestrationArtifact:
+    """Run the baseline RAG pipeline and return the artifact.
+
+    Unlike run_analysis_for_ui, this does not write an output file —
+    the baseline is ephemeral and only stored in session state for comparison.
+    """
+    return run_baseline_rag(
+        normalize_ticker(ticker),
+        top_k=top_k,
+        focus_query=focus_query or None,
+        repo_root=repo_root,
+    )
 
 
 def get_faiss_index_status(*, repo_root: Path = REPO_ROOT) -> dict[str, Any]:

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Literal
+from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -20,7 +20,7 @@ class ReportSection(BaseModel):
 class MetricDeltaItem(BaseModel):
     metric: str
     label: str
-    value: float | None = None
+    value: Optional[float] = None
 
 
 class RiskItem(BaseModel):
@@ -39,7 +39,7 @@ class PostureCard(BaseModel):
 
 class TargetProfile(BaseModel):
     ticker: str
-    company: str | None = None
+    company: Optional[str] = None
     filing_year: int
     positive_deltas: list[MetricDeltaItem] = Field(default_factory=list)
     negative_deltas: list[MetricDeltaItem] = Field(default_factory=list)
@@ -68,16 +68,16 @@ class ForwardWatchItem(BaseModel):
 
 class TargetContext(BaseModel):
     ticker: str
-    company: str | None = None
-    latest_filing_year: int | None = None
-    ingestion_path: str | None = None
-    extraction_path: str | None = None
-    curator_path: str | None = None
+    company: Optional[str] = None
+    latest_filing_year: Optional[int] = None
+    ingestion_path: Optional[str] = None
+    extraction_path: Optional[str] = None
+    curator_path: Optional[str] = None
 
 
 class MatchContext(BaseModel):
     ticker: str
-    company: str | None = None
+    company: Optional[str] = None
     matched_filing_year: int
     similarity: float
     context_curator_paths: list[str] = Field(default_factory=list)
@@ -99,14 +99,14 @@ class ComparisonBundle(BaseModel):
 class ComparisonReportResult(BaseModel):
     status: ReportStatus
     summary: str
-    model_name: str | None = None
-    posture: PostureCard | None = None
-    target_profile: TargetProfile | None = None
-    peer_snapshot: PeerSnapshot | None = None
+    model_name: Optional[str] = None
+    posture: Optional[PostureCard] = None
+    target_profile: Optional[TargetProfile] = None
+    peer_snapshot: Optional[PeerSnapshot] = None
     risk_overlap_rows: list[RiskOverlapRow] = Field(default_factory=list)
     forward_watchlist: list[ForwardWatchItem] = Field(default_factory=list)
     narrative_sections: list[ReportSection] = Field(default_factory=list)
-    error: str | None = None
+    error: Optional[str] = None
 
 
 class OrchestrationArtifact(BaseModel):
