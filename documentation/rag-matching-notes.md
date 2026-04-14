@@ -118,7 +118,7 @@ for debugging and traceability.
 
 ## Embedding Assumption
 
-The curator files were generated with `1024`-dimension `BGE-M3` vectors.
+The curator files are currently generated with normalized `1024`-dimension `BGE-M3` vectors.
 
 The matcher assumes:
 
@@ -172,6 +172,11 @@ The current comparison layer built on top of matcher output is structured rather
 - peer neighborhood snapshot
 - current risk overlap rows
 - forward watchlist items based on later peer years
+
+Additional current context:
+
+- the Streamlit UI also exposes a separate baseline RAG comparison path, but that baseline is not the primary consumer of this matcher in every run
+- baseline RAG will use FAISS peer retrieval when curator data exists for the target, and fall back to a simpler ingestion scan otherwise
 
 ---
 

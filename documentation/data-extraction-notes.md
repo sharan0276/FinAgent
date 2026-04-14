@@ -406,7 +406,7 @@ Building on top of the original structure above, we have introduced the "Curator
 - **`test_curator_agent.py`**: Dedicated deterministic unit tests safeguarding candidate logic, financial bucketing logic, prompt structures, and embedding metadata formats. 
 
 **Workflow:**
-The Curator Agent automatically generates `1024-dimension` local vector embeddings using `BGE-M3` and merges them with the financial deltas into `outputs/curator/<TICKER>/<ticker>_<year>.json`.
+The Curator Agent automatically generates normalized `1024`-dimension local vector embeddings using `BGE-M3` and merges them with the financial deltas into `outputs/curator/<TICKER>/<ticker>_<year>.json`.
 
 These curator files are now the canonical input to the active company-matching retrieval layer in `rag-matching/`.
 
@@ -516,3 +516,28 @@ Current report shape includes:
 - `risk_overlap_rows`
 - `forward_watchlist`
 - `narrative_sections`
+
+Current report details now also include:
+
+- citation-aware `target_profile.top_risks`
+- citation-aware `narrative_sections`
+- a local Streamlit rendering path that exposes evidence expanders for cited sections and peer watchlist evidence
+
+---
+
+## UI And Comparison Surfaces
+
+The local Streamlit UI in `ui/` now acts as a comparison workbench rather than just a thin orchestration trigger.
+
+Current behavior:
+
+1. run the agentic pipeline
+2. run a separate baseline RAG pipeline from `orchestration/baseline_rag.py`
+3. compare both outputs side by side in the UI
+4. load saved agentic artifacts
+5. manage dataset intake and FAISS index rebuilds
+
+Important detail:
+
+- baseline RAG returns the same top-level typed artifact shape but uses `schema_version = "baseline_rag_v1"`
+- baseline runs are currently ephemeral in the UI and are not saved under `orchestration/outputs/` by default

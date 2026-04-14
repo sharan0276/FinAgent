@@ -44,11 +44,14 @@ What is implemented now:
 - curator artifacts with company-year embeddings
 - a standalone FAISS-based company matcher over curator artifacts
 - a new `orchestration/` layer that resumes missing target-company artifacts, runs company matching, assembles peer context, and calls a comparison agent through OpenRouter
+- a baseline RAG comparison path that works directly from ingestion artifacts for side-by-side comparison against the agentic flow
+- a standalone `evaluation/` package that scores saved agentic and baseline report artifacts offline
+- a local Streamlit app that can run both pipelines, compare them side by side, and manage dataset / FAISS operations
 
 Current practical status:
 
 - the generated `complete_ingestion.json` artifacts are now the working source of truth for downstream analysis
-- the project currently has refreshed reference artifacts for `AAPL`, `META`, and `GOOG`
+- the repo now contains a broader active working set beyond the original `AAPL`, `META`, and `GOOG` references, including newer ingested and orchestrated outputs for additional tickers
 
 What is not yet implemented in the current broader system:
 
@@ -76,12 +79,14 @@ This decision was made to ensure that:
 
 ## Current System Structure
 
-The current codebase is split across four main implemented layers:
+The current codebase is split across six main implemented layers:
 
 1. `data-ingestion/`
 2. `data-extraction/`
 3. `rag-matching/`
 4. `orchestration/`
+5. `evaluation/`
+6. `ui/`
 
 The major logical parts are:
 
@@ -95,6 +100,8 @@ The major logical parts are:
 8. curator company-year artifacts with embeddings
 9. nearest-neighbor company retrieval over curator artifacts
 10. orchestration and comparison-bundle generation
+11. offline report evaluation
+12. local comparison UI and operator workflow
 
 ## File Responsibilities
 
@@ -160,9 +167,10 @@ It is responsible for the "numbers" side of ingestion.
 
 Important detail:
 
-- the current saved output shape is point-list based again
-- annual and quarterly metric outputs are expected to be lists of datapoint dicts rather than compact parallel arrays
-- this rollback was done to keep the active extraction pipeline compatible with fresh ingestion runs
+- the active saved output shape for financial metrics is the compact parallel-array form
+- annual outputs are expected to look like `years`, `values`, `deltas`, `unit`, and `tag`
+- quarterly outputs are expected to look like `periods`, `values`, `deltas`, `unit`, and `tag`
+- downstream extraction code is already aligned to this shape
 
 ### `data-ingestion/document_fetcher.py`
 
@@ -295,7 +303,7 @@ Important detail:
 - it does **not** use the older Chroma demo directories
 - it assumes curator files already contain valid stored embedding vectors
 
-### `orchestration/orchestration_pipeline.py`, `orchestration/runner.py`, `orchestration/comparison_agent.py`, and `orchestration/report_models.py`
+### `orchestration/orchestration_pipeline.py`, `orchestration/runner.py`, `orchestration/comparison_agent.py`, `orchestration/report_models.py`, and `baseline_rag/pipeline.py`
 
 These files implement the current top-level comparison flow.
 
@@ -309,6 +317,7 @@ Responsibilities:
 - assemble one structured comparison bundle under `orchestration/outputs/<TICKER>/`
 - call a final comparison agent through OpenRouter
 - save the returned report content together with the bundle
+- provide a separate baseline comparison flow that skips extraction/curation reasoning depth and works from ingested financial data plus peer retrieval
 
 Important detail:
 
@@ -322,7 +331,55 @@ Important detail:
   - peer snapshot
   - risk overlap rows
   - forward watchlist
-  - short narrative sections
+  - narrative sections
+  - narrative citations
+  - per-risk citations in the target profile
+
+Additional detail:
+
+- `baseline_rag/pipeline.py` returns the same typed artifact envelope but marks it with `schema_version = "baseline_rag_v1"`
+- the baseline path is intentionally simpler and exists mainly as a comparison baseline against the multi-step agentic pipeline
+- the baseline package was split out of `orchestration/` to keep the comparison baseline conceptually separate from the main agentic orchestration layer
+- baseline flattening now explicitly adapts to the current ingestion artifact shape so it can consume active financial outputs end to end
+
+### `evaluation/models.py`, `evaluation/loaders.py`, `evaluation/deterministic.py`, `evaluation/judge.py`, and `evaluation/runner.py`
+
+These files implement the current offline evaluation layer for comparing the agentic and baseline report outputs.
+
+Responsibilities:
+
+- load saved report artifacts from disk without changing the original pipeline outputs
+- normalize agentic and baseline artifacts into one comparable evaluation input
+- preserve evidence fairness by scoring each pipeline against only the evidence available to that pipeline
+- run deterministic checks for report consistency, evidence coverage, and overreach
+- optionally call OpenRouter through the existing client for claim support and comparative usefulness judging
+- cache judge responses on disk for reproducibility and cost control
+- write batch evaluation outputs and pairwise comparison summaries under `evaluation/outputs/`
+
+Important detail:
+
+- this layer is intentionally evaluation-only and does not change `OrchestrationArtifact`, `ComparisonReportResult`, or the pipeline contracts
+- deterministic checks carry substantial weight so the evaluator is not only another LLM opinion
+- the current batch entrypoint is `python -m evaluation.runner`
+
+### `ui/app.py` and `ui/services.py`
+
+These files implement the local operator and demo surface.
+
+Responsibilities:
+
+- run the agentic pipeline from the sidebar
+- run the baseline RAG flow from the sidebar
+- display results for either pipeline using the same typed artifact reader
+- show both reports side by side when both are loaded
+- load saved agentic report artifacts into the UI
+- build missing dataset artifacts for new companies
+- rebuild and inspect the FAISS index
+
+Important detail:
+
+- baseline results are currently session-scoped in the UI rather than written to disk by default
+- the current UI renders evidence-aware report sections, compact peer tables, target risk citations, forward-watch evidence expanders, and dataset/index management panels
 
 ## Historical / Experimental Context
 
@@ -385,17 +442,14 @@ That JSON contains:
 
 For financial metrics, the expected current schema is:
 
-- `financial_data.annual[metric] -> list[dict]`
-- `financial_data.quarterly[metric] -> list[dict]`
+- `financial_data.annual[metric] -> { "tag", "unit", "years", "values", "deltas" }`
+- `financial_data.quarterly[metric] -> { "tag", "unit", "periods", "values", "deltas" }`
 
-Each datapoint typically includes:
+Interpretation:
 
-- `year`
-- `quarter` for quarterly points
-- `end_date`
-- `value`
-- `tag`
-- `accession`
+- annual `deltas` are value deltas between adjacent annual points in the stored unit
+- quarterly `deltas` are value deltas between adjacent quarterly points in the stored unit
+- these are not percentage deltas
 
 This output is the main machine-readable artifact that future stages will build on.
 
@@ -434,7 +488,7 @@ Additional recent updates:
 5. XBRL fallback tags can now be merged across years so companies like `GOOG` do not lose recent or historical coverage when the active tag changes.
 6. In the plain-text extractor, section headings are matched line-by-line so references to `Item 1A` or `Item 7A` inside paragraph text do not accidentally terminate a section.
 7. Section heading matching is explicitly case-insensitive so all-caps filings are handled more consistently.
-8. The financial output format was rolled back from compact parallel arrays to point-list records so fresh ingestion artifacts remain compatible with the active extraction pipeline.
+8. The active financial output format remains compact parallel arrays, and downstream extraction now works directly against that schema.
 
 Interpretation:
 
@@ -489,11 +543,15 @@ It works, but it is not a perfect native `10-K` parser.
 
 ### 4. Retrieval and orchestration are implemented, but still narrow
 
-The project now has a working nearest-neighbor company matcher over curator artifacts plus a new orchestration layer, and the comparison report now includes a stronger structured layout. However, it is still a v1 analyst layer rather than a mature decision-support engine.
+The project now has a working nearest-neighbor company matcher over curator artifacts, a baseline-vs-agentic comparison setup, and a stronger structured report layout. However, it is still a v1 analyst layer rather than a mature decision-support engine.
 
 ### 5. No mature financial-health synthesis layer yet
 
 The system can now assemble target and peer context and call a comparison agent, but it does not yet produce a deeply designed financial-risk or health conclusion.
+
+### 6. Evaluation is present, but still v1
+
+The repo now has a practical offline evaluation layer, but it is intentionally lean. It focuses on saved artifact comparison, not on being a full general-purpose RAG benchmark suite.
 
 ## Where the Project Appears To Be Headed
 
@@ -504,7 +562,8 @@ Based on the implemented code and earlier project direction, the likely roadmap 
 3. improve table extraction, especially for `Item 8`
 4. continue refining curator artifact quality
 5. compare new companies against a reference set using the matcher
-6. add an LLM for explanation, synthesis, and similarity-based reasoning
+6. keep improving evaluation so agentic-vs-baseline quality differences are measurable
+7. add an LLM for explanation, synthesis, and similarity-based reasoning
 
 In other words:
 
@@ -526,6 +585,9 @@ If a future LLM is asked to help on this project, it should understand:
 - table extraction is a known weak area
 - the long-term goal is company comparison and financial-health analysis, not just filing download
 - `orchestration/` is now the current top-level way to wire ingestion, retrieval, and comparison together
+- `evaluation/` is now the current way to compare saved agentic and baseline reports on grounded dimensions
+- `ui/` is now an important active layer, not just a thin wrapper
+- there are now two report-producing paths in active use: the agentic comparison pipeline and the baseline RAG pipeline
 
 The future LLM should avoid assuming:
 

@@ -143,4 +143,4 @@ class CuratorOutput(BaseModel):
     financial_deltas:  dict[str, FinancialDelta]  # keyed by metric name
     risk_signals:      list[RiskSignal]
     embedding_text:    str                         # serialized text for Agent 3
-    embedding_vector:  list[float]                 # 1536 floats from OpenAI
+    embedding_vector:  list[float]                
