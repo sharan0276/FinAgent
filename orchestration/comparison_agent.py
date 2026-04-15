@@ -24,6 +24,11 @@ POSITIVE_LABELS = {"strong_growth", "moderate_growth"}
 NEGATIVE_LABELS = {"moderate_decline", "severe_decline"}
 SEVERITY_RANK = {"high": 0, "medium": 1, "low": 2}
 
+# NOTE: Metric polarity is handled UPSTREAM in numeric_delta.py via INVERSE_METRICS.
+# For metrics like LongTermDebt where a decrease is financially positive, the
+# bucket label is already flipped at ingestion time (e.g. -6% debt → "moderate_growth").
+# No special-casing is needed here — POSITIVE_LABELS / NEGATIVE_LABELS apply uniformly.
+
 
 def _load_json(path: str) -> dict[str, Any]:
     return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -162,17 +167,21 @@ def determine_posture(target_curator: dict[str, Any], risk_overlap_rows: list[Ri
     high_risk_count = sum(1 for signal in target_curator.get("risk_signals", []) if str(signal.get("severity")) == "high")
     shared_now = next((row.risk_types for row in risk_overlap_rows if row.group == "shared_now"), [])
 
-    if high_risk_count >= 2 or (negative_count >= 2 and len(shared_now) >= 2):
+    # INDUSTRY STANDARD LOGIC: 
+    # - Elevated: Significant cluster of high risks (4+) OR multi-metric financial decline with shared industry risks.
+    # - Stable: Dominant growth (3+ metrics) with very few high risks (<= 1) and minimal negative deltas.
+    # - Mixed: Default state for typically complex mega-cap profiles.
+    if high_risk_count >= 4 or (negative_count >= 3 and len(shared_now) >= 2):
         label = "Elevated"
-    elif positive_count >= 2 and negative_count <= 1 and high_risk_count <= 1 and len(shared_now) <= 1:
-        label = "Stable"
+    elif positive_count >= 3 and negative_count <= 1 and high_risk_count <= 1:
+        label = "Stable / Strong"
     else:
         label = "Mixed"
 
     bullets = [
-        f"Current year shows {high_risk_count} high-severity risk signal(s) and {negative_count} negative financial delta(s).",
-        f"{len(shared_now)} current risk type(s) overlap with the matched peer neighborhood.",
-        f"{positive_count} metric(s) still show growth, which tempers the current pressure picture.",
+        f"Current analysis identifies {high_risk_count} high-severity risk factor(s) and {negative_count} negative financial delta(s).",
+        f"The company maintains {positive_count} metrics with positive delta labels, providing a financial buffer.",
+        f"{len(shared_now)} risk types are currently shared with matched peers, indicating broader industry trends."
     ]
     return PostureCard(label=label, rationale_bullets=bullets[:3])
 

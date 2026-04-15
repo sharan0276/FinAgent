@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 
 StepState = Literal["completed", "failed", "partial", "skipped_existing", "not_needed"]
 ReportStatus = Literal["completed", "failed", "skipped"]
-PostureLabel = Literal["Elevated", "Mixed", "Stable"]
+PostureLabel = Literal["Elevated", "Mixed", "Stable / Strong"]
 WatchConfidence = Literal["high", "medium", "low"]
 
 

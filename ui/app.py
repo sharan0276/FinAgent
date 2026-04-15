@@ -41,7 +41,8 @@ _PIPELINE_LABELS = {
 _POSTURE_COLORS = {
     "Elevated": "#d62728",
     "Mixed": "#ff7f0e",
-    "Stable": "#2ca02c",
+    "Stable / Strong": "#2ca02c",
+    "Stable": "#2ca02c"
 }
 
 
