@@ -1,7 +1,7 @@
 {
   "schema_version": "data_extraction_v1",
   "model_name": "ProsusAI/finbert",
-  "run_timestamp": "2026-04-15T05:25:09.948151+00:00",
+  "run_timestamp": "2026-04-15T17:26:03.470510+00:00",
   "ticker": "BYND",
   "company_name": "BEYOND MEAT, INC.",
   "cik": "0001655210",
@@ -9,7 +9,7 @@
   "filing_date": "2026-04-09",
   "accession": "0001655210-26-000022",
   "parser_mode": "plain_text_fallback",
-  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/BYND/complete_ingestion.json",
+  "source_artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\BYND\\complete_ingestion.json",
   "processed_sections": [
     "item_7a_market_risk"
   ],
@@ -82,7 +82,7 @@
       "current_tag": "LongTermDebt",
       "previous_tag": "LongTermDebt",
       "delta_percent": -63.578862529347866,
-      "label": "strong_growth",
+      "label": "strong_reduction",
       "reason": null
     },
     "OperatingCashFlow": {
@@ -136,8 +136,8 @@
       "next_sentence": "If our costs were to become subject to significant inflationary pressures, we may not be able to fully offset such higher costs through price increases.",
       "risk_score": 0.968913733959198,
       "finbert_probs": {
-        "positive": 0.010681750252842903,
-        "neutral": 0.02040453813970089,
+        "positive": 0.010681770741939545,
+        "neutral": 0.020404541864991188,
         "negative": 0.968913733959198
       }
     },
@@ -151,8 +151,8 @@
       "next_sentence": "Inflation Risk Although we have seen inflation in certain raw materials, and in the cost of logistics and labor, we do not believe that inflation has had a material effect on the costs of our inputs to date.",
       "risk_score": 0.9538135528564453,
       "finbert_probs": {
-        "positive": 0.011343236081302166,
-        "neutral": 0.034843169152736664,
+        "positive": 0.011343241669237614,
+        "neutral": 0.03484317660331726,
         "negative": 0.9538135528564453
       }
     },
@@ -167,7 +167,7 @@
       "risk_score": 0.926319420337677,
       "finbert_probs": {
         "positive": 0.012494160793721676,
-        "neutral": 0.06118642911314964,
+        "neutral": 0.06118648499250412,
         "negative": 0.926319420337677
       }
     },
@@ -181,8 +181,8 @@
       "next_sentence": "Our foreign exchange risk is primarily related to our intercompany balances denominated in various foreign currencies.",
       "risk_score": 0.9236026406288147,
       "finbert_probs": {
-        "positive": 0.015276053920388222,
-        "neutral": 0.06112120673060417,
+        "positive": 0.015276061370968819,
+        "neutral": 0.061121318489313126,
         "negative": 0.9236026406288147
       }
     },
@@ -194,11 +194,11 @@
       "sentence_text": "The markets for some of the ingredients we use, such as avocado oil, may be particularly volatile due to factors such as limited supply sources, crop yield, seasonal shifts, climate conditions, industry demand, including as a result of food safety concerns, product recalls and government regulations.",
       "previous_sentence": "The prices of pea protein and other ingredients we use, such as avocado oil, are subject to many factors beyond our control, such as the number and size of farms that grow yellow peas, the vagaries of the farming businesses, including poor harvests due to adverse weather conditions, natural disasters and pestilence, and changes in national and world economic conditions.",
       "next_sentence": "For additional information, see Part I, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Because we rely on a limited number of third party suppliers, we may not be able to obtain raw materials on a timely basis or in sufficient quantities at competitive prices to produce our products or meet the demand for our products.",
-      "risk_score": 0.8616216778755188,
+      "risk_score": 0.8616217374801636,
       "finbert_probs": {
-        "positive": 0.015296075493097305,
-        "neutral": 0.12308229506015778,
-        "negative": 0.8616216778755188
+        "positive": 0.015296069905161858,
+        "neutral": 0.123082235455513,
+        "negative": 0.8616217374801636
       }
     },
     {
@@ -209,11 +209,11 @@
       "sentence_text": "Our inability or failure to do so could harm our business, results of operations and financial condition.",
       "previous_sentence": "If our costs were to become subject to significant inflationary pressures, we may not be able to fully offset such higher costs through price increases.",
       "next_sentence": "For additional information, see Part 1, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Inflationary price pressures of raw materials, labor, transportation, fuel or other inputs used by us and our suppliers, including the effects of high interest rates, has negatively impacted, and could continue to negatively impact our business and results of operations.",
-      "risk_score": 0.8581664562225342,
+      "risk_score": 0.8581662774085999,
       "finbert_probs": {
-        "positive": 0.012646612711250782,
-        "neutral": 0.12918691337108612,
-        "negative": 0.8581664562225342
+        "positive": 0.01264661643654108,
+        "neutral": 0.12918715178966522,
+        "negative": 0.8581662774085999
       }
     },
     {
@@ -224,11 +224,11 @@
       "sentence_text": "The imposition of new or increased tariffs could materially and adversely affect the accessibility or affordability of our ingredients and, in turn, our business, financial condition and results of operations.",
       "previous_sentence": "For example, the United States has recently signaled its intention to change U.S. trade policy, including potentially renegotiating or terminating existing trade agreements and leveraging tariffs.",
       "next_sentence": "For additional information, see Part 1, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Disruptions in the worldwide economy, including an economic recession, downturn, changes to trade policies, periods of rising or high inflation or economic uncertainty and volatility, have adversely affected and may continue to adversely affect our business, results of operations and financial condition.",
-      "risk_score": 0.8341266512870789,
+      "risk_score": 0.8341270685195923,
       "finbert_probs": {
-        "positive": 0.017278116196393967,
-        "neutral": 0.14859521389007568,
-        "negative": 0.8341266512870789
+        "positive": 0.017278125509619713,
+        "neutral": 0.14859478175640106,
+        "negative": 0.8341270685195923
       }
     },
     {
@@ -239,11 +239,11 @@
       "sentence_text": "For additional information, see Part 1, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Inflationary price pressures of raw materials, labor, transportation, fuel or other inputs used by us and our suppliers, including the effects of high interest rates, has negatively impacted, and could continue to negatively impact our business and results of operations.",
       "previous_sentence": "Our inability or failure to do so could harm our business, results of operations and financial condition.",
       "next_sentence": "110",
-      "risk_score": 0.7684078812599182,
+      "risk_score": 0.7684081196784973,
       "finbert_probs": {
-        "positive": 0.017551684752106667,
-        "neutral": 0.21404050290584564,
-        "negative": 0.7684078812599182
+        "positive": 0.01755167916417122,
+        "neutral": 0.21404018998146057,
+        "negative": 0.7684081196784973
       }
     },
     {
@@ -254,11 +254,11 @@
       "sentence_text": "Foreign currency transaction gains and losses on long-term intra-entity transactions are recorded as a component of Other comprehensive loss.",
       "previous_sentence": "Resulting foreign currency translation adjustments are included in Accumulated other comprehensive income and foreign currency transaction gains and losses are included in Other, net.",
       "next_sentence": "Foreign currency transactions denominated in a currency other than the reporting entity's functional currency, including long-term intra-entity balances, may give rise to foreign currency transaction gains and losses that impact our results of operations.",
-      "risk_score": 0.7154200673103333,
+      "risk_score": 0.715420126914978,
       "finbert_probs": {
-        "positive": 0.02369474433362484,
-        "neutral": 0.2608851492404938,
-        "negative": 0.7154200673103333
+        "positive": 0.02369477041065693,
+        "neutral": 0.2608851194381714,
+        "negative": 0.715420126914978
       }
     },
     {
@@ -269,11 +269,11 @@
       "sentence_text": "For additional information, see Part 1, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Disruptions in the worldwide economy, including an economic recession, downturn, changes to trade policies, periods of rising or high inflation or economic uncertainty and volatility, have adversely affected and may continue to adversely affect our business, results of operations and financial condition.",
       "previous_sentence": "The imposition of new or increased tariffs could materially and adversely affect the accessibility or affordability of our ingredients and, in turn, our business, financial condition and results of operations.",
       "next_sentence": "In the year ended December 31, 2025, a hypothetical 10% increase or 10% decrease in the weighted-average cost of pea protein, our primary ingredient, would have resulted in an increase of approximately $2.4 million, or a decrease of approximately $2.4 million, respectively, to cost of goods sold.",
-      "risk_score": 0.6684530377388,
+      "risk_score": 0.6684536337852478,
       "finbert_probs": {
-        "positive": 0.019011057913303375,
-        "neutral": 0.3125358521938324,
-        "negative": 0.6684530377388
+        "positive": 0.019011087715625763,
+        "neutral": 0.31253528594970703,
+        "negative": 0.6684536337852478
       }
     },
     {
@@ -284,11 +284,11 @@
       "sentence_text": "Net realized and unrealized foreign currency transaction gains and 109 (losses) included in Other, net were $11.8 million and $(6.3) million in the years ended December 31, 2025 and 2024, respectively.",
       "previous_sentence": "Foreign currency translation (losses) gains, net of tax, reported as cumulative translation adjustment through Other comprehensive income (loss), net of tax, were $(4.2) million and $1.6 million in the years ended December 31, 2025 and 2024, respectively.",
       "next_sentence": "Based on the intercompany balances as of December 31, 2025, an assumed 5% or 10% adverse change to foreign currency exchange rates would result in a loss of approximately $5.7 million or $11.4 million, respectively, recorded in Other, net.",
-      "risk_score": 0.5280748009681702,
+      "risk_score": 0.528073787689209,
       "finbert_probs": {
-        "positive": 0.04493466764688492,
-        "neutral": 0.42699044942855835,
-        "negative": 0.5280748009681702
+        "positive": 0.04493478313088417,
+        "neutral": 0.4269915223121643,
+        "negative": 0.528073787689209
       }
     },
     {
@@ -299,11 +299,11 @@
       "sentence_text": "Foreign currency translation (losses) gains, net of tax, reported as cumulative translation adjustment through Other comprehensive income (loss), net of tax, were $(4.2) million and $1.6 million in the years ended December 31, 2025 and 2024, respectively.",
       "previous_sentence": "We have exposure to the European Euro and the Chinese Yuan.",
       "next_sentence": "Net realized and unrealized foreign currency transaction gains and 109 (losses) included in Other, net were $11.8 million and $(6.3) million in the years ended December 31, 2025 and 2024, respectively.",
-      "risk_score": 0.4478932023048401,
+      "risk_score": 0.44789382815361023,
       "finbert_probs": {
-        "positive": 0.36678916215896606,
-        "neutral": 0.18531759083271027,
-        "negative": 0.4478932023048401
+        "positive": 0.3667885661125183,
+        "neutral": 0.18531756103038788,
+        "negative": 0.44789382815361023
       }
     },
     {
@@ -314,11 +314,11 @@
       "sentence_text": "The prices of pea protein and other ingredients we use, such as avocado oil, are subject to many factors beyond our control, such as the number and size of farms that grow yellow peas, the vagaries of the farming businesses, including poor harvests due to adverse weather conditions, natural disasters and pestilence, and changes in national and world economic conditions.",
       "previous_sentence": "Currently, the main ingredient we use in many of our products is pea protein, which is sourced from peas grown in Canada and France, with the majority of our pea protein volume sourced from Canada.",
       "next_sentence": "The markets for some of the ingredients we use, such as avocado oil, may be particularly volatile due to factors such as limited supply sources, crop yield, seasonal shifts, climate conditions, industry demand, including as a result of food safety concerns, product recalls and government regulations.",
-      "risk_score": 0.4204654097557068,
+      "risk_score": 0.4204656481742859,
       "finbert_probs": {
-        "positive": 0.024773957207798958,
-        "neutral": 0.5547606348991394,
-        "negative": 0.4204654097557068
+        "positive": 0.02477399818599224,
+        "neutral": 0.5547603368759155,
+        "negative": 0.4204656481742859
       }
     },
     {
@@ -329,11 +329,11 @@
       "sentence_text": "Inflation Risk Although we have seen inflation in certain raw materials, and in the cost of logistics and labor, we do not believe that inflation has had a material effect on the costs of our inputs to date.",
       "previous_sentence": "Based on the intercompany balances as of December 31, 2025, an assumed 5% or 10% adverse change to foreign currency exchange rates would result in a loss of approximately $5.7 million or $11.4 million, respectively, recorded in Other, net.",
       "next_sentence": "Although difficult to quantify, we believe inflation is likely having an adverse effect on our end customers' ability to purchase our products, resulting in decreased sales.",
-      "risk_score": 0.33300501108169556,
+      "risk_score": 0.3330056667327881,
       "finbert_probs": {
-        "positive": 0.10068435221910477,
-        "neutral": 0.5663106441497803,
-        "negative": 0.33300501108169556
+        "positive": 0.10068438202142715,
+        "neutral": 0.5663098692893982,
+        "negative": 0.3330056667327881
       }
     },
     {
@@ -344,11 +344,11 @@
       "sentence_text": "In addition, we purchase some ingredients and other materials offshore, and the price and availability of such ingredients and materials may be affected by political events or other conditions in these countries or tariffs or trade wars.",
       "previous_sentence": "For additional information, see Part I, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Because we rely on a limited number of third party suppliers, we may not be able to obtain raw materials on a timely basis or in sufficient quantities at competitive prices to produce our products or meet the demand for our products.",
       "next_sentence": "For example, the United States has recently signaled its intention to change U.S. trade policy, including potentially renegotiating or terminating existing trade agreements and leveraging tariffs.",
-      "risk_score": 0.23754365742206573,
+      "risk_score": 0.2375430017709732,
       "finbert_probs": {
-        "positive": 0.025587068870663643,
-        "neutral": 0.7368692755699158,
-        "negative": 0.23754365742206573
+        "positive": 0.025587044656276703,
+        "neutral": 0.7368698716163635,
+        "negative": 0.2375430017709732
       }
     },
     {
@@ -359,11 +359,11 @@
       "sentence_text": "For example, the United States has recently signaled its intention to change U.S. trade policy, including potentially renegotiating or terminating existing trade agreements and leveraging tariffs.",
       "previous_sentence": "In addition, we purchase some ingredients and other materials offshore, and the price and availability of such ingredients and materials may be affected by political events or other conditions in these countries or tariffs or trade wars.",
       "next_sentence": "The imposition of new or increased tariffs could materially and adversely affect the accessibility or affordability of our ingredients and, in turn, our business, financial condition and results of operations.",
-      "risk_score": 0.23727302253246307,
+      "risk_score": 0.23727267980575562,
       "finbert_probs": {
-        "positive": 0.20031970739364624,
-        "neutral": 0.5624072551727295,
-        "negative": 0.23727302253246307
+        "positive": 0.20032010972499847,
+        "neutral": 0.5624071955680847,
+        "negative": 0.23727267980575562
       }
     },
     {
@@ -374,11 +374,11 @@
       "sentence_text": "Foreign Currency Risk We are exposed to foreign currency risks that arise from normal business operations.",
       "previous_sentence": "We are working to diversify our sources of supply and intend to enter into long-term contracts to better ensure stability of prices of our raw materials.",
       "next_sentence": "These risks include the translation of local currency balances of foreign subsidiaries, transaction gains and losses associated with intercompany loans with foreign subsidiaries and transactions denominated in currencies other than a location's functional currency.",
-      "risk_score": 0.23213522136211395,
+      "risk_score": 0.23213477432727814,
       "finbert_probs": {
-        "positive": 0.04545365646481514,
-        "neutral": 0.7224110960960388,
-        "negative": 0.23213522136211395
+        "positive": 0.045453641563653946,
+        "neutral": 0.7224115133285522,
+        "negative": 0.23213477432727814
       }
     },
     {
@@ -389,11 +389,11 @@
       "sentence_text": "The Loan and Security Agreement also contains covenants that restrict the ability of the Loan Parties and certain of their subsidiaries to make dividends or distributions, incur additional debt (including subordinated debt), engage in certain asset sales, mergers, acquisitions or similar transactions, create liens on assets, engage in certain transactions with affiliates, change their businesses or make investments.",
       "previous_sentence": "Among other things, the Loan and Security Agreement includes covenants that (i) require us to maintain liquidity of at least $15.0 million, (ii) do not permit our cash interest payments due under all of the Loan Parties' subordinated debt and unsecured debt for borrowed money for any fiscal year of the Company, in the aggregate, to exceed $20.0 million, and (iii) cap the amount of cash that can be used to repay the 2027 Notes at maturity at $60.0 million, subject to increase to the extent of any equity raises by the Company.",
       "next_sentence": "The Loan and Security Agreement also contains change of control provisions that could have the effect of delaying or preventing an otherwise beneficial takeover of the Company.",
-      "risk_score": 0.1803232580423355,
+      "risk_score": 0.1803227812051773,
       "finbert_probs": {
-        "positive": 0.018272776156663895,
-        "neutral": 0.8014039993286133,
-        "negative": 0.1803232580423355
+        "positive": 0.018272753804922104,
+        "neutral": 0.8014045357704163,
+        "negative": 0.1803227812051773
       }
     },
     {
@@ -404,11 +404,11 @@
       "sentence_text": "The Loan and Security Agreement also contains change of control provisions that could have the effect of delaying or preventing an otherwise beneficial takeover of the Company.",
       "previous_sentence": "The Loan and Security Agreement also contains covenants that restrict the ability of the Loan Parties and certain of their subsidiaries to make dividends or distributions, incur additional debt (including subordinated debt), engage in certain asset sales, mergers, acquisitions or similar transactions, create liens on assets, engage in certain transactions with affiliates, change their businesses or make investments.",
       "next_sentence": "On October 15, 2025, in connection with the Exchange Offer, we entered into (1) the First Amendment to LSA with Unprocessed Foods, which, among other things, added cross defaults to the Loan and Security Agreement related to events of default under other debt secured by a second priority security interest and certain secured debt for borrowed money and (2) the Intercreditor Agreement with Unprocessed Foods and the Collateral Agent under the 2030 Notes which, among other things, provides for the relative priorities of the security interests in the assets securing the 2030 Notes, the loans pursuant to the Loan and Security Agreement and certain of our additional debt, and certain other matters relating to the administration of security interests.",
-      "risk_score": 0.17984381318092346,
+      "risk_score": 0.17984415590763092,
       "finbert_probs": {
-        "positive": 0.0347743034362793,
-        "neutral": 0.7853819727897644,
-        "negative": 0.17984381318092346
+        "positive": 0.03477434068918228,
+        "neutral": 0.7853814959526062,
+        "negative": 0.17984415590763092
       }
     },
     {
@@ -419,11 +419,11 @@
       "sentence_text": "As of December 31, 2025, we had $104.6 million in Delayed Draw Term Loans outstanding, including accrued PIK interest, which is included in Delayed draw term loans, net in our consolidated balance sheet, and have no amounts available to borrow.",
       "previous_sentence": "On June 26, 2025 and September 18, 2025, at our request, Unprocessed Foods, as the sole Lender at such times, made Delayed Draw Term Loans to us in the principal amounts of $40.0 million and $60.0 million, respectively.",
       "next_sentence": "Borrowings under the Loan and Security Agreement accrue interest at a rate per annum of 12.0%; provided that if the maturity date of any Delayed Draw Term Loan has been extended after the Initial Maturity Date, then such rate per annum will be 17.5% after the Initial Maturity Date.",
-      "risk_score": 0.13438700139522552,
+      "risk_score": 0.1343870311975479,
       "finbert_probs": {
-        "positive": 0.01714286021888256,
+        "positive": 0.01714283786714077,
         "neutral": 0.848470151424408,
-        "negative": 0.13438700139522552
+        "negative": 0.1343870311975479
       }
     },
     {
@@ -434,11 +434,11 @@
       "sentence_text": "Resulting foreign currency translation adjustments are included in Accumulated other comprehensive income and foreign currency transaction gains and losses are included in Other, net.",
       "previous_sentence": "For these entities, we translate net assets into U.S. dollars at period end exchange rates, while revenue and expense accounts are translated at average exchange rates prevailing during the periods being reported.",
       "next_sentence": "Foreign currency transaction gains and losses on long-term intra-entity transactions are recorded as a component of Other comprehensive loss.",
-      "risk_score": 0.11032392829656601,
+      "risk_score": 0.1103239506483078,
       "finbert_probs": {
-        "positive": 0.029569970443844795,
-        "neutral": 0.8601061105728149,
-        "negative": 0.11032392829656601
+        "positive": 0.029569992795586586,
+        "neutral": 0.8601059913635254,
+        "negative": 0.1103239506483078
       }
     },
     {
@@ -449,11 +449,11 @@
       "sentence_text": "For additional information, see Part I, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Because we rely on a limited number of third party suppliers, we may not be able to obtain raw materials on a timely basis or in sufficient quantities at competitive prices to produce our products or meet the demand for our products.",
       "previous_sentence": "The markets for some of the ingredients we use, such as avocado oil, may be particularly volatile due to factors such as limited supply sources, crop yield, seasonal shifts, climate conditions, industry demand, including as a result of food safety concerns, product recalls and government regulations.",
       "next_sentence": "In addition, we purchase some ingredients and other materials offshore, and the price and availability of such ingredients and materials may be affected by political events or other conditions in these countries or tariffs or trade wars.",
-      "risk_score": 0.07158618420362473,
+      "risk_score": 0.07158605009317398,
       "finbert_probs": {
-        "positive": 0.049122437834739685,
-        "neutral": 0.8792914152145386,
-        "negative": 0.07158618420362473
+        "positive": 0.04912237823009491,
+        "neutral": 0.8792915940284729,
+        "negative": 0.07158605009317398
       }
     },
     {
@@ -464,11 +464,11 @@
       "sentence_text": "QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK We are exposed to certain market risks in the ordinary course of our business, including fluctuations in interest rates, raw material prices, foreign currency exchange fluctuations and inflation as follows: Interest Rate Risk Our cash consists of amounts held by third party financial institutions.",
       "previous_sentence": "ITEM 7A.",
       "next_sentence": "Our investment policy has as its primary objective investment activities which preserve principal without significantly increasing risk.",
-      "risk_score": 0.055132485926151276,
+      "risk_score": 0.05513257160782814,
       "finbert_probs": {
-        "positive": 0.02114250138401985,
-        "neutral": 0.9237250089645386,
-        "negative": 0.055132485926151276
+        "positive": 0.021142518147826195,
+        "neutral": 0.923724889755249,
+        "negative": 0.05513257160782814
       }
     },
     {
@@ -479,11 +479,11 @@
       "sentence_text": "108 Ingredient Risk We are exposed to risk related to the price and availability of our ingredients because our profitability is dependent on, among other things, our ability to anticipate and react to raw material and food costs.",
       "previous_sentence": "See Note 9 , Debt, to the Notes to Consolidated Financial Statements included elsewhere in this report.",
       "next_sentence": "Currently, the main ingredient we use in many of our products is pea protein, which is sourced from peas grown in Canada and France, with the majority of our pea protein volume sourced from Canada.",
-      "risk_score": 0.048796478658914566,
+      "risk_score": 0.048796363174915314,
       "finbert_probs": {
-        "positive": 0.07298960536718369,
-        "neutral": 0.8782139420509338,
-        "negative": 0.048796478658914566
+        "positive": 0.07298963516950607,
+        "neutral": 0.8782140016555786,
+        "negative": 0.048796363174915314
       }
     },
     {
@@ -494,11 +494,11 @@
       "sentence_text": "See Note 9 , Debt, to the Notes to Consolidated Financial Statements included elsewhere in this report.",
       "previous_sentence": "The terms of the Intercreditor Agreement expressly subordinate, in right of payment and in liens, the obligations under the 2030 Notes to the obligations under the Loan and Security Agreement.",
       "next_sentence": "108 Ingredient Risk We are exposed to risk related to the price and availability of our ingredients because our profitability is dependent on, among other things, our ability to anticipate and react to raw material and food costs.",
-      "risk_score": 0.047906890511512756,
+      "risk_score": 0.04790687933564186,
       "finbert_probs": {
-        "positive": 0.01942925900220871,
+        "positive": 0.01942923106253147,
         "neutral": 0.9326638579368591,
-        "negative": 0.047906890511512756
+        "negative": 0.04790687933564186
       }
     },
     {
@@ -509,11 +509,11 @@
       "sentence_text": "On June 26, 2025 and September 18, 2025, at our request, Unprocessed Foods, as the sole Lender at such times, made Delayed Draw Term Loans to us in the principal amounts of $40.0 million and $60.0 million, respectively.",
       "previous_sentence": "The Delayed Draw Term Loans borrowed under the Loan and Security Agreement mature on the Initial Maturity Date, which date may be extended by us, with the relevant Lenders' consent, to no later than May 7, 2035.",
       "next_sentence": "As of December 31, 2025, we had $104.6 million in Delayed Draw Term Loans outstanding, including accrued PIK interest, which is included in Delayed draw term loans, net in our consolidated balance sheet, and have no amounts available to borrow.",
-      "risk_score": 0.03618183732032776,
+      "risk_score": 0.03618178144097328,
       "finbert_probs": {
-        "positive": 0.04224186763167381,
-        "neutral": 0.9215763211250305,
-        "negative": 0.03618183732032776
+        "positive": 0.04224183410406113,
+        "neutral": 0.9215764403343201,
+        "negative": 0.03618178144097328
       }
     },
     {
@@ -524,11 +524,11 @@
       "sentence_text": "In the year ended December 31, 2025, a hypothetical 10% increase or 10% decrease in the weighted-average cost of pea protein, our primary ingredient, would have resulted in an increase of approximately $2.4 million, or a decrease of approximately $2.4 million, respectively, to cost of goods sold.",
       "previous_sentence": "For additional information, see Part 1, Item 1A , Risk Factors\u2014Risks Related to Our Business\u2014Disruptions in the worldwide economy, including an economic recession, downturn, changes to trade policies, periods of rising or high inflation or economic uncertainty and volatility, have adversely affected and may continue to adversely affect our business, results of operations and financial condition.",
       "next_sentence": "We are working to diversify our sources of supply and intend to enter into long-term contracts to better ensure stability of prices of our raw materials.",
-      "risk_score": 0.03322971984744072,
+      "risk_score": 0.033229704946279526,
       "finbert_probs": {
         "positive": 0.9426281452178955,
-        "neutral": 0.02414216659963131,
-        "negative": 0.03322971984744072
+        "neutral": 0.024142106994986534,
+        "negative": 0.033229704946279526
       }
     },
     {
@@ -539,11 +539,11 @@
       "sentence_text": "Among other things, the Loan and Security Agreement includes covenants that (i) require us to maintain liquidity of at least $15.0 million, (ii) do not permit our cash interest payments due under all of the Loan Parties' subordinated debt and unsecured debt for borrowed money for any fiscal year of the Company, in the aggregate, to exceed $20.0 million, and (iii) cap the amount of cash that can be used to repay the 2027 Notes at maturity at $60.0 million, subject to increase to the extent of any equity raises by the Company.",
       "previous_sentence": "Accrued but unpaid interest on each Delayed Draw Term Loan will be compounded on a quarterly basis and payable \"in kind\" by adding the amount of such accrued interest to the principal amount of the outstanding Delayed Draw Term Loans under the Loan and Security Agreement.",
       "next_sentence": "The Loan and Security Agreement also contains covenants that restrict the ability of the Loan Parties and certain of their subsidiaries to make dividends or distributions, incur additional debt (including subordinated debt), engage in certain asset sales, mergers, acquisitions or similar transactions, create liens on assets, engage in certain transactions with affiliates, change their businesses or make investments.",
-      "risk_score": 0.03293589502573013,
+      "risk_score": 0.032935887575149536,
       "finbert_probs": {
-        "positive": 0.04206036776304245,
+        "positive": 0.04206039011478424,
         "neutral": 0.925003707408905,
-        "negative": 0.03293589502573013
+        "negative": 0.032935887575149536
       }
     },
     {
@@ -554,11 +554,11 @@
       "sentence_text": "If our costs were to become subject to significant inflationary pressures, we may not be able to fully offset such higher costs through price increases.",
       "previous_sentence": "Although difficult to quantify, we believe inflation is likely having an adverse effect on our end customers' ability to purchase our products, resulting in decreased sales.",
       "next_sentence": "Our inability or failure to do so could harm our business, results of operations and financial condition.",
-      "risk_score": 0.0326274149119854,
+      "risk_score": 0.03262743726372719,
       "finbert_probs": {
-        "positive": 0.9056829214096069,
-        "neutral": 0.06168975681066513,
-        "negative": 0.0326274149119854
+        "positive": 0.9056826829910278,
+        "neutral": 0.061689842492341995,
+        "negative": 0.03262743726372719
       }
     },
     {
@@ -569,11 +569,11 @@
       "sentence_text": "Borrowings under the Loan and Security Agreement accrue interest at a rate per annum of 12.0%; provided that if the maturity date of any Delayed Draw Term Loan has been extended after the Initial Maturity Date, then such rate per annum will be 17.5% after the Initial Maturity Date.",
       "previous_sentence": "As of December 31, 2025, we had $104.6 million in Delayed Draw Term Loans outstanding, including accrued PIK interest, which is included in Delayed draw term loans, net in our consolidated balance sheet, and have no amounts available to borrow.",
       "next_sentence": "Proceeds of the Delayed Draw Term Loans may not be used to repay, amortize or restructure any debt for borrowed money other than debt owed to the Lenders and debt incurred by a Loan Party to finance the purchase, construction or improvement of any asset or services.",
-      "risk_score": 0.03192422166466713,
+      "risk_score": 0.031924184411764145,
       "finbert_probs": {
-        "positive": 0.03006775677204132,
+        "positive": 0.030067769810557365,
         "neutral": 0.9380080699920654,
-        "negative": 0.03192422166466713
+        "negative": 0.031924184411764145
       }
     },
     {
@@ -586,7 +586,7 @@
       "next_sentence": "Accrued but unpaid interest on each Delayed Draw Term Loan will be compounded on a quarterly basis and payable \"in kind\" by adding the amount of such accrued interest to the principal amount of the outstanding Delayed Draw Term Loans under the Loan and Security Agreement.",
       "risk_score": 0.02673504315316677,
       "finbert_probs": {
-        "positive": 0.02480095438659191,
+        "positive": 0.024800937622785568,
         "neutral": 0.9484639763832092,
         "negative": 0.02673504315316677
       }
@@ -599,11 +599,11 @@
       "sentence_text": "The Delayed Draw Term Loans borrowed under the Loan and Security Agreement mature on the Initial Maturity Date, which date may be extended by us, with the relevant Lenders' consent, to no later than May 7, 2035.",
       "previous_sentence": "On May 7, 2025, we, as borrower, entered into the Loan and Security Agreement with the Lenders and certain of our subsidiaries party thereto from time to time, as guarantors, pursuant to which the Lenders agreed to provide for the Delayed Draw Term Loan Facility and the loans thereunder in an aggregate principal amount of $100.0 million.",
       "next_sentence": "On June 26, 2025 and September 18, 2025, at our request, Unprocessed Foods, as the sole Lender at such times, made Delayed Draw Term Loans to us in the principal amounts of $40.0 million and $60.0 million, respectively.",
-      "risk_score": 0.024690639227628708,
+      "risk_score": 0.0246906615793705,
       "finbert_probs": {
-        "positive": 0.031218621879816055,
-        "neutral": 0.9440907835960388,
-        "negative": 0.024690639227628708
+        "positive": 0.031218726187944412,
+        "neutral": 0.9440906643867493,
+        "negative": 0.0246906615793705
       }
     },
     {
@@ -616,7 +616,7 @@
       "next_sentence": "The terms of the Intercreditor Agreement expressly subordinate, in right of payment and in liens, the obligations under the 2030 Notes to the obligations under the Loan and Security Agreement.",
       "risk_score": 0.024308117106556892,
       "finbert_probs": {
-        "positive": 0.036186423152685165,
+        "positive": 0.03618635982275009,
         "neutral": 0.9395055174827576,
         "negative": 0.024308117106556892
       }
@@ -629,11 +629,11 @@
       "sentence_text": "The terms of the Intercreditor Agreement expressly subordinate, in right of payment and in liens, the obligations under the 2030 Notes to the obligations under the Loan and Security Agreement.",
       "previous_sentence": "On October 15, 2025, in connection with the Exchange Offer, we entered into (1) the First Amendment to LSA with Unprocessed Foods, which, among other things, added cross defaults to the Loan and Security Agreement related to events of default under other debt secured by a second priority security interest and certain secured debt for borrowed money and (2) the Intercreditor Agreement with Unprocessed Foods and the Collateral Agent under the 2030 Notes which, among other things, provides for the relative priorities of the security interests in the assets securing the 2030 Notes, the loans pursuant to the Loan and Security Agreement and certain of our additional debt, and certain other matters relating to the administration of security interests.",
       "next_sentence": "See Note 9 , Debt, to the Notes to Consolidated Financial Statements included elsewhere in this report.",
-      "risk_score": 0.024240776896476746,
+      "risk_score": 0.02424069680273533,
       "finbert_probs": {
-        "positive": 0.02556845359504223,
-        "neutral": 0.9501907825469971,
-        "negative": 0.024240776896476746
+        "positive": 0.025568386539816856,
+        "neutral": 0.9501908421516418,
+        "negative": 0.02424069680273533
       }
     },
     {
@@ -644,11 +644,11 @@
       "sentence_text": "Our foreign entities use their local currency as the functional currency.",
       "previous_sentence": "These risks include the translation of local currency balances of foreign subsidiaries, transaction gains and losses associated with intercompany loans with foreign subsidiaries and transactions denominated in currencies other than a location's functional currency.",
       "next_sentence": "For these entities, we translate net assets into U.S. dollars at period end exchange rates, while revenue and expense accounts are translated at average exchange rates prevailing during the periods being reported.",
-      "risk_score": 0.023460254073143005,
+      "risk_score": 0.023460259661078453,
       "finbert_probs": {
-        "positive": 0.02441306971013546,
+        "positive": 0.024413079023361206,
         "neutral": 0.9521266222000122,
-        "negative": 0.023460254073143005
+        "negative": 0.023460259661078453
       }
     },
     {
@@ -659,11 +659,11 @@
       "sentence_text": "Accrued but unpaid interest on each Delayed Draw Term Loan will be compounded on a quarterly basis and payable \"in kind\" by adding the amount of such accrued interest to the principal amount of the outstanding Delayed Draw Term Loans under the Loan and Security Agreement.",
       "previous_sentence": "Proceeds of the Delayed Draw Term Loans may not be used to repay, amortize or restructure any debt for borrowed money other than debt owed to the Lenders and debt incurred by a Loan Party to finance the purchase, construction or improvement of any asset or services.",
       "next_sentence": "Among other things, the Loan and Security Agreement includes covenants that (i) require us to maintain liquidity of at least $15.0 million, (ii) do not permit our cash interest payments due under all of the Loan Parties' subordinated debt and unsecured debt for borrowed money for any fiscal year of the Company, in the aggregate, to exceed $20.0 million, and (iii) cap the amount of cash that can be used to repay the 2027 Notes at maturity at $60.0 million, subject to increase to the extent of any equity raises by the Company.",
-      "risk_score": 0.021186692640185356,
+      "risk_score": 0.021186653524637222,
       "finbert_probs": {
-        "positive": 0.03260780870914459,
+        "positive": 0.0326077863574028,
         "neutral": 0.9462055563926697,
-        "negative": 0.021186692640185356
+        "negative": 0.021186653524637222
       }
     },
     {
@@ -674,11 +674,11 @@
       "sentence_text": "For these entities, we translate net assets into U.S. dollars at period end exchange rates, while revenue and expense accounts are translated at average exchange rates prevailing during the periods being reported.",
       "previous_sentence": "Our foreign entities use their local currency as the functional currency.",
       "next_sentence": "Resulting foreign currency translation adjustments are included in Accumulated other comprehensive income and foreign currency transaction gains and losses are included in Other, net.",
-      "risk_score": 0.01954067312180996,
+      "risk_score": 0.019540632143616676,
       "finbert_probs": {
-        "positive": 0.03130454942584038,
-        "neutral": 0.949154794216156,
-        "negative": 0.01954067312180996
+        "positive": 0.03130451962351799,
+        "neutral": 0.9491548538208008,
+        "negative": 0.019540632143616676
       }
     },
     {
@@ -689,11 +689,11 @@
       "sentence_text": "Our foreign exchange risk is primarily related to our intercompany balances denominated in various foreign currencies.",
       "previous_sentence": "Foreign currency transactions denominated in a currency other than the reporting entity's functional currency, including long-term intra-entity balances, may give rise to foreign currency transaction gains and losses that impact our results of operations.",
       "next_sentence": "We have exposure to the European Euro and the Chinese Yuan.",
-      "risk_score": 0.0175018347799778,
+      "risk_score": 0.017501886934041977,
       "finbert_probs": {
-        "positive": 0.04532194882631302,
+        "positive": 0.04532191529870033,
         "neutral": 0.9371762275695801,
-        "negative": 0.0175018347799778
+        "negative": 0.017501886934041977
       }
     },
     {
@@ -704,11 +704,11 @@
       "sentence_text": "On May 7, 2025, we, as borrower, entered into the Loan and Security Agreement with the Lenders and certain of our subsidiaries party thereto from time to time, as guarantors, pursuant to which the Lenders agreed to provide for the Delayed Draw Term Loan Facility and the loans thereunder in an aggregate principal amount of $100.0 million.",
       "previous_sentence": "Our investment policy has as its primary objective investment activities which preserve principal without significantly increasing risk.",
       "next_sentence": "The Delayed Draw Term Loans borrowed under the Loan and Security Agreement mature on the Initial Maturity Date, which date may be extended by us, with the relevant Lenders' consent, to no later than May 7, 2035.",
-      "risk_score": 0.01587289199233055,
+      "risk_score": 0.015872880816459656,
       "finbert_probs": {
-        "positive": 0.35046762228012085,
-        "neutral": 0.6336594820022583,
-        "negative": 0.01587289199233055
+        "positive": 0.35046735405921936,
+        "neutral": 0.6336597800254822,
+        "negative": 0.015872880816459656
       }
     },
     {
@@ -719,11 +719,11 @@
       "sentence_text": "We have exposure to the European Euro and the Chinese Yuan.",
       "previous_sentence": "Our foreign exchange risk is primarily related to our intercompany balances denominated in various foreign currencies.",
       "next_sentence": "Foreign currency translation (losses) gains, net of tax, reported as cumulative translation adjustment through Other comprehensive income (loss), net of tax, were $(4.2) million and $1.6 million in the years ended December 31, 2025 and 2024, respectively.",
-      "risk_score": 0.014102637767791748,
+      "risk_score": 0.014102631248533726,
       "finbert_probs": {
-        "positive": 0.05174487084150314,
+        "positive": 0.05174489691853523,
         "neutral": 0.9341524839401245,
-        "negative": 0.014102637767791748
+        "negative": 0.014102631248533726
       }
     },
     {
@@ -734,11 +734,11 @@
       "sentence_text": "Currently, the main ingredient we use in many of our products is pea protein, which is sourced from peas grown in Canada and France, with the majority of our pea protein volume sourced from Canada.",
       "previous_sentence": "108 Ingredient Risk We are exposed to risk related to the price and availability of our ingredients because our profitability is dependent on, among other things, our ability to anticipate and react to raw material and food costs.",
       "next_sentence": "The prices of pea protein and other ingredients we use, such as avocado oil, are subject to many factors beyond our control, such as the number and size of farms that grow yellow peas, the vagaries of the farming businesses, including poor harvests due to adverse weather conditions, natural disasters and pestilence, and changes in national and world economic conditions.",
-      "risk_score": 0.0116741843521595,
+      "risk_score": 0.011674205772578716,
       "finbert_probs": {
         "positive": 0.05586664006114006,
         "neutral": 0.9324591755867004,
-        "negative": 0.0116741843521595
+        "negative": 0.011674205772578716
       }
     },
     {
@@ -749,11 +749,11 @@
       "sentence_text": "Our investment policy has as its primary objective investment activities which preserve principal without significantly increasing risk.",
       "previous_sentence": "QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK We are exposed to certain market risks in the ordinary course of our business, including fluctuations in interest rates, raw material prices, foreign currency exchange fluctuations and inflation as follows: Interest Rate Risk Our cash consists of amounts held by third party financial institutions.",
       "next_sentence": "On May 7, 2025, we, as borrower, entered into the Loan and Security Agreement with the Lenders and certain of our subsidiaries party thereto from time to time, as guarantors, pursuant to which the Lenders agreed to provide for the Delayed Draw Term Loan Facility and the loans thereunder in an aggregate principal amount of $100.0 million.",
-      "risk_score": 0.011037449352443218,
+      "risk_score": 0.011037456803023815,
       "finbert_probs": {
-        "positive": 0.06704973429441452,
-        "neutral": 0.9219127893447876,
-        "negative": 0.011037449352443218
+        "positive": 0.06704967468976974,
+        "neutral": 0.9219129085540771,
+        "negative": 0.011037456803023815
       }
     },
     {
@@ -767,7 +767,7 @@
       "risk_score": 0.00859018974006176,
       "finbert_probs": {
         "positive": 0.8608109354972839,
-        "neutral": 0.13059884309768677,
+        "neutral": 0.13059890270233154,
         "negative": 0.00859018974006176
       }
     }

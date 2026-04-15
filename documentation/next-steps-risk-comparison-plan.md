@@ -108,7 +108,7 @@ This is the numeric structure that will be fused with textual signals.
 
 ### 9. Dataset plan
 
-- Build a verified/labeled reference dataset of ~15 companies.
+- Build and maintain a verified/labeled reference dataset covering the active ticker set (currently 16 ingested companies, with room to expand).
 - Use same ingestion + extraction + verification flow for those companies and for any new user company.
 - Compare new company against this reference set.
 

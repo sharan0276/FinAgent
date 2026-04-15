@@ -1,0 +1,183 @@
+{
+  "schema_version": "orchestration_v1",
+  "bundle": {
+    "target": {
+      "ticker": "ADBE",
+      "company": "ADOBE INC.",
+      "latest_filing_year": 2026,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\ADBE\\complete_ingestion.json",
+      "extraction_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\ADBE\\adbe_2026_extraction.json",
+      "curator_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\ADBE\\adbe_2026.json"
+    },
+    "matches": [
+      {
+        "ticker": "META",
+        "company": "Meta Platforms, Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.7409,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\META\\meta_2025.json"
+        ]
+      },
+      {
+        "ticker": "GOOG",
+        "company": "Alphabet Inc.",
+        "matched_filing_year": 2026,
+        "similarity": 0.7408,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\GOOG\\goog_2026.json"
+        ]
+      }
+    ],
+    "run_metadata": {
+      "top_k": 2,
+      "run_timestamp": "2026-04-13T05:24:49.226499+00:00",
+      "status_by_step": {
+        "ingestion": "skipped_existing",
+        "extraction": "skipped_existing",
+        "curator": "skipped_existing",
+        "rag": "partial",
+        "comparison": "completed"
+      },
+      "warnings": [
+        "META has only 1 curator year(s) from 2025 onward.",
+        "GOOG has only 1 curator year(s) from 2026 onward."
+      ]
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "ADOBE INC. maintains an elevated risk posture compared to its top matched peers, driven by multiple high-severity risk signals without negative financial deltas. The company shares many risk types with peers but faces unique challenges such as customer churn risk and failed acquisition impacts. Despite these pressures, some growth metrics persist, moderating the overall risk profile.",
+    "model_name": "openai/gpt-4.1-mini-2025-04-14",
+    "posture": {
+      "label": "Elevated",
+      "rationale_bullets": [
+        "Current year includes 10 high-severity risk signals and no negative financial deltas.",
+        "Nine risk types overlap with the peer group, indicating common industry pressures.",
+        "No metrics currently show growth, which tempers the overall risk outlook."
+      ]
+    },
+    "target_profile": {
+      "ticker": "ADBE",
+      "company": "ADOBE INC.",
+      "filing_year": 2026,
+      "positive_deltas": [],
+      "negative_deltas": [],
+      "top_risks": [
+        {
+          "signal_type": "cybersecurity_vulnerability",
+          "severity": "high",
+          "section": "Item 1A",
+          "summary": "Delayed sales, lower margins or lost customers from cyberattacks, data breaches, or failure to meet information security control requirements could materially adversely affect financial results and reputation.",
+          "occurrences": 4
+        },
+        {
+          "signal_type": "foreign_currency_exposure",
+          "severity": "high",
+          "section": "Item 7A",
+          "summary": "A 10% decrease in U.S. Dollar value would decrease fair value of foreign currency hedging instruments by $456 million as of November 28, 2025.",
+          "occurrences": 3
+        },
+        {
+          "signal_type": "failed_acquisition",
+          "severity": "high",
+          "section": "Item 7",
+          "summary": "Figma acquisition termination resulted in $1 billion termination fee incurred in fiscal 2024.",
+          "occurrences": 2
+        },
+        {
+          "signal_type": "customer_churn_risk",
+          "severity": "high",
+          "section": "Item 1A",
+          "summary": "Renewal rates may decline due to customer satisfaction, pricing of competitors' solutions, information security perceptions, customer base size changes and reductions in customer spending levels.",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "infrastructure_single_point_failure",
+          "severity": "high",
+          "section": "Item 1A",
+          "summary": "Failure to plan infrastructure capacity appropriately could result in service outages, performance issues, regulatory violations, SLA breaches and customer dissatisfaction.",
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Top matched peer neighborhood",
+      "common_strengths": [],
+      "common_pressures": [],
+      "shared_risk_types": [
+        "content_moderation_liability",
+        "cybersecurity_vulnerability",
+        "interest_rate_sensitivity",
+        "moonshot_unproven_bet",
+        "pricing_power_erosion",
+        "supply_chain_concentration",
+        "third_party_vendor_dependency"
+      ],
+      "target_differences": [
+        "customer_churn_risk",
+        "failed_acquisition"
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "cybersecurity_vulnerability",
+          "foreign_currency_exposure",
+          "infrastructure_single_point_failure",
+          "intensifying_competition",
+          "interest_rate_sensitivity",
+          "ip_infringement_claim",
+          "rd_productivity_risk",
+          "regulatory_investigation",
+          "third_party_vendor_dependency"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "customer_churn_risk",
+          "failed_acquisition"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "active_litigation",
+          "advertiser_concentration",
+          "antitrust_exposure",
+          "capital_allocation_risk",
+          "competitive_moat_erosion",
+          "content_moderation_liability",
+          "geographic_concentration",
+          "impairment_charges",
+          "manufacturing_defect_risk",
+          "monetization_uncertainty",
+          "moonshot_unproven_bet",
+          "network_effect_weakening",
+          "pricing_power_erosion",
+          "product_obsolescence",
+          "recession_sensitivity",
+          "revenue_concentration_risk",
+          "scaling_risk",
+          "supply_chain_concentration",
+          "talent_retention_risk",
+          "trade_tariff_risk"
+        ]
+      }
+    ],
+    "forward_watchlist": [],
+    "narrative_sections": [
+      {
+        "title": "What Looks Similar",
+        "content": "ADOBE INC. shares nine key risk types with its peer neighborhood, including cybersecurity vulnerabilities, foreign currency exposure, and infrastructure single point failures. These common risks reflect broader industry challenges faced by the peer group."
+      },
+      {
+        "title": "What To Watch Next",
+        "content": "Unique to ADOBE are high-severity risks related to customer churn and a failed acquisition, which differentiate its risk profile from peers. Monitoring these areas will be critical as they represent distinct pressures not currently observed in the peer group."
+      }
+    ],
+    "error": null
+  }
+}

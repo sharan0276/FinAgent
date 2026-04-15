@@ -1,0 +1,259 @@
+{
+  "schema_version": "orchestration_v1",
+  "bundle": {
+    "target": {
+      "ticker": "LYFT",
+      "company": "Lyft, Inc.",
+      "latest_filing_year": 2025,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\LYFT\\complete_ingestion.json",
+      "extraction_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\LYFT\\lyft_2025_extraction.json",
+      "curator_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\LYFT\\lyft_2025.json"
+    },
+    "matches": [
+      {
+        "ticker": "META",
+        "company": "Meta Platforms, Inc.",
+        "matched_filing_year": 2024,
+        "similarity": 0.7269,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\META\\meta_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\META\\meta_2025.json"
+        ]
+      },
+      {
+        "ticker": "AAPL",
+        "company": "Apple Inc.",
+        "matched_filing_year": 2021,
+        "similarity": 0.7001,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AAPL\\aapl_2021.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AAPL\\aapl_2022.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AAPL\\aapl_2023.json"
+        ]
+      },
+      {
+        "ticker": "BYND",
+        "company": "BEYOND MEAT, INC.",
+        "matched_filing_year": 2023,
+        "similarity": 0.6915,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2023.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2025.json"
+        ]
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-13T18:29:24.130091+00:00",
+      "status_by_step": {
+        "ingestion": "completed",
+        "extraction": "completed",
+        "curator": "completed",
+        "rag": "partial",
+        "comparison": "completed"
+      },
+      "warnings": [
+        "META has only 2 curator year(s) from 2024 onward."
+      ]
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "Lyft, Inc. presents a mixed posture versus its top matched peer neighborhood. The matched year shows no high\u2011severity signals or negative financial deltas and multiple strong positive deltas (Net Income, Assets, Cash, Operating Cash Flow). Nonetheless, seven current risk types overlap with peers and several medium\u2011severity risks warrant monitoring.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Mixed",
+      "rationale_bullets": [
+        "No high\u2011severity risk signals and no negative financial deltas in the matched year.",
+        "Seven current risk types overlap with the matched peer neighborhood.",
+        "Seven metrics still show growth, which tempers the current pressure picture."
+      ]
+    },
+    "target_profile": {
+      "ticker": "LYFT",
+      "company": "Lyft, Inc.",
+      "filing_year": 2025,
+      "positive_deltas": [
+        {
+          "metric": "NetIncome",
+          "label": "strong_growth",
+          "value": 123.8248
+        },
+        {
+          "metric": "Assets",
+          "label": "strong_growth",
+          "value": 0.6614
+        },
+        {
+          "metric": "Cash",
+          "label": "strong_growth",
+          "value": 0.4908
+        },
+        {
+          "metric": "OperatingCashFlow",
+          "label": "strong_growth",
+          "value": 0.3751
+        }
+      ],
+      "negative_deltas": [],
+      "top_risks": [
+        {
+          "signal_type": "scaling_risk",
+          "severity": "medium",
+          "section": "Item 7",
+          "summary": "Research and development expenses decreased $158.8 million or 29% in 2024 due to restructuring events and headcount reductions.",
+          "occurrences": 2
+        },
+        {
+          "signal_type": "failed_acquisition",
+          "severity": "medium",
+          "section": "Item 1A",
+          "summary": "Autonomous vehicle partner announced wind-down in October 2022 resulting in $135.7 million total impairment charge.",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "intensifying_competition",
+          "severity": "medium",
+          "section": "Item 1A",
+          "summary": "Market share has fluctuated over time requiring price cuts that negatively impact short-term financial results.",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "interest_rate_sensitivity",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "Company holds $2.0 billion in cash equivalents and short-term investments carrying interest rate risk, plus $995.0 million in long-term debt.",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "recession_sensitivity",
+          "severity": "medium",
+          "section": "Item 1A",
+          "summary": "Revenue declined significantly in 2020 due to COVID-19 and related government measures with uncertain timeline for full recovery.",
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Top matched peer neighborhood",
+      "common_strengths": [],
+      "common_pressures": [],
+      "shared_risk_types": [
+        "cybersecurity_vulnerability",
+        "foreign_currency_exposure",
+        "intensifying_competition",
+        "interest_rate_sensitivity",
+        "moonshot_unproven_bet",
+        "recession_sensitivity",
+        "regulatory_investigation",
+        "revenue_concentration_risk",
+        "third_party_vendor_dependency"
+      ],
+      "target_differences": [
+        "failed_acquisition"
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "cybersecurity_vulnerability",
+          "foreign_currency_exposure",
+          "intensifying_competition",
+          "interest_rate_sensitivity",
+          "recession_sensitivity",
+          "scaling_risk",
+          "talent_retention_risk"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "failed_acquisition"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "active_litigation",
+          "business_model_transition_risk",
+          "customer_churn_risk",
+          "disaster_recovery_gaps",
+          "impairment_charges",
+          "inflation_impact",
+          "infrastructure_single_point_failure",
+          "manufacturing_defect_risk",
+          "monetization_uncertainty",
+          "moonshot_unproven_bet",
+          "pricing_power_erosion",
+          "product_obsolescence",
+          "regulatory_investigation",
+          "revenue_concentration_risk",
+          "supply_chain_concentration",
+          "third_party_vendor_dependency"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "supply_chain_concentration",
+        "why_relevant": "Peers similar to the target showed supply_chain_concentration after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "META 2025: Manufacturing of consumer hardware products depends on small number of third parties with significant operations in single region such as Asia, creating vulnerability to supply chain disruptions.",
+          "META 2025: negative delta pressure in Cash.",
+          "BYND 2024: A hypothetical 10% increase in weighted-average cost of pea protein would result in approximately $2.9 million increase to cost of goods sold."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "trade_tariff_risk",
+        "why_relevant": "Peers similar to the target showed trade_tariff_risk after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "BYND 2024: Price and availability of offshore ingredients may be affected by political events or tariffs and trade wars.",
+          "BYND 2024: negative delta pressure in Assets, Cash, GrossProfit.",
+          "BYND 2025: The imposition of new or increased tariffs could materially and adversely affect the accessibility or affordability of ingredients."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "advertiser_concentration",
+        "why_relevant": "Peers similar to the target showed advertiser_concentration after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "META 2025: Substantially all revenue currently generated from marketers advertising on Facebook and Instagram; loss or reduction in spending by marketers could seriously harm business.",
+          "META 2025: negative delta pressure in Cash."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "rd_productivity_risk",
+        "why_relevant": "Peers similar to the target showed rd_productivity_risk after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "META 2025: Many Reality Labs investments are directed toward long-term research for products only fully realized in the next decade, with ability to sustain efforts dependent on profits from other business areas.",
+          "META 2025: negative delta pressure in Cash."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "accounts_receivable_deterioration",
+        "why_relevant": "Peers similar to the target showed accounts_receivable_deterioration after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "AAPL 2022: Company is exposed to credit risk on trade accounts receivable and this risk is heightened during periods when economic conditions worsen.",
+          "AAPL 2022: negative delta pressure in Cash."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "What Looks Similar",
+        "content": "Lyft shares a set of near\u2011term risks with its peer neighborhood: cybersecurity_vulnerability, foreign_currency_exposure, intensifying_competition, interest_rate_sensitivity, recession_sensitivity, scaling_risk and talent_retention_risk. Several of these are medium severity for the target and reflect common competitive, macro and operational pressures seen across peers."
+      },
+      {
+        "title": "What To Watch Next",
+        "content": "Monitor peer\u2011emergent patterns identified in the forward watchlist: supply_chain_concentration and trade_tariff_risk (high confidence), and advertiser_concentration, rd_productivity_risk and accounts_receivable_deterioration (medium confidence). Also note the target\u2011only failed_acquisition signal (medium severity) as a company\u2011specific item to follow."
+      }
+    ],
+    "error": null
+  }
+}

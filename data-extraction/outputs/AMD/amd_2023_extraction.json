@@ -1,7 +1,7 @@
 {
   "schema_version": "data_extraction_v1",
   "model_name": "ProsusAI/finbert",
-  "run_timestamp": "2026-04-15T04:26:55.678605+00:00",
+  "run_timestamp": "2026-04-15T17:18:46.820368+00:00",
   "ticker": "AMD",
   "company_name": "ADVANCED MICRO DEVICES INC",
   "cik": "0000002488",
@@ -9,7 +9,7 @@
   "filing_date": "2023-02-27",
   "accession": "0000002488-23-000047",
   "parser_mode": "plain_text_fallback",
-  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/AMD/complete_ingestion.json",
+  "source_artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\AMD\\complete_ingestion.json",
   "processed_sections": [
     "item_1a_risk_factors",
     "item_3_legal",
@@ -82,7 +82,7 @@
       "current_tag": "LongTermDebtNoncurrent",
       "previous_tag": "LongTermDebtNoncurrent",
       "delta_percent": 246600.0,
-      "label": "severe_decline",
+      "label": "severe_increase",
       "reason": null
     },
     "OperatingCashFlow": {
@@ -136,8 +136,8 @@
       "next_sentence": "The decrease in unit shipments was due to challenging PC market conditions and significant inventory correction across the PC supply chain experienced during the second half of 2022.",
       "risk_score": 0.9741122126579285,
       "finbert_probs": {
-        "positive": 0.010411940515041351,
-        "neutral": 0.015475880354642868,
+        "positive": 0.01041195448487997,
+        "neutral": 0.015475894324481487,
         "negative": 0.9741122126579285
       }
     },
@@ -151,8 +151,8 @@
       "next_sentence": "Uncertain global economic conditions have and may in the future adversely impact our business.",
       "risk_score": 0.9729474782943726,
       "finbert_probs": {
-        "positive": 0.009962818585336208,
-        "neutral": 0.01708976924419403,
+        "positive": 0.00996280089020729,
+        "neutral": 0.017089752480387688,
         "negative": 0.9729474782943726
       }
     },
@@ -164,11 +164,11 @@
       "sentence_text": "In the second half of 2022, we experienced a decline in our Client segment revenue as a result of weak PC market macroeconomic conditions and inventory correction actions across the PC supply chain.",
       "previous_sentence": "Our financial performance has been, and may in the future be, negatively affected by these downturns.",
       "next_sentence": "The growth of our business is also dependent on continued demand for our products from high-growth adjacent emerging global markets.",
-      "risk_score": 0.9720956683158875,
+      "risk_score": 0.972095787525177,
       "finbert_probs": {
-        "positive": 0.01095345988869667,
-        "neutral": 0.016950858756899834,
-        "negative": 0.9720956683158875
+        "positive": 0.01095346175134182,
+        "neutral": 0.016950804740190506,
+        "negative": 0.972095787525177
       }
     },
     {
@@ -181,8 +181,8 @@
       "next_sentence": "If new competitors, technological advances by existing competitors, or other competitive factors require us to invest significantly greater resources than anticipated in our research and development efforts, our operating expenses would increase.",
       "risk_score": 0.9709887504577637,
       "finbert_probs": {
-        "positive": 0.009896799921989441,
-        "neutral": 0.01911434903740883,
+        "positive": 0.009896805509924889,
+        "neutral": 0.019114358350634575,
         "negative": 0.9709887504577637
       }
     },
@@ -197,7 +197,7 @@
       "risk_score": 0.9707503318786621,
       "finbert_probs": {
         "positive": 0.008799797855317593,
-        "neutral": 0.020449912175536156,
+        "neutral": 0.02044992707669735,
         "negative": 0.9707503318786621
       }
     },
@@ -211,8 +211,8 @@
       "next_sentence": "In the past, revenues from the Client and Gaming segments have experienced a decline driven by, among other factors, the adoption of smaller and other form factors, increased competition and changes in replacement cycles.",
       "risk_score": 0.97071373462677,
       "finbert_probs": {
-        "positive": 0.01208773348480463,
-        "neutral": 0.017198657616972923,
+        "positive": 0.012087693437933922,
+        "neutral": 0.017198609188199043,
         "negative": 0.97071373462677
       }
     },
@@ -226,8 +226,8 @@
       "next_sentence": "We may build inventories during periods of anticipated growth, and the cancellation or deferral of product orders or overproduction due to failure of anticipated orders to materialize could result in excess or obsolete inventory, which could result in write-downs of inventory and an adverse effect on gross margins.",
       "risk_score": 0.9703831076622009,
       "finbert_probs": {
-        "positive": 0.012809434905648232,
-        "neutral": 0.01680738665163517,
+        "positive": 0.012809460051357746,
+        "neutral": 0.016807379201054573,
         "negative": 0.9703831076622009
       }
     },
@@ -241,8 +241,8 @@
       "next_sentence": "Industry-wide fluctuations in the computer marketplace have materially adversely affected us in the past and may materially adversely affect us in the future.",
       "risk_score": 0.9703580737113953,
       "finbert_probs": {
-        "positive": 0.01036153081804514,
-        "neutral": 0.01928037777543068,
+        "positive": 0.01036149263381958,
+        "neutral": 0.01928032748401165,
         "negative": 0.9703580737113953
       }
     },
@@ -256,7 +256,7 @@
       "next_sentence": "Even when COVID-19 health measures are lifted or modified, our employees' ability or willingness to return to work may delay the return of our full workforce and the resumption of normal business operations.",
       "risk_score": 0.9701958298683167,
       "finbert_probs": {
-        "positive": 0.007985766977071762,
+        "positive": 0.007985775358974934,
         "neutral": 0.021818509325385094,
         "negative": 0.9701958298683167
       }
@@ -271,7 +271,7 @@
       "next_sentence": "Operating expenses increased for the reasons outlined under \"Expenses\" below.",
       "risk_score": 0.9700111746788025,
       "finbert_probs": {
-        "positive": 0.012315060012042522,
+        "positive": 0.012315048836171627,
         "neutral": 0.017673734575510025,
         "negative": 0.9700111746788025
       }
@@ -284,11 +284,11 @@
       "sentence_text": "The decrease in net income was primarily driven by lower operating income.",
       "previous_sentence": "Net income for 2022 was $1.3 billion compared to $3.2 billion in the prior year.",
       "next_sentence": "Cash, cash equivalents and short-term investments as of December 31, 2022 were $5.9 billion, compared to $3.6 billion at the end of 2021.",
-      "risk_score": 0.9697684645652771,
+      "risk_score": 0.9697684049606323,
       "finbert_probs": {
-        "positive": 0.01139034703373909,
-        "neutral": 0.018841154873371124,
-        "negative": 0.9697684645652771
+        "positive": 0.011390378698706627,
+        "neutral": 0.018841205164790154,
+        "negative": 0.9697684049606323
       }
     },
     {
@@ -301,8 +301,8 @@
       "next_sentence": "Net income for 2022 was $1.3 billion compared to $3.2 billion in the prior year.",
       "risk_score": 0.968488335609436,
       "finbert_probs": {
-        "positive": 0.010723168030381203,
-        "neutral": 0.020788557827472687,
+        "positive": 0.01072316337376833,
+        "neutral": 0.020788535475730896,
         "negative": 0.968488335609436
       }
     },
@@ -316,8 +316,8 @@
       "next_sentence": "In addition, our operating results tend to vary seasonally with the markets in which our products are sold.",
       "risk_score": 0.968258261680603,
       "finbert_probs": {
-        "positive": 0.009423908777534962,
-        "neutral": 0.022317850962281227,
+        "positive": 0.009423913434147835,
+        "neutral": 0.02231787145137787,
         "negative": 0.968258261680603
       }
     },
@@ -331,8 +331,8 @@
       "next_sentence": "If essential equipment, materials, substrates or manufacturing processes are not available to manufacture our products, we could be materially adversely affected.",
       "risk_score": 0.9682155847549438,
       "finbert_probs": {
-        "positive": 0.007996669039130211,
-        "neutral": 0.023787811398506165,
+        "positive": 0.007996662519872189,
+        "neutral": 0.023787790909409523,
         "negative": 0.9682155847549438
       }
     },
@@ -346,8 +346,8 @@
       "next_sentence": "In addition, we may not realize the anticipated benefits from our business initiatives.",
       "risk_score": 0.9682155847549438,
       "finbert_probs": {
-        "positive": 0.007996669039130211,
-        "neutral": 0.023787811398506165,
+        "positive": 0.007996662519872189,
+        "neutral": 0.023787790909409523,
         "negative": 0.9682155847549438
       }
     },
@@ -361,8 +361,8 @@
       "next_sentence": "The increase in average selling price was primarily driven by a richer mix of Ryzen mobile processor sales.",
       "risk_score": 0.9679901003837585,
       "finbert_probs": {
-        "positive": 0.014280502684414387,
-        "neutral": 0.017729399725794792,
+        "positive": 0.014280475676059723,
+        "neutral": 0.017729373648762703,
         "negative": 0.9679901003837585
       }
     },
@@ -376,8 +376,8 @@
       "next_sentence": "Gross margin, as a percentage of net revenue for 2022, was 45%, compared to 48% in 2021.",
       "risk_score": 0.9679211974143982,
       "finbert_probs": {
-        "positive": 0.019054001197218895,
-        "neutral": 0.013024827465415001,
+        "positive": 0.019053980708122253,
+        "neutral": 0.013024846091866493,
         "negative": 0.9679211974143982
       }
     },
@@ -392,7 +392,7 @@
       "risk_score": 0.9675523042678833,
       "finbert_probs": {
         "positive": 0.007783032022416592,
-        "neutral": 0.024664653465151787,
+        "neutral": 0.024664634838700294,
         "negative": 0.9675523042678833
       }
     },
@@ -406,8 +406,8 @@
       "next_sentence": "We could also be held liable for any and all consequences arising out of exposure to hazardous materials used, stored, released, disposed of by us or located at, under or emanating from our current or former facilities or other environmental or natural resource damage.",
       "risk_score": 0.9671635627746582,
       "finbert_probs": {
-        "positive": 0.009652851149439812,
-        "neutral": 0.02318357490003109,
+        "positive": 0.009652869775891304,
+        "neutral": 0.02318359538912773,
         "negative": 0.9671635627746582
       }
     },
@@ -421,8 +421,8 @@
       "next_sentence": "Our inability to generate sufficient cash from operations may require us to abandon projects or curtail planned investments in research and development or other strategic initiatives.",
       "risk_score": 0.9668645858764648,
       "finbert_probs": {
-        "positive": 0.009962527081370354,
-        "neutral": 0.023172864690423012,
+        "positive": 0.009962531737983227,
+        "neutral": 0.02317289263010025,
         "negative": 0.9668645858764648
       }
     },
@@ -436,8 +436,8 @@
       "next_sentence": "We rely on a combination of protections provided by contracts, including confidentiality and nondisclosure agreements, copyrights, patents, trademarks and common law rights, such as trade secrets, to protect our intellectual property.",
       "risk_score": 0.9666014313697815,
       "finbert_probs": {
-        "positive": 0.009255306795239449,
-        "neutral": 0.02414320968091488,
+        "positive": 0.009255302138626575,
+        "neutral": 0.024143215268850327,
         "negative": 0.9666014313697815
       }
     },
@@ -449,11 +449,11 @@
       "sentence_text": "If demand from these markets is below our expectations, sales of our products may decrease, which would have a material adverse effect on us.",
       "previous_sentence": "Our ability to be successful in such markets depends in part on our ability to establish adequate local infrastructure, as well as our ability to cultivate and maintain local relationships in these markets.",
       "next_sentence": "The demand for our products depends in part on the market conditions in the industries into which they are sold.",
-      "risk_score": 0.965828537940979,
+      "risk_score": 0.9658286571502686,
       "finbert_probs": {
-        "positive": 0.01024976558983326,
-        "neutral": 0.023921718820929527,
-        "negative": 0.965828537940979
+        "positive": 0.010249756276607513,
+        "neutral": 0.023921677842736244,
+        "negative": 0.9658286571502686
       }
     },
     {
@@ -464,11 +464,11 @@
       "sentence_text": "Changes in operating plans or adverse changes in the business or in the macroeconomic environment in the future could reduce the underlying cash flows used to estimate fair values and could result in a decline in fair value that would trigger future impairment charges of our reporting units' goodwill.",
       "previous_sentence": "Our discount rates may be impacted by adverse changes in the macroeconomic environment, prolonged and continuing inflationary pressures, volatility in the equity and debt markets and other factors that otherwise create or exacerbate risks in our reporting units.",
       "next_sentence": "Based on our annual impairment testing, the fair values of all of our reporting units exceeded their carrying values.",
-      "risk_score": 0.9646931290626526,
+      "risk_score": 0.9646930694580078,
       "finbert_probs": {
-        "positive": 0.008183563128113747,
-        "neutral": 0.027123339474201202,
-        "negative": 0.9646931290626526
+        "positive": 0.008183566853404045,
+        "neutral": 0.027123376727104187,
+        "negative": 0.9646930694580078
       }
     },
     {
@@ -479,11 +479,11 @@
       "sentence_text": "If we are unable to consistently deliver the right products to our customers on a timely basis in the right locations, our customers may reduce the quantities they order from us, which could have a material adverse effect on our business.",
       "previous_sentence": "As we continue to grow our business, expand to high-growth adjacent markets, acquire new customers and strengthen relationships with existing customers, the efficiency of our supply chain will become increasingly important because many of our customers tend to have specific requirements for particular products, geographic requirements, and specific time-frames in which they require delivery of these products.",
       "next_sentence": "27 Table of Contents We outsource to third parties certain supply-chain logistics functions, including portions of our product distribution, transportation management and information technology support services.",
-      "risk_score": 0.9646512269973755,
+      "risk_score": 0.9646511077880859,
       "finbert_probs": {
-        "positive": 0.010392630472779274,
-        "neutral": 0.024956148117780685,
-        "negative": 0.9646512269973755
+        "positive": 0.01039265375584364,
+        "neutral": 0.02495616301894188,
+        "negative": 0.9646511077880859
       }
     },
     {
@@ -496,7 +496,7 @@
       "next_sentence": "21 Table of Contents Because some of the equipment and materials that we and our third-party manufacturers purchase are complex, it is sometimes difficult to substitute one equipment or materials supplier for another.",
       "risk_score": 0.9645267724990845,
       "finbert_probs": {
-        "positive": 0.013170410878956318,
+        "positive": 0.013170404359698296,
         "neutral": 0.02230272814631462,
         "negative": 0.9645267724990845
       }
@@ -512,7 +512,7 @@
       "risk_score": 0.9639323949813843,
       "finbert_probs": {
         "positive": 0.008961440995335579,
-        "neutral": 0.02710617147386074,
+        "neutral": 0.02710617706179619,
         "negative": 0.9639323949813843
       }
     },
@@ -526,8 +526,8 @@
       "next_sentence": "If in any period we are able to sell inventories that had been written down to a level below the ultimate realized selling price in a previous period, related revenue would be recorded with a lower or no offsetting charge to cost of sales resulting in a net benefit to our gross margin in that period.",
       "risk_score": 0.9638115167617798,
       "finbert_probs": {
-        "positive": 0.007878946140408516,
-        "neutral": 0.028309473767876625,
+        "positive": 0.007878953590989113,
+        "neutral": 0.028309481218457222,
         "negative": 0.9638115167617798
       }
     },
@@ -539,11 +539,11 @@
       "sentence_text": "We may build inventories during periods of anticipated growth, and the cancellation or deferral of product orders or overproduction due to failure of anticipated orders to materialize could result in excess or obsolete inventory, which could result in write-downs of inventory and an adverse effect on gross margins.",
       "previous_sentence": "For example, in the second half of 2022, we experienced a decline in our Client segment revenue as a result of weak PC market macroeconomic conditions and inventory correction actions across the PC supply chain.",
       "next_sentence": "Our customers may also experience a shortage of, or delay in receiving certain components to build their products, which in turn may affect the demand for or the timing of our products.",
-      "risk_score": 0.9635429978370667,
+      "risk_score": 0.9635428786277771,
       "finbert_probs": {
-        "positive": 0.00855288002640009,
-        "neutral": 0.027904221788048744,
-        "negative": 0.9635429978370667
+        "positive": 0.00855289213359356,
+        "neutral": 0.027904238551855087,
+        "negative": 0.9635428786277771
       }
     },
     {
@@ -556,8 +556,8 @@
       "next_sentence": "If we are unable to secure sufficient or reliable supplies of products, our ability to meet customer demand may be adversely affected and this could materially affect our business.",
       "risk_score": 0.9632779955863953,
       "finbert_probs": {
-        "positive": 0.008320474997162819,
-        "neutral": 0.028401536867022514,
+        "positive": 0.00832047127187252,
+        "neutral": 0.028401507064700127,
         "negative": 0.9632779955863953
       }
     },
@@ -569,11 +569,11 @@
       "sentence_text": "COVID-19 continues to impact the global supply chain causing disruptions to service providers, logistics and the flow and availability of supplies and products.",
       "previous_sentence": "Even when COVID-19 health measures are lifted or modified, our employees' ability or willingness to return to work may delay the return of our full workforce and the resumption of normal business operations.",
       "next_sentence": "We have experienced some disruptions to parts of our supply chain as a result of COVID-19 and we adjust our supply chain requirements based on changing customer needs and demands.",
-      "risk_score": 0.9632433652877808,
+      "risk_score": 0.9632434844970703,
       "finbert_probs": {
-        "positive": 0.0077531528659164906,
-        "neutral": 0.029003437608480453,
-        "negative": 0.9632433652877808
+        "positive": 0.007753150537610054,
+        "neutral": 0.029003411531448364,
+        "negative": 0.9632434844970703
       }
     },
     {
@@ -586,8 +586,8 @@
       "next_sentence": "The success of our business is dependent upon our ability to introduce products on a timely basis with features and performance levels that provide value to our customers while supporting and coinciding with significant industry transitions.",
       "risk_score": 0.9628396034240723,
       "finbert_probs": {
-        "positive": 0.011099064722657204,
-        "neutral": 0.02606131322681904,
+        "positive": 0.011099048890173435,
+        "neutral": 0.02606130763888359,
         "negative": 0.9628396034240723
       }
     },
@@ -601,8 +601,8 @@
       "next_sentence": "If we experience problems with product quality or are unable to secure sufficient capacity from a particular third-party manufacturer, or if we for other reasons cease utilizing one of those manufacturers, we may be unable to timely secure an alternative supply for any specific product.",
       "risk_score": 0.9627478718757629,
       "finbert_probs": {
-        "positive": 0.011133678257465363,
-        "neutral": 0.026118474081158638,
+        "positive": 0.011133652180433273,
+        "neutral": 0.026118425652384758,
         "negative": 0.9627478718757629
       }
     },
@@ -614,11 +614,11 @@
       "sentence_text": "If we do not properly address or mitigate these issues it could result in increased costs and the diversion of management's attention and resources, negatively impacting our operating results and ability to effectively manage our business.",
       "previous_sentence": "Costs and risks inherent in the conversion to our upgraded and new system may include disruption s to business continuity, difficulty in maintaining effective internal controls, administrative and technical problems, interruptions or delays in sales processes, expenditure overruns, and data migration issues.",
       "next_sentence": "Moreover, once our ERP system is upgraded, it may not operate as we expect it to 24 Table of Contents and cause disruption to our operations.",
-      "risk_score": 0.9622100591659546,
+      "risk_score": 0.962209939956665,
       "finbert_probs": {
-        "positive": 0.009012275375425816,
-        "neutral": 0.02877761423587799,
-        "negative": 0.9622100591659546
+        "positive": 0.009012299589812756,
+        "neutral": 0.02877766452729702,
+        "negative": 0.962209939956665
       }
     },
     {
@@ -631,8 +631,8 @@
       "next_sentence": "Our business is dependent upon the proper functioning of our internal business processes and information systems and modification or interruption of such systems may disrupt our business, processes and internal controls.",
       "risk_score": 0.9621833562850952,
       "finbert_probs": {
-        "positive": 0.011017764918506145,
-        "neutral": 0.026798952370882034,
+        "positive": 0.011017738841474056,
+        "neutral": 0.026798894628882408,
         "negative": 0.9621833562850952
       }
     },
@@ -646,8 +646,8 @@
       "next_sentence": "COVID-19 has in the short-term and may in the long-term adversely impact the global economy, creating uncertainty and potentially leading to an economic downturn.",
       "risk_score": 0.961802065372467,
       "finbert_probs": {
-        "positive": 0.008351811207830906,
-        "neutral": 0.02984619326889515,
+        "positive": 0.008351795375347137,
+        "neutral": 0.029846129938960075,
         "negative": 0.961802065372467
       }
     },
@@ -661,8 +661,8 @@
       "next_sentence": "International Sales International sales as a percentage of net revenue were 66% in 2022 and 72% in 2021.",
       "risk_score": 0.9614589214324951,
       "finbert_probs": {
-        "positive": 0.008350886404514313,
-        "neutral": 0.030190210789442062,
+        "positive": 0.00835089385509491,
+        "neutral": 0.030190246179699898,
         "negative": 0.9614589214324951
       }
     },
@@ -674,11 +674,11 @@
       "sentence_text": "New investments may not generate sufficient revenue, may incur unanticipated liabilities and may divert our limited resources and distract management from our current operations.",
       "previous_sentence": "Moreover, our investments in new products and technologies involve certain risks and uncertainties and could disrupt our ongoing business.",
       "next_sentence": "We cannot be certain that our ongoing investments in new products and 22 Table of Contents technologies will be successful, will meet our expectations and will not adversely affect our reputation, financial condition and operating results.",
-      "risk_score": 0.9610554575920105,
+      "risk_score": 0.9610555768013,
       "finbert_probs": {
-        "positive": 0.00906071625649929,
-        "neutral": 0.029883814975619316,
-        "negative": 0.9610554575920105
+        "positive": 0.009060699492692947,
+        "neutral": 0.029883727431297302,
+        "negative": 0.9610555768013
       }
     },
     {
@@ -691,8 +691,8 @@
       "next_sentence": "We cannot be certain that our third-party manufacturers will be able to develop, obtain or successfully implement leading-edge process or packaging technologies needed to manufacture future generations of our products profitably or on a timely basis or that our competitors will not develop new technologies, products or processes earlier.",
       "risk_score": 0.9608839154243469,
       "finbert_probs": {
-        "positive": 0.011126269586384296,
-        "neutral": 0.027989841997623444,
+        "positive": 0.011126263998448849,
+        "neutral": 0.027989795431494713,
         "negative": 0.9608839154243469
       }
     },
@@ -704,11 +704,11 @@
       "sentence_text": "As a consequence, movements in exchange rates could cause our foreign currency denominated expenses to increase as a percentage of revenue, affecting our profitability and cash flows.",
       "previous_sentence": "We have costs, assets and liabilities that are denominated in foreign currencies.",
       "next_sentence": "Whenever we believe appropriate, we hedge a portion of our foreign currency exposure to protect against fluctuations in currency exchange rates.",
-      "risk_score": 0.9602844715118408,
+      "risk_score": 0.9602845311164856,
       "finbert_probs": {
-        "positive": 0.013309945352375507,
-        "neutral": 0.02640554867684841,
-        "negative": 0.9602844715118408
+        "positive": 0.01330992765724659,
+        "neutral": 0.026405533775687218,
+        "negative": 0.9602845311164856
       }
     },
     {
@@ -721,8 +721,8 @@
       "next_sentence": "Merger, Acquisition and Integration Risks Acquisitions, joint ventures and/or investments and the failure to integrate acquired businesses, could disrupt our business and/or dilute or adversely affect the price of our common stock.",
       "risk_score": 0.9602013230323792,
       "finbert_probs": {
-        "positive": 0.011723985895514488,
-        "neutral": 0.028074709698557854,
+        "positive": 0.011723998002707958,
+        "neutral": 0.028074724599719048,
         "negative": 0.9602013230323792
       }
     },
@@ -736,8 +736,8 @@
       "next_sentence": "For example, in the third quarter of 2022, we recorded certain charges primarily for inventory, pricing and related reserves in the Gaming and Client segments.",
       "risk_score": 0.9597092270851135,
       "finbert_probs": {
-        "positive": 0.009061343967914581,
-        "neutral": 0.031229529529809952,
+        "positive": 0.009061313234269619,
+        "neutral": 0.031229453161358833,
         "negative": 0.9597092270851135
       }
     },
@@ -752,7 +752,7 @@
       "risk_score": 0.9596824049949646,
       "finbert_probs": {
         "positive": 0.011163639836013317,
-        "neutral": 0.02915385738015175,
+        "neutral": 0.02915387600660324,
         "negative": 0.9596824049949646
       }
     },
@@ -764,11 +764,11 @@
       "sentence_text": "Many of these factors will be outside of our control and any one of them could result in increased costs, decreases in expected revenues and diversion of management's time and attention, which could materially impact the combined company.",
       "previous_sentence": "It is not certain that the acquired companies can be successfully integrated with our business in a timely manner or at all, or that any of the anticipated benefits will be realized for a variety of reasons, including, but not limited to: our inability to integrate or benefit from acquired technologies or services in a profitable manner; diversion of capital and other resources, including management's attention from our existing business; unanticipated costs or liabilities associated with the integration; failure to leverage the increased scale of the combined businesses quickly and effectively; coordinating and integrating in countries in which we have not previously operated; the potential impact of the acquisitions on our relationships with employees, vendors, suppliers and customers; the impairment of relationships with, or the loss of, the acquired companies' employees, vendors, suppliers and customers; adverse changes in general economic conditions in regions in which we and the acquired companies operate; potential litigation associated with the acquisitions; difficulties in the assimilation of employees and culture; difficulties in managing the expanded operations of a larger and more complex company; challenges in attracting and retaining key personnel; and difficulties with integrating and upgrading our and the acquired companies' financial reporting systems.",
       "next_sentence": "In addition, even if the operations of the businesses are integrated successfully, the full benefits of the acquisitions may not be realized within the anticipated time frame or at all.",
-      "risk_score": 0.9595513343811035,
+      "risk_score": 0.959551215171814,
       "finbert_probs": {
-        "positive": 0.008372397162020206,
-        "neutral": 0.03207634761929512,
-        "negative": 0.9595513343811035
+        "positive": 0.008372391574084759,
+        "neutral": 0.03207637369632721,
+        "negative": 0.959551215171814
       }
     },
     {
@@ -781,7 +781,7 @@
       "next_sentence": "We also depend on the success and timing of our customers' platform launches.",
       "risk_score": 0.9585579633712769,
       "finbert_probs": {
-        "positive": 0.008700680918991566,
+        "positive": 0.008700668811798096,
         "neutral": 0.03274135664105415,
         "negative": 0.9585579633712769
       }
@@ -794,11 +794,11 @@
       "sentence_text": "Cyber-attacks on us or our customers, business partners or third-party providers could also cause us to incur significant remediation costs, result in product development delays, disrupt key business operations and divert attention of management and key information technology resources.",
       "previous_sentence": "These data breaches and any unauthorized access, misuse or disclosure of our information or intellectual property could compromise our intellectual property and expose sensitive business information or personally identifiable information.",
       "next_sentence": "These incidents could also subject us to liability, expose us to significant expense and cause significant harm to our reputation and business.",
-      "risk_score": 0.9583731889724731,
+      "risk_score": 0.9583730697631836,
       "finbert_probs": {
-        "positive": 0.008051687851548195,
-        "neutral": 0.0335751548409462,
-        "negative": 0.9583731889724731
+        "positive": 0.008051706477999687,
+        "neutral": 0.03357522189617157,
+        "negative": 0.9583730697631836
       }
     },
     {
@@ -811,8 +811,8 @@
       "next_sentence": "Operational and Technology Risks We rely on third parties to manufacture our products, and if they are unable to do so on a timely basis in sufficient quantities and using competitive technologies, our business could be materially adversely affected.",
       "risk_score": 0.9582902193069458,
       "finbert_probs": {
-        "positive": 0.01918739639222622,
-        "neutral": 0.02252240851521492,
+        "positive": 0.019187355414032936,
+        "neutral": 0.022522419691085815,
         "negative": 0.9582902193069458
       }
     },
@@ -824,11 +824,11 @@
       "sentence_text": "If our actual wafer requirements are less than the number of wafers required to meet the applicable annual wafer purchase target, we could have excess inventory or higher inventory unit costs, both of which may adversely impact our gross margin and our results of operations.",
       "previous_sentence": "The Amendment no longer includes any exclusivity commitments and provides us with full flexibility to contract with any wafer foundry with respect to all products manufactured at any technology node.",
       "next_sentence": "If GF fails to meet its minimum annual capacity allocation obligations, we could experience significant delays in the shipment of our products, which could have a material adverse effect on our business.",
-      "risk_score": 0.95809406042099,
+      "risk_score": 0.9580938816070557,
       "finbert_probs": {
-        "positive": 0.009257066063582897,
-        "neutral": 0.032648902386426926,
-        "negative": 0.95809406042099
+        "positive": 0.009257077239453793,
+        "neutral": 0.0326489694416523,
+        "negative": 0.9580938816070557
       }
     },
     {
@@ -839,11 +839,11 @@
       "sentence_text": "Acquisitions and joint ventures may also reduce our cash available for operations and other uses, which could harm our business.",
       "previous_sentence": "Even if we successfully complete an acquisition or joint venture, we may not be able to assimilate and integrate effectively or efficiently the acquired business, technologies, solutions, assets, personnel or operations, particularly if key personnel of the acquired company decide not to work for us.",
       "next_sentence": "Also, any failure on our part to effectively evaluate and execute new business initiatives could adversely affect our business.",
-      "risk_score": 0.9578683972358704,
+      "risk_score": 0.9578682780265808,
       "finbert_probs": {
-        "positive": 0.00996211264282465,
-        "neutral": 0.03216950222849846,
-        "negative": 0.9578683972358704
+        "positive": 0.009962125681340694,
+        "neutral": 0.03216957673430443,
+        "negative": 0.9578682780265808
       }
     },
     {
@@ -856,8 +856,8 @@
       "next_sentence": "We have long-term purchase commitments and prepayment arrangements with some of our suppliers.",
       "risk_score": 0.9578296542167664,
       "finbert_probs": {
-        "positive": 0.0119203245267272,
-        "neutral": 0.030250081792473793,
+        "positive": 0.011920302174985409,
+        "neutral": 0.030250059440732002,
         "negative": 0.9578296542167664
       }
     },
@@ -871,8 +871,8 @@
       "next_sentence": "Our ability to design and introduce new products in a timely manner includes use of third-party intellectual property.",
       "risk_score": 0.9577171206474304,
       "finbert_probs": {
-        "positive": 0.010043659247457981,
-        "neutral": 0.03223920240998268,
+        "positive": 0.010043653659522533,
+        "neutral": 0.03223921358585358,
         "negative": 0.9577171206474304
       }
     },
@@ -887,7 +887,7 @@
       "risk_score": 0.95689857006073,
       "finbert_probs": {
         "positive": 0.01561055239289999,
-        "neutral": 0.027490945532917976,
+        "neutral": 0.027490966022014618,
         "negative": 0.95689857006073
       }
     },
@@ -899,11 +899,11 @@
       "sentence_text": "For example, our GPU revenue has been affected in part by the volatility of the cryptocurrency mining market.",
       "previous_sentence": "In addition, the GPU market has at times seen elevated demand due to the application of GPU products to cryptocurrency mining.",
       "next_sentence": "Demand for cryptocurrency has changed and is likely to continue to change quickly.",
-      "risk_score": 0.9567848443984985,
+      "risk_score": 0.9567846059799194,
       "finbert_probs": {
-        "positive": 0.01138949953019619,
-        "neutral": 0.03182576969265938,
-        "negative": 0.9567848443984985
+        "positive": 0.011389518156647682,
+        "neutral": 0.031825821846723557,
+        "negative": 0.9567846059799194
       }
     },
     {
@@ -917,7 +917,7 @@
       "risk_score": 0.9557173252105713,
       "finbert_probs": {
         "positive": 0.009412565268576145,
-        "neutral": 0.03487013652920723,
+        "neutral": 0.034870147705078125,
         "negative": 0.9557173252105713
       }
     },
@@ -931,8 +931,8 @@
       "next_sentence": "Comparison of Gross Margin, Expenses, Licensing Gain, Interest Expense, Other Income (Expense) and Income Taxes The following is a summary of certain consolidated statement of operations data for 2022 and 2021: December 31, 2022 December 25, 2021 (In millions, except for percentages) Net revenue $ 23,601 $ 16,434 Cost of sales 11,550 8,505 Amortization of acquisition-related intangibles 1,448 \u2014 Gross profit 10,603 7,929 Gross margin 45 % 48 % Research and development 5,005 2,845 Marketing, general and administrative 2,336 1,448 Amortization of acquisition-related intangibles 2,100 \u2014 Licensing gain (102) (12) Interest expense (88) (34) Other income, net 8 55 Income tax provision (benefit) (122) 513 Gross Margin Gross margin as a percentage of net revenue was 45% in 2022 compared to 48% in 2021.",
       "risk_score": 0.955406129360199,
       "finbert_probs": {
-        "positive": 0.0074669113382697105,
-        "neutral": 0.03712697699666023,
+        "positive": 0.007466908078640699,
+        "neutral": 0.03712698444724083,
         "negative": 0.955406129360199
       }
     },
@@ -944,11 +944,11 @@
       "sentence_text": "These aggressive activities have in the past resulted in lower unit sales and a lower average selling price for many of our products and adversely affected our margins and profitability.",
       "previous_sentence": "Intel's market share, margins and significant financial resources enable it to market its products aggressively, to target our customers and our channel partners with special incentives and to influence customers who do business with us.",
       "next_sentence": "Intel exerts substantial influence over computer manufacturers and their channels of distribution through various brand and other marketing programs.",
-      "risk_score": 0.9553601741790771,
+      "risk_score": 0.9553602933883667,
       "finbert_probs": {
-        "positive": 0.015607348643243313,
-        "neutral": 0.029032519087195396,
-        "negative": 0.9553601741790771
+        "positive": 0.015607306733727455,
+        "neutral": 0.029032424092292786,
+        "negative": 0.9553602933883667
       }
     },
     {
@@ -959,11 +959,11 @@
       "sentence_text": "Interruption of supply or increased demand in the industry could cause shortages and price increases in various essential materials.",
       "previous_sentence": "Also, some of these materials and components may be subject to rapid changes in price and availability.",
       "next_sentence": "Dependence on a sole supplier or a limited number of suppliers exacerbates these risks.",
-      "risk_score": 0.955118715763092,
+      "risk_score": 0.9551185965538025,
       "finbert_probs": {
-        "positive": 0.010424028150737286,
-        "neutral": 0.0344572514295578,
-        "negative": 0.955118715763092
+        "positive": 0.010424036532640457,
+        "neutral": 0.03445732221007347,
+        "negative": 0.9551185965538025
       }
     },
     {
@@ -974,11 +974,11 @@
       "sentence_text": "We have experienced and expect to continue to experience disruptions to our business as these changing measures have, and will continue to have, an effect on our business operations and practices.",
       "previous_sentence": "Various state and federal rules are issued and updated on an ongoing basis, at times in conflict and/or with minimal notice.",
       "next_sentence": "While our employees gradually return to office, we continue to monitor our operations and public health measures implemented by governmental authorities in response to COVID-19.",
-      "risk_score": 0.9549334645271301,
+      "risk_score": 0.9549333453178406,
       "finbert_probs": {
-        "positive": 0.015617451630532742,
-        "neutral": 0.029449203982949257,
-        "negative": 0.9549334645271301
+        "positive": 0.01561746560037136,
+        "neutral": 0.029449207708239555,
+        "negative": 0.9549333453178406
       }
     },
     {
@@ -989,11 +989,11 @@
       "sentence_text": "These changes may be costly and disruptive to our operations and could impose substantial demands on management time.",
       "previous_sentence": "As such, our information systems will continually evolve and adapt in order to meet our business needs.",
       "next_sentence": "These changes may also require changes in our information systems, modification of internal control procedures and significant training of employees and third-party resources.",
-      "risk_score": 0.9547826051712036,
+      "risk_score": 0.9547826647758484,
       "finbert_probs": {
-        "positive": 0.009345628321170807,
-        "neutral": 0.03587177395820618,
-        "negative": 0.9547826051712036
+        "positive": 0.00934561062604189,
+        "neutral": 0.0358717143535614,
+        "negative": 0.9547826647758484
       }
     },
     {
@@ -1006,7 +1006,7 @@
       "next_sentence": "In the second half of 2022, we experienced a decline in our Client segment revenue as a result of weak PC market macroeconomic conditions and inventory correction actions across the PC supply chain.",
       "risk_score": 0.9546003937721252,
       "finbert_probs": {
-        "positive": 0.012582472525537014,
+        "positive": 0.012582466006278992,
         "neutral": 0.032817207276821136,
         "negative": 0.9546003937721252
       }
@@ -1019,11 +1019,11 @@
       "sentence_text": "COVID-19 has also led to a disruption and volatility in the global capital and financial markets.",
       "previous_sentence": "Even in times of strong demand for our products, the worldwide economic environment remains uncertain due to COVID-19 and such demand may not be sustainable over the longer term.",
       "next_sentence": "While we believe our cash, cash equivalents and short-term investments along with our Revolving Credit Agreement and cash flows from operations will be sufficient to fund operations, including capital expenditures, and purchase commitments, over the next 12 months and beyond, to the extent we may require additional funding to finance our operations and capital expenditures and such funding may not be available to us as a result of contracting capital and financial markets resulting from COVID-19, it may have an adverse effect on our business.",
-      "risk_score": 0.9545634388923645,
+      "risk_score": 0.954563558101654,
       "finbert_probs": {
-        "positive": 0.010195350274443626,
-        "neutral": 0.03524117171764374,
-        "negative": 0.9545634388923645
+        "positive": 0.010195336304605007,
+        "neutral": 0.03524112328886986,
+        "negative": 0.954563558101654
       }
     },
     {
@@ -1036,8 +1036,8 @@
       "next_sentence": "If we do not properly address or mitigate these issues it could result in increased costs and the diversion of management's attention and resources, negatively impacting our operating results and ability to effectively manage our business.",
       "risk_score": 0.954511821269989,
       "finbert_probs": {
-        "positive": 0.009195908904075623,
-        "neutral": 0.03629231080412865,
+        "positive": 0.009195913560688496,
+        "neutral": 0.036292292177677155,
         "negative": 0.954511821269989
       }
     },
@@ -1049,11 +1049,11 @@
       "sentence_text": "We have experienced, and will continue to experience, disruptions to our business as these measures have, and will continue to have, an effect on our business operations and practices.",
       "previous_sentence": "For example, governments worldwide have implemented, and continue to implement, measures to slow down the outbreak of COVID-19.",
       "next_sentence": "In addition, many governments have enacted laws around personally identifiable information, such as the European Union's general Data Protection Regulation and the California Consumer Privacy Act, and the failure to comply could result in sanctions or other actions by the governments.",
-      "risk_score": 0.9543507695198059,
+      "risk_score": 0.9543507099151611,
       "finbert_probs": {
-        "positive": 0.012467644177377224,
-        "neutral": 0.03318154811859131,
-        "negative": 0.9543507695198059
+        "positive": 0.01246767956763506,
+        "neutral": 0.03318162262439728,
+        "negative": 0.9543507099151611
       }
     },
     {
@@ -1064,11 +1064,11 @@
       "sentence_text": "Global economic uncertainty and weakness have in the past impacted the semiconductor market as consumers and businesses have deferred purchases, which negatively impacted demand for our products.",
       "previous_sentence": "Industry-wide fluctuations in the computer marketplace have materially adversely affected us in the past and may materially adversely affect us in the future.",
       "next_sentence": "Our financial performance has been, and may in the future be, negatively affected by these downturns.",
-      "risk_score": 0.9538925290107727,
+      "risk_score": 0.9538924098014832,
       "finbert_probs": {
-        "positive": 0.009934495203197002,
-        "neutral": 0.03617299348115921,
-        "negative": 0.9538925290107727
+        "positive": 0.009934503585100174,
+        "neutral": 0.036173127591609955,
+        "negative": 0.9538924098014832
       }
     },
     {
@@ -1079,11 +1079,11 @@
       "sentence_text": "A decrease in the long-term economic outlook and future cash flows of our business could significantly impact asset values and potentially result in the impairment of goodwill and may require us to record future goodwill impairment charges, which may have a material adverse impact on our financial position and results of operations.",
       "previous_sentence": "Subsequent to our annual goodwill impairment analysis, we monitor for any events or changes in circumstances, such as significant adverse changes in business climate or operating results, changes in management's business strategy, an inability to successfully introduce new products in the marketplace, an inability to successfully achieve internal forecasts or significant declines in our stock price, which may represent an indicator of impairment.",
       "next_sentence": "Liquidity and Capital Resources Risks The agreements governing our notes, our guarantees of the Assumed Xilinx Notes, and our Revolving Credit Agreement impose restrictions on us that may adversely affect our ability to operate our business.",
-      "risk_score": 0.9532040953636169,
+      "risk_score": 0.9532042145729065,
       "finbert_probs": {
-        "positive": 0.009718162007629871,
-        "neutral": 0.03707767650485039,
-        "negative": 0.9532040953636169
+        "positive": 0.009718162938952446,
+        "neutral": 0.037077635526657104,
+        "negative": 0.9532042145729065
       }
     },
     {
@@ -1096,8 +1096,8 @@
       "next_sentence": "Failure to prevent unauthorized access to electronic and other confidential information, IT outages, data loss and data breaches could materially adversely affect our financial condition, our competitive position and operating results.",
       "risk_score": 0.9531356692314148,
       "finbert_probs": {
-        "positive": 0.01193431206047535,
-        "neutral": 0.0349300391972065,
+        "positive": 0.011934300884604454,
+        "neutral": 0.03493001312017441,
         "negative": 0.9531356692314148
       }
     },
@@ -1111,8 +1111,8 @@
       "next_sentence": "We have incurred substantial losses in previous downturns, due to substantial declines in average selling prices; the cyclical nature of supply and demand imbalances in the semiconductor industry; a decline in demand for end-user products (such as PCs) that incorporate our products; and excess inventory levels.",
       "risk_score": 0.9531174898147583,
       "finbert_probs": {
-        "positive": 0.010710516944527626,
-        "neutral": 0.03617200627923012,
+        "positive": 0.010710526257753372,
+        "neutral": 0.03617199510335922,
         "negative": 0.9531174898147583
       }
     },
@@ -1126,8 +1126,8 @@
       "next_sentence": "To help attract, retain and motivate our executives and qualified employees, we use share-based incentive awards such as employee stock options and non-vested share units (restricted stock units).",
       "risk_score": 0.9530280232429504,
       "finbert_probs": {
-        "positive": 0.012484738603234291,
-        "neutral": 0.03448721766471863,
+        "positive": 0.012484749779105186,
+        "neutral": 0.03448725864291191,
         "negative": 0.9530280232429504
       }
     },
@@ -1141,8 +1141,8 @@
       "next_sentence": "Also, if the value of our stock awards increases substantially, this could potentially create great personal wealth for our executives and employees and affect our ability to retain our personnel.",
       "risk_score": 0.9527335166931152,
       "finbert_probs": {
-        "positive": 0.012324790470302105,
-        "neutral": 0.034941740334033966,
+        "positive": 0.012324796989560127,
+        "neutral": 0.03494170680642128,
         "negative": 0.9527335166931152
       }
     },
@@ -1156,7 +1156,7 @@
       "next_sentence": "As of December 31, 2022, all of our outstanding long-term debt had fixed interest rates.",
       "risk_score": 0.9525810480117798,
       "finbert_probs": {
-        "positive": 0.01154589094221592,
+        "positive": 0.01154591329395771,
         "neutral": 0.03587302193045616,
         "negative": 0.9525810480117798
       }
@@ -1169,11 +1169,11 @@
       "sentence_text": "If GF fails to meet its minimum annual capacity allocation obligations, we could experience significant delays in the shipment of our products, which could have a material adverse effect on our business.",
       "previous_sentence": "If our actual wafer requirements are less than the number of wafers required to meet the applicable annual wafer purchase target, we could have excess inventory or higher inventory unit costs, both of which may adversely impact our gross margin and our results of operations.",
       "next_sentence": "We are party to two ATMP joint ventures (collectively, the ATMP JVs) with affiliates of Tongfu Microelectronics Co., Ltd.",
-      "risk_score": 0.9520674347877502,
+      "risk_score": 0.9520675539970398,
       "finbert_probs": {
-        "positive": 0.010626954957842827,
-        "neutral": 0.03730563819408417,
-        "negative": 0.9520674347877502
+        "positive": 0.010626926086843014,
+        "neutral": 0.037305522710084915,
+        "negative": 0.9520675539970398
       }
     },
     {
@@ -1184,11 +1184,11 @@
       "sentence_text": "The decrease in gross margin was primarily due to amortization of intangible assets associated with the Xilinx acquisition.",
       "previous_sentence": "Gross margin, as a percentage of net revenue for 2022, was 45%, compared to 48% in 2021.",
       "next_sentence": "Operating income for 2022 was $1.3 billion compared to operating income of $3.6 billion for 2021.",
-      "risk_score": 0.9470843076705933,
+      "risk_score": 0.9470844268798828,
       "finbert_probs": {
-        "positive": 0.025853756815195084,
-        "neutral": 0.027061956003308296,
-        "negative": 0.9470843076705933
+        "positive": 0.025853686034679413,
+        "neutral": 0.027061907574534416,
+        "negative": 0.9470844268798828
       }
     },
     {
@@ -1199,11 +1199,11 @@
       "sentence_text": "The decrease in gross margin was primarily due to amortization of intangible assets associated with the Xilinx acquisition.",
       "previous_sentence": "Comparison of Gross Margin, Expenses, Licensing Gain, Interest Expense, Other Income (Expense) and Income Taxes The following is a summary of certain consolidated statement of operations data for 2022 and 2021: December 31, 2022 December 25, 2021 (In millions, except for percentages) Net revenue $ 23,601 $ 16,434 Cost of sales 11,550 8,505 Amortization of acquisition-related intangibles 1,448 \u2014 Gross profit 10,603 7,929 Gross margin 45 % 48 % Research and development 5,005 2,845 Marketing, general and administrative 2,336 1,448 Amortization of acquisition-related intangibles 2,100 \u2014 Licensing gain (102) (12) Interest expense (88) (34) Other income, net 8 55 Income tax provision (benefit) (122) 513 Gross Margin Gross margin as a percentage of net revenue was 45% in 2022 compared to 48% in 2021.",
       "next_sentence": "46 Table of Contents Expenses Research and Development Expenses Research and development expenses of $5.0 billion in 2022 increased by $2.2 billion, or 76%, compared to $2.8 billion in 2021.",
-      "risk_score": 0.9470841884613037,
+      "risk_score": 0.9470844268798828,
       "finbert_probs": {
-        "positive": 0.025853794068098068,
-        "neutral": 0.027061952278017998,
-        "negative": 0.9470841884613037
+        "positive": 0.025853686034679413,
+        "neutral": 0.027061907574534416,
+        "negative": 0.9470844268798828
       }
     },
     {
@@ -1214,11 +1214,11 @@
       "sentence_text": "Accordingly, our interest income fluctuates with short-term market conditions.",
       "previous_sentence": "We usually invest our cash in investments with short maturities or with frequent interest reset terms.",
       "next_sentence": "As of December 31, 2022, our investment portfolio consisted of fixed income instruments, time deposits and commercial paper.",
-      "risk_score": 0.9429304003715515,
+      "risk_score": 0.9429306387901306,
       "finbert_probs": {
-        "positive": 0.017199991270899773,
-        "neutral": 0.039869509637355804,
-        "negative": 0.9429304003715515
+        "positive": 0.017199961468577385,
+        "neutral": 0.039869483560323715,
+        "negative": 0.9429306387901306
       }
     },
     {
@@ -1231,7 +1231,7 @@
       "next_sentence": "The increase in operating income was primarily driven by higher revenue, partially offset by higher operating expenses.",
       "risk_score": 0.9414395093917847,
       "finbert_probs": {
-        "positive": 0.04470289498567581,
+        "positive": 0.04470285028219223,
         "neutral": 0.013857598416507244,
         "negative": 0.9414395093917847
       }
@@ -1244,11 +1244,11 @@
       "sentence_text": "Gaming operating income was $953 million in 2022, compared to operating income of $934 million in 2021.",
       "previous_sentence": "The increase in net revenue was driven by higher semi-custom product sales due to higher demand for gaming console SoCs, partially offset by lower gaming graphics sales due to a decrease in unit shipments driven by soft consumer demand given weakened macroeconomic conditions experienced in the second half of 2022.",
       "next_sentence": "The increase in operating income was primarily driven by higher revenue, partially offset by higher operating expenses.",
-      "risk_score": 0.935494065284729,
+      "risk_score": 0.9354941844940186,
       "finbert_probs": {
-        "positive": 0.04873085021972656,
-        "neutral": 0.015775159001350403,
-        "negative": 0.935494065284729
+        "positive": 0.048730671405792236,
+        "neutral": 0.01577509380877018,
+        "negative": 0.9354941844940186
       }
     },
     {
@@ -1261,8 +1261,8 @@
       "next_sentence": "All Other operating loss of $409 million in 2021 primarily consisted of $379 million of stock-based compensation expense and $42 million of acquisition-related costs.",
       "risk_score": 0.9321713447570801,
       "finbert_probs": {
-        "positive": 0.009213796816766262,
-        "neutral": 0.0586148165166378,
+        "positive": 0.009213810786604881,
+        "neutral": 0.05861484631896019,
         "negative": 0.9321713447570801
       }
     },
@@ -1274,11 +1274,11 @@
       "sentence_text": "Operating income for 2022 was $1.3 billion compared to operating income of $3.6 billion for 2021.",
       "previous_sentence": "The decrease in gross margin was primarily due to amortization of intangible assets associated with the Xilinx acquisition.",
       "next_sentence": "The decrease in operating income was primarily driven by amortization of intangible assets associated with the Xilinx acquisition.",
-      "risk_score": 0.9308079481124878,
+      "risk_score": 0.9308075308799744,
       "finbert_probs": {
-        "positive": 0.05164160579442978,
-        "neutral": 0.017550481483340263,
-        "negative": 0.9308079481124878
+        "positive": 0.05164189264178276,
+        "neutral": 0.017550531774759293,
+        "negative": 0.9308075308799744
       }
     },
     {
@@ -1292,7 +1292,7 @@
       "risk_score": 0.9279852509498596,
       "finbert_probs": {
         "positive": 0.04216117784380913,
-        "neutral": 0.029853535816073418,
+        "neutral": 0.029853560030460358,
         "negative": 0.9279852509498596
       }
     },
@@ -1306,8 +1306,8 @@
       "next_sentence": "In determining the lower of cost or net realizable value reserves, we consider assumptions such as recent historical sales activity and selling prices, as well as estimates of future selling prices.",
       "risk_score": 0.9239636659622192,
       "finbert_probs": {
-        "positive": 0.01354784145951271,
-        "neutral": 0.06248852238059044,
+        "positive": 0.013547834940254688,
+        "neutral": 0.062488481402397156,
         "negative": 0.9239636659622192
       }
     },
@@ -1319,11 +1319,11 @@
       "sentence_text": "Embedded operating income was $2.3 billion in 2022, compared to operating income of $44 million in 2021.",
       "previous_sentence": "The significant increase in net revenue was primarily driven by the inclusion of Xilinx embedded product revenue as a result of the acquisition of Xilinx in February 2022.",
       "next_sentence": "The significant increase in operating income was primarily driven by the inclusion of Xilinx embedded product revenue.",
-      "risk_score": 0.9238908886909485,
+      "risk_score": 0.923891007900238,
       "finbert_probs": {
-        "positive": 0.0604071170091629,
-        "neutral": 0.01570189744234085,
-        "negative": 0.9238908886909485
+        "positive": 0.06040707603096962,
+        "neutral": 0.015701884403824806,
+        "negative": 0.923891007900238
       }
     },
     {
@@ -1334,11 +1334,11 @@
       "sentence_text": "For transactions where we reimburse a customer for a portion of the customer's cost to perform specific product advertising or marketing and promotional activities, such amounts are recognized as a reduction to revenue unless they qualify for expense recognition.",
       "previous_sentence": "Where funds provided for such programs can be estimated, we recognize a reduction to revenue at the time the related revenue is recognized; otherwise, we recognize such reduction to revenue at the later of when: i) the related revenue transaction occurs; or ii) the program is offered.",
       "next_sentence": "We also provide limited product return rights to certain OEMs and to most distribution customers.",
-      "risk_score": 0.9053272008895874,
+      "risk_score": 0.9053270220756531,
       "finbert_probs": {
-        "positive": 0.013257754035294056,
-        "neutral": 0.08141503483057022,
-        "negative": 0.9053272008895874
+        "positive": 0.013257776387035847,
+        "neutral": 0.08141523599624634,
+        "negative": 0.9053270220756531
       }
     },
     {
@@ -1349,11 +1349,11 @@
       "sentence_text": "These securities are subject to interest rate risk and will decrease in value if market interest rates increase.",
       "previous_sentence": "In accordance with our investment policy, we place investments with high credit quality issuers and limit the amount of credit exposure to any one issuer based upon the issuer's credit rating.",
       "next_sentence": "A hypothetical 50 basis-point (half percentage point) increase or decrease in interest rates compared to rates at December 31, 2022 would have affected the fair value of our cash equivalent and investment portfolio by approximately $2.9 million.",
-      "risk_score": 0.8627611994743347,
+      "risk_score": 0.862761378288269,
       "finbert_probs": {
-        "positive": 0.013067969121038914,
-        "neutral": 0.12417078018188477,
-        "negative": 0.8627611994743347
+        "positive": 0.013067959807813168,
+        "neutral": 0.12417074292898178,
+        "negative": 0.862761378288269
       }
     },
     {
@@ -1364,11 +1364,11 @@
       "sentence_text": "We mitigate default risk in our investment portfolio by investing in only high credit quality securities and by constantly positioning our portfolio to respond to a significant reduction in a credit rating of any investment issuer or guarantor.",
       "previous_sentence": "Default Risk.",
       "next_sentence": "Our portfolio includes investments in marketable debt securities with active secondary or resale markets to ensure portfolio liquidity.",
-      "risk_score": 0.12213145941495895,
+      "risk_score": 0.12213107198476791,
       "finbert_probs": {
-        "positive": 0.6398882269859314,
-        "neutral": 0.23798035085201263,
-        "negative": 0.12213145941495895
+        "positive": 0.6398889422416687,
+        "neutral": 0.23798000812530518,
+        "negative": 0.12213107198476791
       }
     },
     {
@@ -1379,11 +1379,11 @@
       "sentence_text": "As a result of our foreign operations, we incur costs and we carry assets and liabilities that are denominated in foreign currencies, while sales of products are primarily denominated in U.S. dollars.",
       "previous_sentence": "Foreign Exchange Risk.",
       "next_sentence": "We maintain a foreign currency hedging strategy which uses derivative financial instruments to mitigate the risks associated with changes in foreign currency exchange rates.",
-      "risk_score": 0.1138463169336319,
+      "risk_score": 0.11384598910808563,
       "finbert_probs": {
-        "positive": 0.03361929953098297,
-        "neutral": 0.8525344133377075,
-        "negative": 0.1138463169336319
+        "positive": 0.03361928090453148,
+        "neutral": 0.8525347709655762,
+        "negative": 0.11384598910808563
       }
     },
     {
@@ -1394,11 +1394,11 @@
       "sentence_text": "December 31, 2022 December 25, 2021 Notional Amount Average Contract Rate Estimated Fair Value Gain (Loss) Notional Amount Average Contract Rate Estimated Fair Value Gain (Loss) (In millions except contract rates) Foreign currency forward contracts: Chinese Renminbi $ 599 6.7848 $ (3) $ 360 6.5693 $ 6 Canadian Dollar 607 1.3137 (16) 416 1.2646 (6) Indian Rupee 516 82.1493 (9) 162 77.3309 1 Taiwan Dollar 207 29.1231 (4) 122 27.2725 (1) Singapore Dollar 259 1.3600 4 71 1.3489 \u2014 Euro 142 0.9334 1 47 0.8444 (2) Pound Sterling 88 0.8204 (1) 6 0.7317 \u2014 Japanese Yen 2 133.7593 \u2014 1 114.3214 \u2014 Australian Dollar 1 1.4689 \u2014 \u2014 1.3809 \u2014 Total $ 2,421 $ (28) $ 1,185 $ (2) 50 Table of Contents",
       "previous_sentence": "All of our foreign currency forward contracts mature within 18 months.",
       "next_sentence": null,
-      "risk_score": 0.08716730773448944,
+      "risk_score": 0.08716750144958496,
       "finbert_probs": {
-        "positive": 0.03434744104743004,
-        "neutral": 0.8784852027893066,
-        "negative": 0.08716730773448944
+        "positive": 0.034347448498010635,
+        "neutral": 0.8784850239753723,
+        "negative": 0.08716750144958496
       }
     },
     {
@@ -1409,11 +1409,11 @@
       "sentence_text": "We usually invest our cash in investments with short maturities or with frequent interest reset terms.",
       "previous_sentence": "Our exposure to market risk for changes in interest rates relates primarily to our investment portfolio and long-term debt.",
       "next_sentence": "Accordingly, our interest income fluctuates with short-term market conditions.",
-      "risk_score": 0.049485426396131516,
+      "risk_score": 0.049485474824905396,
       "finbert_probs": {
-        "positive": 0.022264480590820312,
+        "positive": 0.022264491766691208,
         "neutral": 0.9282500743865967,
-        "negative": 0.049485426396131516
+        "negative": 0.049485474824905396
       }
     },
     {
@@ -1424,11 +1424,11 @@
       "sentence_text": "While we believe we take prudent measures to mitigate investment-related risks, such risks cannot be fully eliminated as there are circumstances outside of our control.",
       "previous_sentence": "As of December 31, 2022, substantially all of our investments in debt securities were A-rated by at least one of the rating agencies.",
       "next_sentence": "Foreign Exchange Risk.",
-      "risk_score": 0.04773935675621033,
+      "risk_score": 0.047739334404468536,
       "finbert_probs": {
-        "positive": 0.15765893459320068,
-        "neutral": 0.7946017384529114,
-        "negative": 0.04773935675621033
+        "positive": 0.15765947103500366,
+        "neutral": 0.7946012020111084,
+        "negative": 0.047739334404468536
       }
     },
     {
@@ -1439,11 +1439,11 @@
       "sentence_text": "Consequently, our exposure to market risk for changes in interest rates on reported interest expense and corresponding cash flows is minimal.",
       "previous_sentence": "As of December 31, 2022, all of our outstanding long-term debt had fixed interest rates.",
       "next_sentence": "We will continue to monitor our exposure to interest rate risk.",
-      "risk_score": 0.046468380838632584,
+      "risk_score": 0.04646843671798706,
       "finbert_probs": {
-        "positive": 0.08295147866010666,
-        "neutral": 0.8705801367759705,
-        "negative": 0.046468380838632584
+        "positive": 0.08295165747404099,
+        "neutral": 0.8705799579620361,
+        "negative": 0.04646843671798706
       }
     },
     {
@@ -1454,11 +1454,11 @@
       "sentence_text": "The following table provides information about our foreign currency forward contracts as of December 31, 2022 and December 25, 2021.",
       "previous_sentence": "We do not use derivative financial instruments for trading or speculative purposes.",
       "next_sentence": "All of our foreign currency forward contracts mature within 18 months.",
-      "risk_score": 0.03442002832889557,
+      "risk_score": 0.034420061856508255,
       "finbert_probs": {
-        "positive": 0.02065521851181984,
+        "positive": 0.020655248314142227,
         "neutral": 0.9449247121810913,
-        "negative": 0.03442002832889557
+        "negative": 0.034420061856508255
       }
     },
     {
@@ -1469,11 +1469,11 @@
       "sentence_text": "We do not use derivative financial instruments for trading or speculative purposes.",
       "previous_sentence": "This strategy takes into consideration all of our exposures.",
       "next_sentence": "The following table provides information about our foreign currency forward contracts as of December 31, 2022 and December 25, 2021.",
-      "risk_score": 0.03369203582406044,
+      "risk_score": 0.033692073076963425,
       "finbert_probs": {
-        "positive": 0.022911805659532547,
+        "positive": 0.02291177213191986,
         "neutral": 0.9433961510658264,
-        "negative": 0.03369203582406044
+        "negative": 0.033692073076963425
       }
     },
     {
@@ -1484,11 +1484,11 @@
       "sentence_text": "QUANTITATIVE AND QUALITATIVE DISCLOSURE ABOUT MARKET RISK Interest Rate Risk.",
       "previous_sentence": "ITEM 7A.",
       "next_sentence": "Our exposure to market risk for changes in interest rates relates primarily to our investment portfolio and long-term debt.",
-      "risk_score": 0.03287298232316971,
+      "risk_score": 0.032872945070266724,
       "finbert_probs": {
-        "positive": 0.03206038847565651,
-        "neutral": 0.9350666403770447,
-        "negative": 0.03287298232316971
+        "positive": 0.03206036239862442,
+        "neutral": 0.9350667595863342,
+        "negative": 0.032872945070266724
       }
     },
     {
@@ -1499,11 +1499,11 @@
       "sentence_text": "LEGAL PROCEEDINGS For a discussion of our legal proceedings, refer to Note 17 \u2013 Contingencies of the Notes to Consolidated Financial Statements (Part II, Item 8 of this Form 10-K).",
       "previous_sentence": "ITEM 3.",
       "next_sentence": null,
-      "risk_score": 0.028312886133790016,
+      "risk_score": 0.028312858194112778,
       "finbert_probs": {
-        "positive": 0.024455416947603226,
+        "positive": 0.02445542812347412,
         "neutral": 0.9472317099571228,
-        "negative": 0.028312886133790016
+        "negative": 0.028312858194112778
       }
     },
     {
@@ -1514,11 +1514,11 @@
       "sentence_text": "As of December 31, 2022, all of our outstanding long-term debt had fixed interest rates.",
       "previous_sentence": "A hypothetical 50 basis-point (half percentage point) increase or decrease in interest rates compared to rates at December 31, 2022 would have affected the fair value of our cash equivalent and investment portfolio by approximately $2.9 million.",
       "next_sentence": "Consequently, our exposure to market risk for changes in interest rates on reported interest expense and corresponding cash flows is minimal.",
-      "risk_score": 0.027263522148132324,
+      "risk_score": 0.027263572439551353,
       "finbert_probs": {
-        "positive": 0.030930040404200554,
-        "neutral": 0.941806435585022,
-        "negative": 0.027263522148132324
+        "positive": 0.030930045992136,
+        "neutral": 0.9418063759803772,
+        "negative": 0.027263572439551353
       }
     },
     {
@@ -1529,11 +1529,11 @@
       "sentence_text": "As of December 31, 2022, our investment portfolio consisted of fixed income instruments, time deposits and commercial paper.",
       "previous_sentence": "Accordingly, our interest income fluctuates with short-term market conditions.",
       "next_sentence": "Our primary aim with our investment portfolio is to invest available cash while preserving principal and meeting liquidity needs.",
-      "risk_score": 0.02597094140946865,
+      "risk_score": 0.025970935821533203,
       "finbert_probs": {
-        "positive": 0.021959058940410614,
+        "positive": 0.02195904776453972,
         "neutral": 0.9520699977874756,
-        "negative": 0.02597094140946865
+        "negative": 0.025970935821533203
       }
     },
     {
@@ -1544,11 +1544,11 @@
       "sentence_text": "Our exposure to market risk for changes in interest rates relates primarily to our investment portfolio and long-term debt.",
       "previous_sentence": "QUANTITATIVE AND QUALITATIVE DISCLOSURE ABOUT MARKET RISK Interest Rate Risk.",
       "next_sentence": "We usually invest our cash in investments with short maturities or with frequent interest reset terms.",
-      "risk_score": 0.024818135425448418,
+      "risk_score": 0.024818172678351402,
       "finbert_probs": {
-        "positive": 0.03275716304779053,
-        "neutral": 0.9424247145652771,
-        "negative": 0.024818135425448418
+        "positive": 0.03275720402598381,
+        "neutral": 0.9424245953559875,
+        "negative": 0.024818172678351402
       }
     },
     {
@@ -1559,11 +1559,11 @@
       "sentence_text": "We believe that we take a conservative approach to investing our funds in that we invest only in highly-rated debt securities with relatively short maturities and do not invest in securities which we believe involve a higher degree of risk.",
       "previous_sentence": "We actively monitor market conditions and developments specific to the securities and security classes in which we invest.",
       "next_sentence": "As of December 31, 2022, substantially all of our investments in debt securities were A-rated by at least one of the rating agencies.",
-      "risk_score": 0.01912539452314377,
+      "risk_score": 0.019125375896692276,
       "finbert_probs": {
-        "positive": 0.05429992824792862,
+        "positive": 0.05429990217089653,
         "neutral": 0.92657470703125,
-        "negative": 0.01912539452314377
+        "negative": 0.019125375896692276
       }
     },
     {
@@ -1574,11 +1574,11 @@
       "sentence_text": "In accordance with our investment policy, we place investments with high credit quality issuers and limit the amount of credit exposure to any one issuer based upon the issuer's credit rating.",
       "previous_sentence": "Our primary aim with our investment portfolio is to invest available cash while preserving principal and meeting liquidity needs.",
       "next_sentence": "These securities are subject to interest rate risk and will decrease in value if market interest rates increase.",
-      "risk_score": 0.018527815118432045,
+      "risk_score": 0.018527839332818985,
       "finbert_probs": {
-        "positive": 0.03591408580541611,
-        "neutral": 0.9455581307411194,
-        "negative": 0.018527815118432045
+        "positive": 0.03591407090425491,
+        "neutral": 0.9455580711364746,
+        "negative": 0.018527839332818985
       }
     },
     {
@@ -1589,11 +1589,11 @@
       "sentence_text": "We are averse to principal loss and strive to preserve our invested funds by limiting default risk and market risk.",
       "previous_sentence": "Our portfolio includes investments in marketable debt securities with active secondary or resale markets to ensure portfolio liquidity.",
       "next_sentence": "We actively monitor market conditions and developments specific to the securities and security classes in which we invest.",
-      "risk_score": 0.015231587924063206,
+      "risk_score": 0.015231605619192123,
       "finbert_probs": {
-        "positive": 0.15354496240615845,
-        "neutral": 0.8312234282493591,
-        "negative": 0.015231587924063206
+        "positive": 0.1535446047782898,
+        "neutral": 0.8312237858772278,
+        "negative": 0.015231605619192123
       }
     },
     {
@@ -1604,11 +1604,11 @@
       "sentence_text": "As of December 31, 2022, substantially all of our investments in debt securities were A-rated by at least one of the rating agencies.",
       "previous_sentence": "We believe that we take a conservative approach to investing our funds in that we invest only in highly-rated debt securities with relatively short maturities and do not invest in securities which we believe involve a higher degree of risk.",
       "next_sentence": "While we believe we take prudent measures to mitigate investment-related risks, such risks cannot be fully eliminated as there are circumstances outside of our control.",
-      "risk_score": 0.013883333653211594,
+      "risk_score": 0.013883349485695362,
       "finbert_probs": {
-        "positive": 0.05204939469695091,
-        "neutral": 0.9340673089027405,
-        "negative": 0.013883333653211594
+        "positive": 0.052049554884433746,
+        "neutral": 0.9340670704841614,
+        "negative": 0.013883349485695362
       }
     },
     {
@@ -1619,11 +1619,11 @@
       "sentence_text": "We actively monitor market conditions and developments specific to the securities and security classes in which we invest.",
       "previous_sentence": "We are averse to principal loss and strive to preserve our invested funds by limiting default risk and market risk.",
       "next_sentence": "We believe that we take a conservative approach to investing our funds in that we invest only in highly-rated debt securities with relatively short maturities and do not invest in securities which we believe involve a higher degree of risk.",
-      "risk_score": 0.013513281010091305,
+      "risk_score": 0.013513274490833282,
       "finbert_probs": {
-        "positive": 0.04683699831366539,
+        "positive": 0.046837009489536285,
         "neutral": 0.9396497011184692,
-        "negative": 0.013513281010091305
+        "negative": 0.013513274490833282
       }
     }
   ]

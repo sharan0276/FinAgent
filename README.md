@@ -41,8 +41,7 @@ The system is organized into four layers:
 # 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Set environment variables
-cp .env.example .env   # then fill in your keys
+# 2. Create .env in the project root and fill in your keys
 
 # 3. Launch the UI
 streamlit run ui/app.py
@@ -56,7 +55,7 @@ Select a ticker from the dropdown, click **Run Agentic Pipeline** and **Run Base
 
 ### Python Version
 
-Python 3.9 or later is required.
+Python 3.10 or later is required.
 
 ### Dependencies
 
@@ -89,7 +88,7 @@ The SEC EDGAR API requires a valid user agent string in the format `Name email@a
 
 ## Available Tickers
 
-The following 15 companies have pre-ingested data and are available immediately in the UI:
+The following 16 companies have pre-ingested data and are available immediately in the UI:
 
 | Ticker | Company |
 |--------|---------|
@@ -106,11 +105,11 @@ The following 15 companies have pre-ingested data and are available immediately 
 | MSFT | Microsoft Corporation |
 | NVDA | NVIDIA Corporation |
 | PLTR | Palantir Technologies |
+| QCOM | Qualcomm Incorporated |
 | SNAP | Snap Inc. |
 | UBER | Uber Technologies |
 
-Tickers with full curator artifacts (needed for FAISS embedding matching): AAPL, GOOG, META, ADBE, AMZN.
-All other tickers support the Baseline RAG pipeline which only requires ingestion data.
+Many of these tickers also have curator artifacts checked in under `data-extraction/outputs/curator/`, which enables FAISS-based peer matching immediately. If curator artifacts are missing for a ticker, the UI can build them from the **Dataset Management** panel, and the Baseline RAG path can still fall back to ingestion-only peer selection.
 
 To add a new ticker, use the **Dataset Management** panel in the UI or run the pipeline steps manually (see [Agentic Pipeline](#agentic-pipeline)).
 
@@ -218,7 +217,7 @@ python rag-matching/matcher.py --input-file data-extraction/outputs/curator/AAPL
 Orchestrates all previous steps (skipping any that already exist), retrieves top peer companies, assembles multi-year context, and generates a structured comparison report via a single OpenRouter call.
 
 ```bash
-python orchestration/runner.py AAPL --json
+python orchestration/runner.py AAPL --top 2 --json
 ```
 
 Output: `orchestration/outputs/AAPL/aapl_comparison_bundle.json`
@@ -253,11 +252,12 @@ The evaluation module scores saved report artifacts offline without re-running p
 ```bash
 python -m evaluation.runner \
   --agentic-dir orchestration/outputs \
-  --baseline-dir baseline_rag/outputs \
   --json
 ```
 
 Output: `evaluation/outputs/<run_name>.json`
+
+If you have saved baseline artifacts from a separate run, you can add `--baseline-dir <path>` or `--baseline-artifact <path>`. The Streamlit UI keeps baseline results in session state by default and does not write them to disk automatically.
 
 ### Scorecard
 
@@ -332,11 +332,8 @@ Another Streamlit instance is running. Either kill it or use a different port:
 streamlit run ui/app.py --server.port 8502
 ```
 
-**`TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'`**
-You are running Python 3.9 but a dependency uses `X | None` syntax. This is already patched in `orchestration/report_models.py`. If it reappears after a pull, run:
-```bash
-pip install eval_type_backport
-```
+**`SyntaxError` or `TypeError` around `X | None` annotations**
+You are likely running Python older than 3.10. This project now uses modern union-type syntax across the active codebase, so upgrade to Python 3.10+ and reinstall dependencies.
 
 **Baseline RAG shows `Matches Found: 0`**
 The FAISS index needs to be rebuilt. Click **Rebuild FAISS Index** in the Dataset Management sidebar, or run:

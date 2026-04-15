@@ -59,33 +59,31 @@ Primary modules:
 
 ### Current financial output schema
 
-The active ingestion pipeline currently writes financial metrics in a point-list schema that is directly compatible with `data-extraction/`:
+The active ingestion pipeline writes financial metrics in a compact time-series schema:
 
-- `financial_data.annual[metric] -> list[dict]`
-- `financial_data.quarterly[metric] -> list[dict]`
+- `financial_data.annual[metric] -> {"tag", "unit", "years", "values", "deltas"}`
+- `financial_data.quarterly[metric] -> {"tag", "unit", "periods", "values", "deltas"}`
 
-Annual point shape:
+Annual metric shape:
 
-- `year`
-- `end_date`
-- `value`
 - `tag`
-- `accession`
+- `unit`
+- `years`
+- `values`
+- `deltas`
 
-Quarterly point shape:
+Quarterly metric shape:
 
-- `year`
-- `quarter`
-- `end_date`
-- `value`
 - `tag`
-- `accession`
+- `unit`
+- `periods`
+- `values`
+- `deltas`
 
 Important note:
 
-- there was a brief compact-format branch using `years/values/deltas` arrays
-- the current code has been rolled back to point lists to remain compatible with the active extraction pipeline
-- if a company artifact was generated during the compact-format window, rerun ingestion before using it downstream
+- downstream extraction now supports both the active compact schema and older list-style artifacts
+- fresh ingestion runs should be expected to produce the compact array form shown above
 
 ### Current metric aliases used
 
@@ -224,15 +222,15 @@ Current ingestion-relevant dependencies include:
 
 ## Legacy Spike Artifacts
 
-The Meta-specific deterministic spike scripts are still present:
+The Meta-specific deterministic spike scripts are still present under `archive/`:
 
-- `data-ingestion/meta_sec_parser_spike.py`
-- `data-ingestion/meta_sec_parser_validate.py`
+- `archive/meta_sec_parser_spike.py`
+- `archive/meta_sec_parser_validate.py`
 
 And historical outputs under:
 
-- `data-ingestion/outputs/meta_*`
-- `data-ingestion/outputs/meta_sections/*`
+- `archive/outputs/meta_*`
+- `archive/outputs/meta_sections/*`
 
 These are useful references but are no longer the main ingestion entrypoint.
 

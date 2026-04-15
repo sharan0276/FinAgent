@@ -1,0 +1,1617 @@
+{
+  "schema_version": "data_extraction_v1",
+  "model_name": "ProsusAI/finbert",
+  "run_timestamp": "2026-04-15T18:32:00.798331+00:00",
+  "ticker": "QCOM",
+  "company_name": "QUALCOMM INC/DE",
+  "cik": "0000804328",
+  "filing_year": 2023,
+  "filing_date": "2023-11-01",
+  "accession": "0000804328-23-000055",
+  "parser_mode": "sec_parser",
+  "source_artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\QCOM\\complete_ingestion.json",
+  "processed_sections": [
+    "item_1a_risk_factors",
+    "item_1c_cybersecurity",
+    "item_7_mda",
+    "item_7a_market_risk"
+  ],
+  "skipped_sections": [
+    "item_3_legal"
+  ],
+  "numeric_deltas": {
+    "Revenues": {
+      "current_value": 35820000000.0,
+      "previous_value": 44200000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "Revenues",
+      "previous_tag": "Revenues",
+      "delta_percent": -18.959276018099548,
+      "label": "moderate_decline",
+      "reason": null
+    },
+    "NetIncome": {
+      "current_value": 7232000000.0,
+      "previous_value": 12936000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetIncomeLoss",
+      "previous_tag": "NetIncomeLoss",
+      "delta_percent": -44.09400123685838,
+      "label": "severe_decline",
+      "reason": null
+    },
+    "Cash": {
+      "current_value": 8450000000.0,
+      "previous_value": 2773000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "previous_tag": "CashAndCashEquivalentsAtCarryingValue",
+      "delta_percent": 204.72412549585286,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "Assets": {
+      "current_value": 51040000000.0,
+      "previous_value": 49014000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "Assets",
+      "previous_tag": "Assets",
+      "delta_percent": 4.133512873872771,
+      "label": "stable",
+      "reason": null
+    },
+    "LongTermDebt": {
+      "current_value": 14484000000.0,
+      "previous_value": 13537000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "LongTermDebt",
+      "previous_tag": "LongTermDebt",
+      "delta_percent": 6.99564157494275,
+      "label": "moderate_increase",
+      "reason": null
+    },
+    "OperatingCashFlow": {
+      "current_value": 11299000000.0,
+      "previous_value": 9096000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "previous_tag": "NetCashProvidedByUsedInOperatingActivities",
+      "delta_percent": 24.219437115215477,
+      "label": "strong_growth",
+      "reason": null
+    },
+    "ResearchAndDevelopment": {
+      "current_value": 8818000000.0,
+      "previous_value": 8194000000.0,
+      "current_end_date": null,
+      "previous_end_date": null,
+      "current_accession": null,
+      "previous_accession": null,
+      "current_tag": "ResearchAndDevelopmentExpense",
+      "previous_tag": "ResearchAndDevelopmentExpense",
+      "delta_percent": 7.615328288991945,
+      "label": "moderate_growth",
+      "reason": null
+    }
+  },
+  "text_candidates": [
+    {
+      "candidate_id": "item_7_mda_1",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 23,
+      "sentence_text": "Key items from fiscal 2023 included: \u2022Revenues were negatively impacted by the weakness in the macroeconomic environment (which negatively impacted consumer demand for smartphones and other devices that incorporate our products and technologies) and our customers drawing down on their inventory (which were at elevated levels).\u2022QCT revenues decreased by 19% in fiscal 2023 compared to the prior year, primarily due to lower handset and IoT revenues.\u2022QTL revenues decreased by 17% in fiscal 2023 compared to the prior year. \u2022We recorded other expenses of $862 million in fiscal 2023, primarily related to restructuring and restructuring-related charges, compared to a $1.1 billion benefit recorded to other income in fiscal 2022 resulting from the 2018 European Commission (EC) fine reversal.\u2022Our effective income tax rate was 1% in fiscal 2023 compared to 13% in the prior year, reflecting certain additional foreign-derived intangible income (FDII) deductions in fiscal 2023.",
+      "previous_sentence": "Fiscal 2023 Overview Revenues were $35.8 billion, a decrease of 19% compared to revenues of $44.2 billion in fiscal 2022, with net income of $7.2 billion, a decrease of 44% compared to net income of $12.9 billion in fiscal 2022.",
+      "next_sentence": "Results of Operations Revenues (in millions)20232022ChangeEquipment and services$30,028 $37,171 $(7,143)Licensing5,792 7,029 (1,237)$35,820 $44,200 $(8,380) The decrease in revenues in fiscal 2023 was primarily due to: - $7.2 billion in lower equipment and services revenue from our QCT segment - $1.1 billion in lower licensing revenues from our QTL segment Costs and Expenses (in millions, except percentages)20232022ChangeCost of revenues$15,869 $18,635 $(2,766)Gross margin 56 %58 % Gross margin percentage decreased in fiscal 2023 primarily due to a decrease in QCT gross margin.",
+      "risk_score": 0.972493588924408,
+      "finbert_probs": {
+        "positive": 0.010303745046257973,
+        "neutral": 0.0172027088701725,
+        "negative": 0.972493588924408
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_2",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 24,
+      "sentence_text": "Results of Operations Revenues (in millions)20232022ChangeEquipment and services$30,028 $37,171 $(7,143)Licensing5,792 7,029 (1,237)$35,820 $44,200 $(8,380) The decrease in revenues in fiscal 2023 was primarily due to: - $7.2 billion in lower equipment and services revenue from our QCT segment - $1.1 billion in lower licensing revenues from our QTL segment Costs and Expenses (in millions, except percentages)20232022ChangeCost of revenues$15,869 $18,635 $(2,766)Gross margin 56 %58 % Gross margin percentage decreased in fiscal 2023 primarily due to a decrease in QCT gross margin.",
+      "previous_sentence": "Key items from fiscal 2023 included: \u2022Revenues were negatively impacted by the weakness in the macroeconomic environment (which negatively impacted consumer demand for smartphones and other devices that incorporate our products and technologies) and our customers drawing down on their inventory (which were at elevated levels).\u2022QCT revenues decreased by 19% in fiscal 2023 compared to the prior year, primarily due to lower handset and IoT revenues.\u2022QTL revenues decreased by 17% in fiscal 2023 compared to the prior year. \u2022We recorded other expenses of $862 million in fiscal 2023, primarily related to restructuring and restructuring-related charges, compared to a $1.1 billion benefit recorded to other income in fiscal 2022 resulting from the 2018 European Commission (EC) fine reversal.\u2022Our effective income tax rate was 1% in fiscal 2023 compared to 13% in the prior year, reflecting certain additional foreign-derived intangible income (FDII) deductions in fiscal 2023.",
+      "next_sentence": "20232022 ChangeResearch and development$8,818 $8,194 $624 % of revenues25 %19 % The increase in research and development expenses in fiscal 2023 was due to:+ $375 million increase in share-based compensation expense+ $125 million increase in expenses driven by revaluation of our deferred compensation obligation on higher relative stock market performance+ $124 million increase driven by higher costs related to the development of wireless and integrated circuit technologies (including 5G and application processor technologies), primarily driven by an increase in employee-related expenses (which included lower employee cash incentive program costs) 20232022ChangeSelling, general and administrative$2,483 $2,570 $(87)% of revenues7 %6 % The decrease in selling, general and administrative expenses in fiscal 2023 was primarily due to:- $109 million decrease in employee-related expenses (which included lower employee cash incentive program costs)- $95 million decrease in acquisition-related expenses, primarily related to the Veoneer transaction which closed in the third quarter of fiscal 2022 + $99 million increase in expenses driven by revaluation of our deferred compensation obligation on higher relative stock market performance20232022ChangeOther expense (income)$862 $(1,059)$1,921 Other expense in fiscal 2023 consisted of $712 million in restructuring and restructuring-related charges (substantially all of which related to severance costs) resulting from certain cost reduction actions initiated in fiscal 2023, and a $150 million intangible asset impairment charge related to in-process research and development.",
+      "risk_score": 0.9714146852493286,
+      "finbert_probs": {
+        "positive": 0.007207108661532402,
+        "neutral": 0.02137817069888115,
+        "negative": 0.9714146852493286
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_3",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 332,
+      "sentence_text": "Periods of downturns have been characterized by diminished demand for end-user products, high inventory levels, excess or obsolete inventory adjustments or reserves, underutilization of manufacturing capacity, changes in revenue mix and erosion of average selling prices.",
+      "previous_sentence": "The semiconductor industry is highly cyclical, volatile, subject to downturns and characterized by constant and rapid technological change, price erosion, evolving technical standards, frequent new product introductions, short product life cycles and fluctuations in product supply and demand.",
+      "next_sentence": "We expect our business to continue to be subject to such cyclical downturns.",
+      "risk_score": 0.9711467027664185,
+      "finbert_probs": {
+        "positive": 0.008485105820000172,
+        "neutral": 0.020368175581097603,
+        "negative": 0.9711467027664185
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_4",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 105,
+      "sentence_text": "If we are unable to fully meet customer demand, this could result in lost sales opportunities, reduced revenue growth and harm to our customer relationships.",
+      "previous_sentence": "Our ability to meet increased demand for our products has been in the past and may in the future be limited due to the inability to obtain the additional manufacturing, assembly and test capacity necessary to fully meet such demand.",
+      "next_sentence": "These issues may be exacerbated if customers overstate their expected demand requirements in order to procure additional supply, which could negatively impact our ability to forecast and to allocate supply appropriately among our customers.",
+      "risk_score": 0.9693707823753357,
+      "finbert_probs": {
+        "positive": 0.009000358171761036,
+        "neutral": 0.02162887342274189,
+        "negative": 0.9693707823753357
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_5",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 118,
+      "sentence_text": "Due to the factors above, we are currently experiencing, and expect to continue to experience in the near term, such underutilization of capacity at our manufacturing facilities.",
+      "previous_sentence": "As a result, from time to time our manufacturing facilities operate at lower capacity levels, while the fixed costs associated with such facilities continue to be incurred, resulting in lower gross profit.",
+      "next_sentence": "We are subject to many complex environmental, health and safety laws, regulations and rules in each jurisdiction in which we operate our manufacturing (and research and development) facilities.",
+      "risk_score": 0.9689963459968567,
+      "finbert_probs": {
+        "positive": 0.012258358299732208,
+        "neutral": 0.018745291978120804,
+        "negative": 0.9689963459968567
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_6",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 315,
+      "sentence_text": "Furthermore, any such litigation could severely disrupt the supply of our products and the businesses of our chipset customers and their customers, which in turn could harm our relationships with them and could result in a decline in our chipset sales or a reduction in our licensees\u2019 sales, causing a corresponding decline in our chipset or licensing revenues.",
+      "previous_sentence": "Reimbursements under indemnification arrangements could have an adverse effect on our results of operations and cash flows.",
+      "next_sentence": "Any claims, regardless of their merit, could be time consuming to address, result in costly litigation, divert the efforts of our technical and management personnel and/or cause product release or shipment delays, any of which could have an adverse effect on our results of operations and cash flows.We may continue to be involved in litigation and may have to appear in front of administrative bodies (such as the United States International Trade Commission) to defend against patent assertions against our products by companies, some of whom are attempting to gain competitive advantage or leverage in licensing negotiations.",
+      "risk_score": 0.9679727554321289,
+      "finbert_probs": {
+        "positive": 0.007776922080665827,
+        "neutral": 0.02425031177699566,
+        "negative": 0.9679727554321289
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_7",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 319,
+      "sentence_text": "In addition, a negative outcome in any such proceeding could severely disrupt the business of our customers and their wireless operator customers, which in turn could harm our relationships with them and could result in a decline in our chipset sales or a reduction in our licensees\u2019 sales, causing corresponding declines in our chipset or licensing revenues.",
+      "previous_sentence": "Further, a governmental body in a particular country or region may assert, and may be successful in imposing, remedies with effects that extend beyond the borders of that country or region.",
+      "next_sentence": "Our use of open source software may harm our business.",
+      "risk_score": 0.9675167202949524,
+      "finbert_probs": {
+        "positive": 0.007756759878247976,
+        "neutral": 0.02472648024559021,
+        "negative": 0.9675167202949524
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_8",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 22,
+      "sentence_text": "Consequently, to the extent Apple takes device share from our customers who purchase our integrated modem and application processor products, our revenues and margins may be negatively impacted.The mobile industry has also experienced slowing growth in the premium-tier device segment due to, among other factors, a maturing premium-tier smartphone industry in which demand is increasingly driven by new product launches and innovation cycles.",
+      "previous_sentence": "Apple purchases our MDM (or thin modem) products, which do not include our integrated application processor technology, and which have lower revenue and margin contributions than our combined modem and application processor products.",
+      "next_sentence": "A reduction in sales of premium-tier devices, a reduction in sales of our premium-tier integrated circuit products (which have a higher revenue and margin contribution than our lower-tier integrated circuit products), a shift in share away from OEMs that utilize our premium-tier products, or a shift in consumer demand in favor of refurbished or secondhand devices, would reduce our revenues and margins and may harm our ability to achieve or sustain expected financial results.",
+      "risk_score": 0.967401921749115,
+      "finbert_probs": {
+        "positive": 0.010799488984048367,
+        "neutral": 0.021798627451062202,
+        "negative": 0.967401921749115
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_9",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 105,
+      "sentence_text": "Although we believe these estimates are reasonable, any significant changes in customer demand that are less favorable than our previous estimates may require additional inventory write-downs and would be reflected in cost of sales resulting in a negative impact to our gross margin in that period.",
+      "previous_sentence": "We measure inventory at the lower of cost or net realizable value considering judgments and estimates related to future customer demand and other market conditions, such as the impact of certain capacity constraints experienced across the semiconductor industry through the third quarter of fiscal 2022, as well as the impact of the macroeconomic environment in fiscal 2022 and 2023, which negatively impacted consumer demand for smartphones and other devices that incorporate our products and technologies.",
+      "next_sentence": "For fiscal 2023 and 2022, the net effect from changes in this estimate and related reserves was less than 2% of cost of revenues during each period.",
+      "risk_score": 0.9655573964118958,
+      "finbert_probs": {
+        "positive": 0.009126938879489899,
+        "neutral": 0.025315776467323303,
+        "negative": 0.9655573964118958
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_10",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 117,
+      "sentence_text": "As a result, from time to time our manufacturing facilities operate at lower capacity levels, while the fixed costs associated with such facilities continue to be incurred, resulting in lower gross profit.",
+      "previous_sentence": "We may be faced with a decline in the utilization rates of our manufacturing facilities due to decreases in demand for our products, including in less favorable industry or macroeconomic environments, or due to our failure to win and/or retain designs with OEMs.",
+      "next_sentence": "Due to the factors above, we are currently experiencing, and expect to continue to experience in the near term, such underutilization of capacity at our manufacturing facilities.",
+      "risk_score": 0.9649258255958557,
+      "finbert_probs": {
+        "positive": 0.011972891166806221,
+        "neutral": 0.02310124784708023,
+        "negative": 0.9649258255958557
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_11",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 93,
+      "sentence_text": "Our ability, and that of our suppliers, to develop or maintain leading process technologies, including transitions to smaller geometry process technologies (which adds risk to manufacturing yields and reliability), and to effectively compete with the manufacturing processes and performance of our competitors, could impact our ability to introduce new products and meet customer demand, could increase our costs (possibly decreasing our margins) and could subject us to the risk of excess inventories.",
+      "previous_sentence": "Our arrangements with our suppliers may obligate us to incur costs to manufacture, assemble and test our products that do not decrease at the same rate as decreases in pricing to our customers.",
+      "next_sentence": "Any of the above could negatively impact our business, results of operations and cash flows.Although we have long-term contracts with our suppliers, some of these contracts do not provide for long-term capacity commitments.",
+      "risk_score": 0.964107871055603,
+      "finbert_probs": {
+        "positive": 0.010455824434757233,
+        "neutral": 0.025436315685510635,
+        "negative": 0.964107871055603
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_12",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 334,
+      "sentence_text": "During such downturns, our revenues may decline, and our results of operations and financial condition may be adversely impacted.",
+      "previous_sentence": "We expect our business to continue to be subject to such cyclical downturns.",
+      "next_sentence": "We are currently seeing and expect to continue to see weakness in the macroeconomic environment (negatively impacting consumer demand for smartphones and other devices that incorporate our products and technologies) and elevated inventory levels at certain of our customers (negatively impacting the volume of chipsets they purchase from us until such inventory is depleted).",
+      "risk_score": 0.963597297668457,
+      "finbert_probs": {
+        "positive": 0.009871193207800388,
+        "neutral": 0.026531469076871872,
+        "negative": 0.963597297668457
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_13",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 267,
+      "sentence_text": "In addition, reductions in the average selling prices of our licensees\u2019 products, unless offset by an increase in volumes, would generally decrease total royalties payable to us, negatively impacting our licensing revenues.",
+      "previous_sentence": "Reductions in the average selling prices of our chipset products, without a corresponding increase in volumes, would negatively impact our revenues, and without corresponding decreases in average unit costs, would negatively impact our margins.",
+      "next_sentence": "RISKS RELATED TO PRODUCT DEFECTS OR SECURITY VULNERABILITIES Failures in our products, or in the products of our customers or licensees, including those resulting from security vulnerabilities, defects or errors, could harm our business.",
+      "risk_score": 0.9633505344390869,
+      "finbert_probs": {
+        "positive": 0.013191131874918938,
+        "neutral": 0.023458264768123627,
+        "negative": 0.9633505344390869
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_14",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 338,
+      "sentence_text": "Further, inflationary pressure may increase our costs, including employee compensation costs, reduce demand for our products or those of our customers or licensees due to increased prices of those products, or result in employee attrition to the extent our compensation does not keep up with inflation, particularly if our competitors\u2019 compensation does.Our stock price and financial results have fluctuated in the past and are likely to fluctuate in the future.",
+      "previous_sentence": "In addition, our customers\u2019 and licensees\u2019 ability to purchase or pay for our products and intellectual property and network operators\u2019 ability to upgrade their wireless networks could be adversely affected, potentially leading to a reduction, cancellation or delay of orders for our products.",
+      "next_sentence": "Factors that may have a significant impact on the market price of our stock and our financial results include those identified above and throughout this Risk Factors section, as well as: volatility of the stock market in general and technology and semiconductor companies in particular; announcements concerning us, our suppliers, our competitors or our customers or licensees, including any announcement concerning the initiation of, or any developments in, any lawsuit or governmental investigation or proceeding against us; and variations between our actual financial results or guidance and expectations of securities analysts or investors, among others.",
+      "risk_score": 0.9628128409385681,
+      "finbert_probs": {
+        "positive": 0.012636451981961727,
+        "neutral": 0.024550706148147583,
+        "negative": 0.9628128409385681
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_15",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 335,
+      "sentence_text": "We are currently seeing and expect to continue to see weakness in the macroeconomic environment (negatively impacting consumer demand for smartphones and other devices that incorporate our products and technologies) and elevated inventory levels at certain of our customers (negatively impacting the volume of chipsets they purchase from us until such inventory is depleted).",
+      "previous_sentence": "During such downturns, our revenues may decline, and our results of operations and financial condition may be adversely impacted.",
+      "next_sentence": "Until these conditions improve, we expect that both of these dynamics will have a negative impact on our revenues, results of operations and cash flows.A decline in global, regional or local economic conditions, such as we are currently seeing, or a slow-down in economic growth, particularly in geographic regions with high concentrations of wireless voice and data users or high concentrations of our customers or licensees, could also have adverse, wide-ranging effects on our business and financial results, including: a decrease in demand for our products and technologies; a decrease in demand for the products and services of our customers or licensees; the inability of our suppliers to deliver on their supply commitments to us, our inability to supply our products to our customers and/or the inability of our customers or licensees to supply their products to end users; the insolvency of key suppliers, customers or licensees; delays in reporting or payments from our customers or licensees; failures by counterparties; and/or negative effects on wireless device inventories.",
+      "risk_score": 0.9625639319419861,
+      "finbert_probs": {
+        "positive": 0.014178435318171978,
+        "neutral": 0.023257609456777573,
+        "negative": 0.9625639319419861
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_16",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 18,
+      "sentence_text": "Any such reduction in revenues would also impact our cash resources available for other purposes, such as research and development.",
+      "previous_sentence": "A delay of significant purchases, even if only temporary, would reduce our revenues in the period of the delay.",
+      "next_sentence": "Further, the concentration of device share among a few companies, and the corresponding purchasing power of these companies, may result in lower prices for our products, which could have an adverse effect on our revenues and margins.",
+      "risk_score": 0.9622665643692017,
+      "finbert_probs": {
+        "positive": 0.010241306386888027,
+        "neutral": 0.02749207615852356,
+        "negative": 0.9622665643692017
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_17",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 24,
+      "sentence_text": "Any such reduction in revenues would also impact our cash resources available for other purposes, such as research and development.",
+      "previous_sentence": "A reduction in sales of premium-tier devices, a reduction in sales of our premium-tier integrated circuit products (which have a higher revenue and margin contribution than our lower-tier integrated circuit products), a shift in share away from OEMs that utilize our premium-tier products, or a shift in consumer demand in favor of refurbished or secondhand devices, would reduce our revenues and margins and may harm our ability to achieve or sustain expected financial results.",
+      "next_sentence": "Further, while our product and revenue diversification strategies have resulted in an increasing portion of our revenues coming from outside of mobile handsets, e.g., from industries such as automotive and IoT, certain product categories within those industries may in themselves be subject to high levels of customer concentration.",
+      "risk_score": 0.9622665643692017,
+      "finbert_probs": {
+        "positive": 0.010241306386888027,
+        "neutral": 0.02749207615852356,
+        "negative": 0.9622665643692017
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_18",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 146,
+      "sentence_text": "As a result, we may incur increased inventory and manufacturing costs and/or record impairment charges to the extent anticipated sales ultimately do not materialize or are lower than expected.",
+      "previous_sentence": "Further, we typically begin manufacturing our products using our or our customers\u2019 forecasts of demand for our products, which are based on a number of assumptions and estimates and may not be covered by long-term purchase commitments.",
+      "next_sentence": "If we or our customers overestimate demand, or if demand is impacted by factors outside of our or our customers\u2019 control, and such demand is not covered by a binding commitment from our customers, we may experience higher inventory carrying and operating costs and/or increased excess or obsolete inventory or reserve charges, which would negatively impact our results of operations.",
+      "risk_score": 0.9622505903244019,
+      "finbert_probs": {
+        "positive": 0.016410555690526962,
+        "neutral": 0.02133885957300663,
+        "negative": 0.9622505903244019
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_19",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 23,
+      "sentence_text": "A reduction in sales of premium-tier devices, a reduction in sales of our premium-tier integrated circuit products (which have a higher revenue and margin contribution than our lower-tier integrated circuit products), a shift in share away from OEMs that utilize our premium-tier products, or a shift in consumer demand in favor of refurbished or secondhand devices, would reduce our revenues and margins and may harm our ability to achieve or sustain expected financial results.",
+      "previous_sentence": "Consequently, to the extent Apple takes device share from our customers who purchase our integrated modem and application processor products, our revenues and margins may be negatively impacted.The mobile industry has also experienced slowing growth in the premium-tier device segment due to, among other factors, a maturing premium-tier smartphone industry in which demand is increasingly driven by new product launches and innovation cycles.",
+      "next_sentence": "Any such reduction in revenues would also impact our cash resources available for other purposes, such as research and development.",
+      "risk_score": 0.9618315100669861,
+      "finbert_probs": {
+        "positive": 0.011920960620045662,
+        "neutral": 0.02624741941690445,
+        "negative": 0.9618315100669861
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_20",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 39,
+      "sentence_text": "If revenues derived from these customers or licensees decrease or the timing of such revenues fluctuates, our business and results of operations could be negatively affected.\u201d A significant portion of our business is concentrated in China, and the risks of such concentration are exacerbated by U.S./China trade and national security tensions.",
+      "previous_sentence": "See also the Risk Factor titled \u201cWe derive a significant portion of our revenues from a small number of customers and licensees, and particularly from their sale of premium tier handset devices.",
+      "next_sentence": "We derive a significant portion of our revenues from Chinese OEMs, and from non-Chinese OEMs that utilize our integrated circuit products in devices they sell into China, which has the largest number of smartphone users in the world.",
+      "risk_score": 0.9605808854103088,
+      "finbert_probs": {
+        "positive": 0.010119732469320297,
+        "neutral": 0.029299329966306686,
+        "negative": 0.9605808854103088
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_21",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 81,
+      "sentence_text": "If we fail to execute supply strategies that provide supply assurance, technology leadership and reasonable margins, our business and results of operations may be harmed.",
+      "previous_sentence": "RISKS RELATED TO SUPPLY AND MANUFACTURING We depend on a limited number of third-party suppliers for the procurement, manufacture, assembly and testing of our products manufactured in a fabless production model.",
+      "next_sentence": "We are also subject to order and shipment uncertainties that could negatively impact our results of operations.",
+      "risk_score": 0.9601373672485352,
+      "finbert_probs": {
+        "positive": 0.01244945079088211,
+        "neutral": 0.027413245290517807,
+        "negative": 0.9601373672485352
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_22",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 281,
+      "sentence_text": "Other potential adverse impacts of product defects, errors or security vulnerabilities include shipment delays, write-offs of property, plant and equipment and intangible assets, and losses on unfavorable purchase commitments.",
+      "previous_sentence": "In addition, defects, errors or security vulnerabilities in our products could result in failure to achieve market acceptance, a loss of design wins, a shifting of business to our competitors, and litigation or regulatory action against us, and could harm our reputation, our relationships with customers and partners and our ability to attract new customers, as well as the perceptions of our brand.",
+      "next_sentence": "In addition, defects, errors or security vulnerabilities in the products of our customers or licensees could cause a delay or decrease in demand for the products into which our products are integrated, and thus for our products.In addition, the occurrence of defects, errors or security vulnerabilities may give rise to product liability claims, particularly if such defects, errors or security vulnerabilities in our products or the technology we use, or the products into which they are integrated, result in personal injury or death, and could result in significant costs, expenses and losses.",
+      "risk_score": 0.9599775075912476,
+      "finbert_probs": {
+        "positive": 0.008524677716195583,
+        "neutral": 0.031497783958911896,
+        "negative": 0.9599775075912476
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_23",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 170,
+      "sentence_text": "Failure to obtain or maintain the necessary cybersecurity certifications could result in loss of future revenues, damage to our customer relationships and reputation, and a shift of business to our competitors.",
+      "previous_sentence": "In addition, our contracts with certain of our customers require us to obtain cybersecurity certifications for our IT systems.",
+      "next_sentence": "RISKS RELATED TO HUMAN CAPITAL MANAGEMENT We may not be able to attract or retain qualified employees.",
+      "risk_score": 0.9597433805465698,
+      "finbert_probs": {
+        "positive": 0.008421058766543865,
+        "neutral": 0.03183557093143463,
+        "negative": 0.9597433805465698
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_24",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 239,
+      "sentence_text": "The occurrence of any of the above could have a material adverse effect on our business, revenues, results of operations, cash flows and financial condition, and our stock price could decline, possibly significantly, in which case we may have to significantly cut costs and other uses of cash, including in research and development, significantly impairing our ability to maintain product and technology leadership and invest in next generation technologies.",
+      "previous_sentence": "In addition, we may be sued for alleged overpayments of past royalties paid to us, including private antitrust actions seeking treble damages under U.S. antitrust laws.",
+      "next_sentence": "Further, depending on the breadth and severity of the circumstances above, we may have to reduce, suspend or eliminate our capital return programs, and our ability to timely pay our indebtedness may be impacted.These challenges have required, and may in the future require, the investment of significant management time and attention and have resulted, and may in the future result, in significant legal costs.",
+      "risk_score": 0.9595808982849121,
+      "finbert_probs": {
+        "positive": 0.009961276315152645,
+        "neutral": 0.03045785054564476,
+        "negative": 0.9595808982849121
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_25",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 279,
+      "sentence_text": "Such defects, errors or security vulnerabilities could give rise to significant costs, including costs related to developing solutions, recalling products, repairing or replacing defective products, writing down defective inventory or indemnification obligations under our agreements, and could result in the loss of sales and divert the attention of our engineering personnel from our product development efforts.",
+      "previous_sentence": "Failure of our products to perform to specifications, meet certain regulatory or industry standards (including product safety and information security standards, which may differ by region, geography and industry, and which are particularly stringent in the automotive industry), or other product defects, errors or security vulnerabilities, could lead to substantial damage to the products we sell to our customers, the devices into which our products are integrated and the end users of such devices, and potentially to our customers\u2019 IT infrastructure.",
+      "next_sentence": "In addition, defects, errors or security vulnerabilities in our products could result in failure to achieve market acceptance, a loss of design wins, a shifting of business to our competitors, and litigation or regulatory action against us, and could harm our reputation, our relationships with customers and partners and our ability to attract new customers, as well as the perceptions of our brand.",
+      "risk_score": 0.9593809247016907,
+      "finbert_probs": {
+        "positive": 0.0081670256331563,
+        "neutral": 0.03245198354125023,
+        "negative": 0.9593809247016907
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_26",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 342,
+      "sentence_text": "Securities litigation could result in substantial uninsured costs and divert management\u2019s attention and our resources.",
+      "previous_sentence": "We are and may in the future be the target of securities litigation.",
+      "next_sentence": "Certain legal matters, including certain securities litigation brought against us, are described in this Annual Report in \u201cNotes to Consolidated Financial Statements, Note 7.",
+      "risk_score": 0.9589188694953918,
+      "finbert_probs": {
+        "positive": 0.009475111961364746,
+        "neutral": 0.031606003642082214,
+        "negative": 0.9589188694953918
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_27",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 116,
+      "sentence_text": "We may be faced with a decline in the utilization rates of our manufacturing facilities due to decreases in demand for our products, including in less favorable industry or macroeconomic environments, or due to our failure to win and/or retain designs with OEMs.",
+      "previous_sentence": "Our manufacturing facilities are characterized by a higher portion of fixed costs relative to a fabless model.",
+      "next_sentence": "As a result, from time to time our manufacturing facilities operate at lower capacity levels, while the fixed costs associated with such facilities continue to be incurred, resulting in lower gross profit.",
+      "risk_score": 0.9586687088012695,
+      "finbert_probs": {
+        "positive": 0.013117825612425804,
+        "neutral": 0.028213560581207275,
+        "negative": 0.9586687088012695
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_28",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 132,
+      "sentence_text": "If tsunamis, flooding, earthquakes, volcanic eruptions, drought or other natural disasters, effects of climate change, acts of war or other geopolitical conflicts were to damage, destroy or disrupt any of these facilities, it could disrupt our operations, cease or delay production and shipments of inventory and result in costly repairs, replacements or other costs and lost business.",
+      "previous_sentence": "In addition, climate change could cause certain natural disasters, such as drought, wildfires, storms, flooding or rising sea levels, to occur more frequently or with greater intensity, which could pose physical risks to our manufacturing facilities or our suppliers\u2019 facilities, could disrupt the availability of water necessary for the operation of such facilities, and could increase or decrease temperatures resulting in increased operating costs and/or business disruption.We have manufacturing facilities in Asia and Europe, and the primary warehouses where we store finished goods are located in Asia.",
+      "next_sentence": "In addition, natural disasters, effects of climate change, acts of war or other geopolitical conflicts may result in disruptions in transportation, distribution channels and supply chains and significant increases in the prices of raw materials.",
+      "risk_score": 0.9586202502250671,
+      "finbert_probs": {
+        "positive": 0.007898758165538311,
+        "neutral": 0.033480919897556305,
+        "negative": 0.9586202502250671
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_29",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 44,
+      "sentence_text": "We believe it is important that we remain a leader in 5G technology development, standardization, intellectual property creation and licensing, and a leading developer and supplier of 5G integrated circuit products in order to sustain and grow our business long term.As we look forward to the next several quarters:\u2022We expect certain customers will continue to draw down on their inventory (which remains at elevated levels), which will continue to have a negative impact on our revenues, results of operations and cash flows.",
+      "previous_sentence": "We believe that 5G combined with high-performance, low-power processing and on-device intelligence will continue to drive adoption of certain technologies that are already commonly used in smartphones by industries and applications beyond mobile handsets, such as automotive and IoT.",
+      "next_sentence": "This dynamic, along with weaker consumer demand for smartphones and other devices that incorporate our products and technologies in fiscal 2023 relative to the prior year, have also contributed to our elevated inventory levels and contribute to the inherent uncertainties in estimating future customer demand, which may increase excess or obsolete inventory or reserve charges if we overestimate such demand, negatively impacting our results of operations and cash flows.\u2022We expect to continue to see product cost increases from certain of our key semiconductor wafer suppliers.\u2022We expect commercial 5G network deployments and device launches will continue.\u2022We expect continued intense competition, including from vertical integration by certain of our customers (for example, Samsung and Huawei).\u2022Given the continued uncertainty in the macroeconomic and demand environment, we have initiated certain restructuring actions in the fourth quarter of fiscal 2023 to enable investments in key growth and diversification opportunities.",
+      "risk_score": 0.9585715532302856,
+      "finbert_probs": {
+        "positive": 0.0156665351241827,
+        "neutral": 0.025761965662240982,
+        "negative": 0.9585715532302856
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_30",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 22,
+      "sentence_text": "Fiscal 2023 Overview Revenues were $35.8 billion, a decrease of 19% compared to revenues of $44.2 billion in fiscal 2022, with net income of $7.2 billion, a decrease of 44% compared to net income of $12.9 billion in fiscal 2022.",
+      "previous_sentence": "Further, the trends for QTL have been, and may in the future be, impacted by disputes and/or resolutions with licensees and/or governmental investigations or proceedings.",
+      "next_sentence": "Key items from fiscal 2023 included: \u2022Revenues were negatively impacted by the weakness in the macroeconomic environment (which negatively impacted consumer demand for smartphones and other devices that incorporate our products and technologies) and our customers drawing down on their inventory (which were at elevated levels).\u2022QCT revenues decreased by 19% in fiscal 2023 compared to the prior year, primarily due to lower handset and IoT revenues.\u2022QTL revenues decreased by 17% in fiscal 2023 compared to the prior year. \u2022We recorded other expenses of $862 million in fiscal 2023, primarily related to restructuring and restructuring-related charges, compared to a $1.1 billion benefit recorded to other income in fiscal 2022 resulting from the 2018 European Commission (EC) fine reversal.\u2022Our effective income tax rate was 1% in fiscal 2023 compared to 13% in the prior year, reflecting certain additional foreign-derived intangible income (FDII) deductions in fiscal 2023.",
+      "risk_score": 0.9566614031791687,
+      "finbert_probs": {
+        "positive": 0.0325532890856266,
+        "neutral": 0.010785301215946674,
+        "negative": 0.9566614031791687
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_31",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 336,
+      "sentence_text": "Until these conditions improve, we expect that both of these dynamics will have a negative impact on our revenues, results of operations and cash flows.A decline in global, regional or local economic conditions, such as we are currently seeing, or a slow-down in economic growth, particularly in geographic regions with high concentrations of wireless voice and data users or high concentrations of our customers or licensees, could also have adverse, wide-ranging effects on our business and financial results, including: a decrease in demand for our products and technologies; a decrease in demand for the products and services of our customers or licensees; the inability of our suppliers to deliver on their supply commitments to us, our inability to supply our products to our customers and/or the inability of our customers or licensees to supply their products to end users; the insolvency of key suppliers, customers or licensees; delays in reporting or payments from our customers or licensees; failures by counterparties; and/or negative effects on wireless device inventories.",
+      "previous_sentence": "We are currently seeing and expect to continue to see weakness in the macroeconomic environment (negatively impacting consumer demand for smartphones and other devices that incorporate our products and technologies) and elevated inventory levels at certain of our customers (negatively impacting the volume of chipsets they purchase from us until such inventory is depleted).",
+      "next_sentence": "In addition, our customers\u2019 and licensees\u2019 ability to purchase or pay for our products and intellectual property and network operators\u2019 ability to upgrade their wireless networks could be adversely affected, potentially leading to a reduction, cancellation or delay of orders for our products.",
+      "risk_score": 0.9560526609420776,
+      "finbert_probs": {
+        "positive": 0.009432144463062286,
+        "neutral": 0.034515172243118286,
+        "negative": 0.9560526609420776
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_32",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 91,
+      "sentence_text": "Future consolidation of foundry suppliers could also increase our vulnerability to sole- or limited-source arrangements and reduce our suppliers\u2019 willingness to negotiate pricing, which could negatively impact our ability to achieve cost reductions, increase our manufacturing costs and limit the amount of capacity available to us.",
+      "previous_sentence": "Further, the elimination or limitation of a foundry supplier\u2019s ability to manufacture components or products for us due to trade or national security protection policies could increase our vulnerability to sole- or limited-source arrangements and limit or prevent us from procuring critical components or products from those suppliers.",
+      "next_sentence": "Our arrangements with our suppliers may obligate us to incur costs to manufacture, assemble and test our products that do not decrease at the same rate as decreases in pricing to our customers.",
+      "risk_score": 0.9548366069793701,
+      "finbert_probs": {
+        "positive": 0.013363477773964405,
+        "neutral": 0.031799979507923126,
+        "negative": 0.9548366069793701
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_33",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 25,
+      "sentence_text": "As a result, we could experience unanticipated gains or losses on anticipated foreign currency cash flows, as well as economic loss with respect to the recoverability of investments.",
+      "previous_sentence": "We may hedge currency exposures associated with certain assets and liabilities denominated in nonfunctional currencies and certain anticipated nonfunctional currency transactions.",
+      "next_sentence": "While we may hedge certain transactions with non-U.S. customers, declines in currency values in certain regions may, if not reversed, adversely affect future product sales because our products may become more expensive to purchase in the countries of the affected currencies.Our analysis methods used to assess and mitigate the risks discussed above should not be considered projections of future risks.",
+      "risk_score": 0.9548265933990479,
+      "finbert_probs": {
+        "positive": 0.020355092361569405,
+        "neutral": 0.024818286299705505,
+        "negative": 0.9548265933990479
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_34",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 147,
+      "sentence_text": "If we or our customers overestimate demand, or if demand is impacted by factors outside of our or our customers\u2019 control, and such demand is not covered by a binding commitment from our customers, we may experience higher inventory carrying and operating costs and/or increased excess or obsolete inventory or reserve charges, which would negatively impact our results of operations.",
+      "previous_sentence": "As a result, we may incur increased inventory and manufacturing costs and/or record impairment charges to the extent anticipated sales ultimately do not materialize or are lower than expected.",
+      "next_sentence": "RISKS RELATED TO CYBERSECURITY OR MISAPPROPRIATION OF OUR CRITICAL INFORMATION Our business and operations could suffer in the event of security breaches of our IT systems, or other misappropriation of our technology, intellectual property or other proprietary or confidential information.",
+      "risk_score": 0.9547783136367798,
+      "finbert_probs": {
+        "positive": 0.009707581251859665,
+        "neutral": 0.03551407903432846,
+        "negative": 0.9547783136367798
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_35",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 283,
+      "sentence_text": "If a product liability claim is brought against us, the cost of defending the claim could be significant, and could divert the attention of our technical and management personnel and harm our business, even if we are successful.",
+      "previous_sentence": "In addition, defects, errors or security vulnerabilities in the products of our customers or licensees could cause a delay or decrease in demand for the products into which our products are integrated, and thus for our products.In addition, the occurrence of defects, errors or security vulnerabilities may give rise to product liability claims, particularly if such defects, errors or security vulnerabilities in our products or the technology we use, or the products into which they are integrated, result in personal injury or death, and could result in significant costs, expenses and losses.",
+      "next_sentence": "We may be named in product liability claims even if there is no evidence that our products caused the damage in question, and even though we may have indemnity from our customers, and such claims could result in significant costs and expenses.",
+      "risk_score": 0.9540887475013733,
+      "finbert_probs": {
+        "positive": 0.009850931353867054,
+        "neutral": 0.03606034815311432,
+        "negative": 0.9540887475013733
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_36",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 247,
+      "sentence_text": "However, the timing and scale of certain such deployments were delayed due to the COVID-19 pandemic, and future deployments may similarly be delayed for reasons that are beyond our control.Our revenues and growth in revenues could be negatively impacted, our business may be harmed and our substantial investments in these technologies may not provide us an adequate return, if: our customers\u2019 and licensees\u2019 revenues and sales of products, particularly premium-tier handset products, and services using these technologies, or average selling prices of such products, decline due to, for example, the maturity of smartphone penetration in developed regions, including China; we do not continue to maintain our intellectual property and technical leadership in 5G, including in ongoing 5G standardization efforts; we are unable to drive the adoption of our products into networks and devices, including devices beyond mobile handsets; consumers\u2019 rates of replacement of smartphones and other devices decline; or there is a shift in consumer demand away from new devices in favor of refurbished or secondhand devices.",
+      "previous_sentence": "Commercial deployments of 5G networks and devices have begun and are expected to continue for the foreseeable future.",
+      "next_sentence": "Our industry is subject to intense competition in an environment of rapid technological change.",
+      "risk_score": 0.9511809945106506,
+      "finbert_probs": {
+        "positive": 0.014201846905052662,
+        "neutral": 0.034617215394973755,
+        "negative": 0.9511809945106506
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_37",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 134,
+      "sentence_text": "Further, health crises, including epidemics or pandemics, such as the COVID-19 pandemic, and government and business responses thereto, could affect our manufacturing facilities, including by resulting in quarantines and/or closures, which could result in disruptions to and potential closures of our manufacturing operations.",
+      "previous_sentence": "In addition, natural disasters, effects of climate change, acts of war or other geopolitical conflicts may result in disruptions in transportation, distribution channels and supply chains and significant increases in the prices of raw materials.",
+      "next_sentence": "Our manufacturing operations could also be disrupted by cyber-attacks on our IT systems, as described in the Risk Factor below titled \u201cOur business and operations could suffer in the event of security breaches of our IT systems, or other misappropriation of our technology, intellectual property or other proprietary or confidential information.\u201dOur manufacturing operations depend on securing raw materials, equipment and other supplies in adequate quality and quantity in a timely manner from multiple suppliers, and in some cases, we rely on a limited number of suppliers, including in some cases sole suppliers, particularly in Asia.",
+      "risk_score": 0.9511616230010986,
+      "finbert_probs": {
+        "positive": 0.008156037889420986,
+        "neutral": 0.04068238288164139,
+        "negative": 0.9511616230010986
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_38",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 111,
+      "sentence_text": "If we, or our customers, overestimate demand, or if demand is impacted by factors outside of our or our customers\u2019 control, and such demand is not covered by a binding commitment from our customers, we may experience increased excess or obsolete inventory or reserve charges, which would negatively impact our results of operations.",
+      "previous_sentence": "As a result, the orders we place with our suppliers are generally only partially covered by commitments from our customers.",
+      "next_sentence": "Further, to the extent our customers procure supply of our integrated circuit products beyond their current needs (i.e., build up inventory of our integrated circuit products), whether due to concerns over supply, overestimating demand and/or a decline in macroeconomic conditions, or otherwise, they may not purchase expected quantities of our products in subsequent quarters, which may negatively impact our revenues, results of operations and cash flows in such quarters.See also the Risk Factor below titled \u201cThere are numerous risks associated with the operation and control of our manufacturing facilities, including a higher portion of fixed costs relative to a fabless model; environmental compliance and liability; impacts related to climate change; exposure to natural disasters, health crises, geopolitical conflicts and cyber-attacks; timely supply of equipment and materials; and various manufacturing issues\u201d as similar risks, as well as additional risks, may be applicable to our third-party suppliers\u2019 manufacturing facilities, which could result in disruptions to our business or additional costs to us, and negatively impact our results of operations.",
+      "risk_score": 0.9510595798492432,
+      "finbert_probs": {
+        "positive": 0.009642486460506916,
+        "neutral": 0.03929797187447548,
+        "negative": 0.9510595798492432
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_39",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 182,
+      "sentence_text": "This requirement for greater in-office attendance may not meet the needs or expectations of our employees and could negatively impact our ability to attract and retain employees, particularly if it is perceived as less favorable compared to other companies\u2019 remote work policies.",
+      "previous_sentence": "In fiscal 2023, we implemented changes to our hybrid work model that require the majority of our employees to spend the majority of their working time in the office.",
+      "next_sentence": "If we are unable to attract or retain qualified employees or fail to maintain employee productivity due to any of the factors described above or for other reasons, our business could be adversely impacted.",
+      "risk_score": 0.9498711824417114,
+      "finbert_probs": {
+        "positive": 0.012578875757753849,
+        "neutral": 0.037549953907728195,
+        "negative": 0.9498711824417114
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_40",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 301,
+      "sentence_text": "Any action we take to enforce our contract or intellectual property rights could be costly and could absorb significant management time and attention, which, in turn, could negatively impact our results of operations and cash flows.",
+      "previous_sentence": "As a result of any such litigation or arbitration, we could lose our ability to enforce one or more patents, portions of our license agreements could be determined to be invalid or unenforceable (which may in turn result in other licensees either not complying with their existing license agreements or initiating litigation or arbitration), license terms (including but not limited to royalty rates for the use of our intellectual property) could be imposed that are less favorable to us than existing terms, and we could incur substantial costs.",
+      "next_sentence": "Further, even a positive resolution to our enforcement efforts may take time to conclude, which may reduce our revenues and cash resources available for other purposes, such as research and development, in the periods prior to conclusion.",
+      "risk_score": 0.9495890736579895,
+      "finbert_probs": {
+        "positive": 0.008803251199424267,
+        "neutral": 0.04160771518945694,
+        "negative": 0.9495890736579895
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_41",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 16,
+      "sentence_text": "These efforts may not require or result in purchase commitments from such customers or we may have lower purchases from such customers than expected, and consequently, we may not achieve the anticipated revenues from these efforts, or these efforts may result in non-recoverable costs.The loss of any one of our significant customers, a reduction in the purchases of our products by any of these customers or the cancellation of significant purchases by any of these customers, whether due to the use of their own integrated circuit products or our competitors\u2019 integrated circuit products, government restrictions, a decline in global, regional or local economic conditions, a decline in consumer demand (or a shift in consumer demand away from new devices in favor of refurbished or secondhand devices), elevated inventory levels at our customers or otherwise, would reduce our revenues and could harm our ability to achieve or sustain expected results of operations.",
+      "previous_sentence": "See also the Risk Factor titled \u201cA significant portion of our business is concentrated in China, and the risks of such concentration are exacerbated by U.S./China trade and national security tensions.\u201dIn addition, we spend a significant amount of engineering and development time, funds and resources in understanding our key customers\u2019 feedback and/or specifications and attempt to incorporate such input into our product launches and technologies.",
+      "next_sentence": "A delay of significant purchases, even if only temporary, would reduce our revenues in the period of the delay.",
+      "risk_score": 0.9482528567314148,
+      "finbert_probs": {
+        "positive": 0.01108777429908514,
+        "neutral": 0.04065937176346779,
+        "negative": 0.9482528567314148
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_42",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 106,
+      "sentence_text": "These issues may be exacerbated if customers overstate their expected demand requirements in order to procure additional supply, which could negatively impact our ability to forecast and to allocate supply appropriately among our customers.",
+      "previous_sentence": "If we are unable to fully meet customer demand, this could result in lost sales opportunities, reduced revenue growth and harm to our customer relationships.",
+      "next_sentence": "The above issues may also be exacerbated with respect to our platform solutions, which already entail a great deal of complexity due to differing lead-times, technologies and suppliers for each integrated circuit product included in such solutions.",
+      "risk_score": 0.9479743838310242,
+      "finbert_probs": {
+        "positive": 0.014490194618701935,
+        "neutral": 0.03753545135259628,
+        "negative": 0.9479743838310242
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_43",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 14,
+      "sentence_text": "See also the Risk Factor titled \u201cOur business, particularly our semiconductor business, may suffer as a result of our customers vertically integrating (i.e., developing their own integrated circuit products).\u201dFurther, political actions, including trade and/or national security protection policies, or other actions by governments, particularly the U.S. and Chinese governments, have in the past, currently are and could in the future limit or prevent us from transacting business with certain of our customers, limit, prevent or discourage those customers from transacting business with us, or make it more expensive to do so, any of which could also significantly reduce the revenues we derive from these customers.",
+      "previous_sentence": "Composition of Certain Financial Statement Items - Concentrations.\u201d In addition, a number of our largest customers have developed, are developing or may develop their own integrated circuit products, or may choose our competitors\u2019 integrated circuit products, which they have in the past utilized, currently utilize and may in the future utilize in some or all of their devices, rather than our products, which could significantly reduce the revenues we derive from these customers.",
+      "next_sentence": "See also the Risk Factor titled \u201cA significant portion of our business is concentrated in China, and the risks of such concentration are exacerbated by U.S./China trade and national security tensions.\u201dIn addition, we spend a significant amount of engineering and development time, funds and resources in understanding our key customers\u2019 feedback and/or specifications and attempt to incorporate such input into our product launches and technologies.",
+      "risk_score": 0.947893500328064,
+      "finbert_probs": {
+        "positive": 0.014016995206475258,
+        "neutral": 0.03808954730629921,
+        "negative": 0.947893500328064
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_44",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 46,
+      "sentence_text": "We anticipate these actions to be substantially completed in the first half of fiscal 2024.\u2022Current U.S./China trade relations and/or national security protection policies may negatively impact our business, growth prospects and results of operations.",
+      "previous_sentence": "This dynamic, along with weaker consumer demand for smartphones and other devices that incorporate our products and technologies in fiscal 2023 relative to the prior year, have also contributed to our elevated inventory levels and contribute to the inherent uncertainties in estimating future customer demand, which may increase excess or obsolete inventory or reserve charges if we overestimate such demand, negatively impacting our results of operations and cash flows.\u2022We expect to continue to see product cost increases from certain of our key semiconductor wafer suppliers.\u2022We expect commercial 5G network deployments and device launches will continue.\u2022We expect continued intense competition, including from vertical integration by certain of our customers (for example, Samsung and Huawei).\u2022Given the continued uncertainty in the macroeconomic and demand environment, we have initiated certain restructuring actions in the fourth quarter of fiscal 2023 to enable investments in key growth and diversification opportunities.",
+      "next_sentence": "See \u201cRisk Factors\u201d in this Annual Report, including the Risk Factor titled \u201cA significant portion of our business is concentrated in China, and the risks of such concentration are exacerbated by U.S./China trade and national security tensions.\u201dFurther, while future developments are highly uncertain, we currently do not expect a significant impact on our results of operations in the future due to the Israel-Hamas war.",
+      "risk_score": 0.947817862033844,
+      "finbert_probs": {
+        "positive": 0.009974077343940735,
+        "neutral": 0.04220808297395706,
+        "negative": 0.947817862033844
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_45",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 56,
+      "sentence_text": "Net changes in our operating assets and liabilities positively impacted our operating cash flows primarily from a decrease in accounts receivable as a result of lower revenues and a decrease in other assets primarily driven by utilization of prior advanced supply agreement payments (which payments were primarily made during 2022 and 2021) and certain settlement payments received associated with our forward starting interest rate swaps, partially offset by lower operating liabilities resulting from lower purchases due to lower customer demand.Debt.",
+      "previous_sentence": "The net increase in cash, cash equivalents and marketable securities was primarily due to net cash provided by operating activities, the issuance of $1.9 billion of unsecured fixed-rate notes, $1.5 billion in net cash proceeds from the sale of the Active Safety business and $434 million in proceeds from the issuance of common stock (primarily under our Employee Stock Purchase Plan), partially offset by $3.5 billion in cash dividends paid, $3.0 billion in payments to repurchase shares of our common stock, $1.5 billion in capital expenditures, $1.4 billion repayments of notes that matured in January 2023, $521 million in payments of tax withholdings related to the vesting of share-based awards and $498 million in net repayments of commercial paper.",
+      "next_sentence": "In the first quarter of fiscal 2023, we issued unsecured fixed-rate notes, consisting of $700 million of fixed-rate 5.40% notes and $1.2 billion of fixed-rate 6.00% notes (collectively, November 2022 Notes) that mature on May 20, 2033 and May 20, 2053, respectively.",
+      "risk_score": 0.9468817114830017,
+      "finbert_probs": {
+        "positive": 0.028279099613428116,
+        "neutral": 0.024839123710989952,
+        "negative": 0.9468817114830017
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_46",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 104,
+      "sentence_text": "Our ability to meet increased demand for our products has been in the past and may in the future be limited due to the inability to obtain the additional manufacturing, assembly and test capacity necessary to fully meet such demand.",
+      "previous_sentence": "From time to time, the global semiconductor industry experiences demand for integrated circuits that exceeds the industry\u2019s capacity to meet that demand.",
+      "next_sentence": "If we are unable to fully meet customer demand, this could result in lost sales opportunities, reduced revenue growth and harm to our customer relationships.",
+      "risk_score": 0.9463278651237488,
+      "finbert_probs": {
+        "positive": 0.017428692430257797,
+        "neutral": 0.036243341863155365,
+        "negative": 0.9463278651237488
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_47",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 263,
+      "sentence_text": "See also the Risk Factor titled \u201cA significant portion of our business is concentrated in China, and the risks of such concentration are exacerbated by U.S./China trade and national security tensions.\u201d Competition in any or all product areas or device tiers may result in the loss of business or customers, which would negatively impact our business, revenues, results of operations, cash flows and financial condition.",
+      "previous_sentence": "This could advantage our competitors by enabling them with increased sales, economies of scale, operating income and/or cash flows, and/or enabling critical technology transfer, allowing them to increase their investments in technology development, research and development, and commercialization of products.",
+      "next_sentence": "Such competition may also reduce average selling prices for our chipset products or the products of our customers and licensees.",
+      "risk_score": 0.9463154077529907,
+      "finbert_probs": {
+        "positive": 0.008872476406395435,
+        "neutral": 0.04481218755245209,
+        "negative": 0.9463154077529907
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_48",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 8,
+      "sentence_text": "If revenues derived from these customers or licensees decrease or the timing of such revenues fluctuates, our business and results of operations could be negatively affected.",
+      "previous_sentence": "RISKS RELATED TO OUR OPERATING BUSINESSES We derive a significant portion of our revenues from a small number of customers and licensees, and particularly from their sale of premium tier handset devices.",
+      "next_sentence": "We derive a significant portion of our revenues from a small number of customers and licensees, and particularly from their sale of premium tier handset devices, and we expect this trend to continue in the foreseeable future.",
+      "risk_score": 0.9461935758590698,
+      "finbert_probs": {
+        "positive": 0.010249903425574303,
+        "neutral": 0.04355651140213013,
+        "negative": 0.9461935758590698
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_49",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 73,
+      "sentence_text": "Our cash flows from operations will be adversely affected due to significantly higher cash tax payments.",
+      "previous_sentence": "Beginning in fiscal 2023, for federal income tax purposes, we are required to capitalize and amortize domestic research and development expenditures over five years and foreign research and development expenditures over fifteen years (such expenditures were previously deducted as incurred).",
+      "next_sentence": "Additional information regarding our income taxes is provided in this Annual Report in \u201cNotes to Consolidated Financial Statements, Note 3.",
+      "risk_score": 0.945585310459137,
+      "finbert_probs": {
+        "positive": 0.017864538356661797,
+        "neutral": 0.03655016049742699,
+        "negative": 0.945585310459137
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_50",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 161,
+      "sentence_text": "This risk is exacerbated as competitors for talent, particularly engineering talent, increasingly attempt to hire our employees.",
+      "previous_sentence": "In addition, employees and former employees, in particular former employees who become employees of our competitors, customers, licensees or other third parties, including state actors, have in the past and may in the future misappropriate, wrongfully use, publish or provide to our competitors, customers, licensees or other third parties, including state actors, our technology, intellectual property or other proprietary or confidential information.",
+      "next_sentence": "See also the Risk Factor titled \u201cWe may not be able to attract or retain qualified employees.\u201d Similarly, we provide access to certain of our technology, intellectual property and other proprietary or confidential information to our direct and indirect customers and licensees and certain of our consultants, who have in the past and may in the future wrongfully use such technology, intellectual property or information, or wrongfully disclose such technology, intellectual property or information to third parties, including our competitors or state actors.",
+      "risk_score": 0.94553542137146,
+      "finbert_probs": {
+        "positive": 0.01595349796116352,
+        "neutral": 0.038511116057634354,
+        "negative": 0.94553542137146
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_51",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 249,
+      "sentence_text": "Our success depends in part on our ability to adapt to such change and compete effectively; and such change and competition could result in decreased demand for our products and technologies or declining average selling prices for our products or those of our customers or licensees.",
+      "previous_sentence": "Our industry is subject to intense competition in an environment of rapid technological change.",
+      "next_sentence": "Our products and technologies face significant competition.",
+      "risk_score": 0.9452039003372192,
+      "finbert_probs": {
+        "positive": 0.01575121097266674,
+        "neutral": 0.03904489055275917,
+        "negative": 0.9452039003372192
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_52",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 40,
+      "sentence_text": "QCT handsets, automotive and IoT revenues mostly relate to sales of our Snapdragon platforms (which include processors and modems), stand-alone Mobile Data Modems, radio frequency transceiver, power management and wireless connectivity integrated chipsets as well as sales of 4G, 5G sub 6 and 5G millimeter wave RFFE products.The decrease in QCT revenues in fiscal 2023 was primarily due to:- lower handset revenues, primarily driven by $7.9 billion in lower chipset shipments to certain major OEMs (primarily driven by the negative effects of the macroeconomic environment weakness and customers drawing down on their elevated inventory levels), partially offset by $1.7 billion in higher revenues per chipset primarily driven by favorable mix and increases in average selling prices - lower IoT revenues, primarily driven by a decrease in demand across consumer, edge networking, and industrial products (primarily driven by the negative effects of the macroeconomic environment weakness and elevated customer inventory levels)+ higher automotive revenues, primarily driven by an increase in demand for digital cockpit productsQCT EBT as a percentage of revenues decreased in fiscal 2023 due to:- lower revenues- lower gross margin percentage, primarily driven by increased product costs QTL Segment (in millions, except percentages) 20232022ChangeLicensing revenues$5,306 $6,358 $(1,052)EBT3,628 4,628 (1,000)EBT as a % of revenues68 %73 %-5 points The decrease in QTL licensing revenues in fiscal 2023 was primarily due to:- $730 million decrease in estimated sales of 3G/4G/5G-based multimode products, primarily driven by the macroeconomic environment weakness- $205 million decrease in revenues from the ending of the recognition of certain upfront license fee consideration in the first quarter of fiscal 2023 from our long-term license agreement with NokiaQTL EBT as a percentage of revenues decreased in fiscal 2023 primarily due to lower revenues.",
+      "previous_sentence": "Composition of Certain Financial Statement Items.\u201d(2) Earnings before income taxes.Substantially all of QCT\u2019s revenues consist of equipment and services revenues, which were $29.9 billion and $37.0 billion in fiscal 2023 and 2022, respectively.",
+      "next_sentence": "QSI Segment (in millions) 20232022ChangeEquipment and services revenues$28 $31 $(3)Loss before income taxes(12)(279)267 The decrease in QSI loss before income taxes in fiscal 2023 was primarily due to a $350 million decrease in net losses on investments, which was primarily driven by the change in fair value of certain of our marketable equity investments in early or growth stage companies, partially offset by a $61 million increase in impairment losses on certain investments.",
+      "risk_score": 0.9448097944259644,
+      "finbert_probs": {
+        "positive": 0.02897973358631134,
+        "neutral": 0.026210447773337364,
+        "negative": 0.9448097944259644
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_53",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 337,
+      "sentence_text": "In addition, our customers\u2019 and licensees\u2019 ability to purchase or pay for our products and intellectual property and network operators\u2019 ability to upgrade their wireless networks could be adversely affected, potentially leading to a reduction, cancellation or delay of orders for our products.",
+      "previous_sentence": "Until these conditions improve, we expect that both of these dynamics will have a negative impact on our revenues, results of operations and cash flows.A decline in global, regional or local economic conditions, such as we are currently seeing, or a slow-down in economic growth, particularly in geographic regions with high concentrations of wireless voice and data users or high concentrations of our customers or licensees, could also have adverse, wide-ranging effects on our business and financial results, including: a decrease in demand for our products and technologies; a decrease in demand for the products and services of our customers or licensees; the inability of our suppliers to deliver on their supply commitments to us, our inability to supply our products to our customers and/or the inability of our customers or licensees to supply their products to end users; the insolvency of key suppliers, customers or licensees; delays in reporting or payments from our customers or licensees; failures by counterparties; and/or negative effects on wireless device inventories.",
+      "next_sentence": "Further, inflationary pressure may increase our costs, including employee compensation costs, reduce demand for our products or those of our customers or licensees due to increased prices of those products, or result in employee attrition to the extent our compensation does not keep up with inflation, particularly if our competitors\u2019 compensation does.Our stock price and financial results have fluctuated in the past and are likely to fluctuate in the future.",
+      "risk_score": 0.9445291757583618,
+      "finbert_probs": {
+        "positive": 0.010250742547214031,
+        "neutral": 0.0452200323343277,
+        "negative": 0.9445291757583618
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_54",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 302,
+      "sentence_text": "Further, even a positive resolution to our enforcement efforts may take time to conclude, which may reduce our revenues and cash resources available for other purposes, such as research and development, in the periods prior to conclusion.",
+      "previous_sentence": "Any action we take to enforce our contract or intellectual property rights could be costly and could absorb significant management time and attention, which, in turn, could negatively impact our results of operations and cash flows.",
+      "next_sentence": "Additionally, although our license agreements generally provide us with the right to audit the books and records of licensees, audits can be expensive, time consuming, incomplete and subject to dispute.",
+      "risk_score": 0.9441236853599548,
+      "finbert_probs": {
+        "positive": 0.02434108406305313,
+        "neutral": 0.031535230576992035,
+        "negative": 0.9441236853599548
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_55",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 79,
+      "sentence_text": "In addition, acquisitions that we have completed could subsequently be reviewed and/or challenged by government agencies, which could result in fines, penalties or other liability, or requirements to divest all or a portion of an acquired business.If we do not achieve the anticipated benefits of business acquisitions or other strategic activities, or if we are unable to consummate acquisitions or strategic investments that we consider important to the future of our business, our business and results of operations may be adversely affected, our growth and diversification strategy may not be successful, our stock price may decline and our reputation may be harmed.",
+      "previous_sentence": "Further, if U.S./China relations remain strained, our ability to consummate any transaction that would require approval from the relevant regulatory agency(ies) in China may be severely impacted.",
+      "next_sentence": "RISKS RELATED TO SUPPLY AND MANUFACTURING We depend on a limited number of third-party suppliers for the procurement, manufacture, assembly and testing of our products manufactured in a fabless production model.",
+      "risk_score": 0.9440907835960388,
+      "finbert_probs": {
+        "positive": 0.01216091774404049,
+        "neutral": 0.0437483973801136,
+        "negative": 0.9440907835960388
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_56",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 131,
+      "sentence_text": "In addition, climate change could cause certain natural disasters, such as drought, wildfires, storms, flooding or rising sea levels, to occur more frequently or with greater intensity, which could pose physical risks to our manufacturing facilities or our suppliers\u2019 facilities, could disrupt the availability of water necessary for the operation of such facilities, and could increase or decrease temperatures resulting in increased operating costs and/or business disruption.We have manufacturing facilities in Asia and Europe, and the primary warehouses where we store finished goods are located in Asia.",
+      "previous_sentence": "These costs may adversely impact our results of operations and financial condition.",
+      "next_sentence": "If tsunamis, flooding, earthquakes, volcanic eruptions, drought or other natural disasters, effects of climate change, acts of war or other geopolitical conflicts were to damage, destroy or disrupt any of these facilities, it could disrupt our operations, cease or delay production and shipments of inventory and result in costly repairs, replacements or other costs and lost business.",
+      "risk_score": 0.9425545334815979,
+      "finbert_probs": {
+        "positive": 0.00977543368935585,
+        "neutral": 0.047670044004917145,
+        "negative": 0.9425545334815979
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_57",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 280,
+      "sentence_text": "In addition, defects, errors or security vulnerabilities in our products could result in failure to achieve market acceptance, a loss of design wins, a shifting of business to our competitors, and litigation or regulatory action against us, and could harm our reputation, our relationships with customers and partners and our ability to attract new customers, as well as the perceptions of our brand.",
+      "previous_sentence": "Such defects, errors or security vulnerabilities could give rise to significant costs, including costs related to developing solutions, recalling products, repairing or replacing defective products, writing down defective inventory or indemnification obligations under our agreements, and could result in the loss of sales and divert the attention of our engineering personnel from our product development efforts.",
+      "next_sentence": "Other potential adverse impacts of product defects, errors or security vulnerabilities include shipment delays, write-offs of property, plant and equipment and intangible assets, and losses on unfavorable purchase commitments.",
+      "risk_score": 0.9424436688423157,
+      "finbert_probs": {
+        "positive": 0.009782410226762295,
+        "neutral": 0.047774020582437515,
+        "negative": 0.9424436688423157
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_58",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 363,
+      "sentence_text": "New Regulations, or evolving interpretations thereof, may cause us to incur higher costs as we revise current practices, policies or procedures; may divert management time and attention to compliance activities; and may negatively impact our ability to conduct business in certain jurisdictions.",
+      "previous_sentence": "Failure to comply with any Regulation may adversely affect our business, results of operations and cash flows.",
+      "next_sentence": "There are risks associated with our debt.",
+      "risk_score": 0.9424019455909729,
+      "finbert_probs": {
+        "positive": 0.00990681815892458,
+        "neutral": 0.047691211104393005,
+        "negative": 0.9424019455909729
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_59",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 17,
+      "sentence_text": "A delay of significant purchases, even if only temporary, would reduce our revenues in the period of the delay.",
+      "previous_sentence": "These efforts may not require or result in purchase commitments from such customers or we may have lower purchases from such customers than expected, and consequently, we may not achieve the anticipated revenues from these efforts, or these efforts may result in non-recoverable costs.The loss of any one of our significant customers, a reduction in the purchases of our products by any of these customers or the cancellation of significant purchases by any of these customers, whether due to the use of their own integrated circuit products or our competitors\u2019 integrated circuit products, government restrictions, a decline in global, regional or local economic conditions, a decline in consumer demand (or a shift in consumer demand away from new devices in favor of refurbished or secondhand devices), elevated inventory levels at our customers or otherwise, would reduce our revenues and could harm our ability to achieve or sustain expected results of operations.",
+      "next_sentence": "Any such reduction in revenues would also impact our cash resources available for other purposes, such as research and development.",
+      "risk_score": 0.9417197704315186,
+      "finbert_probs": {
+        "positive": 0.042698122560977936,
+        "neutral": 0.015582210384309292,
+        "negative": 0.9417197704315186
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_60",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 123,
+      "sentence_text": "As a result, we may incur clean-up costs in connection with any such removal or remediation efforts, as well as other third-party claims in connection with contaminated sites.",
+      "previous_sentence": "In addition, certain environmental laws impose strict, and in certain circumstances joint and several, liability on current or previous owners or operators of real property, or parties who arranged for hazardous substances to be sent to disposal or treatment facilities, for the cost of investigation, removal or remediation of hazardous substances.",
+      "next_sentence": "In addition, we could be held liable for consequences arising out of human exposure to hazardous substances or other environmental damage.",
+      "risk_score": 0.9405941367149353,
+      "finbert_probs": {
+        "positive": 0.012953159399330616,
+        "neutral": 0.04645264148712158,
+        "negative": 0.9405941367149353
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_61",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 212,
+      "sentence_text": "We expect that such proposals, interpretations and strategies will continue in the future, and if successful, our business model would be harmed, either by limiting or eliminating our ability to collect royalties (or by reducing the royalties we can collect) on all or a portion of our standard-essential patent portfolio, limiting our return on investment with respect to new technologies, limiting our ability to seek injunctions against infringers of our standard-essential patents, constraining our ability to make licensing commitments when submitting our technologies for inclusion in future standards (which could make our technologies less likely to be included in such standards) or forcing us to work outside of SDOs or other industry groups to promote our new technologies, and our revenues, results of operations and cash flows could be negatively impacted.",
+      "previous_sentence": "Other jurisdictions may adopt similar regulatory schemes, which could also have such effects.",
+      "next_sentence": "In addition, the legal and other costs associated with asserting or defending our positions have been and may in the future be significant.",
+      "risk_score": 0.9399828314781189,
+      "finbert_probs": {
+        "positive": 0.00972764752805233,
+        "neutral": 0.050289496779441833,
+        "negative": 0.9399828314781189
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_62",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 327,
+      "sentence_text": "Also, our use and our customers\u2019 use of open source software may subject our products and our customers\u2019 products to governmental and third-party scrutiny and delays in product certification, which could cause customers to view our products as less desirable than our competitors\u2019 products.",
+      "previous_sentence": "Developing open source products, while adequately protecting the intellectual property upon which our licensing programs depend, may prove burdensome and time-consuming under certain circumstances, thereby placing us at a competitive disadvantage, and we may not adequately protect our intellectual property.",
+      "next_sentence": "GENERAL RISK FACTORS We operate in the highly cyclical semiconductor industry, which is subject to significant downturns.",
+      "risk_score": 0.9395173788070679,
+      "finbert_probs": {
+        "positive": 0.010461839847266674,
+        "neutral": 0.05002078786492348,
+        "negative": 0.9395173788070679
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_63",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 85,
+      "sentence_text": "Unfavorable resolutions of one or more of these matters have had and could in the future have a material adverse effect on our business, revenues, results of operations, financial condition and cash flows.",
+      "previous_sentence": "Additionally, certain of our direct and indirect customers and licensees have pursued, and others may in the future pursue, litigation or arbitration against us related to our business.",
+      "next_sentence": "See \u201cNotes to Consolidated Financial Statements, Note 7.",
+      "risk_score": 0.9392285346984863,
+      "finbert_probs": {
+        "positive": 0.009745432063937187,
+        "neutral": 0.051026035100221634,
+        "negative": 0.9392285346984863
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_64",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 82,
+      "sentence_text": "We are also subject to order and shipment uncertainties that could negatively impact our results of operations.",
+      "previous_sentence": "If we fail to execute supply strategies that provide supply assurance, technology leadership and reasonable margins, our business and results of operations may be harmed.",
+      "next_sentence": "We primarily utilize a fabless production model, which means that we do not own or operate foundries for the production of silicon wafers from which our integrated circuits are made.",
+      "risk_score": 0.9390214085578918,
+      "finbert_probs": {
+        "positive": 0.012378709390759468,
+        "neutral": 0.04859989136457443,
+        "negative": 0.9390214085578918
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_65",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 329,
+      "sentence_text": "We are also susceptible to declines in global, regional and local economic conditions generally.",
+      "previous_sentence": "GENERAL RISK FACTORS We operate in the highly cyclical semiconductor industry, which is subject to significant downturns.",
+      "next_sentence": "Our stock price and financial results are subject to substantial quarterly and annual fluctuations due to these dynamics, among others.",
+      "risk_score": 0.9387991428375244,
+      "finbert_probs": {
+        "positive": 0.021489201113581657,
+        "neutral": 0.03971163183450699,
+        "negative": 0.9387991428375244
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_66",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 352,
+      "sentence_text": "We are also susceptible to declines in global, regional and local economic conditions generally.",
+      "previous_sentence": "See also the Risk Factor titled \u201cWe operate in the highly cyclical semiconductor industry, which is subject to significant downturns.",
+      "next_sentence": "Our stock price and financial results are subject to substantial quarterly and annual fluctuations due to these dynamics, among others.\u201d Any such events may also have the effect of exacerbating the other risks discussed in this \u201cRisk Factors\u201d section.",
+      "risk_score": 0.9387991428375244,
+      "finbert_probs": {
+        "positive": 0.021489201113581657,
+        "neutral": 0.03971163183450699,
+        "negative": 0.9387991428375244
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_67",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 344,
+      "sentence_text": "Commitments and Contingencies.\u201d Geopolitical conflicts, natural disasters, pandemics and other health crises, and other factors outside of our control, could significantly disrupt our business.",
+      "previous_sentence": "Certain legal matters, including certain securities litigation brought against us, are described in this Annual Report in \u201cNotes to Consolidated Financial Statements, Note 7.",
+      "next_sentence": "We have operations and facilities in the United States and many other countries throughout the world.",
+      "risk_score": 0.9375057220458984,
+      "finbert_probs": {
+        "positive": 0.009911840781569481,
+        "neutral": 0.0525825060904026,
+        "negative": 0.9375057220458984
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_68",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 238,
+      "sentence_text": "In addition, we may be sued for alleged overpayments of past royalties paid to us, including private antitrust actions seeking treble damages under U.S. antitrust laws.",
+      "previous_sentence": "Licensees may underreport, underpay, not report or not pay royalties owed to us pending the conclusion of such negotiations, arbitration or litigation.",
+      "next_sentence": "The occurrence of any of the above could have a material adverse effect on our business, revenues, results of operations, cash flows and financial condition, and our stock price could decline, possibly significantly, in which case we may have to significantly cut costs and other uses of cash, including in research and development, significantly impairing our ability to maintain product and technology leadership and invest in next generation technologies.",
+      "risk_score": 0.9355959892272949,
+      "finbert_probs": {
+        "positive": 0.01540224626660347,
+        "neutral": 0.04900185763835907,
+        "negative": 0.9355959892272949
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_69",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 133,
+      "sentence_text": "In addition, natural disasters, effects of climate change, acts of war or other geopolitical conflicts may result in disruptions in transportation, distribution channels and supply chains and significant increases in the prices of raw materials.",
+      "previous_sentence": "If tsunamis, flooding, earthquakes, volcanic eruptions, drought or other natural disasters, effects of climate change, acts of war or other geopolitical conflicts were to damage, destroy or disrupt any of these facilities, it could disrupt our operations, cease or delay production and shipments of inventory and result in costly repairs, replacements or other costs and lost business.",
+      "next_sentence": "Further, health crises, including epidemics or pandemics, such as the COVID-19 pandemic, and government and business responses thereto, could affect our manufacturing facilities, including by resulting in quarantines and/or closures, which could result in disruptions to and potential closures of our manufacturing operations.",
+      "risk_score": 0.9349787831306458,
+      "finbert_probs": {
+        "positive": 0.010851074941456318,
+        "neutral": 0.05417007952928543,
+        "negative": 0.9349787831306458
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_70",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 7,
+      "sentence_text": "Consequently, we could incur impairment losses or realized losses on all or part of the values of our non-marketable equity investments.",
+      "previous_sentence": "Volatility in the equity markets and the current macroeconomic environment could negatively affect our investees\u2019 ability to raise additional capital as well as our ability to realize value from our investments through initial public offerings, mergers or private sales.",
+      "next_sentence": "At September 24, 2023, our non-marketable equity investments (including those accounted for under the equity method) consisted of investments in over 150 companies with an aggregate carrying value included in other assets of $1.2 billion.",
+      "risk_score": 0.9349110126495361,
+      "finbert_probs": {
+        "positive": 0.010729623027145863,
+        "neutral": 0.05435934290289879,
+        "negative": 0.9349110126495361
+      }
+    },
+    {
+      "candidate_id": "item_1a_risk_factors_71",
+      "section_id": "item_1a_risk_factors",
+      "section_label": "Item 1A",
+      "sentence_index": 232,
+      "sentence_text": "Unfavorable resolutions of one or more of these matters have had and could in the future have a material adverse effect on our business, revenues, results of operations, cash flows and financial condition.",
+      "previous_sentence": "We may become subject to other litigation or governmental investigations or proceedings in the future.",
+      "next_sentence": "Depending on the matter, various remedies that could result from an unfavorable resolution include, among others: the loss of our ability to enforce one or more of our patents; injunctions; monetary damages, fines or other orders to pay money; the issuance of orders to cease certain conduct or modify our business practices, such as requiring us to reduce our royalty rates, reduce the base on which our royalties are calculated, grant patent licenses to chipset manufacturers or other component suppliers, sell chipsets to unlicensed OEMs or modify or renegotiate some or all of our existing license agreements; and determinations that some or all of our license agreements are invalid or unenforceable.",
+      "risk_score": 0.934732973575592,
+      "finbert_probs": {
+        "positive": 0.010078627616167068,
+        "neutral": 0.05518840253353119,
+        "negative": 0.934732973575592
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_72",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 41,
+      "sentence_text": "QSI Segment (in millions) 20232022ChangeEquipment and services revenues$28 $31 $(3)Loss before income taxes(12)(279)267 The decrease in QSI loss before income taxes in fiscal 2023 was primarily due to a $350 million decrease in net losses on investments, which was primarily driven by the change in fair value of certain of our marketable equity investments in early or growth stage companies, partially offset by a $61 million increase in impairment losses on certain investments.",
+      "previous_sentence": "QCT handsets, automotive and IoT revenues mostly relate to sales of our Snapdragon platforms (which include processors and modems), stand-alone Mobile Data Modems, radio frequency transceiver, power management and wireless connectivity integrated chipsets as well as sales of 4G, 5G sub 6 and 5G millimeter wave RFFE products.The decrease in QCT revenues in fiscal 2023 was primarily due to:- lower handset revenues, primarily driven by $7.9 billion in lower chipset shipments to certain major OEMs (primarily driven by the negative effects of the macroeconomic environment weakness and customers drawing down on their elevated inventory levels), partially offset by $1.7 billion in higher revenues per chipset primarily driven by favorable mix and increases in average selling prices - lower IoT revenues, primarily driven by a decrease in demand across consumer, edge networking, and industrial products (primarily driven by the negative effects of the macroeconomic environment weakness and elevated customer inventory levels)+ higher automotive revenues, primarily driven by an increase in demand for digital cockpit productsQCT EBT as a percentage of revenues decreased in fiscal 2023 due to:- lower revenues- lower gross margin percentage, primarily driven by increased product costs QTL Segment (in millions, except percentages) 20232022ChangeLicensing revenues$5,306 $6,358 $(1,052)EBT3,628 4,628 (1,000)EBT as a % of revenues68 %73 %-5 points The decrease in QTL licensing revenues in fiscal 2023 was primarily due to:- $730 million decrease in estimated sales of 3G/4G/5G-based multimode products, primarily driven by the macroeconomic environment weakness- $205 million decrease in revenues from the ending of the recognition of certain upfront license fee consideration in the first quarter of fiscal 2023 from our long-term license agreement with NokiaQTL EBT as a percentage of revenues decreased in fiscal 2023 primarily due to lower revenues.",
+      "next_sentence": "Looking Forward In the coming years, we expect consumer demand for 3G/4G/5G multimode and 5G products and services to continue to ramp around the world as we continue to transition from 3G/4G multimode and 4G products and services.",
+      "risk_score": 0.9302251935005188,
+      "finbert_probs": {
+        "positive": 0.051855262368917465,
+        "neutral": 0.017919523641467094,
+        "negative": 0.9302251935005188
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_73",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 100,
+      "sentence_text": "For fiscal 2023 and 2022, actual amounts for sales-based royalties have been materially consistent with such estimates, and no significant reversals of revenues have been required as a result of adjustments to prior period royalty estimates.Impairment of Non-marketable Equity Investments.",
+      "previous_sentence": "We estimate and recognize sales-based royalties on such licensed products in the period in which the licensees\u2019 sales occur, which is based largely on preliminary royalty estimates provided by our licensees.",
+      "next_sentence": "We monitor our investments for events or circumstances that could indicate impairment, including those that result from observable price adjustments.",
+      "risk_score": 0.923304557800293,
+      "finbert_probs": {
+        "positive": 0.01399182341992855,
+        "neutral": 0.06270357966423035,
+        "negative": 0.923304557800293
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_74",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 3,
+      "sentence_text": "At September 24, 2023 and September 25, 2022, a hypothetical increase in interest rates of 100 basis points across the entire yield curve on our holdings would have resulted in a decrease of $26 million and $36 million, respectively, in the fair value of our holdings.",
+      "previous_sentence": "We invest a portion of our cash in a number of diversified fixed- and floating-rate securities consisting of cash equivalents, marketable debt securities and time and demand deposits that are subject to interest rate risk.",
+      "next_sentence": "Other Investments Equity Price Risk.",
+      "risk_score": 0.9111244678497314,
+      "finbert_probs": {
+        "positive": 0.040037162601947784,
+        "neutral": 0.04883839562535286,
+        "negative": 0.9111244678497314
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_75",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 19,
+      "sentence_text": "This has resulted in fluctuations in QCT revenues in advance of and during device launches incorporating our products and in QTL revenues when licensees\u2019 sales occur.",
+      "previous_sentence": "Our revenues have historically fluctuated based on consumer demand for devices, as well as on the timing of customer/licensee device launches and/or innovation cycles (such as the transition to the next generation of wireless technologies).",
+      "next_sentence": "These trends may or may not continue in the future.",
+      "risk_score": 0.8983467817306519,
+      "finbert_probs": {
+        "positive": 0.019673502072691917,
+        "neutral": 0.08197962492704391,
+        "negative": 0.8983467817306519
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_76",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 25,
+      "sentence_text": "20232022 ChangeResearch and development$8,818 $8,194 $624 % of revenues25 %19 % The increase in research and development expenses in fiscal 2023 was due to:+ $375 million increase in share-based compensation expense+ $125 million increase in expenses driven by revaluation of our deferred compensation obligation on higher relative stock market performance+ $124 million increase driven by higher costs related to the development of wireless and integrated circuit technologies (including 5G and application processor technologies), primarily driven by an increase in employee-related expenses (which included lower employee cash incentive program costs) 20232022ChangeSelling, general and administrative$2,483 $2,570 $(87)% of revenues7 %6 % The decrease in selling, general and administrative expenses in fiscal 2023 was primarily due to:- $109 million decrease in employee-related expenses (which included lower employee cash incentive program costs)- $95 million decrease in acquisition-related expenses, primarily related to the Veoneer transaction which closed in the third quarter of fiscal 2022 + $99 million increase in expenses driven by revaluation of our deferred compensation obligation on higher relative stock market performance20232022ChangeOther expense (income)$862 $(1,059)$1,921 Other expense in fiscal 2023 consisted of $712 million in restructuring and restructuring-related charges (substantially all of which related to severance costs) resulting from certain cost reduction actions initiated in fiscal 2023, and a $150 million intangible asset impairment charge related to in-process research and development.",
+      "previous_sentence": "Results of Operations Revenues (in millions)20232022ChangeEquipment and services$30,028 $37,171 $(7,143)Licensing5,792 7,029 (1,237)$35,820 $44,200 $(8,380) The decrease in revenues in fiscal 2023 was primarily due to: - $7.2 billion in lower equipment and services revenue from our QCT segment - $1.1 billion in lower licensing revenues from our QTL segment Costs and Expenses (in millions, except percentages)20232022ChangeCost of revenues$15,869 $18,635 $(2,766)Gross margin 56 %58 % Gross margin percentage decreased in fiscal 2023 primarily due to a decrease in QCT gross margin.",
+      "next_sentence": "Additional information regarding our restructuring charges is provided in this Annual Report in \u201cNotes to Consolidated Financial Statements, Note 2.",
+      "risk_score": 0.870696485042572,
+      "finbert_probs": {
+        "positive": 0.09679321199655533,
+        "neutral": 0.032510269433259964,
+        "negative": 0.870696485042572
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_77",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 49,
+      "sentence_text": "However, we expect that certain companies may be dissatisfied with the need to pay reasonable royalties for the use of our technologies and not welcome the success of our licensing programs in enabling new, highly cost-effective competitors to their products.",
+      "previous_sentence": "See \u201cRisk Factors\u201d in this Annual Report, specifically the Risk Factor titled \u201cGeopolitical conflicts, natural disasters, pandemics and other health crises, and other factors outside of our control, could significantly disrupt our business.\u201dIn addition to the foregoing business and market-based matters, we continue to devote resources to working with and educating participants in the wireless industry and governments as to the benefits of our licensing programs and our extensive technology investments in promoting a highly competitive and innovative wireless industry.",
+      "next_sentence": "Accordingly, such companies, and/or governments or regulators, may continue to challenge our business model in various forums throughout the world.Further discussion of risks related to our business is provided in \u201cPart I, Item 1A.",
+      "risk_score": 0.8704604506492615,
+      "finbert_probs": {
+        "positive": 0.052713457494974136,
+        "neutral": 0.07682614028453827,
+        "negative": 0.8704604506492615
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_78",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 92,
+      "sentence_text": "Although we believe that our estimates and the assumptions supporting our assessments are reasonable, actual results could differ materially from our estimates and assumptions, and could be material to our consolidated financial statements.",
+      "previous_sentence": "By their nature, estimates are inherently subject to a degree of uncertainty.",
+      "next_sentence": "In addition to our critical accounting estimates and policies below, refer to \u201cNote 1.",
+      "risk_score": 0.8586862087249756,
+      "finbert_probs": {
+        "positive": 0.03257492929697037,
+        "neutral": 0.10873884707689285,
+        "negative": 0.8586862087249756
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_79",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 28,
+      "sentence_text": "Interest Expense and Investment and Other Income (Expense), Net (in millions)20232022 ChangeInterest expense$694 $490 $204 Investment and other income (expense), netInterest and dividend income$313 $91 $222 Net gains (losses) on marketable securities75 (363)438 Net gains on other investments21 113 (92)Net gains (losses) on deferred compensation plan assets86 (141)227 Impairment losses on other investments(132)(47)(85)Other(14)(25)11 $349 $(372)$721 Interest expense in fiscal 2022 included a $62 million reversal of accrued interest previously recorded related to the annulled 2018 EC fine.Net losses on marketable securities in fiscal 2022 was primarily driven by the change in fair value of certain of our QSI marketable equity investments in early or growth stage companies.",
+      "previous_sentence": "Composition of Certain Financial Statement Items - Other Income, Costs and Expenses.\u201dOther income in fiscal 2022 consisted of a $1.1 billion benefit resulting from the 2018 EC fine reversal.",
+      "next_sentence": "Income Tax Expense (in millions, except percentages) The following table summarizes the primary factors that caused our annual tax provision from continuing operations to differ from the expected income tax provision at the U.S. federal statutory rate.",
+      "risk_score": 0.7924017906188965,
+      "finbert_probs": {
+        "positive": 0.04750050604343414,
+        "neutral": 0.16009770333766937,
+        "negative": 0.7924017906188965
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_80",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 109,
+      "sentence_text": "During fiscal 2023, we recorded total impairment charges of approximately $400 million related to certain long-lived and other indefinite-lived assets.",
+      "previous_sentence": "We monitor our goodwill, other indefinite-lived assets and long-lived assets for the existence of impairment indicators and apply judgments in the valuation methods and underlying assumptions utilized in such assessments.",
+      "next_sentence": "Such impairments (and the related remaining asset values) were not individually material.",
+      "risk_score": 0.772721529006958,
+      "finbert_probs": {
+        "positive": 0.021541468799114227,
+        "neutral": 0.2057369351387024,
+        "negative": 0.772721529006958
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_81",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 23,
+      "sentence_text": "As a global company, we face exposure to adverse movements in foreign currency exchange rates.",
+      "previous_sentence": "Financial assets and liabilities held by consolidated subsidiaries that are not denominated in the functional currency of those entities are subject to the effects of currency fluctuations and may affect reported earnings.",
+      "next_sentence": "We may hedge currency exposures associated with certain assets and liabilities denominated in nonfunctional currencies and certain anticipated nonfunctional currency transactions.",
+      "risk_score": 0.7277030944824219,
+      "finbert_probs": {
+        "positive": 0.0382407121360302,
+        "neutral": 0.2340562492609024,
+        "negative": 0.7277030944824219
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_82",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 6,
+      "sentence_text": "Volatility in the equity markets and the current macroeconomic environment could negatively affect our investees\u2019 ability to raise additional capital as well as our ability to realize value from our investments through initial public offerings, mergers or private sales.",
+      "previous_sentence": "We hold investments in non-marketable equity instruments in privately held companies that may be impacted by equity price risks.",
+      "next_sentence": "Consequently, we could incur impairment losses or realized losses on all or part of the values of our non-marketable equity investments.",
+      "risk_score": 0.7053360342979431,
+      "finbert_probs": {
+        "positive": 0.02247016690671444,
+        "neutral": 0.2721938490867615,
+        "negative": 0.7053360342979431
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_83",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 21,
+      "sentence_text": "Further, the trends for QTL have been, and may in the future be, impacted by disputes and/or resolutions with licensees and/or governmental investigations or proceedings.",
+      "previous_sentence": "These trends may or may not continue in the future.",
+      "next_sentence": "Fiscal 2023 Overview Revenues were $35.8 billion, a decrease of 19% compared to revenues of $44.2 billion in fiscal 2022, with net income of $7.2 billion, a decrease of 44% compared to net income of $12.9 billion in fiscal 2022.",
+      "risk_score": 0.7019655704498291,
+      "finbert_probs": {
+        "positive": 0.018371930345892906,
+        "neutral": 0.27966246008872986,
+        "negative": 0.7019655704498291
+      }
+    },
+    {
+      "candidate_id": "item_7_mda_84",
+      "section_id": "item_7_mda",
+      "section_label": "Item 7",
+      "sentence_index": 107,
+      "sentence_text": "Impairment of Goodwill, Other Indefinite-Lived Assets and Long-Lived Assets.",
+      "previous_sentence": "For fiscal 2023 and 2022, the net effect from changes in this estimate and related reserves was less than 2% of cost of revenues during each period.",
+      "next_sentence": "We monitor our goodwill, other indefinite-lived assets and long-lived assets for the existence of impairment indicators and apply judgments in the valuation methods and underlying assumptions utilized in such assessments.",
+      "risk_score": 0.6642457246780396,
+      "finbert_probs": {
+        "positive": 0.014339609071612358,
+        "neutral": 0.32141461968421936,
+        "negative": 0.6642457246780396
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_85",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 22,
+      "sentence_text": "Financial assets and liabilities held by consolidated subsidiaries that are not denominated in the functional currency of those entities are subject to the effects of currency fluctuations and may affect reported earnings.",
+      "previous_sentence": "In the event of the financial insolvency or distress of a counterparty to our derivative financial instruments, we may be unable to settle transactions if the counterparty does not provide us with sufficient collateral to secure its net settlement obligations to us, which could have a negative impact on our results.Gains or losses on hedged foreign currency transactions and investments, including certain royalties earned from licensees, operating expenses and net investments in foreign subsidiaries, are generally offset by corresponding losses or gains on the related hedging instrument.Functional Currency.",
+      "next_sentence": "As a global company, we face exposure to adverse movements in foreign currency exchange rates.",
+      "risk_score": 0.5989999771118164,
+      "finbert_probs": {
+        "positive": 0.015759151428937912,
+        "neutral": 0.3852408826351166,
+        "negative": 0.5989999771118164
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_86",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 17,
+      "sentence_text": "During the first quarter of fiscal 2023, in connection with our debt issuance in November 2022, we terminated these swaps.",
+      "previous_sentence": "At September 24, 2023 and September 25, 2022, a hypothetical increase in interest rates of 100 basis points would not cause a loss as an increase in interest expense related to these interest rate swaps agreements would be offset by an increase in interest income from our cash equivalents and marketable securities portfolio.At September 25, 2022, we had outstanding forward-starting interest rate swaps with an aggregate notional amount of $1.6 billion to hedge the variability of forecasted interest payments on anticipated debt issuances.",
+      "next_sentence": "Foreign Exchange Risk We manage our exposure to foreign exchange market risks, when deemed appropriate, through the use of derivative and non-derivative financial instruments, including foreign currency forward and option contracts with financial counterparties and net investment hedges.",
+      "risk_score": 0.5481634736061096,
+      "finbert_probs": {
+        "positive": 0.021892672404646873,
+        "neutral": 0.42994382977485657,
+        "negative": 0.5481634736061096
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_87",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 21,
+      "sentence_text": "In the event of the financial insolvency or distress of a counterparty to our derivative financial instruments, we may be unable to settle transactions if the counterparty does not provide us with sufficient collateral to secure its net settlement obligations to us, which could have a negative impact on our results.Gains or losses on hedged foreign currency transactions and investments, including certain royalties earned from licensees, operating expenses and net investments in foreign subsidiaries, are generally offset by corresponding losses or gains on the related hedging instrument.Functional Currency.",
+      "previous_sentence": "Counterparties to these derivative contracts are all major banking institutions.",
+      "next_sentence": "Financial assets and liabilities held by consolidated subsidiaries that are not denominated in the functional currency of those entities are subject to the effects of currency fluctuations and may affect reported earnings.",
+      "risk_score": 0.5410313010215759,
+      "finbert_probs": {
+        "positive": 0.03619591146707535,
+        "neutral": 0.4227728247642517,
+        "negative": 0.5410313010215759
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_88",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 26,
+      "sentence_text": "While we may hedge certain transactions with non-U.S. customers, declines in currency values in certain regions may, if not reversed, adversely affect future product sales because our products may become more expensive to purchase in the countries of the affected currencies.Our analysis methods used to assess and mitigate the risks discussed above should not be considered projections of future risks.",
+      "previous_sentence": "As a result, we could experience unanticipated gains or losses on anticipated foreign currency cash flows, as well as economic loss with respect to the recoverability of investments.",
+      "next_sentence": "Additional information regarding the financial instruments mentioned above is provided in this Annual Report in \u201cNotes to Consolidated Financial Statements, Note 1.",
+      "risk_score": 0.23760148882865906,
+      "finbert_probs": {
+        "positive": 0.05339740961790085,
+        "neutral": 0.7090011239051819,
+        "negative": 0.23760148882865906
+      }
+    },
+    {
+      "candidate_id": "item_1c_cybersecurity_89",
+      "section_id": "item_1c_cybersecurity",
+      "section_label": "Item 1C",
+      "sentence_index": 1,
+      "sentence_text": "Cybersecurity Not applicable.",
+      "previous_sentence": "Item 1C.",
+      "next_sentence": null,
+      "risk_score": 0.07521819323301315,
+      "finbert_probs": {
+        "positive": 0.02128136157989502,
+        "neutral": 0.903500497341156,
+        "negative": 0.07521819323301315
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_90",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 9,
+      "sentence_text": "Debt and Interest Rate Swap Agreements Interest Rate Risk.",
+      "previous_sentence": "At September 24, 2023, our non-marketable equity investments (including those accounted for under the equity method) consisted of investments in over 150 companies with an aggregate carrying value included in other assets of $1.2 billion.",
+      "next_sentence": "At September 25, 2022, we had an aggregate principal amount of $500 million in unsecured floating-rate notes that matured in January 2023.",
+      "risk_score": 0.06453729420900345,
+      "finbert_probs": {
+        "positive": 0.023222416639328003,
+        "neutral": 0.9122403264045715,
+        "negative": 0.06453729420900345
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_91",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 1,
+      "sentence_text": "Quantitative and Qualitative Disclosures about Market Risk Marketable Securities We have made investments in marketable securities of companies of varying size, style, industry and geography and changes in investment allocations may affect the price volatility of our investments.Interest Rate Risk.",
+      "previous_sentence": "Item 7A.",
+      "next_sentence": "We invest a portion of our cash in a number of diversified fixed- and floating-rate securities consisting of cash equivalents, marketable debt securities and time and demand deposits that are subject to interest rate risk.",
+      "risk_score": 0.06286594271659851,
+      "finbert_probs": {
+        "positive": 0.029302841052412987,
+        "neutral": 0.9078311920166016,
+        "negative": 0.06286594271659851
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_92",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 30,
+      "sentence_text": "Debt,\u201d \u201cNotes to Consolidated Financial Statements, Note 10.",
+      "previous_sentence": "Composition of Certain Financial Statement Items,\u201d \u201cNotes to Consolidated Financial Statements, Note 6.",
+      "next_sentence": "Fair Value Measurements and Marketable Securities.\u201d",
+      "risk_score": 0.05267816036939621,
+      "finbert_probs": {
+        "positive": 0.020916923880577087,
+        "neutral": 0.9264049530029297,
+        "negative": 0.05267816036939621
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_93",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 29,
+      "sentence_text": "Composition of Certain Financial Statement Items,\u201d \u201cNotes to Consolidated Financial Statements, Note 6.",
+      "previous_sentence": "Significant Accounting Policies,\u201d \u201cNotes to Consolidated Financial Statements, Note 2.",
+      "next_sentence": "Debt,\u201d \u201cNotes to Consolidated Financial Statements, Note 10.",
+      "risk_score": 0.03730464354157448,
+      "finbert_probs": {
+        "positive": 0.020015878602862358,
+        "neutral": 0.9426795244216919,
+        "negative": 0.03730464354157448
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_94",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 5,
+      "sentence_text": "We hold investments in non-marketable equity instruments in privately held companies that may be impacted by equity price risks.",
+      "previous_sentence": "Other Investments Equity Price Risk.",
+      "next_sentence": "Volatility in the equity markets and the current macroeconomic environment could negatively affect our investees\u2019 ability to raise additional capital as well as our ability to realize value from our investments through initial public offerings, mergers or private sales.",
+      "risk_score": 0.03204163908958435,
+      "finbert_probs": {
+        "positive": 0.023648012429475784,
+        "neutral": 0.9443103075027466,
+        "negative": 0.03204163908958435
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_95",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 27,
+      "sentence_text": "Additional information regarding the financial instruments mentioned above is provided in this Annual Report in \u201cNotes to Consolidated Financial Statements, Note 1.",
+      "previous_sentence": "While we may hedge certain transactions with non-U.S. customers, declines in currency values in certain regions may, if not reversed, adversely affect future product sales because our products may become more expensive to purchase in the countries of the affected currencies.Our analysis methods used to assess and mitigate the risks discussed above should not be considered projections of future risks.",
+      "next_sentence": "Significant Accounting Policies,\u201d \u201cNotes to Consolidated Financial Statements, Note 2.",
+      "risk_score": 0.02942010387778282,
+      "finbert_probs": {
+        "positive": 0.024237575009465218,
+        "neutral": 0.9463422894477844,
+        "negative": 0.02942010387778282
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_96",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 20,
+      "sentence_text": "Counterparties to these derivative contracts are all major banking institutions.",
+      "previous_sentence": "We utilize such derivative financial instruments for hedging or risk management purposes rather than for speculative purposes.",
+      "next_sentence": "In the event of the financial insolvency or distress of a counterparty to our derivative financial instruments, we may be unable to settle transactions if the counterparty does not provide us with sufficient collateral to secure its net settlement obligations to us, which could have a negative impact on our results.Gains or losses on hedged foreign currency transactions and investments, including certain royalties earned from licensees, operating expenses and net investments in foreign subsidiaries, are generally offset by corresponding losses or gains on the related hedging instrument.Functional Currency.",
+      "risk_score": 0.027166862040758133,
+      "finbert_probs": {
+        "positive": 0.025123843923211098,
+        "neutral": 0.9477092623710632,
+        "negative": 0.027166862040758133
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_97",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 24,
+      "sentence_text": "We may hedge currency exposures associated with certain assets and liabilities denominated in nonfunctional currencies and certain anticipated nonfunctional currency transactions.",
+      "previous_sentence": "As a global company, we face exposure to adverse movements in foreign currency exchange rates.",
+      "next_sentence": "As a result, we could experience unanticipated gains or losses on anticipated foreign currency cash flows, as well as economic loss with respect to the recoverability of investments.",
+      "risk_score": 0.025160610675811768,
+      "finbert_probs": {
+        "positive": 0.03681236878037453,
+        "neutral": 0.938027024269104,
+        "negative": 0.025160610675811768
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_98",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 11,
+      "sentence_text": "At September 24, 2023, all of our debt was comprised of unsecured fixed-rate notes.",
+      "previous_sentence": "At September 25, 2022, we had an aggregate principal amount of $500 million in unsecured floating-rate notes that matured in January 2023.",
+      "next_sentence": "From time to time, we issue commercial paper for which our exposure to interest rate risk is negligible based on the original maturities of approximately three months or less.",
+      "risk_score": 0.02269422821700573,
+      "finbert_probs": {
+        "positive": 0.02404247783124447,
+        "neutral": 0.9532632827758789,
+        "negative": 0.02269422821700573
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_99",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 12,
+      "sentence_text": "From time to time, we issue commercial paper for which our exposure to interest rate risk is negligible based on the original maturities of approximately three months or less.",
+      "previous_sentence": "At September 24, 2023, all of our debt was comprised of unsecured fixed-rate notes.",
+      "next_sentence": "We manage our exposure to certain interest rate risks related to our long-term debt through the use of interest rate swaps.",
+      "risk_score": 0.020244738087058067,
+      "finbert_probs": {
+        "positive": 0.03033594787120819,
+        "neutral": 0.949419379234314,
+        "negative": 0.020244738087058067
+      }
+    },
+    {
+      "candidate_id": "item_7a_market_risk_100",
+      "section_id": "item_7a_market_risk",
+      "section_label": "Item 7A",
+      "sentence_index": 10,
+      "sentence_text": "At September 25, 2022, we had an aggregate principal amount of $500 million in unsecured floating-rate notes that matured in January 2023.",
+      "previous_sentence": "Debt and Interest Rate Swap Agreements Interest Rate Risk.",
+      "next_sentence": "At September 24, 2023, all of our debt was comprised of unsecured fixed-rate notes.",
+      "risk_score": 0.017869655042886734,
+      "finbert_probs": {
+        "positive": 0.03384053707122803,
+        "neutral": 0.9482898712158203,
+        "negative": 0.017869655042886734
+      }
+    }
+  ]
+}

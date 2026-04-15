@@ -1,0 +1,251 @@
+{
+  "schema_version": "orchestration_v1",
+  "bundle": {
+    "target": {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "latest_filing_year": 2025,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\AAPL\\complete_ingestion.json",
+      "extraction_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\AAPL\\aapl_2025_extraction.json",
+      "curator_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AAPL\\aapl_2025.json"
+    },
+    "matches": [
+      {
+        "ticker": "SNAP",
+        "company": "Snap Inc",
+        "matched_filing_year": 2026,
+        "similarity": 0.7464,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\SNAP\\snap_2026.json"
+        ]
+      },
+      {
+        "ticker": "INTC",
+        "company": "INTEL CORP",
+        "matched_filing_year": 2025,
+        "similarity": 0.7391,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2025.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2026.json"
+        ]
+      },
+      {
+        "ticker": "PLTR",
+        "company": "Palantir Technologies Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.7334,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\PLTR\\pltr_2025.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\PLTR\\pltr_2026.json"
+        ]
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T16:41:18.661672+00:00",
+      "status_by_step": {
+        "ingestion": "skipped_existing",
+        "extraction": "skipped_existing",
+        "curator": "skipped_existing",
+        "rag": "partial",
+        "comparison": "completed"
+      },
+      "warnings": [
+        "SNAP has only 1 curator year(s) from 2026 onward.",
+        "INTC has only 2 curator year(s) from 2025 onward.",
+        "PLTR has only 2 curator year(s) from 2025 onward."
+      ]
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "Apple Inc. presents a mixed posture versus its matched peer neighborhood: several sizable financial positives (notably cash and net income deltas) are offset by one negative financial delta and two high-severity regulatory risks. Key medium exposures include Greater China sales weakness, foreign-currency derivative loss potential, and interest-rate sensitivity. Peers share many operational and market risks, while antitrust exposure and product obsolescence are currently more specific to Apple.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Mixed",
+      "rationale_bullets": [
+        "Current analysis identifies 2 high-severity risk factor(s) and 1 negative financial delta(s).",
+        "The company maintains 6 metrics with positive delta labels, providing a financial buffer.",
+        "5 risk types are currently shared with matched peers, indicating broader industry trends."
+      ]
+    },
+    "target_profile": {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "filing_year": 2025,
+      "positive_deltas": [
+        {
+          "metric": "Cash",
+          "label": "strong_growth",
+          "value": 20.008015228934976
+        },
+        {
+          "metric": "NetIncome",
+          "label": "moderate_growth",
+          "value": 19.495177946573357
+        },
+        {
+          "metric": "ResearchAndDevelopment",
+          "label": "moderate_growth",
+          "value": 10.137073637233025
+        },
+        {
+          "metric": "GrossProfit",
+          "label": "moderate_growth",
+          "value": 8.035066940442654
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "OperatingCashFlow",
+          "label": "moderate_decline",
+          "value": -5.726656180763441
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "active_litigation",
+          "severity": "high",
+          "section": "Item 3",
+          "summary": "European Commission fined Apple \u20ac500 million on April 23, 2025 for App Store restrictions and issued cease and desist order.",
+          "citation": "AAPL 10-K 2025, Item 3",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "antitrust_exposure",
+          "severity": "high",
+          "section": "Item 3",
+          "summary": "European Commission may impose fines up to 10% of Apple's annual worldwide net sales in Article 6(4) Investigation.",
+          "citation": "AAPL 10-K 2025, Item 3",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "china_geopolitical_exposure",
+          "severity": "medium",
+          "section": "Item 7",
+          "summary": "Greater China net sales decreased 4% during 2025 primarily due to lower iPhone sales.",
+          "citation": "AAPL 10-K 2025, Item 7",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "foreign_currency_exposure",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "Apple estimates maximum one-day foreign currency derivative loss of $590 million as of September 27, 2025.",
+          "citation": "AAPL 10-K 2025, Item 7A",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "interest_rate_sensitivity",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "100 basis point interest rate increase would cause $2.4 billion decline in investment portfolio fair value and $129 million increase in annual interest expense.",
+          "citation": "AAPL 10-K 2025, Item 7A",
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Top matched peer neighborhood",
+      "common_strengths": [
+        "OperatingCashFlow",
+        "ResearchAndDevelopment",
+        "Revenues"
+      ],
+      "common_pressures": [
+        "NetIncome"
+      ],
+      "shared_risk_types": [
+        "active_litigation",
+        "customer_churn_risk",
+        "cybersecurity_vulnerability",
+        "foreign_currency_exposure",
+        "intensifying_competition",
+        "interest_rate_sensitivity",
+        "recession_sensitivity"
+      ],
+      "target_differences": [
+        "antitrust_exposure",
+        "product_obsolescence"
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "active_litigation",
+          "china_geopolitical_exposure",
+          "foreign_currency_exposure",
+          "interest_rate_sensitivity",
+          "trade_tariff_risk"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "antitrust_exposure",
+          "product_obsolescence"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "content_moderation_liability",
+          "customer_churn_risk",
+          "cybersecurity_vulnerability",
+          "export_control_risk",
+          "government_contract_risk",
+          "inflation_impact",
+          "intensifying_competition",
+          "key_person_dependency",
+          "manufacturing_defect_risk",
+          "negative_operating_cash_flow",
+          "platform_dependency",
+          "rd_productivity_risk",
+          "recession_sensitivity",
+          "regulatory_investigation",
+          "supply_chain_concentration",
+          "talent_retention_risk"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "talent_retention_risk",
+        "why_relevant": "Peers similar to the target showed talent_retention_risk after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "PLTR 2026: Loss of key personnel services could result in decline in sales, delays in product development, and harm to business operations.",
+          "PLTR 2026: negative delta pressure in Cash."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Current Posture",
+        "content": "Apple shows material financial upside in several income and liquidity metrics (positive deltas in Cash, NetIncome, ResearchAndDevelopment and GrossProfit) alongside a moderate decline in OperatingCashFlow (-5.73). The top risks include two high-severity regulatory items: a \u20ac500 million fine and cease-and-desist order from the European Commission (active litigation) and potential antitrust fines up to 10% of worldwide net sales (Article 6(4) Investigation) (AAPL 10-K 2025, Item 3). Medium-severity exposures are concentrated in Greater China sales (down 4% in 2025, Item 7), foreign-currency derivative loss potential (maximum one-day loss estimated at $590 million, Item 7A) and interest-rate sensitivity (1% rate rise estimated to reduce investment fair value by $2.4 billion and increase annual interest expense by $129 million, Item 7A).",
+        "citations": [
+          "AAPL 10-K 2025, Item 3",
+          "AAPL 10-K 2025, Item 7",
+          "AAPL 10-K 2025, Item 7A"
+        ]
+      },
+      {
+        "title": "Peer Comparison",
+        "content": "Against its top matched peer neighborhood, Apple shares common strengths in OperatingCashFlow, ResearchAndDevelopment and Revenues, while NetIncome appears as a common pressure across peers. Several risk types are shared now (for example, active litigation, China geopolitical exposure, foreign-currency exposure, and interest-rate sensitivity), though Apple currently shows target-only flags for antitrust_exposure and product_obsolescence. Peers additionally exhibit a broader set of peer-only pressures (including cybersecurity vulnerability, customer churn, supply-chain concentration and talent risks), underscoring differences in where operational vulnerabilities aggregate across the group.",
+        "citations": [
+          "AAPL 10-K 2025, Item 3"
+        ]
+      },
+      {
+        "title": "What To Watch Next",
+        "content": "Monitor talent_retention_risk as a pattern emerging among peers after the matched year (forward watchlist confidence: medium). Peer evidence (PLTR 2026) cites loss of key personnel causing sales declines and product delays and also notes negative delta pressure in Cash; treat these peer developments as indicators to watch in subsequent Apple filings rather than forecasts for Apple itself.",
+        "citations": [
+          "PLTR 2026: Loss of key personnel services could result in decline in sales, delays in product development, and harm to business operations.",
+          "PLTR 2026: negative delta pressure in Cash."
+        ]
+      }
+    ],
+    "error": null
+  }
+}

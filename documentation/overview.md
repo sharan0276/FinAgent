@@ -41,8 +41,8 @@ FinAgent is a local SEC `10-K` analysis workflow built around deterministic data
 - Extraction: `python data-extraction/main.py AAPL`
 - Curator batch run: `python data-extraction/company_filing_embedding.py AAPL`
 - Matching: `python rag-matching/matcher.py --input-file data-extraction/outputs/curator/AAPL/aapl_2025.json --top 2 --json`
-- Agentic orchestration: `python orchestration/runner.py AAPL --json`
-- Evaluation: `python -m evaluation.runner --agentic-dir orchestration/outputs --baseline-dir baseline_rag/outputs --json`
+- Agentic orchestration: `python orchestration/runner.py AAPL --top 2 --json`
+- Evaluation: `python -m evaluation.runner --agentic-dir orchestration/outputs --json`
 - UI: `streamlit run ui/app.py`
 
 ## Current UI Behavior
@@ -62,6 +62,7 @@ The local Streamlit app now supports:
 - Retrieval uses curator embeddings plus FAISS.
 - The active report schema is defined in `orchestration/report_models.py`.
 - The baseline comparison path is intentionally simpler than the agentic path, but it is still kept compatible with the current ingestion artifact shape.
+- Baseline artifacts are not written to disk by the Streamlit UI by default; evaluation against baseline outputs requires separately saved baseline artifact files.
 - The evaluation layer is intentionally offline and comparison-first rather than a general benchmark framework.
 - The evaluation layer uses one scorecard but keeps evidence pools separate so the baseline is not judged against hidden agentic-only evidence.
 - Final reports are structured rather than freeform and now include evidence-aware fields such as risk citations and cited narrative sections.

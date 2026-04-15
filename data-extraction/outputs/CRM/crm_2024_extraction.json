@@ -1,7 +1,7 @@
 {
   "schema_version": "data_extraction_v1",
   "model_name": "ProsusAI/finbert",
-  "run_timestamp": "2026-04-15T05:27:45.343193+00:00",
+  "run_timestamp": "2026-04-15T17:31:09.378501+00:00",
   "ticker": "CRM",
   "company_name": "Salesforce, Inc.",
   "cik": "0001108524",
@@ -9,7 +9,7 @@
   "filing_date": "2024-03-06",
   "accession": "0001108524-24-000005",
   "parser_mode": "plain_text_fallback",
-  "source_artifact_path": "/Users/sharan/Desktop/finagent/FinAgent/data-ingestion/outputs/CRM/complete_ingestion.json",
+  "source_artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\CRM\\complete_ingestion.json",
   "processed_sections": [
     "item_1a_risk_factors",
     "item_1c_cybersecurity",
@@ -81,7 +81,7 @@
       "current_tag": "LongTermDebt",
       "previous_tag": "LongTermDebt",
       "delta_percent": -11.083860013206301,
-      "label": "moderate_growth",
+      "label": "moderate_reduction",
       "reason": null
     },
     "OperatingCashFlow": {
@@ -135,8 +135,8 @@
       "next_sentence": "We expect that marketing and sales expenses will likely decrease as a percentage of revenues in the near term as we continue to focus on leveraging our self-serve and partner-led channels and increasing our sales productivity.",
       "risk_score": 0.9749438762664795,
       "finbert_probs": {
-        "positive": 0.008626644499599934,
-        "neutral": 0.016429591923952103,
+        "positive": 0.00862665195018053,
+        "neutral": 0.01642957516014576,
         "negative": 0.9749438762664795
       }
     },
@@ -150,8 +150,8 @@
       "next_sentence": "We expect that general and administrative expenses will likely decrease as a percentage of revenues in the near term as we continue to invest in process efficiency initiatives.",
       "risk_score": 0.9747442603111267,
       "finbert_probs": {
-        "positive": 0.009312416426837444,
-        "neutral": 0.015943409875035286,
+        "positive": 0.009312408976256847,
+        "neutral": 0.015943417325615883,
         "negative": 0.9747442603111267
       }
     },
@@ -165,8 +165,8 @@
       "next_sentence": "If we cannot accurately predict subscription renewals or upgrade rates, we may not meet our revenue targets, which may adversely affect the market price of our common stock.",
       "risk_score": 0.969801127910614,
       "finbert_probs": {
-        "positive": 0.008664842694997787,
-        "neutral": 0.021534083411097527,
+        "positive": 0.008664829656481743,
+        "neutral": 0.021534034982323647,
         "negative": 0.969801127910614
       }
     },
@@ -178,11 +178,11 @@
       "sentence_text": "The United States and other key international economies have experienced significant economic and market downturns in the past, and are likely to experience additional cyclical downturns from time to time in which economic activity is impacted by falling demand for a variety of goods and services, restricted credit, poor liquidity, reduced corporate profitability, volatility in credit, equity and foreign exchange markets, inflation, bankruptcies and overall uncertainty with respect to the economy.",
       "previous_sentence": "Our overall performance depends in part on worldwide economic and geopolitical conditions.",
       "next_sentence": "These economic conditions can arise suddenly and the full impact of such conditions can be difficult to predict.",
-      "risk_score": 0.9689075946807861,
+      "risk_score": 0.9689077138900757,
       "finbert_probs": {
-        "positive": 0.008921612054109573,
-        "neutral": 0.02217080071568489,
-        "negative": 0.9689075946807861
+        "positive": 0.008921608328819275,
+        "neutral": 0.022170765325427055,
+        "negative": 0.9689077138900757
       }
     },
     {
@@ -195,8 +195,8 @@
       "next_sentence": "Due to the unpredictability of future general economic and financial market conditions, including from the global economic impact of ongoing conflicts, such as the war in Ukraine and the Israel-Hamas war, the pace of change and innovation in enterprise cloud computing services, the impact of foreign currency exchange rate fluctuations, the growing complexity of our business, including the use of multiple pricing and packaging models and the increasing amount of revenue from software license sales, and our increasing focus on enterprise cloud computing services, we may not be able to realize our projected revenue growth plans.",
       "risk_score": 0.9685795903205872,
       "finbert_probs": {
-        "positive": 0.008795671164989471,
-        "neutral": 0.022624704986810684,
+        "positive": 0.008795683272182941,
+        "neutral": 0.022624751552939415,
         "negative": 0.9685795903205872
       }
     },
@@ -210,8 +210,8 @@
       "next_sentence": "As we add data centers and capacity and continue to move to cloud computing platform providers, we move or transfer our data and our customers' data from time to time.",
       "risk_score": 0.9668709635734558,
       "finbert_probs": {
-        "positive": 0.009365408681333065,
-        "neutral": 0.023763595148921013,
+        "positive": 0.009365417994558811,
+        "neutral": 0.023763619363307953,
         "negative": 0.9668709635734558
       }
     },
@@ -225,8 +225,8 @@
       "next_sentence": "We intend to continue to invest additional resources in our enterprise cloud computing services and data center capacity to allow us to scale with our customers and continue to evolve our security measures .",
       "risk_score": 0.9667217135429382,
       "finbert_probs": {
-        "positive": 0.016356447711586952,
-        "neutral": 0.016921846196055412,
+        "positive": 0.016356462612748146,
+        "neutral": 0.01692185178399086,
         "negative": 0.9667217135429382
       }
     },
@@ -240,8 +240,8 @@
       "next_sentence": "These trends may continue in the near term.",
       "risk_score": 0.9666672348976135,
       "finbert_probs": {
-        "positive": 0.01205902174115181,
-        "neutral": 0.021273646503686905,
+        "positive": 0.012059015221893787,
+        "neutral": 0.0212736614048481,
         "negative": 0.9666672348976135
       }
     },
@@ -255,8 +255,8 @@
       "next_sentence": "We derive a significant portion of our revenue from subscriptions to our CRM enterprise cloud computing application services, and we expect this will continue for the foreseeable future.",
       "risk_score": 0.9662508368492126,
       "finbert_probs": {
-        "positive": 0.010720777325332165,
-        "neutral": 0.023028381168842316,
+        "positive": 0.010720793157815933,
+        "neutral": 0.02302839234471321,
         "negative": 0.9662508368492126
       }
     },
@@ -270,8 +270,8 @@
       "next_sentence": "Fluctuations have occurred due to known and unknown risks, such as the global economic impact of ongoing conflicts, including the war in Ukraine and the Israel-Hamas war, and rising interest rates.",
       "risk_score": 0.9661170840263367,
       "finbert_probs": {
-        "positive": 0.01134193129837513,
-        "neutral": 0.02254096418619156,
+        "positive": 0.011341920122504234,
+        "neutral": 0.022540943697094917,
         "negative": 0.9661170840263367
       }
     },
@@ -283,11 +283,11 @@
       "sentence_text": "Any failure of our services to operate effectively with future network platforms and technologies could reduce the demand for our services, result in customer dissatisfaction and harm our business.",
       "previous_sentence": "Uncertainties about the timing and nature of new network platforms or technologies, modifications to existing platforms or technologies, including text messaging capabilities, or changes in customer usage patterns thereof could increase our research and development or service delivery expenses or lead to our increased reliance on certain vendors.",
       "next_sentence": "Our continued success depends on our ability to maintain and enhance our brands.",
-      "risk_score": 0.9657368063926697,
+      "risk_score": 0.9657369256019592,
       "finbert_probs": {
-        "positive": 0.008458176627755165,
-        "neutral": 0.02580501325428486,
-        "negative": 0.9657368063926697
+        "positive": 0.008458158001303673,
+        "neutral": 0.025805003941059113,
+        "negative": 0.9657369256019592
       }
     },
     {
@@ -301,7 +301,7 @@
       "risk_score": 0.9644742012023926,
       "finbert_probs": {
         "positive": 0.009436927735805511,
-        "neutral": 0.02608882077038288,
+        "neutral": 0.026088789105415344,
         "negative": 0.9644742012023926
       }
     },
@@ -315,8 +315,8 @@
       "next_sentence": "Further, there can be no assurance that our insurance coverage will be sufficient to cover the financial, legal, business, or reputational losses that may result from a cybersecurity incident or breach of our IT systems.",
       "risk_score": 0.9642964601516724,
       "finbert_probs": {
-        "positive": 0.0080379918217659,
-        "neutral": 0.027665534988045692,
+        "positive": 0.008037980645895004,
+        "neutral": 0.02766549587249756,
         "negative": 0.9642964601516724
       }
     },
@@ -331,7 +331,7 @@
       "risk_score": 0.963654637336731,
       "finbert_probs": {
         "positive": 0.009113454259932041,
-        "neutral": 0.027231888845562935,
+        "neutral": 0.027231883257627487,
         "negative": 0.963654637336731
       }
     },
@@ -345,8 +345,8 @@
       "next_sentence": "Our corporate headquarters, and a significant portion of our personnel, research and development activities and other critical business operations, are located near major seismic faults in the San Francisco Bay Area.",
       "risk_score": 0.9633076190948486,
       "finbert_probs": {
-        "positive": 0.010180369950830936,
-        "neutral": 0.02651202492415905,
+        "positive": 0.010180359706282616,
+        "neutral": 0.02651199884712696,
         "negative": 0.9633076190948486
       }
     },
@@ -358,11 +358,11 @@
       "sentence_text": "Foreign currency fluctuations minimally impacted revenues in the fiscal year ended January 31, 2024 and our current remaining performance obligatio n was negatively impacted by one percent as of January 31, 2024 compared to what we would have reported as of January 31, 2023 using constant currency rates.",
       "previous_sentence": "In addition, the expanding global scope of our business and the heightened volatility of global markets expose us to the risk of fluctuations in foreign currency markets.",
       "next_sentence": "During fiscal 2023, the United States Dollar strengthened significantly against certain foreign currencies in the markets in which we operate, particularly against the Euro, British Pound Sterling and Japanese Yen.",
-      "risk_score": 0.9632737636566162,
+      "risk_score": 0.9632738828659058,
       "finbert_probs": {
-        "positive": 0.015294153243303299,
-        "neutral": 0.02143203467130661,
-        "negative": 0.9632737636566162
+        "positive": 0.015294155105948448,
+        "neutral": 0.021432025358080864,
+        "negative": 0.9632738828659058
       }
     },
     {
@@ -375,8 +375,8 @@
       "next_sentence": "Our business and reputation would also be harmed if our customers and potential customers believe our services are unreliable.",
       "risk_score": 0.963161051273346,
       "finbert_probs": {
-        "positive": 0.007645838428288698,
-        "neutral": 0.02919311262667179,
+        "positive": 0.007645850069820881,
+        "neutral": 0.029193153604865074,
         "negative": 0.963161051273346
       }
     },
@@ -390,7 +390,7 @@
       "next_sentence": "We continually evaluate our investments in privately held and publicly traded companies.",
       "risk_score": 0.9630404114723206,
       "finbert_probs": {
-        "positive": 0.009543264284729958,
+        "positive": 0.009543251246213913,
         "neutral": 0.02741631492972374,
         "negative": 0.9630404114723206
       }
@@ -406,7 +406,7 @@
       "risk_score": 0.9628890752792358,
       "finbert_probs": {
         "positive": 0.009404294192790985,
-        "neutral": 0.027706632390618324,
+        "neutral": 0.02770663984119892,
         "negative": 0.9628890752792358
       }
     },
@@ -420,8 +420,8 @@
       "next_sentence": "As we target more of our sales efforts at larger enterprise customers, including governmental entities, and specific industries, such as financial services and healthcare and life sciences, we may face greater costs, longer sales cycles, greater competition and less predictability in completing some of our sales.",
       "risk_score": 0.9625872373580933,
       "finbert_probs": {
-        "positive": 0.008724348619580269,
-        "neutral": 0.028688371181488037,
+        "positive": 0.008724343962967396,
+        "neutral": 0.02868833765387535,
         "negative": 0.9625872373580933
       }
     },
@@ -433,11 +433,11 @@
       "sentence_text": "If we are not able to provide continued operating margin expansion, our business could be harmed and the market price of our common stock could decline.",
       "previous_sentence": "As a result, our revenues, operating results and cash flows may fluctuate significantly on a quarterly basis and revenue growth rates may not be sustainable and may decline in the future.",
       "next_sentence": "Unanticipated changes in our effective tax rate and additional tax liabilities and global tax developments may impact our financial results.",
-      "risk_score": 0.9617104530334473,
+      "risk_score": 0.9617105722427368,
       "finbert_probs": {
-        "positive": 0.010287090204656124,
-        "neutral": 0.02800239995121956,
-        "negative": 0.9617104530334473
+        "positive": 0.010287092067301273,
+        "neutral": 0.028002388775348663,
+        "negative": 0.9617105722427368
       }
     },
     {
@@ -448,11 +448,11 @@
       "sentence_text": "Further, reductions in our real estate portfolio resulting from our Restructuring Plan may impede our ability to adequately accommodate employees returning to the office or future headcount growth.",
       "previous_sentence": "Additionally, changes in our work environment and workforce in the wake of the COVID-19 pandemic, including our return to office and remote work policies, may not meet the needs and expectations of our workforce or may create operational and workplace culture challenges, which could negatively impact our ability to increase employee productivity or attract and retain our employees and could adversely affect our operations.",
       "next_sentence": "To manage the expected domestic and international growth of our operations and personnel, we will need to continue to improve our operational, financial and management controls, our reporting systems and procedures and our utilization of real estate.",
-      "risk_score": 0.961319088935852,
+      "risk_score": 0.9613192081451416,
       "finbert_probs": {
-        "positive": 0.014755991287529469,
-        "neutral": 0.023924874141812325,
-        "negative": 0.961319088935852
+        "positive": 0.01475598569959402,
+        "neutral": 0.0239248089492321,
+        "negative": 0.9613192081451416
       }
     },
     {
@@ -465,7 +465,7 @@
       "next_sentence": "Other income (expense) primarily consists of interest income on our marketable securities portfolio, which is partially offset by interest expense on our debt as well as our finance leases.",
       "risk_score": 0.9611433148384094,
       "finbert_probs": {
-        "positive": 0.020731819793581963,
+        "positive": 0.02073187194764614,
         "neutral": 0.018124885857105255,
         "negative": 0.9611433148384094
       }
@@ -480,8 +480,8 @@
       "next_sentence": "The market for enterprise applications and platform services is highly competitive, rapidly evolving, fragmented and subject to changing technology, low barriers to entry, shifting customer needs and frequent introductions of new products and services.",
       "risk_score": 0.9610517024993896,
       "finbert_probs": {
-        "positive": 0.013737405650317669,
-        "neutral": 0.02521093562245369,
+        "positive": 0.013737425208091736,
+        "neutral": 0.025210941210389137,
         "negative": 0.9610517024993896
       }
     },
@@ -495,8 +495,8 @@
       "next_sentence": "Our quarterly results are likely to fluctuate.",
       "risk_score": 0.9610454440116882,
       "finbert_probs": {
-        "positive": 0.016543783247470856,
-        "neutral": 0.02241070754826069,
+        "positive": 0.016543807461857796,
+        "neutral": 0.022410748526453972,
         "negative": 0.9610454440116882
       }
     },
@@ -511,7 +511,7 @@
       "risk_score": 0.9610376358032227,
       "finbert_probs": {
         "positive": 0.008511776104569435,
-        "neutral": 0.030450565740466118,
+        "neutral": 0.03045053407549858,
         "negative": 0.9610376358032227
       }
     },
@@ -523,11 +523,11 @@
       "sentence_text": "We could also lose future sales or customers may make warranty or other claims against us, which could result in an increase in our allowance for doubtful accounts, an increase in collection cycles for accounts receivable or the expense and risk of litigation.",
       "previous_sentence": "As a result, customers could elect to not renew our services or delay or withhold payment to us.",
       "next_sentence": "Any interruptions or delays in services from third parties, including data center hosting facilities, cloud computing platform providers and other hardware and software vendors, or from our inability to adequately plan for and manage service interruptions or infrastructure capacity requirements, could impair the delivery of our services and harm our business.",
-      "risk_score": 0.96035236120224,
+      "risk_score": 0.9603524804115295,
       "finbert_probs": {
-        "positive": 0.01045246422290802,
-        "neutral": 0.029195083305239677,
-        "negative": 0.96035236120224
+        "positive": 0.0104524502530694,
+        "neutral": 0.029195038601756096,
+        "negative": 0.9603524804115295
       }
     },
     {
@@ -540,8 +540,8 @@
       "next_sentence": "The Restructuring Plan and recent workforce reduction, or any similar actions taken in the future, could negatively impact our ability to attract, integrate, retain and motivate key employees.",
       "risk_score": 0.9602187275886536,
       "finbert_probs": {
-        "positive": 0.01614147424697876,
-        "neutral": 0.023639850318431854,
+        "positive": 0.016141420230269432,
+        "neutral": 0.023639868944883347,
         "negative": 0.9602187275886536
       }
     },
@@ -555,8 +555,8 @@
       "next_sentence": "For example, the Restructuring Plan involved such changes to our sales organization, which could negatively impact our productivity, growth rate and operating results, which may adversely affect the market price of our common stock.",
       "risk_score": 0.960142195224762,
       "finbert_probs": {
-        "positive": 0.011379217728972435,
-        "neutral": 0.028478555381298065,
+        "positive": 0.011379244737327099,
+        "neutral": 0.02847854048013687,
         "negative": 0.960142195224762
       }
     },
@@ -568,11 +568,11 @@
       "sentence_text": "We may lose key members of our management team or development and operations personnel, and may be unable to attract and retain employees we need to support our operations and growth.",
       "previous_sentence": "Our adoption of or failure to adopt, as well as the manner and time of, changes to our pricing and packaging models and strategies may harm our business.",
       "next_sentence": "Our success depends substantially upon the continued services of our executive officers and other key members of management, particularly our chief executive officer.",
-      "risk_score": 0.9601297974586487,
+      "risk_score": 0.9601296782493591,
       "finbert_probs": {
-        "positive": 0.009315868839621544,
-        "neutral": 0.030554361641407013,
-        "negative": 0.9601297974586487
+        "positive": 0.00931588839739561,
+        "neutral": 0.03055443800985813,
+        "negative": 0.9601296782493591
       }
     },
     {
@@ -585,8 +585,8 @@
       "next_sentence": "However, because we classify our debt securities as \"available for sale,\" no gains or losses are recognized in our consolidated statement of operations due to changes in interest rates.",
       "risk_score": 0.9600157737731934,
       "finbert_probs": {
-        "positive": 0.011813903227448463,
-        "neutral": 0.0281702671200037,
+        "positive": 0.011813919991254807,
+        "neutral": 0.028170306235551834,
         "negative": 0.9600157737731934
       }
     },
@@ -601,7 +601,7 @@
       "risk_score": 0.9597007632255554,
       "finbert_probs": {
         "positive": 0.009539328515529633,
-        "neutral": 0.030759913846850395,
+        "neutral": 0.030759941786527634,
         "negative": 0.9597007632255554
       }
     },
@@ -615,8 +615,8 @@
       "next_sentence": "For many of our offerings, our production environment and customers' data are replicated in a separate facility located elsewhere.",
       "risk_score": 0.9596157670021057,
       "finbert_probs": {
-        "positive": 0.009784416295588017,
-        "neutral": 0.03059982694685459,
+        "positive": 0.009784388355910778,
+        "neutral": 0.030599771067500114,
         "negative": 0.9596157670021057
       }
     },
@@ -628,11 +628,11 @@
       "sentence_text": "We have experienced and may in the future experience defects in our products that created vulnerabilities that inadvertently permitted access to protected customer data.",
       "previous_sentence": "Such defects could be the result of employee, contractor or other third-party acts or inaction, and could negatively affect our brand and reputation.",
       "next_sentence": "We can provide no assurance that such product defects or other vulnerabilities will not occur in the future that have a material adverse effect on our business or subject us to substantial liability.",
-      "risk_score": 0.9595951437950134,
+      "risk_score": 0.9595950245857239,
       "finbert_probs": {
-        "positive": 0.012180926278233528,
-        "neutral": 0.028223998844623566,
-        "negative": 0.9595951437950134
+        "positive": 0.012180960737168789,
+        "neutral": 0.028224023059010506,
+        "negative": 0.9595950245857239
       }
     },
     {
@@ -645,8 +645,8 @@
       "next_sentence": "Results of Operations The following tables set forth selected data for each of the periods indicated (in millions): 4 Fiscal Year Ended January 31, 2024 % of Total Revenues 2023 % of Total Revenues 2022 % of Total Revenues Revenues: Subscription and support $ 32,537 93 % $ 29,021 93 % $ 24,657 93 % Professional services and other 2,320 7 2,331 7 1,835 7 Total revenues 34,857 100 31,352 100 26,492 100 Cost of revenues (1)(2): Subscription and support 6,177 18 5,821 19 5,059 19 Professional services and other 2,364 7 2,539 8 1,967 8 Total cost of revenues 8,541 25 8,360 27 7,026 27 Gross profit 26,316 75 22,992 73 19,466 73 Operating expenses (1)(2): Research and development 4,906 14 5,055 16 4,465 17 Marketing and sales 12,877 37 13,526 43 11,855 44 General and administrative 2,534 7 2,553 8 2,598 10 Restructuring 988 3 828 3 0 0 Total operating expenses 21,305 61 21,962 70 18,918 71 Income from operations 5,011 14 1,030 3 548 2 Gains (losses) on strategic investments, net (277) (1) (239) (1) 1,211 5 Other income (expense) 216 1 (131) 0 (227) (1) Income before provision for income taxes 4,950 14 660 2 1,532 6 Provision for income taxes (814) (2) (452) (1) (88) (1) Net income $ 4,136 12 % $ 208 1 % $ 1,444 5 % (1) Amounts related to amortization of intangible assets acquired through business combinations, as follows (in millions): Fiscal Year Ended January 31, 2024 % of Total Revenues 2023 % of Total Revenues 2022 % of Total Revenues Cost of revenues $ 978 3 % $ 1,035 3 % $ 897 3 % Marketing and sales 891 2 916 3 727 3 (2) Amounts related to stock-based compensation expense, as follows (in millions): Fiscal Year Ended January 31, 2024 % of Total Revenues 2023 % of Total Revenues 2022 % of Total Revenues Cost of revenues $ 431 1 % $ 499 2 % $ 386 1 % Research and development 972 3 1,136 3 918 4 Marketing and sales 1,062 3 1,256 4 1,104 4 General and administrative 299 1 368 1 371 1 Restructuring 23 0 20 0 0 0 47 Table of Contents The following table sets forth selected balance sheet data and other metrics for each of the periods indicated (in millions, except remaining performance obligation, which is presented in billions): As of January 31, 2024 January 31, 2023 Cash, cash equivalents and marketable securities $ 14,194 $ 12,508 Unearned revenue 19,003 17,376 Remaining performance obligation 56.9 48.6 Principal due on our outstanding debt obligations (1) 9,500 10,682 (1) Amounts do not include operating or financing lease obligations.",
       "risk_score": 0.9595707654953003,
       "finbert_probs": {
-        "positive": 0.01623448356986046,
-        "neutral": 0.024194717407226562,
+        "positive": 0.016234496608376503,
+        "neutral": 0.024194711819291115,
         "negative": 0.9595707654953003
       }
     },
@@ -660,8 +660,8 @@
       "next_sentence": "In January 2023, we announced the Restructuring Plan, which was intended to reduce operating costs, improve operating margins and continue advancing our ongoing commitment to profitable growth.",
       "risk_score": 0.9592000246047974,
       "finbert_probs": {
-        "positive": 0.01338354405015707,
-        "neutral": 0.027416357770562172,
+        "positive": 0.01338355615735054,
+        "neutral": 0.027416391298174858,
         "negative": 0.9592000246047974
       }
     },
@@ -673,11 +673,11 @@
       "sentence_text": "If we fail to protect our intellectual property rights adequately, our competitors may gain access to our technology, affecting our brand, causing us to incur significant expenses and harming our business.",
       "previous_sentence": "Any failure to obtain registration or protection of our intellectual property rights could impair our ability to protect our proprietary technology and our brand, causing us to incur significant expenses and harm our business.",
       "next_sentence": "Any of our patents, trademarks or other intellectual property rights may be challenged by others or invalidated through administrative process or litigation.",
-      "risk_score": 0.9591778516769409,
+      "risk_score": 0.9591777324676514,
       "finbert_probs": {
-        "positive": 0.00829320214688778,
-        "neutral": 0.03252898529171944,
-        "negative": 0.9591778516769409
+        "positive": 0.008293204940855503,
+        "neutral": 0.03252902254462242,
+        "negative": 0.9591777324676514
       }
     },
     {
@@ -690,8 +690,8 @@
       "next_sentence": "The technology industry is subject to substantial and continuous competition for engineers with high levels of experience in designing, developing and managing software and technology services, as well as competition for sales executives, data scientists and operations personnel.",
       "risk_score": 0.9589757919311523,
       "finbert_probs": {
-        "positive": 0.00802085641771555,
-        "neutral": 0.03300337493419647,
+        "positive": 0.008020845241844654,
+        "neutral": 0.03300335258245468,
         "negative": 0.9589757919311523
       }
     },
@@ -703,11 +703,11 @@
       "sentence_text": "If customers are not satisfied with the quality and timing of work by us or a third party or with the type of services or solutions delivered, we could incur additional costs to address the situation, the profitability of that work might be impaired, our revenue recognition could be impacted and the customer's dissatisfaction with the services received could negatively impact our ability to sell our other offerings to that customer or retain existing customers.",
       "previous_sentence": "Our strategy is to work with third parties to increase the breadth of capability and depth of capacity for delivery of these services to our customers.",
       "next_sentence": "In addition, negative publicity related to our customer relationships, regardless of its accuracy, may further damage our business by affecting our ability to compete for new business with current or prospective customers.",
-      "risk_score": 0.9583917856216431,
+      "risk_score": 0.9583919048309326,
       "finbert_probs": {
-        "positive": 0.00867591705173254,
-        "neutral": 0.03293221443891525,
-        "negative": 0.9583917856216431
+        "positive": 0.008675896562635899,
+        "neutral": 0.03293219953775406,
+        "negative": 0.9583919048309326
       }
     },
     {
@@ -718,11 +718,11 @@
       "sentence_text": "In addition, fluctuations in USD against international currencies negatively impacted our current remaining performance obligation by approximately one percent as of January 31, 2024 compared to what we would have reported as of January 31, 2023 using constant currency rates.",
       "previous_sentence": "Total revenue during the fiscal year ended January 31, 2024 , was minimally impacted by fluctuations in foreign currencies compared to the fiscal year ended January 31, 2024 .",
       "next_sentence": "Interest Rate Sensitivity We had cash, cash equivalents and marketable securities totaling $14.2 billion as of January 31, 2024.",
-      "risk_score": 0.9583344459533691,
+      "risk_score": 0.9583343267440796,
       "finbert_probs": {
-        "positive": 0.019894510507583618,
-        "neutral": 0.021771013736724854,
-        "negative": 0.9583344459533691
+        "positive": 0.019894570112228394,
+        "neutral": 0.021771010011434555,
+        "negative": 0.9583343267440796
       }
     },
     {
@@ -735,8 +735,8 @@
       "next_sentence": "Such defects could be the result of employee, contractor or other third-party acts or inaction, and could negatively affect our brand and reputation.",
       "risk_score": 0.9580003023147583,
       "finbert_probs": {
-        "positive": 0.011425347998738289,
-        "neutral": 0.03057427704334259,
+        "positive": 0.011425359174609184,
+        "neutral": 0.03057429939508438,
         "negative": 0.9580003023147583
       }
     },
@@ -750,8 +750,8 @@
       "next_sentence": "Industry-specific regulations and other requirements and standards are evolving and unfavorable industry-specific laws, regulations, interpretive positions or standards could harm our business.",
       "risk_score": 0.9572888016700745,
       "finbert_probs": {
-        "positive": 0.00870166253298521,
-        "neutral": 0.034009505063295364,
+        "positive": 0.008701657876372337,
+        "neutral": 0.03400951251387596,
         "negative": 0.9572888016700745
       }
     },
@@ -765,8 +765,8 @@
       "next_sentence": "If we are not able to provide continued operating margin expansion, our business could be harmed and the market price of our common stock could decline.",
       "risk_score": 0.957125186920166,
       "finbert_probs": {
-        "positive": 0.017857396975159645,
-        "neutral": 0.025017373263835907,
+        "positive": 0.017857423052191734,
+        "neutral": 0.0250173918902874,
         "negative": 0.957125186920166
       }
     },
@@ -780,8 +780,8 @@
       "next_sentence": "As we acquire companies or technologies, we may not realize the expected business or financial benefits and the acquisitions could prove difficult to integrate, disrupt our business, dilute stockholder value and adversely affect our operating results and the market value of our common stock.",
       "risk_score": 0.9570242762565613,
       "finbert_probs": {
-        "positive": 0.009499859996140003,
-        "neutral": 0.033475860953330994,
+        "positive": 0.009499873965978622,
+        "neutral": 0.03347589820623398,
         "negative": 0.9570242762565613
       }
     },
@@ -793,11 +793,11 @@
       "sentence_text": "The costs of compliance with, and other burdens imposed by, industry-specific laws, regulations and interpretive positions may limit our customers' use and adoption of our services and reduce overall demand for our services.",
       "previous_sentence": "Regulators in certain industries have adopted and may in the future adopt regulations or interpretive positions regarding the use of cloud computing, AI services and other outsourced services.",
       "next_sentence": "Compliance with these regulations may also require us to devote greater resources to support certain customers, which may increase costs and lengthen sales cycles.",
-      "risk_score": 0.9568480253219604,
+      "risk_score": 0.9568480849266052,
       "finbert_probs": {
-        "positive": 0.009917794726788998,
-        "neutral": 0.03323421999812126,
-        "negative": 0.9568480253219604
+        "positive": 0.009917757473886013,
+        "neutral": 0.03323417529463768,
+        "negative": 0.9568480849266052
       }
     },
     {
@@ -810,8 +810,8 @@
       "next_sentence": "Our fourth quarter has historically been our strongest quarter for new business and renewals.",
       "risk_score": 0.9544171690940857,
       "finbert_probs": {
-        "positive": 0.017833299934864044,
-        "neutral": 0.027749599888920784,
+        "positive": 0.017833290621638298,
+        "neutral": 0.027749646455049515,
         "negative": 0.9544171690940857
       }
     },
@@ -825,8 +825,8 @@
       "next_sentence": "Attrition represents the reduction or loss of the annualized value of our contracts with customers.",
       "risk_score": 0.9538090229034424,
       "finbert_probs": {
-        "positive": 0.012574655935168266,
-        "neutral": 0.033616408705711365,
+        "positive": 0.012574637308716774,
+        "neutral": 0.03361636772751808,
         "negative": 0.9538090229034424
       }
     },
@@ -838,11 +838,11 @@
       "sentence_text": "Our effective tax rate decreased from a year ago primarily due to discrete benefits from foreign tax credits attributable to recent IRS notices.",
       "previous_sentence": "Our tax provision increased from a year ago primarily due to higher pretax income.",
       "next_sentence": "Our effective tax rate may fluctuate due to changes in our domestic and foreign earnings, or material discrete tax items, or a combination of these factors resulting from transactions or events, including acquisitions, changes to our operating structure and other macroeconomic factors.",
-      "risk_score": 0.9535985589027405,
+      "risk_score": 0.9535986185073853,
       "finbert_probs": {
-        "positive": 0.0337405726313591,
-        "neutral": 0.012660819105803967,
-        "negative": 0.9535985589027405
+        "positive": 0.03374059125781059,
+        "neutral": 0.012660808861255646,
+        "negative": 0.9535986185073853
       }
     },
     {
@@ -853,11 +853,11 @@
       "sentence_text": "However, we face ongoing and increasing cybersecurity risks, including from bad actors that are becoming more sophisticated and effective over time, as well as a result of potential defects or disruptions in our or our customers' services.",
       "previous_sentence": "During the last fiscal year, we did not identify any risks from cybersecurity threats, including as a result of any previous cybersecurity incidents, that materially affected the Company, including its business strategy, results of operations, or financial condition.",
       "next_sentence": "If realized, these risks are reasonably likely to materially affect the Company.",
-      "risk_score": 0.953169584274292,
+      "risk_score": 0.9531696438789368,
       "finbert_probs": {
-        "positive": 0.012709138914942741,
-        "neutral": 0.03412126004695892,
-        "negative": 0.953169584274292
+        "positive": 0.012709121219813824,
+        "neutral": 0.03412118926644325,
+        "negative": 0.9531696438789368
       }
     },
     {
@@ -871,7 +871,7 @@
       "risk_score": 0.9517601132392883,
       "finbert_probs": {
         "positive": 0.00996888242661953,
-        "neutral": 0.0382709875702858,
+        "neutral": 0.0382709763944149,
         "negative": 0.9517601132392883
       }
     },
@@ -885,8 +885,8 @@
       "next_sentence": "Due in part to these factors, our future investment income may fall short of expectations due to changes in interest rates or we may suffer losses in principal if we are forced to sell securities that decline in market value due to changes in interest rates.",
       "risk_score": 0.9515573382377625,
       "finbert_probs": {
-        "positive": 0.011350504122674465,
-        "neutral": 0.0370921716094017,
+        "positive": 0.011350509710609913,
+        "neutral": 0.037092216312885284,
         "negative": 0.9515573382377625
       }
     },
@@ -900,8 +900,8 @@
       "next_sentence": "Unearned revenues, accounts receivable and operating cash flow may also be impacted by acquisitions.",
       "risk_score": 0.9490164518356323,
       "finbert_probs": {
-        "positive": 0.01477172039449215,
-        "neutral": 0.03621184453368187,
+        "positive": 0.014771747402846813,
+        "neutral": 0.03621188551187515,
         "negative": 0.9490164518356323
       }
     },
@@ -913,11 +913,11 @@
       "sentence_text": "Any excise tax for fiscal 2024 will impact financing cash flows.",
       "previous_sentence": "It was applicable to stock repurchases made in fiscal 2024 and impacted in fiscal 2025 by factors such as the Company's share price.",
       "next_sentence": "Cash Dividend On February 28, 2024, we announced a quarterly dividend policy and the declaration of our first-ever cash dividend.",
-      "risk_score": 0.9467203617095947,
+      "risk_score": 0.9467202425003052,
       "finbert_probs": {
-        "positive": 0.010328581556677818,
-        "neutral": 0.042951058596372604,
-        "negative": 0.9467203617095947
+        "positive": 0.010328585281968117,
+        "neutral": 0.042951103299856186,
+        "negative": 0.9467202425003052
       }
     },
     {
@@ -928,11 +928,11 @@
       "sentence_text": "Operating Expenses Fiscal Year Ended January 31, Variance Dollars (in millions) 2024 As a % of Total Revenues 2023 As a % of Total Revenues Research and development $ 4,906 14 % $ 5,055 16 % $ (149) Marketing and sales 12,877 37 13,526 43 (649) General and administrative 2,534 7 2,553 8 (19) Restructuring 988 3 828 3 160 Total operating expenses $ 21,305 61 % $ 21,962 70 % $ (657) For fiscal 2024, the decrease in research and development expenses in absolute dollars and as a percentage of revenue was primarily due to a decrease in employee-related costs, including stock-based compensation expense.",
       "previous_sentence": "The timing of these expenses may adversely affect our cost of revenues as a percentage of revenues in the near term due to fluctuations in demand for our service offerings.",
       "next_sentence": "However, at the end of fiscal 2024, we began to invest in incremental AI resources to accelerate further growth and as a result our research and development headcount increased by five percent during fiscal 2024.",
-      "risk_score": 0.9461818337440491,
+      "risk_score": 0.9461819529533386,
       "finbert_probs": {
-        "positive": 0.017512913793325424,
-        "neutral": 0.036305271089076996,
-        "negative": 0.9461818337440491
+        "positive": 0.017512857913970947,
+        "neutral": 0.03630514442920685,
+        "negative": 0.9461819529533386
       }
     },
     {
@@ -945,8 +945,8 @@
       "next_sentence": "Remaining Performance Obligation Our remaining performance obligation represents all future revenue under contract that has not yet been recognized as revenue and includes unearned revenue and unbilled amounts.",
       "risk_score": 0.9379753470420837,
       "finbert_probs": {
-        "positive": 0.013197029009461403,
-        "neutral": 0.0488276369869709,
+        "positive": 0.013197016902267933,
+        "neutral": 0.04882765933871269,
         "negative": 0.9379753470420837
       }
     },
@@ -958,11 +958,11 @@
       "sentence_text": "Slower growth in new and renewal business, particularly if sustained, impacts our remaining performance obligation, revenues and our ability to meet financial guidance and long-term targets.",
       "previous_sentence": "Throughout fiscal 2024, we continued to experience elongated sales cycles, additional deal approval layers and deal compression.",
       "next_sentence": "In addition, the expanding global scope of our business and the heightened volatility of global markets expose us to the risk of fluctuations in foreign currency markets.",
-      "risk_score": 0.9378617405891418,
+      "risk_score": 0.9378615617752075,
       "finbert_probs": {
-        "positive": 0.022185327485203743,
-        "neutral": 0.03995298966765404,
-        "negative": 0.9378617405891418
+        "positive": 0.02218540757894516,
+        "neutral": 0.039953019469976425,
+        "negative": 0.9378615617752075
       }
     },
     {
@@ -975,8 +975,8 @@
       "next_sentence": "50 Table of Contents Fiscal Year Ended January 31, 2023 and 2022 For a discussion of the year ended January 31, 2023 compared to the year ended January 31, 2022, refer to Part II, Item 7, \"Management's Discussion and Analysis of Financial Condition and Results of Operations\" in our Annual Report on Form 10-K for the year ended January 31, 2023.",
       "risk_score": 0.9377878308296204,
       "finbert_probs": {
-        "positive": 0.019614914432168007,
-        "neutral": 0.042597293853759766,
+        "positive": 0.019614918157458305,
+        "neutral": 0.042597316205501556,
         "negative": 0.9377878308296204
       }
     },
@@ -991,7 +991,7 @@
       "risk_score": 0.9317339062690735,
       "finbert_probs": {
         "positive": 0.013443813659250736,
-        "neutral": 0.05482225492596626,
+        "neutral": 0.05482224002480507,
         "negative": 0.9317339062690735
       }
     },
@@ -1005,7 +1005,7 @@
       "next_sentence": "Operating Expenses Fiscal Year Ended January 31, Variance Dollars (in millions) 2024 As a % of Total Revenues 2023 As a % of Total Revenues Research and development $ 4,906 14 % $ 5,055 16 % $ (149) Marketing and sales 12,877 37 13,526 43 (649) General and administrative 2,534 7 2,553 8 (19) Restructuring 988 3 828 3 160 Total operating expenses $ 21,305 61 % $ 21,962 70 % $ (657) For fiscal 2024, the decrease in research and development expenses in absolute dollars and as a percentage of revenue was primarily due to a decrease in employee-related costs, including stock-based compensation expense.",
       "risk_score": 0.9314742088317871,
       "finbert_probs": {
-        "positive": 0.013700573705136776,
+        "positive": 0.013700567185878754,
         "neutral": 0.05482519045472145,
         "negative": 0.9314742088317871
       }
@@ -1018,11 +1018,11 @@
       "sentence_text": "We anticipate future volatility in our consolidated statements of operations due to changes in market prices, observable price changes and impairments of our strategic investments.",
       "previous_sentence": "We anticipate additional volatility in our consolidated statement of operations due to these events, as well as changes in the market prices of our publicly held equity securities.",
       "next_sentence": "The resulting gains or losses could be material depending on market conditions and events, particularly in periods with economic uncertainty, inflation, volatile public equity markets or unsettled global market conditions.",
-      "risk_score": 0.9297869205474854,
+      "risk_score": 0.9297866821289062,
       "finbert_probs": {
-        "positive": 0.015629371628165245,
-        "neutral": 0.05458376556634903,
-        "negative": 0.9297869205474854
+        "positive": 0.015629412606358528,
+        "neutral": 0.0545838437974453,
+        "negative": 0.9297866821289062
       }
     },
     {
@@ -1033,11 +1033,11 @@
       "sentence_text": "Changes in foreign currency exchange rates could have an adverse impact on our financial results and cash flows.",
       "previous_sentence": "These exposures may change over time as business practices evolve and economic conditions change.",
       "next_sentence": "Foreign Currency Transaction Risk Our foreign currency exposures typically arise from selling annual and multi-year subscriptions in multiple currencies, customer accounts receivable, intercompany transfer pricing arrangements and other intercompany transactions.",
-      "risk_score": 0.926285982131958,
+      "risk_score": 0.9262858033180237,
       "finbert_probs": {
-        "positive": 0.012549822218716145,
-        "neutral": 0.0611642524600029,
-        "negative": 0.926285982131958
+        "positive": 0.012549844570457935,
+        "neutral": 0.06116428226232529,
+        "negative": 0.9262858033180237
       }
     },
     {
@@ -1050,8 +1050,8 @@
       "next_sentence": "To mitigate that risk, we only contract with counterparties who meet the minimum requirements under our counterparty risk assessment process.",
       "risk_score": 0.9145102500915527,
       "finbert_probs": {
-        "positive": 0.019536038860678673,
-        "neutral": 0.06595370918512344,
+        "positive": 0.019536007195711136,
+        "neutral": 0.06595362722873688,
         "negative": 0.9145102500915527
       }
     },
@@ -1063,11 +1063,11 @@
       "sentence_text": "The resulting gains or losses could be material depending on market conditions and events, particularly in periods with economic uncertainty, inflation, volatile public equity markets or unsettled global market conditions.",
       "previous_sentence": "We anticipate future volatility in our consolidated statements of operations due to changes in market prices, observable price changes and impairments of our strategic investments.",
       "next_sentence": "Our investments in privately held equity securities are in various classes of equity with varying rights and preferences.",
-      "risk_score": 0.9019160270690918,
+      "risk_score": 0.9019162058830261,
       "finbert_probs": {
-        "positive": 0.026976067572832108,
-        "neutral": 0.07110798358917236,
-        "negative": 0.9019160270690918
+        "positive": 0.026975981891155243,
+        "neutral": 0.07110782712697983,
+        "negative": 0.9019162058830261
       }
     },
     {
@@ -1078,11 +1078,11 @@
       "sentence_text": "Total revenue during the fiscal year ended January 31, 2024 , was minimally impacted by fluctuations in foreign currencies compared to the fiscal year ended January 31, 2024 .",
       "previous_sentence": "Foreign Currency Translation Risk Fluctuations in foreign currencies impact the amount of total assets, liabilities, revenues, operating expenses and cash flows that we repor t for our foreign subsidiaries upon the translation of these amounts into USD.",
       "next_sentence": "In addition, fluctuations in USD against international currencies negatively impacted our current remaining performance obligation by approximately one percent as of January 31, 2024 compared to what we would have reported as of January 31, 2023 using constant currency rates.",
-      "risk_score": 0.8909793496131897,
+      "risk_score": 0.8909794688224792,
       "finbert_probs": {
-        "positive": 0.05065895989537239,
-        "neutral": 0.058361683040857315,
-        "negative": 0.8909793496131897
+        "positive": 0.050658904016017914,
+        "neutral": 0.05836160480976105,
+        "negative": 0.8909794688224792
       }
     },
     {
@@ -1095,8 +1095,8 @@
       "next_sentence": "The outcome of any claims or litigation, regardless of the merits, is inherently uncertain.",
       "risk_score": 0.8761773705482483,
       "finbert_probs": {
-        "positive": 0.03672892227768898,
-        "neutral": 0.08709374070167542,
+        "positive": 0.0367288812994957,
+        "neutral": 0.08709372580051422,
         "negative": 0.8761773705482483
       }
     },
@@ -1108,11 +1108,11 @@
       "sentence_text": "Any claims and other lawsuits, and the disposition of such claims and lawsuits, whether through settlement or litigation, could be time-consuming and expensive to resolve, divert our attention from executing our business plan, result in efforts to enjoin our activities, lead to attempts by third parties to seek similar claims and, in the case of intellectual property claims, require us to change our technology, change our business practices, pay monetary damages or enter into short- or long-term royalty or licensing agreements.",
       "previous_sentence": "The outcome of any claims or litigation, regardless of the merits, is inherently uncertain.",
       "next_sentence": "For more information regarding legal proceedings see Note 14 \"Legal Proceedings and Claims\" to the consolidated financial statements in Item 8 of Part I.",
-      "risk_score": 0.866605818271637,
+      "risk_score": 0.8666058778762817,
       "finbert_probs": {
-        "positive": 0.012035519815981388,
-        "neutral": 0.12135864794254303,
-        "negative": 0.866605818271637
+        "positive": 0.012035515159368515,
+        "neutral": 0.12135858088731766,
+        "negative": 0.8666058778762817
       }
     },
     {
@@ -1123,11 +1123,11 @@
       "sentence_text": "As such, we have in the past been, and likely will in the future be, the target of cybersecurity threats and other efforts to breach or compromise our services and underlying infrastructure.",
       "previous_sentence": "CYBERSECURITY As a global leader in CRM technology, our services involve the storage and transmission of our customers' and our customers' customers' data.",
       "next_sentence": "With trust as our foremost value and the foundation of everything we do, we recognize the importance of maintaining the safety and security of our systems and data, as our customers trust our technology to deliver the highest levels of security, privacy, performance, compliance and availability at scale.",
-      "risk_score": 0.7707422375679016,
+      "risk_score": 0.7707424163818359,
       "finbert_probs": {
-        "positive": 0.024219276383519173,
-        "neutral": 0.20503850281238556,
-        "negative": 0.7707422375679016
+        "positive": 0.024219248443841934,
+        "neutral": 0.20503829419612885,
+        "negative": 0.7707424163818359
       }
     },
     {
@@ -1138,11 +1138,11 @@
       "sentence_text": "All of our investments, particularly those in privately held companies, are therefore subject to a risk of partial or total loss of invested capital.",
       "previous_sentence": "In addition, the financial success of our investment in any company is typically dependent on a liquidity event, such as a public offering, acquisition or other favorable market event reflecting appreciation to the cost of our initial investment.",
       "next_sentence": "56 Table of Contents",
-      "risk_score": 0.7051663398742676,
+      "risk_score": 0.7051659822463989,
       "finbert_probs": {
-        "positive": 0.01844262331724167,
-        "neutral": 0.27639099955558777,
-        "negative": 0.7051663398742676
+        "positive": 0.018442640081048012,
+        "neutral": 0.2763913869857788,
+        "negative": 0.7051659822463989
       }
     },
     {
@@ -1153,11 +1153,11 @@
       "sentence_text": "Our technologies may be subject to an injunction if they are found to infringe the rights of a third party.",
       "previous_sentence": "LEGAL PROCEEDINGS We evaluate all claims and lawsuits with respect to their potential merits, our potential defenses and counterclaims, settlement or litigation potential and the expected effect on us.",
       "next_sentence": "In addition, many of our subscription agreements require us to indemnify our customers for third-party intellectual property infringement claims, which could increase the cost to us of an adverse ruling on such a claim.",
-      "risk_score": 0.6867663860321045,
+      "risk_score": 0.6867660880088806,
       "finbert_probs": {
-        "positive": 0.01878085918724537,
-        "neutral": 0.2944527864456177,
-        "negative": 0.6867663860321045
+        "positive": 0.018780861049890518,
+        "neutral": 0.29445305466651917,
+        "negative": 0.6867660880088806
       }
     },
     {
@@ -1168,11 +1168,11 @@
       "sentence_text": "We anticipate additional volatility in our consolidated statement of operations due to these events, as well as changes in the market prices of our publicly held equity securities.",
       "previous_sentence": "The following table sets forth additional information regarding active equity investments within our strategic investment portfolio as of January 31, 2024 and excludes exited investments (in millions): Investment Type Capital Invested Unrealized Gains (Cumulative) Unrealized Losses (Cumulative) Carrying Value as of January 31, 2024 Publicly held equity securities $ 27 $ 53 $ 0 $ 80 Privately held equity securities 4,020 1,216 (549) 4,687 Total equity securities $ 4,047 $ 1,269 $ (549) $ 4,767 Fluctuations in the value of our privately held equity securities are only recorded when there is an observable transaction for a same or similar security of the same issuer, or in the event of impairment.",
       "next_sentence": "We anticipate future volatility in our consolidated statements of operations due to changes in market prices, observable price changes and impairments of our strategic investments.",
-      "risk_score": 0.6205234527587891,
+      "risk_score": 0.6205255389213562,
       "finbert_probs": {
-        "positive": 0.08901499211788177,
-        "neutral": 0.29046157002449036,
-        "negative": 0.6205234527587891
+        "positive": 0.08901452273130417,
+        "neutral": 0.29045990109443665,
+        "negative": 0.6205255389213562
       }
     },
     {
@@ -1183,11 +1183,11 @@
       "sentence_text": "Foreign Currency Translation Risk Fluctuations in foreign currencies impact the amount of total assets, liabilities, revenues, operating expenses and cash flows that we repor t for our foreign subsidiaries upon the translation of these amounts into USD.",
       "previous_sentence": "Our ultimate realized gain or loss with respect to foreign currency exposures will generally depend on the size and type of cross-currency transactions that we enter into, the currency exchange rates associated with these exposures and changes in those rates, the net realized gain or loss on our foreign currency forward contracts and other factors.",
       "next_sentence": "Total revenue during the fiscal year ended January 31, 2024 , was minimally impacted by fluctuations in foreign currencies compared to the fiscal year ended January 31, 2024 .",
-      "risk_score": 0.5421136617660522,
+      "risk_score": 0.5421140789985657,
       "finbert_probs": {
-        "positive": 0.021642863750457764,
-        "neutral": 0.4362435042858124,
-        "negative": 0.5421136617660522
+        "positive": 0.021642878651618958,
+        "neutral": 0.43624308705329895,
+        "negative": 0.5421140789985657
       }
     },
     {
@@ -1198,11 +1198,11 @@
       "sentence_text": "The outcome of any claims or litigation, regardless of the merits, is inherently uncertain.",
       "previous_sentence": "In addition, many of our subscription agreements require us to indemnify our customers for third-party intellectual property infringement claims, which could increase the cost to us of an adverse ruling on such a claim.",
       "next_sentence": "Any claims and other lawsuits, and the disposition of such claims and lawsuits, whether through settlement or litigation, could be time-consuming and expensive to resolve, divert our attention from executing our business plan, result in efforts to enjoin our activities, lead to attempts by third parties to seek similar claims and, in the case of intellectual property claims, require us to change our technology, change our business practices, pay monetary damages or enter into short- or long-term royalty or licensing agreements.",
-      "risk_score": 0.4964579939842224,
+      "risk_score": 0.49645745754241943,
       "finbert_probs": {
-        "positive": 0.024242322891950607,
-        "neutral": 0.4792996942996979,
-        "negative": 0.4964579939842224
+        "positive": 0.0242423377931118,
+        "neutral": 0.47930026054382324,
+        "negative": 0.49645745754241943
       }
     },
     {
@@ -1213,11 +1213,11 @@
       "sentence_text": "Our foreign currency forward contracts are generally short-term in duration.",
       "previous_sentence": "We pursue our objective by utilizing foreign currency forward contracts to offset foreign exchange risk.",
       "next_sentence": "We neither use these foreign currency forward contracts for trading purposes nor do we currently designate these forward contracts as hedging instruments under the relevant accounting and financial reporting guidelines.",
-      "risk_score": 0.4186759889125824,
+      "risk_score": 0.418675035238266,
       "finbert_probs": {
-        "positive": 0.02614794299006462,
-        "neutral": 0.5551760792732239,
-        "negative": 0.4186759889125824
+        "positive": 0.0261479951441288,
+        "neutral": 0.5551769137382507,
+        "negative": 0.418675035238266
       }
     },
     {
@@ -1228,11 +1228,11 @@
       "sentence_text": "An immediate increase or decrease in interest rates of 100 basis points at January 31, 2024 could result in a $63 million market value reduction or increase of the same amount.",
       "previous_sentence": "Our fixed-income portfolio is also subject to interest rate risk.",
       "next_sentence": "This estimate is based on a sensitivity model that measures market value changes when changes in interest rates occur.",
-      "risk_score": 0.39572441577911377,
+      "risk_score": 0.3957242965698242,
       "finbert_probs": {
-        "positive": 0.35136649012565613,
-        "neutral": 0.2529090940952301,
-        "negative": 0.39572441577911377
+        "positive": 0.3513674736022949,
+        "neutral": 0.25290822982788086,
+        "negative": 0.3957242965698242
       }
     },
     {
@@ -1243,11 +1243,11 @@
       "sentence_text": "During the last fiscal year, we did not identify any risks from cybersecurity threats, including as a result of any previous cybersecurity incidents, that materially affected the Company, including its business strategy, results of operations, or financial condition.",
       "previous_sentence": "The Board, including through its dedicated Cybersecurity and Privacy committee (the \"Committee\"), oversees the various cybersecurity risks facing the Company and the Company's efforts to mitigate those risks.",
       "next_sentence": "However, we face ongoing and increasing cybersecurity risks, including from bad actors that are becoming more sophisticated and effective over time, as well as a result of potential defects or disruptions in our or our customers' services.",
-      "risk_score": 0.37559205293655396,
+      "risk_score": 0.3755914568901062,
       "finbert_probs": {
-        "positive": 0.029387546703219414,
-        "neutral": 0.5950204133987427,
-        "negative": 0.37559205293655396
+        "positive": 0.029387537389993668,
+        "neutral": 0.5950210690498352,
+        "negative": 0.3755914568901062
       }
     },
     {
@@ -1258,11 +1258,11 @@
       "sentence_text": "In certain cases, our ability to sell these investments may be impacted by contractual obligations to hold the securities for a set period of time after a public offering.",
       "previous_sentence": "We continually evaluate our investments in privately held and publicly traded companies.",
       "next_sentence": "In addition, the financial success of our investment in any company is typically dependent on a liquidity event, such as a public offering, acquisition or other favorable market event reflecting appreciation to the cost of our initial investment.",
-      "risk_score": 0.3291212320327759,
+      "risk_score": 0.3291195333003998,
       "finbert_probs": {
-        "positive": 0.025419265031814575,
-        "neutral": 0.6454595327377319,
-        "negative": 0.3291212320327759
+        "positive": 0.025419244542717934,
+        "neutral": 0.6454612612724304,
+        "negative": 0.3291195333003998
       }
     },
     {
@@ -1273,11 +1273,11 @@
       "sentence_text": "If realized, these risks are reasonably likely to materially affect the Company.",
       "previous_sentence": "However, we face ongoing and increasing cybersecurity risks, including from bad actors that are becoming more sophisticated and effective over time, as well as a result of potential defects or disruptions in our or our customers' services.",
       "next_sentence": "Additional information on the cybersecurity risks we face is discussed in Part I, Item 1A, \"Risk Factors.\" Cybersecurity Risk Management and Strategy When a company purchases our service offerings, they gain a trusted digital advisor who will work together with them in efforts to protect customer data.",
-      "risk_score": 0.1929016262292862,
+      "risk_score": 0.19290196895599365,
       "finbert_probs": {
-        "positive": 0.043359629809856415,
-        "neutral": 0.7637386918067932,
-        "negative": 0.1929016262292862
+        "positive": 0.0433596707880497,
+        "neutral": 0.7637383341789246,
+        "negative": 0.19290196895599365
       }
     },
     {
@@ -1288,11 +1288,11 @@
       "sentence_text": "This exposure has increased due to recent financial market movements and changes to our expectations of near-term possible movements caused by the impact of the macroeconomic environment as discussed in more detail below.",
       "previous_sentence": "QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK We are exposed to financial market risks, including changes in foreign currency exchange rates, interest rates and equity investment risks.",
       "next_sentence": "Foreign Currency Exchange Risk We primarily conduct our business in the following locations: the United States, Europe, Canada, Latin America, Asia Pacific and Japan.",
-      "risk_score": 0.17750784754753113,
+      "risk_score": 0.1775078922510147,
       "finbert_probs": {
-        "positive": 0.13386651873588562,
-        "neutral": 0.688625693321228,
-        "negative": 0.17750784754753113
+        "positive": 0.13386650383472443,
+        "neutral": 0.6886255741119385,
+        "negative": 0.1775078922510147
       }
     },
     {
@@ -1303,11 +1303,11 @@
       "sentence_text": "Gains or losses recognized in our consolidated statement of operations are limited to those related to either the sale of securities prior to maturity or expected credit losses.",
       "previous_sentence": "However, because we classify our debt securities as \"available for sale,\" no gains or losses are recognized in our consolidated statement of operations due to changes in interest rates.",
       "next_sentence": "Our fixed-income portfolio is also subject to interest rate risk.",
-      "risk_score": 0.15557043254375458,
+      "risk_score": 0.15557034313678741,
       "finbert_probs": {
-        "positive": 0.02771919034421444,
-        "neutral": 0.8167104125022888,
-        "negative": 0.15557043254375458
+        "positive": 0.02771919220685959,
+        "neutral": 0.8167104721069336,
+        "negative": 0.15557034313678741
       }
     },
     {
@@ -1318,11 +1318,11 @@
       "sentence_text": "The following table sets forth additional information regarding active equity investments within our strategic investment portfolio as of January 31, 2024 and excludes exited investments (in millions): Investment Type Capital Invested Unrealized Gains (Cumulative) Unrealized Losses (Cumulative) Carrying Value as of January 31, 2024 Publicly held equity securities $ 27 $ 53 $ 0 $ 80 Privately held equity securities 4,020 1,216 (549) 4,687 Total equity securities $ 4,047 $ 1,269 $ (549) $ 4,767 Fluctuations in the value of our privately held equity securities are only recorded when there is an observable transaction for a same or similar security of the same issuer, or in the event of impairment.",
       "previous_sentence": "Strategic Investments As of January 31, 2024, our strategic investment portfolio consisted of investments in over 400 companies with a combined carrying value of $4.8 billion, including two privately held investments with carrying values that were individually greater than five percent of the total strategic investments portfolio and represented 16 percent of the portfolio in aggregate.",
       "next_sentence": "We anticipate additional volatility in our consolidated statement of operations due to these events, as well as changes in the market prices of our publicly held equity securities.",
-      "risk_score": 0.11405180394649506,
+      "risk_score": 0.11405179649591446,
       "finbert_probs": {
-        "positive": 0.01914186403155327,
-        "neutral": 0.8668062686920166,
-        "negative": 0.11405180394649506
+        "positive": 0.01914186216890812,
+        "neutral": 0.8668063879013062,
+        "negative": 0.11405179649591446
       }
     },
     {
@@ -1333,11 +1333,11 @@
       "sentence_text": "However, because we classify our debt securities as \"available for sale,\" no gains or losses are recognized in our consolidated statement of operations due to changes in interest rates.",
       "previous_sentence": "Due in part to these factors, our future investment income may fall short of expectations due to changes in interest rates or we may suffer losses in principal if we are forced to sell securities that decline in market value due to changes in interest rates.",
       "next_sentence": "Gains or losses recognized in our consolidated statement of operations are limited to those related to either the sale of securities prior to maturity or expected credit losses.",
-      "risk_score": 0.10363654792308807,
+      "risk_score": 0.10363686084747314,
       "finbert_probs": {
-        "positive": 0.08813822269439697,
-        "neutral": 0.8082252740859985,
-        "negative": 0.10363654792308807
+        "positive": 0.08813809603452682,
+        "neutral": 0.8082250356674194,
+        "negative": 0.10363686084747314
       }
     },
     {
@@ -1348,11 +1348,11 @@
       "sentence_text": "Fluctuations 54 Table of Contents in the value of our investment securities caused by a change in interest rates (gains or losses on the carrying value) are recorded in other comprehensive income, net, and are realized only if we sell the underlying securities.",
       "previous_sentence": "This estimate is based on a sensitivity model that measures market value changes when changes in interest rates occur.",
       "next_sentence": "At January 31, 2023, we had cash, cash equivalents and marketable securities totaling $12.5 billion.",
-      "risk_score": 0.10298918187618256,
+      "risk_score": 0.1029890924692154,
       "finbert_probs": {
-        "positive": 0.017645884305238724,
-        "neutral": 0.8793649673461914,
-        "negative": 0.10298918187618256
+        "positive": 0.01764589175581932,
+        "neutral": 0.879365086555481,
+        "negative": 0.1029890924692154
       }
     },
     {
@@ -1363,11 +1363,11 @@
       "sentence_text": "LEGAL PROCEEDINGS We evaluate all claims and lawsuits with respect to their potential merits, our potential defenses and counterclaims, settlement or litigation potential and the expected effect on us.",
       "previous_sentence": "ITEM 3.",
       "next_sentence": "Our technologies may be subject to an injunction if they are found to infringe the rights of a third party.",
-      "risk_score": 0.05944405496120453,
+      "risk_score": 0.059444233775138855,
       "finbert_probs": {
-        "positive": 0.026395704597234726,
-        "neutral": 0.9141602516174316,
-        "negative": 0.05944405496120453
+        "positive": 0.02639574185013771,
+        "neutral": 0.9141599535942078,
+        "negative": 0.059444233775138855
       }
     },
     {
@@ -1378,11 +1378,11 @@
       "sentence_text": "He also holds an undergraduate and master's degree in computer science.",
       "previous_sentence": "The CTrO has extensive experience in the management of cybersecurity risk management programs, having served in various leadership roles in information technology and information security for over 15 years, including serving as the Chief Security Officer of two other large public technology companies.",
       "next_sentence": "We believe the Company's business leaders, including our CEO, CFO, C/E and CLO, who have experience managing cybersecurity risk at the Company and at similar companies, have the appropriate expertise, background and depth of experience to manage risks arising from cybersecurity threats.",
-      "risk_score": 0.04593662917613983,
+      "risk_score": 0.04593655467033386,
       "finbert_probs": {
-        "positive": 0.03971191123127937,
-        "neutral": 0.9143514633178711,
-        "negative": 0.04593662917613983
+        "positive": 0.03971188887953758,
+        "neutral": 0.9143515825271606,
+        "negative": 0.04593655467033386
       }
     },
     {
@@ -1393,11 +1393,11 @@
       "sentence_text": "For more information regarding legal proceedings see Note 14 \"Legal Proceedings and Claims\" to the consolidated financial statements in Item 8 of Part I.",
       "previous_sentence": "Any claims and other lawsuits, and the disposition of such claims and lawsuits, whether through settlement or litigation, could be time-consuming and expensive to resolve, divert our attention from executing our business plan, result in efforts to enjoin our activities, lead to attempts by third parties to seek similar claims and, in the case of intellectual property claims, require us to change our technology, change our business practices, pay monetary damages or enter into short- or long-term royalty or licensing agreements.",
       "next_sentence": null,
-      "risk_score": 0.040429823100566864,
+      "risk_score": 0.040429797023534775,
       "finbert_probs": {
-        "positive": 0.020421167835593224,
+        "positive": 0.020421162247657776,
         "neutral": 0.9391490817070007,
-        "negative": 0.040429823100566864
+        "negative": 0.040429797023534775
       }
     },
     {
@@ -1408,11 +1408,11 @@
       "sentence_text": "The Company regularly provides employee training on security-related duties and responsibilities, including knowledge about how to recognize security incidents and how to proceed if an actual or suspected incident should occur.",
       "previous_sentence": "The Company maintains a robust, risk-based approach to identifying and overseeing cybersecurity threats presented by certain third parties, including vendors, service providers and other external users of the Company's systems, as well as the systems of third parties that could adversely impact our business in the event of a significant cybersecurity incident affecting those third-party systems. \u2022 Education and Awareness .",
       "next_sentence": "This training is mandatory for employees across the Company, and is intended to provide the Company's employees with effective tools to address cybersecurity threats, and to communicate the Company's evolving information security policies, standards, processes and practices.",
-      "risk_score": 0.040300458669662476,
+      "risk_score": 0.040300410240888596,
       "finbert_probs": {
-        "positive": 0.0339437872171402,
+        "positive": 0.03394379839301109,
         "neutral": 0.9257557392120361,
-        "negative": 0.040300458669662476
+        "negative": 0.040300410240888596
       }
     },
     {
@@ -1423,11 +1423,11 @@
       "sentence_text": "While regular meetings of the Committee are scheduled on a quarterly cadence, the Committee is authorized to meet with management or individual directors at any time it deems appropriate to discuss matters relevant to the Committee.",
       "previous_sentence": "The Company's processes also allow for the Board and the Committee to be informed of key cybersecurity risks outside the regular reporting schedule.",
       "next_sentence": "The Company's policy is for the Board and the Committee to receive prompt and timely information regarding any 35 Table of Contents cybersecurity risk (including any incident) that meets pre-established reporting thresholds, as well as ongoing updates regarding any such risk.",
-      "risk_score": 0.03641989454627037,
+      "risk_score": 0.036419935524463654,
       "finbert_probs": {
-        "positive": 0.01882481947541237,
-        "neutral": 0.9447553157806396,
-        "negative": 0.03641989454627037
+        "positive": 0.018824875354766846,
+        "neutral": 0.9447551965713501,
+        "negative": 0.036419935524463654
       }
     },
     {
@@ -1438,11 +1438,11 @@
       "sentence_text": "The results of such tests and assessments are evaluated by management and periodically reported to the Committee.",
       "previous_sentence": "The Company also undergoes routine internal and external penetration testing.",
       "next_sentence": "The Company further adjusts its cybersecurity policies, standards, processes and practices based on these results.",
-      "risk_score": 0.027888888493180275,
+      "risk_score": 0.027888892218470573,
       "finbert_probs": {
-        "positive": 0.02767355740070343,
+        "positive": 0.027673549950122833,
         "neutral": 0.944437563419342,
-        "negative": 0.027888888493180275
+        "negative": 0.027888892218470573
       }
     },
     {
@@ -1453,11 +1453,11 @@
       "sentence_text": "After each quarterly meeting of the Committee, the Board receives a report from the Chair of the Committee with an update on the Company's oversight of cybersecurity risks and mitigation efforts.",
       "previous_sentence": "The Committee receives regular presentations, reports and updates from the Company's Chief Trust Officer (\"CTrO\") and other members of management on developments regarding the Company's cybersecurity program, broader cybersecurity trends, evolving industry standards, the threat environment and other topics.",
       "next_sentence": "The Committee also receives periodic reports from an experienced outside consultant with information security expertise providing insights on key focus areas to aid in the Committee's oversight of the Company's cybersecurity program.",
-      "risk_score": 0.026331709697842598,
+      "risk_score": 0.026331661269068718,
       "finbert_probs": {
-        "positive": 0.028740502893924713,
-        "neutral": 0.9449278116226196,
-        "negative": 0.026331709697842598
+        "positive": 0.028740471228957176,
+        "neutral": 0.9449279308319092,
+        "negative": 0.026331661269068718
       }
     },
     {
@@ -1468,11 +1468,11 @@
       "sentence_text": "These teams are expected to operate pursuant to documented plans and playbooks that include processes for escalation of incidents to leadership and to the Committee and Board, as appropriate, based on the severity level of an incident.",
       "previous_sentence": "Through ongoing communications with these teams, the CTrO and senior management are informed promptly about, and monitor the prevention, detection, investigation, mitigation and remediation of, cybersecurity threats.",
       "next_sentence": "In addition, the Company periodically consults with outside advisors and experts to assist with assessing, identifying and managing cybersecurity risks, including to anticipate future threats and trends, and their impact on the Company's risk management environment.",
-      "risk_score": 0.023050907999277115,
+      "risk_score": 0.02305094711482525,
       "finbert_probs": {
-        "positive": 0.028963390737771988,
+        "positive": 0.028963372111320496,
         "neutral": 0.9479857087135315,
-        "negative": 0.023050907999277115
+        "negative": 0.02305094711482525
       }
     },
     {
@@ -1483,11 +1483,11 @@
       "sentence_text": "The Company's program includes controls and procedures designed to properly identify, classify, and escalate cybersecurity risks to provide management with visibility and prioritization of risk mitigation efforts and to publicly report material cybersecurity incidents when appropriate. \u2022 Threat Intelligence .",
       "previous_sentence": "The Company has implemented a robust, cross-functional approach to identifying, assessing and managing cybersecurity threats and risks.",
       "next_sentence": "The Company maintains a Threat Intelligence team focused on profiling, intelligence collection, and threat analysis supporting the Company's ongoing efforts to identify, assess and manage cybersecurity threats.",
-      "risk_score": 0.020275741815567017,
+      "risk_score": 0.02027575857937336,
       "finbert_probs": {
-        "positive": 0.044106874614953995,
+        "positive": 0.0441068671643734,
         "neutral": 0.9356173872947693,
-        "negative": 0.020275741815567017
+        "negative": 0.02027575857937336
       }
     },
     {
@@ -1498,11 +1498,11 @@
       "sentence_text": "Management is responsible for the day-to-day administration of the Company's cybersecurity policies, processes, practices and risk management.",
       "previous_sentence": "With trust as our foremost value and the foundation of everything we do, we recognize the importance of maintaining the safety and security of our systems and data, as our customers trust our technology to deliver the highest levels of security, privacy, performance, compliance and availability at scale.",
       "next_sentence": "The Board, including through its dedicated Cybersecurity and Privacy committee (the \"Committee\"), oversees the various cybersecurity risks facing the Company and the Company's efforts to mitigate those risks.",
-      "risk_score": 0.0196260716766119,
+      "risk_score": 0.019626103341579437,
       "finbert_probs": {
-        "positive": 0.0334031879901886,
-        "neutral": 0.9469707608222961,
-        "negative": 0.0196260716766119
+        "positive": 0.03340321034193039,
+        "neutral": 0.9469706416130066,
+        "negative": 0.019626103341579437
       }
     },
     {
@@ -1513,11 +1513,11 @@
       "sentence_text": "Through ongoing communications with these teams, the CTrO and senior management are informed promptly about, and monitor the prevention, detection, investigation, mitigation and remediation of, cybersecurity threats.",
       "previous_sentence": "To facilitate the success of the Company's cybersecurity program, cross-functional teams throughout the Company are tasked with addressing cybersecurity threats and responding to cybersecurity incidents.",
       "next_sentence": "These teams are expected to operate pursuant to documented plans and playbooks that include processes for escalation of incidents to leadership and to the Committee and Board, as appropriate, based on the severity level of an incident.",
-      "risk_score": 0.017747603356838226,
+      "risk_score": 0.017747623845934868,
       "finbert_probs": {
-        "positive": 0.06976763904094696,
+        "positive": 0.06976760178804398,
         "neutral": 0.9124847054481506,
-        "negative": 0.017747603356838226
+        "negative": 0.017747623845934868
       }
     },
     {
@@ -1528,11 +1528,11 @@
       "sentence_text": "The Board, including through its dedicated Cybersecurity and Privacy committee (the \"Committee\"), oversees the various cybersecurity risks facing the Company and the Company's efforts to mitigate those risks.",
       "previous_sentence": "Management is responsible for the day-to-day administration of the Company's cybersecurity policies, processes, practices and risk management.",
       "next_sentence": "During the last fiscal year, we did not identify any risks from cybersecurity threats, including as a result of any previous cybersecurity incidents, that materially affected the Company, including its business strategy, results of operations, or financial condition.",
-      "risk_score": 0.017271000891923904,
+      "risk_score": 0.017270980402827263,
       "finbert_probs": {
-        "positive": 0.044640153646469116,
+        "positive": 0.04464020952582359,
         "neutral": 0.9380888342857361,
-        "negative": 0.017271000891923904
+        "negative": 0.017270980402827263
       }
     },
     {
@@ -1543,11 +1543,11 @@
       "sentence_text": "The Committee receives regular presentations, reports and updates from the Company's Chief Trust Officer (\"CTrO\") and other members of management on developments regarding the Company's cybersecurity program, broader cybersecurity trends, evolving industry standards, the threat environment and other topics.",
       "previous_sentence": "Board Oversight and Governance As mentioned above, the Board established the Committee to provide dedicated oversight of cybersecurity-related management, strategy, initiatives, risks, threats and remediation activities.",
       "next_sentence": "After each quarterly meeting of the Committee, the Board receives a report from the Chair of the Committee with an update on the Company's oversight of cybersecurity risks and mitigation efforts.",
-      "risk_score": 0.017102040350437164,
+      "risk_score": 0.017102066427469254,
       "finbert_probs": {
-        "positive": 0.04307197779417038,
-        "neutral": 0.9398259520530701,
-        "negative": 0.017102040350437164
+        "positive": 0.04307194799184799,
+        "neutral": 0.9398260116577148,
+        "negative": 0.017102066427469254
       }
     },
     {
@@ -1558,11 +1558,11 @@
       "sentence_text": "The Company's processes also allow for the Board and the Committee to be informed of key cybersecurity risks outside the regular reporting schedule.",
       "previous_sentence": "The Committee also receives periodic reports from an experienced outside consultant with information security expertise providing insights on key focus areas to aid in the Committee's oversight of the Company's cybersecurity program.",
       "next_sentence": "While regular meetings of the Committee are scheduled on a quarterly cadence, the Committee is authorized to meet with management or individual directors at any time it deems appropriate to discuss matters relevant to the Committee.",
-      "risk_score": 0.016283035278320312,
+      "risk_score": 0.01628302037715912,
       "finbert_probs": {
         "positive": 0.0485917367041111,
         "neutral": 0.9351252317428589,
-        "negative": 0.016283035278320312
+        "negative": 0.01628302037715912
       }
     },
     {
@@ -1573,11 +1573,11 @@
       "sentence_text": "The Company's policy is for the Board and the Committee to receive prompt and timely information regarding any 35 Table of Contents cybersecurity risk (including any incident) that meets pre-established reporting thresholds, as well as ongoing updates regarding any such risk.",
       "previous_sentence": "While regular meetings of the Committee are scheduled on a quarterly cadence, the Committee is authorized to meet with management or individual directors at any time it deems appropriate to discuss matters relevant to the Committee.",
       "next_sentence": "Management Oversight and Governance The CTrO, reporting to the Company's Chief Engineering Officer (\"C/E\"), is responsible for designing and implementing a security program and strategy based on the mandate provided by the Board and senior management.",
-      "risk_score": 0.01587744615972042,
+      "risk_score": 0.015877416357398033,
       "finbert_probs": {
-        "positive": 0.059339527040719986,
-        "neutral": 0.9247830510139465,
-        "negative": 0.01587744615972042
+        "positive": 0.059339478611946106,
+        "neutral": 0.9247831702232361,
+        "negative": 0.015877416357398033
       }
     },
     {
@@ -1588,11 +1588,11 @@
       "sentence_text": "Leveraging threat intelligence and other signals, the Company undergoes periodic testing, audits and reviews of its policies, standards, processes and practices to identify, assess and address cybersecurity risks and events.",
       "previous_sentence": "We also hold various security-related industry certifications and attestations that have been validated by external auditors, including SOC 1, SOC 2, SOC 3, ISO 27001, 27017 and 27018, CSA STAR and others.",
       "next_sentence": "The Company also undergoes routine internal and external penetration testing.",
-      "risk_score": 0.015236923471093178,
+      "risk_score": 0.015236875042319298,
       "finbert_probs": {
-        "positive": 0.07391948997974396,
-        "neutral": 0.9108436107635498,
-        "negative": 0.015236923471093178
+        "positive": 0.07391934096813202,
+        "neutral": 0.9108437895774841,
+        "negative": 0.015236875042319298
       }
     },
     {
@@ -1605,7 +1605,7 @@
       "next_sentence": "The CTrO has extensive experience in the management of cybersecurity risk management programs, having served in various leadership roles in information technology and information security for over 15 years, including serving as the Chief Security Officer of two other large public technology companies.",
       "risk_score": 0.014835909940302372,
       "finbert_probs": {
-        "positive": 0.0460599884390831,
+        "positive": 0.04605994373559952,
         "neutral": 0.9391041398048401,
         "negative": 0.014835909940302372
       }
@@ -1618,11 +1618,11 @@
       "sentence_text": "In addition, the Company periodically consults with outside advisors and experts to assist with assessing, identifying and managing cybersecurity risks, including to anticipate future threats and trends, and their impact on the Company's risk management environment.",
       "previous_sentence": "These teams are expected to operate pursuant to documented plans and playbooks that include processes for escalation of incidents to leadership and to the Committee and Board, as appropriate, based on the severity level of an incident.",
       "next_sentence": "Specifically, management implements the Company's cybersecurity and risk management strategy across several areas: \u2022 Identification and Reporting .",
-      "risk_score": 0.014344748109579086,
+      "risk_score": 0.014344713650643826,
       "finbert_probs": {
-        "positive": 0.09870589524507523,
+        "positive": 0.0987059623003006,
         "neutral": 0.8869493007659912,
-        "negative": 0.014344748109579086
+        "negative": 0.014344713650643826
       }
     }
   ]

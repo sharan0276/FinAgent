@@ -7,6 +7,29 @@ from typing import Any, Optional
 import plotly.graph_objects as go
 
 
+_CHART_THEME = {
+    "paper_bgcolor": "rgba(0,0,0,0)",
+    "plot_bgcolor": "rgba(0,0,0,0)",
+    "font": dict(color="#475569"),
+}
+_GRID_COLOR = "rgba(71, 85, 105, 0.18)"
+_AXIS_COLOR = "#475569"
+_RADAR_LINE_AGENTIC = "#2563EB"
+_RADAR_FILL_AGENTIC = "rgba(37,99,235,0.18)"
+_RADAR_LINE_BASELINE = "#D97706"
+_RADAR_FILL_BASELINE = "rgba(217,119,6,0.18)"
+_POSITIVE_BAR_COLOR = "#2563EB"
+_NEGATIVE_BAR_COLOR = "#DC2626"
+_TREND_COLORS = {
+    "Revenue": "#2563EB",
+    "Net Income": "#059669",
+    "Gross Profit": "#7C3AED",
+    "Operating Cash Flow": "#D97706",
+}
+_PIPELINE_AGENTIC_COLOR = "#2563EB"
+_PIPELINE_BASELINE_COLOR = "#D97706"
+
+
 # ---------------------------------------------------------------------------
 # Label formatting
 # ---------------------------------------------------------------------------
@@ -182,25 +205,38 @@ def build_pipeline_radar(agentic: Any, baseline: Any) -> go.Figure:
         theta=cats_closed,
         fill="toself",
         name="Agentic Pipeline",
-        line=dict(color="#1f77b4", width=2),
-        fillcolor="rgba(31,119,180,0.15)",
+        line=dict(color=_RADAR_LINE_AGENTIC, width=2),
+        fillcolor=_RADAR_FILL_AGENTIC,
     ))
     fig.add_trace(go.Scatterpolar(
         r=b_closed,
         theta=cats_closed,
         fill="toself",
         name="Baseline RAG",
-        line=dict(color="#ff7f0e", width=2),
-        fillcolor="rgba(255,127,14,0.15)",
+        line=dict(color=_RADAR_LINE_BASELINE, width=2),
+        fillcolor=_RADAR_FILL_BASELINE,
     ))
     fig.update_layout(
-        polar=dict(radialaxis=dict(visible=True, showticklabels=True, tickfont=dict(size=10))),
+        polar=dict(
+            bgcolor="rgba(0,0,0,0)",
+            radialaxis=dict(
+                visible=True,
+                showticklabels=True,
+                tickfont=dict(size=10, color=_AXIS_COLOR),
+                gridcolor=_GRID_COLOR,
+                linecolor=_GRID_COLOR,
+            ),
+            angularaxis=dict(
+                tickfont=dict(color=_AXIS_COLOR),
+                gridcolor=_GRID_COLOR,
+                linecolor=_GRID_COLOR,
+            ),
+        ),
         showlegend=True,
         title=dict(text="Pipeline Output Quality Comparison", font=dict(size=14)),
         margin=dict(t=50, b=30, l=30, r=30),
         height=380,
-        paper_bgcolor="white",
-        plot_bgcolor="white",
+        **_CHART_THEME,
     )
     return fig
 
@@ -266,7 +302,7 @@ def build_financial_metrics_chart(ingestion: dict[str, Any], *, height: int = 43
     if not metrics:
         return None
 
-    colors = ["#1f77b4" if v >= 0 else "#d62728" for v in values]
+    colors = [_POSITIVE_BAR_COLOR if v >= 0 else _NEGATIVE_BAR_COLOR for v in values]
 
     fig = go.Figure(go.Bar(
         x=metrics,
@@ -278,16 +314,15 @@ def build_financial_metrics_chart(ingestion: dict[str, Any], *, height: int = 43
     ))
     fig.update_layout(
         title=dict(text=f"{ticker} ({company}) — Key Financials (Most Recent Year, USD Millions)", font=dict(size=13)),
-        xaxis=dict(title="Metric"),
-        yaxis=dict(title="USD Millions"),
+        xaxis=dict(title="Metric", color=_AXIS_COLOR),
+        yaxis=dict(title="USD Millions", color=_AXIS_COLOR),
         height=height,
         margin=dict(t=60, b=40, l=60, r=20),
-        paper_bgcolor="white",
-        plot_bgcolor="white",
         uniformtext=dict(mode="hide", minsize=9),
+        **_CHART_THEME,
     )
     fig.update_xaxes(showgrid=False)
-    fig.update_yaxes(showgrid=True, gridcolor="#eeeeee")
+    fig.update_yaxes(showgrid=True, gridcolor=_GRID_COLOR, zerolinecolor=_GRID_COLOR)
     return fig
 
 
@@ -331,10 +366,10 @@ def build_multiyear_trend_chart(ingestion: dict[str, Any], *, height: int = 380)
     company = ingestion.get("company_name", ticker)
 
     _TREND_METRICS = [
-        ("Revenues", "Revenue", "#1f77b4"),
-        ("NetIncome", "Net Income", "#2ca02c"),
-        ("GrossProfit", "Gross Profit", "#9467bd"),
-        ("OperatingCashFlow", "Operating Cash Flow", "#ff7f0e"),
+        ("Revenues", "Revenue", _TREND_COLORS["Revenue"]),
+        ("NetIncome", "Net Income", _TREND_COLORS["Net Income"]),
+        ("GrossProfit", "Gross Profit", _TREND_COLORS["Gross Profit"]),
+        ("OperatingCashFlow", "Operating Cash Flow", _TREND_COLORS["Operating Cash Flow"]),
     ]
 
     fig = go.Figure()
@@ -364,17 +399,16 @@ def build_multiyear_trend_chart(ingestion: dict[str, Any], *, height: int = 380)
 
     fig.update_layout(
         title=dict(text=f"{ticker} ({company}) — Multi-Year Financial Trends (USD Millions)", font=dict(size=13)),
-        xaxis=dict(title="Fiscal Year", tickmode="linear", dtick=1),
-        yaxis=dict(title="USD Millions"),
+        xaxis=dict(title="Fiscal Year", tickmode="linear", dtick=1, color=_AXIS_COLOR),
+        yaxis=dict(title="USD Millions", color=_AXIS_COLOR),
         height=height,
         margin=dict(t=60, b=40, l=60, r=20),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        paper_bgcolor="white",
-        plot_bgcolor="white",
         hovermode="x unified",
+        **_CHART_THEME,
     )
-    fig.update_xaxes(showgrid=True, gridcolor="#eeeeee")
-    fig.update_yaxes(showgrid=True, gridcolor="#eeeeee")
+    fig.update_xaxes(showgrid=True, gridcolor=_GRID_COLOR)
+    fig.update_yaxes(showgrid=True, gridcolor=_GRID_COLOR, zerolinecolor=_GRID_COLOR)
     return fig
 
 
@@ -407,14 +441,12 @@ def build_risk_severity_chart(agentic: Any, baseline: Any) -> Optional[go.Figure
     a_vals = [a_counts["high"], a_counts["medium"], a_counts["low"]]
     b_vals = [b_counts["high"], b_counts["medium"], b_counts["low"]]
 
-    _SEV_COLORS = {"High": "#d62728", "Medium": "#ff7f0e", "Low": "#2ca02c"}
-
     fig = go.Figure()
     fig.add_trace(go.Bar(
         name="Agentic Pipeline",
         x=severities,
         y=a_vals,
-        marker_color="#1f77b4",
+        marker_color=_PIPELINE_AGENTIC_COLOR,
         text=a_vals,
         textposition="outside",
         offsetgroup=0,
@@ -424,7 +456,7 @@ def build_risk_severity_chart(agentic: Any, baseline: Any) -> Optional[go.Figure
         name="Baseline RAG",
         x=severities,
         y=b_vals,
-        marker_color="#ff7f0e",
+        marker_color=_PIPELINE_BASELINE_COLOR,
         text=b_vals,
         textposition="outside",
         offsetgroup=1,
@@ -432,17 +464,16 @@ def build_risk_severity_chart(agentic: Any, baseline: Any) -> Optional[go.Figure
     ))
     fig.update_layout(
         title=dict(text="Risk Severity Distribution — Agentic vs Baseline RAG", font=dict(size=13)),
-        xaxis=dict(title="Severity"),
-        yaxis=dict(title="Number of Risks", rangemode="tozero"),
+        xaxis=dict(title="Severity", color=_AXIS_COLOR),
+        yaxis=dict(title="Number of Risks", rangemode="tozero", color=_AXIS_COLOR),
         barmode="group",
         height=460,
         margin=dict(t=60, b=40, l=50, r=20),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        paper_bgcolor="white",
-        plot_bgcolor="white",
+        **_CHART_THEME,
     )
     fig.update_xaxes(showgrid=False)
-    fig.update_yaxes(showgrid=True, gridcolor="#eeeeee")
+    fig.update_yaxes(showgrid=True, gridcolor=_GRID_COLOR, zerolinecolor=_GRID_COLOR)
     return fig
 
 

@@ -164,15 +164,21 @@ def _section_posture_summary(artifact: OrchestrationArtifact) -> None:
         _df_table(rows)
 
 
-def _section_financials_chart(ingestion: Optional[dict], *, height: int = 430, show_trend: bool = True) -> None:
+def _section_financials_chart(
+    ingestion: Optional[dict],
+    *,
+    height: int = 430,
+    show_trend: bool = True,
+    chart_key_prefix: str = "financials",
+) -> None:
     if ingestion:
         fig = build_financial_metrics_chart(ingestion, height=height)
         if fig:
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, key=f"{chart_key_prefix}-metrics")
         if show_trend:
             trend = build_multiyear_trend_chart(ingestion)
             if trend:
-                st.plotly_chart(trend, use_container_width=True)
+                st.plotly_chart(trend, use_container_width=True, key=f"{chart_key_prefix}-trend")
 
 
 def _section_positive_deltas(artifact: OrchestrationArtifact) -> None:
@@ -220,7 +226,7 @@ def _section_target_profile(artifact: OrchestrationArtifact, ingestion: Optional
     if not artifact.comparison_report.target_profile:
         st.info("Target profile not available.")
         return
-    _section_financials_chart(ingestion)
+    _section_financials_chart(ingestion, chart_key_prefix=f"{artifact.schema_version}-target-profile")
     _section_positive_deltas(artifact)
     _section_negative_deltas(artifact)
     _section_top_risks(artifact)
@@ -338,12 +344,12 @@ def _render_side_by_side(
 
     # --- Radar chart (full width) ---
     st.subheader("Pipeline Quality Comparison")
-    st.plotly_chart(build_pipeline_radar(ag, bl), use_container_width=True)
+    st.plotly_chart(build_pipeline_radar(ag, bl), use_container_width=True, key="comparison-pipeline-radar")
 
     # --- Risk severity chart ---
     severity_fig = build_risk_severity_chart(ag, bl)
     if severity_fig:
-        st.plotly_chart(severity_fig, use_container_width=True)
+        st.plotly_chart(severity_fig, use_container_width=True, key="comparison-risk-severity")
 
     # --- Diff tables (full width) ---
     st.subheader("Risk Identification Diff")
@@ -376,8 +382,8 @@ def _render_side_by_side(
     # Target profile — sub-sections paired for alignment
     st.markdown("---\n### Target Profile")
     _parallel_section("Financial Metrics", ag, bl,
-        lambda a: _section_financials_chart(agentic_ingestion, height=550, show_trend=False),
-        lambda a: _section_financials_chart(baseline_ingestion, height=550, show_trend=False),
+        lambda a: _section_financials_chart(agentic_ingestion, height=550, show_trend=False, chart_key_prefix="comparison-agentic-financials"),
+        lambda a: _section_financials_chart(baseline_ingestion, height=550, show_trend=False, chart_key_prefix="comparison-baseline-financials"),
         show_divider=False, show_badges=False)
 
     _parallel_section("Positive Deltas", ag, bl,

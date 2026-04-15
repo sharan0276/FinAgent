@@ -149,8 +149,8 @@ The current matcher does **not** use:
 
 - `chroma_db/`
 - `chroma_db_pipeline/`
-- `src/rag/baseline_rag.py`
-- `src/pipeline.py`
+- `archive/src/rag/baseline_rag.py`
+- `archive/src/pipeline.py`
 
 Those belong to older Chroma-based RAG demos and are separate from the active curator matching flow.
 

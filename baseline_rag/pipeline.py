@@ -238,7 +238,7 @@ The JSON must exactly match this schema (no extra keys, no missing required keys
   "status": "completed",
   "summary": "<2-3 sentence overall assessment grounded in the numbers>",
   "posture": {
-    "label": "Elevated" | "Mixed" | "Stable",
+    "label": "Elevated" | "Mixed" | "Stable / Strong",
     "rationale_bullets": ["<bullet>", "<bullet>", "<bullet>"]
   },
   "target_profile": {
@@ -291,7 +291,7 @@ Rules:
 - Base all claims directly on the numbers provided. Do not fabricate figures.
 - If data is missing or a field cannot be determined, use null for numeric fields.
 - Produce at least 2 narrative sections: "Financial Performance" and "Risk Assessment".
-- Posture label meanings: Elevated = significant risks/deterioration, Stable = strong/improving, Mixed = balanced.
+- Posture label meanings: Elevated = significant risks/deterioration, Stable / Strong = strong/improving, Mixed = balanced.
 """
 
 
@@ -326,7 +326,9 @@ def _parse_posture(raw: Optional[dict]) -> Optional[PostureCard]:
     if not raw:
         return None
     label = raw.get("label", "Mixed")
-    if label not in ("Elevated", "Mixed", "Stable"):
+    if label == "Stable":
+        label = "Stable / Strong"
+    if label not in ("Elevated", "Mixed", "Stable / Strong"):
         label = "Mixed"
     return PostureCard(label=label, rationale_bullets=raw.get("rationale_bullets", []))
 

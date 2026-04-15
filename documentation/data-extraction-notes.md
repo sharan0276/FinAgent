@@ -172,7 +172,7 @@ The current extraction step reads only:
 
 - `item_1a_risk_factors`
 - `item_1c_cybersecurity`
-- `item_3_legal_proceedings`
+- `item_3_legal`
 - `item_7_mda`
 - `item_7a_market_risk`
 
@@ -225,9 +225,9 @@ The pipeline uses the annual financial series already present in the ingestion a
 
 Important assumption:
 
-- the active extraction code expects `financial_data.annual[metric]` to be a list of yearly datapoint dicts
-- fresh ingestion runs are expected to match that schema
-- if an ingestion artifact uses compact `years/values/deltas` arrays, it was produced during an incompatible schema window and should be regenerated
+- the active extraction code supports both the compact ingestion schema and older list-style yearly datapoints
+- fresh ingestion runs are expected to use the compact `years` / `values` / `deltas` array form
+- older list-style ingestion artifacts can still be read, but they are no longer the primary format
 
 Current metrics:
 
@@ -256,11 +256,18 @@ For each filing year and metric, the output stores:
 
 Current bucket thresholds:
 
-- `> 20%` -> `strong_growth`
-- `5% to 20%` -> `moderate_growth`
-- `-5% to 5%` -> `stable`
-- `-20% to -5%` -> `moderate_decline`
-- `< -20%` -> `severe_decline`
+- standard metrics:
+  - `> 20%` -> `strong_growth`
+  - `5% to 20%` -> `moderate_growth`
+  - `-5% to 5%` -> `stable`
+  - `-20% to -5%` -> `moderate_decline`
+  - `< -20%` -> `severe_decline`
+- `LongTermDebt` is treated as an inverse metric:
+  - `> 20% effective improvement` -> `strong_reduction`
+  - `5% to 20% effective improvement` -> `moderate_reduction`
+  - `-5% to 5%` -> `stable`
+  - `-20% to -5% effective deterioration` -> `moderate_increase`
+  - `< -20% effective deterioration` -> `severe_increase`
 
 If a prior-year datapoint is missing:
 
