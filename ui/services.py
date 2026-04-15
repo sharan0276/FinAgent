@@ -31,6 +31,18 @@ def normalize_ticker(ticker: str) -> str:
     return ticker.strip().upper()
 
 
+def get_available_tickers(*, repo_root: Path = REPO_ROOT) -> list[str]:
+    """Return tickers that have an ingestion artifact, sorted alphabetically."""
+    ingestion_root = repo_root / "data-ingestion" / "outputs"
+    if not ingestion_root.exists():
+        return []
+    return sorted(
+        d.name
+        for d in ingestion_root.iterdir()
+        if d.is_dir() and (d / "complete_ingestion.json").exists()
+    )
+
+
 def list_saved_report_artifacts(*, repo_root: Path = REPO_ROOT) -> list[dict[str, Any]]:
     output_root = repo_root / "orchestration" / "outputs"
     artifacts: list[dict[str, Any]] = []
