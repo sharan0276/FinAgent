@@ -11,63 +11,62 @@
     },
     "matches": [
       {
+        "ticker": "QCOM",
+        "company": "QUALCOMM INC/DE",
+        "matched_filing_year": 2025,
+        "similarity": 0.7565,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\QCOM\\qcom_2025.json"
+        ]
+      },
+      {
+        "ticker": "UBER",
+        "company": "Uber Technologies, Inc",
+        "matched_filing_year": 2024,
+        "similarity": 0.7535,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\UBER\\uber_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\UBER\\uber_2025.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\UBER\\uber_2026.json"
+        ]
+      },
+      {
         "ticker": "META",
         "company": "Meta Platforms, Inc.",
         "matched_filing_year": 2024,
-        "similarity": 0.7269,
+        "similarity": 0.7501,
         "context_curator_paths": [
           "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\META\\meta_2024.json",
           "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\META\\meta_2025.json"
-        ]
-      },
-      {
-        "ticker": "AAPL",
-        "company": "Apple Inc.",
-        "matched_filing_year": 2021,
-        "similarity": 0.7001,
-        "context_curator_paths": [
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AAPL\\aapl_2021.json",
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AAPL\\aapl_2022.json",
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AAPL\\aapl_2023.json"
-        ]
-      },
-      {
-        "ticker": "BYND",
-        "company": "BEYOND MEAT, INC.",
-        "matched_filing_year": 2023,
-        "similarity": 0.6915,
-        "context_curator_paths": [
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2023.json",
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2024.json",
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2025.json"
         ]
       }
     ],
     "run_metadata": {
       "top_k": 3,
-      "run_timestamp": "2026-04-13T18:29:24.130091+00:00",
+      "run_timestamp": "2026-04-15T20:44:51.116885+00:00",
       "status_by_step": {
-        "ingestion": "completed",
-        "extraction": "completed",
-        "curator": "completed",
+        "ingestion": "skipped_existing",
+        "extraction": "skipped_existing",
+        "curator": "skipped_existing",
         "rag": "partial",
         "comparison": "completed"
       },
       "warnings": [
+        "QCOM has only 1 curator year(s) from 2025 onward.",
         "META has only 2 curator year(s) from 2024 onward."
       ]
     }
   },
   "comparison_report": {
     "status": "completed",
-    "summary": "Lyft, Inc. presents a mixed posture versus its top matched peer neighborhood. The matched year shows no high\u2011severity signals or negative financial deltas and multiple strong positive deltas (Net Income, Assets, Cash, Operating Cash Flow). Nonetheless, seven current risk types overlap with peers and several medium\u2011severity risks warrant monitoring.",
+    "summary": "Lyft, Inc. exhibits an elevated posture versus its matched peer neighborhood. The profile shows zero high-severity risk factors but three material negative financial deltas (OperatingCashFlow, NetIncome, ResearchAndDevelopment) partially offset by three positive deltas in Cash, Revenues, and Assets. Eight risk types are shared with peers while several risks remain target-specific, supporting the elevated designation. Forward peer patterns identify additional risks to monitor but are treated as watch items, not forecasts.",
     "model_name": "openai/gpt-5-mini-2025-08-07",
     "posture": {
-      "label": "Mixed",
+      "label": "Elevated",
       "rationale_bullets": [
-        "No high\u2011severity risk signals and no negative financial deltas in the matched year.",
-        "Seven current risk types overlap with the matched peer neighborhood.",
-        "Seven metrics still show growth, which tempers the current pressure picture."
+        "No high-severity risk factors identified, but 3 negative financial deltas (OperatingCashFlow, NetIncome, R&D) drive concern.",
+        "Three positive deltas (Cash strong growth 35.92%, Revenues strong growth 31.39%, Assets moderate growth 19.07%) provide a financial buffer.",
+        "Eight risk types are shared with matched peers, while several risks (e.g., failed acquisition, intensifying competition) are target-specific."
       ]
     },
     "target_profile": {
@@ -76,82 +75,107 @@
       "filing_year": 2025,
       "positive_deltas": [
         {
-          "metric": "NetIncome",
+          "metric": "Cash",
           "label": "strong_growth",
-          "value": 123.8248
+          "value": 35.92295574967779
+        },
+        {
+          "metric": "Revenues",
+          "label": "strong_growth",
+          "value": 31.39324959862294
         },
         {
           "metric": "Assets",
-          "label": "strong_growth",
-          "value": 0.6614
-        },
-        {
-          "metric": "Cash",
-          "label": "strong_growth",
-          "value": 0.4908
-        },
-        {
-          "metric": "OperatingCashFlow",
-          "label": "strong_growth",
-          "value": 0.3751
+          "label": "moderate_growth",
+          "value": 19.07340830370229
         }
       ],
-      "negative_deltas": [],
+      "negative_deltas": [
+        {
+          "metric": "OperatingCashFlow",
+          "label": "severe_decline",
+          "value": -964.96335504886
+        },
+        {
+          "metric": "NetIncome",
+          "label": "severe_decline",
+          "value": -106.69370004701457
+        },
+        {
+          "metric": "ResearchAndDevelopment",
+          "label": "severe_decline",
+          "value": -28.574255288530725
+        }
+      ],
       "top_risks": [
         {
-          "signal_type": "scaling_risk",
+          "signal_type": "pricing_power_erosion",
           "severity": "medium",
           "section": "Item 7",
-          "summary": "Research and development expenses decreased $158.8 million or 29% in 2024 due to restructuring events and headcount reductions.",
+          "summary": "Company may record a loss from transactions when upfront quoted fares to riders are less than amounts committed to pay drivers.",
+          "citation": "LYFT 10-K 2025, Item 7",
           "occurrences": 2
         },
         {
           "signal_type": "failed_acquisition",
           "severity": "medium",
           "section": "Item 1A",
-          "summary": "Autonomous vehicle partner announced wind-down in October 2022 resulting in $135.7 million total impairment charge.",
+          "summary": "One autonomous vehicle partner announced wind-down in October 2022 resulting in total impairment charge of $135.7 million for equity investment and other assets.",
+          "citation": "LYFT 10-K 2025, Item 1A",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "inflation_impact",
+          "severity": "medium",
+          "section": "Item 1A",
+          "summary": "Substantial increases in prices of bikes, scooters and related products due to market conditions, tariffs and import regulations would increase costs and reduce margins.",
+          "citation": "LYFT 10-K 2025, Item 1A",
           "occurrences": 1
         },
         {
           "signal_type": "intensifying_competition",
           "severity": "medium",
           "section": "Item 1A",
-          "summary": "Market share has fluctuated over time requiring price cuts that negatively impact short-term financial results.",
+          "summary": "Market share has fluctuated over time requiring actions like price cuts that negatively impact financial results in the short term.",
+          "citation": "LYFT 10-K 2025, Item 1A",
           "occurrences": 1
         },
         {
-          "signal_type": "interest_rate_sensitivity",
+          "signal_type": "negative_operating_cash_flow",
           "severity": "medium",
-          "section": "Item 7A",
-          "summary": "Company holds $2.0 billion in cash equivalents and short-term investments carrying interest rate risk, plus $995.0 million in long-term debt.",
-          "occurrences": 1
-        },
-        {
-          "signal_type": "recession_sensitivity",
-          "severity": "medium",
-          "section": "Item 1A",
-          "summary": "Revenue declined significantly in 2020 due to COVID-19 and related government measures with uncertain timeline for full recovery.",
+          "section": "Item 7",
+          "summary": "Cash used in operating activities was $98.2 million for the year ended December 31, 2023 consisting of net loss of $340.3 million partially offset by working capital changes.",
+          "citation": "LYFT 10-K 2025, Item 7",
           "occurrences": 1
         }
       ]
     },
     "peer_snapshot": {
       "peer_group": "Top matched peer neighborhood",
-      "common_strengths": [],
-      "common_pressures": [],
+      "common_strengths": [
+        "Assets",
+        "Cash",
+        "OperatingCashFlow",
+        "ResearchAndDevelopment",
+        "Revenues"
+      ],
+      "common_pressures": [
+        "NetIncome"
+      ],
       "shared_risk_types": [
-        "cybersecurity_vulnerability",
+        "active_litigation",
+        "customer_churn_risk",
         "foreign_currency_exposure",
-        "intensifying_competition",
+        "inflation_impact",
         "interest_rate_sensitivity",
-        "moonshot_unproven_bet",
-        "recession_sensitivity",
-        "regulatory_investigation",
-        "revenue_concentration_risk",
-        "third_party_vendor_dependency"
+        "monetization_uncertainty",
+        "pricing_power_erosion",
+        "supply_chain_concentration"
       ],
       "target_differences": [
-        "failed_acquisition"
+        "failed_acquisition",
+        "intensifying_competition",
+        "rd_productivity_risk"
       ]
     },
     "risk_overlap_rows": [
@@ -160,98 +184,112 @@
         "risk_types": [
           "cybersecurity_vulnerability",
           "foreign_currency_exposure",
-          "intensifying_competition",
+          "inflation_impact",
           "interest_rate_sensitivity",
+          "negative_operating_cash_flow",
+          "pricing_power_erosion",
           "recession_sensitivity",
-          "scaling_risk",
           "talent_retention_risk"
         ]
       },
       {
         "group": "target_only_now",
         "risk_types": [
-          "failed_acquisition"
+          "failed_acquisition",
+          "intensifying_competition",
+          "rd_productivity_risk"
         ]
       },
       {
         "group": "peer_only_now",
         "risk_types": [
           "active_litigation",
+          "antitrust_exposure",
           "business_model_transition_risk",
+          "capital_allocation_risk",
+          "china_geopolitical_exposure",
+          "competitive_moat_erosion",
           "customer_churn_risk",
-          "disaster_recovery_gaps",
+          "cybersecurity_incident",
+          "data_privacy_violation",
           "impairment_charges",
-          "inflation_impact",
-          "infrastructure_single_point_failure",
-          "manufacturing_defect_risk",
           "monetization_uncertainty",
           "moonshot_unproven_bet",
-          "pricing_power_erosion",
-          "product_obsolescence",
-          "regulatory_investigation",
+          "network_effect_weakening",
           "revenue_concentration_risk",
+          "scaling_risk",
           "supply_chain_concentration",
-          "third_party_vendor_dependency"
+          "trade_tariff_risk"
         ]
       }
     ],
     "forward_watchlist": [
       {
-        "watch_risk_type": "supply_chain_concentration",
-        "why_relevant": "Peers similar to the target showed supply_chain_concentration after the matched year, making it a pattern to monitor.",
+        "watch_risk_type": "cybersecurity_vulnerability",
+        "why_relevant": "cybersecurity_vulnerability is already adjacent to the target risk profile and later reappears in peer future years.",
         "peer_evidence": [
-          "META 2025: Manufacturing of consumer hardware products depends on small number of third parties with significant operations in single region such as Asia, creating vulnerability to supply chain disruptions.",
-          "META 2025: negative delta pressure in Cash.",
-          "BYND 2024: A hypothetical 10% increase in weighted-average cost of pea protein would result in approximately $2.9 million increase to cost of goods sold."
-        ],
-        "confidence": "high"
-      },
-      {
-        "watch_risk_type": "trade_tariff_risk",
-        "why_relevant": "Peers similar to the target showed trade_tariff_risk after the matched year, making it a pattern to monitor.",
-        "peer_evidence": [
-          "BYND 2024: Price and availability of offshore ingredients may be affected by political events or tariffs and trade wars.",
-          "BYND 2024: negative delta pressure in Assets, Cash, GrossProfit.",
-          "BYND 2025: The imposition of new or increased tariffs could materially and adversely affect the accessibility or affordability of ingredients."
-        ],
-        "confidence": "high"
-      },
-      {
-        "watch_risk_type": "advertiser_concentration",
-        "why_relevant": "Peers similar to the target showed advertiser_concentration after the matched year, making it a pattern to monitor.",
-        "peer_evidence": [
-          "META 2025: Substantially all revenue currently generated from marketers advertising on Facebook and Instagram; loss or reduction in spending by marketers could seriously harm business.",
-          "META 2025: negative delta pressure in Cash."
+          "UBER 2026: Third-party suppliers and service providers processing Uber personal data are contractually obligated to notify of incidents impacting data."
         ],
         "confidence": "medium"
       },
       {
-        "watch_risk_type": "rd_productivity_risk",
-        "why_relevant": "Peers similar to the target showed rd_productivity_risk after the matched year, making it a pattern to monitor.",
+        "watch_risk_type": "negative_operating_cash_flow",
+        "why_relevant": "negative_operating_cash_flow is already adjacent to the target risk profile and later reappears in peer future years.",
         "peer_evidence": [
-          "META 2025: Many Reality Labs investments are directed toward long-term research for products only fully realized in the next decade, with ability to sustain efforts dependent on profits from other business areas.",
-          "META 2025: negative delta pressure in Cash."
+          "UBER 2025: Freight revenue decreased $104 million or 2% and Freight Adjusted EBITDA declined $10 million or 16% year-over-year due to challenging freight market cycle."
         ],
         "confidence": "medium"
       },
       {
-        "watch_risk_type": "accounts_receivable_deterioration",
-        "why_relevant": "Peers similar to the target showed accounts_receivable_deterioration after the matched year, making it a pattern to monitor.",
+        "watch_risk_type": "recession_sensitivity",
+        "why_relevant": "recession_sensitivity is already adjacent to the target risk profile and later reappears in peer future years.",
         "peer_evidence": [
-          "AAPL 2022: Company is exposed to credit risk on trade accounts receivable and this risk is heightened during periods when economic conditions worsen.",
-          "AAPL 2022: negative delta pressure in Cash."
+          "UBER 2026: Freight Gross Bookings declined 1% year-over-year due to challenging freight market cycles, resulting in $42 million revenue decrease."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "active_litigation",
+        "why_relevant": "Peers similar to the target showed active_litigation after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "META 2025: Multiple putative class actions filed alleging inflated audience size estimates for advertisements, resulting in artificially increased demand and higher prices."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "infrastructure_single_point_failure",
+        "why_relevant": "Peers similar to the target showed infrastructure_single_point_failure after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "UBER 2026: Business depends upon performance and reliability of Internet, mobile, and other infrastructures not under company control."
         ],
         "confidence": "medium"
       }
     ],
     "narrative_sections": [
       {
-        "title": "What Looks Similar",
-        "content": "Lyft shares a set of near\u2011term risks with its peer neighborhood: cybersecurity_vulnerability, foreign_currency_exposure, intensifying_competition, interest_rate_sensitivity, recession_sensitivity, scaling_risk and talent_retention_risk. Several of these are medium severity for the target and reflect common competitive, macro and operational pressures seen across peers."
+        "title": "Current Posture",
+        "content": "Lyft\u2019s posture is labeled Elevated based on a mixed financial and risk profile. The company reports no high-severity risk factors but records three severe negative deltas: OperatingCashFlow (-964.96335504886), NetIncome (-106.69370004701457), and ResearchAndDevelopment (-28.574255288530725), alongside three positive deltas\u2014Cash (strong_growth, 35.92295574967779), Revenues (strong_growth, 31.39324959862294) and Assets (moderate_growth, 19.07340830370229)\u2014that provide some buffer. Key documented risks include pricing_power_erosion (Item 7; noted twice), a historic failed acquisition charge (Item 1A), inflation_impact and intensifying_competition (Item 1A), and negative_operating_cash_flow (Item 7; cash used in operations $98.2M for year ended Dec 31, 2023). These elements collectively explain the elevated designation and the need for focused liquidity and competitive monitoring.",
+        "citations": [
+          "LYFT 10-K 2025, Item 7",
+          "LYFT 10-K 2025, Item 1A"
+        ]
+      },
+      {
+        "title": "Peer Comparison",
+        "content": "Within the top matched peer neighborhood, Lyft shares common strengths in Assets, Cash, OperatingCashFlow, ResearchAndDevelopment and Revenues, while NetIncome appears as a common pressure across peers. Peers and the target overlap on multiple risk types (for example: active_litigation, customer_churn_risk, foreign_currency_exposure, inflation_impact, interest_rate_sensitivity, monetization_uncertainty, pricing_power_erosion, supply_chain_concentration), indicating industry-wide exposures. At the same time, Lyft shows target-only risk differences\u2014failed_acquisition, intensifying_competition, and rd_productivity_risk\u2014that distinguish its profile from peer-only issues and warrant targeted attention.",
+        "citations": [
+          "LYFT 10-K 2025, Item 7",
+          "LYFT 10-K 2025, Item 1A"
+        ]
       },
       {
         "title": "What To Watch Next",
-        "content": "Monitor peer\u2011emergent patterns identified in the forward watchlist: supply_chain_concentration and trade_tariff_risk (high confidence), and advertiser_concentration, rd_productivity_risk and accounts_receivable_deterioration (medium confidence). Also note the target\u2011only failed_acquisition signal (medium severity) as a company\u2011specific item to follow."
+        "content": "Monitor several risk types that peers show reappearing in later years as patterns to watch rather than forecasts: cybersecurity_vulnerability (peer evidence: UBER 2026 third\u2011party incident notification practices), negative_operating_cash_flow (peer evidence: UBER 2025 freight revenue and adjusted EBITDA declines), recession_sensitivity (peer evidence: UBER 2026 freight gross bookings declines), active_litigation (peer evidence: META 2025 class actions), and infrastructure_single_point_failure (peer evidence: UBER 2026 dependence on external Internet and mobile infrastructure). Each watch item carries medium confidence in the supplied data and should inform ongoing surveillance of liquidity, operational resilience, and legal exposures.",
+        "citations": [
+          "UBER 2026: Third-party suppliers and service providers processing Uber personal data are contractually obligated to notify of incidents impacting data.",
+          "UBER 2025: Freight revenue decreased $104 million or 2% and Freight Adjusted EBITDA declined $10 million or 16% year-over-year due to challenging freight market cycle.",
+          "UBER 2026: Freight Gross Bookings declined 1% year-over-year due to challenging freight market cycles, resulting in $42 million revenue decrease."
+        ]
       }
     ],
     "error": null

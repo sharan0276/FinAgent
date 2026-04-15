@@ -1,0 +1,228 @@
+{
+  "schema_version": "baseline_rag_v1",
+  "bundle": {
+    "target": {
+      "ticker": "SNAP",
+      "company": "Snap Inc",
+      "latest_filing_year": 2026,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\SNAP\\complete_ingestion.json",
+      "extraction_path": null,
+      "curator_path": null
+    },
+    "matches": [
+      {
+        "ticker": "META",
+        "company": "Meta Platforms, Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.8236,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "AAPL",
+        "company": "Apple Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.8202,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "ADBE",
+        "company": "ADOBE INC.",
+        "matched_filing_year": 2026,
+        "similarity": 0.7983,
+        "context_curator_paths": []
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:50:07.320894+00:00",
+      "status_by_step": {
+        "load_target": "completed",
+        "flatten_target": "completed",
+        "build_baseline_index": "skipped_existing",
+        "find_peers": "completed",
+        "load_peers": "completed",
+        "llm_call": "completed",
+        "parse_report": "completed"
+      },
+      "warnings": []
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "Snap shows steady revenue growth (FY2021 $4,117M \u2192 FY2025 $5,931M) and a materially improved operating cash flow (FY2025 $656M), but remains unprofitable (net loss $-460M in FY2025) with limited liquidity (cash $1,030M) and a relatively high long-term debt stock ($3,537M) versus its asset base.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Mixed",
+      "rationale_bullets": [
+        "Revenue expanded by $1,814M from FY2021 to FY2025 and FY2025 revenue increased $570M YoY, indicating continued top-line momentum.",
+        "Profitability has improved materially from the FY2022 trough (net loss $-1,430M) to FY2025 ($-460M), and operating cash flow strengthened to $656M in FY2025.",
+        "Liquidity and leverage remain areas of concern: cash fell to $1,030M in FY2025 and long-term debt is sizable at $3,537M (debt level roughly 46% of FY2025 assets $7,678M)."
+      ]
+    },
+    "target_profile": {
+      "ticker": "SNAP",
+      "company": "Snap Inc",
+      "filing_year": 2025,
+      "positive_deltas": [
+        {
+          "metric": "Revenue growth (absolute, 2021\u21922025)",
+          "label": "Top-line expansion",
+          "value": 1814.0
+        },
+        {
+          "metric": "Operating cash flow improvement (FY2024\u2192FY2025)",
+          "label": "OCF growth YoY",
+          "value": 242.7
+        },
+        {
+          "metric": "Net income improvement (FY2022\u2192FY2025)",
+          "label": "Loss narrowing",
+          "value": 970.0
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "Cash and equivalents (FY2025)",
+          "label": "Low cash balance",
+          "value": 1030.0
+        },
+        {
+          "metric": "Net income (FY2025)",
+          "label": "Still net loss",
+          "value": -460.0
+        },
+        {
+          "metric": "Long-term debt (FY2025)",
+          "label": "High leverage relative to assets",
+          "value": 3537.0
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "Liquidity risk",
+          "severity": "high",
+          "section": "Balance sheet / cash",
+          "summary": "Cash declined to $1,030M in FY2025 while operating needs and R&D remain material, leaving limited liquidity buffer.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Profitability risk",
+          "severity": "medium",
+          "section": "Income statement",
+          "summary": "Company remains unprofitable in FY2025 (net loss $-460M) despite steady improvement from FY2022 levels.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Leverage risk",
+          "severity": "medium",
+          "section": "Debt profile",
+          "summary": "Long-term debt of $3,537M against total assets of $7,678M yields a high debt-to-assets posture relative to the company's scale.",
+          "citation": null,
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Large-cap technology and platform peers: Meta Platforms (META), Apple (AAPL), Adobe (ADBE)",
+      "common_strengths": [
+        "Robust operating cash flow generation (META $115,800M; AAPL $111,482M; ADBE $10,031M in FY2025)",
+        "Strong profitability at scale (META and AAPL reported positive net income in FY2025 of $60,458M and $112,010M respectively; ADBE $7,130M)",
+        "Sustained R&D investment (all peers show multi\u2011billion R&D spend in FY2025)"
+      ],
+      "common_pressures": [
+        "Rising long-term debt for some peers (META LTD rose sharply to $58,744M; ADBE LTD increased to $6,210M) which can add financial flexibility risk if not managed",
+        "Capital allocation volatility (material YoY swings in cash and assets across peers)",
+        "Need to continue investing in product and R&D to defend scale \u2014 evident from large R&D totals"
+      ],
+      "shared_risk_types": [
+        "increasing_R&D_spend",
+        "long_term_debt_increases",
+        "cash_flow_variability"
+      ],
+      "target_differences": [
+        "Snap remains unprofitable in FY2025 while peers are deeply profitable (Meta, Apple) or consistently profitable (Adobe).",
+        "Snap's absolute cash reserves (~$1.0B) are far smaller than peer balances (Meta and Apple >$35B; Adobe $5.4B).",
+        "Snap's long-term debt relative to its asset base is higher than some peers on a proportional basis."
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "increasing_R&D_spend",
+          "long_term_debt_increases"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "negative_net_income",
+          "low_cash_liquidity"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "very_high_absolute_profitability",
+          "very_high_operating_cash_flow"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "Liquidity / cash runway",
+        "why_relevant": "Snap's cash balance is $1,030M in FY2025 while operating and R&D outflows remain significant; any material revenue or OCF deterioration could pressure liquidity.",
+        "peer_evidence": [
+          "Meta cash FY2025: $35,873M",
+          "Apple cash FY2025: $35,934M",
+          "Adobe cash FY2025: $5,431M"
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "Path to sustained profitability",
+        "why_relevant": "Net loss narrowed to $-460M in FY2025 but remains negative; monitoring whether improved OCF converts to GAAP profitability is critical.",
+        "peer_evidence": [
+          "Meta net income FY2025: $60,458M",
+          "Apple net income FY2025: $112,010M",
+          "Adobe net income FY2025: $7,130M"
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "Leverage management",
+        "why_relevant": "Long-term debt is $3,537M vs assets $7,678M in FY2025; continued reductions or refinancing terms will affect financial flexibility.",
+        "peer_evidence": [
+          "Meta LTD increased to $58,744M (FY2025)",
+          "Adobe LTD increased to $6,210M (FY2025)"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "Competitive scale / market share pressure",
+        "why_relevant": "Peers show much larger revenue and profitability scale, which can translate into competitive advantages in ad monetization and product investment.",
+        "peer_evidence": [
+          "Meta revenue FY2025: $200,966M",
+          "Apple revenue FY2025: $416,161M",
+          "Adobe revenue FY2025: $23,769M"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Financial Performance",
+        "content": "Snap's top line expanded from $4,117M in FY2021 to $5,931M in FY2025 (an absolute increase of $1,814M). Revenue growth accelerated in the later years with FY2025 up $570M YoY. Operating cash flow shows a favorable trajectory \u2014 from $293M in FY2021 to $656M in FY2025, including a $242.7M YoY increase in FY2025 \u2014 suggesting improving core cash generation.\n\nDespite revenue and OCF improvement, Snap remained unprofitable on a GAAP basis in FY2025 with net loss of $-460M, albeit materially improved from the FY2022 trough of $-1,430M. Cash and equivalents declined from $1,994M in FY2021 to $1,030M in FY2025, while long-term debt rose from $2,253M (FY2021) to $3,537M (FY2025), leaving a tighter liquidity buffer and a higher proportional leverage level relative to the company\u2019s asset base ($7,678M in FY2025). R&D spend remains meaningful (FY2025 $1,794M), supporting continued product investment.",
+        "citations": []
+      },
+      {
+        "title": "Risk Assessment",
+        "content": "Primary near-term risks center on liquidity and continued path to profitability. Cash of $1,030M in FY2025 is modest relative to operating needs and R&D outlays; a revenue or OCF setback could pressure the balance sheet. Long-term debt of $3,537M is notable against total assets of $7,678M, implying leverage that requires active management through cash generation or refinancing.\n\nVersus peers, Snap lacks the large-scale profitability and cash reserves of Meta and Apple (FY2025 net income $60,458M and $112,010M; cash roughly $35B each), which creates competitive and financial flexibility gaps. While Adobe and other peers also increased LT debt, they convert scale into sizable profits and OCF; Snap\u2019s improving OCF is positive but needs to continue to reliably convert to sustained GAAP profitability and a stronger liquidity position to reduce elevated financial risks.",
+        "citations": []
+      }
+    ],
+    "error": null
+  }
+}

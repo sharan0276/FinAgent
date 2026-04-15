@@ -1,0 +1,213 @@
+{
+  "schema_version": "baseline_rag_v1",
+  "bundle": {
+    "target": {
+      "ticker": "BYND",
+      "company": "BEYOND MEAT, INC.",
+      "latest_filing_year": 2026,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\BYND\\complete_ingestion.json",
+      "extraction_path": null,
+      "curator_path": null
+    },
+    "matches": [
+      {
+        "ticker": "AMD",
+        "company": "ADVANCED MICRO DEVICES INC",
+        "matched_filing_year": 2026,
+        "similarity": 0.7138,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "AMZN",
+        "company": "AMAZON COM INC",
+        "matched_filing_year": 2026,
+        "similarity": 0.6977,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "META",
+        "company": "Meta Platforms, Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.6876,
+        "context_curator_paths": []
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:48:39.996305+00:00",
+      "status_by_step": {
+        "load_target": "completed",
+        "flatten_target": "completed",
+        "build_baseline_index": "skipped_existing",
+        "find_peers": "completed",
+        "load_peers": "completed",
+        "llm_call": "completed",
+        "parse_report": "completed"
+      },
+      "warnings": []
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "Beyond Meat shows a clear operational turnaround in FY2025 with a swing to $219.0M net income and a large reduction in long-term debt to $416.0M, but the company continues to face multi-year revenue decline (FY2021\u2013FY2025: $465M \u2192 $276M) and negative operating cash flow (-$145.0M in FY2025). Relative to the provided peer set (AMD, Amazon, Meta), Beyond Meat is smaller, cash-constrained and revenue-compressed despite the one-year profitability improvement.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Mixed",
+      "rationale_bullets": [
+        "Material improvement in reported profitability: net income swung from losses to a $219.0M profit in FY2025.",
+        "Liquidity and cash-generation remain weak: operating cash flow is negative (-$145.0M) and cash balance is modest at $204.0M versus peers in multi-billions.",
+        "Top-line and asset base have contracted materially over the period (revenues down from $465M to $276M; assets down from $1,379M to $615M), creating ongoing demand and scale risk."
+      ]
+    },
+    "target_profile": {
+      "ticker": "BYND",
+      "company": "BEYOND MEAT, INC.",
+      "filing_year": 2025,
+      "positive_deltas": [
+        {
+          "metric": "NetIncome",
+          "label": "FY2025 Net Income (improvement)",
+          "value": 219.0
+        },
+        {
+          "metric": "LongTermDebt",
+          "label": "FY2025 Long-Term Debt (reduced)",
+          "value": 416.0
+        },
+        {
+          "metric": "Cash",
+          "label": "FY2025 Cash (short-term rebound)",
+          "value": 204.0
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "Revenues",
+          "label": "FY2025 Revenues (multi-year decline)",
+          "value": 276.0
+        },
+        {
+          "metric": "OperatingCashFlow",
+          "label": "FY2025 Operating Cash Flow (negative)",
+          "value": -145.0
+        },
+        {
+          "metric": "GrossProfit",
+          "label": "FY2025 Gross Profit (very low)",
+          "value": 8.0
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "Revenue decline / demand risk",
+          "severity": "high",
+          "section": "Top-line contraction FY2021\u2013FY2025",
+          "summary": "Revenues contracted from $465M in FY2021 to $276M in FY2025, reflecting sustained demand or market-share pressure.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Negative operating cash flow",
+          "severity": "high",
+          "section": "Cash generation",
+          "summary": "Operating cash flow remained negative in FY2025 (-$145.0M), indicating continued dependence on financing or non-operating items despite a reported net profit.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Margin fragility",
+          "severity": "medium",
+          "section": "Profitability and gross margin",
+          "summary": "Gross profit is very small ($8.0M in FY2025) after prior-year negative gross profit, suggesting margins remain fragile even with reported net income.",
+          "citation": null,
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Large-cap technology and consumer internet/semiconductor companies (AMD, Amazon, Meta) with multi-billion revenues, high R&D and generally positive operating cash flow.",
+      "common_strengths": [
+        "Strong revenue growth and scale (peers show large multi-year revenue increases).",
+        "Large cash balances and robust operating cash flow (Amazon and Meta show positive OCF in tens of billions; AMD positive and growing in FY2025).",
+        "Significant R&D investments (AMD and Meta show large and growing R&D spend)."
+      ],
+      "common_pressures": [
+        "Capital intensity: peers show rising assets and large absolute R&D and long-term investments.",
+        "Debt changes: some peers increased long-term debt materially (AMD and Meta experienced multi-year debt increases).",
+        "Macroeconomic / demand cyclicality affecting FY-to-FY net income volatility (AMD and Meta show sizable year-to-year swings)."
+      ],
+      "shared_risk_types": [
+        "Liquidity / cash generation risk",
+        "Demand / revenue volatility",
+        "Debt and capital structure risk"
+      ],
+      "target_differences": [
+        "Beyond Meat is materially smaller with shrinking revenues versus peers' multi-year growth.",
+        "Target has negative operating cash flow and modest cash balances while peers show strong positive OCF and much larger cash reserves.",
+        "Peers invest heavily in R&D and asset growth; Beyond Meat has reduced R&D spending and a declining asset base."
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "Liquidity / cash generation risk",
+          "Demand / revenue volatility"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "Sustained revenue contraction",
+          "Historically negative gross profit leading to fragile margins"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "High R&D / capital intensity risk",
+          "Large-scale debt issuance fluctuations"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "Operating cash flow normalization",
+        "why_relevant": "Despite FY2025 net income of $219.0M, operating cash flow is negative (-$145.0M), so convertibility of accounting profit into cash should be monitored.",
+        "peer_evidence": [
+          "Amazon and Meta show large positive OCF in FY2025 (Amazon $139,514M; Meta $115,800M), indicating peer ability to fund operations from cash flow."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "Revenue trajectory / market demand",
+        "why_relevant": "Multi-year revenue decline (FY2021 $465M \u2192 FY2025 $276M) poses a risk to sustainable profitability and scale economics.",
+        "peer_evidence": [
+          "Peers exhibit multi-year revenue growth (e.g., Amazon FY2021\u2192FY2025 $469,822M \u2192 $716,924M; Meta FY2021\u2192FY2025 $117,929M \u2192 $200,966M)."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "Margin recovery versus reinvestment",
+        "why_relevant": "Gross profit is low ($8.0M) and R&D spend has been reduced to $23.0M in FY2025; assess whether margins improve sustainably or at the cost of underinvestment.",
+        "peer_evidence": [
+          "Peers continue to expand R&D (AMD $8,091M; Meta $57,372M in FY2025) which supports long-term product competitiveness."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Financial Performance",
+        "content": "Beyond Meat's top line shows a sustained contraction from $465M in FY2021 to $276M in FY2025, indicating continued pressure on demand or market share. Despite the revenue decline, FY2025 reported net income improved sharply to $219.0M from prior multi-year losses, and cash rose modestly to $204.0M while long-term debt was materially reduced to $416.0M.\n\nHowever, underlying operating performance remains a concern: operating cash flow is still negative at -$145.0M in FY2025 and gross profit is very small at $8.0M, signaling that accounting profitability has not yet been matched by strong cash generation or durable margin expansion. The asset base has contracted (assets down to $615.0M), and R&D spending has been trimmed (to $23.0M), which may have supported short-term improvement but could constrain future growth.",
+        "citations": []
+      },
+      {
+        "title": "Risk Assessment",
+        "content": "The most acute risks are sustained revenue decline and weak cash generation. Revenues fell roughly 41% from FY2021 to FY2025, and OCF remains negative, which together raise high-severity concerns about long-term scale and self-funded growth. Gross profit volatility (negative in FY2022\u2013FY2023, near-zero in FY2025) highlights margin fragility that could reverse net income gains if demand or pricing deteriorates.\n\nCompared with peers (AMD, Amazon, Meta), Beyond Meat lacks scale, has far smaller cash reserves, and does not benefit from large positive operating cash flow or heavy R&D investment. Peers\u2019 profiles suggest they face different near-term pressures (high capex/R&D and large debt moves) but generally have stronger liquidity and OCF, making Beyond Meat relatively more exposed to demand shocks and the need for continued balance sheet/working capital management.",
+        "citations": []
+      }
+    ],
+    "error": null
+  }
+}

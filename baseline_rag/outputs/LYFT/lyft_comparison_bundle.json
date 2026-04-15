@@ -1,0 +1,211 @@
+{
+  "schema_version": "baseline_rag_v1",
+  "bundle": {
+    "target": {
+      "ticker": "LYFT",
+      "company": "Lyft, Inc.",
+      "latest_filing_year": 2025,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\LYFT\\complete_ingestion.json",
+      "extraction_path": null,
+      "curator_path": null
+    },
+    "matches": [
+      {
+        "ticker": "UBER",
+        "company": "Uber Technologies, Inc",
+        "matched_filing_year": 2026,
+        "similarity": 0.8623,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "META",
+        "company": "Meta Platforms, Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.8215,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "AMZN",
+        "company": "AMAZON COM INC",
+        "matched_filing_year": 2026,
+        "similarity": 0.8051,
+        "context_curator_paths": []
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:46:11.751363+00:00",
+      "status_by_step": {
+        "load_target": "completed",
+        "flatten_target": "completed",
+        "build_baseline_index": "skipped_existing",
+        "find_peers": "completed",
+        "load_peers": "completed",
+        "llm_call": "completed",
+        "parse_report": "completed"
+      },
+      "warnings": []
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "Lyft shows a rapid profitability and operating cash-flow turnaround in FY2025 driven by a large net-income swing to $2,844M and positive operating cash flow of $1,168M; however the company remains much smaller in scale and liquidity compared with peers (Uber, Meta, Amazon). Balance-sheet leverage is modest in absolute terms, but the company\u2019s smaller revenue and asset base limit competitive flexibility versus large-cap peers.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Mixed",
+      "rationale_bullets": [
+        "FY2025 shows a strong profitability and cash-flow improvement (NetIncome +$2,821.2M YoY; OperatingCashFlow $1,168M).",
+        "Absolute scale (FY2025 Revenues $6,316M; Assets $9,030M; Cash $1,132M) is materially below peer levels, creating competitive/headroom constraints.",
+        "Long-term debt remains low in absolute terms ($1,053M FY2025) which supports balance-sheet flexibility despite smaller cash reserves."
+      ]
+    },
+    "target_profile": {
+      "ticker": "LYFT",
+      "company": "Lyft, Inc.",
+      "filing_year": 2025,
+      "positive_deltas": [
+        {
+          "metric": "NetIncome YoY change FY2025",
+          "label": "Large net-income improvement",
+          "value": 2821.2
+        },
+        {
+          "metric": "OperatingCashFlow FY2025",
+          "label": "Positive operating cash flow",
+          "value": 1168.0
+        },
+        {
+          "metric": "LongTermDebt FY2025 (absolute)",
+          "label": "Low absolute long-term debt",
+          "value": 1053.0
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "Revenues FY2025 gap vs UBER FY2025",
+          "label": "Much smaller revenue scale",
+          "value": -45701.0
+        },
+        {
+          "metric": "Assets FY2025 gap vs UBER FY2025",
+          "label": "Much smaller asset base",
+          "value": -52772.0
+        },
+        {
+          "metric": "Cash FY2025 gap vs UBER FY2025",
+          "label": "Lower cash balance",
+          "value": -5973.0
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "Scale / Market Position",
+          "severity": "high",
+          "section": "Competitive positioning",
+          "summary": "Lyft's FY2025 revenues ($6,316M) and assets ($9,030M) are an order of magnitude smaller than major peers (e.g., Uber Revenues $52,017M; Assets $61,802M), limiting scale advantages and bargaining power.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Sustainability of Profitability",
+          "severity": "medium",
+          "section": "Income statement volatility",
+          "summary": "Net income swung from $23M in FY2024 to $2,844M in FY2025 (YoY change +$2,821.2M), indicating profit improvement that should be monitored for recurrence and sources.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Liquidity / Cash Buffer",
+          "severity": "medium",
+          "section": "Liquidity metrics",
+          "summary": "Although cash increased to $1,132M in FY2025, Lyft's cash balance remains materially below peers (e.g., Uber $7,105M; Meta $35,873M), which could constrain strategic optionality.",
+          "citation": null,
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Large platform & mobility peers with diversified revenue and materially larger scale (Uber, Meta, Amazon)",
+      "common_strengths": [
+        "Strong FY2023\u2013FY2025 revenue growth trajectories across peers (Uber, Meta, Amazon).",
+        "Major improvement in operating cash flow for peers (Uber OCF $10,099M FY2025; Meta OCF $115,800M; Amazon OCF $139,514M).",
+        "Significant investment capacity (large cash and asset bases) enabling strategic flexibility."
+      ],
+      "common_pressures": [
+        "Rising absolute long-term debt at some peers (Meta and Amazon saw large increases; Uber also carries substantial debt).",
+        "High absolute R&D and investment spending (Meta and Amazon R&D >$50B and >$3B respectively in FY2025), putting pressure on margins absent scale.",
+        "Competition to capture network effects and market share in platform-driven segments."
+      ],
+      "shared_risk_types": [
+        "Profitability sustainability / earnings volatility",
+        "Capital intensity and leverage trends",
+        "Competitive pressure on growth and margins"
+      ],
+      "target_differences": [
+        "Lyft is much smaller in revenue, assets and cash than peers, reducing scale benefits.",
+        "Lyft shows rapid recent profitability and OCF improvement but from a smaller base.",
+        "Lyft\u2019s absolute long-term debt is low versus peers, giving it comparatively conservative leverage."
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "Profitability sustainability"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "Small scale / limited asset base"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "Large absolute debt accumulation"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "Sustainability of net income and OCF",
+        "why_relevant": "Lyft recorded a large positive net income swing (+$2,821.2M YoY) and OCF turned strongly positive to $1,168M in FY2025; tracking whether this is repeatable (operating margin drivers, one-time items) is critical.",
+        "peer_evidence": [
+          "Uber OCF FY2025 $10,099M and NetIncome $10,053M (sustained profitability at larger scale).",
+          "Meta and Amazon show very large recurring operating cash flows (Meta $115,800M; Amazon $139,514M)."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "Liquidity buffer relative to peers",
+        "why_relevant": "Despite cash increases, Lyft\u2019s cash ($1,132M) is small relative to peers and may limit M&A or weathering downturns.",
+        "peer_evidence": [
+          "Uber cash FY2025 $7,105M; Meta cash FY2025 $35,873M; Amazon cash FY2025 $86,810M."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "Competitive scale disadvantage",
+        "why_relevant": "Lyft\u2019s FY2025 revenue ($6,316M) is far below large platform peers, which affects pricing power and ability to invest in product/market expansion.",
+        "peer_evidence": [
+          "Uber Revenues FY2025 $52,017M; Meta FY2025 $200,966M; Amazon FY2025 $716,924M."
+        ],
+        "confidence": "high"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Financial Performance",
+        "content": "Lyft\u2019s FY2025 performance shows a pronounced recovery: revenues increased to $6,316M and net income swung to $2,844M (a YoY improvement of $2,821.2M). Operating cash flow turned positive and rose to $1,168M in FY2025 after several years of negative or modest cash generation, and cash on hand increased to $1,132M. These metrics indicate the company reached profitability and cash-flow generation in FY2025.\n\nDespite these improvements, Lyft remains limited by absolute scale. FY2025 revenues ($6,316M), assets ($9,030M), and cash ($1,132M) are materially smaller than large peers (for example, Uber Revenues $52,017M and Assets $61,802M in FY2025). Lyft\u2019s long-term debt remains relatively low at $1,053M, which moderates leverage risk but also reflects a much smaller capital base compared with peers that carry tens of billions of dollars of long-term debt.",
+        "citations": []
+      },
+      {
+        "title": "Risk Assessment",
+        "content": "The primary risk is whether FY2025 profitability and operating cash-flow improvements are durable. The net-income swing (+$2,821.2M YoY) and OCF turnaround could reflect structural margin improvement, cyclical recovery, or one-time items \u2014 distinguishing these will determine sustainability. Compared with peers, Lyft\u2019s absolute cash buffer is small (cash $1,132M vs Uber $7,105M; Meta $35,873M; Amazon $86,810M), which could constrain strategic responses to competitive or macro shocks.\n\nAnother material risk stems from scale: Lyft\u2019s revenue and asset base is an order of magnitude smaller than major platform peers, limiting network effects, pricing power, and ability to invest at scale (R&D and product expansion). Conversely, Lyft\u2019s low absolute long-term debt ($1,053M) provides financial flexibility. Monitoring recurring operating margins, cash conversion, and sources of FY2025 net income will be critical to assess whether the positive FY2025 results convert into a durable competitive position.",
+        "citations": []
+      }
+    ],
+    "error": null
+  }
+}

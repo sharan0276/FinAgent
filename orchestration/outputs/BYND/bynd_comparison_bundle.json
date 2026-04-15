@@ -1,0 +1,281 @@
+{
+  "schema_version": "orchestration_v1",
+  "bundle": {
+    "target": {
+      "ticker": "BYND",
+      "company": "BEYOND MEAT, INC.",
+      "latest_filing_year": 2026,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\BYND\\complete_ingestion.json",
+      "extraction_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\BYND\\bynd_2026_extraction.json",
+      "curator_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2026.json"
+    },
+    "matches": [
+      {
+        "ticker": "AMD",
+        "company": "ADVANCED MICRO DEVICES INC",
+        "matched_filing_year": 2023,
+        "similarity": 0.7738,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AMD\\amd_2023.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AMD\\amd_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AMD\\amd_2025.json"
+        ]
+      },
+      {
+        "ticker": "ADBE",
+        "company": "ADOBE INC.",
+        "matched_filing_year": 2024,
+        "similarity": 0.7699,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\ADBE\\adbe_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\ADBE\\adbe_2025.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\ADBE\\adbe_2026.json"
+        ]
+      },
+      {
+        "ticker": "PLTR",
+        "company": "Palantir Technologies Inc.",
+        "matched_filing_year": 2026,
+        "similarity": 0.7608,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\PLTR\\pltr_2026.json"
+        ]
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:48:13.293794+00:00",
+      "status_by_step": {
+        "ingestion": "skipped_existing",
+        "extraction": "skipped_existing",
+        "curator": "skipped_existing",
+        "rag": "partial",
+        "comparison": "completed"
+      },
+      "warnings": [
+        "PLTR has only 1 curator year(s) from 2026 onward."
+      ]
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "BEYOND MEAT, INC. (BYND) presents an elevated posture versus its matched peer neighborhood driven by material negative financial deltas offset in part by sizable cash and operating cash flow growth. Current analysis flags zero high\u2011severity risk factors but identifies multiple medium\u2011severity Item 7A risks including foreign currency exposure, inflation impact, supply\u2011chain concentration and trade tariff risk. The company shares several risk types with peers while retaining a trade\u2011tariff exposure that is currently unique to the target.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Elevated",
+      "rationale_bullets": [
+        "Analysis reports 0 high\u2011severity risk factors and identifies five negative financial deltas alongside two positive deltas that provide a buffer.",
+        "Positive deltas are concentrated in Cash (+54.57) and OperatingCashFlow (+46.68), while negative deltas include severe declines in NetIncome (\u2212236.62) and GrossProfit (\u221281.65) and moderate declines in ResearchAndDevelopment (\u221217.48) and Revenues (\u221215.61).",
+        "Three risk types (foreign currency exposure, inflation impact, supply\u2011chain concentration) are currently shared with peers; trade tariff risk is a target\u2011only exposure now."
+      ]
+    },
+    "target_profile": {
+      "ticker": "BYND",
+      "company": "BEYOND MEAT, INC.",
+      "filing_year": 2026,
+      "positive_deltas": [
+        {
+          "metric": "Cash",
+          "label": "strong_growth",
+          "value": 54.56750814949587
+        },
+        {
+          "metric": "OperatingCashFlow",
+          "label": "strong_growth",
+          "value": 46.67543770873394
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "NetIncome",
+          "label": "severe_decline",
+          "value": -236.61883967560823
+        },
+        {
+          "metric": "GrossProfit",
+          "label": "severe_decline",
+          "value": -81.65467625899281
+        },
+        {
+          "metric": "ResearchAndDevelopment",
+          "label": "moderate_decline",
+          "value": -17.47779751332149
+        },
+        {
+          "metric": "Revenues",
+          "label": "moderate_decline",
+          "value": -15.607290549854497
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "foreign_currency_exposure",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "A 5% or 10% adverse change to foreign currency exchange rates would result in a loss of approximately $5.7 million or $11.4 million respectively.",
+          "citation": "BYND 10-K 2026, Item 7A",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "inflation_impact",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "Inflation is having an adverse effect on end customers' ability to purchase products, resulting in decreased sales.",
+          "citation": "BYND 10-K 2026, Item 7A",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "supply_chain_concentration",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "Markets for ingredients like avocado oil are particularly volatile due to limited supply sources, crop yield, seasonal shifts, and climate conditions.",
+          "citation": "BYND 10-K 2026, Item 7A",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "trade_tariff_risk",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "The imposition of new or increased tariffs could materially and adversely affect the accessibility or affordability of ingredients.",
+          "citation": "BYND 10-K 2026, Item 7A",
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Top matched peer neighborhood",
+      "common_strengths": [
+        "Assets",
+        "Cash",
+        "GrossProfit",
+        "NetIncome",
+        "ResearchAndDevelopment",
+        "Revenues"
+      ],
+      "common_pressures": [],
+      "shared_risk_types": [
+        "foreign_currency_exposure",
+        "intensifying_competition",
+        "interest_rate_sensitivity",
+        "recession_sensitivity"
+      ],
+      "target_differences": [
+        "trade_tariff_risk"
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "foreign_currency_exposure",
+          "inflation_impact",
+          "supply_chain_concentration"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "trade_tariff_risk"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "active_litigation",
+          "cash_runway_concern",
+          "customer_churn_risk",
+          "cybersecurity_vulnerability",
+          "government_contract_risk",
+          "impairment_charges",
+          "intensifying_competition",
+          "interest_rate_sensitivity",
+          "ip_infringement_claim",
+          "key_person_dependency",
+          "manufacturing_defect_risk",
+          "recession_sensitivity",
+          "revenue_concentration_risk",
+          "subscription_model_risk",
+          "talent_retention_risk",
+          "third_party_vendor_dependency"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "failed_acquisition",
+        "why_relevant": "Peers similar to the target showed failed_acquisition after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "ADBE 2025: Adobe paid a $1 billion termination fee in fiscal 2024 due to the failed Figma acquisition.",
+          "ADBE 2026: Adobe incurred a $1 billion termination fee in fiscal 2024 from the failed Figma acquisition.",
+          "ADBE 2026: negative delta pressure in Cash."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "customer_churn_risk",
+        "why_relevant": "Peers similar to the target showed customer_churn_risk after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "AMD 2025: Gaming net revenue decreased 58% to $2.6 billion in 2024 from $6.2 billion in 2023.",
+          "ADBE 2025: Customer renewal rates may decline due to satisfaction levels, competitive pricing, and cybersecurity perceptions."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "cybersecurity_vulnerability",
+        "why_relevant": "Peers similar to the target showed cybersecurity_vulnerability after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "AMD 2024: Ongoing cybersecurity threats could materially affect operations, business strategy, results of operations, or financial condition if realized.",
+          "AMD 2024: negative delta pressure in Cash, NetIncome, OperatingCashFlow.",
+          "AMD 2025: AMD faces ongoing cybersecurity threats that are reasonably likely to materially affect operations, business strategy, results of operations, or financial condition if realized."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "intensifying_competition",
+        "why_relevant": "Peers similar to the target showed intensifying_competition after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "AMD 2025: Client and Gaming segment revenues have experienced declines driven by increased competition, adoption of smaller form factors, and changes in replacement cycles."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "rd_productivity_risk",
+        "why_relevant": "Peers similar to the target showed rd_productivity_risk after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "AMD 2024: Research and development expenditures will substantially drain cash flow and may decrease cash balances without generating sufficient revenue.",
+          "AMD 2024: negative delta pressure in Cash, NetIncome, OperatingCashFlow."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Current Posture",
+        "content": "BYND\u2019s posture is labeled Elevated: the firm shows no high\u2011severity risk factors but multiple negative financial deltas alongside two strong positive deltas. The financial profile includes strong growth in Cash (+54.57) and Operating Cash Flow (+46.68), which provide liquidity support, while material pressures appear in Net Income (severe decline, \u2212236.62) and Gross Profit (severe decline, \u221281.65) plus moderate declines in R&D (\u221217.48) and Revenues (\u221215.61). Item 7A disclosures list four medium\u2011severity risks \u2014 foreign currency exposure (estimated losses of ~$5.7M at 5% and ~$11.4M at 10% moves), inflation\u2011driven demand weakness, supply\u2011chain concentration for inputs like avocado oil, and trade tariff risk \u2014 that collectively shape the company\u2019s elevated stance.",
+        "citations": [
+          "BYND 10-K 2026, Item 7A"
+        ]
+      },
+      {
+        "title": "Peer Comparison",
+        "content": "Relative to its top matched peer neighborhood, BYND shares several contemporary risks (foreign currency exposure, inflation impact, supply\u2011chain concentration) and overlaps with broader peer risk themes such as intensifying competition, interest\u2011rate sensitivity and recession sensitivity. Peers broadly show strengths across Assets, Cash, Gross Profit, Net Income, R&D and Revenues as a group; BYND\u2019s profile is mixed within those same metrics, with notable negative deltas in profitability and revenue. Trade tariff risk is a distinguishing, target\u2011only exposure at present, while peers exhibit a wider set of additional pressures (e.g., cybersecurity, customer churn, impairment and litigation risks) not currently flagged for BYND.",
+        "citations": [
+          "BYND 10-K 2026, Item 7A"
+        ]
+      },
+      {
+        "title": "What To Watch Next",
+        "content": "Monitor peer\u2011driven patterns flagged on the forward watchlist rather than treating them as forecasts: high\u2011confidence items include failed acquisitions (peer evidence: Adobe incurred a $1B termination fee related to the Figma deal) and customer churn risk (peer evidence: AMD reported a 58% decline in gaming net revenue), and cybersecurity vulnerability (peer evidence: AMD noted ongoing cybersecurity threats and negative delta pressure in Cash, NetIncome and OperatingCashFlow). Medium\u2011confidence patterns to watch are intensifying competition and R&D productivity risk (peer evidence: AMD cited R&D drain on cash and related negative deltas). These peer patterns warrant vigilance given BYND\u2019s current mix of liquidity strength and operating/profitability declines.",
+        "citations": [
+          "ADBE 2025: Adobe paid a $1 billion termination fee in fiscal 2024 due to the failed Figma acquisition.",
+          "ADBE 2026: Adobe incurred a $1 billion termination fee in fiscal 2024 from the failed Figma acquisition.",
+          "AMD 2025: Gaming net revenue decreased 58% to $2.6 billion in 2024 from $6.2 billion in 2023.",
+          "ADBE 2025: Customer renewal rates may decline due to satisfaction levels, competitive pricing, and cybersecurity perceptions.",
+          "AMD 2024: Ongoing cybersecurity threats could materially affect operations, business strategy, results of operations, or financial condition if realized.",
+          "AMD 2024: negative delta pressure in Cash, NetIncome, OperatingCashFlow."
+        ]
+      }
+    ],
+    "error": null
+  }
+}

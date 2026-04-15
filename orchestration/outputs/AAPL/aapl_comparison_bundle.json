@@ -11,38 +11,41 @@
     },
     "matches": [
       {
-        "ticker": "SNAP",
-        "company": "Snap Inc",
-        "matched_filing_year": 2026,
-        "similarity": 0.7464,
+        "ticker": "PLTR",
+        "company": "Palantir Technologies Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.7715,
         "context_curator_paths": [
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\SNAP\\snap_2026.json"
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\PLTR\\pltr_2025.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\PLTR\\pltr_2026.json"
+        ]
+      },
+      {
+        "ticker": "QCOM",
+        "company": "QUALCOMM INC/DE",
+        "matched_filing_year": 2023,
+        "similarity": 0.7683,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\QCOM\\qcom_2023.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\QCOM\\qcom_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\QCOM\\qcom_2025.json"
         ]
       },
       {
         "ticker": "INTC",
         "company": "INTEL CORP",
-        "matched_filing_year": 2025,
-        "similarity": 0.7391,
+        "matched_filing_year": 2023,
+        "similarity": 0.7446,
         "context_curator_paths": [
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2025.json",
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2026.json"
-        ]
-      },
-      {
-        "ticker": "PLTR",
-        "company": "Palantir Technologies Inc.",
-        "matched_filing_year": 2025,
-        "similarity": 0.7334,
-        "context_curator_paths": [
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\PLTR\\pltr_2025.json",
-          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\PLTR\\pltr_2026.json"
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2023.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2025.json"
         ]
       }
     ],
     "run_metadata": {
       "top_k": 3,
-      "run_timestamp": "2026-04-15T16:41:18.661672+00:00",
+      "run_timestamp": "2026-04-15T20:40:07.758750+00:00",
       "status_by_step": {
         "ingestion": "skipped_existing",
         "extraction": "skipped_existing",
@@ -51,22 +54,20 @@
         "comparison": "completed"
       },
       "warnings": [
-        "SNAP has only 1 curator year(s) from 2026 onward.",
-        "INTC has only 2 curator year(s) from 2025 onward.",
         "PLTR has only 2 curator year(s) from 2025 onward."
       ]
     }
   },
   "comparison_report": {
     "status": "completed",
-    "summary": "Apple Inc. presents a mixed posture versus its matched peer neighborhood: several sizable financial positives (notably cash and net income deltas) are offset by one negative financial delta and two high-severity regulatory risks. Key medium exposures include Greater China sales weakness, foreign-currency derivative loss potential, and interest-rate sensitivity. Peers share many operational and market risks, while antitrust exposure and product obsolescence are currently more specific to Apple.",
+    "summary": "Apple Inc. presents an elevated posture relative to its matched peer neighborhood. The profile calls out four high-severity risk factors and one material negative financial delta, partially offset by several positive financial deltas. Six risk types are shared with peers, while antitrust exposure and trade-tariff risk are distinct near-term differentiators.",
     "model_name": "openai/gpt-5-mini-2025-08-07",
     "posture": {
-      "label": "Mixed",
+      "label": "Elevated",
       "rationale_bullets": [
-        "Current analysis identifies 2 high-severity risk factor(s) and 1 negative financial delta(s).",
-        "The company maintains 6 metrics with positive delta labels, providing a financial buffer.",
-        "5 risk types are currently shared with matched peers, indicating broader industry trends."
+        "Current analysis identifies 4 high-severity risk factor(s) and 1 negative financial delta(s).",
+        "The company maintains 5 metrics with positive delta labels, providing a financial buffer.",
+        "6 risk types are currently shared with matched peers, indicating broader industry trends."
       ]
     },
     "target_profile": {
@@ -104,69 +105,75 @@
       ],
       "top_risks": [
         {
-          "signal_type": "active_litigation",
-          "severity": "high",
-          "section": "Item 3",
-          "summary": "European Commission fined Apple \u20ac500 million on April 23, 2025 for App Store restrictions and issued cease and desist order.",
-          "citation": "AAPL 10-K 2025, Item 3",
-          "occurrences": 1
-        },
-        {
           "signal_type": "antitrust_exposure",
           "severity": "high",
           "section": "Item 3",
-          "summary": "European Commission may impose fines up to 10% of Apple's annual worldwide net sales in Article 6(4) Investigation.",
+          "summary": "European Commission fined the Company \u20ac500 million and issued cease and desist order regarding App Store restrictions.",
           "citation": "AAPL 10-K 2025, Item 3",
-          "occurrences": 1
-        },
-        {
-          "signal_type": "china_geopolitical_exposure",
-          "severity": "medium",
-          "section": "Item 7",
-          "summary": "Greater China net sales decreased 4% during 2025 primarily due to lower iPhone sales.",
-          "citation": "AAPL 10-K 2025, Item 7",
-          "occurrences": 1
+          "occurrences": 2
         },
         {
           "signal_type": "foreign_currency_exposure",
-          "severity": "medium",
+          "severity": "high",
           "section": "Item 7A",
-          "summary": "Apple estimates maximum one-day foreign currency derivative loss of $590 million as of September 27, 2025.",
+          "summary": "Company estimates maximum one-day loss in fair value of $590 million from foreign currency derivative positions with 95% confidence.",
           "citation": "AAPL 10-K 2025, Item 7A",
-          "occurrences": 1
+          "occurrences": 2
         },
         {
           "signal_type": "interest_rate_sensitivity",
-          "severity": "medium",
+          "severity": "high",
           "section": "Item 7A",
           "summary": "100 basis point interest rate increase would cause $2.4 billion decline in investment portfolio fair value and $129 million increase in annual interest expense.",
           "citation": "AAPL 10-K 2025, Item 7A",
           "occurrences": 1
+        },
+        {
+          "signal_type": "active_litigation",
+          "severity": "medium",
+          "section": "Item 7",
+          "summary": "Resolution of legal matters in a manner inconsistent with management's expectations could have a material impact on financial condition and operating results.",
+          "citation": "AAPL 10-K 2025, Item 7",
+          "occurrences": 2
+        },
+        {
+          "signal_type": "trade_tariff_risk",
+          "severity": "medium",
+          "section": "Item 7",
+          "summary": "Trade and international disputes can adversely impact macroeconomic environment and result in shifts and reductions in consumer spending.",
+          "citation": "AAPL 10-K 2025, Item 7",
+          "occurrences": 2
         }
       ]
     },
     "peer_snapshot": {
       "peer_group": "Top matched peer neighborhood",
       "common_strengths": [
+        "Assets",
+        "Cash",
         "OperatingCashFlow",
-        "ResearchAndDevelopment",
-        "Revenues"
+        "ResearchAndDevelopment"
       ],
       "common_pressures": [
-        "NetIncome"
+        "NetIncome",
+        "Revenues"
       ],
       "shared_risk_types": [
         "active_litigation",
-        "customer_churn_risk",
-        "cybersecurity_vulnerability",
+        "china_geopolitical_exposure",
         "foreign_currency_exposure",
+        "inflation_impact",
         "intensifying_competition",
         "interest_rate_sensitivity",
-        "recession_sensitivity"
+        "manufacturing_defect_risk",
+        "recession_sensitivity",
+        "revenue_concentration_risk",
+        "supply_chain_concentration",
+        "talent_retention_risk"
       ],
       "target_differences": [
         "antitrust_exposure",
-        "product_obsolescence"
+        "trade_tariff_risk"
       ]
     },
     "risk_overlap_rows": [
@@ -176,34 +183,33 @@
           "active_litigation",
           "china_geopolitical_exposure",
           "foreign_currency_exposure",
-          "interest_rate_sensitivity",
-          "trade_tariff_risk"
+          "inflation_impact",
+          "intensifying_competition",
+          "interest_rate_sensitivity"
         ]
       },
       {
         "group": "target_only_now",
         "risk_types": [
           "antitrust_exposure",
-          "product_obsolescence"
+          "trade_tariff_risk"
         ]
       },
       {
         "group": "peer_only_now",
         "risk_types": [
-          "content_moderation_liability",
+          "competitive_moat_erosion",
           "customer_churn_risk",
           "cybersecurity_vulnerability",
-          "export_control_risk",
           "government_contract_risk",
-          "inflation_impact",
-          "intensifying_competition",
-          "key_person_dependency",
+          "impairment_charges",
+          "ip_infringement_claim",
           "manufacturing_defect_risk",
-          "negative_operating_cash_flow",
-          "platform_dependency",
+          "market_saturation",
+          "pricing_power_erosion",
           "rd_productivity_risk",
           "recession_sensitivity",
-          "regulatory_investigation",
+          "revenue_concentration_risk",
           "supply_chain_concentration",
           "talent_retention_risk"
         ]
@@ -211,11 +217,51 @@
     ],
     "forward_watchlist": [
       {
-        "watch_risk_type": "talent_retention_risk",
-        "why_relevant": "Peers similar to the target showed talent_retention_risk after the matched year, making it a pattern to monitor.",
+        "watch_risk_type": "trade_tariff_risk",
+        "why_relevant": "trade_tariff_risk is already adjacent to the target risk profile and later reappears in peer future years.",
         "peer_evidence": [
-          "PLTR 2026: Loss of key personnel services could result in decline in sales, delays in product development, and harm to business operations.",
-          "PLTR 2026: negative delta pressure in Cash."
+          "QCOM 2025: Global trade policy changes may negatively impact demand, pricing and costs for products, contributing to inventory uncertainties and potential reserve charges.",
+          "QCOM 2025: negative delta pressure in Assets, Cash, NetIncome.",
+          "INTC 2024: Trade restrictions, tariffs, and export controls could materially affect Intel's operations and financial results."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "cybersecurity_vulnerability",
+        "why_relevant": "Peers similar to the target showed cybersecurity_vulnerability after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "INTC 2024: Cybersecurity threats and data breaches could disrupt operations, damage reputation, and result in significant costs.",
+          "INTC 2024: negative delta pressure in GrossProfit, NetIncome, OperatingCashFlow.",
+          "INTC 2025: Intel identified material weaknesses in cybersecurity controls related to third-party vendor access management during 2024."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "negative_operating_cash_flow",
+        "why_relevant": "Peers similar to the target showed negative_operating_cash_flow after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "QCOM 2024: Income taxes paid exceeded provision in fiscal 2024, negatively impacting net cash provided by operating activities due to $1.0 billion in postponed tax payments and R&D capitalization requirements.",
+          "QCOM 2024: negative delta pressure in Cash.",
+          "QCOM 2025: Cash flows from operations adversely affected by significantly higher cash tax payments due to CAMT requirements and $5.7 billion valuation allowance charge."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "cybersecurity_incident",
+        "why_relevant": "Peers similar to the target showed cybersecurity_incident after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "QCOM 2024: Company has encountered intrusions and attempts to gain unauthorized access to IT systems, and third-party service providers have also encountered intrusions.",
+          "QCOM 2024: negative delta pressure in Cash.",
+          "QCOM 2025: Company has encountered intrusions and unauthorized access attempts to IT systems, along with third-party service provider breaches."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "customer_churn_risk",
+        "why_relevant": "Peers similar to the target showed customer_churn_risk after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "QCOM 2025: Apple expected to increasingly use its own modem products rather than QCOM products, which will have significant negative impact on QCT revenues and cash flows.",
+          "QCOM 2025: negative delta pressure in Assets, Cash, NetIncome."
         ],
         "confidence": "medium"
       }
@@ -223,26 +269,31 @@
     "narrative_sections": [
       {
         "title": "Current Posture",
-        "content": "Apple shows material financial upside in several income and liquidity metrics (positive deltas in Cash, NetIncome, ResearchAndDevelopment and GrossProfit) alongside a moderate decline in OperatingCashFlow (-5.73). The top risks include two high-severity regulatory items: a \u20ac500 million fine and cease-and-desist order from the European Commission (active litigation) and potential antitrust fines up to 10% of worldwide net sales (Article 6(4) Investigation) (AAPL 10-K 2025, Item 3). Medium-severity exposures are concentrated in Greater China sales (down 4% in 2025, Item 7), foreign-currency derivative loss potential (maximum one-day loss estimated at $590 million, Item 7A) and interest-rate sensitivity (1% rate rise estimated to reduce investment fair value by $2.4 billion and increase annual interest expense by $129 million, Item 7A).",
+        "content": "The company is rated Elevated driven by multiple high-severity signals and a single negative operating delta. Top high-severity items include antitrust_exposure (European Commission fine of \nc500 million and cease-and-desist regarding App Store restrictions; AAPL 10-K 2025, Item 3), foreign_currency_exposure (estimated maximum one-day fair-value loss of $590 million at 95% confidence; AAPL 10-K 2025, Item 7A), and interest_rate_sensitivity (a 100-basis-point rise would lower investment fair value by $2.4 billion and raise annual interest expense by $129 million; AAPL 10-K 2025, Item 7A). On the financial side, the profile shows positive deltas in Cash, NetIncome, ResearchAndDevelopment, and GrossProfit, while OperatingCashFlow registers a moderate decline (OperatingCashFlow: moderate_decline, -5.726656180763441). Medium-severity items such as active litigation and trade-tariff risk add additional near-term uncertainty (AAPL 10-K 2025, Item 7).",
         "citations": [
           "AAPL 10-K 2025, Item 3",
-          "AAPL 10-K 2025, Item 7",
-          "AAPL 10-K 2025, Item 7A"
+          "AAPL 10-K 2025, Item 7A",
+          "AAPL 10-K 2025, Item 7"
         ]
       },
       {
         "title": "Peer Comparison",
-        "content": "Against its top matched peer neighborhood, Apple shares common strengths in OperatingCashFlow, ResearchAndDevelopment and Revenues, while NetIncome appears as a common pressure across peers. Several risk types are shared now (for example, active litigation, China geopolitical exposure, foreign-currency exposure, and interest-rate sensitivity), though Apple currently shows target-only flags for antitrust_exposure and product_obsolescence. Peers additionally exhibit a broader set of peer-only pressures (including cybersecurity vulnerability, customer churn, supply-chain concentration and talent risks), underscoring differences in where operational vulnerabilities aggregate across the group.",
+        "content": "Compared with its top matched peer neighborhood, Apple shares a number of strengths and pressures: common strengths include Assets, Cash, OperatingCashFlow and ResearchAndDevelopment, while common pressures center on NetIncome and Revenues. Six risk types are shared now with peers (including active_litigation, foreign_currency_exposure and interest_rate_sensitivity), reflecting industry-wide exposures. Target-only differences observed for the matched year are antitrust_exposure and trade_tariff_risk, which are notable relative to peer-only risk items.",
         "citations": [
-          "AAPL 10-K 2025, Item 3"
+          "AAPL 10-K 2025, Item 3",
+          "AAPL 10-K 2025, Item 7A"
         ]
       },
       {
         "title": "What To Watch Next",
-        "content": "Monitor talent_retention_risk as a pattern emerging among peers after the matched year (forward watchlist confidence: medium). Peer evidence (PLTR 2026) cites loss of key personnel causing sales declines and product delays and also notes negative delta pressure in Cash; treat these peer developments as indicators to watch in subsequent Apple filings rather than forecasts for Apple itself.",
+        "content": "Monitor trade_tariff_risk and cybersecurity-related risks as patterns emerging in peer future years rather than company-specific forecasts: peers (QCOM, INTC) show trade-policy impacts and subsequent negative delta pressure in Assets, Cash and NetIncome (QCOM 2025; INTC 2024). Cybersecurity_vulnerability and cybersecurity_incident signals appeared in peer years with associated negative pressure on GrossProfit, NetIncome and OperatingCashFlow (INTC 2024\u20132025; QCOM 2024\u20132025). Also watch for signs of negative_operating_cash_flow in peers after the matched year (QCOM 2024\u20132025). These items are flagged as watchlist patterns with high (trade_tariff_risk, cybersecurity) or medium (customer_churn_risk) confidence based on the supplied peer evidence.",
         "citations": [
-          "PLTR 2026: Loss of key personnel services could result in decline in sales, delays in product development, and harm to business operations.",
-          "PLTR 2026: negative delta pressure in Cash."
+          "QCOM 2025: Global trade policy changes may negatively impact demand, pricing and costs for products, contributing to inventory uncertainties and potential reserve charges.",
+          "QCOM 2025: negative delta pressure in Assets, Cash, NetIncome.",
+          "INTC 2024: Cybersecurity threats and data breaches could disrupt operations, damage reputation, and result in significant costs.",
+          "INTC 2024: negative delta pressure in GrossProfit, NetIncome, OperatingCashFlow.",
+          "QCOM 2024: Income taxes paid exceeded provision in fiscal 2024, negatively impacting net cash provided by operating activities due to $1.0 billion in postponed tax payments and R&D capitalization requirements.",
+          "QCOM 2024: negative delta pressure in Cash."
         ]
       }
     ],

@@ -1,0 +1,1824 @@
+{
+  "schema_version": "evaluation_batch_v1",
+  "run_name": "eval_20260415T213719Z",
+  "created_at": "2026-04-15T21:37:19.681058+00:00",
+  "results": [
+    {
+      "ticker": "AAPL",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\AAPL\\aapl_comparison_bundle.json",
+      "artifact_hash": "f964f646658eea13d0d3949822ee1ca10e996d01bf456c2ad83a143ee3b384a3",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": 0.1667,
+        "comparative_usefulness": 0.5,
+        "overreach_penalty": 0.4,
+        "overall_score": 0.2389
+      },
+      "warnings": [
+        "PLTR has only 2 curator year(s) from 2025 onward."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "Apple Inc. is rated Elevated relative to its matched peer neighborhood.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_growth (6.425511782832739)",
+            "NetIncome: moderate_growth (19.495177946573357)",
+            "Cash: strong_growth (20.008015228934976)"
+          ]
+        },
+        {
+          "claim": "The profile identifies four high-severity risk factors and one negative financial delta.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Assets: stable (-1.5724149268453065)",
+            "LongTermDebt: insufficient_data (-6.190643686246922)",
+            "OperatingCashFlow: moderate_decline (-5.726656180763441)"
+          ]
+        },
+        {
+          "claim": "Antitrust exposure and trade-tariff risk are distinct near-term differentiators versus peers.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Greater China net sales decreased during 2025 compared to 2024 primarily due to lower iPhone sales.",
+            "Weakness in foreign currencies relative to the U.S. dollar had an unfavorable year-over-year impact on Americas net sales during 2025."
+          ]
+        },
+        {
+          "claim": "Current analysis identifies 4 high-severity risk factors and 1 negative financial delta.",
+          "source": "posture",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "LongTermDebt: insufficient_data (-6.190643686246922)",
+            "OperatingCashFlow: moderate_decline (-5.726656180763441)",
+            "Assets: stable (-1.5724149268453065)"
+          ]
+        },
+        {
+          "claim": "The company maintains 5 metrics with positive delta labels, providing a financial buffer.",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Revenues: moderate_growth (6.425511782832739)",
+            "NetIncome: moderate_growth (19.495177946573357)",
+            "Cash: strong_growth (20.008015228934976)"
+          ]
+        },
+        {
+          "claim": "Six risk types are currently shared with matched peers.",
+          "source": "posture",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_growth (6.425511782832739)",
+            "NetIncome: moderate_growth (19.495177946573357)",
+            "Cash: strong_growth (20.008015228934976)"
+          ]
+        },
+        {
+          "claim": "Antitrust exposure includes a European Commission fine of approximately \u20ac500 million and a cease-and-desist regarding App Store restrictions.",
+          "source": "section:Current Posture",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_growth (6.425511782832739)",
+            "NetIncome: moderate_growth (19.495177946573357)",
+            "Cash: strong_growth (20.008015228934976)"
+          ]
+        },
+        {
+          "claim": "OperatingCashFlow registers a moderate decline of -5.726656180763441.",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "OperatingCashFlow: moderate_decline (-5.726656180763441)"
+          ]
+        },
+        {
+          "claim": "Apple shares six risk types with peers, including active_litigation, foreign_currency_exposure and interest_rate_sensitivity.",
+          "source": "section:Peer Comparison",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Weakness in foreign currencies relative to the U.S. dollar had an unfavorable year-over-year impact on Americas net sales during 2025."
+          ]
+        },
+        {
+          "claim": "Antitrust_exposure and trade_tariff_risk are target-only differences relative to matched peers.",
+          "source": "section:Peer Comparison",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_growth (6.425511782832739)",
+            "NetIncome: moderate_growth (19.495177946573357)",
+            "Cash: strong_growth (20.008015228934976)"
+          ]
+        },
+        {
+          "claim": "Trade_tariff_risk and cybersecurity-related risks are flagged as high-confidence watchlist patterns based on peer evidence.",
+          "source": "section:What To Watch Next",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_growth (6.425511782832739)",
+            "NetIncome: moderate_growth (19.495177946573357)",
+            "Cash: strong_growth (20.008015228934976)"
+          ]
+        },
+        {
+          "claim": "Peer companies (QCOM, INTC) exhibit cybersecurity signals associated with negative pressure on GrossProfit, NetIncome and OperatingCashFlow.",
+          "source": "section:What To Watch Next",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "NetIncome: moderate_growth (19.495177946573357)",
+            "GrossProfit: moderate_growth (8.035066940442654)",
+            "OperatingCashFlow: moderate_decline (-5.726656180763441)"
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "Apple Inc. is rated Elevated relative to its matched peer neighborhood.",
+            "source": "summary"
+          },
+          {
+            "claim": "The profile identifies four high-severity risk factors and one negative financial delta.",
+            "source": "summary"
+          },
+          {
+            "claim": "Antitrust exposure and trade-tariff risk are distinct near-term differentiators versus peers.",
+            "source": "summary"
+          },
+          {
+            "claim": "Current analysis identifies 4 high-severity risk factors and 1 negative financial delta.",
+            "source": "posture"
+          },
+          {
+            "claim": "The company maintains 5 metrics with positive delta labels, providing a financial buffer.",
+            "source": "posture"
+          },
+          {
+            "claim": "Six risk types are currently shared with matched peers.",
+            "source": "posture"
+          },
+          {
+            "claim": "Antitrust exposure includes a European Commission fine of approximately \u20ac500 million and a cease-and-desist regarding App Store restrictions.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "OperatingCashFlow registers a moderate decline of -5.726656180763441.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "Apple shares six risk types with peers, including active_litigation, foreign_currency_exposure and interest_rate_sensitivity.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Antitrust_exposure and trade_tariff_risk are target-only differences relative to matched peers.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Trade_tariff_risk and cybersecurity-related risks are flagged as high-confidence watchlist patterns based on peer evidence.",
+            "source": "section:What To Watch Next"
+          },
+          {
+            "claim": "Peer companies (QCOM, INTC) exhibit cybersecurity signals associated with negative pressure on GrossProfit, NetIncome and OperatingCashFlow.",
+            "source": "section:What To Watch Next"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "partial",
+          "overreach_flags": [
+            "Inconsistent count: report text states 'Six risk types are shared with peers' but shared_risk_types array lists 11 items.",
+            "Unsupported severity claims: 'four high-severity risk factors' are asserted but not enumerated or evidenced in the report.",
+            "Unsupported financial claim: 'one material negative financial delta' is asserted but not specified or evidenced; peer evidence shows multiple negative deltas.",
+            "Differentiator unsupported: 'antitrust_exposure' is flagged as a distinct near-term differentiator without supporting peer evidence in the provided peer_evidence.",
+            "Ambiguous offsets: claim that risks are 'partially offset by several positive financial deltas' lacks identification or magnitude of those positive deltas.",
+            "Redundant/overlapping watchlist items: 'cybersecurity_vulnerability' and 'cybersecurity_incident' are treated as separate high\u2011confidence items despite overlapping scope and similar peer citations.",
+            "Repetition in peer evidence: multiple near-duplicate peer_evidence lines reduce clarity about unique supporting incidents and their timing.",
+            "Comparative posture claim ('elevated posture relative to its matched peer neighborhood') is not supported by quantitative benchmarking or clear comparative metrics."
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "AMD",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\AMD\\amd_comparison_bundle.json",
+      "artifact_hash": "54a9064ac2dd067b3069ee7a8747c5776ab44b5623e13e16517dea92b11e7979",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": 0.5417,
+        "comparative_usefulness": 0.5,
+        "overreach_penalty": 0.25,
+        "overall_score": 0.5139
+      },
+      "warnings": [
+        "BYND has only 1 curator year(s) from 2026 onward."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "AMD is labeled Stable / Strong relative to matched peers.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "Revenues: strong_growth (34.33779329067288)",
+            "NetIncome: strong_growth (164.16819012797075)",
+            "Cash: strong_growth (46.263533139688406)"
+          ]
+        },
+        {
+          "claim": "AMD shows multiple positive financial deltas and no negative financial deltas.",
+          "source": "summary",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Revenues: strong_growth (34.33779329067288)",
+            "NetIncome: strong_growth (164.16819012797075)",
+            "Cash: strong_growth (46.263533139688406)"
+          ]
+        },
+        {
+          "claim": "AMD discloses one high-severity risk: export_control_risk.",
+          "source": "summary",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China."
+          ]
+        },
+        {
+          "claim": "Current analysis identifies 1 high-severity risk factor and 0 negative financial deltas.",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China.",
+            "Embedded net revenue of $3.5 billion in 2025 decreased by 3% compared to $3.6 billion in 2024 as certain end market demand remained mixed."
+          ]
+        },
+        {
+          "claim": "The company maintains 7 metrics with positive delta labels.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Revenues: strong_growth (34.33779329067288)",
+            "NetIncome: strong_growth (164.16819012797075)",
+            "Cash: strong_growth (46.263533139688406)"
+          ]
+        },
+        {
+          "claim": "AMD shares 2 risk types with matched peers, indicating broader industry trends.",
+          "source": "posture",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China.",
+            "Embedded net revenue of $3.5 billion in 2025 decreased by 3% compared to $3.6 billion in 2024 as certain end market demand remained mixed."
+          ]
+        },
+        {
+          "claim": "Materially positive financial deltas include notably strong growth in NetIncome, OperatingCashFlow, Cash and GrossProfit.",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "NetIncome: strong_growth (164.16819012797075)",
+            "OperatingCashFlow: strong_growth (153.50213745478462)",
+            "Cash: strong_growth (46.263533139688406)"
+          ]
+        },
+        {
+          "claim": "High-severity operational risk: export control impacts tied to approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPUs under new U.S. export restrictions.",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China."
+          ]
+        },
+        {
+          "claim": "AMD shares industry-level risks including export_control_risk and impairment_charges with peers.",
+          "source": "section:Peer Comparison",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China."
+          ]
+        },
+        {
+          "claim": "Peers show pressure across Assets, GrossProfit, NetIncome, OperatingCashFlow and Revenues while AMD shows strengths in Cash and ResearchAndDevelopment.",
+          "source": "section:Peer Comparison",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: strong_growth (34.33779329067288)",
+            "NetIncome: strong_growth (164.16819012797075)",
+            "Cash: strong_growth (46.263533139688406)"
+          ]
+        },
+        {
+          "claim": "Monitor peer-derived watchlist items: cybersecurity_vulnerability, internal_controls_weakness, key_person_dependency, working_capital_deficit and customer_adoption_lag.",
+          "source": "section:What To Watch Next",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "None of the provided snippets mention cybersecurity_vulnerability, internal_controls_weakness, key_person_dependency, working_capital_deficit, or customer_adoption_lag; snippets only report financial growth metrics and inventory/export-related charges."
+          ]
+        },
+        {
+          "claim": "The watchlist items are presented as patterns to watch with stated confidences (mostly high; customer_adoption_lag medium) rather than forecasts.",
+          "source": "section:What To Watch Next",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Revenues: strong_growth (34.33779329067288)",
+            "NetIncome: strong_growth (164.16819012797075)",
+            "Cash: strong_growth (46.263533139688406)"
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "AMD is labeled Stable / Strong relative to matched peers.",
+            "source": "summary"
+          },
+          {
+            "claim": "AMD shows multiple positive financial deltas and no negative financial deltas.",
+            "source": "summary"
+          },
+          {
+            "claim": "AMD discloses one high-severity risk: export_control_risk.",
+            "source": "summary"
+          },
+          {
+            "claim": "Current analysis identifies 1 high-severity risk factor and 0 negative financial deltas.",
+            "source": "posture"
+          },
+          {
+            "claim": "The company maintains 7 metrics with positive delta labels.",
+            "source": "posture"
+          },
+          {
+            "claim": "AMD shares 2 risk types with matched peers, indicating broader industry trends.",
+            "source": "posture"
+          },
+          {
+            "claim": "Materially positive financial deltas include notably strong growth in NetIncome, OperatingCashFlow, Cash and GrossProfit.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "High-severity operational risk: export control impacts tied to approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPUs under new U.S. export restrictions.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "AMD shares industry-level risks including export_control_risk and impairment_charges with peers.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Peers show pressure across Assets, GrossProfit, NetIncome, OperatingCashFlow and Revenues while AMD shows strengths in Cash and ResearchAndDevelopment.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Monitor peer-derived watchlist items: cybersecurity_vulnerability, internal_controls_weakness, key_person_dependency, working_capital_deficit and customer_adoption_lag.",
+            "source": "section:What To Watch Next"
+          },
+          {
+            "claim": "The watchlist items are presented as patterns to watch with stated confidences (mostly high; customer_adoption_lag medium) rather than forecasts.",
+            "source": "section:What To Watch Next"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "partial",
+          "overreach_flags": [
+            "Claim of 'multiple positive financial deltas and no negative financial deltas' is unsubstantiated: no supporting financial metrics, deltas, or methodology are provided.",
+            "High-severity designation for 'export_control_risk' lacks cited evidence or explanation from the 2026 10-K to justify severity.",
+            "Peer-derived watchlist items are presented without demonstrating relevance or transferability to AMD specifically (insufficient linkage between peer incidents and target exposure).",
+            "peer_evidence contains out-of-context items ('Cash', 'ResearchAndDevelopment') that do not constitute risk evidence as presented.",
+            "Shared risk types are enumerated but not mapped to specific AMD disclosures, filings, or quantified materiality in the report."
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "BYND",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\BYND\\bynd_comparison_bundle.json",
+      "artifact_hash": "16dc8ed8153702bc6070240e92c60ff67d232a471f37761a3ef1ce00983c5e1e",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": 0.5,
+        "comparative_usefulness": 0.5,
+        "overreach_penalty": 0.35,
+        "overall_score": 0.4
+      },
+      "warnings": [
+        "PLTR has only 1 curator year(s) from 2026 onward."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "BYND presents an elevated posture relative to its matched peer neighborhood.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_decline (-15.607290549854497)",
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "GrossProfit: severe_decline (-81.65467625899281)"
+          ]
+        },
+        {
+          "claim": "Analysis flags zero high-severity risk factors for BYND.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "GrossProfit: severe_decline (-81.65467625899281)",
+            "Inflation is having an adverse effect on end customers' ability to purchase products, resulting in decreased sales."
+          ]
+        },
+        {
+          "claim": "Trade-tariff exposure is currently a target-only risk for BYND and is not shared by peers.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_decline (-15.607290549854497)",
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "Cash: strong_growth (54.56750814949587)"
+          ]
+        },
+        {
+          "claim": "Analysis identifies five negative financial deltas and two positive deltas for BYND.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Revenues: moderate_decline (-15.607290549854497)",
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "Assets: moderate_decline (-9.348964093489641)"
+          ]
+        },
+        {
+          "claim": "Positive deltas are concentrated in Cash (+54.57) and OperatingCashFlow (+46.68).",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Cash: strong_growth (54.56750814949587)",
+            "OperatingCashFlow: strong_growth (46.67543770873394)"
+          ]
+        },
+        {
+          "claim": "Negative deltas include severe declines in NetIncome (\u2212236.62) and GrossProfit (\u221281.65) and moderate declines in ResearchAndDevelopment (\u221217.48) and Revenues (\u221215.61).",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Revenues: moderate_decline (-15.607290549854497)",
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "ResearchAndDevelopment: moderate_decline (-17.47779751332149)"
+          ]
+        },
+        {
+          "claim": "BYND's Cash increased by +54.57 and Operating Cash Flow increased by +46.68, providing liquidity support.",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Cash: strong_growth (54.56750814949587)",
+            "OperatingCashFlow: strong_growth (46.67543770873394)"
+          ]
+        },
+        {
+          "claim": "Net Income declined by 236.62 and Gross Profit declined by 81.65, contributing to material operating pressure.",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "GrossProfit: severe_decline (-81.65467625899281)",
+            "Revenues: moderate_decline (-15.607290549854497)"
+          ]
+        },
+        {
+          "claim": "BYND shares several risk types with peers, including foreign currency exposure, inflation impact, and supply-chain concentration.",
+          "source": "section:Peer Comparison",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Inflation is having an adverse effect on end customers' ability to purchase products, resulting in decreased sales.",
+            "A 5% or 10% adverse change to foreign currency exchange rates would result in a loss of approximately $5.7 million or $11.4 million respectively."
+          ]
+        },
+        {
+          "claim": "Peers exhibit additional pressures such as cybersecurity, customer churn, impairment, and litigation risks that are not currently flagged for BYND.",
+          "source": "section:Peer Comparison",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_decline (-15.607290549854497)",
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "GrossProfit: severe_decline (-81.65467625899281)"
+          ]
+        },
+        {
+          "claim": "High-confidence peer-driven watchlist items to monitor include failed acquisitions, customer churn risk, and cybersecurity vulnerability.",
+          "source": "section:What To Watch Next",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: moderate_decline (-15.607290549854497)",
+            "NetIncome: severe_decline (-236.61883967560823)",
+            "Cash: strong_growth (54.56750814949587)"
+          ]
+        },
+        {
+          "claim": "Medium-confidence watchlist items include intensifying competition and R&D productivity risk.",
+          "source": "section:What To Watch Next",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "ResearchAndDevelopment: moderate_decline (-17.47779751332149)"
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "BYND presents an elevated posture relative to its matched peer neighborhood.",
+            "source": "summary"
+          },
+          {
+            "claim": "Analysis flags zero high-severity risk factors for BYND.",
+            "source": "summary"
+          },
+          {
+            "claim": "Trade-tariff exposure is currently a target-only risk for BYND and is not shared by peers.",
+            "source": "summary"
+          },
+          {
+            "claim": "Analysis identifies five negative financial deltas and two positive deltas for BYND.",
+            "source": "posture"
+          },
+          {
+            "claim": "Positive deltas are concentrated in Cash (+54.57) and OperatingCashFlow (+46.68).",
+            "source": "posture"
+          },
+          {
+            "claim": "Negative deltas include severe declines in NetIncome (\u2212236.62) and GrossProfit (\u221281.65) and moderate declines in ResearchAndDevelopment (\u221217.48) and Revenues (\u221215.61).",
+            "source": "posture"
+          },
+          {
+            "claim": "BYND's Cash increased by +54.57 and Operating Cash Flow increased by +46.68, providing liquidity support.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "Net Income declined by 236.62 and Gross Profit declined by 81.65, contributing to material operating pressure.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "BYND shares several risk types with peers, including foreign currency exposure, inflation impact, and supply-chain concentration.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Peers exhibit additional pressures such as cybersecurity, customer churn, impairment, and litigation risks that are not currently flagged for BYND.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "High-confidence peer-driven watchlist items to monitor include failed acquisitions, customer churn risk, and cybersecurity vulnerability.",
+            "source": "section:What To Watch Next"
+          },
+          {
+            "claim": "Medium-confidence watchlist items include intensifying competition and R&D productivity risk.",
+            "source": "section:What To Watch Next"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "partial",
+          "overreach_flags": [
+            "industry_mismatch_in_peer_evidence: key peer examples (AMD, ADBE) are from semiconductor and software industries, limiting direct applicability to BYND (consumer food) without explicit mapping.",
+            "unsupported_zero_high_severity_claim: statement of 'zero high-severity risk factors' is unsubstantiated by provided evidence or a defined severity methodology.",
+            "unique_trade_tariff_claim_unsubstantiated: assertion that trade-tariff exposure is 'currently unique to the target' lacks peer-level evidence showing peers do not share this exposure.",
+            "ambiguous_financial_delta_claim: 'material negative financial deltas offset by sizable cash and operating cash flow growth' is presented without quantitative figures or reconciliations and conflicts with peer entries noting negative cash deltas.",
+            "inconsistent_and_duplicated_peer_evidence: peer_evidence contains duplicated/conflicting entries (e.g., ADBE 2025 and ADBE 2026 referencing the same 2024 termination fee) and inconsistent year labeling.",
+            "irrelevant_or_unclear_evidence_token: isolated entry 'Assets' in peer_evidence is unexplained and appears to be a stray/garbage token.",
+            "overbroad_watchlist_inference: watchlist items extrapolate peer-specific incidents (failed acquisitions, cybersecurity events, AMD revenue swings) to BYND without justification of comparability or mechanism linking those events to the target."
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "LYFT",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\LYFT\\lyft_comparison_bundle.json",
+      "artifact_hash": "277d277186f5a9a1f815eb7bf49fb03e4249fb6205735f41398cea09ff370d19",
+      "component_scores": {
+        "deterministic_consistency": 0.8333,
+        "evidence_coverage": 1.0,
+        "claim_support": 0.5,
+        "comparative_usefulness": 0.5,
+        "overreach_penalty": 0.3,
+        "overall_score": 0.4037
+      },
+      "warnings": [
+        "QCOM has only 1 curator year(s) from 2025 onward.",
+        "META has only 2 curator year(s) from 2024 onward.",
+        "Elevated posture is not supported by the current deterministic facts."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "Lyft is designated Elevated relative to its matched peer neighborhood.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Revenues: strong_growth (31.39324959862294)",
+            "NetIncome: severe_decline (-106.69370004701457)",
+            "Cash: strong_growth (35.92295574967779)"
+          ]
+        },
+        {
+          "claim": "No high-severity risk factors were identified for Lyft.",
+          "source": "summary",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-106.69370004701457)",
+            "OperatingCashFlow: severe_decline (-964.96335504886)",
+            "ResearchAndDevelopment: severe_decline (-28.574255288530725)"
+          ]
+        },
+        {
+          "claim": "Lyft has three material negative financial deltas: OperatingCashFlow, NetIncome, and ResearchAndDevelopment.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-106.69370004701457)",
+            "OperatingCashFlow: severe_decline (-964.96335504886)",
+            "ResearchAndDevelopment: severe_decline (-28.574255288530725)"
+          ]
+        },
+        {
+          "claim": "Three positive financial deltas provide a buffer: Cash (35.92% strong growth), Revenues (31.39% strong growth), and Assets (19.07% moderate growth).",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Revenues: strong_growth (31.39324959862294)",
+            "Cash: strong_growth (35.92295574967779)",
+            "Assets: moderate_growth (19.07340830370229)"
+          ]
+        },
+        {
+          "claim": "Negative deltas in OperatingCashFlow, NetIncome, and R&D drive concern despite no high-severity risk factors.",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-106.69370004701457)",
+            "OperatingCashFlow: severe_decline (-964.96335504886)",
+            "ResearchAndDevelopment: severe_decline (-28.574255288530725)"
+          ]
+        },
+        {
+          "claim": "Target-specific risks include a failed acquisition and intensifying competition.",
+          "source": "posture",
+          "label": "unsupported",
+          "evidence_snippets": []
+        },
+        {
+          "claim": "Lyft reports severe negative deltas in OperatingCashFlow (-964.96335504886), NetIncome (-106.69370004701457), and ResearchAndDevelopment (-28.574255288530725).",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-106.69370004701457)",
+            "OperatingCashFlow: severe_decline (-964.96335504886)",
+            "ResearchAndDevelopment: severe_decline (-28.574255288530725)"
+          ]
+        },
+        {
+          "claim": "Lyft reported cash used in operations of $98.2M for the year ended Dec 31, 2023.",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Cash used in operating activities was $98.2 million for the year ended December 31, 2023 consisting of net loss of $340.3 million partially offset by working capital changes."
+          ]
+        },
+        {
+          "claim": "Lyft and matched peers share multiple risk types, including active_litigation, customer_churn_risk, foreign_currency_exposure, inflation_impact, interest_rate_sensitivity, monetization_uncertainty, pricing_power_erosion, and supply_chain_concentration.",
+          "source": "section:Peer Comparison",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Company may record a loss from transactions when upfront quoted fares to riders are less than amounts committed to pay drivers.",
+            "NetIncome: severe_decline (-106.69370004701457)",
+            "OperatingCashFlow: severe_decline (-964.96335504886)"
+          ]
+        },
+        {
+          "claim": "Lyft exhibits target-only risks distinct from peers: failed_acquisition, intensifying_competition, and rd_productivity_risk.",
+          "source": "section:Peer Comparison",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "ResearchAndDevelopment: severe_decline (-28.574255288530725)",
+            "Research and development expenses decreased $158.8 million or 29% in 2024 due to headcount reductions and restructuring events."
+          ]
+        },
+        {
+          "claim": "Watch items observed in peers to monitor include cybersecurity_vulnerability, negative_operating_cash_flow, recession_sensitivity, active_litigation, and infrastructure_single_point_failure.",
+          "source": "section:What To Watch Next",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "OperatingCashFlow: severe_decline (-964.96335504886)",
+            "Cash used in operating activities was $98.2 million for the year ended December 31, 2023 consisting of net loss of $340.3 million partially offset by working capital changes."
+          ]
+        },
+        {
+          "claim": "Each watch item carries medium confidence and should inform ongoing surveillance of liquidity, operational resilience, and legal exposures.",
+          "source": "section:What To Watch Next",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-106.69370004701457)",
+            "OperatingCashFlow: severe_decline (-964.96335504886)",
+            "ResearchAndDevelopment: severe_decline (-28.574255288530725)"
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "Lyft is designated Elevated relative to its matched peer neighborhood.",
+            "source": "summary"
+          },
+          {
+            "claim": "No high-severity risk factors were identified for Lyft.",
+            "source": "summary"
+          },
+          {
+            "claim": "Lyft has three material negative financial deltas: OperatingCashFlow, NetIncome, and ResearchAndDevelopment.",
+            "source": "summary"
+          },
+          {
+            "claim": "Three positive financial deltas provide a buffer: Cash (35.92% strong growth), Revenues (31.39% strong growth), and Assets (19.07% moderate growth).",
+            "source": "posture"
+          },
+          {
+            "claim": "Negative deltas in OperatingCashFlow, NetIncome, and R&D drive concern despite no high-severity risk factors.",
+            "source": "posture"
+          },
+          {
+            "claim": "Target-specific risks include a failed acquisition and intensifying competition.",
+            "source": "posture"
+          },
+          {
+            "claim": "Lyft reports severe negative deltas in OperatingCashFlow (-964.96335504886), NetIncome (-106.69370004701457), and ResearchAndDevelopment (-28.574255288530725).",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "Lyft reported cash used in operations of $98.2M for the year ended Dec 31, 2023.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "Lyft and matched peers share multiple risk types, including active_litigation, customer_churn_risk, foreign_currency_exposure, inflation_impact, interest_rate_sensitivity, monetization_uncertainty, pricing_power_erosion, and supply_chain_concentration.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Lyft exhibits target-only risks distinct from peers: failed_acquisition, intensifying_competition, and rd_productivity_risk.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Watch items observed in peers to monitor include cybersecurity_vulnerability, negative_operating_cash_flow, recession_sensitivity, active_litigation, and infrastructure_single_point_failure.",
+            "source": "section:What To Watch Next"
+          },
+          {
+            "claim": "Each watch item carries medium confidence and should inform ongoing surveillance of liquidity, operational resilience, and legal exposures.",
+            "source": "section:What To Watch Next"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "partial",
+          "overreach_flags": [
+            "assertion_without_quantification",
+            "undefined_severity_scale",
+            "ambiguous_financial_deltas",
+            "insufficient_target_specific_evidence",
+            "narrow_peer_sample",
+            "peer_evidence_format_inconsistency"
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "SNAP",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\SNAP\\snap_comparison_bundle.json",
+      "artifact_hash": "3ac9edb9dc46dd62ce44d8972ebf315c512272bebbbd87c7f26e6c72b6fb922c",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": 0.5833,
+        "comparative_usefulness": 0.5,
+        "overreach_penalty": 0.3,
+        "overall_score": 0.4778
+      },
+      "warnings": [
+        "CRM has only 1 curator year(s) from 2026 onward."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "Snap exhibits strong operating cash flow.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "OperatingCashFlow: strong_growth (58.69449550159621)"
+          ]
+        },
+        {
+          "claim": "Snap's revenues show moderate growth.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "Revenues: moderate_growth (10.63248405267281)"
+          ]
+        },
+        {
+          "claim": "Snap experienced a severe decline in net income (-34.01).",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-34.01398561316023)",
+            "Interest expense increased $100.4 million (466%) to $122 million in 2025 compared to 2024.",
+            "Platform policy changes and restrictions affected targeting capabilities, resulting in reduced advertising revenue especially in North America."
+          ]
+        },
+        {
+          "claim": "Analysis identifies one high-severity risk for Snap: interest_rate_sensitivity.",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Interest expense increased $100.4 million (466%) to $122 million in 2025 compared to 2024.",
+            "NetIncome: severe_decline (-34.01398561316023)"
+          ]
+        },
+        {
+          "claim": "Three positive financial deltas\u2014OperatingCashFlow (+58.69), Revenues (+10.63) and ResearchAndDevelopment (+6.02)\u2014provide a financial buffer.",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "OperatingCashFlow: strong_growth (58.69449550159621)",
+            "Revenues: moderate_growth (10.63248405267281)",
+            "ResearchAndDevelopment: moderate_growth (6.024780100255367)"
+          ]
+        },
+        {
+          "claim": "Snap shares six risk types with peers, indicating industry-level exposure.",
+          "source": "posture",
+          "label": "unsupported",
+          "evidence_snippets": [
+            "Interest expense increased $100.4 million (466%) to $122 million in 2025 compared to 2024.",
+            "Platform policy changes and restrictions affected targeting capabilities, resulting in reduced advertising revenue especially in North America.",
+            "Increased competition for advertising dollars has caused demand growth on the advertising platform to slow."
+          ]
+        },
+        {
+          "claim": "Interest expense increased to $122 million in 2025 (up $100.4M, +466% versus 2024).",
+          "source": "section:Current Posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Interest expense increased $100.4 million (466%) to $122 million in 2025 compared to 2024."
+          ]
+        },
+        {
+          "claim": "Medium-severity exposures for Snap include active litigation, content moderation liability, foreign currency exposure, and intensifying competition.",
+          "source": "section:Current Posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Platform policy changes and restrictions affected targeting capabilities, resulting in reduced advertising revenue especially in North America.",
+            "Increased competition for advertising dollars has caused demand growth on the advertising platform to slow."
+          ]
+        },
+        {
+          "claim": "Snap and its matched peers share six specific risk types: cybersecurity_vulnerability, foreign_currency_exposure, interest_rate_sensitivity, IP infringement, scaling risk, and third_party_vendor_dependency.",
+          "source": "section:Peer Comparison",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Interest expense increased $100.4 million (466%) to $122 million in 2025 compared to 2024."
+          ]
+        },
+        {
+          "claim": "Distinctive risks for Snap versus peers include content_moderation_liability, pricing_power_erosion, and regulatory_investigation.",
+          "source": "section:Peer Comparison",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "Platform policy changes and restrictions affected targeting capabilities, resulting in reduced advertising revenue especially in North America.",
+            "Increased competition for advertising dollars has caused demand growth on the advertising platform to slow."
+          ]
+        },
+        {
+          "claim": "Failed acquisition is a high-confidence watch item based on peer evidence (e.g., Adobe's $1B termination fee).",
+          "source": "section:What To Watch Next",
+          "label": "unsupported",
+          "evidence_snippets": []
+        },
+        {
+          "claim": "Monetization uncertainty, recession sensitivity, customer churn risk, and impairment charges are medium-confidence potential emerging pressures to monitor.",
+          "source": "section:What To Watch Next",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "NetIncome: severe_decline (-34.01398561316023)",
+            "Interest expense increased $100.4 million (466%) to $122 million in 2025 compared to 2024.",
+            "Platform policy changes and restrictions affected targeting capabilities, resulting in reduced advertising revenue especially in North America."
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "Snap exhibits strong operating cash flow.",
+            "source": "summary"
+          },
+          {
+            "claim": "Snap's revenues show moderate growth.",
+            "source": "summary"
+          },
+          {
+            "claim": "Snap experienced a severe decline in net income (-34.01).",
+            "source": "summary"
+          },
+          {
+            "claim": "Analysis identifies one high-severity risk for Snap: interest_rate_sensitivity.",
+            "source": "posture"
+          },
+          {
+            "claim": "Three positive financial deltas\u2014OperatingCashFlow (+58.69), Revenues (+10.63) and ResearchAndDevelopment (+6.02)\u2014provide a financial buffer.",
+            "source": "posture"
+          },
+          {
+            "claim": "Snap shares six risk types with peers, indicating industry-level exposure.",
+            "source": "posture"
+          },
+          {
+            "claim": "Interest expense increased to $122 million in 2025 (up $100.4M, +466% versus 2024).",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "Medium-severity exposures for Snap include active litigation, content moderation liability, foreign currency exposure, and intensifying competition.",
+            "source": "section:Current Posture"
+          },
+          {
+            "claim": "Snap and its matched peers share six specific risk types: cybersecurity_vulnerability, foreign_currency_exposure, interest_rate_sensitivity, IP infringement, scaling risk, and third_party_vendor_dependency.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Distinctive risks for Snap versus peers include content_moderation_liability, pricing_power_erosion, and regulatory_investigation.",
+            "source": "section:Peer Comparison"
+          },
+          {
+            "claim": "Failed acquisition is a high-confidence watch item based on peer evidence (e.g., Adobe's $1B termination fee).",
+            "source": "section:What To Watch Next"
+          },
+          {
+            "claim": "Monetization uncertainty, recession sensitivity, customer churn risk, and impairment charges are medium-confidence potential emerging pressures to monitor.",
+            "source": "section:What To Watch Next"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "partial",
+          "overreach_flags": [
+            "industry_mismatch_in_peer_evidence: several watchlist risks (e.g., failed_acquisition, monetization_uncertainty) are supported primarily by Adobe and Uber examples which have materially different business models from Snap, weakening the analogies.",
+            "unsupported_quantitative_claim: the highlighted high-severity interest-rate sensitivity (interest expense rising to $122M in 2025) is presented without disclosed modeling or source, so severity attribution may be overstated.",
+            "duplicated_and_inconsistent_peer_entries: peer_evidence contains repeated entries (ADBE 2025/2026 duplication) and redundant lines (Assets, GrossProfit) that reduce credibility and traceability of the evidence base.",
+            "ambiguous_evidence_labels: standalone tokens like 'Assets' and 'GrossProfit' in peer_evidence lack context (company, year, direction), making them unusable as supporting evidence.",
+            "causal_overreach_from_limited_samples: the report infers recurring risk patterns from a small number of peer incidents (single-company termination fee, isolated impairment), which risks overgeneralization.",
+            "insufficient_linkage_between_peer_evidence_and_target: several watchlist items assert relevance to Snap but do not explain mechanistic ties (how the cited peer outcomes map to Snap-specific exposures such as content moderation or pricing power)."
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\AAPL\\aapl_comparison_bundle.json",
+      "artifact_hash": "78b001ce7366ad0464dbe9f94ceacfa1ef0ac25031d731445d2a123744788e4d",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": 1.0,
+        "comparative_usefulness": 1.0,
+        "overreach_penalty": 0.25,
+        "overall_score": 0.6759
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "Apple FY2025 revenue was $416,161M, materially higher than peers.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)",
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)",
+            "=== META (Meta Platforms, Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $117,929M\n  FY2022: $116,609M ($-1,320.0M YoY change)\n  FY2023: $134,902M (+$18,293.0M YoY change)\n  FY2024: $164,501M (+$29,599.0M YoY change)\n  FY2025: $200,966M (+$36,465.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Apple FY2025 net income was $112,010M, materially higher than peers.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)\n\nNetIncome:\n  FY2021: $94,680M\n  FY2022: $99,803M (+$5,123.0M YoY change)\n  FY2023: $96,995M ($-2,808.0M YoY change)\n  FY2024: $93,736M ($-3,259.0M YoY change)\n  FY2025: $112,010M (+$18,274.0M YoY change)\n\nCash:\n  FY2021: $34,940M\n  FY2022: $23,646M ($-11,294.0M YoY change)\n  FY2023: $29,965M (+$6,319.0M YoY change)\n  FY2024: $29,943M ($-22.0M YoY change)\n  FY2025: $35,934M (+$5,991.0M YoY change)\n\nAssets:\n  FY2021: $351,002M\n  FY2022: $352,755M (+$1,753.0M YoY change)\n  FY2023: $352,583M ($-172.0M YoY change)\n  FY2024: $364,980M (+$12,397.0M YoY change)\n  FY2025: $359,241M ($-5,739.0M YoY change)\n\nLongTermDebt:\n  FY2021: $109,106M\n  FY2022: $110,087M (+$981.0M YoY change)\n  FY2023: $105,103M ($-4,984.0M YoY change)\n  FY2024: $96,662M ($-8,441.0M YoY change)\n  FY2025: $90,678M ($-5,984.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $104,038M\n  FY2022: $122,151M (+$18,113.0M YoY change)\n  FY2023: $110,543M ($-11,608.0M YoY change)\n  FY2024: $118,254M (+$7,711.0M YoY change)\n  FY2025: $111,482M ($-6,772.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $21,914M\n  FY2022: $26,251M (+$4,337.0M YoY change)\n  FY2023: $29,915M (+$3,664.0M YoY change)\n  FY2024: $31,370M (+$1,455.0M YoY change)\n  FY2025: $34,550M (+$3,180.0M YoY change)\n\nGrossProfit:\n  FY2021: $152,836M\n  FY2022: $170,782M (+$17,946.0M YoY change)\n  FY2023: $169,148M ($-1,634.0M YoY change)\n  FY2024: $180,683M (+$11,535.0M YoY change)\n  FY2025: $195,201M (+$14,518.0M YoY change)",
+            "=== META (Meta Platforms, Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $117,929M\n  FY2022: $116,609M ($-1,320.0M YoY change)\n  FY2023: $134,902M (+$18,293.0M YoY change)\n  FY2024: $164,501M (+$29,599.0M YoY change)\n  FY2025: $200,966M (+$36,465.0M YoY change)\n\nNetIncome:\n  FY2021: $39,370M\n  FY2022: $23,200M ($-16,170.0M YoY change)\n  FY2023: $39,098M (+$15,898.0M YoY change)\n  FY2024: $62,360M (+$23,262.0M YoY change)\n  FY2025: $60,458M ($-1,902.0M YoY change)\n\nCash:\n  FY2021: $16,601M\n  FY2022: $14,681M ($-1,920.0M YoY change)\n  FY2023: $41,862M (+$27,181.0M YoY change)\n  FY2024: $43,889M (+$2,027.0M YoY change)\n  FY2025: $35,873M ($-8,016.0M YoY change)\n\nAssets:\n  FY2021: $165,987M\n  FY2022: $185,727M (+$19,740.0M YoY change)\n  FY2023: $229,623M (+$43,896.0M YoY change)\n  FY2024: $276,054M (+$46,431.0M YoY change)\n  FY2025: $366,021M (+$89,967.0M YoY change)\n\nLongTermDebt:\n  FY2021: $0M\n  FY2022: $9,923M (+$9,923.0M YoY change)\n  FY2023: $18,385M (+$8,462.0M YoY change)\n  FY2024: $28,826M (+$10,441.0M YoY change)\n  FY2025: $58,744M (+$29,918.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $57,683M\n  FY2022: $50,475M ($-7,208.0M YoY change)\n  FY2023: $71,113M (+$20,638.0M YoY change)\n  FY2024: $91,328M (+$20,215.0M YoY change)\n  FY2025: $115,800M (+$24,472.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $24,655M\n  FY2022: $35,338M (+$10,683.0M YoY change)\n  FY2023: $38,483M (+$3,145.0M YoY change)\n  FY2024: $43,873M (+$5,390.0M YoY change)\n  FY2025: $57,372M (+$13,499.0M YoY change)",
+            "=== ADBE (ADOBE INC.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $15,785M\n  FY2022: $17,606M (+$1,821.0M YoY change)\n  FY2023: $19,409M (+$1,803.0M YoY change)\n  FY2024: $21,505M (+$2,096.0M YoY change)\n  FY2025: $23,769M (+$2,264.0M YoY change)\n\nNetIncome:\n  FY2021: $4,822M\n  FY2022: $4,756M ($-66.0M YoY change)\n  FY2023: $5,428M (+$672.0M YoY change)\n  FY2024: $5,560M (+$132.0M YoY change)\n  FY2025: $7,130M (+$1,570.0M YoY change)\n\nCash:\n  FY2021: $3,844M\n  FY2022: $4,236M (+$392.0M YoY change)\n  FY2023: $7,141M (+$2,905.0M YoY change)\n  FY2024: $7,613M (+$472.0M YoY change)\n  FY2025: $5,431M ($-2,182.0M YoY change)\n\nAssets:\n  FY2021: $27,241M\n  FY2022: $27,165M ($-76.0M YoY change)\n  FY2023: $29,779M (+$2,614.0M YoY change)\n  FY2024: $30,230M (+$451.0M YoY change)\n  FY2025: $29,496M ($-734.0M YoY change)\n\nLongTermDebt:\n  FY2021: $4,123M\n  FY2022: $3,629M ($-494.0M YoY change)\n  FY2023: $3,634M (+$5.0M YoY change)\n  FY2024: $4,129M (+$495.0M YoY change)\n  FY2025: $6,210M (+$2,081.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $7,230M\n  FY2022: $7,838M (+$608.0M YoY change)\n  FY2023: $7,302M ($-536.0M YoY change)\n  FY2024: $8,056M (+$754.0M YoY change)\n  FY2025: $10,031M (+$1,975.0M YoY change)\n\nGrossProfit:\n  FY2021: $13,920M\n  FY2022: $15,441M (+$1,521.0M YoY change)\n  FY2023: $17,055M (+$1,614.0M YoY change)\n  FY2024: $19,147M (+$2,092.0M YoY change)\n  FY2025: $21,218M (+$2,071.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Apple's long-term debt declined over the period, improving leverage trends.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)\n\nNetIncome:\n  FY2021: $94,680M\n  FY2022: $99,803M (+$5,123.0M YoY change)\n  FY2023: $96,995M ($-2,808.0M YoY change)\n  FY2024: $93,736M ($-3,259.0M YoY change)\n  FY2025: $112,010M (+$18,274.0M YoY change)\n\nCash:\n  FY2021: $34,940M\n  FY2022: $23,646M ($-11,294.0M YoY change)\n  FY2023: $29,965M (+$6,319.0M YoY change)\n  FY2024: $29,943M ($-22.0M YoY change)\n  FY2025: $35,934M (+$5,991.0M YoY change)\n\nAssets:\n  FY2021: $351,002M\n  FY2022: $352,755M (+$1,753.0M YoY change)\n  FY2023: $352,583M ($-172.0M YoY change)\n  FY2024: $364,980M (+$12,397.0M YoY change)\n  FY2025: $359,241M ($-5,739.0M YoY change)\n\nLongTermDebt:\n  FY2021: $109,106M\n  FY2022: $110,087M (+$981.0M YoY change)\n  FY2023: $105,103M ($-4,984.0M YoY change)\n  FY2024: $96,662M ($-8,441.0M YoY change)\n  FY2025: $90,678M ($-5,984.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $104,038M\n  FY2022: $122,151M (+$18,113.0M YoY change)\n  FY2023: $110,543M ($-11,608.0M YoY change)\n  FY2024: $118,254M (+$7,711.0M YoY change)\n  FY2025: $111,482M ($-6,772.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $21,914M\n  FY2022: $26,251M (+$4,337.0M YoY change)\n  FY2023: $29,915M (+$3,664.0M YoY change)\n  FY2024: $31,370M (+$1,455.0M YoY change)\n  FY2025: $34,550M (+$3,180.0M YoY change)\n\nGrossProfit:\n  FY2021: $152,836M\n  FY2022: $170,782M (+$17,946.0M YoY change)\n  FY2023: $169,148M ($-1,634.0M YoY change)\n  FY2024: $180,683M (+$11,535.0M YoY change)\n  FY2025: $195,201M (+$14,518.0M YoY change)",
+            "Net income fell in FY2024 to $93,736M after prior-year fluctuations, then rose to $112,010M in FY2025 indicating volatility in annual profitability.",
+            "Operating cash flow declined by $6,772M in FY2025 to $111,482M, reversing some prior-year gains."
+          ]
+        },
+        {
+          "claim": "Long-term debt reduced to $90,678M in FY2025 from $109,106M in FY2021.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "LongTermDebt:\n  FY2021: $109,106M\n  FY2022: $110,087M (+$981.0M YoY change)\n  FY2023: $105,103M ($-4,984.0M YoY change)\n  FY2024: $96,662M ($-8,441.0M YoY change)\n  FY2025: $90,678M ($-5,984.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Operating cash flow declined by $6,772M in FY2025.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)\n\nNetIncome:\n  FY2021: $94,680M\n  FY2022: $99,803M (+$5,123.0M YoY change)\n  FY2023: $96,995M ($-2,808.0M YoY change)\n  FY2024: $93,736M ($-3,259.0M YoY change)\n  FY2025: $112,010M (+$18,274.0M YoY change)\n\nCash:\n  FY2021: $34,940M\n  FY2022: $23,646M ($-11,294.0M YoY change)\n  FY2023: $29,965M (+$6,319.0M YoY change)\n  FY2024: $29,943M ($-22.0M YoY change)\n  FY2025: $35,934M (+$5,991.0M YoY change)\n\nAssets:\n  FY2021: $351,002M\n  FY2022: $352,755M (+$1,753.0M YoY change)\n  FY2023: $352,583M ($-172.0M YoY change)\n  FY2024: $364,980M (+$12,397.0M YoY change)\n  FY2025: $359,241M ($-5,739.0M YoY change)\n\nLongTermDebt:\n  FY2021: $109,106M\n  FY2022: $110,087M (+$981.0M YoY change)\n  FY2023: $105,103M ($-4,984.0M YoY change)\n  FY2024: $96,662M ($-8,441.0M YoY change)\n  FY2025: $90,678M ($-5,984.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $104,038M\n  FY2022: $122,151M (+$18,113.0M YoY change)\n  FY2023: $110,543M ($-11,608.0M YoY change)\n  FY2024: $118,254M (+$7,711.0M YoY change)\n  FY2025: $111,482M ($-6,772.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $21,914M\n  FY2022: $26,251M (+$4,337.0M YoY change)\n  FY2023: $29,915M (+$3,664.0M YoY change)\n  FY2024: $31,370M (+$1,455.0M YoY change)\n  FY2025: $34,550M (+$3,180.0M YoY change)\n\nGrossProfit:\n  FY2021: $152,836M\n  FY2022: $170,782M (+$17,946.0M YoY change)\n  FY2023: $169,148M ($-1,634.0M YoY change)\n  FY2024: $180,683M (+$11,535.0M YoY change)\n  FY2025: $195,201M (+$14,518.0M YoY change)",
+            "Operating cash flow declined by $6,772M in FY2025 to $111,482M, reversing some prior-year gains."
+          ]
+        },
+        {
+          "claim": "Revenue dipped by $11,043M in FY2023.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)",
+            "Revenues dropped $11,043M in FY2023 before resuming growth, showing sensitivity to year-to-year demand shifts."
+          ]
+        },
+        {
+          "claim": "Gross profit expanded to $195,201M in FY2025.",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)\n\nNetIncome:\n  FY2021: $94,680M\n  FY2022: $99,803M (+$5,123.0M YoY change)\n  FY2023: $96,995M ($-2,808.0M YoY change)\n  FY2024: $93,736M ($-3,259.0M YoY change)\n  FY2025: $112,010M (+$18,274.0M YoY change)\n\nCash:\n  FY2021: $34,940M\n  FY2022: $23,646M ($-11,294.0M YoY change)\n  FY2023: $29,965M (+$6,319.0M YoY change)\n  FY2024: $29,943M ($-22.0M YoY change)\n  FY2025: $35,934M (+$5,991.0M YoY change)\n\nAssets:\n  FY2021: $351,002M\n  FY2022: $352,755M (+$1,753.0M YoY change)\n  FY2023: $352,583M ($-172.0M YoY change)\n  FY2024: $364,980M (+$12,397.0M YoY change)\n  FY2025: $359,241M ($-5,739.0M YoY change)\n\nLongTermDebt:\n  FY2021: $109,106M\n  FY2022: $110,087M (+$981.0M YoY change)\n  FY2023: $105,103M ($-4,984.0M YoY change)\n  FY2024: $96,662M ($-8,441.0M YoY change)\n  FY2025: $90,678M ($-5,984.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $104,038M\n  FY2022: $122,151M (+$18,113.0M YoY change)\n  FY2023: $110,543M ($-11,608.0M YoY change)\n  FY2024: $118,254M (+$7,711.0M YoY change)\n  FY2025: $111,482M ($-6,772.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $21,914M\n  FY2022: $26,251M (+$4,337.0M YoY change)\n  FY2023: $29,915M (+$3,664.0M YoY change)\n  FY2024: $31,370M (+$1,455.0M YoY change)\n  FY2025: $34,550M (+$3,180.0M YoY change)\n\nGrossProfit:\n  FY2021: $152,836M\n  FY2022: $170,782M (+$17,946.0M YoY change)\n  FY2023: $169,148M ($-1,634.0M YoY change)\n  FY2024: $180,683M (+$11,535.0M YoY change)\n  FY2025: $195,201M (+$14,518.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Operating cash flow declined to $111,482M in FY2025, a YoY decrease of $6,772M.",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)\n\nNetIncome:\n  FY2021: $94,680M\n  FY2022: $99,803M (+$5,123.0M YoY change)\n  FY2023: $96,995M ($-2,808.0M YoY change)\n  FY2024: $93,736M ($-3,259.0M YoY change)\n  FY2025: $112,010M (+$18,274.0M YoY change)\n\nCash:\n  FY2021: $34,940M\n  FY2022: $23,646M ($-11,294.0M YoY change)\n  FY2023: $29,965M (+$6,319.0M YoY change)\n  FY2024: $29,943M ($-22.0M YoY change)\n  FY2025: $35,934M (+$5,991.0M YoY change)\n\nAssets:\n  FY2021: $351,002M\n  FY2022: $352,755M (+$1,753.0M YoY change)\n  FY2023: $352,583M ($-172.0M YoY change)\n  FY2024: $364,980M (+$12,397.0M YoY change)\n  FY2025: $359,241M ($-5,739.0M YoY change)\n\nLongTermDebt:\n  FY2021: $109,106M\n  FY2022: $110,087M (+$981.0M YoY change)\n  FY2023: $105,103M ($-4,984.0M YoY change)\n  FY2024: $96,662M ($-8,441.0M YoY change)\n  FY2025: $90,678M ($-5,984.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $104,038M\n  FY2022: $122,151M (+$18,113.0M YoY change)\n  FY2023: $110,543M ($-11,608.0M YoY change)\n  FY2024: $118,254M (+$7,711.0M YoY change)\n  FY2025: $111,482M ($-6,772.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $21,914M\n  FY2022: $26,251M (+$4,337.0M YoY change)\n  FY2023: $29,915M (+$3,664.0M YoY change)\n  FY2024: $31,370M (+$1,455.0M YoY change)\n  FY2025: $34,550M (+$3,180.0M YoY change)\n\nGrossProfit:\n  FY2021: $152,836M\n  FY2022: $170,782M (+$17,946.0M YoY change)\n  FY2023: $169,148M ($-1,634.0M YoY change)\n  FY2024: $180,683M (+$11,535.0M YoY change)\n  FY2025: $195,201M (+$14,518.0M YoY change)",
+            "Operating cash flow declined by $6,772M in FY2025 to $111,482M, reversing some prior-year gains."
+          ]
+        },
+        {
+          "claim": "Apple net income fell to $93,736M in FY2024 then rose to $112,010M in FY2025, indicating earnings volatility.",
+          "source": "section:Risk Assessment",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AAPL (Apple Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $365,817M\n  FY2022: $394,328M (+$28,511.0M YoY change)\n  FY2023: $383,285M ($-11,043.0M YoY change)\n  FY2024: $391,035M (+$7,750.0M YoY change)\n  FY2025: $416,161M (+$25,126.0M YoY change)\n\nNetIncome:\n  FY2021: $94,680M\n  FY2022: $99,803M (+$5,123.0M YoY change)\n  FY2023: $96,995M ($-2,808.0M YoY change)\n  FY2024: $93,736M ($-3,259.0M YoY change)\n  FY2025: $112,010M (+$18,274.0M YoY change)\n\nCash:\n  FY2021: $34,940M\n  FY2022: $23,646M ($-11,294.0M YoY change)\n  FY2023: $29,965M (+$6,319.0M YoY change)\n  FY2024: $29,943M ($-22.0M YoY change)\n  FY2025: $35,934M (+$5,991.0M YoY change)\n\nAssets:\n  FY2021: $351,002M\n  FY2022: $352,755M (+$1,753.0M YoY change)\n  FY2023: $352,583M ($-172.0M YoY change)\n  FY2024: $364,980M (+$12,397.0M YoY change)\n  FY2025: $359,241M ($-5,739.0M YoY change)\n\nLongTermDebt:\n  FY2021: $109,106M\n  FY2022: $110,087M (+$981.0M YoY change)\n  FY2023: $105,103M ($-4,984.0M YoY change)\n  FY2024: $96,662M ($-8,441.0M YoY change)\n  FY2025: $90,678M ($-5,984.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $104,038M\n  FY2022: $122,151M (+$18,113.0M YoY change)\n  FY2023: $110,543M ($-11,608.0M YoY change)\n  FY2024: $118,254M (+$7,711.0M YoY change)\n  FY2025: $111,482M ($-6,772.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $21,914M\n  FY2022: $26,251M (+$4,337.0M YoY change)\n  FY2023: $29,915M (+$3,664.0M YoY change)\n  FY2024: $31,370M (+$1,455.0M YoY change)\n  FY2025: $34,550M (+$3,180.0M YoY change)\n\nGrossProfit:\n  FY2021: $152,836M\n  FY2022: $170,782M (+$17,946.0M YoY change)\n  FY2023: $169,148M ($-1,634.0M YoY change)\n  FY2024: $180,683M (+$11,535.0M YoY change)\n  FY2025: $195,201M (+$14,518.0M YoY change)",
+            "Net income fell in FY2024 to $93,736M after prior-year fluctuations, then rose to $112,010M in FY2025 indicating volatility in annual profitability."
+          ]
+        },
+        {
+          "claim": "Snap remained loss-making through FY2025 with a net loss of -$460M.",
+          "source": "section:Risk Assessment",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)"
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "Apple FY2025 revenue was $416,161M, materially higher than peers.",
+            "source": "summary"
+          },
+          {
+            "claim": "Apple FY2025 net income was $112,010M, materially higher than peers.",
+            "source": "summary"
+          },
+          {
+            "claim": "Apple's long-term debt declined over the period, improving leverage trends.",
+            "source": "summary"
+          },
+          {
+            "claim": "Long-term debt reduced to $90,678M in FY2025 from $109,106M in FY2021.",
+            "source": "posture"
+          },
+          {
+            "claim": "Operating cash flow declined by $6,772M in FY2025.",
+            "source": "posture"
+          },
+          {
+            "claim": "Revenue dipped by $11,043M in FY2023.",
+            "source": "posture"
+          },
+          {
+            "claim": "Gross profit expanded to $195,201M in FY2025.",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "Operating cash flow declined to $111,482M in FY2025, a YoY decrease of $6,772M.",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "Apple net income fell to $93,736M in FY2024 then rose to $112,010M in FY2025, indicating earnings volatility.",
+            "source": "section:Risk Assessment"
+          },
+          {
+            "claim": "Snap remained loss-making through FY2025 with a net loss of -$460M.",
+            "source": "section:Risk Assessment"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "strong",
+          "overreach_flags": [
+            "Claim: 'declining long-term debt balance' for Apple \u2014 unsupported by the provided data: no Apple long-term debt history or YoY figures are included to demonstrate a decline.",
+            "Claim: 'growing gross profit' for Apple \u2014 only a single gross profit magnitude is cited (195,201M); no prior-year gross profit series is provided to substantiate a growth trend.",
+            "Claim: 'clear ... profitability advantages' conflates absolute net income with profitability. The report compares aggregate net income levels but does not show margin metrics (e.g., gross margin, operating margin, net margin) to confirm superior profitability on a rate basis.",
+            "Claim: 'year-to-year revenue volatility' for Apple is called out but no Apple revenue time series is included in the report for verification, while peers' revenue histories are shown \u2014 the volatility statement is therefore under-evidenced here.",
+            "Potential selection bias / overgeneralization: conclusions are framed 'versus the selected peers' but the peer set is limited (Meta, Adobe, Snap). The strength of conclusions may not generalize to a broader competitive set (e.g., other large hardware/software/platform peers are omitted)."
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "AMD",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\AMD\\amd_comparison_bundle.json",
+      "artifact_hash": "e868915cfe9c67d4d00e3ce21b850812db56e40ac1b9c9362ee4928527af011e",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": 0.8,
+        "comparative_usefulness": 1.0,
+        "overreach_penalty": 0.25,
+        "overall_score": 0.6093
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "AMD showed a pronounced recovery into FY2025 with double-digit revenue and net income growth and materially higher operating cash flow.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "Revenues: FY2024: $25,785M (+$3,105.0M YoY change) FY2025: $34,639M (+$8,854.0M YoY change)",
+            "NetIncome: FY2024: $1,641M (+$787.0M YoY change) FY2025: $4,335M (+$2,694.0M YoY change)",
+            "OperatingCashFlow: FY2024: $3,041M (+$1,374.0M YoY change) FY2025: $7,709M (+$4,668.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "AMD remains much smaller in scale and margin than top peers (NVIDIA, Microsoft, Amazon).",
+          "source": "summary",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)",
+            "AMD remains materially smaller in revenue and net margin than leading peers (e.g., NVDA FY2025 revenue $130,497M and margin ~55.9%), creating competitive pressure on pricing and market share.",
+            "=== NVDA (NVIDIA CORP) - Ingested Financial Data ===\n\nRevenues:\n  FY2022: $26,914M\n  FY2023: $26,974M (+$60.0M YoY change)\n  FY2024: $60,922M (+$33,948.0M YoY change)\n  FY2025: $130,497M (+$69,575.0M YoY change)\n  FY2026: $215,938M (+$85,441.0M YoY change)\n\nNetIncome:\n  FY2022: $9,752M\n  FY2023: $4,368M ($-5,384.0M YoY change)\n  FY2024: $29,760M (+$25,392.0M YoY change)\n  FY2025: $72,880M (+$43,120.0M YoY change)\n  FY2026: $120,067M (+$47,187.0M YoY change)\n\nCash:\n  FY2022: $1,990M\n  FY2023: $3,389M (+$1,399.0M YoY change)\n  FY2024: $7,280M (+$3,891.0M YoY change)\n  FY2025: $8,589M (+$1,309.0M YoY change)\n  FY2026: $10,605M (+$2,016.0M YoY change)\n\nAssets:\n  FY2022: $44,187M\n  FY2023: $41,182M ($-3,005.0M YoY change)\n  FY2024: $65,728M (+$24,546.0M YoY change)\n  FY2025: $111,601M (+$45,873.0M YoY change)\n  FY2026: $206,803M (+$95,202.0M YoY change)\n\nLongTermDebt:\n  FY2022: $10,946M\n  FY2023: $10,953M (+$7.0M YoY change)\n  FY2024: $9,709M ($-1,244.0M YoY change)\n  FY2025: $8,463M ($-1,246.0M YoY change)\n  FY2026: $8,468M (+$5.0M YoY change)\n\nOperatingCashFlow:\n  FY2022: $9,108M\n  FY2023: $5,641M ($-3,467.0M YoY change)\n  FY2024: $28,090M (+$22,449.0M YoY change)\n  FY2025: $64,089M (+$35,999.0M YoY change)\n  FY2026: $102,718M (+$38,629.0M YoY change)\n\nResearchAndDevelopment:\n  FY2022: $5,268M\n  FY2023: $7,339M (+$2,071.0M YoY change)\n  FY2024: $8,675M (+$1,336.0M YoY change)\n  FY2025: $12,914M (+$4,239.0M YoY change)\n  FY2026: $18,497M (+$5,583.0M YoY change)\n\nGrossProfit:\n  FY2022: $17,475M\n  FY2023: $15,356M ($-2,119.0M YoY change)\n  FY2024: $44,301M (+$28,945.0M YoY change)\n  FY2025: $97,858M (+$53,557.0M YoY change)\n  FY2026: $153,463M (+$55,605.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "AMD's long-term debt has increased since FY2021.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)",
+            "Long\u0011term debt increased from $1M in FY2021 to $2,348M in FY2025, indicating a meaningful change in leverage compared with historical levels."
+          ]
+        },
+        {
+          "claim": "FY2025 revenues rose 34.3% YoY and net income rose 164.2% YoY.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Operating cash flow more than doubled in FY2025, indicating strong operational recovery.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)",
+            "FY2025 growth appears linked to strengthening end\u0011market demand (datacenter/AI), which can be volatile and concentrated across a few customers and product cycles."
+          ]
+        },
+        {
+          "claim": "R&D spending increased 25.3% YoY in FY2025, supporting the product roadmap.",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Revenues were $34,639M in FY2025, up $8,854M (+34.3% YoY).",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Operating cash flow was $7,709M in FY2025, more than doubling YoY and signaling improved cash conversion.",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "AMD remains significantly smaller than NVDA, MSFT, and AMZN in revenue, assets and margins; NVIDIA's FY2025 net margin (~55.9%) is materially higher than AMD's (~12.5%).",
+          "source": "section:Risk Assessment",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)",
+            "AMD remains materially smaller in revenue and net margin than leading peers (e.g., NVDA FY2025 revenue $130,497M and margin ~55.9%), creating competitive pressure on pricing and market share.",
+            "=== NVDA (NVIDIA CORP) - Ingested Financial Data ===\n\nRevenues:\n  FY2022: $26,914M\n  FY2023: $26,974M (+$60.0M YoY change)\n  FY2024: $60,922M (+$33,948.0M YoY change)\n  FY2025: $130,497M (+$69,575.0M YoY change)\n  FY2026: $215,938M (+$85,441.0M YoY change)\n\nNetIncome:\n  FY2022: $9,752M\n  FY2023: $4,368M ($-5,384.0M YoY change)\n  FY2024: $29,760M (+$25,392.0M YoY change)\n  FY2025: $72,880M (+$43,120.0M YoY change)\n  FY2026: $120,067M (+$47,187.0M YoY change)\n\nCash:\n  FY2022: $1,990M\n  FY2023: $3,389M (+$1,399.0M YoY change)\n  FY2024: $7,280M (+$3,891.0M YoY change)\n  FY2025: $8,589M (+$1,309.0M YoY change)\n  FY2026: $10,605M (+$2,016.0M YoY change)\n\nAssets:\n  FY2022: $44,187M\n  FY2023: $41,182M ($-3,005.0M YoY change)\n  FY2024: $65,728M (+$24,546.0M YoY change)\n  FY2025: $111,601M (+$45,873.0M YoY change)\n  FY2026: $206,803M (+$95,202.0M YoY change)\n\nLongTermDebt:\n  FY2022: $10,946M\n  FY2023: $10,953M (+$7.0M YoY change)\n  FY2024: $9,709M ($-1,244.0M YoY change)\n  FY2025: $8,463M ($-1,246.0M YoY change)\n  FY2026: $8,468M (+$5.0M YoY change)\n\nOperatingCashFlow:\n  FY2022: $9,108M\n  FY2023: $5,641M ($-3,467.0M YoY change)\n  FY2024: $28,090M (+$22,449.0M YoY change)\n  FY2025: $64,089M (+$35,999.0M YoY change)\n  FY2026: $102,718M (+$38,629.0M YoY change)\n\nResearchAndDevelopment:\n  FY2022: $5,268M\n  FY2023: $7,339M (+$2,071.0M YoY change)\n  FY2024: $8,675M (+$1,336.0M YoY change)\n  FY2025: $12,914M (+$4,239.0M YoY change)\n  FY2026: $18,497M (+$5,583.0M YoY change)\n\nGrossProfit:\n  FY2022: $17,475M\n  FY2023: $15,356M ($-2,119.0M YoY change)\n  FY2024: $44,301M (+$28,945.0M YoY change)\n  FY2025: $97,858M (+$53,557.0M YoY change)\n  FY2026: $153,463M (+$55,605.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "AMD's long-term debt increased to $2,348M in FY2025, raising fixed commitments alongside higher R&D, though operating cash flow growth to $7,709M provides improving coverage.",
+          "source": "section:Risk Assessment",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "=== AMD (ADVANCED MICRO DEVICES INC) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $16,434M\n  FY2022: $23,601M (+$7,167.0M YoY change)\n  FY2023: $22,680M ($-921.0M YoY change)\n  FY2024: $25,785M (+$3,105.0M YoY change)\n  FY2025: $34,639M (+$8,854.0M YoY change)\n\nNetIncome:\n  FY2021: $3,162M\n  FY2022: $1,320M ($-1,842.0M YoY change)\n  FY2023: $854M ($-466.0M YoY change)\n  FY2024: $1,641M (+$787.0M YoY change)\n  FY2025: $4,335M (+$2,694.0M YoY change)\n\nCash:\n  FY2021: $2,535M\n  FY2022: $4,835M (+$2,300.0M YoY change)\n  FY2023: $3,933M ($-902.0M YoY change)\n  FY2024: $3,787M ($-146.0M YoY change)\n  FY2025: $5,539M (+$1,752.0M YoY change)\n\nAssets:\n  FY2021: $12,419M\n  FY2022: $67,580M (+$55,161.0M YoY change)\n  FY2023: $67,885M (+$305.0M YoY change)\n  FY2024: $69,226M (+$1,341.0M YoY change)\n  FY2025: $76,926M (+$7,700.0M YoY change)\n\nLongTermDebt:\n  FY2021: $1M\n  FY2022: $2,467M (+$2,466.0M YoY change)\n  FY2023: $1,717M ($-750.0M YoY change)\n  FY2024: $1,721M (+$4.0M YoY change)\n  FY2025: $2,348M (+$627.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $3,521M\n  FY2022: $3,565M (+$44.0M YoY change)\n  FY2023: $1,667M ($-1,898.0M YoY change)\n  FY2024: $3,041M (+$1,374.0M YoY change)\n  FY2025: $7,709M (+$4,668.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,845M\n  FY2022: $5,005M (+$2,160.0M YoY change)\n  FY2023: $5,872M (+$867.0M YoY change)\n  FY2024: $6,456M (+$584.0M YoY change)\n  FY2025: $8,091M (+$1,635.0M YoY change)\n\nGrossProfit:\n  FY2021: $7,929M\n  FY2022: $10,603M (+$2,674.0M YoY change)\n  FY2023: $10,460M ($-143.0M YoY change)\n  FY2024: $12,725M (+$2,265.0M YoY change)\n  FY2025: $17,152M (+$4,427.0M YoY change)",
+            "Long\u0011term debt increased from $1M in FY2021 to $2,348M in FY2025, indicating a meaningful change in leverage compared with historical levels."
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "AMD showed a pronounced recovery into FY2025 with double-digit revenue and net income growth and materially higher operating cash flow.",
+            "source": "summary"
+          },
+          {
+            "claim": "AMD remains much smaller in scale and margin than top peers (NVIDIA, Microsoft, Amazon).",
+            "source": "summary"
+          },
+          {
+            "claim": "AMD's long-term debt has increased since FY2021.",
+            "source": "summary"
+          },
+          {
+            "claim": "FY2025 revenues rose 34.3% YoY and net income rose 164.2% YoY.",
+            "source": "posture"
+          },
+          {
+            "claim": "Operating cash flow more than doubled in FY2025, indicating strong operational recovery.",
+            "source": "posture"
+          },
+          {
+            "claim": "R&D spending increased 25.3% YoY in FY2025, supporting the product roadmap.",
+            "source": "posture"
+          },
+          {
+            "claim": "Revenues were $34,639M in FY2025, up $8,854M (+34.3% YoY).",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "Operating cash flow was $7,709M in FY2025, more than doubling YoY and signaling improved cash conversion.",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "AMD remains significantly smaller than NVDA, MSFT, and AMZN in revenue, assets and margins; NVIDIA's FY2025 net margin (~55.9%) is materially higher than AMD's (~12.5%).",
+            "source": "section:Risk Assessment"
+          },
+          {
+            "claim": "AMD's long-term debt increased to $2,348M in FY2025, raising fixed commitments alongside higher R&D, though operating cash flow growth to $7,709M provides improving coverage.",
+            "source": "section:Risk Assessment"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "strong",
+          "overreach_flags": [
+            "Debt concern lacks leverage context (no debt/EBITDA, net-debt-to-cash or leverage ratios provided)",
+            "Inference from net income margin to limited free-cash-flow conversion without presenting free cash flow or conversion metrics",
+            "Potential overemphasis of long-term debt increase without scaling to company size or comparison to peer leverage levels",
+            "AI/datacenter concentration risk stated strongly but lacks revenue-by-end-market segmentation to quantify exposure",
+            "Margin-gap attribution to competition is presented without discussing product mix and pricing/ASP differences that materially affect margins"
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "BYND",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\BYND\\bynd_comparison_bundle.json",
+      "artifact_hash": "35fd3ca9d300f8b5b2c0778e22fb197ee30bb5b3e17c4ed1597582e8137471c8",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": 1.0,
+        "comparative_usefulness": 0.5,
+        "overreach_penalty": 0.2,
+        "overall_score": 0.6426
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "Beyond Meat reported net income of $219.0M in FY2025, a swing to profitability.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "NetIncome: FY2024: $-160M",
+            "NetIncome: FY2025: $219M (+$379.3M YoY change)"
+          ]
+        },
+        {
+          "claim": "Long-term debt was reduced to $416.0M by FY2025.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== BYND (BEYOND MEAT, INC.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $465M\n  FY2022: $419M ($-45.8M YoY change)\n  FY2023: $343M ($-75.5M YoY change)\n  FY2024: $326M ($-16.9M YoY change)\n  FY2025: $276M ($-51.0M YoY change)\n\nNetIncome:\n  FY2021: $-182M\n  FY2022: $-366M ($-184.0M YoY change)\n  FY2023: $-338M (+$28.0M YoY change)\n  FY2024: $-160M (+$177.8M YoY change)\n  FY2025: $219M (+$379.3M YoY change)\n\nCash:\n  FY2021: $733M\n  FY2022: $310M ($-423.4M YoY change)\n  FY2023: $190M ($-119.4M YoY change)\n  FY2024: $132M ($-58.6M YoY change)\n  FY2025: $204M (+$72.0M YoY change)\n\nAssets:\n  FY2021: $1,379M\n  FY2022: $1,062M ($-317.2M YoY change)\n  FY2023: $774M ($-287.8M YoY change)\n  FY2024: $678M ($-96.3M YoY change)\n  FY2025: $615M ($-63.4M YoY change)\n\nLongTermDebt:\n  FY2021: $1,130M\n  FY2022: $1,134M (+$3.9M YoY change)\n  FY2023: $1,138M (+$3.9M YoY change)\n  FY2024: $1,141M (+$3.9M YoY change)\n  FY2025: $416M ($-725.7M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-301M\n  FY2022: $-320M ($-18.9M YoY change)\n  FY2023: $-108M (+$212.4M YoY change)\n  FY2024: $-99M (+$9.0M YoY change)\n  FY2025: $-145M ($-46.1M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $67M\n  FY2022: $62M ($-4.7M YoY change)\n  FY2023: $40M ($-22.7M YoY change)\n  FY2024: $28M ($-11.4M YoY change)\n  FY2025: $23M ($-4.9M YoY change)\n\nGrossProfit:\n  FY2021: $117M\n  FY2022: $-24M ($-141.0M YoY change)\n  FY2023: $-83M ($-58.9M YoY change)\n  FY2024: $42M (+$124.4M YoY change)\n  FY2025: $8M ($-34.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Revenue declined from $465M in FY2021 to $276M in FY2025.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== BYND (BEYOND MEAT, INC.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $465M\n  FY2022: $419M ($-45.8M YoY change)\n  FY2023: $343M ($-75.5M YoY change)\n  FY2024: $326M ($-16.9M YoY change)\n  FY2025: $276M ($-51.0M YoY change)",
+            "Revenues contracted from $465M in FY2021 to $276M in FY2025, reflecting sustained demand or market-share pressure."
+          ]
+        },
+        {
+          "claim": "Operating cash flow was negative $145.0M in FY2025.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "OperatingCashFlow:\n  FY2021: $-301M\n  FY2022: $-320M ($-18.9M YoY change)\n  FY2023: $-108M (+$212.4M YoY change)\n  FY2024: $-99M (+$9.0M YoY change)\n  FY2025: $-145M ($-46.1M YoY change)",
+            "Operating cash flow remained negative in FY2025 (-$145.0M), indicating continued dependence on financing or non-operating items despite a reported net profit."
+          ]
+        },
+        {
+          "claim": "Cash balance was $204.0M in FY2025, modest versus peer firms with multi\u2011billion dollar cash reserves.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "BYND Cash: FY2025: $204M (+$72.0M YoY change)",
+            "AMD Cash: FY2025: $5,539M (+$1,752.0M YoY change)",
+            "AMZN Cash: FY2025: $86,810M (+$8,031.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Relative to the provided peer set (AMD, Amazon, Meta), Beyond Meat is smaller, cash\u2011constrained, and revenue\u2011compressed.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== BYND (BEYOND MEAT, INC.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $465M\n  FY2022: $419M ($-45.8M YoY change)\n  FY2023: $343M ($-75.5M YoY change)\n  FY2024: $326M ($-16.9M YoY change)\n  FY2025: $276M ($-51.0M YoY change)\n\nNetIncome:\n  FY2021: $-182M\n  FY2022: $-366M ($-184.0M YoY change)\n  FY2023: $-338M (+$28.0M YoY change)\n  FY2024: $-160M (+$177.8M YoY change)\n  FY2025: $219M (+$379.3M YoY change)\n\nCash:\n  FY2021: $733M\n  FY2022: $310M ($-423.4M YoY change)\n  FY2023: $190M ($-119.4M YoY change)\n  FY2024: $132M ($-58.6M YoY change)\n  FY2025: $204M (+$72.0M YoY change)\n\nAssets:\n  FY2021: $1,379M\n  FY2022: $1,062M ($-317.2M YoY change)\n  FY2023: $774M ($-287.8M YoY change)\n  FY2024: $678M ($-96.3M YoY change)\n  FY2025: $615M ($-63.4M YoY change)\n\nLongTermDebt:\n  FY2021: $1,130M\n  FY2022: $1,134M (+$3.9M YoY change)\n  FY2023: $1,138M (+$3.9M YoY change)\n  FY2024: $1,141M (+$3.9M YoY change)\n  FY2025: $416M ($-725.7M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-301M\n  FY2022: $-320M ($-18.9M YoY change)\n  FY2023: $-108M (+$212.4M YoY change)\n  FY2024: $-99M (+$9.0M YoY change)\n  FY2025: $-145M ($-46.1M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $67M\n  FY2022: $62M ($-4.7M YoY change)\n  FY2023: $40M ($-22.7M YoY change)\n  FY2024: $28M ($-11.4M YoY change)\n  FY2025: $23M ($-4.9M YoY change)\n\nGrossProfit:\n  FY2021: $117M\n  FY2022: $-24M ($-141.0M YoY change)\n  FY2023: $-83M ($-58.9M YoY change)\n  FY2024: $42M (+$124.4M YoY change)\n  FY2025: $8M ($-34.0M YoY change)",
+            "Revenues contracted from $465M in FY2021 to $276M in FY2025, reflecting sustained demand or market-share pressure.",
+            "Operating cash flow remained negative in FY2025 (-$145.0M), indicating continued dependence on financing or non-operating items despite a reported net profit."
+          ]
+        },
+        {
+          "claim": "Gross profit was $8.0M in FY2025, indicating very small gross profitability.",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== BYND (BEYOND MEAT, INC.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $465M\n  FY2022: $419M ($-45.8M YoY change)\n  FY2023: $343M ($-75.5M YoY change)\n  FY2024: $326M ($-16.9M YoY change)\n  FY2025: $276M ($-51.0M YoY change)\n\nNetIncome:\n  FY2021: $-182M\n  FY2022: $-366M ($-184.0M YoY change)\n  FY2023: $-338M (+$28.0M YoY change)\n  FY2024: $-160M (+$177.8M YoY change)\n  FY2025: $219M (+$379.3M YoY change)\n\nCash:\n  FY2021: $733M\n  FY2022: $310M ($-423.4M YoY change)\n  FY2023: $190M ($-119.4M YoY change)\n  FY2024: $132M ($-58.6M YoY change)\n  FY2025: $204M (+$72.0M YoY change)\n\nAssets:\n  FY2021: $1,379M\n  FY2022: $1,062M ($-317.2M YoY change)\n  FY2023: $774M ($-287.8M YoY change)\n  FY2024: $678M ($-96.3M YoY change)\n  FY2025: $615M ($-63.4M YoY change)\n\nLongTermDebt:\n  FY2021: $1,130M\n  FY2022: $1,134M (+$3.9M YoY change)\n  FY2023: $1,138M (+$3.9M YoY change)\n  FY2024: $1,141M (+$3.9M YoY change)\n  FY2025: $416M ($-725.7M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-301M\n  FY2022: $-320M ($-18.9M YoY change)\n  FY2023: $-108M (+$212.4M YoY change)\n  FY2024: $-99M (+$9.0M YoY change)\n  FY2025: $-145M ($-46.1M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $67M\n  FY2022: $62M ($-4.7M YoY change)\n  FY2023: $40M ($-22.7M YoY change)\n  FY2024: $28M ($-11.4M YoY change)\n  FY2025: $23M ($-4.9M YoY change)\n\nGrossProfit:\n  FY2021: $117M\n  FY2022: $-24M ($-141.0M YoY change)\n  FY2023: $-83M ($-58.9M YoY change)\n  FY2024: $42M (+$124.4M YoY change)\n  FY2025: $8M ($-34.0M YoY change)",
+            "Gross profit is very small ($8.0M in FY2025) after prior-year negative gross profit, suggesting margins remain fragile even with reported net income."
+          ]
+        },
+        {
+          "claim": "R&D spending was trimmed to $23.0M in FY2025.",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "ResearchAndDevelopment:\n  FY2021: $67M\n  FY2022: $62M ($-4.7M YoY change)\n  FY2023: $40M ($-22.7M YoY change)\n  FY2024: $28M ($-11.4M YoY change)\n  FY2025: $23M ($-4.9M YoY change)"
+          ]
+        },
+        {
+          "claim": "Revenues fell roughly 41% from FY2021 to FY2025, creating ongoing demand and scale risk.",
+          "source": "section:Risk Assessment",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== BYND (BEYOND MEAT, INC.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $465M\n  FY2022: $419M ($-45.8M YoY change)\n  FY2023: $343M ($-75.5M YoY change)\n  FY2024: $326M ($-16.9M YoY change)\n  FY2025: $276M ($-51.0M YoY change)\n\nNetIncome:\n  FY2021: $-182M\n  FY2022: $-366M ($-184.0M YoY change)\n  FY2023: $-338M (+$28.0M YoY change)\n  FY2024: $-160M (+$177.8M YoY change)\n  FY2025: $219M (+$379.3M YoY change)\n\nCash:\n  FY2021: $733M\n  FY2022: $310M ($-423.4M YoY change)\n  FY2023: $190M ($-119.4M YoY change)\n  FY2024: $132M ($-58.6M YoY change)\n  FY2025: $204M (+$72.0M YoY change)\n\nAssets:\n  FY2021: $1,379M\n  FY2022: $1,062M ($-317.2M YoY change)\n  FY2023: $774M ($-287.8M YoY change)\n  FY2024: $678M ($-96.3M YoY change)\n  FY2025: $615M ($-63.4M YoY change)\n\nLongTermDebt:\n  FY2021: $1,130M\n  FY2022: $1,134M (+$3.9M YoY change)\n  FY2023: $1,138M (+$3.9M YoY change)\n  FY2024: $1,141M (+$3.9M YoY change)\n  FY2025: $416M ($-725.7M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-301M\n  FY2022: $-320M ($-18.9M YoY change)\n  FY2023: $-108M (+$212.4M YoY change)\n  FY2024: $-99M (+$9.0M YoY change)\n  FY2025: $-145M ($-46.1M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $67M\n  FY2022: $62M ($-4.7M YoY change)\n  FY2023: $40M ($-22.7M YoY change)\n  FY2024: $28M ($-11.4M YoY change)\n  FY2025: $23M ($-4.9M YoY change)\n\nGrossProfit:\n  FY2021: $117M\n  FY2022: $-24M ($-141.0M YoY change)\n  FY2023: $-83M ($-58.9M YoY change)\n  FY2024: $42M (+$124.4M YoY change)\n  FY2025: $8M ($-34.0M YoY change)",
+            "Revenues contracted from $465M in FY2021 to $276M in FY2025, reflecting sustained demand or market-share pressure.",
+            "Operating cash flow remained negative in FY2025 (-$145.0M), indicating continued dependence on financing or non-operating items despite a reported net profit."
+          ]
+        },
+        {
+          "claim": "Gross profit volatility (negative in FY2022\u2013FY2023 and near\u2011zero in FY2025) highlights margin fragility that could reverse net income gains.",
+          "source": "section:Risk Assessment",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== BYND (BEYOND MEAT, INC.) - Ingested Financial Data ===\n\nGrossProfit:\n  FY2021: $117M\n  FY2022: $-24M ($-141.0M YoY change)\n  FY2023: $-83M ($-58.9M YoY change)\n  FY2024: $42M (+$124.4M YoY change)\n  FY2025: $8M ($-34.0M YoY change)",
+            "Gross profit is very small ($8.0M in FY2025) after prior-year negative gross profit, suggesting margins remain fragile even with reported net income.",
+            "Operating cash flow remained negative in FY2025 (-$145.0M), indicating continued dependence on financing or non-operating items despite a reported net profit."
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "Beyond Meat reported net income of $219.0M in FY2025, a swing to profitability.",
+            "source": "summary"
+          },
+          {
+            "claim": "Long-term debt was reduced to $416.0M by FY2025.",
+            "source": "summary"
+          },
+          {
+            "claim": "Revenue declined from $465M in FY2021 to $276M in FY2025.",
+            "source": "summary"
+          },
+          {
+            "claim": "Operating cash flow was negative $145.0M in FY2025.",
+            "source": "posture"
+          },
+          {
+            "claim": "Cash balance was $204.0M in FY2025, modest versus peer firms with multi\u2011billion dollar cash reserves.",
+            "source": "posture"
+          },
+          {
+            "claim": "Relative to the provided peer set (AMD, Amazon, Meta), Beyond Meat is smaller, cash\u2011constrained, and revenue\u2011compressed.",
+            "source": "posture"
+          },
+          {
+            "claim": "Gross profit was $8.0M in FY2025, indicating very small gross profitability.",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "R&D spending was trimmed to $23.0M in FY2025.",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "Revenues fell roughly 41% from FY2021 to FY2025, creating ongoing demand and scale risk.",
+            "source": "section:Risk Assessment"
+          },
+          {
+            "claim": "Gross profit volatility (negative in FY2022\u2013FY2023 and near\u2011zero in FY2025) highlights margin fragility that could reverse net income gains.",
+            "source": "section:Risk Assessment"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "partial",
+          "overreach_flags": [
+            "peer_set_mismatch: report compares Beyond Meat (consumer food) to AMD, Amazon, Meta (semiconductor/tech/commerce) without industry or scale normalization, reducing validity of direct financial comparisons.",
+            "overstated_turnaround: characterizing FY2025 as a 'clear operational turnaround' overreaches given multi-year revenue decline and materially negative operating cash flow in FY2025.",
+            "cash_conversion_inference: implying sustainable profitability from one-year net income improvement without demonstrating conversion to operating cash flow or revenue stabilization.",
+            "rd_comparison_unadjusted: contrasting absolute R&D spend across heterogeneous industries without scaling (e.g., R&D as % of revenue) or accounting for differing R&D definitions and relevance."
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "LYFT",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\LYFT\\lyft_comparison_bundle.json",
+      "artifact_hash": "507e32bf05a05475194e202b54283cb658b71fc46f33caaa937abe8d66867c22",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": 0.9,
+        "comparative_usefulness": 1.0,
+        "overreach_penalty": 0.25,
+        "overall_score": 0.6426
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "FY2025 net income swung to $2,844M, a YoY improvement of $2,821.2M.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== LYFT (Lyft, Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $3,208M\n  FY2022: $4,095M (+$886.8M YoY change)\n  FY2023: $4,404M (+$308.4M YoY change)\n  FY2024: $5,786M (+$1,382.4M YoY change)\n  FY2025: $6,316M (+$530.2M YoY change)\n\nNetIncome:\n  FY2021: $-1,062M\n  FY2022: $-1,585M ($-522.4M YoY change)\n  FY2023: $-340M (+$1,244.2M YoY change)\n  FY2024: $23M (+$363.1M YoY change)\n  FY2025: $2,844M (+$2,821.2M YoY change)\n\nCash:\n  FY2021: $457M\n  FY2022: $281M ($-176.2M YoY change)\n  FY2023: $559M (+$277.6M YoY change)\n  FY2024: $759M (+$200.7M YoY change)\n  FY2025: $1,132M (+$372.7M YoY change)\n\nAssets:\n  FY2021: $4,774M\n  FY2022: $4,556M ($-217.4M YoY change)\n  FY2023: $4,564M (+$8.0M YoY change)\n  FY2024: $5,435M (+$870.6M YoY change)\n  FY2025: $9,030M (+$3,595.0M YoY change)\n\nLongTermDebt:\n  FY2021: $711M\n  FY2022: $839M (+$128.1M YoY change)\n  FY2023: $865M (+$25.7M YoY change)\n  FY2024: $995M (+$129.9M YoY change)\n  FY2025: $1,053M (+$58.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-102M\n  FY2022: $-237M ($-135.6M YoY change)\n  FY2023: $-98M (+$139.0M YoY change)\n  FY2024: $850M (+$948.0M YoY change)\n  FY2025: $1,168M (+$318.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $912M\n  FY2022: $857M ($-55.2M YoY change)\n  FY2023: $556M ($-300.9M YoY change)\n  FY2024: $397M ($-158.8M YoY change)\n  FY2025: $451M (+$54.4M YoY change)",
+            "Net income swung from $23M in FY2024 to $2,844M in FY2025 (YoY change +$2,821.2M), indicating profit improvement that should be monitored for recurrence and sources."
+          ]
+        },
+        {
+          "claim": "FY2025 operating cash flow was positive at $1,168M.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== LYFT (Lyft, Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $3,208M\n  FY2022: $4,095M (+$886.8M YoY change)\n  FY2023: $4,404M (+$308.4M YoY change)\n  FY2024: $5,786M (+$1,382.4M YoY change)\n  FY2025: $6,316M (+$530.2M YoY change)\n\nNetIncome:\n  FY2021: $-1,062M\n  FY2022: $-1,585M ($-522.4M YoY change)\n  FY2023: $-340M (+$1,244.2M YoY change)\n  FY2024: $23M (+$363.1M YoY change)\n  FY2025: $2,844M (+$2,821.2M YoY change)\n\nCash:\n  FY2021: $457M\n  FY2022: $281M ($-176.2M YoY change)\n  FY2023: $559M (+$277.6M YoY change)\n  FY2024: $759M (+$200.7M YoY change)\n  FY2025: $1,132M (+$372.7M YoY change)\n\nAssets:\n  FY2021: $4,774M\n  FY2022: $4,556M ($-217.4M YoY change)\n  FY2023: $4,564M (+$8.0M YoY change)\n  FY2024: $5,435M (+$870.6M YoY change)\n  FY2025: $9,030M (+$3,595.0M YoY change)\n\nLongTermDebt:\n  FY2021: $711M\n  FY2022: $839M (+$128.1M YoY change)\n  FY2023: $865M (+$25.7M YoY change)\n  FY2024: $995M (+$129.9M YoY change)\n  FY2025: $1,053M (+$58.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-102M\n  FY2022: $-237M ($-135.6M YoY change)\n  FY2023: $-98M (+$139.0M YoY change)\n  FY2024: $850M (+$948.0M YoY change)\n  FY2025: $1,168M (+$318.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $912M\n  FY2022: $857M ($-55.2M YoY change)\n  FY2023: $556M ($-300.9M YoY change)\n  FY2024: $397M ($-158.8M YoY change)\n  FY2025: $451M (+$54.4M YoY change)"
+          ]
+        },
+        {
+          "claim": "FY2025 absolute scale: Revenues $6,316M; Assets $9,030M; Cash $1,132M \u2014 materially smaller than large peers.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== LYFT (Lyft, Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $3,208M\n  FY2022: $4,095M (+$886.8M YoY change)\n  FY2023: $4,404M (+$308.4M YoY change)\n  FY2024: $5,786M (+$1,382.4M YoY change)\n  FY2025: $6,316M (+$530.2M YoY change)\n\nNetIncome:\n  FY2021: $-1,062M\n  FY2022: $-1,585M ($-522.4M YoY change)\n  FY2023: $-340M (+$1,244.2M YoY change)\n  FY2024: $23M (+$363.1M YoY change)\n  FY2025: $2,844M (+$2,821.2M YoY change)\n\nCash:\n  FY2021: $457M\n  FY2022: $281M ($-176.2M YoY change)\n  FY2023: $559M (+$277.6M YoY change)\n  FY2024: $759M (+$200.7M YoY change)\n  FY2025: $1,132M (+$372.7M YoY change)\n\nAssets:\n  FY2021: $4,774M\n  FY2022: $4,556M ($-217.4M YoY change)\n  FY2023: $4,564M (+$8.0M YoY change)\n  FY2024: $5,435M (+$870.6M YoY change)\n  FY2025: $9,030M (+$3,595.0M YoY change)\n\nLongTermDebt:\n  FY2021: $711M\n  FY2022: $839M (+$128.1M YoY change)\n  FY2023: $865M (+$25.7M YoY change)\n  FY2024: $995M (+$129.9M YoY change)\n  FY2025: $1,053M (+$58.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-102M\n  FY2022: $-237M ($-135.6M YoY change)\n  FY2023: $-98M (+$139.0M YoY change)\n  FY2024: $850M (+$948.0M YoY change)\n  FY2025: $1,168M (+$318.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $912M\n  FY2022: $857M ($-55.2M YoY change)\n  FY2023: $556M ($-300.9M YoY change)\n  FY2024: $397M ($-158.8M YoY change)\n  FY2025: $451M (+$54.4M YoY change)",
+            "Lyft's FY2025 revenues ($6,316M) and assets ($9,030M) are an order of magnitude smaller than major peers (e.g., Uber Revenues $52,017M; Assets $61,802M), limiting scale advantages and bargaining power.",
+            "=== UBER (Uber Technologies, Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $17,455M\n  FY2022: $31,877M (+$14,422.0M YoY change)\n  FY2023: $37,281M (+$5,404.0M YoY change)\n  FY2024: $43,978M (+$6,697.0M YoY change)\n  FY2025: $52,017M (+$8,039.0M YoY change)\n\nNetIncome:\n  FY2021: $-496M\n  FY2022: $-9,141M ($-8,645.0M YoY change)\n  FY2023: $1,887M (+$11,028.0M YoY change)\n  FY2024: $9,856M (+$7,969.0M YoY change)\n  FY2025: $10,053M (+$197.0M YoY change)\n\nCash:\n  FY2021: $4,295M\n  FY2022: $4,208M ($-87.0M YoY change)\n  FY2023: $4,680M (+$472.0M YoY change)\n  FY2024: $5,893M (+$1,213.0M YoY change)\n  FY2025: $7,105M (+$1,212.0M YoY change)\n\nAssets:\n  FY2021: $38,774M\n  FY2022: $32,109M ($-6,665.0M YoY change)\n  FY2023: $38,699M (+$6,590.0M YoY change)\n  FY2024: $51,244M (+$12,545.0M YoY change)\n  FY2025: $61,802M (+$10,558.0M YoY change)\n\nLongTermDebt:\n  FY2021: $9,276M\n  FY2022: $9,265M ($-11.0M YoY change)\n  FY2023: $9,459M (+$194.0M YoY change)\n  FY2024: $8,347M ($-1,112.0M YoY change)\n  FY2025: $10,600M (+$2,253.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-445M\n  FY2022: $642M (+$1,087.0M YoY change)\n  FY2023: $3,585M (+$2,943.0M YoY change)\n  FY2024: $7,137M (+$3,552.0M YoY change)\n  FY2025: $10,099M (+$2,962.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,054M\n  FY2022: $2,798M (+$744.0M YoY change)\n  FY2023: $3,164M (+$366.0M YoY change)\n  FY2024: $3,109M ($-55.0M YoY change)\n  FY2025: $3,402M (+$293.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Long-term debt was $1,053M in FY2025, remaining low in absolute terms and supporting balance-sheet flexibility.",
+          "source": "posture",
+          "label": "partially_supported",
+          "evidence_snippets": [
+            "=== LYFT (Lyft, Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $3,208M\n  FY2022: $4,095M (+$886.8M YoY change)\n  FY2023: $4,404M (+$308.4M YoY change)\n  FY2024: $5,786M (+$1,382.4M YoY change)\n  FY2025: $6,316M (+$530.2M YoY change)\n\nNetIncome:\n  FY2021: $-1,062M\n  FY2022: $-1,585M ($-522.4M YoY change)\n  FY2023: $-340M (+$1,244.2M YoY change)\n  FY2024: $23M (+$363.1M YoY change)\n  FY2025: $2,844M (+$2,821.2M YoY change)\n\nCash:\n  FY2021: $457M\n  FY2022: $281M ($-176.2M YoY change)\n  FY2023: $559M (+$277.6M YoY change)\n  FY2024: $759M (+$200.7M YoY change)\n  FY2025: $1,132M (+$372.7M YoY change)\n\nAssets:\n  FY2021: $4,774M\n  FY2022: $4,556M ($-217.4M YoY change)\n  FY2023: $4,564M (+$8.0M YoY change)\n  FY2024: $5,435M (+$870.6M YoY change)\n  FY2025: $9,030M (+$3,595.0M YoY change)\n\nLongTermDebt:\n  FY2021: $711M\n  FY2022: $839M (+$128.1M YoY change)\n  FY2023: $865M (+$25.7M YoY change)\n  FY2024: $995M (+$129.9M YoY change)\n  FY2025: $1,053M (+$58.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-102M\n  FY2022: $-237M ($-135.6M YoY change)\n  FY2023: $-98M (+$139.0M YoY change)\n  FY2024: $850M (+$948.0M YoY change)\n  FY2025: $1,168M (+$318.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $912M\n  FY2022: $857M ($-55.2M YoY change)\n  FY2023: $556M ($-300.9M YoY change)\n  FY2024: $397M ($-158.8M YoY change)\n  FY2025: $451M (+$54.4M YoY change)",
+            "Although cash increased to $1,132M in FY2025, Lyft's cash balance remains materially below peers (e.g., Uber $7,105M; Meta $35,873M), which could constrain strategic optionality.",
+            "=== UBER (Uber Technologies, Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $17,455M\n  FY2022: $31,877M (+$14,422.0M YoY change)\n  FY2023: $37,281M (+$5,404.0M YoY change)\n  FY2024: $43,978M (+$6,697.0M YoY change)\n  FY2025: $52,017M (+$8,039.0M YoY change)\n\nNetIncome:\n  FY2021: $-496M\n  FY2022: $-9,141M ($-8,645.0M YoY change)\n  FY2023: $1,887M (+$11,028.0M YoY change)\n  FY2024: $9,856M (+$7,969.0M YoY change)\n  FY2025: $10,053M (+$197.0M YoY change)\n\nCash:\n  FY2021: $4,295M\n  FY2022: $4,208M ($-87.0M YoY change)\n  FY2023: $4,680M (+$472.0M YoY change)\n  FY2024: $5,893M (+$1,213.0M YoY change)\n  FY2025: $7,105M (+$1,212.0M YoY change)\n\nAssets:\n  FY2021: $38,774M\n  FY2022: $32,109M ($-6,665.0M YoY change)\n  FY2023: $38,699M (+$6,590.0M YoY change)\n  FY2024: $51,244M (+$12,545.0M YoY change)\n  FY2025: $61,802M (+$10,558.0M YoY change)\n\nLongTermDebt:\n  FY2021: $9,276M\n  FY2022: $9,265M ($-11.0M YoY change)\n  FY2023: $9,459M (+$194.0M YoY change)\n  FY2024: $8,347M ($-1,112.0M YoY change)\n  FY2025: $10,600M (+$2,253.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-445M\n  FY2022: $642M (+$1,087.0M YoY change)\n  FY2023: $3,585M (+$2,943.0M YoY change)\n  FY2024: $7,137M (+$3,552.0M YoY change)\n  FY2025: $10,099M (+$2,962.0M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $2,054M\n  FY2022: $2,798M (+$744.0M YoY change)\n  FY2023: $3,164M (+$366.0M YoY change)\n  FY2024: $3,109M ($-55.0M YoY change)\n  FY2025: $3,402M (+$293.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "The durability of FY2025 profitability and OCF improvement is uncertain; results could reflect structural margin gains, cyclical recovery, or one-time items, so monitoring recurring margins and cash conversion is critical.",
+          "source": "section:Risk Assessment",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== LYFT (Lyft, Inc.) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $3,208M\n  FY2022: $4,095M (+$886.8M YoY change)\n  FY2023: $4,404M (+$308.4M YoY change)\n  FY2024: $5,786M (+$1,382.4M YoY change)\n  FY2025: $6,316M (+$530.2M YoY change)\n\nNetIncome:\n  FY2021: $-1,062M\n  FY2022: $-1,585M ($-522.4M YoY change)\n  FY2023: $-340M (+$1,244.2M YoY change)\n  FY2024: $23M (+$363.1M YoY change)\n  FY2025: $2,844M (+$2,821.2M YoY change)\n\nCash:\n  FY2021: $457M\n  FY2022: $281M ($-176.2M YoY change)\n  FY2023: $559M (+$277.6M YoY change)\n  FY2024: $759M (+$200.7M YoY change)\n  FY2025: $1,132M (+$372.7M YoY change)\n\nAssets:\n  FY2021: $4,774M\n  FY2022: $4,556M ($-217.4M YoY change)\n  FY2023: $4,564M (+$8.0M YoY change)\n  FY2024: $5,435M (+$870.6M YoY change)\n  FY2025: $9,030M (+$3,595.0M YoY change)\n\nLongTermDebt:\n  FY2021: $711M\n  FY2022: $839M (+$128.1M YoY change)\n  FY2023: $865M (+$25.7M YoY change)\n  FY2024: $995M (+$129.9M YoY change)\n  FY2025: $1,053M (+$58.0M YoY change)\n\nOperatingCashFlow:\n  FY2021: $-102M\n  FY2022: $-237M ($-135.6M YoY change)\n  FY2023: $-98M (+$139.0M YoY change)\n  FY2024: $850M (+$948.0M YoY change)\n  FY2025: $1,168M (+$318.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $912M\n  FY2022: $857M ($-55.2M YoY change)\n  FY2023: $556M ($-300.9M YoY change)\n  FY2024: $397M ($-158.8M YoY change)\n  FY2025: $451M (+$54.4M YoY change)",
+            "Net income swung from $23M in FY2024 to $2,844M in FY2025 (YoY change +$2,821.2M), indicating profit improvement that should be monitored for recurrence and sources.",
+            "Although cash increased to $1,132M in FY2025, Lyft's cash balance remains materially below peers (e.g., Uber $7,105M; Meta $35,873M), which could constrain strategic optionality."
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "FY2025 net income swung to $2,844M, a YoY improvement of $2,821.2M.",
+            "source": "summary"
+          },
+          {
+            "claim": "FY2025 operating cash flow was positive at $1,168M.",
+            "source": "summary"
+          },
+          {
+            "claim": "FY2025 absolute scale: Revenues $6,316M; Assets $9,030M; Cash $1,132M \u2014 materially smaller than large peers.",
+            "source": "summary"
+          },
+          {
+            "claim": "Long-term debt was $1,053M in FY2025, remaining low in absolute terms and supporting balance-sheet flexibility.",
+            "source": "posture"
+          },
+          {
+            "claim": "The durability of FY2025 profitability and OCF improvement is uncertain; results could reflect structural margin gains, cyclical recovery, or one-time items, so monitoring recurring margins and cash conversion is critical.",
+            "source": "section:Risk Assessment"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "strong",
+          "overreach_flags": [
+            "Attributes FY2025 profitability and OCF turnaround as 'driven by' the net-income swing without separating recurring operating improvements from potential one-time items or non\u2011operating gains.",
+            "Describes Lyft's leverage as 'comparatively conservative' based on absolute long-term debt levels rather than normalized leverage metrics (e.g., debt/EBITDA, debt/assets), which can be misleading given scale differences.",
+            "Infers constrained competitive flexibility vs. large-cap peers principally from smaller revenue/assets/cash without accounting for differences in business model, margin profile, or capital allocation strategies.",
+            "Implies Lyft's cash position may limit M&A or resilience to downturns without analyzing alternative liquidity sources (credit facilities, near-term free cash flow) or stress scenarios.",
+            "Assigns 'high' confidence to sustainability of net income/OCF improvements despite limited evidence isolating recurring operational drivers versus one-offs."
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "SNAP",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\SNAP\\snap_comparison_bundle.json",
+      "artifact_hash": "05a28ac1d180b521a1c55f8bd09c80ce0f9ba02b8215b4e8afdc5db3cccf8c33",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": 1.0,
+        "comparative_usefulness": 0.5,
+        "overreach_penalty": 0.3,
+        "overall_score": 0.5426
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [
+        {
+          "claim": "Revenue grew from $4,117M in FY2021 to $5,931M in FY2025.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)"
+          ]
+        },
+        {
+          "claim": "Snap remained unprofitable with a GAAP net loss of $-460M in FY2025.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)",
+            "Company remains unprofitable in FY2025 (net loss $-460M) despite steady improvement from FY2022 levels."
+          ]
+        },
+        {
+          "claim": "Cash and equivalents were $1,030M in FY2025.",
+          "source": "summary",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)",
+            "Cash declined to $1,030M in FY2025 while operating needs and R&D remain material, leaving limited liquidity buffer."
+          ]
+        },
+        {
+          "claim": "Revenue increased by $1,814M from FY2021 to FY2025.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)"
+          ]
+        },
+        {
+          "claim": "FY2025 revenue rose $570M year-over-year.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "Revenues:\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)"
+          ]
+        },
+        {
+          "claim": "Long-term debt of $3,537M represented roughly 46% of FY2025 total assets.",
+          "source": "posture",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)",
+            "Long-term debt of $3,537M against total assets of $7,678M yields a high debt-to-assets posture relative to the company's scale."
+          ]
+        },
+        {
+          "claim": "Operating cash flow increased from $293M in FY2021 to $656M in FY2025.",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)"
+          ]
+        },
+        {
+          "claim": "R&D expense was $1,794M in FY2025.",
+          "source": "section:Financial Performance",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)"
+          ]
+        },
+        {
+          "claim": "FY2025 cash of $1,030M provides a modest liquidity buffer relative to operating needs and R&D outlays.",
+          "source": "section:Risk Assessment",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)",
+            "Cash declined to $1,030M in FY2025 while operating needs and R&D remain material, leaving limited liquidity buffer.",
+            "Company remains unprofitable in FY2025 (net loss $-460M) despite steady improvement from FY2022 levels."
+          ]
+        },
+        {
+          "claim": "Compared with peers like Meta and Apple, Snap lacked similar scale of profitability and cash reserves in FY2025.",
+          "source": "section:Risk Assessment",
+          "label": "supported",
+          "evidence_snippets": [
+            "=== SNAP (Snap Inc) - Ingested Financial Data ===\n\nRevenues:\n  FY2021: $4,117M\n  FY2022: $4,602M (+$484.8M YoY change)\n  FY2023: $4,606M (+$4.3M YoY change)\n  FY2024: $5,361M (+$755.3M YoY change)\n  FY2025: $5,931M (+$570.0M YoY change)\n\nNetIncome:\n  FY2021: $-488M\n  FY2022: $-1,430M ($-941.7M YoY change)\n  FY2023: $-1,322M (+$107.2M YoY change)\n  FY2024: $-698M (+$624.6M YoY change)\n  FY2025: $-460M (+$237.4M YoY change)\n\nCash:\n  FY2021: $1,994M\n  FY2022: $1,423M ($-570.7M YoY change)\n  FY2023: $1,780M (+$357.3M YoY change)\n  FY2024: $1,047M ($-733.9M YoY change)\n  FY2025: $1,030M ($-16.1M YoY change)\n\nAssets:\n  FY2021: $7,536M\n  FY2022: $8,030M (+$493.2M YoY change)\n  FY2023: $7,968M ($-61.8M YoY change)\n  FY2024: $7,936M ($-31.4M YoY change)\n  FY2025: $7,678M ($-258.6M YoY change)\n\nLongTermDebt:\n  FY2021: $2,253M\n  FY2022: $3,743M (+$1,489.4M YoY change)\n  FY2023: $3,749M (+$6.9M YoY change)\n  FY2024: $3,644M ($-105.5M YoY change)\n  FY2025: $3,537M ($-107.1M YoY change)\n\nOperatingCashFlow:\n  FY2021: $293M\n  FY2022: $185M ($-108.3M YoY change)\n  FY2023: $247M (+$61.9M YoY change)\n  FY2024: $413M (+$167.0M YoY change)\n  FY2025: $656M (+$242.7M YoY change)\n\nResearchAndDevelopment:\n  FY2021: $1,565M\n  FY2022: $2,110M (+$544.3M YoY change)\n  FY2023: $1,911M ($-198.9M YoY change)\n  FY2024: $1,692M ($-219.2M YoY change)\n  FY2025: $1,794M (+$101.9M YoY change)",
+            "Cash declined to $1,030M in FY2025 while operating needs and R&D remain material, leaving limited liquidity buffer.",
+            "Company remains unprofitable in FY2025 (net loss $-460M) despite steady improvement from FY2022 levels."
+          ]
+        }
+      ],
+      "judge_metadata": {
+        "claims": [
+          {
+            "claim": "Revenue grew from $4,117M in FY2021 to $5,931M in FY2025.",
+            "source": "summary"
+          },
+          {
+            "claim": "Snap remained unprofitable with a GAAP net loss of $-460M in FY2025.",
+            "source": "summary"
+          },
+          {
+            "claim": "Cash and equivalents were $1,030M in FY2025.",
+            "source": "summary"
+          },
+          {
+            "claim": "Revenue increased by $1,814M from FY2021 to FY2025.",
+            "source": "posture"
+          },
+          {
+            "claim": "FY2025 revenue rose $570M year-over-year.",
+            "source": "posture"
+          },
+          {
+            "claim": "Long-term debt of $3,537M represented roughly 46% of FY2025 total assets.",
+            "source": "posture"
+          },
+          {
+            "claim": "Operating cash flow increased from $293M in FY2021 to $656M in FY2025.",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "R&D expense was $1,794M in FY2025.",
+            "source": "section:Financial Performance"
+          },
+          {
+            "claim": "FY2025 cash of $1,030M provides a modest liquidity buffer relative to operating needs and R&D outlays.",
+            "source": "section:Risk Assessment"
+          },
+          {
+            "claim": "Compared with peers like Meta and Apple, Snap lacked similar scale of profitability and cash reserves in FY2025.",
+            "source": "section:Risk Assessment"
+          }
+        ],
+        "report_judgement": {
+          "comparative_usefulness": "partial",
+          "overreach_flags": [
+            "Assertion of 'long_term_debt_increases' for SNAP lacks provided historical trend data for SNAP.",
+            "Assertion of 'increasing_R&D_spend' for SNAP lacks historical R&D figures for SNAP.",
+            "Labeling liquidity as 'limited' relies solely on cash balance without disclosed credit facilities, short\u2011term investments, or debt maturities.",
+            "Comparisons to very large peers (Apple, Meta) are presented in absolute terms without normalization for scale (e.g., margins, ratios, per\u2011user or % of assets), which can overstate competitive disadvantages.",
+            "Leverage concern (debt vs assets) is noted without context on interest coverage, debt maturity schedule, or covenant/refinancing terms.",
+            "Suggestion that improved operating cash flow will necessarily convert into sustained GAAP profitability is not supported by detailed expense, margin, or forward guidance analysis."
+          ]
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "ticker": "AAPL",
+      "agentic_score": 0.2389,
+      "baseline_score": 0.6759,
+      "score_delta": -0.437,
+      "agentic_wins": [
+        "evidence_coverage"
+      ],
+      "baseline_wins": [
+        "claim_support",
+        "comparative_usefulness",
+        "overall_score"
+      ],
+      "ties": [
+        "deterministic_consistency"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "agentic_score": 0.5139,
+      "baseline_score": 0.6093,
+      "score_delta": -0.0954,
+      "agentic_wins": [
+        "evidence_coverage"
+      ],
+      "baseline_wins": [
+        "claim_support",
+        "comparative_usefulness",
+        "overall_score"
+      ],
+      "ties": [
+        "deterministic_consistency"
+      ]
+    },
+    {
+      "ticker": "BYND",
+      "agentic_score": 0.4,
+      "baseline_score": 0.6426,
+      "score_delta": -0.2426,
+      "agentic_wins": [
+        "evidence_coverage"
+      ],
+      "baseline_wins": [
+        "claim_support",
+        "overall_score"
+      ],
+      "ties": [
+        "deterministic_consistency",
+        "comparative_usefulness"
+      ]
+    },
+    {
+      "ticker": "LYFT",
+      "agentic_score": 0.4037,
+      "baseline_score": 0.6426,
+      "score_delta": -0.2389,
+      "agentic_wins": [
+        "evidence_coverage"
+      ],
+      "baseline_wins": [
+        "deterministic_consistency",
+        "claim_support",
+        "comparative_usefulness",
+        "overall_score"
+      ],
+      "ties": []
+    },
+    {
+      "ticker": "SNAP",
+      "agentic_score": 0.4778,
+      "baseline_score": 0.5426,
+      "score_delta": -0.0648,
+      "agentic_wins": [
+        "evidence_coverage"
+      ],
+      "baseline_wins": [
+        "claim_support",
+        "overall_score"
+      ],
+      "ties": [
+        "deterministic_consistency",
+        "comparative_usefulness"
+      ]
+    }
+  ]
+}

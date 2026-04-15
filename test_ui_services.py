@@ -15,6 +15,7 @@ from ui.services import (
     list_saved_report_artifacts,
     load_saved_report_artifact,
     rebuild_faiss_index,
+    run_baseline_rag_for_ui,
 )
 
 
@@ -323,6 +324,72 @@ class UIServicesTests(unittest.TestCase):
 
         with self.assertRaises(RuntimeError):
             rebuild_faiss_index(repo_root=repo_root)
+
+    def test_run_baseline_rag_for_ui_returns_artifact(self) -> None:
+        repo_root = self._make_temp_dir("baseline_ui")
+        ticker = "TEST"
+        ingestion_path = repo_root / "data-ingestion" / "outputs" / ticker / "complete_ingestion.json"
+        peer_path = repo_root / "data-ingestion" / "outputs" / "PEER" / "complete_ingestion.json"
+        ingestion_path.parent.mkdir(parents=True, exist_ok=True)
+        peer_path.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "ticker": ticker,
+            "company_name": "Test Corp",
+            "financial_data": {
+                "annual": {
+                    "Revenues": {
+                        "years": [2024, 2025],
+                        "values": [100.0, 110.0],
+                        "deltas": [None, 10.0],
+                        "unit": "USD_millions",
+                    }
+                }
+            },
+            "text_data": {"filings": [{"filingDate": "2025-10-31", "sections": {"item_7_mda": "Growth"}}]},
+        }
+        ingestion_path.write_text(json.dumps(payload), encoding="utf-8")
+        peer_path.write_text(json.dumps({**payload, "ticker": "PEER", "company_name": "Peer Corp"}), encoding="utf-8")
+
+        class FakeClient:
+            def complete_json(self, *, system_prompt: str, user_prompt: str):
+                return (
+                    {
+                        "status": "completed",
+                        "summary": "Baseline ready.",
+                        "posture": {"label": "Mixed", "rationale_bullets": ["Stable trend"]},
+                        "target_profile": {"ticker": ticker, "company": "Test Corp", "filing_year": 2025, "positive_deltas": [], "negative_deltas": [], "top_risks": []},
+                        "peer_snapshot": {"peer_group": "Peers", "common_strengths": [], "common_pressures": [], "shared_risk_types": [], "target_differences": []},
+                        "risk_overlap_rows": [],
+                        "forward_watchlist": [],
+                        "narrative_sections": [{"title": "Financial Performance", "content": "OK"}, {"title": "Risk Assessment", "content": "OK"}],
+                        "error": None,
+                    },
+                    "test-model",
+                )
+
+        from unittest.mock import patch
+        import numpy as np
+
+        with patch("baseline_rag.indexer.load_vector_matrix") as load_vector_matrix, patch(
+            "baseline_rag.matcher.embed_texts"
+        ) as matcher_embed, patch("ui.services.run_baseline_rag") as service_runner:
+            load_vector_matrix.return_value = (
+                np.asarray([[1.0, 0.0], [0.9, 0.1]], dtype="float32"),
+                [
+                    {"ticker": ticker, "company": "Test Corp", "latest_filing_year": 2025, "source_path": str(ingestion_path.resolve()), "modified_time": ingestion_path.stat().st_mtime},
+                    {"ticker": "PEER", "company": "Peer Corp", "latest_filing_year": 2025, "source_path": str(peer_path.resolve()), "modified_time": peer_path.stat().st_mtime},
+                ],
+            )
+            matcher_embed.return_value = np.asarray([[1.0, 0.0]], dtype="float32")
+
+            from baseline_rag.pipeline import run_baseline_rag
+
+            service_runner.side_effect = lambda *args, **kwargs: run_baseline_rag(*args, client=FakeClient(), **kwargs)
+            artifact = run_baseline_rag_for_ui(ticker, repo_root=repo_root)
+
+        self.assertEqual(artifact.schema_version, "baseline_rag_v1")
+        self.assertEqual(artifact.bundle.target.ticker, ticker)
+        self.assertEqual(artifact.comparison_report.status, "completed")
 
 
 if __name__ == "__main__":

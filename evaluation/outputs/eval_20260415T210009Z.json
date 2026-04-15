@@ -1,0 +1,281 @@
+{
+  "schema_version": "evaluation_batch_v1",
+  "run_name": "eval_20260415T210009Z",
+  "created_at": "2026-04-15T21:00:09.295876+00:00",
+  "results": [
+    {
+      "ticker": "AAPL",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\AAPL\\aapl_comparison_bundle.json",
+      "artifact_hash": "f964f646658eea13d0d3949822ee1ca10e996d01bf456c2ad83a143ee3b384a3",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 1.0
+      },
+      "warnings": [
+        "PLTR has only 2 curator year(s) from 2025 onward."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "AMD",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\AMD\\amd_comparison_bundle.json",
+      "artifact_hash": "54a9064ac2dd067b3069ee7a8747c5776ab44b5623e13e16517dea92b11e7979",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 1.0
+      },
+      "warnings": [
+        "BYND has only 1 curator year(s) from 2026 onward."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "BYND",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\BYND\\bynd_comparison_bundle.json",
+      "artifact_hash": "16dc8ed8153702bc6070240e92c60ff67d232a471f37761a3ef1ce00983c5e1e",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 1.0
+      },
+      "warnings": [
+        "PLTR has only 1 curator year(s) from 2026 onward."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "LYFT",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\LYFT\\lyft_comparison_bundle.json",
+      "artifact_hash": "277d277186f5a9a1f815eb7bf49fb03e4249fb6205735f41398cea09ff370d19",
+      "component_scores": {
+        "deterministic_consistency": 0.8333,
+        "evidence_coverage": 1.0,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 0.9074
+      },
+      "warnings": [
+        "QCOM has only 1 curator year(s) from 2025 onward.",
+        "META has only 2 curator year(s) from 2024 onward.",
+        "Elevated posture is not supported by the current deterministic facts."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "SNAP",
+      "pipeline": "agentic",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\orchestration\\outputs\\SNAP\\snap_comparison_bundle.json",
+      "artifact_hash": "3ac9edb9dc46dd62ce44d8972ebf315c512272bebbbd87c7f26e6c72b6fb922c",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 1.0,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 1.0
+      },
+      "warnings": [
+        "CRM has only 1 curator year(s) from 2026 onward."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "AAPL",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\AAPL\\aapl_comparison_bundle.json",
+      "artifact_hash": "78b001ce7366ad0464dbe9f94ceacfa1ef0ac25031d731445d2a123744788e4d",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 0.8519
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "AMD",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\AMD\\amd_comparison_bundle.json",
+      "artifact_hash": "e868915cfe9c67d4d00e3ce21b850812db56e40ac1b9c9362ee4928527af011e",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 0.8519
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "BYND",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\BYND\\bynd_comparison_bundle.json",
+      "artifact_hash": "35fd3ca9d300f8b5b2c0778e22fb197ee30bb5b3e17c4ed1597582e8137471c8",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 0.8519
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "LYFT",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\LYFT\\lyft_comparison_bundle.json",
+      "artifact_hash": "507e32bf05a05475194e202b54283cb658b71fc46f33caaa937abe8d66867c22",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 0.8519
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    },
+    {
+      "ticker": "SNAP",
+      "pipeline": "baseline",
+      "schema_version": "evaluation_v1",
+      "artifact_path": "D:\\NEU\\CS6180 GenAI\\Project\\baseline_rag\\outputs\\SNAP\\snap_comparison_bundle.json",
+      "artifact_hash": "05a28ac1d180b521a1c55f8bd09c80ce0f9ba02b8215b4e8afdc5db3cccf8c33",
+      "component_scores": {
+        "deterministic_consistency": 1.0,
+        "evidence_coverage": 0.6667,
+        "claim_support": null,
+        "comparative_usefulness": null,
+        "overreach_penalty": 0.0,
+        "overall_score": 0.8519
+      },
+      "warnings": [
+        "Narrative sections do not carry explicit citations."
+      ],
+      "claim_assessments": [],
+      "judge_metadata": {}
+    }
+  ],
+  "comparisons": [
+    {
+      "ticker": "AAPL",
+      "agentic_score": 1.0,
+      "baseline_score": 0.8519,
+      "score_delta": 0.1481,
+      "agentic_wins": [
+        "evidence_coverage",
+        "overall_score"
+      ],
+      "baseline_wins": [],
+      "ties": [
+        "deterministic_consistency"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "agentic_score": 1.0,
+      "baseline_score": 0.8519,
+      "score_delta": 0.1481,
+      "agentic_wins": [
+        "evidence_coverage",
+        "overall_score"
+      ],
+      "baseline_wins": [],
+      "ties": [
+        "deterministic_consistency"
+      ]
+    },
+    {
+      "ticker": "BYND",
+      "agentic_score": 1.0,
+      "baseline_score": 0.8519,
+      "score_delta": 0.1481,
+      "agentic_wins": [
+        "evidence_coverage",
+        "overall_score"
+      ],
+      "baseline_wins": [],
+      "ties": [
+        "deterministic_consistency"
+      ]
+    },
+    {
+      "ticker": "LYFT",
+      "agentic_score": 0.9074,
+      "baseline_score": 0.8519,
+      "score_delta": 0.0555,
+      "agentic_wins": [
+        "evidence_coverage",
+        "overall_score"
+      ],
+      "baseline_wins": [
+        "deterministic_consistency"
+      ],
+      "ties": []
+    },
+    {
+      "ticker": "SNAP",
+      "agentic_score": 1.0,
+      "baseline_score": 0.8519,
+      "score_delta": 0.1481,
+      "agentic_wins": [
+        "evidence_coverage",
+        "overall_score"
+      ],
+      "baseline_wins": [],
+      "ties": [
+        "deterministic_consistency"
+      ]
+    }
+  ]
+}

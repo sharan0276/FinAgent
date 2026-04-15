@@ -1,0 +1,217 @@
+{
+  "schema_version": "baseline_rag_v1",
+  "bundle": {
+    "target": {
+      "ticker": "AMD",
+      "company": "ADVANCED MICRO DEVICES INC",
+      "latest_filing_year": 2026,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\AMD\\complete_ingestion.json",
+      "extraction_path": null,
+      "curator_path": null
+    },
+    "matches": [
+      {
+        "ticker": "NVDA",
+        "company": "NVIDIA CORP",
+        "matched_filing_year": 2026,
+        "similarity": 0.7571,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "AMZN",
+        "company": "AMAZON COM INC",
+        "matched_filing_year": 2026,
+        "similarity": 0.7262,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "MSFT",
+        "company": "MICROSOFT CORP",
+        "matched_filing_year": 2025,
+        "similarity": 0.7156,
+        "context_curator_paths": []
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:43:22.467063+00:00",
+      "status_by_step": {
+        "load_target": "completed",
+        "flatten_target": "completed",
+        "build_baseline_index": "skipped_existing",
+        "find_peers": "completed",
+        "load_peers": "completed",
+        "llm_call": "completed",
+        "parse_report": "completed"
+      },
+      "warnings": []
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "AMD shows a pronounced recovery and acceleration into FY2025 with double\u2011digit revenue and net income growth and materially higher operating cash flow; however it remains much smaller in scale and margin than top peers (NVIDIA, Microsoft, Amazon) and has seen increases in long\u2011term debt since FY2021. The company\u2019s rising R&D and cash generation are strengths, while relative scale, margin gap to the leader (NVIDIA) and a stepped-up debt profile are primary watch items.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Mixed",
+      "rationale_bullets": [
+        "FY2025 revenue and net income surged (revenues +34.3% YoY, net income +164.2% YoY) and operating cash flow more than doubled, indicating strong operational recovery.",
+        "R&D investment is increasing (FY2025 R&D +25.3% YoY) supporting product roadmap, but AMD remains materially smaller in absolute revenue and assets vs peers.",
+        "Long\u2011term debt rose from $1M (FY2021) to $2,348M (FY2025), a meaningful change in leverage profile that warrants monitoring."
+      ]
+    },
+    "target_profile": {
+      "ticker": "AMD",
+      "company": "ADVANCED MICRO DEVICES INC",
+      "filing_year": 2025,
+      "positive_deltas": [
+        {
+          "metric": "Revenue growth FY2025 YoY",
+          "label": "Revenue growth %",
+          "value": 34.347
+        },
+        {
+          "metric": "Operating cash flow growth FY2025 YoY",
+          "label": "OCF growth %",
+          "value": 153.589
+        },
+        {
+          "metric": "R&D spend growth FY2025 YoY",
+          "label": "R&D growth %",
+          "value": 25.328
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "Revenue vs NVDA FY2025 (absolute)",
+          "label": "Revenue gap vs NVDA (USD millions)",
+          "value": -95858.0
+        },
+        {
+          "metric": "Net income margin difference vs NVDA FY2025 (percentage points)",
+          "label": "Net income margin gap (pp)",
+          "value": -43.344
+        },
+        {
+          "metric": "Long-term debt increase since FY2021",
+          "label": "Debt increase (USD millions)",
+          "value": 2347.0
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "Competition / Market share",
+          "severity": "high",
+          "section": "Context: peer scale and margins",
+          "summary": "AMD remains materially smaller in revenue and net margin than leading peers (e.g., NVDA FY2025 revenue $130,497M and margin ~55.9%), creating competitive pressure on pricing and market share.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Leverage / Balance sheet change",
+          "severity": "medium",
+          "section": "Context: long\u2011term debt trajectory",
+          "summary": "Long\u2011term debt increased from $1M in FY2021 to $2,348M in FY2025, indicating a meaningful change in leverage compared with historical levels.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Revenue concentration / demand cyclicality",
+          "severity": "medium",
+          "section": "Context: semiconductor cycle and data center demand",
+          "summary": "FY2025 growth appears linked to strengthening end\u2011market demand (datacenter/AI), which can be volatile and concentrated across a few customers and product cycles.",
+          "citation": null,
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Large-cap technology and semiconductor peers (NVIDIA, Amazon, Microsoft) used for scale, margin and R&D benchmarks",
+      "common_strengths": [
+        "High R&D investment supporting product leadership (peers: NVDA and MSFT show multi\u2011billion FY2025 R&D spend).",
+        "Strong operating cash flow generation across peers (NVDA and MSFT large OCF increases in FY2024\u2013FY2026).",
+        "Material revenue scale and margin expansion for leading peer NVDA in FY2024\u2013FY2026."
+      ],
+      "common_pressures": [
+        "Cyclicality in demand for semiconductors and datacenter products (large YoY swings in revenues/net income).",
+        "Capital intensity and continued high R&D spend required to compete.",
+        "Exposure to supply chain and concentration risks tied to large data center customers and AI demand cycles."
+      ],
+      "shared_risk_types": [
+        "Competition",
+        "Supply chain / manufacturing constraints",
+        "Capital intensity / R&D spend",
+        "Demand cyclicality"
+      ],
+      "target_differences": [
+        "AMD is significantly smaller in absolute revenue, assets and cash than peers (FY2025 revenue $34,639M vs NVDA $130,497M, MSFT $281,724M, AMZN $716,924M).",
+        "AMD posted strong percent growth in FY2025 but lags peers on net income margin versus NVDA and MSFT.",
+        "AMD\u2019s long\u2011term debt level remains modest in absolute terms relative to Amazon and Microsoft but represents a clear increase versus its FY2021 baseline."
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "Competition",
+          "Supply chain",
+          "Capital intensity / R&D"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "Marked increase in long\u2011term debt since FY2021"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "Hyper-scale concentration risk (peer revenues >> AMD, creating winner\u2011take\u2011most dynamics)"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "AI/datacenter demand concentration",
+        "why_relevant": "FY2025 growth aligns with large uptick in datacenter/AI spending across the sector; a slowdown would disproportionately impact AMD's recent revenue acceleration.",
+        "peer_evidence": [
+          "NVDA FY2025 revenue jumped by $69,575M to $130,497M (large AI/dc demand signal).",
+          "AMD FY2025 revenue rose $8,854M to $34,639M (company reliant on the same end markets)."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "Margin compression relative to market leaders",
+        "why_relevant": "AMD\u2019s FY2025 net income margin (~12.5%) is substantially below NVDA (~55.9%) and MSFT (~36.1%), limiting free cash flow conversion at scale.",
+        "peer_evidence": [
+          "AMD FY2025 net income $4,335M on revenues $34,639M (12.52% margin).",
+          "NVDA FY2025 net income $72,880M on revenues $130,497M (55.86% margin).",
+          "MSFT FY2025 net income $101,832M on revenues $281,724M (36.14% margin)."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "Leverage and balance sheet flexibility",
+        "why_relevant": "Long\u2011term debt increased materially from FY2021 to FY2025 and should be monitored against cash and operating cash flow trends.",
+        "peer_evidence": [
+          "AMD long\u2011term debt rose to $2,348M in FY2025 from $1M in FY2021 (+$2,347M).",
+          "AMD operating cash flow increased to $7,709M in FY2025, improving capacity to service debt, but the change in leverage is notable."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Financial Performance",
+        "content": "AMD delivered a strong fiscal year in 2025: revenues increased to $34,639M (up $8,854M, +34.3% YoY) and net income rose to $4,335M (up $2,694M YoY). Operating cash flow more than doubled to $7,709M in FY2025 (up $4,668M YoY), signaling improved cash conversion alongside higher sales. Gross profit also expanded to $17,152M in FY2025 (up $4,427M YoY), supporting margin recovery versus prior years.\n\nR&D spending remains a clear priority, increasing to $8,091M in FY2025 (up 25.3% YoY), which supports product development but keeps operating leverage pressure until scale advantages materialize. Balance sheet composition shows assets rose to $76,926M in FY2025 and cash of $5,539M, while long\u2011term debt increased to $2,348M from $1M in FY2021 \u2014 an absolute level still modest versus mega\u2011cap peers but a meaningful change from AMD\u2019s recent history.",
+        "citations": []
+      },
+      {
+        "title": "Risk Assessment",
+        "content": "Competition and scale are principal risks. While AMD is growing rapidly in FY2025, it remains significantly smaller than NVDA, MSFT, and AMZN in absolute revenue, assets and margins \u2014 for example NVDA\u2019s FY2025 revenue and net income ($130,497M and $72,880M) produce a materially higher net margin (~55.9%) than AMD (~12.5%). This scale differential can pressure pricing, customer mix and bargaining power in key markets such as datacenter GPUs and enterprise CPUs.\n\nOperationally, AMD\u2019s stepped increase in long\u2011term debt (to $2,348M) combined with higher R&D spend increases fixed commitments; on the positive side, operating cash flow growth to $7,709M provides improving coverage. The company is exposed to the same demand cyclicality and supply chain pressures as peers; given the concentration of AI/datacenter demand among a few large customers, any downturn in that market could disproportionately affect AMD\u2019s recent growth trajectory.",
+        "citations": []
+      }
+    ],
+    "error": null
+  }
+}

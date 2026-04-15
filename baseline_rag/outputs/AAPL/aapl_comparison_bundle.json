@@ -1,0 +1,221 @@
+{
+  "schema_version": "baseline_rag_v1",
+  "bundle": {
+    "target": {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "latest_filing_year": 2025,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\AAPL\\complete_ingestion.json",
+      "extraction_path": null,
+      "curator_path": null
+    },
+    "matches": [
+      {
+        "ticker": "SNAP",
+        "company": "Snap Inc",
+        "matched_filing_year": 2026,
+        "similarity": 0.8202,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "META",
+        "company": "Meta Platforms, Inc.",
+        "matched_filing_year": 2025,
+        "similarity": 0.8049,
+        "context_curator_paths": []
+      },
+      {
+        "ticker": "ADBE",
+        "company": "ADOBE INC.",
+        "matched_filing_year": 2026,
+        "similarity": 0.7847,
+        "context_curator_paths": []
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:40:45.144658+00:00",
+      "status_by_step": {
+        "load_target": "completed",
+        "flatten_target": "completed",
+        "build_baseline_index": "skipped_existing",
+        "find_peers": "completed",
+        "load_peers": "completed",
+        "llm_call": "completed",
+        "parse_report": "completed"
+      },
+      "warnings": []
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "Apple shows clear scale and profitability advantages versus the selected peers: FY2025 revenue of $416,161M and net income of $112,010M are materially higher than peers. Key strengths include a declining long-term debt balance and growing gross profit, while operating cash flow and year-to-year revenue volatility are items to monitor.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Stable / Strong",
+      "rationale_bullets": [
+        "Market-leading scale and profitability in FY2025: Revenues $416,161M and Net Income $112,010M, substantially above peers.",
+        "Leverage trending down: Long-term debt reduced to $90,678M in FY2025 from $109,106M in FY2021 (FY2025 YoY change -$5,984M).",
+        "Areas to watch: operating cash flow declined in FY2025 (-$6,772M YoY) and Apple experienced revenue volatility in prior years (FY2023 revenue dip of -$11,043M)."
+      ]
+    },
+    "target_profile": {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "filing_year": 2025,
+      "positive_deltas": [
+        {
+          "metric": "Revenues (FY2025)",
+          "label": "Scale advantage vs peers",
+          "value": 215195.0
+        },
+        {
+          "metric": "NetIncome (FY2025)",
+          "label": "Profitability advantage vs peers",
+          "value": 51552.0
+        },
+        {
+          "metric": "GrossProfit (FY2025)",
+          "label": "Gross profit lead",
+          "value": 173983.0
+        },
+        {
+          "metric": "LongTermDebt YoY change (FY2025)",
+          "label": "Debt reduction",
+          "value": -5984.0
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "OperatingCashFlow YoY change (FY2025)",
+          "label": "OCF decline",
+          "value": -6772.0
+        },
+        {
+          "metric": "Revenue YoY change (FY2023)",
+          "label": "Revenue dip in FY2023",
+          "value": -11043.0
+        },
+        {
+          "metric": "Assets YoY change (FY2025)",
+          "label": "Assets modest decline",
+          "value": -5739.0
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "Profitability volatility",
+          "severity": "medium",
+          "section": "Income statement variability",
+          "summary": "Net income fell in FY2024 to $93,736M after prior-year fluctuations, then rose to $112,010M in FY2025 indicating volatility in annual profitability.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Operating cash flow pressure",
+          "severity": "medium",
+          "section": "Cash flow statement",
+          "summary": "Operating cash flow declined by $6,772M in FY2025 to $111,482M, reversing some prior-year gains.",
+          "citation": null,
+          "occurrences": 1
+        },
+        {
+          "signal_type": "Revenue cyclicality",
+          "severity": "low",
+          "section": "Revenue trends",
+          "summary": "Revenues dropped $11,043M in FY2023 before resuming growth, showing sensitivity to year-to-year demand shifts.",
+          "citation": null,
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Large-cap technology and software companies (Snap, Meta, Adobe) spanning social platforms and creative/software services.",
+      "common_strengths": [
+        "Top-line growth in FY2025 across peers (Snap +$570M, Meta +$36,465M, Adobe +$2,264M).",
+        "Rising investment in R&D for most peers (Meta and Adobe increased R&D substantially by FY2025).",
+        "Improving operating cash flow for Meta, Snap, and Adobe in FY2025."
+      ],
+      "common_pressures": [
+        "Profitability is uneven: Snap remains loss-making in FY2025 (-$460M) while others are profitable but variable (Meta net income down in FY2025 vs FY2024).",
+        "Rising long-term debt at some peers (notably Meta increased to $58,744M in FY2025).",
+        "Cash balances are volatile across the group (e.g., Meta cash fell FY2025; Adobe cash declined FY2025)."
+      ],
+      "shared_risk_types": [
+        "R&D expense growth pressure",
+        "Profitability volatility",
+        "Debt accumulation at scale (peer-specific)"
+      ],
+      "target_differences": [
+        "Apple is materially larger in revenue and net income than all peers in FY2025.",
+        "Apple shows a declining long-term debt trend, whereas Meta's long-term debt rose sharply to $58,744M.",
+        "Apple's gross profit magnitude (195,201M) far exceeds peers' gross profits (Adobe 21,218M reported)."
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "R&D expense growth",
+          "Profitability volatility"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "Scale concentration (large absolute exposure to consumer demand)",
+          "Debt reduction dynamics"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "Persistent net losses (Snap)",
+          "Rapid debt accumulation (Meta)"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "Operating cash flow decline",
+        "why_relevant": "Apple's OCF decreased by $6,772M in FY2025 to $111,482M, which could constrain capital returns or require changes to financing if trend continues.",
+        "peer_evidence": [
+          "Meta OCF increased to $115,800M in FY2025 (up $24,472M).",
+          "Snap OCF increased to $656M in FY2025 (up $242.7M).",
+          "Adobe OCF increased to $10,031M in FY2025 (up $1,975M)."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "Debt trends at peers (indirect competitive/market risk)",
+        "why_relevant": "Large increases in peer debt (Meta long-term debt rose to $58,744M in FY2025) can affect competitive investment and industry financing conditions.",
+        "peer_evidence": [
+          "Meta long-term debt FY2025: $58,744M (up $29,918M YoY).",
+          "Adobe long-term debt FY2025: $6,210M (up $2,081M YoY)."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "Profitability pressure in smaller peers",
+        "why_relevant": "Continued losses at Snap highlight segment-level advertising/monetization risk that could affect platform dynamics and ad pricing.",
+        "peer_evidence": [
+          "Snap net income FY2025: -$460M (improvement but still negative)."
+        ],
+        "confidence": "high"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Financial Performance",
+        "content": "Apple's FY2025 financials demonstrate dominant scale and margins: revenue reached $416,161M and net income was $112,010M, both materially higher than the provided peers (next-largest FY2025 revenue: Meta $200,966M; next-largest net income: Meta $60,458M). Gross profit expanded to $195,201M in FY2025, supporting strong absolute profitability. Apple also reduced long-term debt to $90,678M in FY2025 from $109,106M in FY2021 (a decline of $18,428M over the period), which improves leverage metrics on an absolute basis.\n\nThere are signs to monitor: operating cash flow declined by $6,772M in FY2025 to $111,482M after prior fluctuations, and assets fell modestly by $5,739M in FY2025. Revenue showed a prior-year dip in FY2023 (-$11,043M) before recovering in FY2024 and FY2025, indicating some cyclicality in top-line performance. R&D spending has risen consistently (FY2025 R&D $34,550M), signaling ongoing investment that supports future product/growth initiatives but increases expense levels.",
+        "citations": []
+      },
+      {
+        "title": "Risk Assessment",
+        "content": "Key near-term risks driven by the reported numbers include operating cash flow pressure and earnings volatility. The FY2025 OCF decline of $6,772M warrants watching because sustained declines could limit discretionary investments or shareholder returns. Net income has moved meaningfully year-to-year (for example, drop to $93,736M in FY2024 then rise to $112,010M in FY2025), which suggests sensitivity to product cycles, mix, or macro conditions.\n\nCompared with peers, Apple benefits from stronger absolute profitability and a downward debt trend, but the peer set shows countervailing risks: Snap remains loss-making through FY2025 (net loss -$460M), while Meta added substantial long-term debt (to $58,744M in FY2025) and dramatically increased assets and operating cash flow. Industry-wide pressure points visible in the data include rising R&D investment (Meta and Adobe sizable increases) and cash balance volatility across companies. Monitoring Apple's OCF trend, revenue cyclicality, and the competitive/financial moves of large peers (notably Meta's debt and investment pace) is recommended.",
+        "citations": []
+      }
+    ],
+    "error": null
+  }
+}

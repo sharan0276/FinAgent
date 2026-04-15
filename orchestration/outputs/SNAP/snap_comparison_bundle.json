@@ -1,0 +1,283 @@
+{
+  "schema_version": "orchestration_v1",
+  "bundle": {
+    "target": {
+      "ticker": "SNAP",
+      "company": "Snap Inc",
+      "latest_filing_year": 2026,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\SNAP\\complete_ingestion.json",
+      "extraction_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\SNAP\\snap_2026_extraction.json",
+      "curator_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\SNAP\\snap_2026.json"
+    },
+    "matches": [
+      {
+        "ticker": "CRM",
+        "company": "Salesforce, Inc.",
+        "matched_filing_year": 2026,
+        "similarity": 0.7588,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\CRM\\crm_2026.json"
+        ]
+      },
+      {
+        "ticker": "ADBE",
+        "company": "ADOBE INC.",
+        "matched_filing_year": 2024,
+        "similarity": 0.7476,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\ADBE\\adbe_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\ADBE\\adbe_2025.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\ADBE\\adbe_2026.json"
+        ]
+      },
+      {
+        "ticker": "UBER",
+        "company": "Uber Technologies, Inc",
+        "matched_filing_year": 2022,
+        "similarity": 0.7395,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\UBER\\uber_2022.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\UBER\\uber_2023.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\UBER\\uber_2024.json"
+        ]
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:49:48.003273+00:00",
+      "status_by_step": {
+        "ingestion": "skipped_existing",
+        "extraction": "skipped_existing",
+        "curator": "skipped_existing",
+        "rag": "partial",
+        "comparison": "completed"
+      },
+      "warnings": [
+        "CRM has only 1 curator year(s) from 2026 onward."
+      ]
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "Snap Inc. presents a stable / strong posture versus its matched peer neighborhood, supported by strong operating cash flow and revenue growth but offset by a severe decline in net income. The company has three positive financial deltas (OperatingCashFlow: +58.69, Revenues: +10.63, ResearchAndDevelopment: +6.02) and one negative delta (NetIncome: -34.01). A high-severity interest-rate sensitivity risk (interest expense rise to $122M in 2025) and several medium-severity operational and litigation risks merit continued attention.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Stable / Strong",
+      "rationale_bullets": [
+        "Analysis identifies 1 high-severity risk (interest_rate_sensitivity) and 1 negative financial delta (NetIncome: -34.01).",
+        "Three positive deltas (OperatingCashFlow strong_growth +58.69; Revenues moderate_growth +10.63; R&D moderate_growth +6.02) provide a financial buffer.",
+        "Six risk types are shared with peers, indicating broad industry exposure rather than firm-specific concentration."
+      ]
+    },
+    "target_profile": {
+      "ticker": "SNAP",
+      "company": "Snap Inc",
+      "filing_year": 2026,
+      "positive_deltas": [
+        {
+          "metric": "OperatingCashFlow",
+          "label": "strong_growth",
+          "value": 58.69449550159621
+        },
+        {
+          "metric": "Revenues",
+          "label": "moderate_growth",
+          "value": 10.63248405267281
+        },
+        {
+          "metric": "ResearchAndDevelopment",
+          "label": "moderate_growth",
+          "value": 6.024780100255367
+        }
+      ],
+      "negative_deltas": [
+        {
+          "metric": "NetIncome",
+          "label": "severe_decline",
+          "value": -34.01398561316023
+        }
+      ],
+      "top_risks": [
+        {
+          "signal_type": "interest_rate_sensitivity",
+          "severity": "high",
+          "section": "Item 7",
+          "summary": "Interest expense increased $100.4 million (466%) to $122 million in 2025 compared to 2024.",
+          "citation": "SNAP 10-K 2026, Item 7",
+          "occurrences": 2
+        },
+        {
+          "signal_type": "active_litigation",
+          "severity": "medium",
+          "section": "Item 3",
+          "summary": "Securities lawsuit alleges false or misleading statements about ad platform changes that impacted revenue in first half 2025.",
+          "citation": "SNAP 10-K 2026, Item 3",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "content_moderation_liability",
+          "severity": "medium",
+          "section": "Item 3",
+          "summary": "Multiple federal and state lawsuits since January 2022 allege platform design is addictive and harmful to users under 18.",
+          "citation": "SNAP 10-K 2026, Item 3",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "foreign_currency_exposure",
+          "severity": "medium",
+          "section": "Item 7A",
+          "summary": "Exchange rate fluctuations have caused and may continue to cause negative impacts to revenue and operating expenses denominated in non-USD currencies.",
+          "citation": "SNAP 10-K 2026, Item 7A",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "intensifying_competition",
+          "severity": "medium",
+          "section": "Item 7",
+          "summary": "Platform policy changes and restrictions affected targeting capabilities, resulting in reduced advertising revenue especially in North America.",
+          "citation": "SNAP 10-K 2026, Item 7",
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Top matched peer neighborhood",
+      "common_strengths": [
+        "Assets",
+        "GrossProfit",
+        "NetIncome",
+        "Revenues"
+      ],
+      "common_pressures": [],
+      "shared_risk_types": [
+        "cybersecurity_vulnerability",
+        "foreign_currency_exposure",
+        "interest_rate_sensitivity",
+        "ip_infringement_claim",
+        "scaling_risk",
+        "third_party_vendor_dependency"
+      ],
+      "target_differences": [
+        "content_moderation_liability",
+        "pricing_power_erosion",
+        "regulatory_investigation"
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "active_litigation",
+          "foreign_currency_exposure",
+          "intensifying_competition",
+          "interest_rate_sensitivity",
+          "negative_operating_cash_flow",
+          "recession_sensitivity"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "content_moderation_liability",
+          "pricing_power_erosion",
+          "regulatory_investigation"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "business_model_transition_risk",
+          "customer_churn_risk",
+          "cybersecurity_vulnerability",
+          "infrastructure_single_point_failure",
+          "ip_infringement_claim",
+          "monetization_uncertainty",
+          "network_effect_weakening",
+          "scaling_risk",
+          "subscription_model_risk",
+          "talent_retention_risk",
+          "third_party_vendor_dependency"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "failed_acquisition",
+        "why_relevant": "Peers similar to the target showed failed_acquisition after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "ADBE 2025: Adobe paid a $1 billion termination fee in fiscal 2024 due to the failed Figma acquisition.",
+          "ADBE 2026: Adobe incurred a $1 billion termination fee in fiscal 2024 from the failed Figma acquisition.",
+          "ADBE 2026: negative delta pressure in Cash."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "monetization_uncertainty",
+        "why_relevant": "Peers similar to the target showed monetization_uncertainty after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "UBER 2024: Company incurred operating losses of $3.8 billion and $1.8 billion in 2021 and 2022 respectively, with accumulated deficit of $30.6 billion as of December 31, 2023.",
+          "UBER 2024: negative delta pressure in NetIncome."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "recession_sensitivity",
+        "why_relevant": "recession_sensitivity is already adjacent to the target risk profile and later reappears in peer future years.",
+        "peer_evidence": [
+          "UBER 2023: Consumer behavior shifts during economic downturns may reduce network liquidity as users choose lower-cost alternatives.",
+          "UBER 2023: negative delta pressure in Assets, OperatingCashFlow."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "customer_churn_risk",
+        "why_relevant": "Peers similar to the target showed customer_churn_risk after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "ADBE 2025: Customer renewal rates may decline due to satisfaction levels, competitive pricing, and cybersecurity perceptions."
+        ],
+        "confidence": "medium"
+      },
+      {
+        "watch_risk_type": "impairment_charges",
+        "why_relevant": "Peers similar to the target showed impairment_charges after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "UBER 2023: Recorded $182 million impairment loss on MLU B.V. equity method investment.",
+          "UBER 2023: negative delta pressure in Assets, OperatingCashFlow."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Current Posture",
+        "content": "Labeled Stable / Strong, Snap\u2019s position combines material operational cash generation and revenue expansion with a pronounced earnings decline. Key positive deltas include OperatingCashFlow (strong_growth, +58.69449550159621), Revenues (moderate_growth, +10.63248405267281) and ResearchAndDevelopment (moderate_growth, +6.024780100255367); the principal negative delta is NetIncome (severe_decline, -34.01398561316023). The top high-severity risk is interest_rate_sensitivity: interest expense increased $100.4 million (466%) to $122 million in 2025 versus 2024 (SNAP 10-K 2026, Item 7). Medium-severity exposures include active litigation, content moderation liability, foreign currency exposure and intensifying competition (SNAP 10-K 2026, Items 3, 7, 7A).",
+        "citations": [
+          "SNAP 10-K 2026, Item 7",
+          "SNAP 10-K 2026, Item 3",
+          "SNAP 10-K 2026, Item 7A"
+        ]
+      },
+      {
+        "title": "Peer Comparison",
+        "content": "Against the top matched peer neighborhood, Snap shares common strengths in Assets, GrossProfit, NetIncome and Revenues while facing a set of overlapping risks. Peers and the target share six risk types (cybersecurity_vulnerability; foreign_currency_exposure; interest_rate_sensitivity; IP infringement; scaling risk; third_party_vendor_dependency), reflecting industry-level pressures; there are no common_pressures listed. Distinctive risks for Snap relative to peers include content_moderation_liability, pricing_power_erosion and regulatory_investigation, signaling target-specific legal and policy exposures.",
+        "citations": [
+          "SNAP 10-K 2026, Item 7",
+          "SNAP 10-K 2026, Item 3"
+        ]
+      },
+      {
+        "title": "What To Watch Next",
+        "content": "Monitor peer-driven patterns rather than make forecasts: failed_acquisition is a high-confidence watch item (peer evidence: Adobe\u2019s $1B termination fee in 2024 cited in ADBE 2025/2026), while monetization_uncertainty, recession_sensitivity, customer_churn_risk and impairment_charges carry medium confidence based on peer occurrences (examples from UBER and ADBE in the peer evidence). These items have appeared in peer years after the matched year and should be tracked as potential emerging pressures alongside Snap\u2019s existing shared and target-only risks.",
+        "citations": [
+          "ADBE 2025: Adobe paid a $1 billion termination fee in fiscal 2024 due to the failed Figma acquisition.",
+          "ADBE 2026: Adobe incurred a $1 billion termination fee in fiscal 2024 from the failed Figma acquisition.",
+          "UBER 2024: Company incurred operating losses of $3.8 billion and $1.8 billion in 2021 and 2022 respectively, with accumulated deficit of $30.6 billion as of December 31, 2023.",
+          "UBER 2024: negative delta pressure in NetIncome.",
+          "UBER 2023: Consumer behavior shifts during economic downturns may reduce network liquidity as users choose lower-cost alternatives.",
+          "UBER 2023: negative delta pressure in Assets, OperatingCashFlow."
+        ]
+      }
+    ],
+    "error": null
+  }
+}

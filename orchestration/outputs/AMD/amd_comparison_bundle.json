@@ -1,0 +1,264 @@
+{
+  "schema_version": "orchestration_v1",
+  "bundle": {
+    "target": {
+      "ticker": "AMD",
+      "company": "ADVANCED MICRO DEVICES INC",
+      "latest_filing_year": 2026,
+      "ingestion_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-ingestion\\outputs\\AMD\\complete_ingestion.json",
+      "extraction_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\AMD\\amd_2026_extraction.json",
+      "curator_path": "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\AMD\\amd_2026.json"
+    },
+    "matches": [
+      {
+        "ticker": "NVDA",
+        "company": "NVIDIA CORP",
+        "matched_filing_year": 2023,
+        "similarity": 0.7861,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\NVDA\\nvda_2023.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\NVDA\\nvda_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\NVDA\\nvda_2025.json"
+        ]
+      },
+      {
+        "ticker": "INTC",
+        "company": "INTEL CORP",
+        "matched_filing_year": 2023,
+        "similarity": 0.7559,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2023.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2024.json",
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\INTC\\intc_2025.json"
+        ]
+      },
+      {
+        "ticker": "BYND",
+        "company": "BEYOND MEAT, INC.",
+        "matched_filing_year": 2026,
+        "similarity": 0.7395,
+        "context_curator_paths": [
+          "D:\\NEU\\CS6180 GenAI\\Project\\data-extraction\\outputs\\curator\\BYND\\bynd_2026.json"
+        ]
+      }
+    ],
+    "run_metadata": {
+      "top_k": 3,
+      "run_timestamp": "2026-04-15T20:42:48.657231+00:00",
+      "status_by_step": {
+        "ingestion": "skipped_existing",
+        "extraction": "skipped_existing",
+        "curator": "skipped_existing",
+        "rag": "partial",
+        "comparison": "completed"
+      },
+      "warnings": [
+        "BYND has only 1 curator year(s) from 2026 onward."
+      ]
+    }
+  },
+  "comparison_report": {
+    "status": "completed",
+    "summary": "ADVANCED MICRO DEVICES INC presents a stable/strong posture versus its matched peer neighborhood, supported by multiple positive financial deltas and no negative financial deltas. The company faces one high-severity risk (export_control_risk) and several medium-severity items documented in its 2026 10-K. Peers share multiple industry-level risks, and a set of peer-derived watchlist items should be monitored going forward.",
+    "model_name": "openai/gpt-5-mini-2025-08-07",
+    "posture": {
+      "label": "Stable / Strong",
+      "rationale_bullets": [
+        "Current analysis identifies 1 high-severity risk factor(s) and 0 negative financial delta(s).",
+        "The company maintains 7 metrics with positive delta labels, providing a financial buffer.",
+        "2 risk types are currently shared with matched peers, indicating broader industry trends."
+      ]
+    },
+    "target_profile": {
+      "ticker": "AMD",
+      "company": "ADVANCED MICRO DEVICES INC",
+      "filing_year": 2026,
+      "positive_deltas": [
+        {
+          "metric": "NetIncome",
+          "label": "strong_growth",
+          "value": 164.16819012797075
+        },
+        {
+          "metric": "OperatingCashFlow",
+          "label": "strong_growth",
+          "value": 153.50213745478462
+        },
+        {
+          "metric": "Cash",
+          "label": "strong_growth",
+          "value": 46.263533139688406
+        },
+        {
+          "metric": "GrossProfit",
+          "label": "strong_growth",
+          "value": 34.789783889980356
+        }
+      ],
+      "negative_deltas": [],
+      "top_risks": [
+        {
+          "signal_type": "export_control_risk",
+          "severity": "high",
+          "section": "Item 7",
+          "summary": "Company recorded approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPU products due to new U.S. export restrictions on certain semiconductors to China.",
+          "citation": "AMD 10-K 2026, Item 7",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "impairment_charges",
+          "severity": "medium",
+          "section": "Item 7",
+          "summary": "Changes in operating plans or adverse changes in the business or macroeconomic environment could reduce cash flows and trigger future impairment charges of reporting units' goodwill.",
+          "citation": "AMD 10-K 2026, Item 7",
+          "occurrences": 1
+        },
+        {
+          "signal_type": "market_saturation",
+          "severity": "medium",
+          "section": "Item 7",
+          "summary": "Embedded net revenue of $3.5 billion in 2025 decreased by 3% compared to $3.6 billion in 2024 as certain end market demand remained mixed.",
+          "citation": "AMD 10-K 2026, Item 7",
+          "occurrences": 1
+        }
+      ]
+    },
+    "peer_snapshot": {
+      "peer_group": "Top matched peer neighborhood",
+      "common_strengths": [
+        "Cash",
+        "ResearchAndDevelopment"
+      ],
+      "common_pressures": [
+        "Assets",
+        "GrossProfit",
+        "NetIncome",
+        "OperatingCashFlow",
+        "Revenues"
+      ],
+      "shared_risk_types": [
+        "active_litigation",
+        "china_geopolitical_exposure",
+        "foreign_currency_exposure",
+        "intensifying_competition",
+        "interest_rate_sensitivity",
+        "manufacturing_defect_risk",
+        "recession_sensitivity",
+        "supply_chain_concentration"
+      ],
+      "target_differences": [
+        "market_saturation"
+      ]
+    },
+    "risk_overlap_rows": [
+      {
+        "group": "shared_now",
+        "risk_types": [
+          "export_control_risk",
+          "impairment_charges"
+        ]
+      },
+      {
+        "group": "target_only_now",
+        "risk_types": [
+          "market_saturation"
+        ]
+      },
+      {
+        "group": "peer_only_now",
+        "risk_types": [
+          "active_litigation",
+          "china_geopolitical_exposure",
+          "cybersecurity_vulnerability",
+          "failed_acquisition",
+          "foreign_currency_exposure",
+          "inflation_impact",
+          "intensifying_competition",
+          "interest_rate_sensitivity",
+          "manufacturing_defect_risk",
+          "rd_productivity_risk",
+          "recession_sensitivity",
+          "supply_chain_concentration",
+          "talent_retention_risk",
+          "trade_tariff_risk"
+        ]
+      }
+    ],
+    "forward_watchlist": [
+      {
+        "watch_risk_type": "cybersecurity_vulnerability",
+        "why_relevant": "Peers similar to the target showed cybersecurity_vulnerability after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "INTC 2024: Cybersecurity threats and data breaches could disrupt operations, damage reputation, and result in significant costs.",
+          "INTC 2024: negative delta pressure in GrossProfit, NetIncome, OperatingCashFlow.",
+          "INTC 2025: Intel identified material weaknesses in cybersecurity controls related to third-party vendor access management during 2024."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "internal_controls_weakness",
+        "why_relevant": "Peers similar to the target showed internal_controls_weakness after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "NVDA 2024: Identification of material weaknesses in internal controls may cause investors to lose confidence in financial statements and stock price may decline.",
+          "NVDA 2025: Identification of material weaknesses in internal controls may cause investors to lose confidence and stock price to decline."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "key_person_dependency",
+        "why_relevant": "Peers similar to the target showed key_person_dependency after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "NVDA 2024: A substantial number of employees in Israel have been called-up for active military duty and have been absent for an extended period, which may cause disruption to product development or operations.",
+          "NVDA 2025: Some employees in the region have been on active military duty for an extended period causing potential disruption to product development or operations."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "working_capital_deficit",
+        "why_relevant": "Peers similar to the target showed working_capital_deficit after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "NVDA 2024: Vendors have requested and may continue to ask for shorter payment terms, which may impact cash flow generation and reduce cash available for general business operations.",
+          "NVDA 2025: Vendor arrangements reduce cash available for general business operations and vendors have requested shorter payment terms impacting cash flow."
+        ],
+        "confidence": "high"
+      },
+      {
+        "watch_risk_type": "customer_adoption_lag",
+        "why_relevant": "Peers similar to the target showed customer_adoption_lag after the matched year, making it a pattern to monitor.",
+        "peer_evidence": [
+          "NVDA 2025: Customers may delay purchasing existing products or may not be able to adopt new products as fast as forecasted, impacting revenue timing."
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "narrative_sections": [
+      {
+        "title": "Current Posture",
+        "content": "AMD\u2019s profile is labeled Stable / Strong driven by materially positive financial deltas (notably strong_growth in NetIncome, OperatingCashFlow, Cash and GrossProfit) and an absence of negative deltas. That said, the company records one high-severity operational risk: export control impacts tied to approximately $800 million of inventory and related charges on AMD Instinct MI308 Data Center GPUs under new U.S. export restrictions (AMD 10-K 2026, Item 7). Additional medium-severity items include potential impairment charges and signs of market saturation in certain embedded markets (AMD 10-K 2026, Item 7).",
+        "citations": [
+          "AMD 10-K 2026, Item 7"
+        ]
+      },
+      {
+        "title": "Peer Comparison",
+        "content": "Relative to its top matched peer neighborhood, AMD shares several common strengths (Cash and ResearchAndDevelopment) while peers show pressure across Assets, GrossProfit, NetIncome, OperatingCashFlow and Revenues. Shared risk types include export_control_risk and impairment_charges among others such as china_geopolitical_exposure, intensifying_competition and supply_chain_concentration, indicating industry-wide exposures. A notable target-only difference is market_saturation, which appears in AMD\u2019s disclosures but not in the peer-only risk set.",
+        "citations": [
+          "AMD 10-K 2026, Item 7"
+        ]
+      },
+      {
+        "title": "What To Watch Next",
+        "content": "Monitor a peer-derived watchlist of risks that emerged for similar companies after the matched year: cybersecurity_vulnerability (peer evidence: INTC 2024\u20132025 cybersecurity and control issues), internal_controls_weakness (NVDA 2024\u20132025 material weakness identifications), key_person_dependency (NVDA 2024\u20132025 regional personnel impacts), working_capital_deficit (NVDA 2024\u20132025 vendor payment term pressures) and customer_adoption_lag (NVDA 2025). These items are presented as patterns to watch with stated confidences (mostly high; customer_adoption_lag medium) rather than forecasts.",
+        "citations": [
+          "INTC 2024: Cybersecurity threats and data breaches could disrupt operations, damage reputation, and result in significant costs.",
+          "INTC 2024: negative delta pressure in GrossProfit, NetIncome, OperatingCashFlow.",
+          "NVDA 2024: Identification of material weaknesses in internal controls may cause investors to lose confidence in financial statements and stock price may decline.",
+          "NVDA 2025: Identification of material weaknesses in internal controls may cause investors to lose confidence and stock price to decline.",
+          "NVDA 2024: A substantial number of employees in Israel have been called-up for active military duty and have been absent for an extended period, which may cause disruption to product development or operations.",
+          "NVDA 2025: Some employees in the region have been on active military duty for an extended period causing potential disruption to product development or operations."
+        ]
+      }
+    ],
+    "error": null
+  }
+}
