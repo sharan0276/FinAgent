@@ -26,9 +26,9 @@ class MetricDeltaItem(BaseModel):
 class RiskItem(BaseModel):
     signal_type: str
     severity: str
-    section: str | None = None
-    summary: str | None = None
-    citation: str | None = None
+    section: Optional[str] = None
+    summary: Optional[str] = None
+    citation: Optional[str] = None
     occurrences: int = 1
 
 
